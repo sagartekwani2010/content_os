@@ -1,0 +1,106 @@
+# Opportunity scoring configuration.
+# All business rules for topic evaluation live here, never in prompts.
+
+opportunity_score:
+  # Weights MUST sum to 1.0. Validated at load time.
+  weights:
+    brand_fit: 0.30
+    audience_fit: 0.20
+    trend_velocity: 0.15
+    originality: 0.15
+    visual_potential: 0.10
+    production_fit: 0.10
+
+  # Each dimension is rated 0-10 by the scorer agent.
+  dimension_min: 0.0
+  dimension_max: 10.0
+
+# Brand-fit veto: topics below this brand_fit score cannot be auto-recommended,
+# no matter how high trend velocity is. Prevents drift into AI-news aggregation.
+brand_fit_veto:
+  threshold: 5.0
+  flag: TRENDING_BUT_OFF_BRAND
+  # A vetoed topic is still scored and stored. It is only excluded from
+  # automatic portfolio selection. A human can override.
+  allow_human_override: true
+
+# Saturation penalty. Maps estimated_saturation (0.0-1.0) to a bounded
+# multiplicative penalty on the base score.
+saturation:
+  # adjusted = base * (1 - max_penalty * saturation ** curve)
+  # curve > 1 means low saturation is barely penalised and high saturation
+  # is punished hard, which is the behaviour we want: "5 ChatGPT prompts"
+  # should collapse, "I built an AI clone of myself" should not.
+  max_penalty: 0.60
+  curve: 1.5
+  # Topics the brand can credibly own get their saturation dampened.
+  originality_offset: true
+  # Each point of originality above this reduces effective saturation.
+  originality_pivot: 7.0
+  originality_relief_per_point: 0.08
+
+# Trend velocity decay. Applied deterministically in Python using the age of
+# the topic, so a stale topic cannot keep a high velocity score.
+trend_decay:
+  enabled: true
+  # Velocity retains this fraction of its value after half_life_hours.
+  half_life_hours: 72.0
+  # Velocity never decays below this fraction of the agent's rating.
+  floor_fraction: 0.15
+
+# Weekly portfolio targets by pillar. Directional, not rigid.
+portfolio:
+  targets:
+    ai_builder: 0.30
+    ai_pov: 0.25
+    ai_experiments: 0.20
+    ai_real_life: 0.15
+    ai_future: 0.10
+  # How far a plan may drift from target before the strategist is told to rebalance.
+  tolerance: 0.15
+  # Guardrails the strategist must respect.
+  max_per_pillar: 3
+  min_distinct_pillars: 3
+  max_same_format_streak: 3
+
+# Performance score. Deliberately not locked in. Recomputed from raw snapshots,
+# never stored as the only record.
+performance_score:
+  weights:
+    share_rate: 0.25
+    follow_per_reach: 0.20
+    profile_visit_rate: 0.15
+    save_rate: 0.15
+    watch_ratio: 0.15
+    like_rate: 0.10
+  # Normalise each component against recent account history rather than
+  # absolute thresholds, which drift as the account grows.
+  normalisation:
+    method: percentile
+    lookback_posts: 30
+    min_history_for_percentile: 5
+    # Until there is enough history, fall back to these absolute anchors
+    # representing a "good" value for each rate.
+    fallback_anchors:
+      share_rate: 0.010
+      follow_per_reach: 0.008
+      profile_visit_rate: 0.030
+      save_rate: 0.020
+      watch_ratio: 0.600
+      like_rate: 0.040
+
+# Deterministic ad eligibility gates. No LLM is ever in this path.
+ad_eligibility:
+  min_performance_percentile: 70.0
+  min_profile_visit_percentile: 60.0
+  min_follow_conversion_percentile: 60.0
+  min_share_percentile: 50.0
+  min_brand_fit: 6.0
+  min_days_since_publish: 3
+  max_days_since_publish: 45
+  budget:
+    base_daily: 10.0
+    max_daily: 50.0
+    max_total: 250.0
+    # Budget scales with percentile above the minimum gate, then is capped.
+    scale_per_percentile_point: 0.5

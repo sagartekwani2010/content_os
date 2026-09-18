@@ -1,0 +1,74 @@
+# Experiment backlog. Seeded as DESIGNED; nothing runs without content enrolled.
+# Kept in config so the experiment queue is reviewable rather than ad hoc.
+
+experiments:
+  - name: AI avatar vs real Sagar
+    hypothesis: >-
+      Avatar Reels achieve comparable reach to human-delivered Reels but convert
+      profile visits to followers at a lower rate, because trust is built by a
+      real face.
+    variable: delivery_mode
+    control: talking_head_human
+    variant: ai_avatar
+    primary_metric: profile_to_follow_conversion
+    secondary_metrics: [reach, follow_per_reach, watch_ratio]
+
+  - name: 15 seconds vs 30 seconds
+    hypothesis: >-
+      Sub-20-second Reels achieve a higher watch ratio and more shares, while
+      30-second Reels drive more saves for builder content.
+    variable: duration
+    control: "30s"
+    variant: "15s"
+    primary_metric: share_rate
+    secondary_metrics: [watch_ratio, save_rate, reach]
+
+  - name: Contrarian hook vs educational hook
+    hypothesis: >-
+      Contrarian practitioner claims outperform educational framings on shares
+      and comments without hurting save rate.
+    variable: hook_type
+    control: educational
+    variant: contrarian
+    primary_metric: amplification_rate
+    secondary_metrics: [comment_rate, save_rate]
+
+  - name: Demo-first vs avatar-first
+    hypothesis: >-
+      Opening on a screen recording of a working build outperforms opening on
+      the avatar, because the visual hook lands before any claim is made.
+    variable: opening_shot
+    control: avatar_first
+    variant: demo_first
+    primary_metric: watch_ratio
+    secondary_metrics: [reach, share_rate]
+
+  - name: Technical depth vs beginner framing
+    hypothesis: >-
+      Technical framing reaches fewer people but converts followers at a higher
+      rate and attracts the target audience rather than general AI curiosity.
+    variable: depth
+    control: beginner
+    variant: technical
+    primary_metric: follow_per_reach
+    secondary_metrics: [reach, save_rate, profile_visit_rate]
+
+  - name: CTA vs no CTA
+    hypothesis: >-
+      Removing an explicit call to action increases shares without reducing
+      profile visits, because the content reads as less promotional.
+    variable: cta_presence
+    control: cta_present
+    variant: no_cta
+    primary_metric: share_rate
+    secondary_metrics: [profile_visit_rate, follow_per_reach]
+
+  - name: Carousel 6 slides vs 9 slides
+    hypothesis: >-
+      Six-slide carousels are completed more often and saved at a higher rate
+      than nine-slide carousels covering the same idea.
+    variable: slide_count
+    control: "9"
+    variant: "6"
+    primary_metric: save_rate
+    secondary_metrics: [share_rate, reach]

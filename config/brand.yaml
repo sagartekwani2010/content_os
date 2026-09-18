@@ -1,0 +1,104 @@
+# Brand memory. Structured, explicit, and versioned. Not conversational memory.
+# The performance analyst appends to historical_insights; everything else is
+# human-owned and requires explicit approval to change.
+
+version: 1
+positioning: >-
+  Experienced AI practitioner and builder explaining how real AI systems work,
+  while experimenting publicly with agents, generative AI, AI avatars and
+  practical AI.
+
+brand_pillars:
+  - key: ai_builder
+    name: AI Builder / Production AI
+    description: >-
+      How real systems are architected and why they break. Agents, orchestration,
+      evaluation, memory, retrieval, cost, latency, failure modes.
+  - key: ai_pov
+    name: AI POV / Explained
+    description: >-
+      Opinionated explanation. Mental models, contrarian takes, naming things
+      other people are confused about.
+  - key: ai_experiments
+    name: AI Experiments / Avatar
+    description: >-
+      Public experiments. AI avatars, generative video, cloning, model bake-offs,
+      build-in-public results with real numbers.
+  - key: ai_real_life
+    name: AI x Real Life
+    description: >-
+      AI applied to ordinary life and work. Concrete, personal, demonstrable.
+  - key: ai_future
+    name: AI Future / Current Models
+    description: >-
+      Where models are going. New releases judged by a practitioner, not a
+      press release.
+
+target_audiences:
+  - AI engineers
+  - Software developers
+  - Technical founders
+  - Product professionals working near AI
+  - AI-curious technology audience
+
+preferred_topics:
+  - agent architecture and orchestration
+  - production AI failure modes
+  - agent memory versus state
+  - evaluation and testing of AI systems
+  - context engineering
+  - generative media and AI avatars
+  - model comparisons with firsthand results
+  - practical AI applied to real workflows
+
+avoided_topics:
+  - generic AI news with no practitioner angle
+  - top-10-tools listicles
+  - prompt hacks and prompt packs
+  - AGI speculation and doom discourse
+  - engagement-bait hot takes with no substance
+  - anything requiring claims Sagar cannot personally verify
+
+signature_opinions:
+  - Most applications that claim to need multi-agent systems do not.
+  - If your agent always does the same thing, it is a workflow, not an agent.
+  - Demos are easy. Production is where AI systems actually get judged.
+  - Agent memory and agent state are different problems and conflating them causes bugs.
+  - Evaluation is the bottleneck in agent development, not model capability.
+
+signature_series:
+  - "Agent vs Tool vs Workflow"
+  - "Why agents fail in production"
+  - "Built it, here are the numbers"
+
+winning_hook_patterns:
+  - contrarian practitioner claim stated as fact
+  - outcome first, method second
+  - visual reveal in the first second
+  - named mistake the audience is probably making
+  - surprising measured result with a number
+losing_hook_patterns:
+  - "Today I am going to explain..."
+  - "Let's dive into..."
+  - "AI is changing everything"
+  - question hooks with an obvious answer
+  - generic hype adjectives with no specific claim
+
+winning_formats: []
+historical_insights: []
+
+# Production reality. Drives the production_fit scoring dimension.
+production:
+  avatar_share_target: 0.75
+  default_reel_seconds: [15, 35]
+  carousel_slides: [6, 9]
+  available_modes:
+    - ai_avatar
+    - screen_recording
+    - architecture_diagram
+    - generated_media
+    - talking_head_human
+  constraints:
+    - Avatar delivery suits direct-to-camera claims and explanation, not physical demos.
+    - Screen recordings need a real working build, which costs development time.
+    - Architecture diagrams are cheap to produce and perform well for builder content.

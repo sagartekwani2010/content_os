@@ -1,0 +1,91 @@
+# Model and prompt-version configuration.
+# No model name is hardcoded anywhere in the codebase. Changing a model or a
+# prompt version is a config edit, and both are recorded with every artifact so
+# we can tell whether a better result came from a better topic, a better prompt,
+# or a better model.
+
+defaults:
+  model: gpt-5
+  reasoning_effort: medium
+  verbosity: medium
+  max_turns: 12
+  # Retry a structured-output failure once with the validation error fed back.
+  structured_output_retries: 1
+
+agents:
+  trend_scout:
+    model: gpt-5
+    prompt_version: trend_scout_v1
+    reasoning_effort: medium
+    verbosity: low
+
+  scorer:
+    # Runs once per topic, so the cheaper model keeps a weekly cycle affordable.
+    model: gpt-5-mini
+    prompt_version: scorer_v1
+    reasoning_effort: medium
+    verbosity: low
+
+  strategist:
+    # The hardest judgement call in the system: portfolio balance under
+    # competing constraints. Worth the strongest model and highest effort.
+    model: gpt-5
+    prompt_version: strategist_v1
+    reasoning_effort: high
+    verbosity: medium
+
+  reel_writer:
+    model: gpt-5
+    prompt_version: reel_writer_v1
+    reasoning_effort: medium
+    verbosity: medium
+
+  carousel_writer:
+    model: gpt-5
+    prompt_version: carousel_writer_v1
+    reasoning_effort: medium
+    verbosity: medium
+
+  qa:
+    # QA must be sceptical and consistent rather than creative.
+    model: gpt-5
+    prompt_version: qa_v1
+    reasoning_effort: high
+    verbosity: low
+
+  performance_analyst:
+    model: gpt-5
+    prompt_version: performance_analyst_v1
+    reasoning_effort: high
+    verbosity: medium
+
+# Cost estimation, USD per million tokens. Used only for the agent_runs ledger.
+# Update when pricing changes; historical rows keep the cost computed at the time.
+pricing:
+  gpt-5:
+    input_per_mtok: 1.25
+    output_per_mtok: 10.00
+  gpt-5-mini:
+    input_per_mtok: 0.25
+    output_per_mtok: 2.00
+  gpt-5-nano:
+    input_per_mtok: 0.05
+    output_per_mtok: 0.40
+  gpt-4.1:
+    input_per_mtok: 2.00
+    output_per_mtok: 8.00
+  gpt-4.1-mini:
+    input_per_mtok: 0.40
+    output_per_mtok: 1.60
+
+tracing:
+  enabled: true
+  # Workflow names surfaced in the OpenAI traces dashboard.
+  workflows:
+    discover: trend_discovery
+    score: topic_scoring
+    plan: weekly_content_planning
+    reel: reel_generation
+    carousel: carousel_generation
+    qa: content_qa
+    analyze: performance_analysis
