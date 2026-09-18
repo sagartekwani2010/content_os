@@ -43,12 +43,26 @@ class TrackedResult(Generic[T]):
     trace_id: str | None
     agent_run_id: str
     attempts: int
+    reasoning_effort: str | None = None
     input_tokens: int = 0
+    cached_input_tokens: int = 0
+    cache_write_tokens: int = 0
     output_tokens: int = 0
+    reasoning_tokens: int = 0
     total_tokens: int = 0
     estimated_cost: float = 0.0
+    pricing_known: bool = True
     duration_ms: int = 0
     raw: Any = field(default=None, repr=False)
+
+    @property
+    def cache_hit_rate(self) -> float:
+        """Share of prompt tokens served from cache. The main lever on spend."""
+        return (
+            self.cached_input_tokens / self.input_tokens
+            if self.input_tokens
+            else 0.0
+        )
 
 
 class AgentRunError(RuntimeError):
@@ -62,6 +76,30 @@ class AgentRunError(RuntimeError):
         self.agent_name = agent_name
         self.attempts = attempts
         self.cause = cause
+
+
+def extract_usage(usage: Any) -> dict[str, int]:
+    """Pull the token breakdown off a run's usage object.
+
+    The detail sub-objects are optional and have been added over time, so every
+    read is defensive. A missing detail field costs us a breakdown, not a run.
+    """
+    input_details = getattr(usage, "input_tokens_details", None)
+    output_details = getattr(usage, "output_tokens_details", None)
+
+    return {
+        "requests": int(getattr(usage, "requests", 0) or 0),
+        "input_tokens": int(getattr(usage, "input_tokens", 0) or 0),
+        "cached_input_tokens": int(getattr(input_details, "cached_tokens", 0) or 0),
+        "cache_write_tokens": int(
+            getattr(input_details, "cache_write_tokens", 0) or 0
+        ),
+        "output_tokens": int(getattr(usage, "output_tokens", 0) or 0),
+        "reasoning_tokens": int(
+            getattr(output_details, "reasoning_tokens", 0) or 0
+        ),
+        "total_tokens": int(getattr(usage, "total_tokens", 0) or 0),
+    }
 
 
 def _supports_reasoning(model: str) -> bool:
@@ -134,12 +172,13 @@ class TrackedRunner:
         self.run_id = run_id
         self.models = models or load_models_config()
 
-    def _price(self, model: str, input_tokens: int, output_tokens: int) -> float:
-        pricing = self.models.price(model)
-        return round(
-            (input_tokens / 1_000_000) * pricing.input_per_mtok
-            + (output_tokens / 1_000_000) * pricing.output_per_mtok,
-            6,
+    def _price(self, model: str, tokens: dict[str, int]):
+        return self.models.compute_cost(
+            model,
+            input_tokens=tokens["input_tokens"],
+            output_tokens=tokens["output_tokens"],
+            cached_input_tokens=tokens["cached_input_tokens"],
+            cache_write_tokens=tokens["cache_write_tokens"],
         )
 
     async def run(
@@ -165,11 +204,18 @@ class TrackedRunner:
         workflow_name = self.models.workflow_name(workflow_key)
         retries = self.models.defaults.structured_output_retries
         turns = max_turns or self.models.defaults.max_turns
+        try:
+            effort = self.models.resolved(agent_key).reasoning_effort
+        except Exception:
+            effort = None
 
         metadata: dict[str, str] = {
             "agent": agent_key,
             "prompt_version": prompt_version,
+            "model": model,
         }
+        if effort:
+            metadata["reasoning_effort"] = effort
         if self.run_id:
             metadata["run_id"] = self.run_id
         if topic_id:
@@ -204,6 +250,7 @@ class TrackedRunner:
                     workflow_name=workflow_name,
                     model=model,
                     prompt_version=prompt_version,
+                    reasoning_effort=effort,
                     started=started,
                     completed=completed,
                     topic_id=topic_id,
@@ -218,28 +265,37 @@ class TrackedRunner:
                 raise AgentRunError(agent_key, attempt, exc) from exc
 
             completed = datetime.now(timezone.utc)
-            usage = result.context_wrapper.usage
+            tokens = extract_usage(result.context_wrapper.usage)
             trace = get_current_trace()
             trace_id = getattr(trace, "trace_id", None)
 
-            cost = self._price(model, usage.input_tokens, usage.output_tokens)
+            cost = self._price(model, tokens)
             agent_run_id = self.repos.agent_runs.record(
                 run_id=self.run_id,
                 workflow_name=workflow_name,
                 agent_name=agent_key,
                 model=model,
                 prompt_version=prompt_version,
+                reasoning_effort=effort,
                 started_at=started,
                 completed_at=completed,
                 status="OK",
                 trace_id=trace_id,
                 topic_id=topic_id,
                 content_id=content_id,
-                requests=usage.requests,
-                input_tokens=usage.input_tokens,
-                output_tokens=usage.output_tokens,
-                total_tokens=usage.total_tokens,
-                estimated_cost=cost,
+                requests=tokens["requests"],
+                input_tokens=tokens["input_tokens"],
+                cached_input_tokens=tokens["cached_input_tokens"],
+                cache_write_tokens=tokens["cache_write_tokens"],
+                output_tokens=tokens["output_tokens"],
+                reasoning_tokens=tokens["reasoning_tokens"],
+                total_tokens=tokens["total_tokens"],
+                uncached_input_cost=cost.uncached_input_cost,
+                cached_input_cost=cost.cached_input_cost,
+                cache_write_cost=cost.cache_write_cost,
+                output_cost=cost.output_cost,
+                estimated_cost=cost.total_cost,
+                pricing_known=cost.priced,
                 attempt=attempt,
             )
 
@@ -251,10 +307,15 @@ class TrackedRunner:
                 trace_id=trace_id,
                 agent_run_id=agent_run_id,
                 attempts=attempt,
-                input_tokens=usage.input_tokens,
-                output_tokens=usage.output_tokens,
-                total_tokens=usage.total_tokens,
-                estimated_cost=cost,
+                reasoning_effort=effort,
+                input_tokens=tokens["input_tokens"],
+                cached_input_tokens=tokens["cached_input_tokens"],
+                cache_write_tokens=tokens["cache_write_tokens"],
+                output_tokens=tokens["output_tokens"],
+                reasoning_tokens=tokens["reasoning_tokens"],
+                total_tokens=tokens["total_tokens"],
+                estimated_cost=cost.total_cost,
+                pricing_known=cost.priced,
                 duration_ms=int((completed - started).total_seconds() * 1000),
                 raw=result,
             )
@@ -268,6 +329,7 @@ class TrackedRunner:
         workflow_name: str,
         model: str,
         prompt_version: str,
+        reasoning_effort: str | None,
         started: datetime,
         completed: datetime,
         topic_id: str | None,
@@ -286,6 +348,7 @@ class TrackedRunner:
             agent_name=agent_key,
             model=model,
             prompt_version=prompt_version,
+            reasoning_effort=reasoning_effort,
             started_at=started,
             completed_at=completed,
             status="ERROR",

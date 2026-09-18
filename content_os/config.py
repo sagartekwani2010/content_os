@@ -204,8 +204,31 @@ class ModelDefaults(BaseModel):
 
 
 class ModelPricing(BaseModel):
+    """USD per million tokens, split by how the tokens were billed.
+
+    Cache writes are charged at a premium over normal uncached input. When a
+    model omits an explicit cache-write rate it is derived from the input rate
+    using the configured multiplier, so adding a model only requires the three
+    published numbers.
+    """
+
     input_per_mtok: float = 0.0
+    cached_input_per_mtok: float = 0.0
     output_per_mtok: float = 0.0
+    cache_write_per_mtok: float | None = None
+
+    def cache_write_rate(self, multiplier: float) -> float:
+        if self.cache_write_per_mtok is not None:
+            return self.cache_write_per_mtok
+        return round(self.input_per_mtok * multiplier, 6)
+
+    @property
+    def is_priced(self) -> bool:
+        return self.input_per_mtok > 0.0 or self.output_per_mtok > 0.0
+
+
+class PricingDefaults(BaseModel):
+    cache_write_multiplier: float = 1.25
 
 
 class TracingConfig(BaseModel):
@@ -213,8 +236,26 @@ class TracingConfig(BaseModel):
     workflows: dict[str, str] = Field(default_factory=dict)
 
 
+class TokenCost(BaseModel):
+    """A fully itemised cost for one agent invocation."""
+
+    uncached_input_tokens: int = 0
+    cached_input_tokens: int = 0
+    cache_write_tokens: int = 0
+    output_tokens: int = 0
+
+    uncached_input_cost: float = 0.0
+    cached_input_cost: float = 0.0
+    cache_write_cost: float = 0.0
+    output_cost: float = 0.0
+    total_cost: float = 0.0
+
+    priced: bool = True
+
+
 class ModelsConfig(BaseModel):
     defaults: ModelDefaults = Field(default_factory=ModelDefaults)
+    pricing_defaults: PricingDefaults = Field(default_factory=PricingDefaults)
     agents: dict[str, AgentModelConfig] = Field(default_factory=dict)
     pricing: dict[str, ModelPricing] = Field(default_factory=dict)
     tracing: TracingConfig = Field(default_factory=TracingConfig)
@@ -247,6 +288,52 @@ class ModelsConfig(BaseModel):
             return self.pricing[model]
         # Unknown model: record zero cost rather than guessing wrong numbers.
         return ModelPricing()
+
+    def compute_cost(
+        self,
+        model: str,
+        *,
+        input_tokens: int,
+        output_tokens: int,
+        cached_input_tokens: int = 0,
+        cache_write_tokens: int = 0,
+    ) -> TokenCost:
+        """Itemise the cost of one call.
+
+        input_tokens from the API is the full prompt count, with cached and
+        cache-write tokens reported as subsets of it. Billing them at the
+        uncached rate as well would double-count, so they are subtracted out and
+        charged at their own rates. Every component is clamped at zero, because
+        a provider reporting an unexpected split must not produce negative spend.
+        """
+        pricing = self.price(model)
+        multiplier = self.pricing_defaults.cache_write_multiplier
+
+        cached = max(0, cached_input_tokens)
+        written = max(0, cache_write_tokens)
+        uncached = max(0, input_tokens - cached - written)
+        out = max(0, output_tokens)
+
+        per_token = 1_000_000.0
+        uncached_cost = uncached * pricing.input_per_mtok / per_token
+        cached_cost = cached * pricing.cached_input_per_mtok / per_token
+        write_cost = written * pricing.cache_write_rate(multiplier) / per_token
+        output_cost = out * pricing.output_per_mtok / per_token
+
+        return TokenCost(
+            uncached_input_tokens=uncached,
+            cached_input_tokens=cached,
+            cache_write_tokens=written,
+            output_tokens=out,
+            uncached_input_cost=round(uncached_cost, 8),
+            cached_input_cost=round(cached_cost, 8),
+            cache_write_cost=round(write_cost, 8),
+            output_cost=round(output_cost, 8),
+            total_cost=round(
+                uncached_cost + cached_cost + write_cost + output_cost, 8
+            ),
+            priced=pricing.is_priced,
+        )
 
 
 # --------------------------------------------------------------------------
@@ -347,7 +434,7 @@ def config_warnings() -> list[str]:
                 f"agent '{agent_name}' uses model '{model}', which has no entry "
                 f"under 'pricing:' in config/models.yaml. Cost will record as $0."
             )
-        elif pricing.input_per_mtok == 0.0 and pricing.output_per_mtok == 0.0:
+        elif not pricing.is_priced:
             warnings.append(
                 f"model '{model}' is configured at zero cost. Fill in real rates "
                 f"under 'pricing:' or the cost ledger will read $0 for every call."

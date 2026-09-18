@@ -63,40 +63,53 @@ agents:
     reasoning_effort: high
     verbosity: medium
 
-# Cost estimation, USD per million tokens. Used only for the agent_runs ledger.
-# Update when pricing changes; historical rows keep the cost computed at the time.
+  normalizer:
+    # Semantic dedup, tagging and canonicalisation. Runs only on the residue the
+    # deterministic slug match cannot settle, so it is high-volume but shallow.
+    model: gpt-5.6-luna
+    prompt_version: normalizer_v1
+    reasoning_effort: low
+    verbosity: low
+
+# Cost estimation, USD per million tokens, used by the agent_runs ledger.
+# Historical rows keep the cost computed at the time, so changing these numbers
+# never rewrites past spend.
 #
-# A model used by an agent but absent here records zero cost rather than a
-# guessed one, and `cli.py doctor` warns about it. Wrong cost data is worse than
-# no cost data, because it looks authoritative.
+# Four rate classes. Cached input is prompt content served from the cache.
+# Cache writes are billed separately at 1.25x the uncached input price; when
+# cache_write_per_mtok is omitted it is derived from input_per_mtok using
+# cache_write_multiplier below.
+pricing_defaults:
+  cache_write_multiplier: 1.25
+
 pricing:
-  # TODO: fill in real rates for both variants. Until these are set, the cost
-  # column in `cli.py usage` reads $0.0000 and `cli.py doctor` warns about it.
-  gpt-5.6-terra:
-    input_per_mtok: 0.0
-    output_per_mtok: 0.0
   gpt-5.6-sol:
-    input_per_mtok: 0.0
-    output_per_mtok: 0.0
+    input_per_mtok: 4.00
+    cached_input_per_mtok: 0.40
+    output_per_mtok: 20.00
+
+  gpt-5.6-terra:
+    input_per_mtok: 2.00
+    cached_input_per_mtok: 0.20
+    output_per_mtok: 12.00
+
   gpt-5.6-luna:
-    input_per_mtok: 0.0
-    output_per_mtok: 0.0
+    input_per_mtok: 0.20
+    cached_input_per_mtok: 0.02
+    output_per_mtok: 1.20
 
   gpt-5:
     input_per_mtok: 1.25
+    cached_input_per_mtok: 0.125
     output_per_mtok: 10.00
   gpt-5-mini:
     input_per_mtok: 0.25
+    cached_input_per_mtok: 0.025
     output_per_mtok: 2.00
   gpt-5-nano:
     input_per_mtok: 0.05
+    cached_input_per_mtok: 0.005
     output_per_mtok: 0.40
-  gpt-4.1:
-    input_per_mtok: 2.00
-    output_per_mtok: 8.00
-  gpt-4.1-mini:
-    input_per_mtok: 0.40
-    output_per_mtok: 1.60
 
 tracing:
   enabled: true

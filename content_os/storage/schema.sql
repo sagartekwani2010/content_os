@@ -41,11 +41,26 @@ CREATE TABLE IF NOT EXISTS agent_runs (
     duration_ms       INTEGER,
     status            TEXT NOT NULL,
 
+    -- Reasoning effort is stored per call, not just per config, because it is
+    -- changed between runs and is a prime suspect when cost or quality moves.
+    reasoning_effort  TEXT,
+
     requests          INTEGER DEFAULT 0,
     input_tokens      INTEGER DEFAULT 0,
+    cached_input_tokens INTEGER DEFAULT 0,
+    cache_write_tokens  INTEGER DEFAULT 0,
     output_tokens     INTEGER DEFAULT 0,
+    reasoning_tokens  INTEGER DEFAULT 0,
     total_tokens      INTEGER DEFAULT 0,
+
+    -- Itemised so a cost spike can be attributed to cache misses, cache writes,
+    -- or runaway reasoning output rather than guessed at.
+    uncached_input_cost REAL DEFAULT 0.0,
+    cached_input_cost   REAL DEFAULT 0.0,
+    cache_write_cost    REAL DEFAULT 0.0,
+    output_cost         REAL DEFAULT 0.0,
     estimated_cost    REAL DEFAULT 0.0,
+    pricing_known     INTEGER DEFAULT 1,
 
     attempt           INTEGER DEFAULT 1,
     error_type        TEXT,

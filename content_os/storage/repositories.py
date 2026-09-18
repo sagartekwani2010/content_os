@@ -81,14 +81,23 @@ class AgentRunRepository(_Base):
         started_at: datetime,
         completed_at: datetime,
         status: str,
+        reasoning_effort: str | None = None,
         trace_id: str | None = None,
         topic_id: str | None = None,
         content_id: str | None = None,
         requests: int = 0,
         input_tokens: int = 0,
+        cached_input_tokens: int = 0,
+        cache_write_tokens: int = 0,
         output_tokens: int = 0,
+        reasoning_tokens: int = 0,
         total_tokens: int = 0,
+        uncached_input_cost: float = 0.0,
+        cached_input_cost: float = 0.0,
+        cache_write_cost: float = 0.0,
+        output_cost: float = 0.0,
         estimated_cost: float = 0.0,
+        pricing_known: bool = True,
         attempt: int = 1,
         error_type: str | None = None,
         error_message: str | None = None,
@@ -99,18 +108,24 @@ class AgentRunRepository(_Base):
             """
             INSERT INTO agent_runs (
                 id, run_id, workflow_name, agent_name, trace_id,
-                topic_id, content_id, model, prompt_version,
+                topic_id, content_id, model, prompt_version, reasoning_effort,
                 started_at, completed_at, duration_ms, status,
-                requests, input_tokens, output_tokens, total_tokens,
-                estimated_cost, attempt, error_type, error_message
-            ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                requests, input_tokens, cached_input_tokens, cache_write_tokens,
+                output_tokens, reasoning_tokens, total_tokens,
+                uncached_input_cost, cached_input_cost, cache_write_cost,
+                output_cost, estimated_cost, pricing_known,
+                attempt, error_type, error_message
+            ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
             """,
             (
                 agent_run_id, run_id, workflow_name, agent_name, trace_id,
-                topic_id, content_id, model, prompt_version,
+                topic_id, content_id, model, prompt_version, reasoning_effort,
                 to_iso(started_at), to_iso(completed_at), duration_ms, status,
-                requests, input_tokens, output_tokens, total_tokens,
-                estimated_cost, attempt, error_type, error_message,
+                requests, input_tokens, cached_input_tokens, cache_write_tokens,
+                output_tokens, reasoning_tokens, total_tokens,
+                uncached_input_cost, cached_input_cost, cache_write_cost,
+                output_cost, estimated_cost, int(pricing_known),
+                attempt, error_type, error_message,
             ),
         )
         return agent_run_id
@@ -118,14 +133,23 @@ class AgentRunRepository(_Base):
     def usage_summary(self, run_id: str | None = None) -> list[sqlite3.Row]:
         sql = """
             SELECT agent_name, model,
-                   COUNT(*)              AS invocations,
-                   SUM(requests)         AS requests,
-                   SUM(input_tokens)     AS input_tokens,
-                   SUM(output_tokens)    AS output_tokens,
-                   SUM(total_tokens)     AS total_tokens,
-                   SUM(estimated_cost)   AS estimated_cost,
+                   MAX(reasoning_effort)      AS reasoning_effort,
+                   COUNT(*)                   AS invocations,
+                   SUM(requests)              AS requests,
+                   SUM(input_tokens)          AS input_tokens,
+                   SUM(cached_input_tokens)   AS cached_input_tokens,
+                   SUM(cache_write_tokens)    AS cache_write_tokens,
+                   SUM(output_tokens)         AS output_tokens,
+                   SUM(reasoning_tokens)      AS reasoning_tokens,
+                   SUM(total_tokens)          AS total_tokens,
+                   SUM(uncached_input_cost)   AS uncached_input_cost,
+                   SUM(cached_input_cost)     AS cached_input_cost,
+                   SUM(cache_write_cost)      AS cache_write_cost,
+                   SUM(output_cost)           AS output_cost,
+                   SUM(estimated_cost)        AS estimated_cost,
+                   MIN(pricing_known)         AS pricing_known,
                    SUM(CASE WHEN status != 'OK' THEN 1 ELSE 0 END) AS failures,
-                   AVG(duration_ms)      AS avg_ms
+                   AVG(duration_ms)           AS avg_ms
             FROM agent_runs
         """
         params: tuple[Any, ...] = ()

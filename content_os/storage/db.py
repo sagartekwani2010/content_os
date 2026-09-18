@@ -62,8 +62,47 @@ def connect(path: str | Path | None = None) -> sqlite3.Connection:
     return conn
 
 
+# Columns added after the first release. CREATE TABLE IF NOT EXISTS will not
+# add a column to a table that already exists, so an existing database needs
+# these applied explicitly.
+_MIGRATIONS: dict[str, list[tuple[str, str]]] = {
+    "agent_runs": [
+        ("reasoning_effort", "TEXT"),
+        ("cached_input_tokens", "INTEGER DEFAULT 0"),
+        ("cache_write_tokens", "INTEGER DEFAULT 0"),
+        ("reasoning_tokens", "INTEGER DEFAULT 0"),
+        ("uncached_input_cost", "REAL DEFAULT 0.0"),
+        ("cached_input_cost", "REAL DEFAULT 0.0"),
+        ("cache_write_cost", "REAL DEFAULT 0.0"),
+        ("output_cost", "REAL DEFAULT 0.0"),
+        ("pricing_known", "INTEGER DEFAULT 1"),
+    ],
+}
+
+
+def migrate(conn: sqlite3.Connection) -> list[str]:
+    """Add any missing columns. Additive only, never destructive.
+
+    Historical rows keep whatever they recorded; new columns arrive as NULL or
+    their default rather than being backfilled with a guess.
+    """
+    applied: list[str] = []
+    for table, columns in _MIGRATIONS.items():
+        existing = {
+            row["name"] for row in conn.execute(f"PRAGMA table_info({table})")
+        }
+        if not existing:
+            continue
+        for name, spec in columns:
+            if name not in existing:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {name} {spec}")
+                applied.append(f"{table}.{name}")
+    return applied
+
+
 def init_db(conn: sqlite3.Connection) -> None:
     conn.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))
+    migrate(conn)
 
 
 def get_db(path: str | Path | None = None) -> sqlite3.Connection:

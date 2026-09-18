@@ -237,27 +237,25 @@ class TestHookClassification:
 
 
 class TestPricingWarnings:
-    def test_unpriced_model_is_reported(self):
-        """A model with no real rates records zero cost. That must be loud,
-        because a $0 ledger looks like a working ledger."""
+    def test_repository_config_is_fully_priced(self):
+        """Every model in use has real rates, so no warning should fire."""
         from content_os.config import config_warnings
 
-        warnings = config_warnings()
-        assert any("zero cost" in w or "no entry" in w for w in warnings), (
-            "the gpt-5.6 variants have placeholder pricing and should warn"
-        )
+        assert config_warnings() == []
 
-    def test_a_fully_priced_config_produces_no_warning(self, tmp_path):
+    def test_unpriced_model_is_reported(self):
+        """A model with no real rates records zero cost. That must be loud,
+        because a $0 ledger looks exactly like a working ledger."""
         from content_os.config import ModelsConfig
 
         models = ModelsConfig(
-            defaults={"model": "m1"},
-            agents={"scorer": {"model": "m1", "prompt_version": "scorer_v1"}},
-            pricing={"m1": {"input_per_mtok": 1.0, "output_per_mtok": 2.0}},
+            agents={"scorer": {"model": "unpriced-m", "prompt_version": "scorer_v1"}},
+            pricing={},
         )
-        price = models.price("m1")
-        assert price.input_per_mtok == 1.0
-        assert models.price("unknown-model").input_per_mtok == 0.0
+        assert models.price("unpriced-m").is_priced is False
+        cost = models.compute_cost("unpriced-m", input_tokens=1000, output_tokens=500)
+        assert cost.total_cost == 0.0
+        assert cost.priced is False
 
     def test_every_configured_model_resolves(self):
         from content_os.config import load_models_config

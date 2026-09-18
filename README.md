@@ -36,7 +36,7 @@ touches a spending decision.
 ## Pipeline
 
 ```
-sources -> TrendScout -> topics -> Scorer -> deterministic scoring
+sources -> TrendScout -> Normalizer -> topics -> Scorer -> deterministic scoring
                                                      |
                                               Strategist (portfolio)
                                                 /            \
@@ -227,16 +227,53 @@ model name appears anywhere in the code.
 | carousel_writer | gpt-5.6-sol | medium |
 | qa | gpt-5.6-sol | high |
 | performance_analyst | gpt-5.6-sol | high |
+| normalizer | gpt-5.6-luna | low |
 
-Terra handles the high-volume work, where the scorer alone runs once per topic.
-Sol handles the work where output quality is the product. Effort is set per
-agent so the expensive thinking is spent where it changes the result.
+Sol handles the work where output quality is the product. Terra handles the
+high-volume judgement work, where the scorer alone runs once per topic. Luna
+handles dedup, tagging and canonicalization, which is high-volume but shallow.
 
-Pricing lives in the same file and feeds the cost ledger. A model used by an
-agent but missing real rates records zero cost, and both `cli.py doctor` and
-`cli.py usage` warn about it rather than showing a confident $0.00.
+The scorer stays on terra deliberately. Moving it to luna would cut most of the
+weekly bill, but that is a change to make after benchmarking terra against luna
+on the same scored topic set, comparing rank correlation, score divergence, and
+downstream content performance. Same workload, the two are exactly 10x apart in
+cost, which is what makes the comparison worth running rather than assuming.
 
-### Prompt and model versioning
+### Pricing and the cost ledger
+
+Rates are USD per million tokens, in the `pricing:` block of `models.yaml`.
+
+| Model | Input | Cached input | Cache write | Output |
+|---|---|---|---|---|
+| gpt-5.6-sol | $4.00 | $0.40 | $5.00 | $20.00 |
+| gpt-5.6-terra | $2.00 | $0.20 | $2.50 | $12.00 |
+| gpt-5.6-luna | $0.20 | $0.02 | $0.25 | $1.20 |
+
+Cache writes bill at 1.25x uncached input. A model can state its own
+`cache_write_per_mtok`; otherwise the rate is derived from the input price using
+`pricing_defaults.cache_write_multiplier`, so adding a model needs only the three
+published numbers.
+
+Cached and cache-write tokens are reported by the API as subsets of the total
+prompt count, so they are subtracted out before the uncached rate is applied.
+Billing them twice would inflate every figure in the ledger.
+
+`agent_runs` records per call: agent, workflow, model, reasoning effort, prompt
+version, trace id, topic and content id, requests, input tokens, cached input
+tokens, cache-write tokens, output tokens, reasoning tokens, an itemised cost
+split across all four billing classes, duration, attempt number, and the error if
+it failed.
+
+`cli.py usage` renders that as a per-agent table, a cache hit rate, and a cost
+breakdown by billing class, plus cost per content item. When output dominates
+the bill, the lever is reasoning effort and script length. When uncached input
+dominates, the lever is prompt stability.
+
+A model used by an agent but missing rates records zero cost rather than a
+guessed one, and both `doctor` and `usage` warn about it. A ledger reading $0.00
+looks exactly like a working ledger, so that has to be loud.
+
+### Prompt and model versioning### Prompt and model versioning
 
 Each agent names a prompt version in `models.yaml`, which maps to a file in
 `prompts/`. That version and the model name are stored with every artifact.
@@ -254,7 +291,7 @@ To iterate: copy `prompts/reel_writer_v1.md` to `v2`, edit it, point
 .venv/bin/python -m pytest tests/ -q
 ```
 
-91 tests, no API key needed, covering the weighted arithmetic against
+112 tests, no API key needed, covering the weighted arithmetic against
 hand-computed values, saturation monotonicity and bounds, the veto surviving
 maximum trend velocity, rejection of ten-identical-posts plans, zero-denominator
 metrics, multi-snapshot history, provenance metadata retention, creative-variant
@@ -284,7 +321,7 @@ rewrite. Nothing here is wired to an external service.
 
 ```
 content_os/
-  agents/       seven agents, each one prompt + one structured output type
+  agents/       eight agents, each one prompt + one structured output type
   tools/        scoring, metrics, analytics, ad eligibility, source ingestion
   models/       Pydantic schemas, agent-facing and persisted kept separate
   storage/      schema.sql, connection handling, repositories
@@ -293,6 +330,6 @@ content_os/
 config/         brand, scoring, models, experiments
 prompts/        versioned prompt files
 seeds/          sample source material and a performance CSV template
-tests/          91 tests
+tests/          112 tests
 cli.py
 ```

@@ -234,6 +234,16 @@ def cmd_discover(args: argparse.Namespace) -> int:
             print(f"    {c(f'saturation {topic.estimated_saturation:.2f}', DIM)}  "
                   f"{c('pillars: ' + ', '.join(topic.content_pillars), DIM)}")
 
+    if result.get("normalization_error"):
+        print(c(f"\n  normalization skipped: {result['normalization_error']}", YELLOW))
+        print(c("  Exact-match deduplication still ran.", DIM))
+
+    if result.get("merged"):
+        header("Merged as duplicates")
+        for m in result["merged"]:
+            print(f"  {m['title'][:60]}")
+            print(c(f"    -> {m['duplicate_of']}: {m['note'][:100]}", DIM))
+
     if result["discarded_reasons"]:
         header("Discarded")
         for reason in result["discarded_reasons"]:
@@ -776,16 +786,54 @@ def cmd_usage(args: argparse.Namespace) -> int:
         print(c("  No agent runs recorded yet.\n", YELLOW))
         return 0
 
-    print(f"  {'agent':<22} {'model':<14} {'calls':>5} {'tokens':>9} "
-          f"{'cost':>9} {'fails':>6} {'avg ms':>8}")
-    print(c("  " + "-" * 82, DIM))
+    print(f"  {'agent':<20} {'model':<15} {'eff':<7} {'calls':>5} "
+          f"{'in':>8} {'cached':>8} {'write':>7} {'out':>8} {'reason':>7} "
+          f"{'cost':>9} {'fail':>5}")
+    print(c("  " + "-" * 116, DIM))
+
+    totals = {k: 0 for k in ("input", "cached", "write", "output", "reasoning")}
     for row in usage["by_agent"]:
-        print(f"  {row['agent_name'][:22]:<22} {row['model'][:14]:<14} "
-              f"{row['invocations']:>5} {row['total_tokens'] or 0:>9} "
-              f"${row['estimated_cost'] or 0:>8.4f} {row['failures']:>6} "
-              f"{row['avg_ms'] or 0:>8.0f}")
-    print(c("  " + "-" * 82, DIM))
-    print(f"  {'TOTAL':<37} {usage['total_tokens']:>9} ${usage['total_cost']:>8.4f}")
+        totals["input"] += row["input_tokens"] or 0
+        totals["cached"] += row["cached_input_tokens"] or 0
+        totals["write"] += row["cache_write_tokens"] or 0
+        totals["output"] += row["output_tokens"] or 0
+        totals["reasoning"] += row["reasoning_tokens"] or 0
+        print(f"  {row['agent_name'][:20]:<20} {row['model'][:15]:<15} "
+              f"{(row['reasoning_effort'] or '-')[:7]:<7} {row['invocations']:>5} "
+              f"{row['input_tokens'] or 0:>8} {row['cached_input_tokens'] or 0:>8} "
+              f"{row['cache_write_tokens'] or 0:>7} {row['output_tokens'] or 0:>8} "
+              f"{row['reasoning_tokens'] or 0:>7} "
+              f"${row['estimated_cost'] or 0:>8.4f} {row['failures']:>5}")
+
+    print(c("  " + "-" * 116, DIM))
+    print(f"  {'TOTAL':<44} {totals['input']:>8} {totals['cached']:>8} "
+          f"{totals['write']:>7} {totals['output']:>8} {totals['reasoning']:>7} "
+          f"${usage['total_cost']:>8.4f}")
+
+    if totals["input"]:
+        hit_rate = totals["cached"] / totals["input"]
+        print()
+        kv("cache hit rate", f"{hit_rate:.1%} of prompt tokens served from cache")
+        kv("total tokens", usage["total_tokens"])
+
+    # Cost split by how tokens were billed. A spike here says whether to fix
+    # prompt stability, reasoning effort, or output length.
+    split = repos.conn.execute(
+        "SELECT SUM(uncached_input_cost) AS uncached, SUM(cached_input_cost) AS cached, "
+        "SUM(cache_write_cost) AS write, SUM(output_cost) AS output FROM agent_runs"
+        + (" WHERE run_id = ?" if args.run_id else ""),
+        (args.run_id,) if args.run_id else (),
+    ).fetchone()
+    if split and (split["uncached"] or split["output"]):
+        header("Cost by billing class")
+        for label, value in (
+            ("uncached input", split["uncached"] or 0.0),
+            ("cached input", split["cached"] or 0.0),
+            ("cache writes", split["write"] or 0.0),
+            ("output", split["output"] or 0.0),
+        ):
+            share = value / usage["total_cost"] if usage["total_cost"] else 0.0
+            print(f"  {label.ljust(18)} ${value:>8.4f}  {share:>6.1%}")
 
     if usage["total_tokens"] and usage["total_cost"] == 0.0:
         print()
