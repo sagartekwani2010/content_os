@@ -1,0 +1,2 @@
+content_id,snapshot_time,reach,impressions,follower_reach,non_follower_reach,plays,avg_watch_time_seconds,total_watch_time_seconds,video_duration_seconds,likes,comments,shares,sends,saves,profile_visits,new_followers,website_clicks,followers_at_post_time
+REPLACE_WITH_CONTENT_ID,2026-09-15,10450,13200,3100,7350,12800,11.8,151040,21,412,38,96,74,231,318,52,7,4120

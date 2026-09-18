@@ -1,0 +1,89 @@
+{
+  "_note": "Sample source material for testing. These are raw inputs for the Trend Scout, not pre-made topics. Real runs would paste in links, threads, release notes, and notes-to-self. Nothing here is hardcoded into business logic.",
+  "sources": [
+    {
+      "id": "src_001",
+      "source_type": "personal_note",
+      "title": "Recurring confusion: agent vs tool vs workflow",
+      "url": null,
+      "text": "Third time this month someone on a team call called a deterministic if/else pipeline an 'agent'. The distinction that actually matters in production: a workflow has a fixed path decided at design time, a tool is a single capability invoked by something else, an agent chooses its own path at runtime based on context. If your system always takes the same route through the same steps, you built a workflow and you are paying agent prices for it. Worth making a clean visual for this."
+    },
+    {
+      "id": "src_002",
+      "source_type": "personal_experiment",
+      "title": "Ripped out the orchestrator, latency dropped",
+      "url": null,
+      "text": "Had a three-agent setup: planner, researcher, writer, coordinated by an orchestrator agent. Replaced it with one agent holding three tools. Output quality was indistinguishable on my eval set, latency fell by more than half, and token spend dropped a lot because the orchestrator was re-reading conversation state on every hop. Most multi-agent architectures I see in the wild are solving an organisational problem, not a technical one."
+    },
+    {
+      "id": "src_003",
+      "source_type": "industry_discussion",
+      "title": "Demo-to-production gap keeps coming up",
+      "url": null,
+      "text": "Persistent discussion across engineering circles about AI systems that demo beautifully and collapse in production. The recurring causes are the same: no evaluation harness, no handling of partial failure, unbounded context growth, no cost ceiling, and no plan for what happens when the model returns something structurally valid but semantically wrong. Demos are built on the happy path. Production is entirely the unhappy path."
+    },
+    {
+      "id": "src_004",
+      "source_type": "personal_note",
+      "title": "Agent memory and agent state are not the same thing",
+      "url": null,
+      "text": "People say 'my agent needs memory' when they usually mean state. State is what the agent is tracking within a task, scratch space, intermediate results, tool outputs, and it should be discarded when the task ends. Memory is what persists across tasks and should be deliberately curated. Conflating them produces agents that either forget everything important or drag an ever-growing transcript into every call until the context window becomes the bill."
+    },
+    {
+      "id": "src_005",
+      "source_type": "personal_experiment",
+      "title": "Avatar pipeline results",
+      "url": null,
+      "text": "Ran a batch of short-form videos through an AI avatar pipeline instead of filming. Production time per video went from around forty minutes to under ten. The interesting part is not the time saving, it is which content types survive the translation. Direct-to-camera claims and explanation work. Anything needing physical demonstration or genuine spontaneity does not. There is a real taxonomy here of what avatar delivery can and cannot carry."
+    },
+    {
+      "id": "src_006",
+      "source_type": "industry_discussion",
+      "title": "Generative video model comparisons",
+      "url": null,
+      "text": "Active comparison discussion between current generative video models on motion coherence, prompt adherence, character consistency across shots, and cost per usable second. Most published comparisons use cherry-picked prompts. A practitioner comparison using the same prompt set across models, reporting how many generations were actually usable rather than how good the best one looked, would be genuinely different from what is out there."
+    },
+    {
+      "id": "src_007",
+      "source_type": "industry_discussion",
+      "title": "MCP at production scale",
+      "url": null,
+      "text": "Model Context Protocol adoption is growing fast and the production questions are starting to surface: what happens when a server exposes sixty tools and the model has to choose among them, how tool descriptions should be written so selection stays reliable, authentication and permission boundaries across servers, and what to do when a server is slow or unavailable mid-task. The protocol is well specified. Operating it at scale is where the unanswered questions are."
+    },
+    {
+      "id": "src_008",
+      "source_type": "personal_note",
+      "title": "Context engineering is the actual skill now",
+      "url": null,
+      "text": "Prompt engineering as a term is aging badly. The real work is context engineering: deciding what enters the context window, in what order, at what fidelity, and what gets evicted when it fills. Retrieval, compaction, tool result truncation, and structured versus prose formatting all matter more than the phrasing of the instruction. Nobody is teaching this well and it is the highest-leverage skill in building agents right now."
+    },
+    {
+      "id": "src_009",
+      "source_type": "personal_note",
+      "title": "Evaluation is the real bottleneck",
+      "url": null,
+      "text": "Every agent project I have worked on stalls at the same place: nobody can tell whether a change made things better. Without an eval set you are tuning by vibes, and vibes do not survive contact with real traffic. The uncomfortable part is that building a decent eval set is unglamorous work that takes days and produces nothing demoable, which is exactly why teams skip it and then cannot ship."
+    },
+    {
+      "id": "src_010",
+      "source_type": "ai_news",
+      "title": "Another week of model releases",
+      "url": null,
+      "text": "Several labs shipped incremental model updates this week with the usual benchmark charts. Marginal gains on standard evals, some context window increases, and pricing adjustments. No architectural change and nothing that alters how systems get built. Coverage is heavy across tech media."
+    },
+    {
+      "id": "src_011",
+      "source_type": "ai_news",
+      "title": "AI funding round and valuation news",
+      "url": null,
+      "text": "A large funding round for an AI infrastructure company at a substantially increased valuation, with widespread coverage and commentary about market conditions and whether valuations are sustainable."
+    },
+    {
+      "id": "src_012",
+      "source_type": "personal_experiment",
+      "title": "Cost of running an agent loop nobody measures",
+      "url": null,
+      "text": "Instrumented token usage per agent invocation across a week of real runs. The distribution is wildly skewed: a small number of runs where the agent got stuck retrying accounted for most of the spend. Median cost per task was trivial, the tail was brutal. Nobody budgets for the tail, and the fix is a turn limit and a cost ceiling rather than a better prompt."
+    }
+  ]
+}
