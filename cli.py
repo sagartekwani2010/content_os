@@ -37,6 +37,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from content_os.config import (  # noqa: E402
+    config_warnings,
     load_brand,
     load_experiments_config,
     load_models_config,
@@ -128,6 +129,9 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         kv("brand-fit veto", f"< {cfg.brand_fit_veto.threshold}")
         kv("pillars", ", ".join(brand.pillar_keys))
         kv("agents", ", ".join(models.agents))
+
+    for warning in config_warnings():
+        print(c(f"  WARN  {warning}", YELLOW))
 
     header("Environment")
     key = os.environ.get("OPENAI_API_KEY")
@@ -782,6 +786,11 @@ def cmd_usage(args: argparse.Namespace) -> int:
               f"{row['avg_ms'] or 0:>8.0f}")
     print(c("  " + "-" * 82, DIM))
     print(f"  {'TOTAL':<37} {usage['total_tokens']:>9} ${usage['total_cost']:>8.4f}")
+
+    if usage["total_tokens"] and usage["total_cost"] == 0.0:
+        print()
+        for warning in config_warnings():
+            print(c(f"  WARN  {warning}", YELLOW))
 
     rows = repos.conn.execute(
         "SELECT c.id, c.title, c.format, SUM(a.estimated_cost) AS cost, "

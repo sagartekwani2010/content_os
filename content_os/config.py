@@ -326,6 +326,36 @@ def load_prompt(version: str, prompts_dir: str | None = None) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def config_warnings() -> list[str]:
+    """Non-fatal problems worth surfacing before a run.
+
+    A model with no pricing entry still works; it just records zero cost, which
+    would quietly make the token ledger useless. That has to be visible rather
+    than silent, since the ledger is the whole point of tracking spend.
+    """
+    warnings: list[str] = []
+    try:
+        models = load_models_config()
+    except Exception:
+        return warnings
+
+    for agent_name in models.agents:
+        model = models.resolved(agent_name).model
+        pricing = models.pricing.get(model)
+        if pricing is None:
+            warnings.append(
+                f"agent '{agent_name}' uses model '{model}', which has no entry "
+                f"under 'pricing:' in config/models.yaml. Cost will record as $0."
+            )
+        elif pricing.input_per_mtok == 0.0 and pricing.output_per_mtok == 0.0:
+            warnings.append(
+                f"model '{model}' is configured at zero cost. Fill in real rates "
+                f"under 'pricing:' or the cost ledger will read $0 for every call."
+            )
+
+    return sorted(set(warnings))
+
+
 def validate_all() -> list[str]:
     """Load every config file and report problems. Used by `cli.py doctor`."""
     problems: list[str] = []

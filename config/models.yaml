@@ -5,7 +5,7 @@
 # or a better model.
 
 defaults:
-  model: gpt-5
+  model: gpt-5.6-terra
   reasoning_effort: medium
   verbosity: medium
   max_turns: 12
@@ -13,55 +13,75 @@ defaults:
   structured_output_retries: 1
 
 agents:
+  # terra handles the high-volume, judgement-light work; sol handles the work
+  # where output quality is the product. Reasoning effort is set per agent
+  # rather than globally, so the expensive thinking is spent where it matters.
+
   trend_scout:
-    model: gpt-5
+    model: gpt-5.6-terra
     prompt_version: trend_scout_v1
-    reasoning_effort: medium
+    reasoning_effort: low
     verbosity: low
 
   scorer:
-    # Runs once per topic, so the cheaper model keeps a weekly cycle affordable.
-    model: gpt-5-mini
+    # Highest-volume agent: one call per topic, so it runs on terra.
+    model: gpt-5.6-terra
     prompt_version: scorer_v1
     reasoning_effort: medium
     verbosity: low
 
   strategist:
     # The hardest judgement call in the system: portfolio balance under
-    # competing constraints. Worth the strongest model and highest effort.
-    model: gpt-5
+    # competing constraints.
+    model: gpt-5.6-sol
     prompt_version: strategist_v1
-    reasoning_effort: high
+    reasoning_effort: medium
     verbosity: medium
 
   reel_writer:
-    model: gpt-5
+    model: gpt-5.6-sol
     prompt_version: reel_writer_v1
     reasoning_effort: medium
     verbosity: medium
 
   carousel_writer:
-    model: gpt-5
+    model: gpt-5.6-sol
     prompt_version: carousel_writer_v1
     reasoning_effort: medium
     verbosity: medium
 
   qa:
     # QA must be sceptical and consistent rather than creative.
-    model: gpt-5
+    model: gpt-5.6-sol
     prompt_version: qa_v1
     reasoning_effort: high
     verbosity: low
 
   performance_analyst:
-    model: gpt-5
+    model: gpt-5.6-sol
     prompt_version: performance_analyst_v1
     reasoning_effort: high
     verbosity: medium
 
 # Cost estimation, USD per million tokens. Used only for the agent_runs ledger.
 # Update when pricing changes; historical rows keep the cost computed at the time.
+#
+# A model used by an agent but absent here records zero cost rather than a
+# guessed one, and `cli.py doctor` warns about it. Wrong cost data is worse than
+# no cost data, because it looks authoritative.
 pricing:
+  # TODO: fill in real rates for both variants. Until these are set, the cost
+  # column in `cli.py usage` reads $0.0000 and `cli.py doctor` warns about it.
+  gpt-5.6-terra:
+    input_per_mtok: 0.0
+    output_per_mtok: 0.0
+  gpt-5.6-sol:
+    input_per_mtok: 0.0
+    output_per_mtok: 0.0
+  gpt-5.6-luna:
+    input_per_mtok: 0.0
+    output_per_mtok: 0.0
+
   gpt-5:
     input_per_mtok: 1.25
     output_per_mtok: 10.00

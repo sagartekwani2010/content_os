@@ -213,6 +213,29 @@ Business rules live in `config/`, never in prompts.
 Weights are validated on load. A set that does not sum to 1.0 fails at startup
 rather than quietly skewing months of scoring.
 
+### Model selection
+
+Every agent names its model and reasoning effort in `config/models.yaml`. No
+model name appears anywhere in the code.
+
+| Agent | Model | Reasoning |
+|---|---|---|
+| trend_scout | gpt-5.6-terra | low |
+| scorer | gpt-5.6-terra | medium |
+| strategist | gpt-5.6-sol | medium |
+| reel_writer | gpt-5.6-sol | medium |
+| carousel_writer | gpt-5.6-sol | medium |
+| qa | gpt-5.6-sol | high |
+| performance_analyst | gpt-5.6-sol | high |
+
+Terra handles the high-volume work, where the scorer alone runs once per topic.
+Sol handles the work where output quality is the product. Effort is set per
+agent so the expensive thinking is spent where it changes the result.
+
+Pricing lives in the same file and feeds the cost ledger. A model used by an
+agent but missing real rates records zero cost, and both `cli.py doctor` and
+`cli.py usage` warn about it rather than showing a confident $0.00.
+
 ### Prompt and model versioning
 
 Each agent names a prompt version in `models.yaml`, which maps to a file in

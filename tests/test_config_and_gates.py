@@ -234,3 +234,37 @@ class TestHookClassification:
 
         assert classify_hook("") == "unknown"
         assert classify_hook(None) == "unknown"
+
+
+class TestPricingWarnings:
+    def test_unpriced_model_is_reported(self):
+        """A model with no real rates records zero cost. That must be loud,
+        because a $0 ledger looks like a working ledger."""
+        from content_os.config import config_warnings
+
+        warnings = config_warnings()
+        assert any("zero cost" in w or "no entry" in w for w in warnings), (
+            "the gpt-5.6 variants have placeholder pricing and should warn"
+        )
+
+    def test_a_fully_priced_config_produces_no_warning(self, tmp_path):
+        from content_os.config import ModelsConfig
+
+        models = ModelsConfig(
+            defaults={"model": "m1"},
+            agents={"scorer": {"model": "m1", "prompt_version": "scorer_v1"}},
+            pricing={"m1": {"input_per_mtok": 1.0, "output_per_mtok": 2.0}},
+        )
+        price = models.price("m1")
+        assert price.input_per_mtok == 1.0
+        assert models.price("unknown-model").input_per_mtok == 0.0
+
+    def test_every_configured_model_resolves(self):
+        from content_os.config import load_models_config
+
+        models = load_models_config()
+        for agent in models.agents:
+            resolved = models.resolved(agent)
+            assert resolved.model
+            assert resolved.prompt_version
+            assert resolved.reasoning_effort in ("low", "medium", "high")
