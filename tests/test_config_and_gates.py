@@ -69,7 +69,9 @@ class TestQAGate:
         base = dict(
             hook_strength=8.0, clarity=8.0, technical_accuracy=9.0, brand_fit=9.0,
             originality=8.0, share_potential=7.0, save_potential=7.0,
-            visual_potential=8.0, ai_hype_penalty=1.0, generic_content_penalty=1.0,
+            visual_potential=8.0, learning_value=8.5,
+            execution_against_brief=9.0,
+            ai_hype_penalty=1.0, generic_content_penalty=1.0,
         )
         base.update(overrides)
         return QAScores(**base)
@@ -101,6 +103,7 @@ class TestQAGate:
             hook_strength=10.0, clarity=10.0, technical_accuracy=10.0,
             brand_fit=10.0, originality=10.0, share_potential=10.0,
             save_potential=10.0, visual_potential=10.0,
+            learning_value=10.0, execution_against_brief=10.0,
             ai_hype_penalty=10.0, generic_content_penalty=10.0,
         )
         _, failed = evaluate_gates(perfect_but_hyped, cfg)
@@ -122,6 +125,8 @@ class TestQAGate:
             issues=[], required_changes=[],
             agent_recommends_approval=True,  # agent says yes
             verdict_rationale="I like it",
+            sections_covered=[], sections_missing=[],
+            thesis_drift=False, thesis_drift_explanation=None,
         )
         result = finalise(verdict, cfg, revision_number=0,
                           qa_model="gpt-5", qa_prompt_version="qa_v1")
@@ -337,3 +342,133 @@ class TestPromptVersioning:
         assert models.resolved("strategist").prompt_version == "strategist_v2"
         assert models.resolved("scorer").prompt_version == "scorer_v2"
         assert models.resolved("brand_miner").prompt_version == "brand_miner_v1"
+
+
+class TestBriefGates:
+    """Learning value and brief execution are hard gates, not contributions."""
+
+    def _scores(self, **overrides):
+        from content_os.models.content import QAScores
+
+        base = dict(
+            hook_strength=9.0, clarity=9.0, technical_accuracy=9.0, brand_fit=9.0,
+            originality=9.0, share_potential=9.0, save_potential=9.0,
+            visual_potential=9.0, learning_value=9.0, execution_against_brief=9.0,
+            ai_hype_penalty=0.0, generic_content_penalty=0.0,
+        )
+        base.update(overrides)
+        return QAScores(**base)
+
+    def test_weak_learning_value_rejects_otherwise_perfect_content(self, cfg):
+        """Content that teaches nothing fails however good it is."""
+        from content_os.agents.qa_editor import evaluate_gates
+
+        _, failed = evaluate_gates(self._scores(learning_value=3.0), cfg)
+        assert any(f.startswith("LEARNING_VALUE_TOO_LOW") for f in failed)
+
+    def test_poor_brief_execution_rejects_otherwise_perfect_content(self, cfg):
+        from content_os.agents.qa_editor import evaluate_gates
+
+        _, failed = evaluate_gates(self._scores(execution_against_brief=4.0), cfg)
+        assert any(f.startswith("POOR_BRIEF_EXECUTION") for f in failed)
+
+    def test_missing_mandatory_section_is_a_rejection(self, cfg, sample_brief):
+        """A missing section is binary. It cannot be averaged away."""
+        from content_os.agents.qa_editor import finalise
+        from content_os.models.content import QAVerdict
+
+        verdict = QAVerdict(
+            scores=self._scores(),
+            issues=[], required_changes=[],
+            agent_recommends_approval=True,
+            verdict_rationale="looks good",
+            sections_covered=[sample_brief.high_level_sections[0]],
+            sections_missing=[],
+            thesis_drift=False, thesis_drift_explanation=None,
+        )
+        result = finalise(
+            verdict, cfg, revision_number=0, qa_model="m",
+            qa_prompt_version="qa_v2", brief=sample_brief,
+        )
+        assert result.approved is False
+        assert any(f.startswith("SECTIONS_MISSING") for f in result.failed_gates)
+        assert len(result.sections_missing) == len(sample_brief.high_level_sections) - 1
+
+    def test_full_coverage_passes(self, cfg, sample_brief):
+        from content_os.agents.qa_editor import finalise
+        from content_os.models.content import QAVerdict
+
+        verdict = QAVerdict(
+            scores=self._scores(),
+            issues=[], required_changes=[],
+            agent_recommends_approval=True,
+            verdict_rationale="complete",
+            sections_covered=list(sample_brief.high_level_sections),
+            sections_missing=[],
+            thesis_drift=False, thesis_drift_explanation=None,
+        )
+        result = finalise(
+            verdict, cfg, revision_number=0, qa_model="m",
+            qa_prompt_version="qa_v2", brief=sample_brief,
+        )
+        assert result.approved is True, result.failed_gates
+
+    def test_thesis_drift_is_a_rejection(self, cfg, sample_brief):
+        """Drift is not improvement. The human decided the argument."""
+        from content_os.agents.qa_editor import finalise
+        from content_os.models.content import QAVerdict
+
+        verdict = QAVerdict(
+            scores=self._scores(),
+            issues=[], required_changes=[],
+            agent_recommends_approval=True,
+            verdict_rationale="better argument honestly",
+            sections_covered=list(sample_brief.high_level_sections),
+            sections_missing=[],
+            thesis_drift=True,
+            thesis_drift_explanation="Argued the opposite conclusion.",
+        )
+        result = finalise(
+            verdict, cfg, revision_number=0, qa_model="m",
+            qa_prompt_version="qa_v2", brief=sample_brief,
+        )
+        assert result.approved is False
+        assert "THESIS_DRIFT" in result.failed_gates
+
+    def test_reworded_section_still_counts_as_covered(self, cfg, sample_brief):
+        """The writer may reword. Coverage matching is on distinctive words."""
+        from content_os.agents.qa_editor import finalise
+        from content_os.models.content import QAVerdict
+
+        reworded = [f"{s} (expanded)" for s in sample_brief.high_level_sections]
+        verdict = QAVerdict(
+            scores=self._scores(),
+            issues=[], required_changes=[],
+            agent_recommends_approval=True,
+            verdict_rationale="covered with different wording",
+            sections_covered=reworded, sections_missing=[],
+            thesis_drift=False, thesis_drift_explanation=None,
+        )
+        result = finalise(
+            verdict, cfg, revision_number=0, qa_model="m",
+            qa_prompt_version="qa_v2", brief=sample_brief,
+        )
+        assert result.sections_missing == []
+
+
+class TestQAWeightValidation:
+    def test_composite_weights_must_sum_to_one(self):
+        from content_os.config import QAGatesConfig
+
+        with pytest.raises(ValueError, match="must sum to 1.0"):
+            QAGatesConfig(composite_weights={"hook_strength": 0.5, "clarity": 0.9})
+
+    def test_unknown_score_field_is_rejected(self):
+        """A typo would silently contribute zero and lower every composite."""
+        from content_os.config import QAGatesConfig
+
+        with pytest.raises(ValueError, match="unknown score fields"):
+            QAGatesConfig(composite_weights={"hook_strenght": 1.0})
+
+    def test_repository_weights_are_valid(self, cfg):
+        assert sum(cfg.qa_gates.composite_weights.values()) == pytest.approx(1.0)

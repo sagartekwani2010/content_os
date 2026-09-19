@@ -12,6 +12,7 @@ import json
 from typing import Any
 
 from content_os.config import BrandMemory, ModelsConfig, ScoringConfig
+from content_os.models.brief import ContentBrief
 from content_os.models.content import QAResult, QAScores, QAVerdict
 from content_os.tracking.run_logger import (
     TrackedResult,
@@ -50,6 +51,13 @@ def evaluate_gates(scores: QAScores, cfg: ScoringConfig) -> tuple[float, list[st
 
     checks = (
         ("COMPOSITE_TOO_LOW", composite, gates.min_composite, "min"),
+        # Hard gates. Neither can be averaged away by scoring well elsewhere:
+        # content that teaches nothing, or that executes a different brief, is
+        # a rejection regardless of how good it is.
+        ("LEARNING_VALUE_TOO_LOW", scores.learning_value,
+         gates.min_learning_value, "min"),
+        ("POOR_BRIEF_EXECUTION", scores.execution_against_brief,
+         gates.min_execution_against_brief, "min"),
         ("WEAK_HOOK", scores.hook_strength, gates.min_hook_strength, "min"),
         (
             "TECHNICAL_ACCURACY_TOO_LOW",
@@ -84,8 +92,37 @@ def finalise(
     revision_number: int,
     qa_model: str,
     qa_prompt_version: str,
+    brief: ContentBrief | None = None,
 ) -> QAResult:
+    """Apply the gates. When a brief is supplied, coverage and thesis drift are
+    checked in Python from the reported sections rather than being left to the
+    composite score, because a missing mandatory section is a binary failure."""
     composite, failed = evaluate_gates(verdict.scores, cfg)
+
+    sections_missing = list(verdict.sections_missing)
+    if brief and brief.high_level_sections:
+        covered = {s.lower().strip() for s in verdict.sections_covered}
+        blob = " ".join(covered)
+        for section in brief.high_level_sections:
+            key = section.lower().strip()
+            if key in covered:
+                continue
+            # Every distinctive word must appear, not merely one of them.
+            # Matching on any word lets "demo architecture" mark "production
+            # architecture" as covered, because they share a generic noun, and
+            # a genuinely missing section then passes the gate silently.
+            words = [w for w in key.split() if len(w) > 3]
+            if words and all(w in blob for w in words):
+                continue
+            if section not in sections_missing:
+                sections_missing.append(section)
+
+        if sections_missing:
+            failed.append(f"SECTIONS_MISSING:{len(sections_missing)}")
+
+    if verdict.thesis_drift:
+        failed.append("THESIS_DRIFT")
+
     return QAResult(
         approved=not failed,
         scores=verdict.scores.as_dict(),
@@ -95,6 +132,10 @@ def finalise(
         failed_gates=failed,
         agent_recommends_approval=verdict.agent_recommends_approval,
         verdict_rationale=verdict.verdict_rationale,
+        sections_covered=list(verdict.sections_covered),
+        sections_missing=sections_missing,
+        thesis_drift=verdict.thesis_drift,
+        thesis_drift_explanation=verdict.thesis_drift_explanation,
         revision_number=revision_number,
         qa_model=qa_model,
         qa_prompt_version=qa_prompt_version,
@@ -108,8 +149,18 @@ def build_context(
     *,
     topic_title: str,
     recent_content: list[dict[str, Any]],
+    brief: ContentBrief | None = None,
 ) -> str:
-    parts = [brand.as_prompt_context(), ""]
+    parts: list[str] = []
+    if brief is not None:
+        parts += [
+            brief.as_prompt_context(),
+            "",
+            "Judge the content against THIS brief, not against what you would "
+            "have briefed. Report section coverage literally.",
+            "",
+        ]
+    parts += [brand.as_prompt_context(), ""]
     parts.append(f"CONTENT FORMAT: {content_format}")
     parts.append(f"UNDERLYING TOPIC: {topic_title}")
     parts.append("")
@@ -144,6 +195,7 @@ async def review(
     revision_number: int = 0,
     recent_content: list[dict[str, Any]] | None = None,
     models: ModelsConfig | None = None,
+    brief: ContentBrief | None = None,
 ) -> tuple[TrackedResult[QAVerdict], QAResult]:
     agent, model, prompt_version = build_agent(
         AGENT_KEY,
@@ -158,6 +210,7 @@ async def review(
         package,
         topic_title=topic_title,
         recent_content=recent_content or [],
+        brief=brief,
     )
     result = await runner.run(
         agent,
@@ -176,5 +229,6 @@ async def review(
         revision_number=revision_number,
         qa_model=model,
         qa_prompt_version=prompt_version,
+        brief=brief,
     )
     return result, qa_result

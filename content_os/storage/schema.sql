@@ -191,6 +191,25 @@ CREATE TABLE IF NOT EXISTS content_items (
     generator_model          TEXT,
     generator_prompt_version TEXT,
 
+    -- Human strategy from the brief, preserved through to publication.
+    brief_id                 TEXT,
+    core_thesis              TEXT,
+    learning_objective       TEXT,
+    hook_direction           TEXT,
+    approved_hook_points_json TEXT,
+    high_level_sections_json TEXT,
+    preferred_pov            TEXT,
+    visual_direction         TEXT,
+
+    hook_strategy            TEXT,
+    hook_source              TEXT,
+    hook_variant_id          TEXT,
+
+    learning_payoff          TEXT,
+    save_reason              TEXT,
+    share_reason             TEXT,
+    sections_covered_json    TEXT,
+
     qa_approved              INTEGER,
     qa_composite             REAL,
     qa_json                  TEXT,
@@ -249,6 +268,108 @@ CREATE TABLE IF NOT EXISTS qa_results (
 );
 
 CREATE INDEX IF NOT EXISTS idx_qa_content ON qa_results(content_id, revision_number);
+
+
+-- ---------------------------------------------------------------- briefs
+
+-- Human strategy. The authoritative input to production.
+--
+-- Backlog fields live on this table rather than in a separate content_backlog,
+-- because every backlog column would otherwise be a copy of a brief column and
+-- copies drift. Query it through the backlog view instead.
+CREATE TABLE IF NOT EXISTS content_briefs (
+    brief_id                 TEXT PRIMARY KEY,
+
+    topic                    TEXT NOT NULL,
+    core_thesis              TEXT NOT NULL,
+    why_this_matters         TEXT,
+    audience_takeaway        TEXT,
+    learning_objective       TEXT NOT NULL,
+
+    target_audience_json     TEXT,
+    brand_pillar             TEXT NOT NULL,
+    content_format           TEXT NOT NULL,
+
+    hook_direction           TEXT,
+    approved_hook_points_json TEXT,
+
+    high_level_sections_json TEXT,
+    core_examples_json       TEXT,
+
+    preferred_pov            TEXT,
+    desired_tone             TEXT,
+    visual_direction         TEXT,
+
+    desired_duration_seconds INTEGER,
+    desired_slide_count      INTEGER,
+
+    references_json          TEXT,
+    factual_claims_json      TEXT,
+    must_include_json        TEXT,
+    must_avoid_json          TEXT,
+
+    cta_direction            TEXT,
+    urgency                  TEXT NOT NULL DEFAULT 'evergreen',
+    notes                    TEXT,
+
+    -- Backlog / workflow state.
+    status                   TEXT NOT NULL DEFAULT 'DRAFT',
+    priority                 INTEGER DEFAULT 3,
+    scheduled_date           TEXT,
+    created_at               TEXT NOT NULL,
+    approved_at              TEXT,
+    approved_by              TEXT,
+    published_at             TEXT,
+
+    -- Full object, so a brief can be reconstructed exactly as approved.
+    brief_json               TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_briefs_status ON content_briefs(status, priority);
+
+-- Execution plans. Append-only: replanning a brief writes a new row so the
+-- plan that actually produced a piece of content stays recoverable.
+CREATE TABLE IF NOT EXISTS execution_plans (
+    id                 TEXT PRIMARY KEY,
+    brief_id           TEXT NOT NULL REFERENCES content_briefs(brief_id),
+    run_id             TEXT REFERENCES runs(id),
+
+    format             TEXT NOT NULL,
+    plan_json          TEXT NOT NULL,
+
+    alternate_format_recommendation TEXT,
+    alternate_format_reason         TEXT,
+    risks_json         TEXT,
+
+    model              TEXT,
+    prompt_version     TEXT,
+    created_at         TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_plans_brief ON execution_plans(brief_id);
+
+-- Every hook considered, not just the one used. Hook approach is a variable we
+-- intend to correlate with performance, which requires keeping the losers.
+CREATE TABLE IF NOT EXISTS hook_variants (
+    id                 TEXT PRIMARY KEY,
+    brief_id           TEXT REFERENCES content_briefs(brief_id),
+    content_id         TEXT REFERENCES content_items(id),
+
+    variant_id         TEXT NOT NULL,
+    text               TEXT NOT NULL,
+    hook_strategy      TEXT,
+    hook_source        TEXT NOT NULL,
+    derived_from_point TEXT,
+    rationale          TEXT,
+    is_selected        INTEGER DEFAULT 0,
+
+    model              TEXT,
+    prompt_version     TEXT,
+    created_at         TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_hooks_brief ON hook_variants(brief_id);
+CREATE INDEX IF NOT EXISTS idx_hooks_content ON hook_variants(content_id);
 
 -- ---------------------------------------------------------------- performance
 

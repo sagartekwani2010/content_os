@@ -32,6 +32,11 @@ from content_os.models.topics import (
     TopicCandidate,
     TopicStatus,
 )
+from content_os.storage.brief_repositories import (
+    BriefRepository,
+    ExecutionPlanRepository,
+    HookRepository,
+)
 from content_os.storage.db import dumps, from_iso, loads, to_iso, utcnow
 
 
@@ -466,6 +471,35 @@ class ContentRepository(_Base):
         )
         return item.id
 
+    def insert_with_strategy(
+        self, item: ContentItem, sections_covered: list[str] | None = None
+    ) -> str:
+        """Insert a content item carrying its human strategy fields.
+
+        These columns are what make it possible to later ask which learning
+        objectives drove saves, or which hook strategies drove shares, rather
+        than only which finished copy happened to perform.
+        """
+        content_id = self.insert(item)
+        self._exec(
+            "UPDATE content_items SET brief_id = ?, core_thesis = ?, "
+            "learning_objective = ?, hook_direction = ?, "
+            "approved_hook_points_json = ?, high_level_sections_json = ?, "
+            "preferred_pov = ?, visual_direction = ?, hook_strategy = ?, "
+            "hook_source = ?, hook_variant_id = ?, learning_payoff = ?, "
+            "save_reason = ?, share_reason = ?, sections_covered_json = ? "
+            "WHERE id = ?",
+            (
+                item.brief_id, item.core_thesis, item.learning_objective,
+                item.hook_direction, dumps(item.approved_hook_points),
+                dumps(item.high_level_sections), item.preferred_pov,
+                item.visual_direction, item.hook_strategy, item.hook_source,
+                item.hook_variant_id, item.learning_payoff, item.save_reason,
+                item.share_reason, dumps(sections_covered or []), content_id,
+            ),
+        )
+        return content_id
+
     def attach_qa(
         self, content_id: str, *, approved: bool, composite: float, qa_json: str
     ) -> None:
@@ -899,3 +933,6 @@ class Repositories:
         self.approvals = ApprovalRepository(conn)
         self.brand_snapshots = BrandSnapshotRepository(conn)
         self.findings = FindingRepository(conn)
+        self.briefs = BriefRepository(conn)
+        self.execution_plans = ExecutionPlanRepository(conn)
+        self.hooks = HookRepository(conn)

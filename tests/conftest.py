@@ -142,3 +142,41 @@ def make_performance(
         profile_visits=profile_visits,
         new_followers=new_followers,
     )
+
+
+@pytest.fixture
+def sample_brief():
+    """A minimal human-approved brief for testing the brief-driven path."""
+    from content_os.ids import new_id
+    from content_os.models.brief import BriefStatus, ContentBrief
+
+    return ContentBrief(
+        brief_id=new_id("brief"),
+        topic="Why AI demos fail in production",
+        core_thesis=(
+            "Production AI fails because the engineering problem is not the "
+            "model. State, latency, evaluation and observability matter equally."
+        ),
+        why_this_matters="Most public AI examples stop at prototype quality.",
+        audience_takeaway="The model is often the easiest part.",
+        learning_objective=(
+            "Viewer can name the layers production adds to an AI demo."
+        ),
+        target_audience=["AI engineers", "Technical founders"],
+        brand_pillar="ai_builder",
+        content_format="carousel",
+        hook_direction="Challenge the assumption that the model is the hard part.",
+        approved_hook_points=[
+            "The model is often the easiest part.",
+            "AI demos are easy. Production AI is not.",
+        ],
+        high_level_sections=[
+            "demo architecture",
+            "production architecture",
+            "evaluation",
+            "observability",
+        ],
+        desired_slide_count=8,
+        status=BriefStatus.APPROVED,
+        created_at=utcnow(),
+    )

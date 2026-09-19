@@ -3,6 +3,17 @@
 
     python cli.py doctor                       validate config and environment
     python cli.py seed                         load sample topics and experiments
+HUMAN-LED PRODUCTION (the default workflow)
+
+    python cli.py create-brief "Topic"         write a YAML brief template
+    python cli.py import-brief briefs/x.yaml   load briefs into the backlog
+    python cli.py approve-brief <brief-id>     approve for production
+    python cli.py backlog                      show the backlog
+    python cli.py produce <brief-id>           produce one approved brief
+    python cli.py produce-approved             produce the whole approved backlog
+
+DISCOVERY MODE (optional; suggests topics, never produces)
+
     python cli.py discover seeds/sources.json  find candidate topics from sources
     python cli.py mine                         generate topics from the brand
     python cli.py score                        score unscored topics
@@ -53,6 +64,12 @@ from content_os.storage.db import from_iso, get_db, loads, utcnow  # noqa: E402
 from content_os.storage.repositories import Repositories  # noqa: E402
 from content_os.tools import analytics as analytics_tools  # noqa: E402
 from content_os.tools.ad_eligibility import rank_ad_candidates  # noqa: E402
+from content_os.models.brief import BriefStatus  # noqa: E402
+from content_os.tools.brief_loader import (  # noqa: E402
+    BriefError,
+    load_brief_file,
+    scaffold,
+)
 from content_os.tools.source_ingestion import list_sources, load_sources  # noqa: E402
 from content_os.tracking.run_logger import summarise_usage  # noqa: E402
 from content_os.workflows.analyze import run_analysis  # noqa: E402
@@ -60,6 +77,10 @@ from content_os.workflows.create import run_generation  # noqa: E402
 from content_os.workflows.discover import run_discovery  # noqa: E402
 from content_os.workflows.ingest import ingest_csv  # noqa: E402
 from content_os.workflows.mine import run_mining  # noqa: E402
+from content_os.workflows.produce import (  # noqa: E402
+    produce_approved,
+    produce_brief,
+)
 from content_os.workflows.plan import run_planning  # noqa: E402
 from content_os.workflows.score import run_scoring  # noqa: E402
 from content_os.workflows.weekly import run_weekly  # noqa: E402
@@ -296,6 +317,269 @@ def cmd_mine(args: argparse.Namespace) -> int:
     kv("cost", f"${result['cost']:.4f}")
     if result.get("trace_id"):
         kv("trace", result["trace_id"])
+    print()
+    return 0
+
+
+def cmd_create_brief(args: argparse.Namespace) -> int:
+    """Write a YAML template for a human to fill in."""
+    template = scaffold(args.topic, args.format)
+    target = Path(args.out) if args.out else Path("briefs") / (
+        "".join(ch if ch.isalnum() else "_" for ch in args.topic.lower())[:48] + ".yaml"
+    )
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if target.exists() and not args.force:
+        print(c(f"\n  {target} already exists. Use --force to overwrite.\n", RED))
+        return 1
+    target.write_text(template, encoding="utf-8")
+
+    header("Brief template created")
+    kv("file", str(target))
+    print()
+    print("  Fill it in, then:")
+    print(c(f"    python cli.py import-brief {target}", CYAN))
+    print(c("    python cli.py approve-brief <brief-id>", CYAN))
+    print(c("    python cli.py produce-approved", CYAN))
+    print()
+    return 0
+
+
+def cmd_import_brief(args: argparse.Namespace) -> int:
+    repos = repos_for(args)
+    try:
+        briefs = load_brief_file(args.file)
+    except BriefError as exc:
+        print(c(f"\n  {exc}\n", RED))
+        return 1
+
+    header(f"Imported {len(briefs)} brief(s)")
+    for brief in briefs:
+        if args.approve:
+            brief.status = BriefStatus.APPROVED
+            brief.approved_by = args.by
+            brief.approved_at = utcnow()
+        repos.briefs.upsert(brief)
+
+        status_colour = GREEN if brief.status == BriefStatus.APPROVED else YELLOW
+        print()
+        print(f"  {c(brief.brief_id, CYAN)}  {c(brief.status.value, status_colour)}")
+        print(f"  {c(brief.topic, BOLD)}")
+        print(f"    {brief.content_format} | {brief.brand_pillar} | "
+              f"priority {brief.priority} | {brief.urgency}")
+        print(wrap(f"thesis: {brief.core_thesis}", indent=4))
+        print(wrap(f"learning: {brief.learning_objective}", indent=4))
+        print(f"    {c(f'{len(brief.high_level_sections)} mandatory sections, '
+                       f'{len(brief.approved_hook_points)} hook points', DIM)}")
+
+    if not args.approve:
+        print()
+        print(c("  Briefs import as DRAFT. Only APPROVED briefs are produced.", DIM))
+        print(c(f"  Approve with: python cli.py approve-brief <brief-id>", CYAN))
+    print()
+    return 0
+
+
+def cmd_approve_brief(args: argparse.Namespace) -> int:
+    repos = repos_for(args)
+    if args.all:
+        pending = [
+            b for b in (repos.briefs.get(r["brief_id"])
+                        for r in repos.briefs.backlog())
+            if b and b.status in (BriefStatus.DRAFT, BriefStatus.HUMAN_REVIEW)
+        ]
+        if not pending:
+            print(c("\n  No briefs awaiting approval.\n", YELLOW))
+            return 0
+        header(f"Approving {len(pending)} briefs")
+        for brief in pending:
+            repos.briefs.approve(brief.brief_id, args.by, args.note or "")
+            repos.approvals.record(
+                subject_type="brief", subject_id=brief.brief_id, action="produce",
+                decision="APPROVED", approved_by=args.by, notes=args.note or "",
+            )
+            print(f"  {c('approved', GREEN)}  {brief.topic[:64]}")
+        print()
+        return 0
+
+    brief = repos.briefs.get(args.brief_id)
+    if brief is None:
+        print(c(f"\n  Brief not found: {args.brief_id}\n", RED))
+        return 1
+    repos.briefs.approve(brief.brief_id, args.by, args.note or "")
+    repos.approvals.record(
+        subject_type="brief", subject_id=brief.brief_id, action="produce",
+        decision="APPROVED", approved_by=args.by, notes=args.note or "",
+    )
+    print(c(f"\n  Approved by {args.by}: {brief.topic}", GREEN))
+    print(c(f"  Produce with: python cli.py produce-approved\n", CYAN))
+    return 0
+
+
+def cmd_backlog(args: argparse.Namespace) -> int:
+    repos = repos_for(args)
+    header("Content backlog")
+    counts = repos.briefs.counts_by_status()
+    if not counts:
+        print(c("  Empty. Create one with: python cli.py create-brief \"Topic\"\n",
+                YELLOW))
+        return 0
+
+    for status, n in sorted(counts.items()):
+        colour = {"APPROVED": GREEN, "READY": GREEN, "REJECTED": RED,
+                  "IN_PRODUCTION": CYAN}.get(status, DIM)
+        print(f"  {c(status.ljust(15), colour)} {n}")
+
+    print()
+    print(f"  {'pri':>3}  {'status':<15} {'format':<10} {'pillar':<16} topic")
+    print(c("  " + "-" * 96, DIM))
+    for row in repos.briefs.backlog(status=args.status, limit=args.limit):
+        colour = {"APPROVED": GREEN, "READY": GREEN, "REJECTED": RED,
+                  "IN_PRODUCTION": CYAN}.get(row["status"], DIM)
+        print(f"  {row['priority']:>3}  {c(row['status'][:15].ljust(15), colour)} "
+              f"{row['content_format'][:10]:<10} {row['brand_pillar'][:16]:<16} "
+              f"{row['topic'][:44]}")
+        print(c(f"       {row['brief_id']}", DIM))
+    print()
+    return 0
+
+
+def _print_produced(result: dict[str, Any]) -> None:
+    package, qa = result["package"], result["qa"]
+    fmt = result["format"]
+
+    header(f"{fmt.upper()}  {package.title}")
+    hook_label = "HOOK" if fmt == "reel" else "COVER"
+    strategy = result["hook_strategy"]
+    variant_id = result["hook_variant_id"]
+    print(f"  {c(hook_label, BOLD)}  {c(result['hook'], GREEN)}")
+    print("        " + c(f"strategy: {strategy} ({variant_id})", DIM))
+
+    header("Learning payoff")
+    print(wrap(package.learning_payoff, indent=2))
+    print()
+    kv("save reason", package.save_reason[:70])
+    kv("share reason", package.share_reason[:70])
+
+    if fmt == "reel":
+        header("Script")
+        print(wrap(package.script, indent=2))
+        header("Scenes")
+        for scene in package.scene_plan:
+            print(f"  {c(f'{scene.start_second:.0f}-{scene.end_second:.0f}s', CYAN)}  "
+                  f"{c(scene.production_mode, DIM)}")
+            print(wrap(scene.voiceover, indent=6))
+    else:
+        header(f"Slides ({len(package.slides)})")
+        for slide in package.slides:
+            print()
+            print(f"  {c(f'{slide.index}. {slide.headline}', BOLD)}  "
+                  f"{c(slide.role, DIM)}")
+            print(wrap(slide.body, indent=5))
+
+    header("Brief compliance")
+    covered = len(qa.sections_covered)
+    total = covered + len(qa.sections_missing)
+    mark = GREEN if not qa.sections_missing else RED
+    print(f"  sections covered   {c(f'{covered}/{total}', mark)}")
+    if qa.sections_missing:
+        for section in qa.sections_missing:
+            print(c(f"    missing: {section}", RED))
+    drift = c("YES", RED) if qa.thesis_drift else c("no", GREEN)
+    print(f"  thesis drift       {drift}")
+    if qa.thesis_drift_explanation:
+        print(wrap(qa.thesis_drift_explanation, indent=4))
+
+    header("QA")
+    verdict = c("APPROVED", GREEN) if qa.approved else c("REJECTED", RED)
+    print(f"  {verdict}   composite {qa.composite:.2f}")
+    for key in ("learning_value", "execution_against_brief", "hook_strength",
+                "technical_accuracy", "originality"):
+        if key in qa.scores:
+            print(f"    {key.replace('_', ' '):<26} {qa.scores[key]:.1f}")
+    if qa.failed_gates:
+        print(c(f"  failed gates: {', '.join(qa.failed_gates)}", RED))
+    if qa.issues:
+        print()
+        for issue in qa.issues[:6]:
+            print(wrap(f"- {issue}", indent=4))
+
+    if result.get("warnings"):
+        header("Warnings")
+        for warning in result["warnings"]:
+            print(c(f"  {warning}", YELLOW))
+
+    plan = result.get("plan")
+    if plan and plan.alternate_format_recommendation:
+        header("Alternate format suggested (not applied)")
+        print(f"  {c(plan.alternate_format_recommendation, YELLOW)}")
+        print(wrap(plan.alternate_format_reason or "", indent=4))
+        print(c("  Format is human-owned. Change the brief if you agree.", DIM))
+
+
+def cmd_produce(args: argparse.Namespace) -> int:
+    if not require_api_key():
+        return 1
+    repos = repos_for(args)
+    brief = repos.briefs.get(args.brief_id)
+    if brief is None:
+        print(c(f"\n  Brief not found: {args.brief_id}\n", RED))
+        return 1
+
+    header(f"Producing {brief.content_format}: {brief.topic}")
+    result = asyncio.run(produce_brief(repos, brief))
+    if result.get("error"):
+        print(c(f"  {result['error']}\n", RED))
+        return 1
+
+    _print_produced(result)
+    print()
+    kv("content_id", result["content_id"])
+    kv("status", result["status"])
+    kv("cost", f"${result['cost']:.4f}")
+    if result.get("trace_id"):
+        kv("trace", result["trace_id"])
+    print()
+    return 0
+
+
+def cmd_produce_approved(args: argparse.Namespace) -> int:
+    if not require_api_key():
+        return 1
+    repos = repos_for(args)
+    header("Producing approved briefs")
+    result = asyncio.run(produce_approved(repos, limit=args.limit))
+    if result.get("message"):
+        print(f"  {result['message']}\n")
+        return 0
+
+    approved = rejected = 0
+    for item in result["produced"]:
+        qa = item["qa"]
+        if qa.approved:
+            approved += 1
+            mark = c("ready   ", GREEN)
+        else:
+            rejected += 1
+            mark = c("QA fail ", RED)
+        print(f"  {mark} {item['title'][:58]}")
+        print(c(f"           {item['format']}  composite {qa.composite:.2f}  "
+                f"${item['cost']:.4f}  {item['content_id']}", DIM))
+        if qa.failed_gates:
+            print(c(f"           {', '.join(qa.failed_gates[:3])}", RED))
+
+    for failure in result["failed"]:
+        print(c(f"  error    {failure['brief_id']}: {failure['error'][:90]}", RED))
+
+    usage = summarise_usage(repos, result["run_id"])
+    print()
+    kv("ready for review", approved)
+    kv("qa rejected", rejected)
+    kv("errored", len(result["failed"]))
+    kv("tokens", usage["total_tokens"])
+    kv("cost", f"${usage['total_cost']:.4f}")
+    print()
+    print(c("  Nothing is published. Review, then: python cli.py approve <content-id>",
+            DIM))
     print()
     return 0
 
@@ -984,6 +1268,44 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--max", type=int, default=20, help="Maximum topics to propose.")
     p.set_defaults(func=cmd_discover)
 
+    # --- human-led production (the default workflow) ---------------------
+    p = sub.add_parser("create-brief", help="Write a YAML brief template.")
+    p.add_argument("topic")
+    p.add_argument("--format", default="carousel",
+                   choices=["reel", "carousel", "trial_reel"])
+    p.add_argument("--out", help="Where to write the template.")
+    p.add_argument("--force", action="store_true")
+    p.set_defaults(func=cmd_create_brief)
+
+    p = sub.add_parser("import-brief", help="Load briefs from a YAML file.")
+    p.add_argument("file")
+    p.add_argument("--approve", action="store_true",
+                   help="Import directly as APPROVED.")
+    p.add_argument("--by", default=os.environ.get("USER", "human"))
+    p.set_defaults(func=cmd_import_brief)
+
+    p = sub.add_parser("approve-brief", help="Approve a brief for production.")
+    p.add_argument("brief_id", nargs="?", default="")
+    p.add_argument("--all", action="store_true", help="Approve every pending brief.")
+    p.add_argument("--by", default=os.environ.get("USER", "human"))
+    p.add_argument("--note", default="")
+    p.set_defaults(func=cmd_approve_brief)
+
+    p = sub.add_parser("backlog", help="Show the content backlog.")
+    p.add_argument("--status")
+    p.add_argument("--limit", type=int, default=50)
+    p.set_defaults(func=cmd_backlog)
+
+    p = sub.add_parser("produce", help="Produce one approved brief.")
+    p.add_argument("brief_id")
+    p.set_defaults(func=cmd_produce)
+
+    p = sub.add_parser("produce-approved",
+                       help="Produce every approved brief in the backlog.")
+    p.add_argument("--limit", type=int, default=0)
+    p.set_defaults(func=cmd_produce_approved)
+
+    # --- discovery mode (optional; suggests, never produces) --------------
     p = sub.add_parser("mine", help="Generate topics from the brand itself.")
     p.add_argument("--max", type=int, default=10)
     p.set_defaults(func=cmd_mine)

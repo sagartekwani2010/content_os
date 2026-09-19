@@ -17,6 +17,9 @@ from datetime import datetime, timezone
 _PREFIXES = {
     "run": "run",
     "agent_run": "arun",
+    "brief": "brief",
+    "exec_plan": "xplan",
+    "hook": "hook",
     "topic": "top",
     "score": "scr",
     "plan": "pln",

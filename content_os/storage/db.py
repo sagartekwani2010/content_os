@@ -77,6 +77,25 @@ _MIGRATIONS: dict[str, list[tuple[str, str]]] = {
         ("output_cost", "REAL DEFAULT 0.0"),
         ("pricing_known", "INTEGER DEFAULT 1"),
     ],
+    # Human strategy carried from the brief into the published record, so that
+    # performance can be correlated with the decisions behind it.
+    "content_items": [
+        ("brief_id", "TEXT"),
+        ("core_thesis", "TEXT"),
+        ("learning_objective", "TEXT"),
+        ("hook_direction", "TEXT"),
+        ("approved_hook_points_json", "TEXT"),
+        ("high_level_sections_json", "TEXT"),
+        ("preferred_pov", "TEXT"),
+        ("visual_direction", "TEXT"),
+        ("hook_strategy", "TEXT"),
+        ("hook_source", "TEXT"),
+        ("hook_variant_id", "TEXT"),
+        ("learning_payoff", "TEXT"),
+        ("save_reason", "TEXT"),
+        ("share_reason", "TEXT"),
+        ("sections_covered_json", "TEXT"),
+    ],
 }
 
 

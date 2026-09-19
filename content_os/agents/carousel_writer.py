@@ -6,6 +6,7 @@ import json
 from typing import Any
 
 from content_os.config import BrandMemory, ModelsConfig
+from content_os.models.brief import ContentBrief, ExecutionPlan
 from content_os.models.content import CarouselPackage, ContentPlanItem
 from content_os.models.topics import TopicCandidate
 from content_os.tracking.run_logger import (
@@ -111,3 +112,89 @@ async def write_carousel(
             "pillar": plan_item.pillar if plan_item else "",
         },
     )
+
+
+# --------------------------------------------------------------------------
+# Brief-driven path. The human owns strategy; this writes the execution.
+# --------------------------------------------------------------------------
+
+
+def build_brief_context(
+    brand: BrandMemory,
+    brief: "ContentBrief",
+    plan: "ExecutionPlan",
+    selected_hook: str,
+    alternate_hooks: list[str],
+    recent_content: list[dict[str, Any]],
+) -> str:
+    parts = [brief.as_prompt_context(), ""]
+
+    parts.append("=== EXECUTION PLAN (approved sequencing) ===")
+    parts.append(f"Opening strategy: {plan.opening_strategy}")
+    parts.append("Narrative arc:")
+    parts += [f"  {i}. {beat}" for i, beat in enumerate(plan.narrative_arc, 1)]
+    parts.append("Key learning points:")
+    parts += [f"  - {p}" for p in plan.key_learning_points]
+    parts.append("Supporting examples:")
+    parts += [f"  - {e}" for e in plan.supporting_examples]
+    parts.append("Visual beats:")
+    parts += [f"  - {v}" for v in plan.visual_beats]
+    parts.append(f"Closing strategy: {plan.closing_strategy}")
+    parts.append("Section coverage plan:")
+    parts += [f"  - {c}" for c in plan.section_coverage_plan]
+
+    parts += ["", "=== SELECTED HOOK (use this) ===", selected_hook]
+    if alternate_hooks:
+        parts.append("Alternates to carry through unchanged:")
+        parts += [f"  - {h}" for h in alternate_hooks]
+
+    parts += ["", "=== BRAND ===", brand.as_prompt_context()]
+
+    if recent_content:
+        parts += ["", "RECENT CONTENT (do not repeat):"]
+        for c in recent_content[:10]:
+            parts.append(f"  - {c.get('title', '')}")
+
+    parts += [
+        "",
+        f"Write the carousel. Cover every mandatory section and list them in "
+        "sections_covered using the brief's wording. learning_payoff, "
+        "save_reason and share_reason are required and must be specific.",
+    ]
+    return "\n".join(parts)
+
+
+async def write_carousel_from_brief(
+    runner: TrackedRunner,
+    brand: BrandMemory,
+    brief: "ContentBrief",
+    plan: "ExecutionPlan",
+    *,
+    selected_hook: str,
+    alternate_hooks: list[str],
+    content_id: str | None = None,
+    recent_content: list[dict[str, Any]] | None = None,
+    models: ModelsConfig | None = None,
+) -> TrackedResult[CarouselPackage]:
+    agent, model, prompt_version = build_agent(
+        AGENT_KEY,
+        instructions=agent_instructions(AGENT_KEY, models),
+        output_type=CarouselPackage,
+        models=models,
+        name="Carousel Specialist",
+    )
+    result = await runner.run(
+        agent,
+        build_brief_context(
+            brand, brief, plan, selected_hook, alternate_hooks, recent_content or []
+        ),
+        agent_key=AGENT_KEY,
+        workflow_key="produce",
+        model=model,
+        prompt_version=prompt_version,
+        content_id=content_id,
+        extra_metadata={"brief_id": brief.brief_id, "format": "carousel"},
+    )
+    # The brief owns identity. Reassert rather than trusting it survived.
+    result.output.brief_id = brief.brief_id
+    return result

@@ -40,20 +40,20 @@ agents:
 
   reel_writer:
     model: gpt-5.6-sol
-    prompt_version: reel_writer_v2
+    prompt_version: reel_writer_v3
     reasoning_effort: medium
     verbosity: medium
 
   carousel_writer:
     model: gpt-5.6-sol
-    prompt_version: carousel_writer_v2
+    prompt_version: carousel_writer_v3
     reasoning_effort: medium
     verbosity: medium
 
   qa:
     # QA must be sceptical and consistent rather than creative.
     model: gpt-5.6-sol
-    prompt_version: qa_v1
+    prompt_version: qa_v2
     reasoning_effort: high
     verbosity: low
 
@@ -61,6 +61,30 @@ agents:
     model: gpt-5.6-sol
     prompt_version: performance_analyst_v1
     reasoning_effort: high
+    verbosity: medium
+
+  brief_strategist:
+    # Plans how to execute a human-approved brief. Does not select topics.
+    # Narrative sequencing under hard constraints is the hardest judgement left
+    # in the system now that topic choice belongs to the human.
+    model: gpt-5.6-sol
+    prompt_version: brief_strategist_v1
+    reasoning_effort: high
+    verbosity: medium
+
+  hook_expander:
+    # Must stay inside human-approved conceptual territory, which is a
+    # constraint-following task more than a creative one.
+    model: gpt-5.6-sol
+    prompt_version: hook_expander_v1
+    reasoning_effort: medium
+    verbosity: low
+
+  visual_planner:
+    # Mechanical translation of finished copy into shots.
+    model: gpt-5.6-terra
+    prompt_version: visual_planner_v1
+    reasoning_effort: medium
     verbosity: medium
 
   brand_miner:
@@ -126,6 +150,7 @@ tracing:
   workflows:
     discover: trend_discovery
     mine: brand_mining
+    produce: brief_production
     score: topic_scoring
     plan: weekly_content_planning
     reel: reel_generation

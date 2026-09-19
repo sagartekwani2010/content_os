@@ -1,0 +1,62 @@
+topic: "Why AI demos fail in production"
+
+core_thesis: >
+  Production AI systems fail because the real engineering problem is not
+  simply the LLM. State, latency, reliability, evaluation, observability,
+  fallbacks, security and cost become equally important.
+
+why_this_matters: >
+  Most online AI examples stop at prototype quality and give builders a
+  misleading impression of what production AI requires.
+
+learning_objective: >
+  Viewer should understand the additional layers required to take an AI
+  demo into production, and be able to audit their own prototype against them.
+
+audience_takeaway: >
+  The model is often the easiest part of a production AI system.
+
+target_audience:
+  - AI engineers
+  - Software developers
+  - Technical founders
+
+brand_pillar: ai_builder
+content_format: carousel
+
+hook_direction: >
+  Challenge the assumption that the model is the hardest part.
+
+approved_hook_points:
+  - "The model is often the easiest part."
+  - "AI demos are easy. Production AI is not."
+  - "Prompt plus LLM is a demo, not a production system."
+
+high_level_sections:
+  - demo architecture
+  - production architecture
+  - state
+  - latency
+  - evaluation
+  - fallbacks
+  - observability
+  - security
+  - cost
+  - final takeaway
+
+core_examples:
+  - "A prototype that works on the happy path and breaks on partial tool failure."
+  - "Unbounded context growth turning a working agent into a cost problem."
+
+desired_slide_count: 8
+
+desired_tone: >
+  Clear, confident, practitioner-led, useful, non-hype.
+
+must_avoid:
+  - generic motivational language
+  - unsupported statistics
+  - unnecessary jargon
+
+urgency: evergreen
+priority: 1

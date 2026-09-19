@@ -74,6 +74,7 @@ class Scene(BaseModel):
 
 
 class ReelPackage(BaseModel):
+    brief_id: str
     title: str
 
     hook: str
@@ -82,8 +83,16 @@ class ReelPackage(BaseModel):
     script: str
     estimated_duration_seconds: int
 
+    # Required, not optional. A reel that cannot state what the viewer learned
+    # is entertainment, and this account is not an entertainment account.
+    learning_payoff: str
+    save_reason: str
+    share_reason: str
+
     scene_plan: list[Scene]
 
+    avatar_segments: list[str]
+    screen_demo_segments: list[str]
     b_roll_requirements: list[str]
     avatar_requirements: list[str]
     on_screen_text: list[str]
@@ -93,6 +102,7 @@ class ReelPackage(BaseModel):
     cta: str | None
     hashtags_or_keywords: list[str]
 
+    sections_covered: list[str]
     factual_claims_to_verify: list[str]
     references: list[str]
 
@@ -111,17 +121,22 @@ class CarouselSlide(BaseModel):
 
 
 class CarouselPackage(BaseModel):
+    brief_id: str
     title: str
     cover_hook: str
 
     slides: list[CarouselSlide]
 
-    caption: str
-    cta: str | None
-
+    learning_payoff: str
     save_reason: str
     share_reason: str
 
+    visual_structure: list[str]
+
+    caption: str
+    cta: str | None
+
+    sections_covered: list[str]
     factual_claims_to_verify: list[str]
     references: list[str]
 
@@ -147,6 +162,12 @@ class QAScores(BaseModel):
     save_potential: float = Field(ge=0.0, le=10.0)
     visual_potential: float = Field(ge=0.0, le=10.0)
 
+    # Did the viewer actually learn something substantial, and did the piece
+    # execute the brief it was given? Both are hard gates rather than
+    # contributions to an average, so neither can be traded away.
+    learning_value: float = Field(ge=0.0, le=10.0)
+    execution_against_brief: float = Field(ge=0.0, le=10.0)
+
     # Penalties: higher means worse.
     ai_hype_penalty: float = Field(ge=0.0, le=10.0)
     generic_content_penalty: float = Field(ge=0.0, le=10.0)
@@ -165,6 +186,12 @@ class QAVerdict(BaseModel):
     agent_recommends_approval: bool
     verdict_rationale: str
 
+    # Brief compliance, reported explicitly rather than folded into a score.
+    sections_covered: list[str]
+    sections_missing: list[str]
+    thesis_drift: bool
+    thesis_drift_explanation: str | None
+
 
 class QAResult(BaseModel):
     """Final QA record, after deterministic gating."""
@@ -177,6 +204,10 @@ class QAResult(BaseModel):
     failed_gates: list[str]
     agent_recommends_approval: bool
     verdict_rationale: str
+    sections_covered: list[str] = Field(default_factory=list)
+    sections_missing: list[str] = Field(default_factory=list)
+    thesis_drift: bool = False
+    thesis_drift_explanation: str | None = None
     revision_number: int = 0
     qa_model: str = ""
     qa_prompt_version: str = ""
@@ -210,6 +241,26 @@ class ContentItem(BaseModel):
 
     planned_publish_date: datetime | None = None
     actual_publish_date: datetime | None = None
+
+    # Human strategy, carried from the brief through to the published record so
+    # that performance can later be correlated with the decisions that produced
+    # it rather than only with the output.
+    brief_id: str | None = None
+    core_thesis: str = ""
+    learning_objective: str = ""
+    hook_direction: str = ""
+    approved_hook_points: list[str] = Field(default_factory=list)
+    high_level_sections: list[str] = Field(default_factory=list)
+    preferred_pov: str | None = None
+    visual_direction: str | None = None
+
+    hook_strategy: str = ""
+    hook_source: str = ""
+    hook_variant_id: str = ""
+
+    learning_payoff: str = ""
+    save_reason: str = ""
+    share_reason: str = ""
 
     # Provenance. Never overwritten.
     generator_agent: str = ""

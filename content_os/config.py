@@ -166,6 +166,11 @@ class QAGatesConfig(BaseModel):
     """
 
     min_composite: float = 6.5
+    # Hard gates introduced with brief-driven production. Content that teaches
+    # nothing, or that executes a different brief than the one approved, fails
+    # regardless of how it scores elsewhere.
+    min_learning_value: float = 6.5
+    min_execution_against_brief: float = 7.0
     min_hook_strength: float = 6.0
     min_technical_accuracy: float = 7.0
     min_brand_fit: float = 6.0
@@ -174,17 +179,50 @@ class QAGatesConfig(BaseModel):
     max_generic_content_penalty: float = 4.0
     composite_weights: dict[str, float] = Field(
         default_factory=lambda: {
-            "hook_strength": 0.25,
-            "clarity": 0.10,
-            "technical_accuracy": 0.15,
-            "brand_fit": 0.15,
-            "originality": 0.15,
-            "share_potential": 0.10,
+            "hook_strength": 0.18,
+            "clarity": 0.09,
+            "technical_accuracy": 0.12,
+            "brand_fit": 0.10,
+            "originality": 0.11,
+            "share_potential": 0.08,
             "save_potential": 0.05,
-            "visual_potential": 0.05,
+            "visual_potential": 0.04,
+            # Learning value carries the heaviest single weight. The account
+            # exists so that following it makes someone better at building AI,
+            # and the composite should reflect that rather than treating it as
+            # one consideration among many.
+            "learning_value": 0.18,
+            "execution_against_brief": 0.05,
         }
     )
     penalty_weight: float = 0.5
+
+    @model_validator(mode="after")
+    def _composite_weights_sum_to_one(self) -> "QAGatesConfig":
+        total = sum(self.composite_weights.values())
+        if abs(total - 1.0) > WEIGHT_TOLERANCE:
+            raise ValueError(
+                f"qa_gates.composite_weights must sum to 1.0, got {total:.6f}. "
+                f"Fix config/scoring.yaml."
+            )
+        return self
+
+    @model_validator(mode="after")
+    def _weighted_scores_exist(self) -> "QAGatesConfig":
+        """Every weighted name must be a real QAScores field.
+
+        A typo would silently contribute zero and quietly lower every composite
+        without failing anything.
+        """
+        from content_os.models.content import QAScores
+
+        unknown = set(self.composite_weights) - set(QAScores.model_fields)
+        if unknown:
+            raise ValueError(
+                f"qa_gates.composite_weights references unknown score fields: "
+                f"{sorted(unknown)}"
+            )
+        return self
 
 
 class ScoringConfig(BaseModel):
