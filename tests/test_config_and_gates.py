@@ -266,3 +266,74 @@ class TestPricingWarnings:
             assert resolved.model
             assert resolved.prompt_version
             assert resolved.reasoning_effort in ("low", "medium", "high")
+
+
+class TestBrandContextCompleteness:
+    """Brand config that never reaches a prompt is config that does nothing.
+
+    signature_series shipped declared-but-unused, which is exactly the failure
+    these assertions exist to catch.
+    """
+
+    def test_signature_series_reaches_the_prompt(self, brand):
+        context = brand.as_prompt_context()
+        assert brand.signature_series, "brand.yaml should declare series"
+        for series in brand.signature_series:
+            assert series.name in context, f"series '{series.name}' never reaches agents"
+
+    def test_identity_themes_reach_the_prompt(self, brand):
+        context = brand.as_prompt_context()
+        assert brand.identity_themes
+        for theme in brand.identity_themes:
+            assert theme[:40] in context
+
+    def test_signature_opinions_reach_the_prompt(self, brand):
+        context = brand.as_prompt_context()
+        for opinion in brand.signature_opinions:
+            assert opinion in context
+
+    def test_avoided_topics_reach_the_prompt(self, brand):
+        context = brand.as_prompt_context()
+        for topic in brand.avoided_topics:
+            assert topic in context
+
+    def test_every_declared_list_field_is_surfaced(self, brand):
+        """Guard against adding a field to brand.yaml and forgetting to render it."""
+        context = brand.as_prompt_context()
+        for field in (
+            "target_audiences", "preferred_topics", "avoided_topics",
+            "signature_opinions", "winning_hook_patterns", "losing_hook_patterns",
+            "identity_themes",
+        ):
+            values = getattr(brand, field)
+            if values:
+                assert str(values[0])[:30] in context, f"{field} not rendered"
+
+
+class TestPromptVersioning:
+    def test_changed_prompts_became_new_versions(self):
+        """Editing a prompt in place would silently rewrite the meaning of every
+        historical row pointing at that version."""
+        from pathlib import Path
+
+        for stem in ("trend_scout", "scorer", "strategist", "reel_writer",
+                     "carousel_writer"):
+            assert Path(f"prompts/{stem}_v1.md").exists(), f"{stem} v1 must survive"
+            assert Path(f"prompts/{stem}_v2.md").exists(), f"{stem} v2 must exist"
+
+    def test_v2_prompts_differ_from_v1(self):
+        from pathlib import Path
+
+        for stem in ("trend_scout", "scorer", "strategist"):
+            v1 = Path(f"prompts/{stem}_v1.md").read_text()
+            v2 = Path(f"prompts/{stem}_v2.md").read_text()
+            assert v1 != v2
+            assert len(v2) > len(v1), f"{stem}_v2 should add guidance"
+
+    def test_config_points_at_the_new_versions(self):
+        from content_os.config import load_models_config
+
+        models = load_models_config()
+        assert models.resolved("strategist").prompt_version == "strategist_v2"
+        assert models.resolved("scorer").prompt_version == "scorer_v2"
+        assert models.resolved("brand_miner").prompt_version == "brand_miner_v1"

@@ -66,10 +66,38 @@ signature_opinions:
   - Agent memory and agent state are different problems and conflating them causes bugs.
   - Evaluation is the bottleneck in agent development, not model capability.
 
+# Recurring formats the audience learns to recognise. A new episode of an
+# established series compounds; a one-off does not.
 signature_series:
-  - "Agent vs Tool vs Workflow"
-  - "Why agents fail in production"
-  - "Built it, here are the numbers"
+  - name: "AI Sagar vs Real Sagar"
+    description: >-
+      Same topic, same script, delivered by the avatar and by Sagar. Compare
+      watch time, follow conversion and comments. A recurring public experiment
+      that doubles as proof the avatar pipeline works.
+  - name: "Built it, here are the numbers"
+    description: >-
+      A real build with measured results. Latency, cost, eval scores, failure
+      rates. The numbers are the content.
+  - name: "Agent vs Tool vs Workflow"
+    description: >-
+      Recurring decision framework applied to a new system each time. The same
+      three-way distinction, a different real example.
+  - name: "Why agents fail in production"
+    description: >-
+      One specific production failure mode per episode, with the trace or the
+      cost graph that revealed it.
+  - name: "Same prompt, every model"
+    description: >-
+      One fixed prompt suite run across competing models, scored on usable
+      output rather than best output.
+
+# Content about the brand itself rather than about AI. Identity content builds
+# the recognisable persona that topical content alone never produces.
+identity_themes:
+  - The avatar pipeline itself, shown openly rather than hidden
+  - How this content system was built and what it costs to run
+  - Public build-in-public results, including the failures
+  - Positions taken publicly and later revised with evidence
 
 winning_hook_patterns:
   - contrarian practitioner claim stated as fact

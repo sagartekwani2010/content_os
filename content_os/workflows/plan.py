@@ -45,7 +45,7 @@ async def run_planning(
     *,
     target_posts: int = 7,
     horizon_days: int = 7,
-    candidate_limit: int = 40,
+    candidate_limit: int = 60,
 ) -> dict[str, Any]:
     brand = load_brand()
     cfg = load_scoring_config()

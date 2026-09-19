@@ -3,7 +3,8 @@
 
     python cli.py doctor                       validate config and environment
     python cli.py seed                         load sample topics and experiments
-    python cli.py discover seeds/sources.json  find candidate topics
+    python cli.py discover seeds/sources.json  find candidate topics from sources
+    python cli.py mine                         generate topics from the brand
     python cli.py score                        score unscored topics
     python cli.py topics                       list topics with scores
     python cli.py plan --days 7 --posts 7      build a weekly portfolio
@@ -58,6 +59,7 @@ from content_os.workflows.analyze import run_analysis  # noqa: E402
 from content_os.workflows.create import run_generation  # noqa: E402
 from content_os.workflows.discover import run_discovery  # noqa: E402
 from content_os.workflows.ingest import ingest_csv  # noqa: E402
+from content_os.workflows.mine import run_mining  # noqa: E402
 from content_os.workflows.plan import run_planning  # noqa: E402
 from content_os.workflows.score import run_scoring  # noqa: E402
 from content_os.workflows.weekly import run_weekly  # noqa: E402
@@ -249,6 +251,46 @@ def cmd_discover(args: argparse.Namespace) -> int:
         for reason in result["discarded_reasons"]:
             print(wrap(f"- {reason}", indent=2))
 
+    print()
+    kv("tokens", result["tokens"])
+    kv("cost", f"${result['cost']:.4f}")
+    if result.get("trace_id"):
+        kv("trace", result["trace_id"])
+    print()
+    return 0
+
+
+def cmd_mine(args: argparse.Namespace) -> int:
+    """Generate topics from the brand rather than from the news."""
+    if not require_api_key():
+        return 1
+    repos = repos_for(args)
+    header("Brand mining")
+    print(c("  Series episodes, identity content, and experiment formats.", DIM))
+    result = asyncio.run(run_mining(repos, max_topics=args.max))
+
+    print()
+    print(c(f"  proposed {result['proposed']}  new {len(result['created'])}  "
+            f"duplicate {len(result['duplicates'])}", GREEN))
+
+    by_origin: dict[str, list] = {}
+    for topic in result["topics"]:
+        by_origin.setdefault(topic.origin, []).append(topic)
+
+    for origin, topics in sorted(by_origin.items()):
+        header(origin.replace("_", " ").title())
+        for topic in topics:
+            print()
+            print(f"  {c(topic.title, BOLD)}")
+            if topic.series_name:
+                print(f"    {c('series: ' + topic.series_name, CYAN)}")
+            print(wrap(topic.why_only_this_brand, indent=4))
+            if topic.requires_work:
+                print(c(f"    needs: {'; '.join(topic.requires_work[:3])}", YELLOW))
+            print(c(f"    saturation {topic.estimated_saturation:.2f}", DIM))
+
+    header("Rationale")
+    print(wrap(result["rationale"], indent=2))
     print()
     kv("tokens", result["tokens"])
     kv("cost", f"${result['cost']:.4f}")
@@ -864,6 +906,13 @@ def cmd_weekly(args: argparse.Namespace) -> int:
         run_weekly(repos, target_posts=args.posts, horizon_days=args.days)
     )
 
+    mining = result.get("mining")
+    if mining and not mining.get("error"):
+        print(f"  mined {len(mining['created'])} brand topics "
+              f"(series, identity, experiments), ${mining['cost']:.4f}")
+    elif mining and mining.get("error"):
+        print(c(f"  brand mining skipped: {mining['error']}", YELLOW))
+
     scoring = result["scoring"]
     if scoring.get("scored"):
         print(f"  scored {len(scoring['scored'])} topics, "
@@ -932,8 +981,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("discover", help="Find candidate topics from source material.")
     p.add_argument("file", help="JSON or JSONL file of sources.")
-    p.add_argument("--max", type=int, default=10, help="Maximum topics to propose.")
+    p.add_argument("--max", type=int, default=20, help="Maximum topics to propose.")
     p.set_defaults(func=cmd_discover)
+
+    p = sub.add_parser("mine", help="Generate topics from the brand itself.")
+    p.add_argument("--max", type=int, default=10)
+    p.set_defaults(func=cmd_mine)
 
     p = sub.add_parser("score", help="Score topics on six dimensions.")
     p.add_argument("--all", action="store_true", help="Rescore already-scored topics.")

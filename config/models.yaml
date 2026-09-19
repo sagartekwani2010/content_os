@@ -19,14 +19,14 @@ agents:
 
   trend_scout:
     model: gpt-5.6-terra
-    prompt_version: trend_scout_v1
+    prompt_version: trend_scout_v2
     reasoning_effort: low
     verbosity: low
 
   scorer:
     # Highest-volume agent: one call per topic, so it runs on terra.
     model: gpt-5.6-terra
-    prompt_version: scorer_v1
+    prompt_version: scorer_v2
     reasoning_effort: medium
     verbosity: low
 
@@ -34,19 +34,19 @@ agents:
     # The hardest judgement call in the system: portfolio balance under
     # competing constraints.
     model: gpt-5.6-sol
-    prompt_version: strategist_v1
+    prompt_version: strategist_v2
     reasoning_effort: medium
     verbosity: medium
 
   reel_writer:
     model: gpt-5.6-sol
-    prompt_version: reel_writer_v1
+    prompt_version: reel_writer_v2
     reasoning_effort: medium
     verbosity: medium
 
   carousel_writer:
     model: gpt-5.6-sol
-    prompt_version: carousel_writer_v1
+    prompt_version: carousel_writer_v2
     reasoning_effort: medium
     verbosity: medium
 
@@ -60,6 +60,15 @@ agents:
   performance_analyst:
     model: gpt-5.6-sol
     prompt_version: performance_analyst_v1
+    reasoning_effort: high
+    verbosity: medium
+
+  brand_miner:
+    # Generates topics from the brand itself: series episodes, identity content,
+    # experiment formats. Runs weekly at most, and output quality is the whole
+    # point, so it gets the strong model.
+    model: gpt-5.6-sol
+    prompt_version: brand_miner_v1
     reasoning_effort: high
     verbosity: medium
 
@@ -116,6 +125,7 @@ tracing:
   # Workflow names surfaced in the OpenAI traces dashboard.
   workflows:
     discover: trend_discovery
+    mine: brand_mining
     score: topic_scoring
     plan: weekly_content_planning
     reel: reel_generation

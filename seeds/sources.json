@@ -84,6 +84,41 @@
       "title": "Cost of running an agent loop nobody measures",
       "url": null,
       "text": "Instrumented token usage per agent invocation across a week of real runs. The distribution is wildly skewed: a small number of runs where the agent got stuck retrying accounted for most of the spend. Median cost per task was trivial, the tail was brutal. Nobody budgets for the tail, and the fix is a turn limit and a cost ceiling rather than a better prompt."
+    },
+    {
+      "id": "src_013",
+      "source_type": "personal_experiment",
+      "title": "Seedance vs H3 on an identical prompt suite",
+      "url": null,
+      "text": "Ran Seedance and H3 against the same twelve-prompt suite, same character description, same shot list, three generations each. Scored every output on whether it was actually usable in a video rather than whether it looked impressive. The model that produced the single best clip was not the model with the highest usable rate. Character consistency across shots diverged much more than motion quality did. Need to write up cost per usable second for both."
+    },
+    {
+      "id": "src_014",
+      "source_type": "personal_note",
+      "title": "RAG obituaries are premature",
+      "url": null,
+      "text": "Recurring claim that long context windows killed retrieval. In practice the systems I see failing are not failing because they retrieve, they are failing because they retrieve badly: no chunking strategy, no reranking, embedding the wrong field, no evaluation of retrieval quality separate from answer quality. Long context makes bad retrieval more expensive, not unnecessary. There is a sharp piece in separating the two failure modes."
+    },
+    {
+      "id": "src_015",
+      "source_type": "personal_experiment",
+      "title": "One MCP server with sixty tools",
+      "url": null,
+      "text": "Consolidated everything behind a single MCP server exposing about sixty tools. Tool selection accuracy fell off noticeably past roughly thirty tools, and the failures were not random: the model consistently picked the tool whose description best matched surface wording rather than intent. Splitting into three smaller domain servers recovered most of the accuracy. The abstraction boundary matters more than the protocol."
+    },
+    {
+      "id": "src_016",
+      "source_type": "personal_note",
+      "title": "What one Reel actually costs to produce",
+      "url": null,
+      "text": "Instrumented the full pipeline for a single Reel: topic discovery, scoring, planning, script generation, QA, then avatar render and edit. Have real token and dollar numbers per stage now, plus wall-clock time. The distribution is not what I expected; the writing is not the expensive part. Worth publishing with the actual figures since nobody posts these."
+    },
+    {
+      "id": "src_017",
+      "source_type": "industry_discussion",
+      "title": "Eval harnesses as the real moat",
+      "url": null,
+      "text": "Growing argument that the durable advantage in AI products is not the model or the prompt but the evaluation set, because it is the only asset that does not reset when a new model ships. Teams with a real eval can adopt a new model in a day. Teams without one cannot tell whether the new model is better and end up frozen."
     }
   ]
 }

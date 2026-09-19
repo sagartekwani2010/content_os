@@ -16,6 +16,17 @@ class BrandPillar(BaseModel):
     description: str
 
 
+class SignatureSeries(BaseModel):
+    """A recurring format the audience learns to recognise.
+
+    Series matter more than one-off topics because they compound: the second
+    episode borrows the recognition the first one built.
+    """
+
+    name: str
+    description: str
+
+
 class ProductionProfile(BaseModel):
     """Physical production reality. Drives the production_fit scoring dimension."""
 
@@ -37,7 +48,8 @@ class BrandMemory(BaseModel):
     avoided_topics: list[str] = Field(default_factory=list)
 
     signature_opinions: list[str] = Field(default_factory=list)
-    signature_series: list[str] = Field(default_factory=list)
+    signature_series: list[SignatureSeries] = Field(default_factory=list)
+    identity_themes: list[str] = Field(default_factory=list)
 
     winning_hook_patterns: list[str] = Field(default_factory=list)
     losing_hook_patterns: list[str] = Field(default_factory=list)
@@ -73,6 +85,22 @@ class BrandMemory(BaseModel):
             lines.append("")
             lines.append("SIGNATURE OPINIONS (these are the brand's actual positions):")
             lines += [f"  - {o}" for o in self.signature_opinions]
+
+        if self.signature_series:
+            lines.append("")
+            lines.append(
+                "SIGNATURE SERIES (recurring formats the audience recognises; a new "
+                "episode of an established series is worth more than a one-off):"
+            )
+            lines += [f"  - {s.name}: {s.description}" for s in self.signature_series]
+
+        if self.identity_themes:
+            lines.append("")
+            lines.append(
+                "IDENTITY THEMES (content about this brand and its work, not about "
+                "AI in general; this is what builds a recognisable persona):"
+            )
+            lines += [f"  - {t}" for t in self.identity_themes]
 
         if self.preferred_topics:
             lines.append("")
