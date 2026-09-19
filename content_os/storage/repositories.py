@@ -527,15 +527,24 @@ class ContentRepository(_Base):
             "SELECT * FROM content_items ORDER BY created_at DESC LIMIT ?", (limit,)
         ).fetchall()
 
-    def recent_for_context(self, limit: int = 20) -> list[dict[str, Any]]:
-        """Compact recent-history view handed to the strategist so it can avoid
-        repeating pillars, formats, and hooks."""
+    def recent_for_context(
+        self, limit: int = 20, exclude_id: str | None = None
+    ) -> list[dict[str, Any]]:
+        """Compact recent-history view handed to agents so they can avoid
+        repeating pillars, formats, and hooks.
+
+        exclude_id drops one item from the list. Generation fills in a row that
+        the planner already created, so without this the writer and QA both see
+        the item they are working on as prior art and call it a duplicate of
+        itself.
+        """
         rows = self._exec(
-            "SELECT title, format, pillar, hook, status, planned_publish_date, "
+            "SELECT id, title, format, pillar, hook, status, planned_publish_date, "
             "actual_publish_date FROM content_items "
+            "WHERE (? IS NULL OR id != ?) "
             "ORDER BY COALESCE(actual_publish_date, planned_publish_date, created_at) "
             "DESC LIMIT ?",
-            (limit,),
+            (exclude_id, exclude_id, limit),
         ).fetchall()
         return [dict(r) for r in rows]
 

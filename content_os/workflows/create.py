@@ -148,7 +148,11 @@ async def run_generation(
     workflow_key = "reel" if fmt == "reel" else "carousel"
     existing_row = repos.content.get(content_id) if content_id else None
     plan_item = _plan_item_from_row(existing_row)
-    recent = repos.content.recent_for_context(20)
+
+    # The planner already wrote a row for this item. Excluding it keeps the
+    # writer from treating its own brief as prior art, and keeps QA from
+    # rejecting the result as a duplicate of itself.
+    recent = repos.content.recent_for_context(20, exclude_id=content_id)
 
     try:
         with trace(
