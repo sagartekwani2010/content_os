@@ -232,12 +232,13 @@ def analyse_portfolio(
     }
 
     violations: list[str] = []
+    pillar_cap = portfolio.pillar_cap(total)
 
     for pillar, count in pillar_counts.items():
         if pillar not in portfolio.targets:
             violations.append(f"UNKNOWN_PILLAR:{pillar}")
-        if count > portfolio.max_per_pillar:
-            violations.append(f"PILLAR_OVER_CAP:{pillar}={count}")
+        if count > pillar_cap:
+            violations.append(f"PILLAR_OVER_CAP:{pillar}={count}>{pillar_cap}")
 
     if len(pillar_counts) < min(portfolio.min_distinct_pillars, total):
         violations.append(
@@ -271,6 +272,7 @@ def analyse_portfolio(
         "format_counts": dict(format_counts),
         "max_same_format_streak": max_streak,
         "distinct_pillars": len(pillar_counts),
+        "pillar_cap": pillar_cap,
     }
 
 

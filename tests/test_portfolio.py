@@ -54,10 +54,54 @@ class TestPortfolioBalance:
         assert report["distinct_pillars"] == 5
 
     def test_pillar_cap_is_enforced(self, cfg):
-        plan = [item("ai_builder", "reel" if i % 2 else "carousel") for i in range(4)]
-        plan += [item("ai_pov"), item("ai_future"), item("ai_real_life")]
+        """Five of seven posts in one pillar exceeds the cap at that size."""
+        plan = [item("ai_builder", "reel" if i % 2 else "carousel") for i in range(5)]
+        plan += [item("ai_pov"), item("ai_future")]
         report = analyse_portfolio(plan, cfg)
         assert any("PILLAR_OVER_CAP:ai_builder" in v for v in report["violations"])
+
+
+class TestPillarCapScaling:
+    """A fixed cap is a weekly-scale rule that breaks on longer plans."""
+
+    def test_cap_scales_with_plan_size(self, cfg):
+        portfolio = cfg.portfolio
+        caps = [portfolio.pillar_cap(n) for n in (5, 7, 10, 15, 20)]
+        assert caps == sorted(caps), "cap must not shrink as plans grow"
+        assert portfolio.pillar_cap(15) > portfolio.pillar_cap(7)
+
+    def test_cap_never_contradicts_the_largest_target(self, cfg):
+        """At 15 posts a fixed cap of 3 would forbid the 30% target, which
+        wants 4.5. The cap must never make the targets unsatisfiable."""
+        portfolio = cfg.portfolio
+        for total in (5, 7, 10, 15, 20, 30):
+            cap = portfolio.pillar_cap(total)
+            for share in portfolio.targets.values():
+                assert cap >= share * total, (
+                    f"cap {cap} forbids target {share:.0%} at {total} posts"
+                )
+
+    def test_small_plans_keep_the_configured_floor(self, cfg):
+        assert cfg.portfolio.pillar_cap(1) >= cfg.portfolio.max_per_pillar
+        assert cfg.portfolio.pillar_cap(4) >= cfg.portfolio.max_per_pillar
+
+    def test_fifteen_post_plan_at_target_distribution_passes(self, cfg):
+        """The launch-sized plan the targets actually describe must validate."""
+        plan = (
+            [item("ai_builder") for _ in range(5)]
+            + [item("ai_pov", "carousel") for _ in range(4)]
+            + [item("ai_experiments") for _ in range(3)]
+            + [item("ai_real_life", "carousel") for _ in range(2)]
+            + [item("ai_future")]
+        )
+        # Interleave formats so the streak guardrail is not the thing under test.
+        plan = [
+            p if i % 2 else item(p.pillar, "carousel" if p.format == "reel" else "reel")
+            for i, p in enumerate(plan)
+        ]
+        report = analyse_portfolio(plan, cfg)
+        over_cap = [v for v in report["violations"] if v.startswith("PILLAR_OVER_CAP")]
+        assert over_cap == [], f"target distribution rejected: {over_cap}"
 
     def test_format_streak_is_detected(self, cfg):
         plan = [item(p, "reel") for p in

@@ -8,6 +8,7 @@ skewing months of scoring.
 from __future__ import annotations
 
 import hashlib
+import math
 import os
 from functools import lru_cache
 from pathlib import Path
@@ -88,6 +89,23 @@ class PortfolioConfig(BaseModel):
     max_per_pillar: int = 3
     min_distinct_pillars: int = 3
     max_same_format_streak: int = 3
+
+    def pillar_cap(self, total_posts: int) -> int:
+        """Hard ceiling on posts per pillar, scaled to the size of the plan.
+
+        A fixed cap is a weekly-scale rule. At fifteen posts a cap of three
+        directly contradicts a 30% target, which wants four and a half, and
+        hands the strategist constraints it cannot satisfy.
+
+        Deriving the cap from the largest target plus tolerance means it can
+        never fight the distribution it is meant to protect. It stays a backstop
+        against genuine concentration rather than a second, competing target.
+        """
+        if not self.targets:
+            return self.max_per_pillar
+        ceiling_share = max(self.targets.values()) + self.tolerance
+        scaled = math.ceil(total_posts * ceiling_share)
+        return max(self.max_per_pillar, scaled)
 
     @model_validator(mode="after")
     def _targets_sum_to_one(self) -> "PortfolioConfig":

@@ -86,7 +86,9 @@ def build_context(
         )
     parts.append("")
     parts.append("GUARDRAILS (a plan violating these is rejected and returned to you):")
-    parts.append(f"  - At most {cfg.portfolio.max_per_pillar} posts per pillar")
+    parts.append(
+        f"  - At most {cfg.portfolio.pillar_cap(target_posts)} posts per pillar"
+    )
     parts.append(f"  - At least {cfg.portfolio.min_distinct_pillars} distinct pillars")
     parts.append(
         f"  - No more than {cfg.portfolio.max_same_format_streak} consecutive "
