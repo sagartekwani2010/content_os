@@ -1,0 +1,46 @@
+# Six-Reel batch backlog — superseded proposal
+
+**Superseded by creator direction:** [regular-demo-series-backlog-2026-11-08.md](regular-demo-series-backlog-2026-11-08.md) now carries the proposed Wardrobe Agent, Agent Astra, AI system design and research-led demo slate. The earlier support-led catalogue below is retained as planning history, not the active recommendation.
+
+**Prepared:** 8 November 2026 (Asia/Kolkata)<br>
+**Status:** proposed catalogue; no briefs, scripts, assets, media runs, scheduling or publication approved by this file.<br>
+**Batch goal:** produce six distinct Reels in 2–3 days after topic approval; have the first release-ready on 12–13 November and retain the rest as a staged release backlog. Publication dates remain a creator decision.
+
+## Catalogue thesis
+
+**When should an AI agent keep acting, change its model behaviour, or hand a decision to a person?** Use one fictional food-delivery support case to make the technical layers visible, then widen to career and leadership decisions. The support case is an illustrative build, not a claim about any company's production system. The three `ai_builder` items, one `ai_real_life` item and two `ai_career` items fit the directional 50/20/30 brand mix, while giving every Reel its own viewer payoff.
+
+| ID | Proposed Reel / audience question | Pillar; curriculum | Specific proof and distinct takeaway | Form / production dependency |
+| --- | --- | --- | --- | --- |
+| R1 | **The agent knew the search was useless. Why did it search again?** What stops a tool loop? | `ai_builder`; `FND-06` | Show a short support-agent trace: repeated lookup returns no new policy evidence, yet the agent tries again. Add a harness rule that caps consecutive low-utility lookups and routes to `ASK_CUSTOMER` or `ESCALATE`. **Lesson:** a stated judgment needs an enforced action boundary. | Screen trace plus face/avatar narration. Needs an actual local trace; a reenactment must be labelled illustrative. |
+| R2 | **I used Astra to change how Qwen makes one support decision.** What does adapting model weights actually buy? | `ai_builder`; model choice and bounded learning | Show the base Qwen decision, the training data shape, the LoRA adapter created by local training, and the same held-out case after adaptation. **Lesson:** train a narrow decision policy only when examples improve a measured task. Do not promise improvement before testing. | Preferred AI-avatar delivery with real screen capture and adapter/eval evidence. Highest-risk item; experiment must finish before its claim or title is locked. |
+| R3 | **Prompt, rule or weight update?** Which one should own the decision? | `ai_builder`; `REL-02` / evaluation design | Same held-out fixtures for three candidates: base Qwen with explicit prompt, Qwen with LoRA adapter, and a deterministic stop/escalation rule. Show correct routing, unnecessary tool calls and unsafe final-answer rate, including a failure case. **Lesson:** use the simplest approach that passes the evaluation contract. | Evaluation Reel. Requires R2 test data; report actual counts and sample size, including a null result. |
+| R4 | **A missing order, two conflicting signals: what should the support agent do?** | `ai_real_life`; tools, state and human handoff | Fictional customer request → order-status tool → delivery scan → policy excerpt → `ASK_CUSTOMER` or `ESCALATE`; no automatic refund. **Lesson:** the user-facing outcome is a safe next step backed by visible evidence, not a confident guess. | Case-study demo; one clean screen-flow and creator/avatar voiceover. Can be produced from a deterministic simulation while R2 trains, labelled illustrative. |
+| R5 | **The AI portfolio project that proves more than a demo.** What would convince a hiring manager? | `ai_career`; practitioner proof | Use this same bounded support-router build to show four proof artifacts: task contract, test set, failure trace and result/limit summary. **Lesson:** a reviewer can assess engineering judgment when the failure boundary and measurements are visible. | Face-led career Reel; no new model run needed. Avoid claiming that a job outcome is guaranteed. |
+| R6 | **If AI frames the options, is human approval independent?** How should a leader design the handoff? | `ai_career`; `HUM-02` / approval design | Support escalation screen: capture the human's criteria first, then present evidence, options and uncertainty; require sign-off before any consequential action. **Lesson:** approval belongs at the decision boundary and needs enough context for independent judgment. | Leadership Reel; UI mockup plus face/avatar narration. This teaches approval design, not a second Qwen result. |
+
+## R2 implementation contract: Astra adapts Qwen
+
+**Claim boundary:** Astra in Codex writes and reviews the local dataset, training code and evaluation; the local optimizer updates a Qwen LoRA adapter. Astra does not directly edit its own weights. The adapter changes a bounded Qwen behaviour, and we only describe measured effects after testing. [OpenAI's Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra) lists fine-tuning of Astra as unsupported; [MLX-LM](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/LORA.md) documents local LoRA training and evaluation on Apple silicon; [Qwen's training guide](https://qwen.readthedocs.io/en/v3.0/training/ms_swift.html) documents LoRA for Qwen.
+
+**Use case:** a small model routes one step of an illustrative missing-order support agent. Inputs are the customer message, current order status, delivery evidence, applicable policy excerpt, number and utility of previous tool calls, and missing facts. Output is a strict JSON decision with `action` in `LOOK_UP_ONCE`, `ASK_CUSTOMER`, `ESCALATE` or `DRAFT_EVIDENCE_SUMMARY`, plus cited evidence IDs and a reason code. A deterministic harness validates the schema, imposes the tool-call cap and prevents refund execution. The model never authorizes money movement.
+
+**Candidate build:** start with [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) and a local MLX LoRA adapter on the available 16 GB Apple-silicon machine; test memory/runtime fit before committing to the model size. Use a small, human-reviewed labelled dataset of normal, missing, conflicting and repeated-lookup states. Keep train and test cases separate by scenario, not merely by row. Compare the untouched base model, a prompt-only version, the adapted model, and a deterministic rule. Log exact dataset size, model revision, seed, training settings, raw outputs and error cases. No synthetic labels should be passed off as real customer outcomes.
+
+**Success gate for the Reel:** show the actual before/after response on at least one held-out case and the aggregate held-out counts; explicitly disclose if a rule or prompt wins. If local training cannot finish or shows no useful gain by the edit deadline, R2 becomes an honest build-in-progress or failure-analysis Reel only with creator approval. Never animate a fabricated weight change or quote an unmeasured percentage.
+
+## Production order and release-ready plan
+
+1. **8 November:** approve the six topics and select the R2 support-router task; check which Reels have already been posted and locate the approved avatar/voice assets. Do not reuse the posted Diwali video as a new generation target.
+2. **9 November:** build the fictional support fixtures and deterministic simulation; capture R1/R4 traces; start R2 local train/eval feasibility and preserve all outcomes. Draft six briefs for separate approval before scripts/assets.
+3. **10 November:** finish R2/R3 evaluation, lock evidence states and hooks, record one creator/avatar narration batch, then generate only approved keyframes. Reuse one support UI kit across R1–R4 while changing the on-screen evidence for each decision.
+4. **11 November:** edit six independent cuts, run full rendered-video QA (hook wording, progressive visuals, captions, audio and export), and reserve revision time. After each generation and final cut, record the actual artifact, creator feedback and before/after evidence in the existing video-learning loop; carry approved lessons into subsequent Reel briefs and prompt versions. Check available media credits before any invideo or Magnific generation; use those services only when a shot genuinely needs motion or enhancement. fal.ai generations remain creator-run.
+5. **12–13 November:** have at least the first Reel ready for creator release approval; hold the other five as a release backlog with their own final QA and evidence notes. Suggested release sequence: R4 → R1 → R2 → R3 → R5 → R6, so the familiar case precedes the weight-update explanation.
+
+## Decisions still needed from the creator
+
+- Approve or replace the proposed support-router use case and the six topic theses before production briefs are written.
+- Confirm whether the first Reel should be ready on 12 or 13 November; this plan does not assume all six must publish in one day.
+- Point to the approved avatar/voice source, if AI-avatar delivery is preferred for R2. The repository does not currently contain an identifiable approved avatar asset.
+
+This backlog is a new batch proposal. It does not rewrite the historical fixed queue or treat earlier topic rankings as approved production briefs.

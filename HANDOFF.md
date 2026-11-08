@@ -17,6 +17,27 @@ and token usage locally. `openai-agents` remains installed but its API-key
 
 **Human decides WHAT and WHY. Codex decides HOW. Python remains deterministic.**
 
+## Current Reel concept slate — 8 November 2026
+
+The creator selected three categories for a two-week, eight-Reel experiment:
+**How AI Is Trained**, **Paper → Test**, and **Agent in My Life**. The current
+concept and proposed order are in
+`planning/eight-reel-concept-lock-2026-11-08.md`. The three mass-entry Reels each
+trace a distinct question from a 2023 baseline through published 2026 evidence
+to a clearly labelled future research direction. The two paper slots are RSI
+Arena (Astra as a training agent) and CUA-Master (computer-use feedback loops).
+The three demos are a paired real Wardrobe Agent decision/rejection and a local
+Astra-directed Qwen adapter test on a bounded Gym Assistant decision.
+
+This lock supersedes the narrower November 8 discovery proposals, while
+preserving them as planning history. It is **not** a production brief or
+authorization to generate media, spend credits, schedule or publish. The
+Wardrobe pair needs genuine inventory, occasion and rejection traces; the
+Astra Reel needs reviewed examples and held-out evaluation before any gain
+claim. Compare organic follows per 1,000 non-follower accounts reached after
+every Reel has seven days of data, keeping paid reach separate. Record creator
+feedback and artifact-level lessons after each generation and final export.
+
 ## Strategic direction approved 30 September 2026
 
 The public brand now has two strategic initiatives:
