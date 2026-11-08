@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from agents import trace
+from content_os.codex_runtime import trace
 
 from content_os.agents import normalizer, trend_scout
 from content_os.config import load_brand, load_models_config

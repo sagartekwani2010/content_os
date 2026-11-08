@@ -1,0 +1,135 @@
+brief_id: ai-native-data-scientist-job-loss-reel
+
+topic: "AI and the Data Scientist role — why model-output work is becoming cheaper and what evidence now differentiates candidates"
+
+core_thesis: >
+  AI is not making Data Science irrelevant, but it is reducing the scarcity of
+  notebooks, baseline models and polished analytical outputs. Data Scientists
+  should differentiate themselves by proving ownership of the complete
+  decision system: decision definition, data validity, decision-aware
+  evaluation, deployment, monitoring and bounded response to failure.
+
+why_this_matters: >
+  Generic advice to learn AI tools does not help Data Scientists decide what to
+  build or show. Equally, job-loss framing can create fear without explaining
+  that current U.S. projections still expect strong occupation growth while the
+  evidence required to demonstrate capability is changing.
+
+learning_objective: >
+  After viewing, a Data Scientist can redesign one portfolio case study so it
+  demonstrates a business decision, a data contract, decision-aware evaluation
+  and a production feedback loop rather than ending with model accuracy.
+
+audience_takeaway: >
+  A notebook proves that you can train a model; an end-to-end decision case
+  proves that you can own the system in which the model creates value.
+
+target_audience:
+  - Data Scientists
+  - Aspiring Data Scientists
+  - Analytics professionals moving into Data Science
+  - Data and AI leaders evaluating applied capability
+
+brand_pillar: ai_career
+content_format: reel
+
+hook_direction: >
+  Use the series-standard broad layoff opening: the creator-supplied claim that
+  companies including Microsoft, PayPal and Oracle are signalling workforce
+  cuts approaching 20% by the end of 2027. Move immediately into Sagar's
+  first-hand Amazon observation, explain why foundation models reduced the
+  premium on narrow model building, and finish with the role-specific CRISP
+  mitigation playbook.
+
+approved_hook_points:
+  - "Microsoft, PayPal, Oracle and other companies are already signalling it: by the end of 2027, close to 20% of roles could be cut."
+  - "In the first major layoff wave Sagar witnessed at Amazon, Applied and Data Scientists around him were largely untouched."
+  - "Models were scarce then; foundation models have changed the evidence contract now."
+
+high_level_sections:
+  - series-standard creator-supplied 20%-by-end-2027 layoff claim with Microsoft, PayPal and Oracle named and a pre-publication validation hold
+  - Sagar's scoped first-hand observation from the first Amazon layoff wave
+  - foundation models collapsing routine NLP, Computer Vision and predictive-model silos
+  - explicit distinction between fields disappearing and narrow model-building becoming cheaper
+  - "CRISP mitigation framework: Compress commodity work, Reskill into adjacent capabilities, Integrate around an outcome end to end, Safeguard the system and Prove outcomes"
+  - Data Science-specific action for every CRISP step
+  - concise contrast between model production and decision ownership
+  - Product sequel bridge, with SDE and Marketing named as later role episodes
+
+core_examples:
+  - "Churn decision: who receives which retention action, when and at what cost?"
+  - "Data contract: source, lineage, freshness, leakage and missing-data policy."
+  - "Evaluation: calibration, false-positive cost and intervention uplift—not only AUC."
+  - "Operations: deployment, drift, outcome monitoring, abstention and retraining triggers."
+
+preferred_pov: >
+  Experienced AI and data leader giving a technically specific career warning,
+  then showing exactly what stronger evidence looks like.
+
+desired_tone: >
+  High emotional intensity in the hook, direct and provocative, followed by
+  technically precise, calm and useful guidance. Avoid doom, reassurance and
+  generic upskilling advice.
+
+visual_direction: >
+  Face-led vertical Reel with three static image cutaways: the series-standard
+  layoff opener card, a truthful personal Amazon-era photo and a clean
+  specialist-models-to-foundation-model diagram. During the CRISP section keep
+  Sagar on screen beside a persistent vertical C-R-I-S-P rail; highlight and
+  expand one action at a time. No generated video B-roll, layoff stock imagery,
+  generic office workers, red alarm graphics or fake job portals.
+
+desired_duration_seconds: 75
+
+factual_claims_to_verify:
+  - "NEEDS CREATOR VALIDATION: companies including Microsoft, PayPal and Oracle are signalling cuts approaching 20% by the end of 2027."
+  - "The Amazon observation is Sagar's scoped first-hand experience, not a company-wide role-impact claim."
+  - "Foundation-model homogenisation is a technical mechanism and practitioner hypothesis, not proven causation for individual layoffs."
+
+must_include:
+  - "The creator-supplied 20%-by-end-2027 claim as the common series opener."
+  - "The Amazon observation scoped to the teams and layoff wave Sagar personally witnessed."
+  - "NLP and Computer Vision as examples of specialist model-building lanes compressed by multimodal foundation models."
+  - "All five CRISP actions with Data Science-specific examples."
+  - "A clear boundary between model accuracy and decision-system ownership."
+  - "A sequel bridge to Product, with SDE and Marketing named as later episodes, without teaching those roles here."
+
+must_avoid:
+  - "Claiming AI has already eliminated Data Scientist jobs."
+  - "Claiming Amazon, Oracle, Salesforce or Dell publicly confirmed Data Scientist layoffs at scale when role-level evidence is unavailable."
+  - "Saying Computer Vision or NLP no longer exists as a field."
+  - "Claiming Data Scientists are safe from displacement."
+  - "Guaranteeing that following the advice will prevent job loss."
+  - "Generic advice to learn prompting, AI tools or communication."
+  - "Mixing Product, SDE or Marketing preparation into this Reel."
+  - "Presenting AUC as sufficient evidence of business impact."
+
+cta_direction: >
+  End with the model-versus-decision-system contrast and a concise promise to
+  return with Product next, followed by separate SDE and Marketing episodes. Do
+  not add a hard sell.
+
+urgency: this_week
+priority: 1
+status: APPROVED
+approved_by: Sagar
+
+references:
+  - "https://www.challengergray.com/blog/job-cuts-fall-in-september-hiring-plans-up-3-over-2025-on-weak-early-seasonal-hiring/"
+  - "https://www.bls.gov/ooh/math/data-scientists.htm"
+  - "https://www.aboutamazon.com/news/company-news/amazon-layoffs-corporate-jan-2026"
+  - "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-on-generative-ai"
+  - "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+  - "https://www.streetinsider.com/Reuters/Salesforce%2Bcuts%2Bfewer%2Bthan%2B1%2C000%2Bjobs%2C%2BBusiness%2BInsider%2Breports/25969781.html?classic=1"
+  - "https://arxiv.org/abs/2108.07258"
+  - "https://openai.com/index/clip/"
+  - "https://www.anthropic.com/research/economic-index-june-2026-report"
+
+notes: >
+  The 20%-by-end-2027 company claim is creator supplied and intentionally kept
+  in the working script, but the production file must retain a visible NEEDS
+  CREATOR VALIDATION hold until Sagar approves the final source. The Amazon
+  observation is Sagar's first-hand experience and must stay scoped to the
+  people and wave he personally observed. Computer Vision and NLP remain active
+  fields; the claim is that foundation models reduce the need for a separate
+  narrow model and pipeline for many routine tasks.

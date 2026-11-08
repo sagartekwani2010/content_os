@@ -1,0 +1,112 @@
+brief_id: fnd-02-agent-loop-biceps-carousel
+
+topic: "FND-02 — The Agent Loop, explained through Sagar's Biceps Progression Agent"
+
+core_thesis: >
+  The Biceps Progression Agent is useful because it closes a repeatable loop:
+  it receives a real weekly observation, selects one bounded route, produces a
+  domain-specific recommendation with evidence-linked rationale, applies the
+  approved change through a deterministic workflow and human action, and uses
+  the next weekly check-in as the next observation.
+
+why_this_matters: >
+  Interview candidates often call a prompt-response flow an agent without
+  defining what is observed, what chooses, which actions are allowed, what
+  changes in the environment or what returns to close the loop.
+
+learning_objective: >
+  After viewing, a person can draw and explain a closed agent loop in an
+  interview by mapping its goal, observation, decision policy, bounded route,
+  domain recommendation, environment transition, next observation and stopping
+  condition to one concrete system.
+
+audience_takeaway: >
+  If the result of an action never returns as the next observation, the system
+  does not yet have a closed agent loop.
+
+target_audience:
+  - AI engineers
+  - Software developers
+  - AI role candidates preparing for agent-system interviews
+  - Technical founders and product professionals
+
+brand_pillar: ai_real_life
+content_format: carousel
+
+hook_direction: >
+  Lead with Sagar's evidenced before/current biceps progression and immediately
+  promise the reusable learning: how feedback becomes the next agent action.
+
+approved_hook_points:
+  - "How I built a system for weekly biceps progression."
+  - "Learn how feedback becomes the next agent action."
+  - "A prompt to a generated plan is not a closed agent loop."
+
+high_level_sections:
+  - outcome-led biceps progression goal and viewer learning promise
+  - instantiated agent-loop contract for the Biceps Progression Agent
+  - observe and decide trace with the real weekly schema and bounded route
+  - domain recommendation with evidence-linked rationale
+  - deterministic execution, human training and the next weekly observation
+  - interview-ready definition and five-question design test
+  - dedicated collaboration contact slide
+
+core_examples:
+  - "Current observation fields: check_in_complete, recovery_status, data_consistency, safety_signal."
+  - "Allowed routes: PROGRESS, HOLD, ASK_FOR_DATA, ESCALATE."
+  - "Domain payload examples, only when backed by Sagar's real programme: increase load, rebalance short-head or long-head exercise allocation, or emphasise hammer curls."
+
+preferred_pov: >
+  This is how I designed and audited one bounded weekly decision loop around my
+  own biceps training; the implementation lesson transfers to other agents.
+
+desired_tone: >
+  Outcome-first, technically precise, interview-ready, personal, evidence-led
+  and easy to decode on a phone.
+
+visual_direction: >
+  Six finished 4:5 slides in a consistent light editorial system: warm
+  off-white or pale stone, charcoal typography, restrained electric-blue
+  system lines and one muted lime decision highlight. Use five truthful
+  chronological personal images across slides 1–5, with before/current on the
+  cover, older images during setup and newer images during outcome/loop closure.
+  Slide 6 is a clean contact card. Preserve the creator's actual face and body;
+  never generate, reshape or exaggerate physique progress.
+
+desired_slide_count: 6
+
+factual_claims_to_verify:
+  - "The exact biceps progression outcome and time period shown by the before/current images."
+  - "The real progression metric and weekly values used by Sagar."
+  - "The exact exercises, changes, programme allocations and rationales actually used."
+  - "Whether a real subsequent check-in exists to demonstrate o_t+1."
+
+must_include:
+  - "One general technical term and its concrete Biceps Progression Agent value on the same slide."
+  - "The distinction between bounded route, domain recommendation payload and deterministic workflow."
+  - "Observed evidence → route → recommendation → reason/evidence → applied change → next observation."
+  - "A stop or escalation path with no exercise recommendation when the boundary is crossed."
+  - "An interview-ready definition and reusable five-question loop test."
+
+must_avoid:
+  - "Medical, nutrition or general fitness advice."
+  - "Invented measurements, exercise history, recommendation results or physique change."
+  - "Raw or private chain-of-thought; show concise structured rationale and evidence references instead."
+  - "Dark dashboards, neon, robots, fake app UI or generated physique imagery."
+  - "Claiming AI directly caused muscle growth or ensured weekly progress without evidence."
+
+cta_direction: >
+  Use a dedicated final slide: "Want to share your learnings—or need help
+  building agents for yourself? Reach out below:" followed only by
+  sagar-agents.saggy-2010.chatgpt.site.
+
+urgency: this_week
+priority: 1
+status: APPROVED
+approved_by: Sagar
+
+notes: >
+  Prompts may retain clearly marked placeholders for the creator to replace in
+  ChatGPT before final generation. The saved v1 route contract is real; the
+  richer exercise recommendation payload must be matched to Sagar's actual logs
+  before it is presented as an implemented trace.

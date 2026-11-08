@@ -2,44 +2,53 @@
 # The performance analyst appends to historical_insights; everything else is
 # human-owned and requires explicit approval to change.
 
-version: 1
+version: 9
 positioning: >-
-  Experienced AI practitioner and builder explaining how real AI systems work,
-  while experimenting publicly with agents, generative AI, AI avatars and
-  practical AI.
+  Experienced AI practitioner and leader building the one-stop learning system
+  for agents: how agentic systems work, how to build and evaluate them through
+  real demos, and how leaders and practitioners become effective in AI-native
+  teams. LLM concepts, research and new capabilities are interpreted through
+  both demonstrated and forward-looking agent use cases, with evidence and
+  informed hypotheses clearly distinguished.
 
 brand_pillars:
   - key: ai_builder
-    name: AI Builder / Production AI
+    name: "Agents: Build, Evaluate & Operate"
     description: >-
-      How real systems are architected and why they break. Agents, orchestration,
-      evaluation, memory, retrieval, cost, latency, failure modes.
-  - key: ai_pov
-    name: AI POV / Explained
-    description: >-
-      Opinionated explanation. Mental models, contrarian takes, naming things
-      other people are confused about.
-  - key: ai_experiments
-    name: AI Experiments / Avatar
-    description: >-
-      Public experiments. AI avatars, generative video, cloning, model bake-offs,
-      build-in-public results with real numbers.
+      The dominant knowledge track and intended one-stop solution for agents.
+      Build, test, debug and operate agentic systems that deserve trust. Cover
+      the complete stack: LLM foundations through an agentic lens, tools,
+      workflows, context, state, memory, retrieval, planning, orchestration,
+      multi-agent patterns, protocols, evaluations, guardrails, observability,
+      deployment, costs, latency, failure traces and model benchmarks. Prefer
+      working demos and recorded evidence over abstract explanation.
   - key: ai_real_life
-    name: AI x Real Life
+    name: Agent Demos in Real Life
     description: >-
-      AI applied to ordinary life and work. Concrete, personal, demonstrable.
-  - key: ai_future
-    name: AI Future / Current Models
+      A case-study and demonstration surface for the main agents track, not a
+      separate strategic promise. Use ordinary life and work builds such as the
+      gym assistant and wardrobe agent to make agent concepts concrete. Show
+      real inputs, decisions, tool calls, constraints, failures and outcomes,
+      then extract a transferable agent-building rule.
+  - key: ai_career
+    name: "Become AI-Native: Career & Leadership"
     description: >-
-      Where models are going. New releases judged by a practitioner, not a
-      press release.
+      The differentiated career-coaching and leadership track. Teach
+      practitioners how to build credible proof of ability, prepare for AI roles
+      and grow into AI-native careers; teach leaders how to exercise judgement,
+      redesign work, lead human-agent teams and evaluate AI-enabled talent.
+      Teach operating decisions and engineering judgement, not generic
+      productivity tips or memorised scripts.
 
 target_audiences:
   - AI engineers
   - Software developers
   - Technical founders
   - Product professionals working near AI
+  - Engineering, product, data and AI leaders
+  - Managers responsible for AI adoption and human-agent workflows
   - AI-curious technology audience
+  - Aspiring AI engineers and career switchers preparing for practical AI roles
 
 preferred_topics:
   - agent architecture and orchestration
@@ -50,6 +59,18 @@ preferred_topics:
   - generative media and AI avatars
   - model comparisons with firsthand results
   - practical AI applied to real workflows
+  - AI-agent system-design interviews and practical interview answers
+  - portfolio projects that demonstrate production AI judgement
+  - debugging, evaluation and failure analysis for aspiring AI practitioners
+  - LLM fundamentals explained through their effect on agent behaviour
+  - retrieval, context windows, inference, structured output and model routing for agents
+  - agent tools, workflows, protocols and integration patterns
+  - agent planning, state, memory, reflection and orchestration
+  - agent security, permissions, guardrails, observability and human escalation
+  - "production economics of agents: quality, latency, cost and operational complexity"
+  - new models, papers and capabilities translated into agent-system decisions
+  - leading human-agent teams and redesigning AI-native work
+  - hiring, evaluating and developing AI-enabled practitioners
 
 avoided_topics:
   - generic AI news with no practitioner angle
@@ -58,6 +79,9 @@ avoided_topics:
   - AGI speculation and doom discourse
   - engagement-bait hot takes with no substance
   - anything requiring claims Sagar cannot personally verify
+  - LLM explainers that offer neither a demonstrated nor clearly labelled proposed agent use case
+  - presenting a future agent use case as though it is already deployed or validated
+  - vendor feature recaps without a transferable architecture, evaluation or leadership lesson
 
 signature_opinions:
   - Most applications that claim to need multi-agent systems do not.
@@ -65,31 +89,30 @@ signature_opinions:
   - Demos are easy. Production is where AI systems actually get judged.
   - Agent memory and agent state are different problems and conflating them causes bugs.
   - Evaluation is the bottleneck in agent development, not model capability.
+  - An agent is a system, not a model call; the surrounding harness often determines whether it works.
+  - Agentic-first means exploring what becomes possible when models can decide and act, including plausible use cases ahead of mainstream adoption, while labelling hypotheses honestly.
+  - AI-native leadership is the discipline of redesigning decisions, roles and accountability around human-agent teams.
 
 # Recurring formats the audience learns to recognise. A new episode of an
 # established series compounds; a one-off does not.
 signature_series:
-  - name: "AI Sagar vs Real Sagar"
+  - name: "Agents, End to End"
     description: >-
-      Same topic, same script, delivered by the avatar and by Sagar. Compare
-      watch time, follow conversion and comments. A recurring public experiment
-      that doubles as proof the avatar pipeline works.
-  - name: "Built it, here are the numbers"
+      The one-stop agent knowledge system. Progress from LLM foundations to
+      production agent architecture, tools, context, state, memory, retrieval,
+      orchestration, protocols, evaluations, security, observability and
+      economics. Every episode should use a concrete demo, trace, paper or
+      recorded result and end with a transferable decision rule.
+  - name: "Become AI-Native: Career & Leadership"
     description: >-
-      A real build with measured results. Latency, cost, eval scores, failure
-      rates. The numbers are the content.
-  - name: "Agent vs Tool vs Workflow"
-    description: >-
-      Recurring decision framework applied to a new system each time. The same
-      three-way distinction, a different real example.
-  - name: "Why agents fail in production"
-    description: >-
-      One specific production failure mode per episode, with the trace or the
-      cost graph that revealed it.
-  - name: "Same prompt, every model"
-    description: >-
-      One fixed prompt suite run across competing models, scored on usable
-      output rather than best output.
+      Practical judgement for practitioners and leaders: how to redesign work,
+      lead human-agent teams, hire and evaluate talent, explain systems, build
+      credible proof of ability and operate responsibly inside an AI-native
+      organisation. Its practitioner-facing recurring playbook is **Your Role,
+      Rebuilt**, using the action-oriented **CRISP** mitigation playbook:
+      Compress commodity work, Reskill into adjacent capabilities, Integrate around an outcome end to end,
+      Safeguard the system and Prove outcomes. Teach one function at a time rather than
+      combining several roles into generic advice.
 
 # Content about the brand itself rather than about AI. Identity content builds
 # the recognisable persona that topical content alone never produces.
@@ -98,6 +121,11 @@ identity_themes:
   - How this content system was built and what it costs to run
   - Public build-in-public results, including the failures
   - Positions taken publicly and later revised with evidence
+  - >-
+    Gym Progression Agent: a personal, build-in-public fitness feedback system
+    that turns a weekly check-in into a constrained next-step proposal. Explain
+    the system and its limits; never frame it as medical, nutrition or training
+    advice.
 
 winning_hook_patterns:
   - contrarian practitioner claim stated as fact
@@ -111,6 +139,446 @@ losing_hook_patterns:
   - "AI is changing everything"
   - question hooks with an obvious answer
   - generic hype adjectives with no specific claim
+
+communication_principles:
+  - >-
+    Be agentic-forward. Proactively interpret LLM concepts, papers, models and
+    new capabilities as possible agent use cases, including ideas ahead of
+    current industry adoption. Always distinguish three evidence states:
+    demonstrated capability, prototype or informed forward-looking hypothesis.
+    Never present a proposed use case as an established deployment or result.
+  - >-
+    Build a cumulative agent curriculum rather than disconnected posts. Each
+    piece should teach one layer deeply, link it to the layers immediately above
+    and below it, and make clear what the viewer can now design, test or decide.
+  - >-
+    Explain technical ideas through a familiar everyday setup before naming the
+    architecture. A food-delivery customer-support bot is a useful example for
+    agents, tools, workflows, memory, state, routing and escalation.
+  - >-
+    Use a simple story first, then reveal the technical term and decision
+    framework. The content must work for both tech enthusiasts and curious
+    non-technical viewers in tier-1 cities.
+  - >-
+    Treat brands such as Zomato and Swiggy as illustrative scenarios only;
+    never imply knowledge of their internal systems without verified sources.
+  - >-
+    Make technical content feel demonstrated, not merely explained: walk through
+    a concrete request, visible system state, specialist responsibilities, tool
+    calls, workflow handoffs and the final user outcome. Prefer a believable
+    architecture trace or screen-style visual over abstract AI terminology.
+
+# Human-approved post-publication learnings. These must influence future drafts,
+# visual plans and QA rather than live as a forgotten note. Confidence can be
+# lowered or a rule retired if later evidence contradicts it.
+content_learning_memory:
+  - category: content
+    rule: >-
+      For a recorded Reel, preserve the creator's approved hook promise and
+      compare alternate takes against its exact words before choosing the
+      opening. Keep the case, answer progression and CTA in their approved
+      order; establish the complete thought before shortening for runtime.
+    confidence: high
+    source: Diwali Reel creator feedback and final-edit retrospective, 2026-11-08
+  - category: visual
+    rule: >-
+      Time every chart, tier, level tag and keyframe to the line that explains
+      it. Reveal a hierarchy progressively, keep its label visible through the
+      explanation, and do not add visual facts absent from the spoken argument.
+    confidence: high
+    source: Diwali Reel creator feedback and final-edit retrospective, 2026-11-08
+  - category: process
+    rule: >-
+      After each Reel generation and final export, compare the actual artifact
+      with its brief and approved hook, record concrete human feedback and
+      before/after evidence, then feed approved or repeated lessons into the
+      next versioned writer, visual and QA prompts. Verify the full rendered
+      video, including captions, audible mix and platform encoding.
+    confidence: high
+    source: explicit creator direction and Diwali Reel retrospective, 2026-11-08
+  - category: brand
+    rule: >-
+      Within Become AI-Native: Career & Leadership, use **Your Role, Rebuilt**
+      as the recurring function-specific playbook. Layoff anxiety and verified
+      workforce changes earn attention, but they are not the durable product.
+      Every functional episode must end with the action-oriented CRISP career
+      mitigation playbook: C = Compress commodity work with AI and reinvest the
+      saved time; R = Reskill into adjacent capabilities required by the new
+      workflow; I = Integrate around a valuable outcome end to end across data, workflow, backend interfaces,
+      deployment and action; S = Safeguard the system with evaluation,
+      monitoring, failure boundaries and escalation; P = Prove outcomes with a
+      portable artefact and measurable result. Adapt every step
+      to the selected function. Never promise to save or future-proof a career;
+      CRISP is a resilience and evidence-building framework, not a guarantee.
+    confidence: high
+    source: explicit creator strategy decision, 2026-10-03
+  - category: content
+    rule: >-
+      Default every Your Role, Rebuilt video to the same first beat: a broad,
+      high-emotion layoff claim or statistic, followed immediately by Sagar's
+      personal or role-specific story. For the current series opener, retain the
+      creator-supplied claim that companies including Microsoft and PayPal are
+      signalling cuts approaching 20% by the end of 2027, but mark it NEEDS
+      VALIDATION in production files until the creator approves the final
+      source. Do not interrupt the transition with additional company examples
+      unless they are essential to the selected role.
+    confidence: high
+    source: explicit creator series direction, 2026-10-03
+  - category: process
+    rule: >-
+      Test functional demand using a controlled Role Rebuilt scan rather than
+      inferring a winning audience from one post. Keep the role-specific CRISP
+      mitigation structure
+      contract, face-led format, duration band and sequel-style close stable;
+      vary the function in this order: Data Science, Product, SDE and Marketing.
+      Treat MLE as a specialist extension of Data Science rather than a separate
+      first-cycle acquisition candidate. Use follows per reach as the primary
+      acquisition metric, with
+      profile visits, shares, saves and watch ratio as diagnostics. Wait until
+      every role has at least seven days of organic data before selecting the
+      top two for deeper mini-seasons.
+    confidence: high
+    source: explicit creator experimentation decision, 2026-10-03
+  - category: brand
+    rule: >-
+      The public brand has two strategic initiatives. The dominant initiative is
+      the one-stop learning system for agents, covering the full agentic stack
+      through demos, videos, traces, papers and recorded results. The second is
+      Become AI-Native: Career & Leadership, focused on career coaching,
+      practitioner judgement, human-agent teams, hiring and leadership.
+      AI-for-real-life builds are proof vehicles inside the agents initiative,
+      not a competing third public promise.
+    confidence: high
+    source: explicit creator strategy decision, 2026-09-30
+  - category: brand
+    rule: >-
+      Proactively interpret LLM fundamentals, emerging models, research and new
+      capabilities through present and future agent use cases. Forward-looking
+      interpretation is encouraged even before industry adoption, but every
+      claim must be labelled as demonstrated evidence, a prototype, or an
+      informed hypothesis so possibility is never mistaken for proof.
+    confidence: high
+    source: explicit creator strategy decision, 2026-09-30
+  - category: brand
+    rule: >-
+      Design the catalogue for implicit future monetisation without weakening
+      the teaching. The intended ecosystem includes an agents course, community,
+      reusable frameworks, workshops and advisory. Current content should build
+      trust, reveal audience demand and create reusable curriculum assets; it
+      must not claim that an offering is available or use a hard sell without
+      explicit creator approval.
+    confidence: high
+    source: explicit creator commercial direction, 2026-09-30
+  - category: content
+    rule: >-
+      Teach first, impress second: every post must leave a concrete, transferable
+      learning payoff such as a framework, decision rule, implementation pattern,
+      comparison, mistake or architecture breakdown.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: visual
+    rule: >-
+      Use the minimum visual complexity needed to explain the idea. One slide
+      normally carries one idea; if it takes more than two or three seconds to
+      decode, simplify it.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: content
+    rule: >-
+      Compress the business setup to one or two lines, then spend the content on
+      system design and implementation thinking.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: technical
+    rule: >-
+      Keep the distinction precise: agents interpret context and decide the next
+      step; tools perform defined actions and return structured results;
+      deterministic execution belongs in a workflow, not a decorative agent.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: technical
+    rule: >-
+      Make orchestration explicit: one orchestrator coordinates specialist
+      reasoning roles, tools sit beneath them, and shared state connects them.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: visual
+    rule: >-
+      Show execution as well as architecture: include at least one purposeful
+      agent → tool call → result → next decision trace whenever the topic is
+      agentic.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: technical
+    rule: >-
+      Show bounded autonomy where relevant: approval thresholds, policy checks,
+      fallback logic, retries and human escalation are stronger than implying AI
+      does everything.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: content
+    rule: >-
+      When a first attempt fails, show the system-level adaptation—changed
+      constraints, search, tool parameters, re-ranking or re-planning—not only
+      the improved final output.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: brand
+    rule: >-
+      Connect design choices to an outcome: faster resolution, lower manual
+      effort, better decisions, higher reliability or better customer experience.
+      Avoid architecture for architecture's sake.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: visual
+    rule: >-
+      Use real human imagery as a trust anchor on covers where appropriate; avoid
+      generic AI avatars, robots, holograms, neon cyberpunk, glowing networks,
+      floating interfaces and fake unreadable SaaS screens.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: visual
+    rule: >-
+      Prioritise large readable type, short labels and strong hierarchy. Remove
+      sidebars and secondary UI from any terminal or screen simulation unless
+      they directly support the lesson.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: visual
+    rule: >-
+      Use a clean Codex-style execution screen only when it makes the execution
+      legible: large agent names, tool calls, results and final outcome, with no
+      ornamental developer-console clutter.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: content
+    rule: >-
+      For technical carousels, progress through hook → problem → principle →
+      architecture → execution → guardrail or failure → adaptation → outcome;
+      do not repeat the same point across slides.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: content
+    rule: >-
+      Make the cover sell the learning outcome with a strong question or promise,
+      a simple subline and at most one subtle technical cue; do not overload slide
+      one with architecture.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: content
+    rule: >-
+      Do not use unsupported metrics. Use qualitative outcomes or clearly label
+      an example as illustrative when impact has not been measured.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: brand
+    rule: >-
+      Prefer confident practitioner language—“Here is how I would design it” and
+      “This step should stay deterministic”—over creator hype or generic praise.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: content
+    rule: >-
+      Keep captions short when the carousel does the teaching; reinforce the
+      thesis instead of repeating every slide.
+    confidence: medium
+    source: human-approved post review, 2026-09-20
+  - category: process
+    rule: >-
+      Record human edits with what changed, why, category, before/after version
+      and a generalized rule. Promote an inferred preference only after repeated
+      evidence or explicit human approval.
+    confidence: high
+    source: human-approved post review, 2026-09-20
+  - category: visual
+    rule: >-
+      When the creator is generating carousel slides directly on a phone, write
+      complete publish-ready image prompts: include final on-slide copy, visual
+      hierarchy and production constraints in the prompt itself. Do not hand off
+      generated backgrounds, empty placeholders or a Canva/Figma finishing step
+      unless explicitly requested. Never fill missing personal metrics with
+      invented numbers.
+    confidence: high
+    source: explicit creator workflow correction, 2026-09-21
+  - category: content
+    rule: >-
+      For Reels, validate the story before visual assets are planned: establish
+      a specific viewer question early, make every scene add new information,
+      show a reveal or proof early, and reject repeated explanations. Keep
+      implications after the mechanism is understood.
+    confidence: high
+    source: creator feedback, 2026-09-25
+  - category: content
+    rule: >-
+      For a comparison Reel, lead with a matched real-world use case and the
+      visible evidence or result. Explain the orthogonal roles, architecture or
+      implications only after the audience has seen what was actually tested;
+      use later content to deepen that explanation. Do not frame systems with
+      different native roles as interchangeable (for example, a decision model
+      is not a chatbot). Include only the minimal native-role clarification
+      needed to define a fair comparison; keep the combined-system
+      implementation for the follow-up. If no result exists, call it a test
+      setup and never imply a winner.
+    confidence: high
+    source: explicit creator correction, 2026-09-26
+  - category: process
+    rule: >-
+      For every new content idea, agree the high-level story flow before
+      creating a time split, visual/B-roll asset plan, demo build plan or
+      generation prompts. The required order is: approved story flow → timed
+      breakdown → proof-asset plan → working-demo/code plan → validation
+      harness. Do not let visual production substitute for an unresolved story.
+    confidence: high
+    source: explicit creator workflow decision, 2026-09-26
+  - category: content
+    rule: >-
+      Every content piece must surface an earned implication, not only facts.
+      Connect the demonstrated fact to the decision it changes and then to a
+      practical consequence for a person, workflow, system, cost, risk or
+      architecture. Do not use broad future-of-AI language as a substitute for
+      this link, and do not state an implication before the evidence earns it.
+    confidence: high
+    source: explicit creator direction, 2026-09-26
+  - category: content
+    rule: >-
+      For a model, tool or system comparison, begin with the human or product
+      decision at stake—not architecture labels. Before drafting, define the
+      fair comparison contract: identical inputs, allowed outputs, success
+      criteria, safety boundaries, model versions and run count. Establish
+      quality and safety before discussing latency or cost. Do not force a
+      winner: explain the distinct operating role each system earns from the
+      evidence. End on an earned implication; raise a next question only when
+      the evidence genuinely leaves one unresolved.
+    confidence: high
+    source: explicit creator-approved reasoning lessons, 2026-09-26
+  - category: process
+    rule: >-
+      Generated Reel assets must be handed off as complete ChatGPT-UI-ready
+      briefs with real source material where available, exact composition,
+      visible proof, motion and duration for video, final copy when required,
+      and explicit exclusions. Do not treat a vague b-roll request as an asset
+      prompt.
+    confidence: high
+    source: creator feedback, 2026-09-25
+  - category: visual
+    rule: >-
+      Default Reels to the creator on camera for the narrative and still,
+      experiment-derived visuals for the proof; do not add generated video or
+      generic b-roll merely for motion. Every newly generated image must have
+      a complete GPT-2.5 prompt, and every newly generated video must have a
+      complete H3 prompt. Real experiment captures remain preferred evidence.
+    confidence: high
+    source: explicit creator direction, 2026-09-26
+  - category: content
+    rule: >-
+      Each post or Reel must teach exactly one primary transferable concept.
+      Examples, demos, personal stories and visuals are explanatory vehicles
+      for that concept, not additional lessons. Move adjacent agent concepts
+      into clearly linked follow-up posts so the catalogue compounds as a
+      series without overloading any individual piece.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: content
+    rule: >-
+      Operate one canonical Agent Series roadmap containing durable foundations,
+      production concepts and frontier topics. Every post must map to exactly
+      one roadmap topic; weekly themes such as the Gym Assistant change only the
+      teaching environment. New papers, models and tools enter through the
+      roadmap concept and the system decision they change, never as disconnected
+      feature news.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: content
+    rule: >-
+      Prioritise consequential new agent developments ahead of older topics in
+      the active publishing queue, then use the required older foundation and
+      production implication as linked follow-up episodes. Refresh this frontier
+      queue weekly from primary sources. Recency alone is insufficient: every
+      item must change a transferable agent-system decision and map to one
+      canonical roadmap topic.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: content
+    rule: >-
+      Lead Agent Series pieces with the demonstrated personal or system outcome,
+      then reveal the agent concept and mechanism that produced the decision
+      process. For the current recurring demonstration format, anchor stories
+      to the Biceps Progression Agent: how the creator built a repeatable weekly
+      system around his own biceps training. Never imply that AI directly caused
+      physiological change or use a weekly-progress claim without supporting
+      logs or measurements.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: technical
+    rule: >-
+      Make every Agent Series carousel or Reel technically useful for interview
+      preparation while retaining one primary concept. Show the relevant system
+      boundary, data or state contract, structured decision, execution boundary,
+      failure or stop condition, and the precise engineering definition a
+      candidate could reuse in a system-design answer. Do not trade correctness
+      or depth for generic reach language.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: visual
+    rule: >-
+      For the Biceps Progression Agent carousel format, use truthful
+      chronological personal imagery across five educational slides: a
+      before/current comparison on the cover, older images during system setup
+      and early-stage explanation, and newer images when showing the closed loop
+      and outcome. Use a sixth dedicated contact slide when needed. Keep one
+      image-led composition per teaching slide and never generate or reorder a
+      physique to exaggerate progress.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: process
+    rule: >-
+      Begin every future Agent Series Reel or carousel by defining one concrete,
+      checkable viewer learning payoff: what the viewer will be able to identify,
+      explain, decide or design afterwards. State this before selecting the hook,
+      story flow, technical depth or visuals, and make the opening promise that
+      payoff clearly. Personal outcomes earn attention, but the viewer's usable
+      learning is the product.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: visual
+    rule: >-
+      Default the Biceps Progression Agent series to a light editorial visual
+      system: warm off-white or pale stone, charcoal type, restrained blue
+      system lines and one muted lime decision highlight. Avoid dark dashboards,
+      neon, gradients and glossy fitness-ad styling. The dedicated final CTA may
+      use a clean light card with generous whitespace and the website URL.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: technical
+    rule: >-
+      Build the Agent Series into a one-stop agent interview-preparation system.
+      Every piece must name the realistic interview question, teach a concise
+      reusable answer structure, show one applied trace or architecture example,
+      and expose the specific shallow mistake or missing trade-off that weak
+      candidates make. Keep all four elements focused on the same single roadmap
+      concept; teach reasoning and design judgement rather than memorised scripts.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: technical
+    rule: >-
+      Never leave interview terminology as abstract labels. Whenever a piece
+      names a goal, observation, state, policy, action, tool, workflow,
+      environment, transition, guardrail or stop condition, show its exact value
+      or responsibility in the demonstrated system on the same slide or scene.
+      Preserve the distinction between a general definition and the concrete
+      implementation, and flag any missing real field rather than inventing it.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
+  - category: technical
+    rule: >-
+      Agent traces must use credible domain actions and evidence-linked
+      rationales. Show observed evidence → bounded route → domain recommendation
+      → reason code/evidence reference → applied change → next observation.
+      Distinguish the agent's route from the domain payload and the deterministic
+      workflow that applies it. Never substitute generic actions, invented
+      domain advice or private chain-of-thought for an auditable trace.
+    confidence: high
+    source: explicit creator direction, 2026-09-30
 
 winning_formats: []
 historical_insights: []

@@ -1,0 +1,13 @@
+When someone says “agent” in an interview, I listen for two things: what can it change, and what comes back after that change.
+
+Most answers explain the prompt and the plan—then stop before execution.
+
+In my personal biceps-progression prototype, the system has bounded choices: PROGRESS, HOLD, ASK_FOR_DATA or ESCALATE. Recommendations must be linked to visible evidence, execution stays deterministic, and the next weekly check-in becomes the next observation.
+
+That is the distinction: a prompt produces an output. An agent loop acts, observes the outcome and decides again.
+
+Personal build-in-public prototype—not fitness or medical advice.
+
+Want to share your learnings or need help building agents? Reach out at sagar-agents.saggy-2010.chatgpt.site
+
+#AIAgents #AgenticAI #SystemDesign

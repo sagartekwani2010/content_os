@@ -1,0 +1,14 @@
+{
+  "package_id": "fnd-02-agent-loop-biceps-carousel",
+  "brief_id": "fnd-02-agent-loop-biceps-carousel",
+  "status": "REVISE_WITH_REAL_EVIDENCE",
+  "content_format": "carousel",
+  "slide_count": 6,
+  "roadmap_topic_id": "FND-02",
+  "teaching_environment": "Biceps Progression Agent",
+  "evidence_state": "prototype",
+  "primary_artifact": "PACKAGE.md",
+  "asset_prompts": "ASSET_PROMPTS.md",
+  "caption": "caption.txt",
+  "asset_manifest": "asset-manifest.json"
+}

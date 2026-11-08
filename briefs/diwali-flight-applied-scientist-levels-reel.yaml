@@ -1,0 +1,63 @@
+brief_id: diwali-flight-applied-scientist-levels-reel
+topic: "Three Applied Scientist answers to a Diwali flight rebooking agent question"
+core_thesis: >
+  All three Applied Scientist answers must deliver a confirmed ticket within
+  the customer's constraints. Their agent-design judgment grows from a bounded
+  tool-use loop, to a reusable rebooking skill that preserves state and reduces
+  avoidable tool latency, to an autonomy policy that spends calls and human
+  attention only when the expected decision benefit justifies the delay.
+  The answers are illustrative scopes, not Amazon's official interview rubric.
+why_this_matters: >
+  Agent design interviews often reward judgment about state, tool boundaries,
+  action safety and evaluation more than a list of frameworks.
+learning_objective: >
+  Viewers can distinguish tools, a skill, state, autonomy, and latency through
+  three hireable answers to the same agent-design question.
+audience_takeaway: >
+  An agent should not report success because it found a seat or started a
+  booking; success requires a confirmed ticket within the customer's limit.
+target_audience:
+  - Applied scientists
+  - AI engineers
+  - Software developers preparing for agent design interviews
+brand_pillar: ai_career
+content_format: reel
+hook_direction: >
+  Open with the creator-supplied Amazon L5, L6 and L7 compensation figures,
+  then ask how the same agent design answer changes in scope.
+approved_hook_points:
+  - "The same agent design question can reveal three different scopes of judgment."
+  - "A found seat is not a booked ticket."
+  - "The agent must stay within the customer's extra-spend limit as inventory changes."
+high_level_sections:
+  - "Diwali flight cancellation and ₹10,000 original fare with ₹5,000 extra-spend limit"
+  - "all three answers produce a confirmed on-time ticket within the spending limit"
+  - "L5 Applied Scientist answer: bounded agent loop with the required booking tools, exact-fare consent and confirmed-ticket stop condition"
+  - "L6 Applied Scientist answer: reusable rebooking skill, preserved state, independent calls in parallel and local recovery from a stale quote"
+  - "L7 Applied Scientist answer: call and latency budget, autonomy and handoff policy, mandatory safety calls and outcome evaluation"
+  - "transferable progression from tool loop to reusable skill to budgeted autonomy"
+core_examples:
+  - "Illustrative free rebooking arrives after Diwali."
+  - "Illustrative on-time replacement is within the ₹5,000 extra-spend limit and is confirmed in all three answers."
+  - "Expired quotes and uncertain bookings are evaluation cases, not failures of the three candidates in the main scenario."
+desired_duration_seconds: 60
+visual_direction: >
+  Face-led vertical Reel with large salary labels, a compact tool trace,
+  a skill card and a fast-path versus handoff decision. Show the same green
+  confirmed-ticket outcome after each level. No fake airline UI or branded logos.
+factual_claims_to_verify:
+  - "Creator-supplied Amazon Applied Scientist annual compensation estimates: L5 approximately ₹90 lakh, L6 approximately ₹1.5 crore, L7 approximately ₹2.5 crore. Verify geography, period, total-compensation definition, source and sample size before publication."
+  - "Do not imply this hypothetical question or three answer scripts are Amazon's official interview process or leveling rubric."
+must_include:
+  - "L5 is a competent, hireable answer."
+  - "All three levels confirm the same on-time ticket within the ₹5,000 extra-spend limit."
+  - "L6's skill is a reusable procedure for using tools, not an external action tool or a magic latency improvement."
+  - "The booking action enforces the ₹5,000 extra-spend cap and exact customer consent at every level."
+  - "L7 distinguishes mandatory calls from optional calls and defines when automation should hand off."
+  - "Success requires a confirmed ticket or an explicit handoff."
+must_avoid:
+  - "Claiming salary differences are caused by these answers."
+  - "Presenting an illustrative scenario as a documented Amazon interview question."
+  - "Making L5 or L6 fail the booking to make the level comparison dramatic."
+  - "Treating a pending booking as a confirmed ticket."
+status: DRAFT

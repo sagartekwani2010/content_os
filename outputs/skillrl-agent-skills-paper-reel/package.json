@@ -1,0 +1,11 @@
+{
+  "content_id": "skillrl-agent-skills-paper-reel",
+  "format": "reel",
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "brief": "../../briefs/skillrl-agent-skills-paper-reel.yaml",
+  "package": "PACKAGE.md",
+  "caption": "caption.txt",
+  "asset_manifest": "asset-manifest.json",
+  "asset_prompts": "ASSET_PROMPTS.md",
+  "assets_directory": "assets"
+}

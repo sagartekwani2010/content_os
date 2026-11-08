@@ -1,0 +1,84 @@
+brief_id: jev-gpt-hybrid-gym
+topic: "Why I combined Jev and GPT-5.6 Sol inside my Gym Assistant"
+
+core_thesis: >
+  A hybrid Gym Assistant is not two models making the same decision. GPT-5.6
+  Sol handles an ambiguous human check-in; Jev receives the complete structured
+  state—including risk signals—and makes the bounded route decision; the
+  workflow enforces non-bypassable boundaries and renders the locked result.
+  In the controlled two-step path, replacing the second GPT decision call with
+  Jev projects 36% lower model latency and 49% lower model cost—not Jev's
+  73%/99% component result. The hybrid earns its complexity only if live logs
+  preserve valid-safe outcomes and the projected improvement survives end to end.
+
+why_this_matters: >
+  People often bolt models together because one benchmark is faster or cheaper.
+  A viewer should leave knowing that a model's native role, the workflow and a
+  fair end-to-end measurement matter more than a leaderboard number. The model
+  savings do not multiply across a whole system when GPT remains on the path.
+
+learning_objective: >
+  Explain a real hybrid architecture in plain English: language understanding,
+  a risk-aware constrained decision, deterministic boundary enforcement and a
+  locked user response are different jobs. Explain why the full hybrid saving
+  is smaller than Jev's component saving.
+
+audience_takeaway: >
+  GPT belongs with ambiguity; a specialist model belongs with a repeated,
+  measurable decision; deterministic policy belongs with non-negotiables. Use
+  a hybrid only when measured end-to-end savings survive the complete workflow.
+
+target_audience:
+  - AI-curious professionals
+  - Software developers and AI builders
+  - People interested in practical personal AI systems
+
+brand_pillar: ai_builder
+content_format: reel
+
+hook_direction: >
+  Continue directly from the previous Jev-versus-GPT Reel: "Jev was faster in
+  the clean decision test. So why didn't I replace GPT?" Resolve it immediately:
+  Jev cannot chat, while real users supply ambiguous, messy input.
+
+high_level_sections:
+  - continuity hook and a concrete messy weekly Gym check-in
+  - GPT's bounded role: interpret conversational input into a structured state
+  - the workflow's role: validate required fields and enforce hard boundaries
+  - Jev's bounded role: judge the complete structured state and choose one permitted route, including escalation
+  - controlled GPT-only versus hybrid comparison, including the two complete model-call paths
+  - why Jev's 73%/99% component improvement becomes a projected 36%/49% architecture improvement
+  - broader operating rule for agent creation and the live end-to-end evaluation contract
+
+core_examples:
+  - "Messy check-in: 'I slept badly, skipped a session, should I progress?'"
+  - "Missing or conflicting inputs: ask for data rather than guess."
+  - "Pain or injury signal: Jev selects escalate; policy prevents any automated progression and flags human review."
+  - "Clean, low-risk state: Jev selects progress, hold, or ask_for_data from a closed set."
+
+must_include:
+  - "Jev cannot chat; it is not being used as a conversational replacement for GPT."
+  - "Jev receives risk signals and can select escalate; the workflow validates the structured state and prevents a boundary violation from being actioned."
+  - "The workflow renders the constrained route; it does not use a second GPT call to overwrite it."
+  - "The earlier 73% lower decision-slot latency and 99% lower decision-slot cost are not presented as full-hybrid results; the controlled path projects 36% and 49%, respectively."
+  - "The fair next test is GPT-only versus hybrid on the same saved check-ins."
+  - "Quality and boundary safety are measured before end-to-end latency and cost."
+
+must_avoid:
+  - "Claiming the hybrid is faster, cheaper, safer or better without recorded end-to-end logs."
+  - "Presenting Jev and GPT as interchangeable chatbots."
+  - "Giving medical, nutrition, training or recovery advice."
+  - "Fake dashboards, synthetic benchmark traces, or a generic follow-for-more close."
+
+desired_duration_seconds: 50
+preferred_pov: >
+  Builder-led, clear enough for a non-technical viewer, but rigorous enough for
+  someone deciding whether an architecture is real or just AI jargon.
+
+cta_direction: >
+  Close on the operating rule, not a promise: if the hybrid cannot preserve the
+  same valid-safe decision quality while earning its full end-to-end cost and
+  latency, it will not ship.
+
+status: APPROVED
+approved_by: Sagar

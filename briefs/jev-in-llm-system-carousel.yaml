@@ -1,0 +1,60 @@
+brief_id: jev-in-llm-system-carousel
+topic: "Where Jev actually belongs in an LLM system"
+
+core_thesis: >
+  Jev is not a ChatGPT replacement. It earns a role where an application needs
+  a fast, bounded and testable decision that code can act on: route, score,
+  filter, review or escalate. It should not be used for generating a user-facing
+  answer, an open-ended task, or a job a single model already performs well.
+
+why_this_matters: >
+  The early Jev conversation is dominated by dramatic speed and price claims.
+  The useful architecture question is not "where is Jev cheaper?" but "which
+  decision should stop paying for generation?"
+
+learning_objective: >
+  Give a practical map of five decision slots where Jev can sit around an LLM,
+  plus clear boundaries for when it should not be added.
+
+audience_takeaway: >
+  Ask one question before choosing a model: does the product need a paragraph,
+  or a bounded answer that software can branch on? Use the decision model only
+  in the second case, and measure the full system.
+
+target_audience:
+  - AI-curious product and business leaders
+  - AI engineers and developers
+  - people following the Jev versus GPT series
+
+brand_pillar: ai_builder
+content_format: carousel
+
+hook_direction: >
+  "Jev is not your ChatGPT replacement. It is the decision layer around it."
+  Avoid repeating large performance claims as though they apply to every job.
+
+high_level_sections:
+  - the plain-English test: paragraph versus bounded decision
+  - five application slots: model routing, triage/handoff, tool gating, RAG filtering, agent evaluation
+  - one concrete Gym Assistant architecture as a worked example
+  - explicit situations where Jev should not be added
+  - an operating rule: only add the extra component if it earns its complexity
+
+must_include:
+  - "Jev does not generate the user-facing response in these examples; a generative model or template does."
+  - "Low confidence or high stakes route to a safer model or a human."
+  - "A decision model is not a safety/compliance certification; application policy remains in code."
+  - "Any 200×/400× claim is labelled as a vendor claim for selected structured-decision workloads, not a general result."
+
+must_avoid:
+  - "An exhaustive-use-cases claim."
+  - "Presenting Jev as a chatbot, writer, or universal agent replacement."
+  - "Implying that health, security, legal, financial or high-stakes decisions can be automated without policy and human oversight."
+  - "Fake benchmark or customer results."
+
+references:
+  - "https://jev.pro/usecases/model-routing/"
+  - "https://generativeai.pub/new-jev-model-is-insane-200x-faster-400x-cheaper-than-frontier-models-4c595a3abe55"
+
+status: CONCEPT_LOCKED
+approved_by: Sagar

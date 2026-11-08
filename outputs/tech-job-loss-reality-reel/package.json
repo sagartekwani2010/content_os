@@ -1,0 +1,11 @@
+{
+  "content_id": "tech-job-loss-reality-reel",
+  "format": "reel",
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "brief": "../../briefs/tech-job-loss-reality-reel.yaml",
+  "package": "PACKAGE.md",
+  "caption": "caption.txt",
+  "asset_manifest": "asset-manifest.json",
+  "asset_prompts": "ASSET_PROMPTS.md",
+  "assets_directory": "assets"
+}

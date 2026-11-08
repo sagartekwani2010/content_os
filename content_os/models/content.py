@@ -72,6 +72,44 @@ class Scene(BaseModel):
     on_screen_text: str
     production_mode: str
 
+    # Story contracts make every scene earn its time. Empty defaults preserve
+    # compatibility with older stored packages while new writers must fill them.
+    viewer_question: str = ""
+    new_information: str = ""
+    belief_shift: str = ""
+    visual_proof: str = ""
+    cut_rationale: str = ""
+
+
+class AssetBrief(BaseModel):
+    """One production-ready media asset belonging to a content package.
+
+    Image and video quality varies substantially by surface. This deliberately
+    captures the complete creative direction needed to regenerate an asset in
+    the creator's preferred ChatGPT UI, plus the canonical filename it should
+    have in the exported package.
+    """
+
+    scene_index: int
+    content_unit: Literal["scene", "slide", "cover", "caption_card"] = "scene"
+    asset_id: str = ""
+    source_type: Literal[
+        "real_capture", "screen_recording", "reference_edit", "generated_image",
+        "generated_video", "not_needed",
+    ]
+    rendering_tool: Literal["gpt_2_5", "h3", "not_applicable"] = "not_applicable"
+    source_materials: list[str] = Field(default_factory=list)
+    purpose: str
+    prompt: str = ""
+    composition: str = ""
+    motion_beats: list[str] = Field(default_factory=list)
+    duration_seconds: float | None = None
+    on_screen_copy: list[str] = Field(default_factory=list)
+    negative_constraints: list[str] = Field(default_factory=list)
+    output_filename: str = ""
+    asset_path: str | None = None
+    alt_text: str = ""
+
 
 class ReelPackage(BaseModel):
     brief_id: str
@@ -97,6 +135,8 @@ class ReelPackage(BaseModel):
     avatar_requirements: list[str]
     on_screen_text: list[str]
     visual_hook: str
+    asset_briefs: list[AssetBrief] = Field(default_factory=list)
+    thumbnail_asset: AssetBrief | None = None
 
     caption: str
     cta: str | None
@@ -132,6 +172,8 @@ class CarouselPackage(BaseModel):
     share_reason: str
 
     visual_structure: list[str]
+    asset_briefs: list[AssetBrief] = Field(default_factory=list)
+    thumbnail_asset: AssetBrief | None = None
 
     caption: str
     cta: str | None
@@ -191,6 +233,28 @@ class QAVerdict(BaseModel):
     sections_missing: list[str]
     thesis_drift: bool
     thesis_drift_explanation: str | None
+
+
+class StorySceneAssessment(BaseModel):
+    scene_index: int
+    advances_story: bool
+    repeated_scene_indices: list[int] = Field(default_factory=list)
+    issue: str | None = None
+
+
+class StoryVerdict(BaseModel):
+    """Cross-model narrative review before visual asset generation."""
+
+    verdict: Literal["PASS", "REWRITE", "BLOCK"]
+    narrative_spine: str
+    viewer_question_by_second_five: str | None
+    story_turn_scene_index: int | None
+    reveal_or_proof_by_second_fifteen: str | None
+    scene_assessments: list[StorySceneAssessment]
+    repeated_claims: list[str] = Field(default_factory=list)
+    issues: list[str] = Field(default_factory=list)
+    required_changes: list[str] = Field(default_factory=list)
+    rationale: str
 
 
 class QAResult(BaseModel):

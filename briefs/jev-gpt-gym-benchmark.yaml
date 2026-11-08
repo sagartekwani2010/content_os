@@ -1,0 +1,101 @@
+brief_id: jev-gpt-gym-benchmark
+topic: "Jev vs GPT inside my Gym Assistant: same inputs, recorded decision results"
+
+core_thesis: >
+  A useful Jev-versus-GPT comparison puts both models in the same bounded Gym
+  Assistant decision slot, shows the recorded result first, then explains why
+  the selected cases test deciding, abstaining and escalating. It does not
+  frame Jev as a chatbot or declare either model universally better.
+
+why_this_matters: >
+  Most model comparisons are chat screenshots. This comparison has to make the
+  scope visible: both models receive the same state, constraints and permitted
+  actions in the Gym Assistant decision loop.
+
+learning_objective: >
+  Viewer understands how to compare two models fairly in one narrow agent slot
+  and why complete, conflicting and boundary cases are required test inputs.
+
+audience_takeaway: >
+  Show me the same inputs and the recorded decision traces before telling me
+  what the model comparison means.
+
+target_audience:
+  - AI engineers
+  - Software developers
+  - AI-curious technology audience
+
+brand_pillar: ai_builder
+content_format: reel
+
+hook_direction: >
+  Start with: "I gave Jev and ChatGPT the exact same Gym Assistant inputs. Here
+  is what happened." Reveal the recorded result early, then clarify that Jev
+  cannot chat and that this is a deliberately narrow decision-slot comparison.
+
+approved_hook_points:
+  - "Same inputs. Recorded decision traces."
+  - "Jev cannot chat, so this is not a chatbot battle."
+  - "The cases test whether the system can decide, abstain or stop."
+
+high_level_sections:
+  - same normalised Gym Assistant input and decision contract
+  - recorded result before test-case explanation
+  - why complete, conflicting and boundary cases were selected
+  - the narrow comparison scope and Jev's non-chat role
+  - "earned implication: GPT for messy conversation; Jev only for the bounded decision if evidence supports it"
+
+core_examples:
+  - "Incomplete or inconsistent check-in -> ask for data."
+  - "Recovery or adherence concern -> hold; do not imply medical advice."
+  - "Pain or injury signal -> escalate; no training adjustment."
+  - "Complete low-risk check-in -> constrained next-step proposal."
+
+preferred_pov: >
+  A model benchmark is useful only if it tests the decision loop a person would
+  actually trust.
+
+desired_tone: "Builder-led, precise, plain English, evidence-first, non-hype."
+
+visual_direction: >
+  Hybrid Reel. Use Sagar on camera only for the hook, scope clarification and
+  close. The body uses real benchmark-runner captures, versioned saved inputs
+  and code-rendered result cards generated from logs. Show a side-by-side
+  decision table with identical input and allowed outputs: progress, hold,
+  ask_for_data, escalate. Do not show fake dashboards. No result or winner is
+  permitted until identical Jev and GPT runs have been recorded.
+
+desired_duration_seconds: 36
+
+references:
+  - "https://jev.pro/explainers/rlcd/"
+
+factual_claims_to_verify:
+  - "Any claim about Jev's public API or decision contract."
+
+must_include:
+  - "Both models receive identical state, allowed decisions, and hard rules."
+  - "A recorded result before the explanation of why cases were selected."
+  - "Why complete, conflicting and boundary states test different agent behaviours."
+  - "A human/escalation boundary for pain or injury signals."
+  - "Jev cannot chat; this is a decision-slot comparison, not a chatbot comparison."
+
+must_avoid:
+  - "Medical, nutrition, or training advice."
+  - "Claiming a winner, accuracy rate, cost, latency, or safety result before the real run."
+  - "Repeating a Jev-versus-ChatGPT slogan across scenes."
+  - "Fake UI, fake code, fake dashboards, or fake benchmark results."
+
+cta_direction: >
+  State the evidence-linked operating implication. A follow-up hybrid test may
+  be mentioned only if the result leaves that comparison genuinely unresolved;
+  do not force a sequel hook.
+
+urgency: this_week
+priority: 1
+status: APPROVED
+approved_by: Sagar
+notes: >
+  This is a results Reel only after both models have been run on the same saved
+  cases. Do not write or imply a result until logs exist. The follow-up covers
+  the combined GPT-plus-Jev architecture.

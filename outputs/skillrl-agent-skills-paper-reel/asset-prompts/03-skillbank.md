@@ -1,0 +1,3 @@
+# Scene 3 — SkillBank retrieval
+
+> Create a finished 1080 × 1920 vertical architecture still. Reserve the lower 35% for Sagar. Render exactly: `SKILLBANK`; `GENERAL SKILLS`; `TASK-SPECIFIC SKILLS`; `RETRIEVE TOP-K`; `CURRENT TASK`; `name`; `principle`; `when_to_apply`. Show a two-tier library on the left, a current-task card on the right and only two relevant task-specific skill cards moving through a blue `RETRIEVE TOP-K` gate. General skills remain connected as a foundation. Highlight the retrieved cards in muted lime. The visual must communicate selective retrieval, not dumping the whole library into context.

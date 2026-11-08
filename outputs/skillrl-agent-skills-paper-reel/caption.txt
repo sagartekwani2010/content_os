@@ -1,0 +1,21 @@
+An AI agent can complete a task perfectly—and still learn nothing from it.
+
+A completed trajectory only tells us what happened: the query, actions, results and final answer. Saving that trajectory as a log does not automatically improve the agent’s next decision.
+
+SkillRL explores a more useful direction: study successful and failed trajectories, distil them into reusable skills, retrieve the relevant skill for a future task, and refine the SkillBank when validation exposes a gap.
+
+The design implication for the agents we build next is important: execution and learning should be separate layers.
+
+The learning layer must:
+
+1. Evaluate the experience
+2. Extract a reusable skill
+3. Control how that skill changes future behaviour
+
+Otherwise, the system is accumulating history—not learning from it.
+
+The paper’s benchmark results are author-reported and have not been independently reproduced by me.
+
+Building agents or thinking through architectures like this? Reach out through the link in my bio.
+
+#AIAgents #AgenticAI #AIEngineering #ReinforcementLearning

@@ -1,0 +1,147 @@
+{
+  "fixture_version": "jev-decision-slots-v1",
+  "model": "jev-1.13.0",
+  "cases": [
+    {
+      "id": "model-routing",
+      "title": "Route a request to the right capability",
+      "why": "The application needs a known execution path, not a generated answer.",
+      "state": {
+        "user_message": "My invoice was charged twice. Please fix it today.",
+        "available_paths": ["fast_text", "reasoning", "human_support"],
+        "constraints": ["Do not issue refunds automatically", "Billing disputes need an audit trail"]
+      },
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Choose the safest capable path for this request.",
+          "criteria": {
+            "fast_text": "Simple information request with no account or money action.",
+            "reasoning": "Needs non-trivial analysis but can be handled without a person.",
+            "human_support": "Billing, account, or policy-sensitive request needing a human queue."
+          }
+        },
+        "needs_human_review": {
+          "type": "noul",
+          "instructions": "Does this request require a human support review before an action is taken?"
+        }
+      }
+    },
+    {
+      "id": "triage",
+      "title": "Triage a support issue and decide handoff",
+      "why": "Support operations need a queue, priority and review route—not a paragraph first.",
+      "state": {
+        "ticket": "The app charged me twice, I have emailed three times, and my subscription still says unpaid.",
+        "customer_tier": "paid",
+        "open_ticket_count": 2
+      },
+      "questions": {
+        "queue": {
+          "type": "choice",
+          "instructions": "Choose the support queue that should own this ticket.",
+          "criteria": {
+            "billing": "Charges, refunds, invoices, subscriptions, payment failures.",
+            "technical": "Product malfunction, error, or feature failure without payment issue.",
+            "account": "Login, access, identity, or profile issue."
+          }
+        },
+        "urgency": {
+          "type": "score",
+          "instructions": "Rate operational urgency for the support queue.",
+          "criteria": [
+            "Routine: no time-sensitive impact.",
+            "Soon: should receive a normal priority response.",
+            "High: customer is blocked or repeated attempts have failed.",
+            "Critical: material customer harm or widespread urgent impact."
+          ]
+        },
+        "human_review": {
+          "type": "noul",
+          "instructions": "Should a person review this ticket before any account or payment action?"
+        }
+      }
+    },
+    {
+      "id": "rag-filter",
+      "title": "Filter retrieval before the LLM writes",
+      "why": "The decision is whether supplied evidence is worth passing to the writer.",
+      "state": {
+        "question": "Can a customer change their billing date?",
+        "retrieved_passage": "Customers may change their billing date once per subscription cycle from Settings > Billing. The change applies to the next renewal and does not change a pending invoice.",
+        "source_type": "billing-help-centre"
+      },
+      "questions": {
+        "relevance": {
+          "type": "score",
+          "instructions": "Rate how directly this passage answers the customer question.",
+          "criteria": [
+            "Unrelated.",
+            "Tangential: same topic but does not answer the question.",
+            "Useful: answers part of the question.",
+            "Direct: answers the question and names important limits."
+          ]
+        },
+        "supports_answer": {
+          "type": "noul",
+          "instructions": "Does the supplied passage support an answer about whether and how the billing date can be changed?"
+        }
+      }
+    },
+    {
+      "id": "tool-gate",
+      "title": "Gate an agent tool call before it acts",
+      "why": "An agent needs an allow, review or block route before an irreversible action.",
+      "state": {
+        "proposed_action": "Issue a refund of $450 to the customer card on file.",
+        "customer_request": "I was charged twice. Please refund the duplicate charge.",
+        "evidence": "One duplicate payment is visible in the transaction record.",
+        "policy": "Refunds above $100 require human approval."
+      },
+      "questions": {
+        "action_route": {
+          "type": "choice",
+          "instructions": "Choose the operational route for the proposed action.",
+          "criteria": {
+            "allow": "The supplied policy and evidence permit automatic execution.",
+            "review": "The action may be appropriate but a human must approve it first.",
+            "block": "The action lacks required evidence or violates the supplied policy."
+          }
+        },
+        "evidence_sufficient": {
+          "type": "noul",
+          "instructions": "Is the supplied evidence sufficient to support the proposed refund under the given policy?"
+        }
+      }
+    },
+    {
+      "id": "agent-eval",
+      "title": "Evaluate an agent run against a closed rubric",
+      "why": "A production agent needs a pass, fail or review decision—not a flattering explanation.",
+      "state": {
+        "task": "Respond to a customer asking to change their billing date.",
+        "required_behavior": [
+          "State that the billing date can be changed once per subscription cycle.",
+          "State that the change applies to the next renewal.",
+          "Do not promise a pending invoice will change."
+        ],
+        "agent_output": "You can update your billing date in Settings > Billing. The new date will apply to your next renewal; it will not change an invoice that is already pending."
+      },
+      "questions": {
+        "run_verdict": {
+          "type": "choice",
+          "instructions": "Judge the agent output against every required behavior.",
+          "criteria": {
+            "pass": "Every required behavior is satisfied and no disallowed promise is made.",
+            "fail": "One or more required behaviors are missing or a disallowed promise is made.",
+            "review": "The output is ambiguous enough that a human must decide."
+          }
+        },
+        "needs_human_review": {
+          "type": "noul",
+          "instructions": "Does the output require human review before it is used?"
+        }
+      }
+    }
+  ]
+}

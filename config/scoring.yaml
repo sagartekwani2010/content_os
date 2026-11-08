@@ -51,16 +51,14 @@ trend_decay:
 # Weekly portfolio targets by pillar. Directional, not rigid.
 portfolio:
   targets:
-    ai_builder: 0.30
-    ai_pov: 0.25
-    ai_experiments: 0.20
-    ai_real_life: 0.15
-    ai_future: 0.10
+    ai_builder: 0.50
+    ai_real_life: 0.20
+    ai_career: 0.30
   # How far a plan may drift from target before the strategist is told to rebalance.
   tolerance: 0.15
   # Guardrails the strategist must respect.
   max_per_pillar: 3
-  min_distinct_pillars: 3
+  min_distinct_pillars: 2
   max_same_format_streak: 3
 
 # Performance score. Deliberately not locked in. Recomputed from raw snapshots,

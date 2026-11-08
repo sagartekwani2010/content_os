@@ -1,0 +1,9 @@
+The difficult tech hiring market is real. The explanation is more complicated than “AI replaced everyone.”
+
+Current hiring weakness, AI causality and long-term occupational demand are three different questions. The evidence suggests tighter entry paths and a changing skills contract—not a credible promise that every role is safe or a credible claim that every role is disappearing.
+
+My preparation rule for SDE, data and product roles is the same: build proof that you can frame the problem, use AI deliberately, validate the work, diagnose failure and own the outcome.
+
+Sources used: LinkedIn Economic Graph 2026, World Economic Forum Future of Jobs 2025 and U.S. BLS 2024–34 projections. Geographies and time horizons differ.
+
+#AINative #TechCareers #FutureOfWork

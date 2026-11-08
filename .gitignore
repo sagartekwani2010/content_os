@@ -3,6 +3,9 @@ __pycache__/
 *.pyc
 .env
 *.db
+*.db-wal
+*.db-shm
 *.sqlite3
 .pytest_cache/
 .DS_Store
+sites/sagar-agent-authority/

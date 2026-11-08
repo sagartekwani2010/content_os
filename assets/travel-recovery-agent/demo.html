@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flight Recovery Agent — Illustrative Prototype</title>
+    <style>
+      :root { --ink:#0e1827; --muted:#748094; --line:#e5e9f0; --blue:#2369ee; --lime:#b8ed37; --red:#e55353; --amber:#eaa93c; --paper:#f6f8fb; }
+      * { box-sizing: border-box; }
+      body { margin:0; background:#d9e2ef; color:var(--ink); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      main { width:min(100vw, 620px); min-height:100vh; margin:auto; padding:18px 16px 28px; background:var(--paper); }
+      .top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:18px; }
+      .eyebrow { color:var(--blue); font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+      h1 { font-size:26px; line-height:1.08; margin:5px 0 0; letter-spacing:-.045em; }
+      .synthetic { max-width:125px; text-align:right; color:var(--muted); font-size:10px; line-height:1.25; }
+      .case { background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:0 12px 28px rgba(18,36,64,.06); }
+      .status { display:flex; align-items:center; gap:8px; color:#af3030; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+      .dot { width:8px; height:8px; border-radius:50%; background:var(--red); box-shadow:0 0 0 4px #ffe4e4; }
+      .route { display:grid; grid-template-columns:1fr 24px 1fr; align-items:center; margin:14px 0 13px; }
+      .airport { font-size:25px; font-weight:850; letter-spacing:-.05em; }
+      .city { color:var(--muted); font-size:12px; margin-top:1px; }
+      .plane { color:var(--red); font-weight:800; text-align:center; transform:rotate(90deg); }
+      .right { text-align:right; }
+      .meta { display:flex; justify-content:space-between; padding-top:12px; border-top:1px solid var(--line); color:var(--muted); font-size:11px; }
+      .section-label { margin:21px 0 9px; color:#526075; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+      .agent { display:flex; gap:12px; align-items:center; background:#10203a; color:#fff; border-radius:16px; padding:14px; }
+      .avatar { width:36px; height:36px; display:grid; place-items:center; flex:0 0 auto; border-radius:11px; background:var(--lime); color:#1b2b12; font-weight:900; }
+      .agent strong { display:block; font-size:13px; }
+      .agent span { display:block; color:#bfcbe0; font-size:11px; margin-top:2px; }
+      .pulse { margin-left:auto; width:9px; height:9px; border-radius:50%; background:var(--lime); box-shadow:0 0 0 5px rgba(184,237,55,.16); }
+      .trace { display:grid; gap:8px; }
+      .step { display:flex; align-items:center; min-height:47px; padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:#fff; color:#95a0b1; font-size:12px; transition:.3s ease; }
+      .icon { width:23px; height:23px; margin-right:10px; display:grid; place-items:center; border-radius:7px; background:#eff2f6; color:#8793a7; font-size:12px; font-weight:900; }
+      .step b { color:#536177; margin-left:auto; font-size:10px; letter-spacing:.07em; text-transform:uppercase; }
+      .step.active { border-color:#85aaf8; color:var(--ink); box-shadow:0 6px 16px rgba(35,105,238,.10); }
+      .step.active .icon { background:#e5eeff; color:var(--blue); }
+      .step.active b { color:var(--blue); }
+      .step.done { border-color:#d9ed9d; color:var(--ink); }
+      .step.done .icon { background:#eff9d5; color:#5c8600; }
+      .step.done b { color:#628f00; }
+      .decision { margin-top:16px; border:1px solid #d8e3fa; border-radius:16px; overflow:hidden; background:#fff; opacity:.45; transform:translateY(8px); transition:.35s ease; }
+      .decision.show { opacity:1; transform:none; }
+      .decision-head { padding:13px 14px; background:#edf3ff; color:#1e56bf; font-size:11px; font-weight:850; letter-spacing:.11em; text-transform:uppercase; }
+      .decision-body { padding:14px; }
+      .decision-body h2 { margin:0 0 6px; font-size:17px; letter-spacing:-.03em; }
+      .decision-body p { margin:0; color:#5c687b; font-size:12px; line-height:1.45; }
+      .choices { display:flex; gap:8px; margin-top:12px; }
+      .pill { padding:7px 9px; border-radius:8px; background:#f0f3f7; color:#4d5a6f; font-size:10px; font-weight:700; }
+      .guardrail { margin-top:12px; display:flex; gap:9px; align-items:flex-start; padding:11px 12px; border-radius:11px; background:#fff8ea; color:#855914; font-size:11px; line-height:1.35; }
+      .guardrail strong { display:block; margin-bottom:1px; }
+      .approve { margin-top:10px; padding:10px 12px; width:100%; border:0; border-radius:10px; background:var(--ink); color:#fff; font:inherit; font-size:12px; font-weight:750; cursor:pointer; }
+      .approve[disabled] { opacity:.42; cursor:default; }
+      .final { margin-top:12px; display:none; padding:11px 12px; border-radius:11px; background:#eef9da; color:#426300; font-size:12px; font-weight:750; }
+      .final.show { display:block; }
+      .controls { display:flex; gap:8px; margin-top:16px; }
+      button.control { flex:1; padding:10px; border:1px solid #cfd8e6; border-radius:10px; background:#fff; color:#26364e; font:inherit; font-size:12px; font-weight:750; cursor:pointer; }
+      button.control.primary { border-color:var(--blue); background:var(--blue); color:#fff; }
+      .footer { margin:20px 0 0; text-align:center; color:#8a96a8; font-size:10px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div><div class="eyebrow">Agent demo / travel recovery</div><h1>A cancellation is not<br />a single-step problem.</h1></div>
+        <div class="synthetic">Illustrative prototype<br />Synthetic traveller data</div>
+      </div>
+
+      <section class="case">
+        <div class="status"><i class="dot"></i> Flight cancelled</div>
+        <div class="route"><div><div class="airport">BLR</div><div class="city">Bengaluru</div></div><div class="plane">✈</div><div class="right"><div class="airport">BOM</div><div class="city">Mumbai</div></div></div>
+        <div class="meta"><span>Traveller: Maya K.</span><span>Today · 18:40</span><span>Missed connection risk</span></div>
+      </section>
+
+      <div class="section-label">What the agent does next</div>
+      <section class="agent"><div class="avatar">AI</div><div><strong>Recovery agent</strong><span>Reads the situation, then calls only the needed tools.</span></div><i class="pulse"></i></section>
+      <section class="trace">
+        <div class="step" id="s1"><i class="icon">1</i> Read booking + traveller constraints <b>waiting</b></div>
+        <div class="step" id="s2"><i class="icon">2</i> Check alternate flights <b>waiting</b></div>
+        <div class="step" id="s3"><i class="icon">3</i> Check hotel and connection impact <b>waiting</b></div>
+        <div class="step" id="s4"><i class="icon">4</i> Draft a recovery plan <b>waiting</b></div>
+      </section>
+
+      <section class="decision" id="decision">
+        <div class="decision-head">Recommendation, not an automatic action</div>
+        <div class="decision-body">
+          <h2>Move Maya to the 20:10 flight.</h2>
+          <p>It preserves her onward journey. The alternative leaves her overnight without a confirmed hotel.</p>
+          <div class="choices"><span class="pill">+90 min arrival</span><span class="pill">Connection protected</span><span class="pill">Hotel not needed</span></div>
+          <div class="guardrail"><span>⚠</span><div><strong>Human approval required</strong>Rebooking changes fare class and has a cost impact.</div></div>
+          <button class="approve" id="approve">Approve recovery plan</button>
+          <div class="final" id="final">✓ Approved — confirmation message is ready to send.</div>
+        </div>
+      </section>
+      <div class="controls"><button class="control primary" id="run">Run demo</button><button class="control" id="reset">Reset</button></div>
+      <p class="footer">An agent chooses a path. Tools retrieve facts. A workflow executes approved steps.</p>
+    </main>
+    <script>
+      const steps = [...document.querySelectorAll('.step')];
+      const run = document.querySelector('#run'); const reset = document.querySelector('#reset');
+      const decision = document.querySelector('#decision'); const approve = document.querySelector('#approve'); const final = document.querySelector('#final');
+      let timers = [];
+      function clear() { timers.forEach(clearTimeout); timers=[]; }
+      function resetDemo() { clear(); steps.forEach(s => { s.className='step'; s.querySelector('b').textContent='waiting'; }); decision.classList.remove('show'); final.classList.remove('show'); approve.disabled=false; run.disabled=false; run.textContent='Run demo'; }
+      function runDemo() { resetDemo(); run.disabled=true; run.textContent='Running…'; steps.forEach((s, i) => { timers.push(setTimeout(() => { if(i) { steps[i-1].classList.remove('active'); steps[i-1].classList.add('done'); steps[i-1].querySelector('b').textContent='done'; } s.classList.add('active'); s.querySelector('b').textContent='calling tool'; if(i===steps.length-1) { timers.push(setTimeout(() => { s.classList.remove('active'); s.classList.add('done'); s.querySelector('b').textContent='done'; decision.classList.add('show'); run.textContent='Replay demo'; run.disabled=false; }, 1050)); } }, i*1050)); }); }
+      run.addEventListener('click', runDemo); reset.addEventListener('click', resetDemo); approve.addEventListener('click', () => { approve.disabled=true; final.classList.add('show'); });
+      setTimeout(runDemo, 500);
+    </script>
+  </body>
+</html>

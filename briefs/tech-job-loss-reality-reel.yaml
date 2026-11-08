@@ -1,0 +1,115 @@
+brief_id: tech-job-loss-reality-reel
+
+topic: "Tech job losses and AI — the current reality and how SDE, data and product professionals should prepare"
+
+core_thesis: >
+  The technology hiring slowdown and tighter entry paths are real, but current
+  evidence does not support blaming all weakness on AI or declaring software,
+  data and product careers obsolete. AI is changing the task mix and raising
+  the proof-of-capability bar, so preparation should focus on demonstrated
+  outcome ownership inside AI-native workflows.
+
+why_this_matters: >
+  Professionals are receiving two unhelpful messages: either AI will eliminate
+  their career immediately, or nothing meaningful is changing. Both prevent
+  practical preparation and confuse short-term hiring conditions with
+  long-term occupational demand.
+
+learning_objective: >
+  After viewing, a person can separate current hiring weakness, evidence of AI
+  causality and long-term role demand, then identify one proof-of-work priority
+  for software engineering, data science or product management.
+
+audience_takeaway: >
+  Do not prepare for the old job description with one new tool; build evidence
+  that you can own outcomes in an AI-native workflow.
+
+target_audience:
+  - Software developers and engineers
+  - Data scientists and analysts
+  - Product managers
+  - Technology students and early-career candidates
+  - Engineering, data and product leaders
+
+brand_pillar: ai_career
+content_format: reel
+
+hook_direction: >
+  Acknowledge that the tech slowdown is real, reject monocausal AI doom and
+  promise role-specific preparation rather than reassurance.
+
+approved_hook_points:
+  - "The tech job slowdown is real; AI took all the jobs is still the wrong diagnosis."
+  - "The role is not simply disappearing; its task and evidence contract is changing."
+  - "The useful question is not whether a title survives, but which tasks become cheap and which judgement becomes more valuable."
+
+high_level_sections:
+  - current hiring weakness and tighter entry paths
+  - limits of attributing current job losses solely to AI
+  - simultaneous displacement, role creation and changing skill demand
+  - preparation priorities for SDE roles
+  - preparation priorities for data roles
+  - preparation priorities for product roles
+  - one shared proof-of-work framework
+
+core_examples:
+  - "SDE: system design, agent and tool contracts, testing, security, observability and recovery."
+  - "Data: problem framing, data quality, experimentation, causal judgement, evaluation and monitoring."
+  - "Product: workflow redesign, customer judgement, measurable success criteria, prototyping, guardrails and quality-latency-cost trade-offs."
+  - "Proof of work: problem → judgement → AI leverage → validation → failure → outcome."
+
+preferred_pov: >
+  Experienced AI leader translating labour-market evidence into calm,
+  role-specific preparation without denying genuine risk or promising safety.
+
+desired_tone: >
+  Evidence-led, direct, empathetic, practical and non-alarmist. Avoid both doom
+  and motivational reassurance.
+
+visual_direction: >
+  Face-led 9:16 Reel with three compact source-labelled evidence cards followed
+  by an SDE–Data–Product readiness matrix and one proof-of-work sequence. Use
+  large type, no stock layoff imagery, red alarm graphics or fake job portals.
+
+desired_duration_seconds: 65
+
+factual_claims_to_verify:
+  - "LinkedIn's 2026 analysis attributes much recent hiring weakness to broader economic conditions rather than AI displacement alone."
+  - "LinkedIn reports tighter software-engineering entry pathways and growing AI-adjacent demand."
+  - "The World Economic Forum projects both substantial job displacement and creation through 2030."
+  - "U.S. BLS projections show 2024–34 growth for software developers and data scientists."
+  - "All geography, date range and forecast limitations remain visible."
+
+must_include:
+  - "A clear distinction between observed hiring weakness, proven AI causality and long-term projections."
+  - "Separate readiness guidance for SDE, data and product."
+  - "One concrete proof-of-work framework."
+  - "A disclaimer that projections are not short-term guarantees."
+  - "No unsupported product-manager decline or growth percentage."
+
+must_avoid:
+  - "Claiming every technology layoff was caused by AI."
+  - "Claiming SDE, data science or product roles are safe or doomed."
+  - "Combining incomparable geographies or time horizons into one statistic."
+  - "Generic advice to only learn AI tools or prompt engineering."
+  - "Individual financial, immigration or employment guarantees."
+
+cta_direction: >
+  Close with the shared proof-of-work framework. Invite viewers to identify
+  which role-specific proof they are building only if the final edit has room.
+
+urgency: this_week
+priority: 1
+status: APPROVED
+approved_by: Sagar
+
+references:
+  - "https://economicgraph.linkedin.com/research/labor-market-report-2026"
+  - "https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/us-software-engineer-talent-landscape-2026.pdf"
+  - "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+  - "https://www.bls.gov/opub/ted/2026/artificial-intelligence-information-technology-and-employment-2024-34.htm"
+
+notes: >
+  Product management does not have a clean directly comparable occupation
+  projection in the selected sources. Keep product guidance task-based and do
+  not fabricate a role-level trend statistic.

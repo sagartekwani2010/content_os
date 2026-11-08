@@ -1,0 +1,105 @@
+{
+  "content_id": "skillrl-agent-skills-paper-reel",
+  "format": "reel",
+  "assets": [
+    {
+      "asset_id": "thumbnail",
+      "content_unit": "thumbnail",
+      "output_filename": "thumbnail.png",
+      "asset_path": "",
+      "mode": "reference_edit",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "Clean portrait of Sagar",
+      "prompt_file": "asset-prompts/thumbnail.md",
+      "alt_text": "Sagar beside stored traces that stop before a reusable skill card."
+    },
+    {
+      "asset_id": "opening_proof_image",
+      "content_unit": "scene",
+      "output_filename": "00-task-complete-nothing-learned.png",
+      "asset_path": "",
+      "mode": "generated_image",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/01-history-not-learning.md",
+      "alt_text": "A completed task and stored log fail to change the agent's behaviour on the next run."
+    },
+    {
+      "asset_id": "trajectory_memory_gap",
+      "content_unit": "scene",
+      "output_filename": "01-trajectory-memory-gap.mp4",
+      "asset_path": "",
+      "mode": "generated_video",
+      "rendering_tool": "h3",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/h3-combined-01-trajectory-memory-gap.md",
+      "alt_text": "A search trajectory completes, archives, and fails to transfer automatically into a blank future run."
+    },
+    {
+      "asset_id": "paper_intro",
+      "content_unit": "scene",
+      "output_filename": "02-skillrl-paper-intro.mp4",
+      "asset_path": "",
+      "mode": "generated_video",
+      "rendering_tool": "h3",
+      "source_required": "Screenshot of the real SkillRL arXiv title page; crop browser chrome and retain arXiv source identity",
+      "prompt_file": "asset-prompts/h3-combined-paper-intro.md",
+      "alt_text": "The genuine SkillRL arXiv title page appears with baked-in title and affiliation labels."
+    },
+    {
+      "asset_id": "skill_layer",
+      "content_unit": "scene",
+      "output_filename": "04-skill-layer.mp4",
+      "asset_path": "",
+      "mode": "generated_video",
+      "rendering_tool": "h3",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/h3-combined-02-skill-layer.md",
+      "alt_text": "Successful and failed trajectories become reusable skills and one relevant skill is retrieved."
+    },
+    {
+      "asset_id": "rl_coevolution",
+      "content_unit": "scene",
+      "output_filename": "05-rl-coevolution.mp4",
+      "asset_path": "",
+      "mode": "generated_video",
+      "rendering_tool": "h3",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/h3-combined-03-rl-coevolution.md",
+      "alt_text": "Rewards update a decision policy while reviewed validation failures refine one SkillBank entry during training."
+    },
+    {
+      "asset_id": "future_learning_layer",
+      "content_unit": "scene",
+      "output_filename": "06-future-learning-layer.mp4",
+      "asset_path": "",
+      "mode": "generated_video",
+      "rendering_tool": "h3",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/h3-combined-04-future-learning-layer.md",
+      "alt_text": "Validated experience passes through evaluation, abstraction and a control gate before it can influence a future agent decision."
+    },
+    {
+      "asset_id": "separate_learning_layer_vertical",
+      "content_unit": "scene",
+      "output_filename": "07-separate-learning-layer-vertical.png",
+      "asset_path": "assets/07-separate-learning-layer-vertical.png",
+      "mode": "generated_image",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/image-08-separate-learning-layer-vertical.md",
+      "alt_text": "A vertical architecture diagram separates task execution from a governed learning layer that validates experience before changing future behaviour."
+    },
+    {
+      "asset_id": "skillrl_two_layer_map",
+      "content_unit": "scene",
+      "output_filename": "03-skillrl-two-layer-map.png",
+      "asset_path": "",
+      "mode": "generated_image",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/image-07-skillrl-two-layer-map.md",
+      "alt_text": "A two-lane map shows SkillRL's skill layer and reinforcement-learning layer improving together."
+    }
+  ]
+}

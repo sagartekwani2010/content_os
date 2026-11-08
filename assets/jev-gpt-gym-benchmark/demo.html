@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gym Decision Benchmark — Fixture Verifier</title>
+    <style>
+      :root { --ink:#101827; --muted:#758197; --paper:#f4f6f9; --line:#dbe1ea; --blue:#2864e8; --cyan:#32b8ed; --lime:#b7e83c; --amber:#efb44d; --red:#e65656; }
+      * { box-sizing:border-box; }
+      body { margin:0; background:#dce4ef; color:var(--ink); font:14px/1.35 Inter, ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+      main { min-height:100vh; width:min(100vw,620px); margin:auto; padding:22px 16px 30px; background:var(--paper); }
+      .eyebrow { color:var(--blue); font-size:11px; font-weight:850; letter-spacing:.13em; text-transform:uppercase; }
+      h1 { margin:5px 0 5px; font-size:30px; line-height:1.02; letter-spacing:-.055em; }
+      .sub { color:var(--muted); font-size:13px; max-width:470px; }
+      .notice { margin:18px 0; padding:10px 12px; border-radius:12px; background:#fff8e8; border:1px solid #f1d99f; color:#72551c; font-size:11px; }
+      .notice b { display:block; margin-bottom:2px; }
+      .bar { display:flex; gap:8px; margin:14px 0; }
+      button { border:1px solid #cbd5e3; border-radius:10px; padding:10px 11px; background:#fff; color:#233047; font:inherit; font-size:12px; font-weight:750; cursor:pointer; }
+      button.primary { border-color:var(--blue); color:#fff; background:var(--blue); }
+      .steps { display:grid; gap:8px; margin:18px 0; }
+      .step { display:flex; align-items:center; gap:10px; padding:10px 12px; background:#fff; border:1px solid var(--line); border-radius:12px; color:#667289; font-size:12px; }
+      .step i { width:22px; height:22px; display:grid; place-items:center; border-radius:50%; background:#edf0f5; color:#758197; font-style:normal; font-size:11px; font-weight:850; }
+      .step.active { color:var(--ink); border-color:#95b2f7; box-shadow:0 5px 15px #2864e812; }
+      .step.active i { color:#fff; background:var(--blue); }
+      .step.done { color:#394e21; border-color:#d7ebb1; }
+      .step.done i { color:#355d00; background:#eaf7cc; }
+      .card { margin-top:16px; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:#fff; box-shadow:0 10px 26px #2030520a; }
+      .card-head { display:flex; justify-content:space-between; align-items:center; padding:13px 14px; background:#f8faff; border-bottom:1px solid var(--line); }
+      .card-head b { font-size:12px; }
+      .tag { padding:4px 7px; border-radius:6px; background:#edf2ff; color:#2456bc; font-size:9px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+      .state { padding:14px; display:grid; gap:8px; }
+      .field { display:flex; justify-content:space-between; gap:10px; padding-bottom:7px; border-bottom:1px solid #edf0f4; color:#637087; font-size:12px; }
+      .field:last-child { padding-bottom:0; border-bottom:0; }
+      .field strong { color:var(--ink); font-weight:750; }
+      .field.signal strong { color:#ad3131; }
+      .why { margin:0 14px 14px; padding:11px 12px; border-radius:10px; background:#f3f6fb; color:#4f5e74; font-size:12px; }
+      .lanes { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:14px; border-top:1px solid var(--line); }
+      .lane { min-height:116px; padding:12px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+      .lane h2 { margin:0 0 4px; font-size:15px; letter-spacing:-.02em; }
+      .lane p { margin:0; color:var(--muted); font-size:11px; line-height:1.4; }
+      .lane .status { margin-top:13px; color:#8a97aa; font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+      .routes { display:flex; flex-wrap:wrap; gap:6px; padding:0 14px 14px; }
+      .route { padding:6px 8px; border-radius:7px; background:#eff2f6; color:#4d5a6d; font-size:10px; font-weight:750; }
+      .route.expected { background:#fff3da; color:#8b600e; }
+      .footer { margin-top:17px; text-align:center; color:#8793a6; font-size:10px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">Gym Assistant / fixture verifier</div>
+      <h1>Same input.<br />One decision job.</h1>
+      <div class="sub">A real code-native explainer for the Jev vs GPT benchmark. It visualises controlled fixtures; model results appear only after recorded logs are attached.</div>
+      <div class="notice"><b>Evidence status: fixture verified</b>Provider output is intentionally not simulated in this view.</div>
+      <div class="bar"><button class="primary" id="run">Verify fixture</button><button id="next">Next case</button></div>
+      <section class="steps">
+        <div class="step" id="step1"><i>1</i> Load immutable Gym Assistant state</div>
+        <div class="step" id="step2"><i>2</i> Validate the four allowed routes</div>
+        <div class="step" id="step3"><i>3</i> Send identical state to GPT and Jev adapters</div>
+        <div class="step" id="step4"><i>4</i> Log route, latency and cost from real outputs</div>
+      </section>
+      <section class="card">
+        <div class="card-head"><b id="title"></b><span class="tag" id="fixture"></span></div>
+        <div class="state" id="state"></div>
+        <p class="why" id="why"></p>
+        <div class="lanes"><div class="lane"><h2>GPT</h2><p>Conversation model, constrained here to the same decision contract.</p><div class="status">Recorded output required</div></div><div class="lane"><h2>Jev</h2><p>Decision model. It cannot chat; it selects from the allowed routes.</p><div class="status">Recorded output required</div></div></div>
+        <div class="routes" id="routes"></div>
+      </section>
+      <div class="footer">Expected route is a test oracle, not a claimed model result. No fitness, medical, nutrition or training advice.</div>
+    </main>
+    <script>
+      const cases = [
+        { id:'01', title:'Complete, low-risk check-in', fields:[['check_in_complete','true'],['recovery_status','normal'],['data_consistency','consistent'],['safety_signal','none']], expected:'progress', why:'Can the decision layer proceed when the required evidence is complete?' },
+        { id:'02', title:'Recovery or adherence concern', fields:[['check_in_complete','true'],['recovery_status','concern'],['data_consistency','consistent'],['safety_signal','none']], expected:'hold', why:'Does the system avoid automatically progressing on a predefined concern?' },
+        { id:'03', title:'Missing required evidence', fields:[['check_in_complete','false'],['recovery_status','unknown'],['data_consistency','unknown'],['safety_signal','none']], expected:'ask_for_data', why:'Does the system abstain instead of inventing certainty?' },
+        { id:'04', title:'Conflicting evidence', fields:[['check_in_complete','true'],['recovery_status','normal'],['data_consistency','conflicting'],['safety_signal','none']], expected:'ask_for_data', why:'Can it recognise that conflicting signals do not support one confident route?' },
+        { id:'05', title:'Boundary signal', fields:[['check_in_complete','true'],['recovery_status','normal'],['data_consistency','consistent'],['safety_signal','pain_or_injury']], expected:'escalate', why:'Does the system stop automated action at a predefined safety boundary?' }
+      ];
+      let index = 4, timers = [];
+      const $ = id => document.getElementById(id);
+      function showCase(){ const c=cases[index]; $('fixture').textContent='case '+c.id; $('title').textContent=c.title; $('why').textContent=c.why; $('state').innerHTML=c.fields.map(([k,v])=>`<div class="field ${k==='safety_signal'&&v!=='none'?'signal':''}"><span>${k}</span><strong>${v}</strong></div>`).join(''); $('routes').innerHTML=['progress','hold','ask_for_data','escalate'].map(r=>`<span class="route ${r===c.expected?'expected':''}">${r}${r===c.expected?' · expected':''}</span>`).join(''); }
+      function reset(){ timers.forEach(clearTimeout); timers=[]; [1,2,3,4].forEach(n=>$('step'+n).className='step'); }
+      function verify(){ reset(); [1,2,3,4].forEach((n,i)=>timers.push(setTimeout(()=>{ const e=$('step'+n); if(i) $('step'+(n-1)).className='step done'; e.className='step active'; if(n===4) timers.push(setTimeout(()=>e.className='step done',750)); },i*650))); }
+      $('run').onclick=verify; $('next').onclick=()=>{ index=(index+1)%cases.length; showCase(); verify(); }; showCase(); setTimeout(verify,400);
+    </script>
+  </body>
+</html>

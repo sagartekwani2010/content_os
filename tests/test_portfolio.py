@@ -42,21 +42,18 @@ class TestPortfolioBalance:
         plan = [
             item("ai_builder", "reel"),
             item("ai_builder", "carousel"),
-            item("ai_pov", "reel"),
-            item("ai_pov", "carousel"),
-            item("ai_experiments", "reel"),
             item("ai_real_life", "carousel"),
-            item("ai_future", "reel"),
+            item("ai_career", "carousel"),
         ]
         report = analyse_portfolio(plan, cfg)
         assert report["violations"] == []
         assert report["balanced"] is True
-        assert report["distinct_pillars"] == 5
+        assert report["distinct_pillars"] == 3
 
     def test_pillar_cap_is_enforced(self, cfg):
-        """Five of seven posts in one pillar exceeds the cap at that size."""
-        plan = [item("ai_builder", "reel" if i % 2 else "carousel") for i in range(5)]
-        plan += [item("ai_pov"), item("ai_future")]
+        """Nine of ten posts exceeds the agent-heavy target plus tolerance."""
+        plan = [item("ai_builder", "reel" if i % 2 else "carousel") for i in range(9)]
+        plan += [item("ai_career")]
         report = analyse_portfolio(plan, cfg)
         assert any("PILLAR_OVER_CAP:ai_builder" in v for v in report["violations"])
 
@@ -71,8 +68,8 @@ class TestPillarCapScaling:
         assert portfolio.pillar_cap(15) > portfolio.pillar_cap(7)
 
     def test_cap_never_contradicts_the_largest_target(self, cfg):
-        """At 15 posts a fixed cap of 3 would forbid the 30% target, which
-        wants 4.5. The cap must never make the targets unsatisfiable."""
+        """At 15 posts a fixed cap can forbid a configured target share. The
+        cap must never make the targets unsatisfiable."""
         portfolio = cfg.portfolio
         for total in (5, 7, 10, 15, 20, 30):
             cap = portfolio.pillar_cap(total)
@@ -88,11 +85,9 @@ class TestPillarCapScaling:
     def test_fifteen_post_plan_at_target_distribution_passes(self, cfg):
         """The launch-sized plan the targets actually describe must validate."""
         plan = (
-            [item("ai_builder") for _ in range(5)]
-            + [item("ai_pov", "carousel") for _ in range(4)]
-            + [item("ai_experiments") for _ in range(3)]
-            + [item("ai_real_life", "carousel") for _ in range(2)]
-            + [item("ai_future")]
+            [item("ai_builder") for _ in range(8)]
+            + [item("ai_real_life", "carousel") for _ in range(4)]
+            + [item("ai_career", "carousel") for _ in range(3)]
         )
         # Interleave formats so the streak guardrail is not the thing under test.
         plan = [
@@ -105,7 +100,7 @@ class TestPillarCapScaling:
 
     def test_format_streak_is_detected(self, cfg):
         plan = [item(p, "reel") for p in
-                ("ai_builder", "ai_pov", "ai_future", "ai_real_life")]
+                ("ai_builder", "ai_career", "ai_real_life", "ai_builder")]
         report = analyse_portfolio(plan, cfg)
         assert report["max_same_format_streak"] == 4
         assert any(v.startswith("FORMAT_STREAK") for v in report["violations"])
@@ -113,8 +108,8 @@ class TestPillarCapScaling:
     def test_duplicate_topics_are_detected(self, cfg):
         plan = [
             item("ai_builder", "reel", topic_id="top_same"),
-            item("ai_pov", "carousel", topic_id="top_same"),
-            item("ai_future", "reel", topic_id="top_other"),
+            item("ai_career", "carousel", topic_id="top_same"),
+            item("ai_real_life", "reel", topic_id="top_other"),
         ]
         report = analyse_portfolio(plan, cfg)
         assert any(v.startswith("DUPLICATE_TOPICS") for v in report["violations"])
@@ -124,11 +119,11 @@ class TestPillarCapScaling:
         assert any("UNKNOWN_PILLAR:crypto_news" in v for v in report["violations"])
 
     def test_distribution_sums_to_one(self, cfg):
-        plan = [item("ai_builder"), item("ai_pov"), item("ai_future"), item("ai_pov")]
+        plan = [item("ai_builder"), item("ai_career"), item("ai_real_life"), item("ai_career")]
         report = analyse_portfolio(plan, cfg)
         assert sum(report["distribution"].values()) == 1.0
 
     def test_gap_brief_names_the_missing_pillars(self, cfg):
         brief = portfolio_gap_brief([item("ai_builder") for _ in range(5)], cfg, 7)
-        assert "ai_pov" in brief
+        assert "ai_career" in brief
         assert "Guardrail violations" in brief

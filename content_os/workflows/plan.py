@@ -10,7 +10,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-from agents import trace
+from content_os.codex_runtime import trace
 
 from content_os.agents import strategist
 from content_os.config import load_brand, load_models_config, load_scoring_config

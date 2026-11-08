@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-"""Content OS command line.
+"""Content OS command line, coordinated through the local Codex SDK.
+
+Every contextual stage uses the user's ChatGPT-authenticated Codex session;
+this command never reads an API key or calls the OpenAI API directly.
 
     python cli.py doctor                       validate config and environment
+    python cli.py check briefs/x.yaml         validate a brief without a model run
     python cli.py seed                         load sample topics and experiments
 HUMAN-LED PRODUCTION (the default workflow)
 
@@ -39,14 +43,12 @@ import argparse
 import asyncio
 import json
 import os
+import shutil
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-
-from dotenv import load_dotenv
-
-load_dotenv()
 
 from content_os.config import (  # noqa: E402
     config_warnings,
@@ -71,6 +73,8 @@ from content_os.tools.brief_loader import (  # noqa: E402
     scaffold,
 )
 from content_os.tools.source_ingestion import list_sources, load_sources  # noqa: E402
+from content_os.tools.package_export import attach_rendered_assets  # noqa: E402
+from content_os.tools.validator_simulations import run_validator_simulations  # noqa: E402
 from content_os.tracking.run_logger import summarise_usage  # noqa: E402
 from content_os.workflows.analyze import run_analysis  # noqa: E402
 from content_os.workflows.create import run_generation  # noqa: E402
@@ -123,11 +127,16 @@ def repos_for(args: argparse.Namespace) -> Repositories:
     return Repositories(get_db(getattr(args, "db", None)))
 
 
-def require_api_key() -> bool:
-    if os.environ.get("OPENAI_API_KEY"):
+def require_codex_login() -> bool:
+    """The Codex SDK reuses the user's local ChatGPT/Codex sign-in."""
+    codex = shutil.which("codex")
+    if codex and subprocess.run(
+        [codex, "login", "status"], stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL, check=False,
+    ).returncode == 0:
         return True
-    print(c("\n  OPENAI_API_KEY is not set.", RED))
-    print("  Copy .env.example to .env and add your key, then re-run.\n")
+    print(c("\n  Codex is not logged in with ChatGPT.", RED))
+    print("  Run: codex login\n")
     return False
 
 
@@ -156,12 +165,10 @@ def cmd_doctor(args: argparse.Namespace) -> int:
     for warning in config_warnings():
         print(c(f"  WARN  {warning}", YELLOW))
 
-    header("Environment")
-    key = os.environ.get("OPENAI_API_KEY")
-    if key:
-        print(c(f"  OK    OPENAI_API_KEY set ({len(key)} chars)", GREEN))
-    else:
-        print(c("  FAIL  OPENAI_API_KEY not set. Copy .env.example to .env.", RED))
+    header("Codex")
+    logged_in = require_codex_login()
+    if logged_in:
+        print(c("  OK    ChatGPT-authenticated Codex session available", GREEN))
 
     header("Database")
     repos = repos_for(args)
@@ -188,7 +195,26 @@ def cmd_doctor(args: argparse.Namespace) -> int:
                  f"effort={cfg_a.reasoning_effort}")
 
     print()
-    return 1 if problems or not key else 0
+    return 1 if problems or not logged_in else 0
+
+
+def cmd_check(args: argparse.Namespace) -> int:
+    """Validate configuration and a human brief without DB or model side effects."""
+    problems = validate_all()
+    if problems:
+        for problem in problems:
+            print(c(f"  FAIL  {problem}", RED))
+        return 1
+    try:
+        briefs = load_brief_file(args.file)
+    except (BriefError, ValueError) as exc:
+        print(c(f"  FAIL  {exc}", RED))
+        return 1
+    for brief in briefs:
+        print(c(f"  OK    {brief.brief_id}: {brief.topic}", GREEN))
+        print(f"        format={brief.content_format} pillar={brief.brand_pillar} "
+              f"sections={len(brief.high_level_sections)}")
+    return 0
 
 
 def cmd_seed(args: argparse.Namespace) -> int:
@@ -233,7 +259,7 @@ def cmd_sources(args: argparse.Namespace) -> int:
 
 
 def cmd_discover(args: argparse.Namespace) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     sources = load_sources(args.file)
@@ -283,7 +309,7 @@ def cmd_discover(args: argparse.Namespace) -> int:
 
 def cmd_mine(args: argparse.Namespace) -> int:
     """Generate topics from the brand rather than from the news."""
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     header("Brand mining")
@@ -517,7 +543,7 @@ def _print_produced(result: dict[str, Any]) -> None:
 
 
 def cmd_produce(args: argparse.Namespace) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     brief = repos.briefs.get(args.brief_id)
@@ -535,6 +561,8 @@ def cmd_produce(args: argparse.Namespace) -> int:
     print()
     kv("content_id", result["content_id"])
     kv("status", result["status"])
+    if result.get("artifact_path"):
+        kv("package", result["artifact_path"])
     kv("cost", f"${result['cost']:.4f}")
     if result.get("trace_id"):
         kv("trace", result["trace_id"])
@@ -542,8 +570,48 @@ def cmd_produce(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_attach_assets(args: argparse.Namespace) -> int:
+    """Attach named ChatGPT-UI renders to an exported content package."""
+    try:
+        attached = attach_rendered_assets(args.package_dir, args.source_dir)
+    except (FileNotFoundError, NotADirectoryError, ValueError, json.JSONDecodeError) as exc:
+        print(c(f"\n  {exc}\n", RED))
+        return 1
+
+    header("Attached rendered assets")
+    if attached:
+        for filename in attached:
+            print(f"  {c('attached', GREEN)}  {filename}")
+    else:
+        print(c("  No matching files found. Keep the filenames from asset-manifest.json.", YELLOW))
+    print()
+    return 0
+
+
+def cmd_simulate_validators(args: argparse.Namespace) -> int:
+    """Run the named adversarial validator suite against the live Story Judge."""
+    if not require_codex_login():
+        return 1
+    result = asyncio.run(run_validator_simulations(repos_for(args)))
+    header("Validator simulations")
+    for row in result["cases"]:
+        status = c("PASS", GREEN) if row["passed"] else c("MISS", RED)
+        print(f"  {status}  {row['name']}")
+        print(f"        story: expected {row['expected_story']} | observed {row['observed_story']}")
+        expected_assets = row["expected_preflight_failures"] or ["none"]
+        observed_assets = row["observed_preflight_failures"] or ["none"]
+        print(f"        preflight expected: {', '.join(expected_assets)}")
+        print(f"        preflight observed: {', '.join(observed_assets)}")
+        print(wrap(f"judge: {row['judge_rationale']}", indent=8))
+    print()
+    kv("result", f"{result['passed']}/{result['total']} ({result['pass_rate']:.0%})")
+    kv("run_id", result["run_id"])
+    print()
+    return 0 if result["passed"] == result["total"] else 2
+
+
 def cmd_produce_approved(args: argparse.Namespace) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     header("Producing approved briefs")
@@ -585,7 +653,7 @@ def cmd_produce_approved(args: argparse.Namespace) -> int:
 
 
 def cmd_score(args: argparse.Namespace) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     header("Opportunity scoring")
@@ -625,19 +693,52 @@ def cmd_score(args: argparse.Namespace) -> int:
 
 def cmd_topics(args: argparse.Namespace) -> int:
     repos = repos_for(args)
-    header("Topics")
+    brand = load_brand()
+    header("Topic opportunities by pillar")
     rows = repos.scores.ranked(include_vetoed=True, limit=args.limit)
     unscored = repos.topics.unscored(limit=args.limit)
 
-    if rows:
-        print(f"  {'score':>6}  {'status':<14} {'id':<28} title")
-        print(c("  " + "-" * 104, DIM))
-        for scored in rows:
-            status = "VETOED" if scored.score.vetoed else scored.topic.status.value
-            colour = RED if scored.score.vetoed else GREEN
-            print(f"  {scored.score.adjusted_score:>6.2f}  "
-                  f"{c(status.ljust(14), colour)} {scored.topic.id:<28} "
-                  f"{scored.topic.title[:50]}")
+    by_pillar: dict[str, list[Any]] = {pillar.key: [] for pillar in brand.brand_pillars}
+    unassigned: list[Any] = []
+    for scored in rows:
+        group = by_pillar.get(scored.score.recommended_pillar)
+        if group is None:
+            unassigned.append(scored)
+        else:
+            group.append(scored)
+
+    for pillar in brand.brand_pillars:
+        group = by_pillar[pillar.key]
+        header(f"{pillar.name} ({len(group)})")
+        if not group:
+            print(c("  No scored opportunities in this pillar yet.", DIM))
+            continue
+
+        print(
+            f"  {'score':>6}  {'fmt':<11} {'status':<14} "
+            "B    A    T    O    V    P  title"
+        )
+        print(c("  " + "-" * 116, DIM))
+        for scored in group:
+            score = scored.score
+            status = "VETOED" if score.vetoed else scored.topic.status.value
+            colour = RED if score.vetoed else GREEN
+            print(
+                f"  {score.adjusted_score:>6.2f}  {score.recommended_format[:11]:<11} "
+                f"{c(status.ljust(14), colour)} "
+                f"{score.brand_fit:>3.1f}  {score.audience_fit:>3.1f}  "
+                f"{score.trend_velocity:>3.1f}  {score.originality:>3.1f}  "
+                f"{score.visual_potential:>3.1f}  {score.production_fit:>3.1f}  "
+                f"{scored.topic.title[:42]}"
+            )
+            if args.detail:
+                print(c(f"      id: {scored.topic.id}", DIM))
+                print(wrap(f"reason: {score.rationale}", indent=6))
+
+    if unassigned:
+        header(f"Unassigned pillar ({len(unassigned)})")
+        for scored in unassigned:
+            print(f"  {scored.score.adjusted_score:>6.2f}  {scored.topic.title}")
 
     if unscored:
         header(f"Unscored ({len(unscored)})")
@@ -649,7 +750,7 @@ def cmd_topics(args: argparse.Namespace) -> int:
 
 
 def cmd_plan(args: argparse.Namespace) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     header(f"Weekly content plan: {args.posts} posts over {args.days} days")
@@ -814,7 +915,7 @@ def _print_package(fmt: str, package: Any, qa: Any) -> None:
 
 
 def _generate(args: argparse.Namespace, fmt: str) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     header(f"Generating {fmt}")
@@ -848,7 +949,7 @@ def cmd_create_carousel(args: argparse.Namespace) -> int:
 
 def cmd_generate_plan(args: argparse.Namespace) -> int:
     """Generate every PLANNED item in the latest plan."""
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     plan = repos.plans.latest()
@@ -968,7 +1069,7 @@ def cmd_ingest(args: argparse.Namespace) -> int:
 
 
 def cmd_analyze(args: argparse.Namespace) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     header("Performance analysis")
@@ -1182,7 +1283,7 @@ def cmd_usage(args: argparse.Namespace) -> int:
 
 
 def cmd_weekly(args: argparse.Namespace) -> int:
-    if not require_api_key():
+    if not require_codex_login():
         return 1
     repos = repos_for(args)
     header("Weekly cycle")
@@ -1256,6 +1357,9 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("doctor", help="Validate config and environment.").set_defaults(
         func=cmd_doctor
     )
+    p = sub.add_parser("check", help="Validate a brief without a model or DB run.")
+    p.add_argument("file", help="YAML brief file to check.")
+    p.set_defaults(func=cmd_check)
     sub.add_parser("seed", help="Seed experiments and brand snapshot.").set_defaults(
         func=cmd_seed
     )
@@ -1305,6 +1409,20 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--limit", type=int, default=0)
     p.set_defaults(func=cmd_produce_approved)
 
+    p = sub.add_parser(
+        "attach-assets",
+        help="Copy ChatGPT-UI renders into a package's assets/ folder by manifest filename.",
+    )
+    p.add_argument("package_dir", help="Exported outputs/<package> directory.")
+    p.add_argument("source_dir", help="Directory containing downloaded rendered files.")
+    p.set_defaults(func=cmd_attach_assets)
+
+    p = sub.add_parser(
+        "simulate-validators",
+        help="Run named adversarial story and asset-validator simulations.",
+    )
+    p.set_defaults(func=cmd_simulate_validators)
+
     # --- discovery mode (optional; suggests, never produces) --------------
     p = sub.add_parser("mine", help="Generate topics from the brand itself.")
     p.add_argument("--max", type=int, default=10)
@@ -1318,6 +1436,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("topics", help="List topics with scores.")
     p.add_argument("--limit", type=int, default=50)
+    p.add_argument("--detail", action="store_true",
+                   help="Include topic IDs and scoring rationales.")
     p.set_defaults(func=cmd_topics)
 
     p = sub.add_parser("plan", help="Build a balanced content portfolio.")

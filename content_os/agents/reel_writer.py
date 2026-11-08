@@ -206,3 +206,56 @@ async def write_reel_from_brief(
     # The brief owns identity. Reassert rather than trusting it survived.
     result.output.brief_id = brief.brief_id
     return result
+
+
+async def rewrite_reel_after_story_review(
+    runner: TrackedRunner,
+    brand: BrandMemory,
+    package: ReelPackage,
+    review: Any,
+    *,
+    topic_title: str,
+    content_id: str | None = None,
+    models: ModelsConfig | None = None,
+    brief: ContentBrief | None = None,
+) -> TrackedResult[ReelPackage]:
+    """Apply one targeted narrative revision before any asset work starts."""
+    agent, model, prompt_version = build_agent(
+        AGENT_KEY,
+        instructions=agent_instructions(AGENT_KEY, models),
+        output_type=ReelPackage,
+        models=models,
+        name="Reel Specialist Revision",
+    )
+    parts: list[str] = []
+    if brief is not None:
+        parts += [brief.as_prompt_context(), ""]
+    parts += [
+        brand.as_prompt_context(),
+        "",
+        f"UNDERLYING TOPIC: {topic_title}",
+        "",
+        "THE REEL BELOW FAILED A STORY REVIEW. Rewrite it once. Preserve the "
+        "brief, factual claims, learning payoff and topic. Do not merely polish "
+        "sentences: remove repetition, create a distinct story turn and make "
+        "each scene earn its time.",
+        "",
+        "STORY REVIEW:",
+        review.model_dump_json(indent=2),
+        "",
+        "CURRENT REEL:",
+        package.model_dump_json(indent=2),
+    ]
+    result = await runner.run(
+        agent,
+        "\n".join(parts),
+        agent_key=AGENT_KEY,
+        workflow_key="story_revision",
+        model=model,
+        prompt_version=prompt_version,
+        content_id=content_id,
+        extra_metadata={"format": "reel", "revision_reason": "story_judge"},
+    )
+    if brief is not None:
+        result.output.brief_id = brief.brief_id
+    return result

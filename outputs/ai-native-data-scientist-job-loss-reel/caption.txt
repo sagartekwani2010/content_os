@@ -1,0 +1,7 @@
+Data Science isn't disappearing. Narrow model-building is becoming cheaper.
+
+Stay CRISP: Compress routine work. Reskill beyond modelling. Integrate end to end. Safeguard production. Prove outcomes.
+
+Don't just ship a notebook—own the decision system.
+
+Product is next.

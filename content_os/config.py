@@ -464,18 +464,13 @@ def load_prompt(version: str, prompts_dir: str | None = None) -> str:
     if not path.exists():
         raise ConfigError(
             f"Missing prompt file {path}. "
-            f"Every prompt_version in config/models.yaml needs a matching .md file."
+            "Use a versioned prompt file for every Codex workflow stage."
         )
     return path.read_text(encoding="utf-8")
 
 
 def config_warnings() -> list[str]:
-    """Non-fatal problems worth surfacing before a run.
-
-    A model with no pricing entry still works; it just records zero cost, which
-    would quietly make the token ledger useless. That has to be visible rather
-    than silent, since the ledger is the whole point of tracking spend.
-    """
+    """Surface incomplete legacy cost metadata without calling any API."""
     warnings: list[str] = []
     try:
         models = load_models_config()
@@ -487,15 +482,13 @@ def config_warnings() -> list[str]:
         pricing = models.pricing.get(model)
         if pricing is None:
             warnings.append(
-                f"agent '{agent_name}' uses model '{model}', which has no entry "
-                f"under 'pricing:' in config/models.yaml. Cost will record as $0."
+                f"agent '{agent_name}' uses model '{model}', which has no "
+                "legacy pricing entry."
             )
         elif not pricing.is_priced:
             warnings.append(
-                f"model '{model}' is configured at zero cost. Fill in real rates "
-                f"under 'pricing:' or the cost ledger will read $0 for every call."
+                f"model '{model}' has zero legacy pricing metadata."
             )
-
     return sorted(set(warnings))
 
 
@@ -513,7 +506,7 @@ def validate_all() -> list[str]:
         except Exception as exc:  # noqa: BLE001 - surfaced to the operator
             problems.append(f"{label}: {exc}")
 
-    # Every configured prompt version must exist on disk.
+    # Prompt versions remain useful Codex reference material and must resolve.
     try:
         models = load_models_config()
         for agent_name, cfg in models.agents.items():

@@ -1,0 +1,3 @@
+# Scene 4 — Recursive evolution
+
+> Create a finished 1080 × 1920 vertical loop diagram. Reserve the lower-right 34% for a speaker crop. Render exactly: `VALIDATE`; `LOW-SUCCESS CATEGORY`; `FAILED VALIDATION TRACES`; `FIND THE GAP`; `ADD OR REFINE SKILL`; `UPDATED SKILLBANK`; `POLICY TRAINING`. Connect these in a clean clockwise loop. Put `ADD OR REFINE SKILL` behind a thin blue validation gate and use one muted-lime highlight only on `UPDATED SKILLBANK`. The diagram must show a controlled update after validation failure, not autonomous unlimited self-modification. No extra claims or benchmark values.

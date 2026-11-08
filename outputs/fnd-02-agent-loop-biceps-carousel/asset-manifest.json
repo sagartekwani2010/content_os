@@ -1,0 +1,13 @@
+{
+  "package_id": "fnd-02-agent-loop-biceps-carousel",
+  "format": "carousel",
+  "canvas": {"width": 1080, "height": 1350, "aspect_ratio": "4:5"},
+  "assets": [
+    {"asset_id": "slide-01", "filename": "01-outcome-cover.png", "source_required": ["BEFORE", "CURRENT"], "prompt_file": "asset-prompts/01-outcome-cover.md", "asset_path": "", "alt_text": "Before/current biceps comparison introducing the agent-loop lesson."},
+    {"asset_id": "slide-02", "filename": "02-loop-contract.png", "source_required": ["EARLY"], "prompt_file": "asset-prompts/02-loop-contract.md", "asset_path": "", "alt_text": "Agent-loop contract mapped to the Biceps Progression Agent."},
+    {"asset_id": "slide-03", "filename": "03-observe-decide.png", "source_required": ["MID", "real weekly fields"], "prompt_file": "asset-prompts/03-observe-decide.md", "asset_path": "", "alt_text": "Weekly observation routed through a bounded policy to biceps recommendations."},
+    {"asset_id": "slide-04", "filename": "04-agent-trace.png", "source_required": ["RECENT", "real recommendation evidence"], "prompt_file": "asset-prompts/04-agent-trace.md", "asset_path": "", "alt_text": "Auditable domain recommendation trace closing into the next weekly observation."},
+    {"asset_id": "slide-05", "filename": "05-interview-test.png", "source_required": ["CURRENT"], "prompt_file": "asset-prompts/05-interview-test.md", "asset_path": "", "alt_text": "Five-question interview checklist for auditing an agent loop."},
+    {"asset_id": "slide-06", "filename": "06-contact.png", "source_required": [], "prompt_file": "asset-prompts/06-contact.md", "asset_path": "", "alt_text": "Contact slide with Sagar's website."}
+  ]
+}

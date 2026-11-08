@@ -1,0 +1,72 @@
+{
+  "content_id": "tech-job-loss-reality-reel",
+  "format": "reel",
+  "assets": [
+    {
+      "asset_id": "thumbnail",
+      "content_unit": "thumbnail",
+      "output_filename": "thumbnail.png",
+      "asset_path": "",
+      "mode": "reference_edit",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "Clean portrait of Sagar",
+      "prompt_file": "asset-prompts/thumbnail.md",
+      "alt_text": "Sagar beside two cards separating the real technology hiring slowdown from an unproven single-cause AI claim."
+    },
+    {
+      "asset_id": "current_evidence",
+      "content_unit": "scene",
+      "output_filename": "01-current-evidence.png",
+      "asset_path": "",
+      "mode": "reference_edit",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "Cropped LinkedIn 2026 labour-market and software-engineer report captures",
+      "prompt_file": "asset-prompts/01-current-evidence.md",
+      "alt_text": "A source-labelled evidence card separates hiring weakness, tighter entry paths and expanding AI-adjacent work."
+    },
+    {
+      "asset_id": "different_horizons",
+      "content_unit": "scene",
+      "output_filename": "02-different-horizons.png",
+      "asset_path": "",
+      "mode": "reference_edit",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "Cropped WEF 2030 jobs outlook and U.S. BLS 2024–34 projection captures",
+      "prompt_file": "asset-prompts/02-different-horizons.md",
+      "alt_text": "Global 2030 job transformation projections appear separately from U.S. ten-year software and data occupation projections."
+    },
+    {
+      "asset_id": "better_diagnostic",
+      "content_unit": "scene",
+      "output_filename": "03-better-diagnostic.png",
+      "asset_path": "",
+      "mode": "generated_image",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/03-better-diagnostic.md",
+      "alt_text": "One broad question about AI and jobs becomes three questions about current hiring, proven causality and preparation."
+    },
+    {
+      "asset_id": "role_readiness",
+      "content_unit": "scene",
+      "output_filename": "04-role-readiness.png",
+      "asset_path": "",
+      "mode": "generated_image",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/04-role-readiness.md",
+      "alt_text": "Separate cards show readiness priorities for software engineering, data and product roles."
+    },
+    {
+      "asset_id": "proof_of_work",
+      "content_unit": "scene",
+      "output_filename": "05-proof-of-work.png",
+      "asset_path": "",
+      "mode": "generated_image",
+      "rendering_tool": "gpt_2_5",
+      "source_required": "None",
+      "prompt_file": "asset-prompts/05-proof-of-work.md",
+      "alt_text": "A proof-of-work framework runs from problem and judgement through AI leverage, validation, failure and outcome."
+    }
+  ]
+}

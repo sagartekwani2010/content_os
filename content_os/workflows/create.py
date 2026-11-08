@@ -10,9 +10,15 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from agents import trace
+from content_os.codex_runtime import trace
 
-from content_os.agents import carousel_writer, qa_editor, reel_writer
+from content_os.agents import (
+    carousel_writer,
+    qa_editor,
+    reel_writer,
+    story_validator,
+    visual_planner,
+)
 from content_os.config import load_brand, load_models_config, load_scoring_config
 from content_os.ids import new_id
 from content_os.models.content import (
@@ -25,6 +31,8 @@ from content_os.models.topics import TopicStatus
 from content_os.storage.db import dumps, loads, utcnow
 from content_os.storage.repositories import Repositories
 from content_os.tracking.run_logger import TrackedRunner
+from content_os.tools.package_export import export_content_package
+from content_os.tools.reel_preflight import validate_asset_briefs
 
 Format = Literal["reel", "carousel"]
 
@@ -180,6 +188,36 @@ async def run_generation(
 
             package = gen.output
 
+            preflight_failures: list[str] = []
+            if fmt == "reel":
+                story_raw, story_failures = await story_validator.review(
+                    runner, brand, package, topic_title=topic.title,
+                    content_id=content_id, models=models,
+                )
+                if story_failures and story_raw.output.verdict == "REWRITE":
+                    revision = await reel_writer.rewrite_reel_after_story_review(
+                        runner, brand, package, story_raw.output,
+                        topic_title=topic.title, content_id=content_id, models=models,
+                    )
+                    gen = revision
+                    package = revision.output
+                    story_raw, story_failures = await story_validator.review(
+                        runner, brand, package, topic_title=topic.title,
+                        content_id=content_id, models=models,
+                    )
+                preflight_failures.extend(story_failures)
+
+            visual = await visual_planner.plan_visuals(
+                runner, brand, None, package, fmt=fmt,
+                content_id=content_id, models=models,
+            )
+            package = (
+                visual_planner.apply_to_reel(package, visual.output)
+                if fmt == "reel"
+                else visual_planner.apply_to_carousel(package, visual.output)
+            )
+            preflight_failures.extend(validate_asset_briefs(package))
+
             qa_raw, qa_result = await qa_editor.review(
                 runner, brand, cfg, package,
                 content_format=fmt,
@@ -191,6 +229,7 @@ async def run_generation(
                 ),
                 recent_content=recent,
                 models=models,
+                preflight_failures=preflight_failures,
             )
 
         # --- persist ------------------------------------------------------
@@ -250,6 +289,11 @@ async def run_generation(
             composite=qa_result.composite,
             qa_json=dumps(qa_result.model_dump()),
         )
+        artifact_path = export_content_package(
+            content_id=final_content_id,
+            package=package,
+            qa=qa_result,
+        )
         repos.topics.set_status(topic.id, TopicStatus.IN_PRODUCTION)
 
         if owns_run:
@@ -276,6 +320,7 @@ async def run_generation(
                 (cost["estimated_cost"] or 0.0) if cost else 0.0, 6
             ),
             "trace_id": gen.trace_id,
+            "artifact_path": str(artifact_path),
         }
     except Exception as exc:
         if owns_run and run_id:

@@ -1,0 +1,3 @@
+# Scene 2 — Distil success and failure
+
+> Create a finished 1080 × 1920 vertical mechanism diagram with the lower 35% left clear for a speaker crop. In the upper area show two compact trajectories. The first ends in `SUCCESS` and compresses into a card labelled `STRATEGY`. The second ends in `FAILURE` and compresses into a card labelled `LESSON`. Render exactly on the two output cards: `critical decision`; `what worked`; `failure point`; `better action`; `prevention rule`. Add a small eyebrow: `SKILLRL MECHANISM`. Use arrows that visibly reduce many noisy steps into two concise cards. No chain-of-thought, fake metrics or extra fields.

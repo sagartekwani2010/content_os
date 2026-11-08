@@ -1,0 +1,83 @@
+brief_id: ai-native-pov-series-intro
+topic: "Using AI does not make you AI-native"
+
+core_thesis: >
+  AI-native is a way of working, not a count of AI tools. The person owns the
+  problem and a point of view, gives AI the useful context created through
+  their work, uses it to expand or challenge thinking, and remains accountable
+  for the decision. Neither avoiding AI nor delegating the entire task to it is
+  AI-native.
+
+why_this_matters: >
+  Leaders in product, marketing, engineering and data science increasingly
+  claim AI fluency, but tool use alone is a weak signal. The useful distinction
+  is whether their judgment becomes more capable with AI in the loop.
+
+creator_credibility: >
+  Sagar has interviewed hundreds of candidates across engineering, product and
+  marketing roles and uses those observations to identify practical AI-native
+  behaviour. This is personal professional experience, not a population claim.
+
+learning_objective: >
+  Give a broad audience a memorable definition of AI-native and three simple
+  operating behaviours: think first, carry context forward, and use AI to
+  challenge thinking without outsourcing accountability.
+
+audience_takeaway: >
+  Before opening an AI tool, bring your working view and the context that
+  matters. Ask AI to make your judgment better; do not ask it to replace it.
+
+target_audience:
+  - product, marketing, engineering and data leaders
+  - people preparing for AI-native interviews
+  - AI-curious professionals
+
+brand_pillar: ai_career
+content_format: reel
+
+hook_direction: >
+  Start with the blunt distinction: "Using ChatGPT or Claude does not make you
+  AI-native." Immediately name the other bad extreme: delegating the entire
+  task to AI. Then earn the claim through an anonymised interview observation.
+
+high_level_sections:
+  - hook: tool use and full delegation are both insufficient
+  - anonymised interview observation: valuable context discarded in a blank AI chat
+  - definition: AI as an extension of judgment, not a replacement for it
+  - three high-level behaviours: think first, carry context, challenge with AI
+  - cross-functional relevance and accountability
+  - earned invitation to the wider series: context, evaluation and real agent systems
+
+core_examples:
+  - >-
+    An anonymised senior candidate and interviewer discuss a problem, constraints
+    and trade-offs; when asked to use AI, the candidate opens a blank chat and
+    starts from zero instead of carrying that work into the tool.
+  - "Use AI to compare options, surface blind spots and improve a draft—not to avoid forming a view."
+
+must_include:
+  - "Never name the candidate, employer, or any personally identifying details."
+  - "AI-native is neither refusing to use AI nor delegating the entire task."
+  - "Think first; give the tool real context; use it to challenge/expand thinking; own the final decision."
+  - "Follow invitation tied to the wider series: context, evals and real agent systems."
+
+must_avoid:
+  - "Claiming one interview anecdote proves a broad population trend."
+  - "Humiliating a candidate or presenting AI use as cheating."
+  - "A tool tutorial, generic productivity list, B-roll, diagrams, or on-screen assets."
+  - "A forced follow-for-more CTA."
+
+desired_duration_seconds: 63
+preferred_pov: >
+  Calm but opinionated first-person POV. The creator speaks as someone who sees
+  this distinction in real work and interviews, not as a guru announcing a new
+  buzzword.
+
+cta_direction: >
+  End with a direct but earned invitation: follow to work AI-native, not merely
+  use AI. Name the wider series territory—context, evaluations and real agent
+  systems—without promising a specific next episode or using "follow for part
+  two."
+
+status: APPROVED
+approved_by: Sagar

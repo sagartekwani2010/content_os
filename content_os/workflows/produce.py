@@ -4,7 +4,9 @@
       -> Brief Strategist   plans how, never what
       -> Hook Expander      polishes human-approved hook points
       -> Writer             reel or carousel
+      -> Story Judge        rejects flat or repetitive Reel narratives
       -> Visual Planner     shot plan
+      -> Asset Preflight    rejects incomplete generation handoffs
       -> QA                 hard gates on learning and brief execution
       -> human review
 
@@ -17,7 +19,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from agents import trace
+from content_os.codex_runtime import trace
 
 from content_os.agents import (
     brief_strategist,
@@ -25,6 +27,7 @@ from content_os.agents import (
     hook_expander,
     qa_editor,
     reel_writer,
+    story_validator,
     visual_planner,
 )
 from content_os.config import load_brand, load_models_config, load_scoring_config
@@ -35,6 +38,8 @@ from content_os.models.topics import TopicCandidate, TopicStatus
 from content_os.storage.db import dumps, utcnow
 from content_os.storage.repositories import Repositories
 from content_os.tracking.run_logger import TrackedRunner
+from content_os.tools.reel_preflight import validate_asset_briefs
+from content_os.tools.package_export import export_content_package
 
 
 def _detect_modes(package: Any, fmt: str) -> dict[str, bool]:
@@ -111,6 +116,8 @@ async def produce_brief(
 
     fmt = "carousel" if brief.content_format == "carousel" else "reel"
     warnings: list[str] = []
+    preflight_failures: list[str] = []
+    story_review: Any | None = None
     recent = repos.content.recent_for_context(20)
 
     try:
@@ -161,7 +168,30 @@ async def produce_brief(
             )
             package = gen.output
 
-            # 4. visual plan
+            # 4. Story gate before any time is spent generating visuals.
+            if fmt == "reel":
+                story_raw, story_failures = await story_validator.review(
+                    runner, brand, package, topic_title=brief.topic,
+                    models=models, brief=brief,
+                )
+                story_review = story_raw.output
+                if story_failures and story_review.verdict == "REWRITE":
+                    revision = await reel_writer.rewrite_reel_after_story_review(
+                        runner, brand, package, story_review,
+                        topic_title=brief.topic, models=models, brief=brief,
+                    )
+                    gen = revision
+                    package = revision.output
+                    story_raw, story_failures = await story_validator.review(
+                        runner, brand, package, topic_title=brief.topic,
+                        models=models, brief=brief,
+                    )
+                    story_review = story_raw.output
+                if story_failures:
+                    preflight_failures.extend(story_failures)
+                    warnings.extend(story_failures)
+
+            # 5. visual plan
             if not skip_visual_planner:
                 try:
                     visual = await visual_planner.plan_visuals(
@@ -177,11 +207,17 @@ async def produce_brief(
                     # refinement costs polish, not the run.
                     warnings.append(f"VISUAL_PLANNER_FAILED:{type(exc).__name__}")
 
-            # 5. QA against the brief
+            asset_failures = validate_asset_briefs(package)
+            if asset_failures:
+                preflight_failures.extend(asset_failures)
+                warnings.extend(asset_failures)
+
+            # 6. QA against the brief plus deterministic preflight failures.
             qa_raw, qa_result = await qa_editor.review(
                 runner, brand, cfg, package,
                 content_format=fmt, topic_title=brief.topic,
                 recent_content=recent, models=models, brief=brief,
+                preflight_failures=preflight_failures,
             )
 
         # --- persist ------------------------------------------------------
@@ -255,6 +291,11 @@ async def produce_brief(
             content_id, approved=qa_result.approved,
             composite=qa_result.composite, qa_json=dumps(qa_result.model_dump()),
         )
+        artifact_path = export_content_package(
+            content_id=content_id,
+            package=package,
+            qa=qa_result,
+        )
         repos.briefs.set_status(
             brief.brief_id,
             BriefStatus.READY if qa_result.approved else BriefStatus.APPROVED,
@@ -276,6 +317,7 @@ async def produce_brief(
             "package": package,
             "plan": plan,
             "hook_set": hook_set,
+            "story_review": story_review,
             "qa": qa_result,
             "warnings": warnings,
             "status": (
@@ -286,6 +328,7 @@ async def produce_brief(
             "cost": round((cost["estimated_cost"] or 0.0) if cost else 0.0, 6),
             "tokens": (cost["total_tokens"] or 0) if cost else 0,
             "trace_id": gen.trace_id,
+            "artifact_path": str(artifact_path),
         }
     except Exception as exc:
         repos.briefs.set_status(brief.brief_id, BriefStatus.APPROVED)

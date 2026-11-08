@@ -93,6 +93,7 @@ def finalise(
     qa_model: str,
     qa_prompt_version: str,
     brief: ContentBrief | None = None,
+    preflight_failures: list[str] | None = None,
 ) -> QAResult:
     """Apply the gates. When a brief is supplied, coverage and thesis drift are
     checked in Python from the reported sections rather than being left to the
@@ -122,6 +123,9 @@ def finalise(
 
     if verdict.thesis_drift:
         failed.append("THESIS_DRIFT")
+
+    for failure in preflight_failures or []:
+        failed.append(f"PREFLIGHT:{failure}")
 
     return QAResult(
         approved=not failed,
@@ -196,6 +200,7 @@ async def review(
     recent_content: list[dict[str, Any]] | None = None,
     models: ModelsConfig | None = None,
     brief: ContentBrief | None = None,
+    preflight_failures: list[str] | None = None,
 ) -> tuple[TrackedResult[QAVerdict], QAResult]:
     agent, model, prompt_version = build_agent(
         AGENT_KEY,
@@ -230,5 +235,6 @@ async def review(
         qa_model=model,
         qa_prompt_version=prompt_version,
         brief=brief,
+        preflight_failures=preflight_failures,
     )
     return result, qa_result

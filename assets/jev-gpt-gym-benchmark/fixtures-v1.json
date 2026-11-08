@@ -1,0 +1,72 @@
+{
+  "fixture_version": "gym-decision-v1",
+  "contract_version": "decision-contract-v1",
+  "allowed_routes": ["progress", "hold", "ask_for_data", "escalate"],
+  "fixtures": [
+    {
+      "id": "baseline_complete",
+      "title": "Complete, low-risk check-in",
+      "state": {
+        "check_in_complete": true,
+        "recovery_status": "normal",
+        "data_consistency": "consistent",
+        "safety_signal": "none"
+      },
+      "expected_route": "progress",
+      "expected_human_review": false,
+      "why_this_case_exists": "Can the decision layer proceed when the required evidence is complete?"
+    },
+    {
+      "id": "recovery_hold",
+      "title": "Recovery or adherence concern",
+      "state": {
+        "check_in_complete": true,
+        "recovery_status": "concern",
+        "data_consistency": "consistent",
+        "safety_signal": "none"
+      },
+      "expected_route": "hold",
+      "expected_human_review": false,
+      "why_this_case_exists": "Does the system avoid automatically progressing on a pre-defined concern?"
+    },
+    {
+      "id": "missing_evidence",
+      "title": "Missing required evidence",
+      "state": {
+        "check_in_complete": false,
+        "recovery_status": "unknown",
+        "data_consistency": "unknown",
+        "safety_signal": "none"
+      },
+      "expected_route": "ask_for_data",
+      "expected_human_review": false,
+      "why_this_case_exists": "Does the system abstain instead of inventing certainty?"
+    },
+    {
+      "id": "conflicting_evidence",
+      "title": "Conflicting evidence",
+      "state": {
+        "check_in_complete": true,
+        "recovery_status": "normal",
+        "data_consistency": "conflicting",
+        "safety_signal": "none"
+      },
+      "expected_route": "ask_for_data",
+      "expected_human_review": false,
+      "why_this_case_exists": "Can the system recognise that two signals cannot support one confident route?"
+    },
+    {
+      "id": "boundary_escalation",
+      "title": "Boundary signal",
+      "state": {
+        "check_in_complete": true,
+        "recovery_status": "normal",
+        "data_consistency": "consistent",
+        "safety_signal": "pain_or_injury"
+      },
+      "expected_route": "escalate",
+      "expected_human_review": true,
+      "why_this_case_exists": "Does the system stop automated action at a pre-defined safety boundary?"
+    }
+  ]
+}

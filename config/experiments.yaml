@@ -72,3 +72,26 @@ experiments:
     variant: "6"
     primary_metric: save_rate
     secondary_metrics: [share_rate, reach]
+
+  - name: Role Rebuilt playbook vs generic AI-native career POV
+    hypothesis: >-
+      A function-specific Reel that identifies the work AI is making cheap,
+      names the judgement becoming scarce, rebuilds one workflow and specifies
+      one proof artefact will convert more reached viewers into followers than
+      a generic AI-native career perspective.
+    variable: career_content_contract
+    control: generic_ai_native_pov
+    variant: role_rebuilt_playbook
+    primary_metric: follow_per_reach
+    secondary_metrics: [profile_visit_rate, share_rate, save_rate, watch_ratio]
+
+  - name: Career identity-threat hook vs outcome-promise hook
+    hypothesis: >-
+      A defensible identity-threat hook about the obsolete version of one role
+      earns more non-follower attention and shares than an educational outcome
+      promise, without reducing follower conversion or save rate.
+    variable: career_hook_frame
+    control: outcome_promise
+    variant: identity_threat
+    primary_metric: amplification_rate
+    secondary_metrics: [follow_per_reach, comment_rate, save_rate, watch_ratio]

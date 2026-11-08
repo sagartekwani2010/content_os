@@ -7,6 +7,8 @@ in brand strategy is a reviewable diff rather than a prompt edit.
 
 from __future__ import annotations
 
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 
@@ -37,6 +39,19 @@ class ProductionProfile(BaseModel):
     constraints: list[str] = Field(default_factory=list)
 
 
+class ContentLearning(BaseModel):
+    """A human-approved rule distilled from a published-content review.
+
+    Keeping the rule, evidence source, and confidence together prevents a
+    one-off aesthetic preference from quietly becoming permanent brand policy.
+    """
+
+    category: Literal["content", "visual", "technical", "brand", "process"]
+    rule: str
+    confidence: Literal["low", "medium", "high"]
+    source: str
+
+
 class BrandMemory(BaseModel):
     version: int = 1
     positioning: str
@@ -53,6 +68,8 @@ class BrandMemory(BaseModel):
 
     winning_hook_patterns: list[str] = Field(default_factory=list)
     losing_hook_patterns: list[str] = Field(default_factory=list)
+    communication_principles: list[str] = Field(default_factory=list)
+    content_learning_memory: list[ContentLearning] = Field(default_factory=list)
 
     winning_formats: list[str] = Field(default_factory=list)
     historical_insights: list[str] = Field(default_factory=list)
@@ -118,6 +135,23 @@ class BrandMemory(BaseModel):
             lines.append("")
             lines.append("HOOK PATTERNS THAT FAIL (never use):")
             lines += [f"  - {h}" for h in self.losing_hook_patterns]
+
+        if self.communication_principles:
+            lines.append("")
+            lines.append("COMMUNICATION PRINCIPLES (apply these before using jargon):")
+            lines += [f"  - {principle}" for principle in self.communication_principles]
+
+        if self.content_learning_memory:
+            lines.append("")
+            lines.append(
+                "APPROVED CONTENT LEARNINGS (apply these; do not treat them as "
+                "optional stylistic suggestions):"
+            )
+            for learning in self.content_learning_memory:
+                lines.append(
+                    f"  - [{learning.category}; {learning.confidence} confidence] "
+                    f"{learning.rule} (source: {learning.source})"
+                )
 
         lines.append("")
         lines.append("PRODUCTION REALITY:")

@@ -13,7 +13,7 @@ from pydantic import BaseModel
 
 from content_os.config import BrandMemory, ModelsConfig
 from content_os.models.brief import ContentBrief
-from content_os.models.content import Scene
+from content_os.models.content import AssetBrief, Scene
 from content_os.tracking.run_logger import (
     TrackedResult,
     TrackedRunner,
@@ -32,6 +32,8 @@ class VisualPlan(BaseModel):
     screen_demo_segments: list[str]
     b_roll_requirements: list[str]
     avatar_requirements: list[str]
+    asset_briefs: list[AssetBrief]
+    thumbnail_asset: AssetBrief
     production_notes: list[str]
     estimated_production_minutes: int
 
@@ -39,15 +41,20 @@ class VisualPlan(BaseModel):
 class CarouselVisualPlan(BaseModel):
     visual_structure: list[str]
     slide_visual_directions: list[str]
+    asset_briefs: list[AssetBrief]
+    thumbnail_asset: AssetBrief
     production_notes: list[str]
     estimated_production_minutes: int
 
 
 def build_context(
-    brand: BrandMemory, brief: ContentBrief, package: Any, fmt: str
+    brand: BrandMemory, brief: ContentBrief | None, package: Any, fmt: str
 ) -> str:
     parts = [
         f"FORMAT: {fmt}",
+        "",
+        "=== APPROVED BRAND AND CONTENT LEARNINGS ===",
+        brand.as_prompt_context(),
         "",
         "PRODUCTION MODES AVAILABLE: "
         + ", ".join(brand.production.available_modes),
@@ -57,7 +64,7 @@ def build_context(
     ]
     parts += [f"  - {c}" for c in brand.production.constraints]
 
-    if brief.visual_direction:
+    if brief and brief.visual_direction:
         parts += ["", f"HUMAN VISUAL DIRECTION (respect this): {brief.visual_direction}"]
 
     parts += ["", "CONTENT TO PLAN VISUALS FOR:", package.model_dump_json(indent=2)]
@@ -73,7 +80,7 @@ def build_context(
 async def plan_visuals(
     runner: TrackedRunner,
     brand: BrandMemory,
-    brief: ContentBrief,
+    brief: ContentBrief | None,
     package: Any,
     *,
     fmt: str,
@@ -96,7 +103,7 @@ async def plan_visuals(
         model=model,
         prompt_version=prompt_version,
         content_id=content_id,
-        extra_metadata={"brief_id": brief.brief_id, "format": fmt},
+        extra_metadata={"brief_id": brief.brief_id if brief else "", "format": fmt},
     )
 
 
@@ -113,11 +120,15 @@ def apply_to_reel(package: Any, visual: VisualPlan) -> Any:
     package.screen_demo_segments = visual.screen_demo_segments
     package.b_roll_requirements = visual.b_roll_requirements
     package.avatar_requirements = visual.avatar_requirements
+    package.asset_briefs = visual.asset_briefs
+    package.thumbnail_asset = visual.thumbnail_asset
     return package
 
 
 def apply_to_carousel(package: Any, visual: CarouselVisualPlan) -> Any:
     package.visual_structure = visual.visual_structure or package.visual_structure
+    package.asset_briefs = visual.asset_briefs
+    package.thumbnail_asset = visual.thumbnail_asset
     for slide, direction in zip(package.slides, visual.slide_visual_directions):
         if direction:
             slide.visual_direction = direction

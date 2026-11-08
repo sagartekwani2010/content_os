@@ -1,0 +1,113 @@
+brief_id: skillrl-agent-skills-paper-reel
+
+topic: "SkillRL — how agents turn trajectories into reusable skills"
+
+core_thesis: >
+  Storing past agent trajectories is not the same as learning from them.
+  SkillRL proposes a pipeline that distils successful and failed trajectories
+  into structured general and task-specific skills, retrieves relevant skills
+  at runtime and evolves the skill library from validation failures while the
+  policy is trained.
+
+why_this_matters: >
+  Builders and interview candidates often describe longer context, raw logs or
+  episodic memory as agent learning without explaining what reusable behaviour
+  was abstracted, how it is selected or how failure changes future behaviour.
+
+learning_objective: >
+  After viewing, a person can distinguish a trajectory, episodic memory, a
+  reusable skill and a learned policy, and can name the four system contracts
+  required for experience to improve future agent behaviour: validation,
+  abstraction, retrieval and controlled evolution.
+
+audience_takeaway: >
+  Do not call stored history learning; show what was abstracted, when it is
+  retrieved and how validated failure changes the skill or policy.
+
+target_audience:
+  - AI engineers
+  - Software developers
+  - Agent builders
+  - AI role candidates preparing for agent-system interviews
+  - Technical product and engineering leaders
+
+brand_pillar: ai_builder
+content_format: reel
+
+hook_direction: >
+  Challenge the assumption that an agent learns merely because previous runs
+  were stored, then reveal the trajectory-to-skill mechanism.
+
+approved_hook_points:
+  - "Most agents do not learn from experience; they accumulate longer histories."
+  - "A trajectory records what happened. A skill compresses what to do next."
+  - "Agent memory is not automatically agent learning."
+
+high_level_sections:
+  - the raw-trajectory problem
+  - successful-pattern and failure-lesson distillation
+  - general and task-specific SkillBank organisation and retrieval
+  - recursive skill evolution from validation failures during reinforcement learning
+  - author-reported evidence and reproduction boundary
+  - transferable production and interview rule
+
+core_examples:
+  - "Trajectory: observation → action → reward → next observation."
+  - "Illustrative skill fields: name, principle, when_to_apply."
+  - "Illustrative failure lesson: failure point, incorrect action, better action and prevention rule."
+
+preferred_pov: >
+  Source-led practitioner interpretation: explain what the authors built, what
+  the mechanism changes in agent design and what has not been independently
+  reproduced by Sagar.
+
+desired_tone: >
+  Technically precise, interview-ready, sceptical of inflated learning claims,
+  visually clear and accessible to a software practitioner.
+
+visual_direction: >
+  Face-led 9:16 Reel with a light editorial system. Use the real paper title and
+  architecture as source evidence, then show phone-readable trajectory,
+  SkillBank retrieval and validation-update diagrams. No robots, neural-network
+  decoration, fake terminals or raw chain-of-thought.
+
+desired_duration_seconds: 60
+
+factual_claims_to_verify:
+  - "The paper was submitted to arXiv on 9 February 2026."
+  - "The project repository announced NeurIPS 2026 acceptance on 24 September 2026."
+  - "The mechanism uses successful and failed trajectories, a hierarchical SkillBank, retrieval and recursive evolution during RL."
+  - "Any performance or compression result is author-reported and benchmark-specific."
+
+must_include:
+  - "A precise distinction between trajectory, memory, skill and policy."
+  - "Both successful patterns and failure lessons."
+  - "General skills, task-specific skills and runtime retrieval."
+  - "Validation failure as the trigger for controlled skill evolution."
+  - "An explicit author-reported/not-independently-reproduced disclosure."
+
+must_avoid:
+  - "Claiming that saving logs makes an agent learn."
+  - "Presenting benchmark results as universal production gains."
+  - "Claiming Sagar reproduced SkillRL."
+  - "Equating runtime prompt injection with reinforcement learning."
+  - "Private chain-of-thought or invented paper mechanisms."
+
+cta_direction: >
+  After the transferable system-design implication, invite people building
+  agents to reach out through the link in Sagar's bio to discuss agent
+  architectures. Keep it conversational and non-salesy.
+
+urgency: this_week
+priority: 1
+status: APPROVED
+approved_by: Sagar
+
+references:
+  - "https://arxiv.org/abs/2602.08234"
+  - "https://github.com/aiming-lab/SkillRL"
+
+notes: >
+  The paper's public v1 and repository are the authoritative sources. Attribute
+  quantitative results to the authors and retain the reproduction boundary in
+  the spoken script or on-screen disclosure.

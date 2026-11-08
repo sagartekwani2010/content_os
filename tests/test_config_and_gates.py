@@ -47,7 +47,7 @@ class TestConfigValidation:
 
     def test_portfolio_targets_must_sum_to_one(self):
         with pytest.raises(ValueError, match="must sum to 1.0"):
-            PortfolioConfig(targets={"ai_builder": 0.9, "ai_pov": 0.5})
+            PortfolioConfig(targets={"ai_builder": 0.9, "ai_career": 0.5})
 
     def test_every_configured_prompt_version_exists(self):
         models = load_models_config()
@@ -302,13 +302,26 @@ class TestBrandContextCompleteness:
         for topic in brand.avoided_topics:
             assert topic in context
 
+    def test_communication_principles_reach_the_prompt(self, brand):
+        context = brand.as_prompt_context()
+        assert brand.communication_principles
+        for principle in brand.communication_principles:
+            assert principle[:40] in context
+
+    def test_content_learning_memory_reaches_the_prompt(self, brand):
+        context = brand.as_prompt_context()
+        assert brand.content_learning_memory
+        for learning in brand.content_learning_memory:
+            assert learning.rule[:40] in context
+            assert learning.source in context
+
     def test_every_declared_list_field_is_surfaced(self, brand):
         """Guard against adding a field to brand.yaml and forgetting to render it."""
         context = brand.as_prompt_context()
         for field in (
             "target_audiences", "preferred_topics", "avoided_topics",
             "signature_opinions", "winning_hook_patterns", "losing_hook_patterns",
-            "identity_themes",
+            "identity_themes", "communication_principles",
         ):
             values = getattr(brand, field)
             if values:

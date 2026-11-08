@@ -1,4 +1,8 @@
-# Model and prompt-version configuration.
+# Codex SDK stage routing and prompt metadata.
+#
+# Each pipeline stage runs in a Codex SDK thread using the user's saved ChatGPT
+# authentication. This file selects a Codex model and prompt for that stage;
+# its legacy API pricing entries are retained only for historical records.
 # No model name is hardcoded anywhere in the codebase. Changing a model or a
 # prompt version is a config edit, and both are recorded with every artifact so
 # we can tell whether a better result came from a better topic, a better prompt,
@@ -40,20 +44,28 @@ agents:
 
   reel_writer:
     model: gpt-5.6-sol
-    prompt_version: reel_writer_v3
+    prompt_version: reel_writer_v6
     reasoning_effort: medium
     verbosity: medium
 
+  story_judge:
+    # Independent from the writer's stronger creative model. The role is
+    # adversarial first-viewer judgement, not prose generation.
+    model: gpt-5.6-terra
+    prompt_version: story_judge_v1
+    reasoning_effort: high
+    verbosity: low
+
   carousel_writer:
     model: gpt-5.6-sol
-    prompt_version: carousel_writer_v3
+    prompt_version: carousel_writer_v4
     reasoning_effort: medium
     verbosity: medium
 
   qa:
     # QA must be sceptical and consistent rather than creative.
     model: gpt-5.6-sol
-    prompt_version: qa_v2
+    prompt_version: qa_v4
     reasoning_effort: high
     verbosity: low
 
@@ -76,14 +88,14 @@ agents:
     # Must stay inside human-approved conceptual territory, which is a
     # constraint-following task more than a creative one.
     model: gpt-5.6-sol
-    prompt_version: hook_expander_v1
+    prompt_version: hook_expander_v2
     reasoning_effort: medium
     verbosity: low
 
   visual_planner:
     # Mechanical translation of finished copy into shots.
     model: gpt-5.6-terra
-    prompt_version: visual_planner_v1
+    prompt_version: visual_planner_v4
     reasoning_effort: medium
     verbosity: medium
 
