@@ -2,7 +2,7 @@
 # The performance analyst appends to historical_insights; everything else is
 # human-owned and requires explicit approval to change.
 
-version: 9
+version: 10
 positioning: >-
   Experienced AI practitioner and leader building the one-stop learning system
   for agents: how agentic systems work, how to build and evaluate them through
@@ -96,6 +96,12 @@ signature_opinions:
 # Recurring formats the audience learns to recognise. A new episode of an
 # established series compounds; a one-off does not.
 signature_series:
+  - name: "Generic AI"
+    description: >-
+      Accessible, face-led explanations of how AI models are built, improved,
+      evaluated and used, including the people and skills behind that work.
+      Start with a familiar question, teach one mechanism, and connect it to
+      the creator's firsthand work or a concrete follow-up experiment.
   - name: "Agents, End to End"
     description: >-
       The one-stop agent knowledge system. Progress from LLM foundations to
@@ -172,6 +178,18 @@ communication_principles:
 # visual plans and QA rather than live as a forgotten note. Confidence can be
 # lowered or a rule retired if later evidence contradicts it.
 content_learning_memory:
+  - category: content
+    rule: >-
+      When the creator asks for theatrical or broad spoken copy, let the drama
+      come from the question, pacing and concrete example. Keep the Reel easy
+      to say aloud; move detailed job titles, qualifications and citations to
+      production notes or the caption when they slow the story. Brand names
+      may orient the audience, but do not invent a company's internal process,
+      hiring outcome, model result or numerical claim. Label illustrative
+      scenarios as such. Apply this to Generic AI scripts as well as other
+      creator-led Reels when the creator requests that tone.
+    confidence: high
+    source: explicit creator direction, 2026-11-09
   - category: content
     rule: >-
       For a recorded Reel, preserve the creator's approved hook promise and

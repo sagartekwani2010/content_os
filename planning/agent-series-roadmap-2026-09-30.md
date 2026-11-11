@@ -85,16 +85,29 @@ Within each priority tier, order items by source publication/release date when
 known. Never invent a date; use `date not stated — verified YYYY-MM-DD` when the
 primary source does not expose one.
 
-**Last refreshed:** 2026-11-02  
-**Review window:** 2026-10-26 through 2026-11-02
+**Last refreshed:** 2026-11-09
 
-The 2026-10-26 refresh was interrupted before a verified update was saved.
-The entries below cover the current seven-day window; earlier records remain
-in the historical table. Design recommendations are editorial implications of
-the cited evidence, rather than independently validated production results.
+**Review window:** 2026-11-02 through 2026-11-09
+
+Design recommendations below are editorial implications of the cited evidence.
+Reported evaluations have not been independently reproduced in this repository.
 
 | Priority | Development | Source date | Canonical topic | Single transferable concept | Agent-system decision that changes | Evidence state | Primary source |
 |---|---|---|---|---|---|---|---|
+| 1 | The components of agent memory — correcting notes through offline review | 2026-11-06 | `MEM-07` | Persistent notes need a correction loop that checks claims against original records before future sessions rely on them. | Retain source transcripts, attach evidence to notes, and trigger bounded background reconciliation for frequently used or changing information; validate corrected behaviour against an uncorrected baseline and account for maintenance compute. | **Demonstrated** — Anthropic reports first-party experiments and example traces, including a corrected navigation note; limited task-specific evidence does not establish a universal benefit. | [Anthropic engineering report](https://www.anthropic.com/research/components-of-agent-memory) |
+| 2 | Harness the Memory — revised controlled evaluation of memory substrates | 2026-11-04 v2; original 2026-08-15 | `OPS-04` | Memory quality and cost depend on the task and operating regime; one storage or retrieval method need not win across regimes. | Compare substrates under a matched harness and quality floor, including write, read and management costs; choose per measured task and history-length regime before attempting query-level routing. | **Prototype** — revised paper compares 11 methods, three models and four benchmark suites using 26 metrics; findings are author-reported and not independently reproduced here. | [arXiv 2608.15008v2](https://arxiv.org/abs/2608.15008v2) |
+
+#### Previous frontier entries retained for continuity
+
+These items remain part of the historical frontier record but are below the
+current seven-day queue.
+
+| Development | Source date | Canonical topic | Single transferable concept | Agent-system decision that changes | Evidence state | Primary source |
+|---|---|---|---|---|---|---|---|
+| ARTEX and Friends: agentic offensive frameworks observed in intrusions | 2026-10-30 report; observations since late August | `ACT-04` | Automated attack chains amplify the consequences of credentials and execution permissions that span multiple systems. | Isolate agent control planes, use short-lived scoped credentials, segment execution environments and detect suspicious sequences of actions across tools. | **Demonstrated** — GTIG/Mandiant reports observations from incident response and telemetry; underlying incidents are not independently verified here. | [Google threat intelligence report](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) |
+| When Stored Evidence Stops Being Usable — camera-ready revision | 2026-10-29 v2; original 2026-05-08 | `REL-02` | Test memory with fixed relevant evidence while irrelevant history grows, so usable scale is measured under an explicit interaction budget. | Add growth fixtures and report budget-compliant reliability, tail memory-call burden and the scale at which reliability misses its target for each model/interface pair. | **Prototype** — revised paper evaluation on LongMemEval and LoCoMo; author-reported results, not reproduced here. | [arXiv 2605.07313v2](https://arxiv.org/abs/2605.07313v2) |
+| How AI agents shape experts' judgment calls | 2026-10-27 | `HUM-02` | Human sign-off does not automatically provide an independent judgment when the agent frames the available choices. | For consequential judgment calls, elicit the person's criteria before offering a recommendation and present the strongest alternatives with explicit trade-offs; evaluate whether approval remains independent. | **Demonstrated** — randomized agent-lean study with 50 professional analysts in one task and one model; generalization and proposed interface mitigations remain unproven. | [Anthropic study](https://www.anthropic.com/research/agents-judgment-calls) |
+| Agent Memory as Recommendation | 2026-10-26 | `MEM-06` | Memory selection is a budgeted set-selection problem: the selected context must jointly contain the evidence needed to answer. | Evaluate candidate generation, ranking and final context construction separately; compare complete-evidence coverage and serving cost against direct retrieval before adding LLM-based memory processing. | **Prototype** — AgentMemRec paper results on LongMemEval and LoCoMo; author-reported gains, not independently reproduced here. | [arXiv 2610.34673](https://arxiv.org/abs/2610.34673) |
 | 1 | ARTEX and Friends: agentic offensive frameworks observed in intrusions | 2026-10-30 report; observations since late August | `ACT-04` | Automated attack chains amplify the consequences of credentials and execution permissions that span multiple systems. | Isolate agent control planes, use short-lived scoped credentials, segment execution environments and detect suspicious sequences of actions across tools. | **Demonstrated** — GTIG/Mandiant reports observations from incident response and telemetry; underlying incidents are not independently verified here. | [Google threat intelligence report](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) |
 | 2 | When Stored Evidence Stops Being Usable — camera-ready revision | 2026-10-29 v2; original 2026-05-08 | `REL-02` | Test memory with fixed relevant evidence while irrelevant history grows, so usable scale is measured under an explicit interaction budget. | Add growth fixtures and report budget-compliant reliability, tail memory-call burden and the scale at which reliability misses its target for each model/interface pair. | **Prototype** — revised paper evaluation on LongMemEval and LoCoMo; author-reported results, not reproduced here. | [arXiv 2605.07313v2](https://arxiv.org/abs/2605.07313v2) |
 | 3 | How AI agents shape experts' judgment calls | 2026-10-27 | `HUM-02` | Human sign-off does not automatically provide an independent judgment when the agent frames the available choices. | For consequential judgment calls, elicit the person's criteria before offering a recommendation and present the strongest alternatives with explicit trade-offs; evaluate whether approval remains independent. | **Demonstrated** — randomized agent-lean study with 50 professional analysts in one task and one model; generalization and proposed interface mitigations remain unproven. | [Anthropic study](https://www.anthropic.com/research/agents-judgment-calls) |
@@ -126,17 +139,31 @@ current seven-day queue.
 | LTX Dub-It beta | Date not stated — verified 2026-09-30 | `MMD-04` | Generative video can become a bounded action inside an agent workflow. | Put media generation behind explicit review criteria instead of treating a generated asset as an automatically publishable outcome. | **Vendor claim** — documented beta capability; validate the selected example before presenting a result. | [LTX Dub-It beta guide](https://docs.ltx.io/open-source-model/feature-guides/audio/dub-it-beta) |
 | MemOS DeepSeek Harness integration | 2026-08-17 repository announcement | `MEM-04` | Persistent memory can be attached around an agent runtime without becoming the agent itself. | Keep the memory service separate from decision policy and define an explicit persistence boundary. | **Repository claim** — architecture and performance have not been independently reproduced here. | [MemOS repository](https://github.com/MemTensor/MemOS) |
 
+
 #### Latest-first candidate queue for the next Agent Series week
 
 This is a recommendation for Sagar's approval, not a change to any approved
 publishing queue.
 
-1. **`ACT-04` — Permissions across an attack chain (October 30):** explain how
-   credential scope and execution isolation limit an automated sequence's reach.
-2. **`REL-02` — Memory growth fixtures (October 29 revision):** show whether the
-   same evidence remains usable as irrelevant history grows under a fixed budget.
-3. **`HUM-02` — Independent approval (October 27):** examine what a person must
-   decide before an agent's recommendation can frame the choice.
+1. **`MEM-07` — Correcting a remembered mistake (November 6):** examine a
+   stored claim, its original evidence and the behaviour that changes after a
+   correction. This directly advances the earlier experience-learning theme.
+2. **`OPS-04` — Choosing memory by measured operating regime (November 4
+   revision):** explain how task quality and total memory maintenance cost
+   determine which method earns its place.
+
+**Refresh note (2026-11-09):** No new canonical topic is proposed. Selected
+items fit the approved builder, memory and production-economics pillars and
+each changes one reusable decision. The revised paper is dated as a revision.
+“Delivered, Not Used” (arXiv 2611.01718) was screened out of this week's queue:
+its primary submission date is November 1 despite later discovery-feed dates.
+The official OpenAI API changelog was reviewed; model and media releases and
+outbound SIP availability were not elevated without a stronger transferable
+system decision. Some broad web searches did not return; this is a bounded
+primary-source review, not a claim of exhaustive coverage.
+
+**Previous recommendation retained (2026-11-02):** ACT-04 → REL-02 → HUM-02.
+The October 26 refresh was interrupted before a verified update was saved.
 
 **Refresh note (2026-11-02):** No new canonical topic is proposed. This week's
 official OpenAI documentation review found model launches and subscription API
@@ -150,6 +177,7 @@ bounded-decision principle was already represented. On 2026-10-12, the Decisions
 API record advanced from limited preview to beta; no new canonical topic was
 proposed. Previous candidate recommendations were ACT-04 → MEM-06 → REL-01
 (October 12) and REL-07 → LLM-06 → REL-03 (October 19).
+
 
 The next weekly refresh must retain still-relevant items, insert stronger new
 developments above them, lower stale items and record the primary source used.

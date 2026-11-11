@@ -12,7 +12,8 @@ Treat the recorded argument and the creator's latest approved order as the sourc
 1. Read the brief, approved script, latest edit notes, and all supplied recordings. Probe duration, dimensions, frame rate, audio, and orientation. Keep source files untouched.
 2. Transcribe each recording with source timecodes. Locate every required idea and every alternate take. Build a take log with exact in/out, spoken line, energy, eye line, sound, completeness, and why a take wins or loses.
 3. Write a beat checklist before cutting. Include the hook, setup, each level or argument, transitions, technical points, and ending. Mark any line that is unrecorded or only partially recorded. Never imply a missing line was captured.
-4. Pick speech at sentence or thought boundaries. Keep the opening and ending specifically approved by the creator. If the user reports a missing or wrong phrase, find the actual source take and correct the timeline.
+4. Review each candidate take from its first usable frame through its last usable frame, including the final two seconds and the frames immediately after the spoken line. Do not choose from a midpoint sample. Use the last repeated take as a preference only when its wording, energy, sound, and eye line are at least as good as the earlier complete takes.
+5. Pick speech at sentence or thought boundaries. Keep the opening and ending specifically approved by the creator. If the user reports a missing or wrong phrase, find the actual source take and correct the timeline.
 
 ## 2. Build the narration cut first
 

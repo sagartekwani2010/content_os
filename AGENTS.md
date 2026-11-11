@@ -16,6 +16,15 @@ with historical schemas and optional local SDK utilities, not as the runner.
   in place when changing its meaning.
 - `HANDOFF.md` records the system's decisions and current operating state.
 
+## Recovering a stalled Codex chat
+
+The repository cannot detect or resume a stuck Codex desktop turn. To reduce
+recovery work, run `python scripts/prepare_chat_handoff.py [path/to/focus-file]`
+and paste its output into a fresh chat. Add `--note "..."` for decisions that
+exist only in the conversation. The packet includes current project handoff,
+Git state, and the selected file; it does not include chat transcripts or
+attachments.
+
 ## When asked to produce content
 
 1. Read `CODEX_WORKFLOW.md`, the requested brief, `config/brand.yaml`, and the

@@ -17,6 +17,26 @@ and token usage locally. `openai-agents` remains installed but its API-key
 
 **Human decides WHAT and WHY. Codex decides HOW. Python remains deterministic.**
 
+## Generic AI two-part pilot — 9 November 2026
+
+The creator is developing two connected, independently understandable Reels for
+the public **Generic AI** series. Part 1 asks which kinds of work sit behind
+models such as ChatGPT and Claude, using pretraining, post-training and evals as
+the three answers. It ends with Sagar's firsthand post-training and evals work.
+The current spoken draft is in
+`outputs/ai-training-jobs-reel-01/SCRIPT_DRAFT.md`; its earlier version is
+preserved alongside it. Part 2 is intended to show a small experiment that
+demonstrates those skills, but its script and evidence are still to be settled.
+Sagar intends to prepare both videos on 9 November, then post one on 10
+November and the other on Wednesday 11 November. No publication is scheduled
+by this repo.
+
+For this series, the creator approved broad, theatrical spoken framing when it
+helps the story. Keep exact titles and qualifications out of the narration
+when they slow it down; retain factual support in production notes and never
+invent company-specific outcomes or data. The reusable guidance is in
+`.agents/skills/reel-script-writing/SKILL.md` and `config/brand.yaml` v10.
+
 ## Current Reel concept slate — 8 November 2026
 
 The creator selected three categories for a two-week, eight-Reel experiment:
@@ -161,6 +181,15 @@ Never weaken these constraints:
    files, including the existing `content_os_v3.db` brief data.
 4. Do not publish, schedule, spend, or imply approval without a human action.
 5. Prompt files are versioned. Copy a version before materially changing it.
+
+## Recovering a stalled Codex chat
+
+The repository cannot detect or resume a stuck Codex desktop turn. To reduce
+recovery work, run `python scripts/prepare_chat_handoff.py [path/to/focus-file]`
+and paste its output into a fresh chat. Add `--note "..."` for decisions that
+exist only in the conversation. The packet includes current project handoff,
+Git state, and the selected file; it does not include chat transcripts or
+attachments.
 
 ## How to work
 
