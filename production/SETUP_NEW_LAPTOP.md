@@ -1,5 +1,9 @@
 # Moving Content OS to another Mac
 
+For the current work-to-home migration, read `WORKSTATION_MIGRATION_HANDOFF.md`
+first. It lists the personal media and transcripts still needing a verified
+private backup. The steps below describe the software setup after that backup.
+
 Edits is a Mac app, so this assumes a Mac. Git carries the code, briefs, feedback and plans. It does
 **not** carry the files listed under "Bring across by hand".
 

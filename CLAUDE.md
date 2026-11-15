@@ -9,6 +9,7 @@ Codex. Read it first, then:
 4. `.agents/skills/reel-footage-edit/` (with `references/edits-automation.md`) before any edit, and
    `.agents/skills/reel-script-writing/` before any script.
 5. `production/RECORDING_KIT.md` when planning a shoot; `production/SETUP_NEW_LAPTOP.md` on a new Mac.
+6. `WORKSTATION_MIGRATION_HANDOFF.md` before moving creator media from the work Mac to the home Mac. The private media archive is not complete until its release is uploaded and verified.
 
 ## Rules that hold in every session
 
