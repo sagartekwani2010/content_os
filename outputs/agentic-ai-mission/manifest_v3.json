@@ -1,0 +1,150 @@
+[
+  {
+    "id": "01_intro",
+    "start": 898.98,
+    "end": 907.02,
+    "beat": "People ask how to start learning AI"
+  },
+  {
+    "id": "02_issues",
+    "start": 925.65,
+    "end": 928.55,
+    "beat": "The common issues are"
+  },
+  {
+    "id": "03_first",
+    "start": 917.6,
+    "end": 918.75,
+    "beat": "First"
+  },
+  {
+    "id": "04_content",
+    "start": 928.56,
+    "end": 932.0,
+    "beat": "Too much content",
+    "extend": 0.32
+  },
+  {
+    "id": "05_second_advice",
+    "start": 964.4,
+    "end": 969.12,
+    "beat": "Second: advice on IG and YouTube is largely theoretical"
+  },
+  {
+    "id": "07_third",
+    "start": 973.94,
+    "end": 976.76,
+    "beat": "Third: when they start learning something"
+  },
+  {
+    "id": "08_tech_change",
+    "start": 982.3,
+    "end": 984.55,
+    "beat": "Suddenly a new model gets dropped"
+  },
+  {
+    "id": "09_fourth_roadmap",
+    "start": 984.25,
+    "end": 987.6,
+    "beat": "Fourth: no roadmap"
+  },
+  {
+    "id": "10_relate",
+    "start": 987.55,
+    "end": 996.5,
+    "beat": "I faced the same issues when I started"
+  },
+  {
+    "id": "11_layoffs",
+    "start": 1012.8,
+    "end": 1020.37,
+    "beat": "Layoffs amplify anxiety"
+  },
+  {
+    "id": "12_what_works",
+    "start": 747.65,
+    "end": 750.18,
+    "beat": "What works for me"
+  },
+  {
+    "id": "13_obsessed",
+    "start": 97.02,
+    "end": 101.25,
+    "beat": "I keep up because I am usually obsessed; camera-facing take"
+  },
+  {
+    "id": "14_weekends_camera",
+    "start": 408.0,
+    "end": 413.45,
+    "beat": "Weekends go into research and building"
+  },
+  {
+    "id": "15_not_everyone",
+    "start": 1044.65,
+    "end": 1047.75,
+    "beat": "I understand not everyone can do that",
+    "visual": "full_card"
+  },
+  {
+    "id": "16_mission",
+    "start": 1073.17,
+    "end": 1079.3,
+    "beat": "I started this Instagram page to structure AI learning"
+  },
+  {
+    "id": "17_real_examples",
+    "start": 807.1,
+    "end": 809.7,
+    "beat": "Through real-world examples"
+  },
+  {
+    "id": "18_reel_intro",
+    "start": 1083.4,
+    "end": 1086.0,
+    "beat": "Over time I realized"
+  },
+  {
+    "id": "19_reel_pieces",
+    "start": 526.55,
+    "end": 529.8,
+    "beat": "Short reels show only pieces of the journey",
+    "visual": "full_card"
+  },
+  {
+    "id": "20_reel_complete",
+    "start": 1089.7,
+    "end": 1091.5,
+    "beat": "Not the complete journey"
+  },
+  {
+    "id": "21_solution_preface",
+    "start": 539.9,
+    "end": 541.1,
+    "beat": "To solve this problem",
+    "visual": "full_card"
+  },
+  {
+    "id": "21_companies_camera",
+    "start": 1094.35,
+    "end": 1097.75,
+    "beat": "Working with companies on solutions"
+  },
+  {
+    "id": "22_structured_details",
+    "start": 833.0,
+    "end": 839.75,
+    "beat": "Building structured AI learning; more details in weeks",
+    "extend": 0.22
+  },
+  {
+    "id": "24_breaking_camera",
+    "start": 560.15,
+    "end": 564.55,
+    "beat": "Keep breaking down important AI concepts"
+  },
+  {
+    "id": "25_meal_visual",
+    "visual": "gym_reel",
+    "beat": "Next: Gym Jarvis meal photo estimates"
+  }
+]

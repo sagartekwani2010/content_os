@@ -1,0 +1,7 @@
+Meet my Gym Jarvis.
+
+Many sleepless nights and hundreds of dollars went into building a system that reads my meals, analyzes my sets, scores my body each week, and explains why it makes a recommendation. Tomorrow's plan still waits for my approval.
+
+I'll break down one agent concept at a time so you can build your own. Which part should I explain first?
+
+#GymJarvis #AIAgents #BuildInPublic #FitnessTech #ClaudeFable52

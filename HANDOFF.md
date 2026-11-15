@@ -1,5 +1,16 @@
 # Handoff: Content OS
 
+## Current reels and repository map — 15 November 2026
+
+Start with [CURRENT_REEL_CONTEXT.md](CURRENT_REEL_CONTEXT.md) for the latest
+Gym Jarvis launch and Agentic AI learning-mission work. The dated edit decisions
+and creator feedback are in
+`feedback/gym-jarvis-and-learning-mission-2026-11-15.md`. The Workout HUD source
+is in `demos/workout-hud/`. `invideo_recreate` / TakeSelect Lab is a separate
+editing-tool repository; it is not the home of Content OS's editorial memory.
+The entries below are retained as historical decisions and may describe earlier
+drafts or delivery states.
+
 ## Current operating model
 
 Content OS is now operated through **Codex with ChatGPT authentication**. It is

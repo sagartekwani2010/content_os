@@ -9,7 +9,8 @@ window.HUD = {
   // 50 x sets done / planned + 30 x progress (0 to 1 vs last week) + 20 x (1 - form flags / 3).
   // history = the same score for the three previous weeks, oldest first.
   week: {
-    label: "Week 46",
+    label: "Week 46", photo: "media/me.jpg", focusY: 0.2,
+    pose: {"l_shoulder": [0.6805, 0.3356], "r_shoulder": [0.327, 0.3148], "l_elbow": [0.7648, 0.4812], "r_elbow": [0.22, 0.5201], "l_wrist": [0.6937, 0.3841], "r_wrist": [0.3204, 0.6594], "l_hip": [0.6408, 0.664], "r_hip": [0.4119, 0.659], "l_knee": [0.6645, 0.9283], "r_knee": [0.4503, 0.9057], "l_ankle": [0.6587, 0.9961], "r_ankle": [0.4944, 1.0]},
     parts: [
       { key: "shoulders", name: "Shoulders", done: 9,  planned: 10, progress: 0.6, flags: 0, history: [74, 78, 80] },
       { key: "chest",     name: "Chest",     done: 12, planned: 12, progress: 0.8, flags: 0, history: [85, 88, 90] },
@@ -76,22 +77,24 @@ window.HUD = {
     today: {
       label: "Today", date: "Thu 12 Nov", weight_kg: 78.3,
       meals: [
-        { key: "bf", name: "Breakfast", time: "08:05", img: null, items: [
-          { label: "Eggs x3",  box: [12, 27, 40, 27], grams: [150, 170], protein: [18, 20], kcal: [230, 260], tint: "#F0D879" },
-          { label: "Toast x2", box: [54, 31, 34, 24], grams: [60, 70],   protein: [5, 6],   kcal: [180, 210], tint: "#C89A5C" },
-          { label: "Banana",   box: [28, 58, 44, 18], grams: [110, 130], protein: [1, 2],   kcal: [110, 130], tint: "#E9D15A" } ] },
-        { key: "lu", name: "Lunch", time: "13:10", img: null, items: [
-          { label: "Rice",         box: [10, 51, 34, 24], grams: [180, 220], protein: [4, 6],   kcal: [250, 310], tint: "#E3E9EC" },
-          { label: "Dal",          box: [56, 25, 28, 20], grams: [150, 200], protein: [8, 12],  kcal: [170, 230], tint: "#D9A93F" },
-          { label: "Paneer sabzi", box: [14, 25, 30, 20], grams: [100, 140], protein: [12, 18], kcal: [240, 320], tint: "#A44E2C" },
-          { label: "Roti x2",      box: [52, 54, 36, 24], grams: [60, 80],   protein: [5, 7],   kcal: [170, 200], tint: "#C99A62" },
-          { label: "Curd",         box: [41, 38, 16, 11], grams: [80, 120],  protein: [3, 4],   kcal: [70, 90],   tint: "#F4F6F2" } ] },
-        { key: "di", name: "Dinner", time: "20:30", img: null, items: [
-          { label: "Chicken curry", box: [10, 27, 40, 25], grams: [170, 210], protein: [30, 38], kcal: [400, 480], tint: "#B5542B" },
-          { label: "Roti x3",       box: [50, 49, 40, 28], grams: [90, 120],  protein: [8, 10],  kcal: [340, 420], tint: "#C99A62" },
-          { label: "Salad",         box: [58, 25, 28, 18], grams: [80, 120],  protein: [1, 2],   kcal: [40, 60],   tint: "#6FA65B" } ] }
+        {"key": "bf", "name": "Breakfast", "time": "", "img": "media/breakfast.jpg", "items": [
+          {"label": "Besan chilla x2", "box": [37.9, 17.5, 57.0, 66.6], "grams": [160, 200], "protein": [12, 16], "kcal": [300, 380], "tint": "#888888"},
+          {"label": "Curd", "box": [6.2, 24.1, 31.7, 28.3], "grams": [110, 150], "protein": [4, 5], "kcal": [70, 95], "tint": "#888888"},
+          {"label": "Chutney, ketchup", "box": [17.8, 65.4, 26.4, 18.1], "grams": [25, 35], "protein": [0, 1], "kcal": [20, 35], "tint": "#888888"} ] },
+        {"key": "lu", "name": "Lunch", "time": "", "img": "media/lunch.jpg", "items": [
+          {"label": "Rice", "box": [41.4, 16.4, 43.1, 38.5], "grams": [200, 250], "protein": [5, 6], "kcal": [260, 330], "tint": "#888888"},
+          {"label": "Dal", "box": [14.1, 29.5, 35.9, 36.8], "grams": [180, 220], "protein": [9, 12], "kcal": [180, 240], "tint": "#888888"},
+          {"label": "Bhindi aloo", "box": [37.8, 59.2, 38.8, 25.4], "grams": [100, 130], "protein": [2, 3], "kcal": [110, 160], "tint": "#888888"} ] },
+        {"key": "di", "name": "Dinner", "time": "", "img": "media/dinner.jpg", "items": [
+          {"label": "Chicken", "box": [28.2, 17.8, 38.8, 24.1], "grams": [140, 180], "protein": [35, 45], "kcal": [240, 320], "tint": "#888888"},
+          {"label": "Roti x2", "box": [16.0, 44.3, 46.3, 41.2], "grams": [70, 90], "protein": [6, 8], "kcal": [200, 240], "tint": "#888888"},
+          {"label": "Aloo sabzi", "box": [60.2, 38.1, 23.8, 31.9], "grams": [100, 130], "protein": [2, 3], "kcal": [110, 150], "tint": "#888888"} ] },
+        {"key": "yo", "name": "Yogurt", "time": "", "img": "media/yogurt.jpg", "items": [
+          {"label": "Greek yogurt 90 g", "box": [22.7, 20.3, 60.8, 59.5], "grams": [85, 95], "protein": [7, 9], "kcal": [80, 100], "tint": "#888888"} ] },
+        {"key": "wh", "name": "Whey", "time": "", "img": "media/whey.jpg", "items": [
+          {"label": "Whey, 1 scoop", "box": [41.5, 16.2, 23.6, 25.8], "grams": [30, 40], "protein": [24, 32], "kcal": [120, 160], "tint": "#888888"} ] }
       ],
-      nudge: { ok: false, title: "Small fix", text: "Swap 1 roti at dinner for a protein bar. About +20 g protein, calories stay about level.", basis: "protein about 30 g short while calories are already over target" },
+      nudge: { ok: false, title: "Small fix", text: "Add a protein bar after dinner. About +20 g protein, calories stay under target.", basis: "protein is about 17 g short and calories still have room" },
       set: {
         lift: "Back squat", load_kg: 70, prev_load_kg: 65, video: null, pose: null, baseline: 39,
         reps: [ { knee_min: 84, lean_max: 39 }, { knee_min: 83, lean_max: 38 }, { knee_min: 84, lean_max: 40 },
@@ -101,22 +104,22 @@ window.HUD = {
         next: { kind: "hold", label: "Hold at 70 kg", basis: "Up from 65 kg yesterday. Form slipped late in the set." }
       },
       decisions: {
-        set: { label: "Set", routes: ["PROGRESS", "HOLD", "ASK_FOR_DATA", "ESCALATE"], pick: "HOLD",
-          observe: [ { short: "Load: 70 kg, up from 65 kg", ref: "set.load_kg" }, { short: "Lean 39° to 48° on rep 5", ref: "set.reps[4]" }, { short: "Depth held on all 6 reps", ref: "set.reps" } ],
-          propose: "Hold squat at 70 kg next leg day. Posture: needs improvement.", gate: "No change is applied until Sagar approves.",
-          reason: "R1 form changed late in the set at the new load, so the load does not move up." },
-        meal: { label: "Meals", routes: ["ADD", "SWAP", "REDUCE", "KEEP"], pick: "SWAP",
-          observe: [ { short: "Protein: about 110 g of 140 g", ref: "meals" }, { short: "Calories: about 2,455 of 2,300", ref: "meals" }, { short: "Dinner: 3 roti seen", ref: "meals[2].items" } ],
-          propose: "Swap 1 roti at dinner for a protein bar: about +20 g protein, calories about level.", gate: "No change is applied until Sagar approves.",
-          reason: "R2 protein is short while calories are already over, so adding food alone would overshoot." },
+        set: { label: "Set", routes: ["PROGRESS", "HOLD", "ASK_FOR_DATA", "ESCALATE"], pick: "PROGRESS",
+          observe: [ { short: "9 reps counted", ref: "set clip" }, { short: "Range steady, within 3%", ref: "set clip" }, { short: "Shoulders level, within 4°", ref: "set clip" } ],
+          propose: "Move the seated cable row up one step next pull day.", gate: "No change is applied until Sagar approves.",
+          reason: "R1 every rep matched the first, so the load can move up one step." },
+        meal: { label: "Meals", routes: ["ADD", "SWAP", "REDUCE", "KEEP"], pick: "ADD",
+          observe: [ { short: "Protein: about 123 g of 140 g", ref: "meals" }, { short: "Calories: about 1,950 of 2,300", ref: "meals" }, { short: "Whey and yogurt counted", ref: "meals" } ],
+          propose: "Add a protein bar after dinner: about +20 g protein, calories stay under target.", gate: "No change is applied until Sagar approves.",
+          reason: "R2 protein is short and calories still have room, so adding food fits." },
         part: { label: "Body part", routes: ["ADD_VOLUME", "KEEP", "REDUCE", "ASK_FOR_DATA"], pick: "ADD_VOLUME",
           observe: [ { short: "Core: 4 of 8 sets done", ref: "week.parts.core" }, { short: "Core score 54, down 8", ref: "week.parts.core" }, { short: "No form flags on core", ref: "week.parts.core" } ],
           propose: "Add 2 plank sets to tomorrow's session.", gate: "No change is applied until Sagar approves.",
           reason: "R3 lowest score this week, caused by missed sets, not by form." },
-        weight: { label: "Weight", routes: ["REDUCE", "KEEP", "INCREASE", "ASK_FOR_DATA"], pick: "REDUCE",
-          observe: [ { short: "Weight 78.3 kg, target 78.0", ref: "weight_kg" }, { short: "7-day average: 300 g over", ref: "weight log" }, { short: "Calories over target today", ref: "meals" } ],
-          propose: "Lower tomorrow's calories from 2,300 to 2,150 by cutting carbs: less rice, one roti fewer.", gate: "No change is applied until Sagar approves.",
-          reason: "R4 a small, steady overage, so a small carb cut and no change to protein." }
+        weight: { label: "Weight", routes: ["REDUCE", "KEEP", "INCREASE", "ASK_FOR_DATA"], pick: "KEEP",
+          observe: [ { short: "Weight 78.3 kg, target 78.0", ref: "weight_kg" }, { short: "7-day average: 300 g over", ref: "weight log" }, { short: "Calories under target today", ref: "meals" } ],
+          propose: "Keep tomorrow's calories at 2,300.", gate: "No change is applied until Sagar approves.",
+          reason: "R4 a small overage and calories were already under today, so no cut." }
       },
       plan: {
         title: "Tomorrow, proposed", status: "pending",
@@ -124,11 +127,11 @@ window.HUD = {
           { ex: "Barbell row",  last: "60 kg · 3 x 8",  next: "62.5 kg · 3 x 8", tag: "PROGRESS" },
           { ex: "Lat pulldown", last: "55 kg · 3 x 10", next: "55 kg · 3 x 10",  tag: "HOLD" },
           { ex: "Plank",        last: "2 sets",          next: "4 sets",           tag: "ADD", reason: "R3" },
-          { ex: "Squat, next leg day", last: "70 kg · 3 x 6", next: "70 kg · 3 x 6", tag: "HOLD", reason: "R1" } ] },
-        meals: [ { slot: "Breakfast", before: "Eggs, toast, banana", after: "Eggs, toast, banana" },
-                 { slot: "Lunch",     before: "Dal, rice 1 cup, paneer, 2 roti", after: "Dal, rice 3/4 cup, paneer, 2 roti", reason: "R4" },
-                 { slot: "Dinner",    before: "Chicken curry, 3 roti, salad", after: "Chicken curry, 2 roti, salad + protein bar", reason: "R2 R4" } ],
-        kcal: { from: 2300, to: 2150, reason: "Weight 300 g over target on the 7-day average. Fewer carbs, same protein." }
+          { ex: "Seated cable row", last: "9 reps, clean", next: "one step up", tag: "PROGRESS", reason: "R1" } ] },
+        meals: [ { slot: "Breakfast", before: "Besan chilla, curd", after: "Besan chilla, curd" },
+                 { slot: "Lunch",     before: "Dal, rice, bhindi aloo", after: "Dal, rice, bhindi aloo" },
+                 { slot: "Dinner",    before: "Chicken, 2 roti, aloo sabzi", after: "Chicken, 2 roti, aloo sabzi + protein bar", reason: "R2" } ],
+        kcal: { from: 2300, to: 2300, reason: "Calories were under target today. No change." }
       }
     }
   },

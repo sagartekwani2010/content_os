@@ -1,0 +1,7 @@
+I built a Gym Jarvis with Claude Fable 5.2.
+
+It reads my meals, watches my sets, scores my progress, and shows the evidence behind its recommendations. The next day's plan waits for my approval.
+
+Would you let an agent suggest your next workout?
+
+#GymJarvis #AIAgents #BuildInPublic #FitnessTech #ClaudeFable52

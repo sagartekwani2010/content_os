@@ -1,0 +1,138 @@
+{
+  "source": "IMG_3470_audio.m4a",
+  "speed": 1.2,
+  "total": 51.058,
+  "selects": [
+    {
+      "beat": "launch",
+      "source_in": 7.02,
+      "source_out": 10.84,
+      "one_x_in": 0,
+      "one_x_out": 3.82,
+      "output_in": 0.0,
+      "output_out": 3.183,
+      "spoken": "Anthropic just launched Claude Fable 5.2."
+    },
+    {
+      "beat": "dream",
+      "source_in": 109.14,
+      "source_out": 112.78,
+      "one_x_in": 3.82,
+      "one_x_out": 7.46,
+      "output_in": 3.183,
+      "output_out": 6.217,
+      "spoken": "And I used it to build something that I'd always wished for."
+    },
+    {
+      "beat": "name",
+      "source_in": 100.8,
+      "source_out": 102.8,
+      "one_x_in": 7.46,
+      "one_x_out": 9.46,
+      "output_in": 6.217,
+      "output_out": 7.883,
+      "spoken": "Meet my gym Jarvis."
+    },
+    {
+      "beat": "meal",
+      "source_in": 315.28,
+      "source_out": 320.55,
+      "one_x_in": 9.46,
+      "one_x_out": 14.73,
+      "output_in": 7.883,
+      "output_out": 12.275,
+      "spoken": "It starts by reading my plate for things like protein and calories across all my meals."
+    },
+    {
+      "beat": "recommend",
+      "source_in": 321.64,
+      "source_out": 324.25,
+      "one_x_in": 14.73,
+      "one_x_out": 17.34,
+      "output_in": 12.275,
+      "output_out": 14.45,
+      "spoken": "And recommends me things like protein short,"
+    },
+    {
+      "beat": "protein_bar",
+      "source_in": 326.52,
+      "source_out": 328.08,
+      "one_x_in": 17.34,
+      "one_x_out": 18.9,
+      "output_in": 14.45,
+      "output_out": 15.75,
+      "spoken": "add a protein bar."
+    },
+    {
+      "beat": "exercise",
+      "source_in": 365.92,
+      "source_out": 371.54,
+      "one_x_in": 18.9,
+      "one_x_out": 24.52,
+      "output_in": 15.75,
+      "output_out": 20.433,
+      "spoken": "It watches my workout sets, analyzes and reasons them and suggests me improvements."
+    },
+    {
+      "beat": "score",
+      "source_in": 452.1,
+      "source_out": 460.35,
+      "one_x_in": 24.52,
+      "one_x_out": 32.77,
+      "output_in": 20.433,
+      "output_out": 27.308,
+      "spoken": "It scores all my body parts every week. Core dropped by eight points. Next week I exactly know what I need to do more."
+    },
+    {
+      "beat": "why",
+      "source_in": 613.0,
+      "source_out": 618.85,
+      "one_x_in": 32.77,
+      "one_x_out": 38.62,
+      "output_in": 27.308,
+      "output_out": 32.183,
+      "spoken": "And most importantly, tap on Why and it gives me evidence behind each of the actions it is recommending."
+    },
+    {
+      "beat": "secret",
+      "source_in": 641.05,
+      "source_out": 645.7,
+      "one_x_in": 38.62,
+      "one_x_out": 43.27,
+      "output_in": 32.183,
+      "output_out": 36.058,
+      "spoken": "And this is a skill-based secret sauce that I have developed for myself."
+    },
+    {
+      "beat": "plan",
+      "source_in": 655.0,
+      "source_out": 658.65,
+      "one_x_in": 43.27,
+      "one_x_out": 46.92,
+      "output_in": 36.058,
+      "output_out": 39.1,
+      "spoken": "Every day, the plan for the next day waits for my approval."
+    },
+    {
+      "beat": "cost",
+      "source_in": 908.85,
+      "source_out": 913.65,
+      "one_x_in": 46.92,
+      "one_x_out": 51.72,
+      "output_in": 39.1,
+      "output_out": 43.1,
+      "spoken": "Now I've spent many sleepless nights and hundreds of dollars for building it."
+    },
+    {
+      "beat": "follow",
+      "source_in": 1004.4,
+      "source_out": 1013.95,
+      "one_x_in": 51.72,
+      "one_x_out": 61.27,
+      "output_in": 43.1,
+      "output_out": 51.058,
+      "spoken": "Follow along as I walk through each of the agentic concepts that have helped me build my Jarvis, till you are able to build one for yourself."
+    }
+  ],
+  "note": "No recorded carbs word; the selected take says protein and calories."
+}

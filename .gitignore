@@ -9,3 +9,6 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 sites/sagar-agent-authority/
+
+# Personal photos and footage for the Workout HUD stay out of Git
+demos/workout-hud/app/media/
