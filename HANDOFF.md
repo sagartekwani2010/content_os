@@ -11,6 +11,15 @@ editing-tool repository; it is not the home of Content OS's editorial memory.
 The entries below are retained as historical decisions and may describe earlier
 drafts or delivery states.
 
+**Production revamp, 15 November 2026.** The learning-mission reel was posted
+and judged poor. The diagnosis is in
+`feedback/learning-mission-final-edit-diagnosis-2026-11-15.md` and the staged
+pipeline that replaces the old edit flow is in
+`planning/reel-production-system-blueprint-2026-11-15.md`. Supporting material:
+`research/short-form-production-practices-2026-11-15.md`,
+`production/RECORDING_KIT.md`, `production/SETUP_NEW_LAPTOP.md`, and
+`scripts/edits/`. Claude Code sessions start from `CLAUDE.md`.
+
 ## Current operating model
 
 Content OS is now operated through **Codex with ChatGPT authentication**. It is

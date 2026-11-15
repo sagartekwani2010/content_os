@@ -49,10 +49,18 @@ training outcomes.
 
 ## Agentic AI learning-mission Reel
 
-Source recording: `IMG_3479.MOV`. The latest local artifact is the **v3 long
-selects cut** (`agentic_ai_mission_selects_v3.mp4`, roughly 1:40), a review cut
-without the final music, captions, or B-roll. It is not a finished posting
-export. Its timecoded take map is in `outputs/agentic-ai-mission/manifest_v3.json`.
+**Status: posted, and judged poor by the creator.** After the v3 selects cut
+(`outputs/agentic-ai-mission/manifest_v3.json`), a Claude Code session rebuilt
+the reel in Edits through eight versions; the final project is "Agentic AI
+mission reel v7 (60s)", 63 seconds at 1.25×. The creator posted the Edits
+export, which had unmastered voice and no music, and found the result looked
+like an interview extract with abrupt cuts and no clear purpose. The measured
+causes and candidate rules are in
+`feedback/learning-mission-final-edit-diagnosis-2026-11-15.md`. Do not reuse
+this reel's method. The paragraphs below describe the intended argument and
+remain useful if the reel is re-recorded.
+
+Source recording: `IMG_3479.MOV`.
 
 The full thought sequence is: people ask how to start AI; first, too much
 content; second, IG/YouTube advice is often theoretical for building real-world
@@ -71,6 +79,21 @@ Inspect gaze throughout each retained phrase, listen at every cut, and verify
 the words in the rendered assembly. Use a visual card or pickup only where the
 recording does not supply a usable camera-facing line. Do not fabricate spoken
 words from an on-screen caption. See the dated feedback for exact corrections.
+
+## Production system revamp (decided 15 November 2026)
+
+No new reel is produced until the staged pipeline in
+`planning/reel-production-system-blueprint-2026-11-15.md` is built: brief,
+script and beat sheet, shoot plan, take selection, edit, quality gate. The
+60-second cap is dropped. Recording changes to line-by-line or voiceover-led
+(`production/RECORDING_KIT.md`). Each reel ends as one finished file with
+mastered voice, sound effects and music. Edits stays the editor for now; what
+was learned driving it is in
+`.agents/skills/reel-footage-edit/references/edits-automation.md`, with helper
+scripts in `scripts/edits/` that still need a first test run. Work is moving
+to the creator's home Mac; see `production/SETUP_NEW_LAPTOP.md`. Three
+decisions are open: voiceover-led or talking head, which reel goes first, and
+the music source.
 
 ## Current series direction
 

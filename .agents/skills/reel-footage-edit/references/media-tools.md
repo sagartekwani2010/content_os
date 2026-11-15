@@ -9,6 +9,10 @@ Use Edits' local Automation Server for footage review and the editable timeline.
 - Finish: `addOverlay`, `addText`, `setTextStyle`, `setTextPosition`, `addTransition`, `setSpeed`, `setVolume`, `setDucking`, `setFade`, `generateCaptions`, `editCaption`, `splitCaption`, `setCaptionStyle`.
 - Review/export: `previewVideo`, `previewVideoStatus`, `captureFrame`, `captions`, `getCanvas`, `export`, `exportStatus`.
 
+See [edits-automation.md](edits-automation.md) for the call-level notes from the 15 November 2026
+build (connection, layer order, text and trim quirks, music and export limits) and `scripts/edits/` for
+helpers.
+
 Check live tool schemas and capabilities before calling them. Use a new project for experiments; do not modify the creator's existing project just to test a connection. A local editor state is not proof of a valid deliverable: review the rendered video and its metadata.
 
 ### Sandboxed source imports on this Mac
