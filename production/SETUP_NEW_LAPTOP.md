@@ -1,11 +1,12 @@
 # Moving Content OS to another Mac
 
 For the current work-to-home migration, read `WORKSTATION_MIGRATION_HANDOFF.md`
-first. It lists the personal media and transcripts still needing a verified
-private backup. The steps below describe the software setup after that backup.
+first. It identifies the verified private GitHub release containing the media
+and transcripts, plus the download and restore commands. The steps below
+describe the software setup after restoring it.
 
-Edits is a Mac app, so this assumes a Mac. Git carries the code, briefs, feedback and plans. It does
-**not** carry the files listed under "Bring across by hand".
+Edits is a Mac app, so this assumes a Mac. Git carries the code, briefs,
+feedback and plans. The private release carries the creator media.
 
 ## Install
 
@@ -21,16 +22,21 @@ Edits is a Mac app, so this assumes a Mac. Git carries the code, briefs, feedbac
 
 Optional, for a later comparison: DaVinci Resolve.
 
-## Bring across by hand (ignored by Git)
+## Restore media and bring credentials separately
 
-Copy these from the old machine by AirDrop or a drive. Do not put them in the repository.
+Download and verify the private release as described in
+`WORKSTATION_MIGRATION_HANDOFF.md`. The archive includes the local databases,
+HUD media, Site files, raw footage, final exports and downloaded music listed
+below. Put the verified staged files into the corresponding home-Mac paths.
+Do not put these files in the public repository.
 
 - `content_os.db`, `content_os_v2.db`, `content_os_v3.db` in the repository root. `AGENTS.md` asks for
   existing databases to be preserved; a fresh clone has none.
-- `.env`, only if a workflow still needs it.
+- `.env`, only if a workflow still needs it; transfer it securely from the old
+  Mac because it was intentionally excluded from the archive.
 - `sites/sagar-agent-authority/` and `demos/workout-hud/app/media/`.
-- Raw footage and final exports you want to keep, and any Edits projects (export them from Edits or
-  re-create; they live inside the app's library).
+- Raw footage and final exports; Edits app projects may need to be re-linked
+  or recreated because the app's account and project database was excluded.
 - Downloaded music, into `music/`, with a line per track in `music/LICENSES.md`.
 
 ## Connect the agent to Edits

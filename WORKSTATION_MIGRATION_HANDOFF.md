@@ -2,14 +2,15 @@
 
 Prepared 15 November 2026 for Sagar's move from this work Mac to a personal
 home Mac. **Read this file before declaring the migration complete.** It is a
-locator and execution brief; the media backup is **not complete yet**.
+locator and execution brief. The private cloud archive is uploaded and
+verified; restoring it on the home Mac is the remaining migration step.
 
 ## What is already on GitHub
 
 - Personal account: `sagartekwani2010`.
 - Public source and editorial memory: `https://github.com/sagartekwani2010/content_os`.
-  `main` and `claude/reel-system-revamp` both reached `39b6308` on this Mac.
-  Git was clean after that push. The latest branch adds the production-system
+  `main` and `claude/reel-system-revamp` were pushed together after the
+  migration handoff was updated. The latest branch adds the production-system
   blueprint, Edits helpers, recording kit, new-laptop guide, final learning-
   mission edit diagnosis, and `CLAUDE.md`. The prior `56fb19d` commit added the
   Gym Jarvis/mission context, captions, take maps, and review feedback.
@@ -19,10 +20,10 @@ locator and execution brief; the media backup is **not complete yet**.
   `planning/reel-production-system-blueprint-2026-11-15.md`.
 - The public repository does **not** contain all footage, transcripts, rendered
   MP4s, Edits projects, downloaded music, or ignored personal files.
-- A **private, currently empty** media repository was created at
-  `https://github.com/sagartekwani2010/content-os-media`. It belongs to the
-  personal account. Do not say it is backed up until uploads and downloads are
-  verified. Keep the private repo private.
+- The **private personal** media repository is
+  `https://github.com/sagartekwani2010/content-os-media`. Its published
+  [migration release](https://github.com/sagartekwani2010/content-os-media/releases/tag/migration-2026-11-15)
+  has eight archive parts and `manifest.json`. Keep the repo private.
 - `invideo_recreate` / TakeSelect Lab is a separate tool checkout at
   `/Users/sagart/Desktop/Consolidated_Codebase/invideo_recreate`, clean at
   `8588ee4`, with remotes under `hs-tekwani-sagar` (`takeselect-lab` and
@@ -54,10 +55,11 @@ locator and execution brief; the media backup is **not complete yet**.
   to that exact final file. See `production/RECORDING_KIT.md` and
   `planning/reel-production-system-blueprint-2026-11-15.md`.
 
-## Local files to back up to the private personal repository
+## Local files included in the private personal archive
 
-Use `$OLD_HOME=/Users/sagart` on this Mac. These directories are not covered
-by the public Git push. Sizes are approximate, measured 15 November 2026.
+Use `$OLD_HOME=/Users/sagart` on the old Mac. These directories are not
+covered by the public Git push. Sizes are approximate, measured 15 November
+2026. The archive contains 2,338 files, totaling 13,279,774,619 source bytes.
 
 | Source on old Mac | Approx. size | Contents / why it matters |
 | --- | ---: | --- |
@@ -87,57 +89,68 @@ copy. Do not back up the entire app container blindly: it can include account
 state and tokens. The media archive should contain source footage and export
 assets; the app/project re-link step may still be required on the home Mac.
 
-## Backup method and boundaries
+## Archive and restore
 
 1. Keep `content_os` public for code, text context, approved learnings, small
    shareable graphics, and scripts. Keep personal footage, message screenshots,
    audio, databases, and licensed tracks in the **private personal** media repo.
-2. GitHub rejects ordinary Git files over 100 MiB. Its release assets must each
-   be under 2 GiB. Use a **private GitHub release** in `content-os-media` with
-   independently named archive parts below 2 GiB, plus a manifest containing
-   original relative paths, byte sizes and SHA-256 checksums. Reassemble and
-   verify after download. Do not make large binary commits to either source
-   repo; do not use the professional account for this archive.
+2. GitHub rejects ordinary Git files over 100 MiB. The media is in a private
+   GitHub release, tag `migration-2026-11-15`, as eight numbered split tar
+   parts (each below 2 GiB) plus `manifest.json`. The manifest records
+   relative paths, byte sizes, and SHA-256 checksums. No large binary files
+   were committed to either source repo or the professional account.
 3. Exclude `.env`, tokens, cookies, keychains, app session data, `.git/`,
    `.venv/`, caches and installed third-party package trees. Reinstall tools on
    the new Mac. Preserve creator-authored scripts, notes, transcripts, EDLs and
    distinct rendered media. If the Whisper model is omitted as a redownloadable
    dependency, record that explicitly in the manifest.
-4. Create an archive index and restore instructions in the private repo. Any
+4. The archive index and `restore_media.py` are in the private repo. Any
    Git commit made from Codex must include
    `Co-authored-by: Codex <noreply@openai.com>` in the commit body. Keep all
    credentials out of Git history and release assets.
-5. Check the private repo's visibility with `gh repo view`, upload all release
-   parts, then list release assets and compare sizes/checksums. Download at
-   least a sample, ideally every part, to verify that the archive is retrievable.
-   A successful local tar is not proof of a completed cloud backup.
-6. Clone `content_os` on the home Mac, download the private release while
-   authenticated to the **personal** GitHub account, restore files to their
-   intended paths, reinstall dependencies, re-link Edits media, and run
+5. The repo was confirmed private. All nine release assets were checked
+   against local size and SHA-256; GitHub reports matching digests. The release
+   manifest and part 008 were downloaded again and matched SHA-256. A complete
+   local extraction of all eight parts verified all 2,338 extracted files.
+6. On the home Mac, authenticate `gh` to the **personal** GitHub account and
+   run:
+
+   ```bash
+   gh repo clone sagartekwani2010/content-os-media
+   mkdir -p ~/content-os-media-release ~/content-os-media-staging
+   gh release download migration-2026-11-15 --repo sagartekwani2010/content-os-media --dir ~/content-os-media-release
+   python3 content-os-media/restore_media.py ~/content-os-media-release ~/content-os-media-staging
+   ```
+
+   `restore_media.py` checks each part and each extracted file. Copy the
+   verified staging files to the corresponding paths listed above, then
+   reinstall dependencies, re-link Edits media, and run
    `.venv/bin/python -m pytest tests -q` (180 tests passed on the old Mac).
    `production/SETUP_NEW_LAPTOP.md` covers the rest of the tool setup.
 
 ## Exact status at handoff
 
-- Public `content_os/main`: pushed at `39b6308`; tests: **180 passed**; new
-  Edits helper modules compiled.
-- Private `content-os-media`: **created and verified private, but still empty**.
-  No archive or release has been uploaded.
-- TakeSelect source checkout: clean; personal `runtime/` remains local only.
-- Source footage, transcripts, covers, music, Edits assets and rendered videos:
-  **still local only** unless explicitly listed in the public repository.
+- Public `content_os/main`: pushed with this handoff; tests: **180 passed**;
+  new Edits helper modules compiled.
+- Private `content-os-media`: **published and verified private** at release
+  `migration-2026-11-15`, with eight parts and a manifest. A sample was
+  downloaded and verified, and the full archive passed a local restore test.
+- TakeSelect source checkout: clean; personal `runtime/` is in the private
+  archive and remains ignored by the professional repo.
+- Source footage, transcripts, covers, music, Edits assets and rendered videos
+  listed above are in the private release. Home Mac download and restore are
+  still pending.
 - No credential file was copied. The old machine must not be wiped until the
   private release has been downloaded and verified on the home Mac.
 
 ## Prompt to give Claude Code
 
 > Read `AGENTS.md`, `CLAUDE.md`, and `WORKSTATION_MIGRATION_HANDOFF.md` in
-> `content_os`. Finish the private media backup to
-> `sagartekwani2010/content-os-media` using the listed source directories.
-> Inventory and hash files, preserve every distinct creator asset and
-> transcript, exclude credentials and installed dependencies, package release
-> assets below GitHub's per-file limit, upload them, then verify remote asset
-> counts and checksums by downloading. Keep personal media out of the public
-> `content_os` and professional TakeSelect repositories. Update this handoff
-> with exact release tag, manifest, restore steps, and any omissions. Do not
-> call the migration complete until the backup is verifiably restorable.
+> `content_os`. The private media backup is already in the published
+> `migration-2026-11-15` release of `sagartekwani2010/content-os-media`.
+> On the home Mac, download all nine assets while authenticated to the personal
+> GitHub account. Run `restore_media.py`, which verifies the archive and all
+> extracted files, then place the staged files into the corresponding home-Mac
+> locations. Keep personal media out of the public `content_os` and
+> professional TakeSelect repositories. Re-link Edits projects, run the source
+> tests, and verify a playable final export before the old Mac is wiped.
