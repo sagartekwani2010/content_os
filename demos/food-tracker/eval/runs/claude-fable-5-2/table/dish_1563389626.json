@@ -1,0 +1,160 @@
+{
+ "items": [
+  {
+   "name": "Shredded carrots",
+   "grams_low": 50,
+   "grams_best": 80,
+   "grams_high": 120,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, shredded/julienned",
+   "confidence": 0.6,
+   "kcal": 32.8,
+   "kcal_range": [
+    20,
+    49
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.5,
+    1.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cherry tomatoes",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 40,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, whole or halved, mostly hidden under carrots",
+   "confidence": 0.4,
+   "kcal": 3.6,
+   "kcal_range": [
+    2,
+    7
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Diced chicken breast (white pieces under carrots)",
+   "grams_low": 15,
+   "grams_best": 35,
+   "grams_high": 70,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "cooked, diced, mostly hidden under carrots",
+   "confidence": 0.3,
+   "kcal": 57.8,
+   "kcal_range": [
+    25,
+    116
+   ],
+   "protein_g": 10.9,
+   "protein_range": [
+    4.7,
+    21.7
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 135.0,
+  "kcal": 94.2,
+  "protein_g": 11.8,
+  "grams_range": [
+   75.0,
+   230.0
+  ],
+  "kcal_range": [
+   47,
+   172
+  ],
+  "protein_range": [
+   5.3,
+   23.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 135.0,
+   "kcal": 393.4,
+   "protein_g": 41.4,
+   "grams_range": [
+    75.0,
+    230.0
+   ],
+   "kcal_range": [
+    235,
+    621
+   ],
+   "protein_range": [
+    23.7,
+    67.5
+   ]
+  },
+  "rows": [
+   "Cheese, parmesan, shredded",
+   "Tomatoes, red, ripe, raw, year round average",
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "ac61f72444153008ee0d019e3061106b7322b000e9eaf60eacc8af4ef051cf76",
+ "scale_cues": "Stainless steel mixing bowl filling the frame (assumed ~25-30 cm rim diameter); carrot pile spans roughly a third of the bowl width; individual carrot shred size used as secondary cue.",
+ "assumptions": [
+  "White chunks partially visible beneath the carrots are assumed to be diced cooked chicken breast; they could instead be cauliflower, feta, tofu or egg white.",
+  "Red rounded piece at the bottom edge of the pile is assumed to be a cherry tomato; one or two more may be hidden.",
+  "Hidden items under the carrot pile are estimated conservatively since only edges are visible.",
+  "No dressing, oil or sauce is visible, so none is included.",
+  "Bowl is assumed to be a standard medium mixing bowl; no cutlery or hand is present for a tighter scale reference."
+ ],
+ "latency_s": 12.64,
+ "calls": [
+  {
+   "wall_s": 9.25,
+   "duration_ms": 8512,
+   "num_turns": 2,
+   "cost_usd_cli": 0.053073499999999996,
+   "cost_basis": "unknown",
+   "input_tokens": 8832,
+   "output_tokens": 664
+  },
+  {
+   "wall_s": 3.38,
+   "duration_ms": 2366,
+   "num_turns": 1,
+   "cost_usd_cli": 0.024004300000000003,
+   "cost_basis": "unknown",
+   "input_tokens": 2516,
+   "output_tokens": 180
+  }
+ ],
+ "cost_usd_cli": 0.07708,
+ "log_id": "c99b8c63a764"
+}

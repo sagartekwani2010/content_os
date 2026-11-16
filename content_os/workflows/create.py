@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from content_os.codex_runtime import trace
+from content_os.llm_runtime import trace
 
 from content_os.agents import (
     carousel_writer,

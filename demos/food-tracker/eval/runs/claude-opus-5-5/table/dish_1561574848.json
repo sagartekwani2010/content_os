@@ -1,0 +1,355 @@
+{
+ "items": [
+  {
+   "name": "Arugula and baby spinach greens",
+   "grams_low": 35,
+   "grams_best": 50,
+   "grams_high": 70,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, dressed",
+   "confidence": 0.6,
+   "kcal": 12.5,
+   "kcal_range": [
+    9,
+    18
+   ],
+   "protein_g": 1.3,
+   "protein_range": [
+    0.9,
+    1.8
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red leaf lettuce / mixed red greens",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Lettuce, red leaf, raw",
+   "preparation": "raw",
+   "confidence": 0.5,
+   "kcal": 1.9,
+   "kcal_range": [
+    1,
+    3
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "168431",
+    "description": "Lettuce, red leaf, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 13.0,
+    "protein_100g": 1.33
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sliced roasted chicken breast with a sesame crust",
+   "grams_low": 55,
+   "grams_best": 75,
+   "grams_high": 100,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "roasted or grilled, sliced",
+   "confidence": 0.45,
+   "kcal": 123.8,
+   "kcal_range": [
+    91,
+    165
+   ],
+   "protein_g": 23.3,
+   "protein_range": [
+    17.1,
+    31.0
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cherry tomatoes",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 35,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, whole or halved",
+   "confidence": 0.65,
+   "kcal": 4.5,
+   "kcal_range": [
+    3,
+    6
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cucumber, diced",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Cucumber, with peel, raw",
+   "preparation": "raw, diced",
+   "confidence": 0.5,
+   "kcal": 2.2,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "168409",
+    "description": "Cucumber, with peel, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 15.0,
+    "protein_100g": 0.65
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Kalamata olives",
+   "grams_low": 6,
+   "grams_best": 10,
+   "grams_high": 16,
+   "fdc_query": "Olives, ripe, canned (small-extra large)",
+   "preparation": "pitted",
+   "confidence": 0.5,
+   "kcal": 11.6,
+   "kcal_range": [
+    7,
+    19
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "169094",
+    "description": "Olives, ripe, canned (small-extra large)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 116.0,
+    "protein_100g": 0.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red onion, sliced",
+   "grams_low": 4,
+   "grams_best": 7,
+   "grams_high": 12,
+   "fdc_query": "Onions, raw",
+   "preparation": "raw, sliced",
+   "confidence": 0.5,
+   "kcal": 2.8,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170000",
+    "description": "Onions, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 40.0,
+    "protein_100g": 1.1
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Green pear or apple slice (left edge)",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "fdc_query": "Pears, raw",
+   "preparation": "raw, sliced",
+   "confidence": 0.3,
+   "kcal": 5.7,
+   "kcal_range": [
+    3,
+    10
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "169118",
+    "description": "Pears, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 57.0,
+    "protein_100g": 0.36
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Vinaigrette dressing",
+   "grams_low": 6,
+   "grams_best": 12,
+   "grams_high": 20,
+   "fdc_query": "Salad dressing, homemade, vinegar and oil",
+   "preparation": "tossed with greens (implied by glossy leaves)",
+   "confidence": 0.4,
+   "kcal": 53.9,
+   "kcal_range": [
+    27,
+    90
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sesame seeds and crumbled garnish",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 5,
+   "fdc_query": "Seeds, sesame seeds, whole, dried",
+   "preparation": "sprinkled",
+   "confidence": 0.4,
+   "kcal": 16.9,
+   "kcal_range": [
+    6,
+    28
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.2,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "170151",
+    "description": "Seeds, sesame seeds, whole, roasted and toasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 565.0,
+    "protein_100g": 16.96
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 222.0,
+  "kcal": 235.8,
+  "protein_g": 25.8,
+  "grams_range": [
+   143.0,
+   326.0
+  ],
+  "kcal_range": [
+   150,
+   348
+  ],
+  "protein_range": [
+   18.6,
+   34.7
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 222.0,
+   "kcal": 236.1,
+   "protein_g": 25.8,
+   "grams_range": [
+    143.0,
+    326.0
+   ],
+   "kcal_range": [
+    150,
+    349
+   ],
+   "protein_range": [
+    18.6,
+    34.8
+   ]
+  },
+  "rows": [
+   "Arugula, raw",
+   "Lettuce, red leaf, raw",
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Tomatoes, red, ripe, raw, year round average",
+   "Cucumber, with peel, raw",
+   "Olives, ripe, canned (small-extra large)",
+   "Onions, raw",
+   "Pears, raw",
+   "Salad dressing, home recipe, vinegar and oil",
+   "Seeds, sesame seeds, whole, dried"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "d2f0f25d1a3b3f25324692331dbea961db86e7165c3d022090a03d01c61d7cf7",
+ "scale_cues": "I used the large square white plate (about 25\u201327 cm across) and the size of the cherry tomatoes (about 2.5 cm each) as scale references. The salad covers about half of the plate in a low mound.",
+ "assumptions": [
+  "The pale sliced protein is probably roasted chicken breast with a sesame coating, but it could also be seared albacore tuna or pork.",
+  "The glossy leaves suggest an oil-and-vinegar dressing, even though no pooled dressing is visible.",
+  "The green wedge on the left edge is probably pear, but it could be avocado or a pickle.",
+  "The dark purple pieces are a mix of Kalamata olives and red leaf greens or radicchio."
+ ],
+ "latency_s": 438.68,
+ "calls": [
+  {
+   "wall_s": 433.13,
+   "duration_ms": 21214,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0701849,
+   "cost_basis": "list",
+   "input_tokens": 15323,
+   "output_tokens": 1440
+  },
+  {
+   "wall_s": 5.53,
+   "duration_ms": 4551,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0554131,
+   "cost_basis": "list",
+   "input_tokens": 5747,
+   "output_tokens": 442
+  }
+ ],
+ "cost_usd_cli": 0.1256,
+ "log_id": "4b23d446d69b"
+}

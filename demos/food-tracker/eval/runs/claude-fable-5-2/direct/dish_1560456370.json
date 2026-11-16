@@ -1,0 +1,97 @@
+{
+ "items": [
+  {
+   "name": "Roasted chicken thigh/drumstick piece with skin (bone-in, edible portion)",
+   "grams_low": 70,
+   "grams_best": 95,
+   "grams_high": 130,
+   "kcal": 210,
+   "protein_g": 23,
+   "preparation": "roasted with skin, seasoned with herbs",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "White rice",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "kcal": 130,
+   "protein_g": 2.7,
+   "preparation": "steamed/boiled",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Arugula",
+   "grams_low": 12,
+   "grams_best": 20,
+   "grams_high": 35,
+   "kcal": 5,
+   "protein_g": 0.5,
+   "preparation": "raw, appears undressed or very lightly dressed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Green beans",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 45,
+   "kcal": 10,
+   "protein_g": 0.6,
+   "preparation": "saut\u00e9ed or steamed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (on chicken and green beans)",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "kcal": 35,
+   "protein_g": 0,
+   "preparation": "implied by roasting/saut\u00e9ing sheen",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 249.0,
+  "kcal": 390,
+  "protein_g": 26.8,
+  "grams_range": [
+   174.0,
+   358.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 390,
+  "protein_g": 26.8
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "d1bc74f8e70ce94b3cff6fa273f175b43b70efb825e6e45350936502b28b23ed",
+ "scale_cues": "Square white dinner plate assumed about 26-27 cm across; portion sizes judged by the area each food covers relative to the plate, and by green bean length (about 8-10 cm).",
+ "assumptions": [
+  "Chicken is a bone-in, skin-on thigh/drumstick piece; mass given is edible portion excluding bone",
+  "Rice is plain white rice with no added butter or oil",
+  "Arugula is undressed",
+  "Small amount of oil used for roasting chicken and cooking green beans",
+  "Plate size assumed as a standard dinner plate, with no cutlery or hand visible for direct scale"
+ ],
+ "latency_s": 8.8,
+ "calls": [
+  {
+   "wall_s": 8.8,
+   "duration_ms": 8065,
+   "num_turns": 2,
+   "cost_usd_cli": 0.054488699999999994,
+   "cost_basis": "unknown",
+   "input_tokens": 8662,
+   "output_tokens": 737
+  }
+ ],
+ "cost_usd_cli": 0.05449,
+ "log_id": "f5b849513921"
+}

@@ -1,0 +1,119 @@
+{
+ "items": [
+  {
+   "name": "Roasted pork tenderloin slices",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "kcal": 150,
+   "protein_g": 26,
+   "preparation": "roasted/grilled, sliced",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Steamed broccoli florets",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "kcal": 35,
+   "protein_g": 2.4,
+   "preparation": "steamed",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Spinach and mixed lettuce salad",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 90,
+   "kcal": 13,
+   "protein_g": 1.5,
+   "preparation": "raw, tossed, with shredded carrot and red onion bits",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "kcal": 10,
+   "protein_g": 0.7,
+   "preparation": "roasted or steamed, lightly seasoned",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Breaded chicken strip",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "kcal": 65,
+   "protein_g": 4.5,
+   "preparation": "breaded and fried/baked, one small strip",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Salad dressing / oil",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 20,
+   "kcal": 60,
+   "protein_g": 0,
+   "preparation": "vinaigrette-type coating implied by glossy leaves",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Garnishes (shredded carrot, red onion, dried cranberry, corn kernel)",
+   "grams_low": 3,
+   "grams_best": 8,
+   "grams_high": 15,
+   "kcal": 8,
+   "protein_g": 0.2,
+   "preparation": "raw/dried, scattered in salad",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 338.0,
+  "kcal": 341,
+  "protein_g": 35.3,
+  "grams_range": [
+   223.0,
+   500.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 341,
+  "protein_g": 35.3
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "4b8ca73536b643b7cb0f6a080a83cc6d800eacbe2893e206701c833c6c786ca0",
+ "scale_cues": "Square white dinner plate assumed ~25-26 cm per side, filling most of the frame; broccoli floret size (~4-6 cm) and meat slice size (~5-6 cm across) used as secondary references.",
+ "assumptions": [
+  "Meat identified as pork tenderloin by pale pinkish-grey colour and round slice shape; it could be chicken or turkey with similar nutrition",
+  "Leaves appear lightly dressed; about 10 g of oil-based dressing assumed",
+  "Strip at the bottom of the plate assumed to be a breaded chicken piece",
+  "Broccoli assumed steamed with no added fat",
+  "Overhead view hides pile depth; a moderate single-layer depth was assumed for the salad"
+ ],
+ "latency_s": 11.12,
+ "calls": [
+  {
+   "wall_s": 11.12,
+   "duration_ms": 10364,
+   "num_turns": 2,
+   "cost_usd_cli": 0.059173300000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 8668,
+   "output_tokens": 970
+  }
+ ],
+ "cost_usd_cli": 0.05917,
+ "log_id": "ae43766bf6ef"
+}

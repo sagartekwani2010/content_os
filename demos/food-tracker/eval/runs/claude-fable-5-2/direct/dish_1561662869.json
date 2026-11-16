@@ -1,0 +1,121 @@
+{
+ "items": [
+  {
+   "name": "Breaded/crusted chicken breast, sliced",
+   "grams_low": 80,
+   "grams_best": 115,
+   "grams_high": 160,
+   "kcal": 250,
+   "protein_g": 27,
+   "preparation": "breaded and pan-fried or baked, sliced",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Sauteed mushrooms (under chicken and in salad)",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "kcal": 8,
+   "protein_g": 0.6,
+   "preparation": "sauteed",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Wilted leafy greens (kale/spinach)",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "kcal": 9,
+   "protein_g": 0.8,
+   "preparation": "lightly sauteed/wilted",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Quinoa",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "kcal": 24,
+   "protein_g": 0.9,
+   "preparation": "boiled, tossed with the greens",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted carrot piece",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "kcal": 6,
+   "protein_g": 0.1,
+   "preparation": "roasted",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Corn on the cob, small round",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 45,
+   "kcal": 29,
+   "protein_g": 1,
+   "preparation": "boiled or grilled; edible kernels only, cob excluded",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (absorbed in chicken and vegetables)",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "kcal": 53,
+   "protein_g": 0,
+   "preparation": "implied by frying/sauteing, not directly visible",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 231.0,
+  "kcal": 379,
+  "protein_g": 30.4,
+  "grams_range": [
+   146.0,
+   350.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 379,
+  "protein_g": 30.4
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "11d7592005d6032906a330f4c45d9748064368404688b7fcd3739b35e69d0d17",
+ "scale_cues": "Square white dinner plate assumed about 25-27 cm across, filling most of the frame; corn round assumed about 4-5 cm in diameter as a secondary size check.",
+ "assumptions": [
+  "Protein is breaded chicken breast; it could instead be breaded fish or pork, which would shift calories modestly.",
+  "Dark pieces under the chicken and among the greens are sauteed mushrooms.",
+  "Grain scattered on the greens is quinoa rather than bulgur or breadcrumbs.",
+  "Orange-red piece on the greens is roasted carrot, not sweet potato or pepper.",
+  "Corn mass counts kernels only; the cob core is excluded.",
+  "Cooking oil is inferred from preparation, with no visible pooled sauce or dressing.",
+  "Image is low resolution, so identities and masses carry considerable uncertainty."
+ ],
+ "latency_s": 11.16,
+ "calls": [
+  {
+   "wall_s": 11.16,
+   "duration_ms": 10411,
+   "num_turns": 2,
+   "cost_usd_cli": 0.059793,
+   "cost_basis": "unknown",
+   "input_tokens": 8660,
+   "output_tokens": 999
+  }
+ ],
+ "cost_usd_cli": 0.05979,
+ "log_id": "e3f36abcee6c"
+}

@@ -1,0 +1,109 @@
+{
+ "items": [
+  {
+   "name": "brown rice",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 80,
+   "kcal": 65,
+   "protein_g": 1.4,
+   "preparation": "steamed/boiled",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "mixed salad greens (green and red leaf lettuce, spinach)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 7,
+   "protein_g": 0.6,
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "grilled chicken pieces",
+   "grams_low": 50,
+   "grams_best": 80,
+   "grams_high": 115,
+   "kcal": 140,
+   "protein_g": 22,
+   "preparation": "grilled/roasted with browned glaze, cut into chunks",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "grilled asparagus",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "kcal": 5,
+   "protein_g": 0.5,
+   "preparation": "grilled/charred spear",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "cherry tomato / red pepper pieces",
+   "grams_low": 5,
+   "grams_best": 12,
+   "grams_high": 20,
+   "kcal": 3,
+   "protein_g": 0.1,
+   "preparation": "raw, chopped",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "dressing / cooking oil",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 14,
+   "kcal": 55,
+   "protein_g": 0,
+   "preparation": "oil-based vinaigrette on greens plus oil from grilling",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 214.0,
+  "kcal": 275,
+  "protein_g": 24.6,
+  "grams_range": [
+   128.0,
+   324.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 275,
+  "protein_g": 24.6
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "7620b43e5febda273e0bae0d0f49f1bb953721b7feb2dc94d76cb587d0eb18d9",
+ "scale_cues": "Square white dinner plate assumed about 25-27 cm across; the food covers roughly the central third of the plate. Individual rice grains and leaf sizes used as secondary cues.",
+ "assumptions": [
+  "Dark browned pieces at lower left and the golden piece in the centre are grilled chicken; they could be another meat or roasted mushroom/eggplant.",
+  "Rice is brown rice, cooked without significant added fat.",
+  "Greens are lightly dressed with an oil-based vinaigrette; the amount is inferred from the sheen, not directly visible.",
+  "Red pieces are tomato or red bell pepper.",
+  "Dark green charred spear at the bottom is asparagus.",
+  "Low image resolution limits identification of the darker items."
+ ],
+ "latency_s": 10.95,
+ "calls": [
+  {
+   "wall_s": 10.95,
+   "duration_ms": 10229,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0569769,
+   "cost_basis": "unknown",
+   "input_tokens": 8664,
+   "output_tokens": 861
+  }
+ ],
+ "cost_usd_cli": 0.05698,
+ "log_id": "9bd41cf14c13"
+}

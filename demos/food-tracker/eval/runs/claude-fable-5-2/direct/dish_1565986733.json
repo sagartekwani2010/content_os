@@ -1,0 +1,120 @@
+{
+ "items": [
+  {
+   "name": "Fish fillet with skin (baked/steamed, e.g. sea bass or mackerel)",
+   "grams_low": 70,
+   "grams_best": 110,
+   "grams_high": 160,
+   "kcal": 185,
+   "protein_g": 24,
+   "preparation": "baked or pan-cooked with skin on, flaked pieces",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Meatloaf / turkey loaf slice with diced vegetables",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "kcal": 170,
+   "protein_g": 15,
+   "preparation": "baked loaf, sliced",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Wheat berries / farro grains",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "kcal": 30,
+   "protein_g": 1.2,
+   "preparation": "boiled",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Spinach leaves",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "kcal": 4,
+   "protein_g": 0.4,
+   "preparation": "wilted/lightly saut\u00e9ed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "White rice",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 20,
+   "kcal": 13,
+   "protein_g": 0.3,
+   "preparation": "steamed",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Diced red bell pepper / chili",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "kcal": 1,
+   "protein_g": 0,
+   "preparation": "diced, cooked",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil / sauce residue",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 10,
+   "kcal": 44,
+   "protein_g": 0,
+   "preparation": "oil used in cooking fish and greens, light creamy sauce coating",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 254.0,
+  "kcal": 447,
+  "protein_g": 40.9,
+  "grams_range": [
+   157.0,
+   388.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 447,
+  "protein_g": 40.9
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "99aab4b83954b76cf9ca294f4308eda7b63d59e64d1d2e2cc57ec7e45c83da81",
+ "scale_cues": "Square white dinner plate assumed ~26 cm across; food occupies roughly a quarter of the plate; spinach leaf and grain sizes used as secondary cues.",
+ "assumptions": [
+  "Plate is a standard ~26 cm square dinner plate",
+  "Grey-skinned item is a cooked fish fillet with skin, moderately fatty",
+  "Tan sliced block is a baked meatloaf/turkey loaf with vegetable bits, not a fish cake or tofu",
+  "Small brown grains are wheat berries or farro",
+  "Small amount of cooking oil absorbed, not directly visible",
+  "Overhead view hides thickness; fish assumed ~1.5-2 cm thick, loaf slice ~1.5 cm thick"
+ ],
+ "latency_s": 11.53,
+ "calls": [
+  {
+   "wall_s": 11.53,
+   "duration_ms": 10781,
+   "num_turns": 2,
+   "cost_usd_cli": 0.058882500000000004,
+   "cost_basis": "unknown",
+   "input_tokens": 8670,
+   "output_tokens": 955
+  }
+ ],
+ "cost_usd_cli": 0.05888,
+ "log_id": "358360e71a63"
+}

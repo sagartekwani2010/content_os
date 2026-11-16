@@ -1,0 +1,188 @@
+{
+ "items": [
+  {
+   "name": "Roasted sweet potato cubes",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "preparation": "cubed and roasted, edges charred",
+   "confidence": 0.6,
+   "kcal": 81.0,
+   "kcal_range": [
+    54,
+    117
+   ],
+   "protein_g": 1.8,
+   "protein_range": [
+    1.2,
+    2.6
+   ],
+   "fdc": {
+    "fdc_id": "168483",
+    "description": "Sweet potato, cooked, baked in skin, flesh, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 90.0,
+    "protein_100g": 2.01
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Raspberries",
+   "grams_low": 20,
+   "grams_best": 32,
+   "grams_high": 45,
+   "fdc_query": "Raspberries, raw",
+   "preparation": "raw, some crushed",
+   "confidence": 0.6,
+   "kcal": 16.6,
+   "kcal_range": [
+    10,
+    23
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.2,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "167755",
+    "description": "Raspberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 52.0,
+    "protein_100g": 1.2
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Blackberries",
+   "grams_low": 10,
+   "grams_best": 16,
+   "grams_high": 24,
+   "fdc_query": "Blackberries, raw",
+   "preparation": "raw, 2 large and 1 small",
+   "confidence": 0.6,
+   "kcal": 6.9,
+   "kcal_range": [
+    4,
+    10
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "173946",
+    "description": "Blackberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 43.0,
+    "protein_100g": 1.39
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasting oil on sweet potato",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied coating from roasting, not directly visible",
+   "confidence": 0.35,
+   "kcal": 26.5,
+   "kcal_range": [
+    9,
+    53
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 141.0,
+  "kcal": 131.0,
+  "protein_g": 2.4,
+  "grams_range": [
+   91.0,
+   205.0
+  ],
+  "kcal_range": [
+   77,
+   203
+  ],
+  "protein_range": [
+   1.5,
+   3.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 141.0,
+   "kcal": 131.0,
+   "protein_g": 2.4,
+   "grams_range": [
+    91.0,
+    205.0
+   ],
+   "kcal_range": [
+    77,
+    203
+   ],
+   "protein_range": [
+    1.5,
+    3.4
+   ]
+  },
+  "rows": [
+   "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "Raspberries, raw",
+   "Blackberries, raw",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "57cf016c2913489ecc7f0029188846a52ffd76cd67f7090fc2219cba713e4927",
+ "scale_cues": "Square white plate assumed about 25 cm across, filling most of the frame; berry sizes (blackberries about 2.5 cm, raspberries about 2 cm) used as a cross-check for the sweet potato cubes at about 2.5-3 cm each.",
+ "assumptions": [
+  "Orange cubes are roasted sweet potato (about 8 pieces at 10-12 g each), not butternut squash or carrot",
+  "About 6-8 raspberries, some crushed, at roughly 4-5 g each",
+  "Two large blackberries at about 6-7 g each plus one small one at about 3 g",
+  "Sweet potato was roasted with a small amount of oil; the type of oil is unknown and olive oil is assumed",
+  "Plate size is assumed, as there is no cutlery or hand in the frame for scale"
+ ],
+ "latency_s": 12.7,
+ "calls": [
+  {
+   "wall_s": 9.07,
+   "duration_ms": 8331,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0539709,
+   "cost_basis": "unknown",
+   "input_tokens": 8836,
+   "output_tokens": 704
+  },
+  {
+   "wall_s": 3.61,
+   "duration_ms": 2543,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0264804,
+   "cost_basis": "unknown",
+   "input_tokens": 2856,
+   "output_tokens": 166
+  }
+ ],
+ "cost_usd_cli": 0.08045,
+ "log_id": "74eb4e10c351"
+}

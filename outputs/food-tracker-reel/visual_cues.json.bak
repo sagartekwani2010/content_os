@@ -1,0 +1,902 @@
+{
+ "schema": "content_os.visuals/spec@2",
+ "reel": "food-tracker",
+ "script": "TELEPROMPTER.md",
+ "canvas": {
+  "w": 1080,
+  "h": 960,
+  "fps": 30
+ },
+ "notes": "Lines come from TELEPROMPTER.md (beat N). Each beat = one template + params + word-anchored cues. Numbers only as @fact refs or {fact} placeholders (content_os/visuals/facts.py). Re-draft with: python -m content_os.visuals draft-spec outputs/food-tracker-reel",
+ "params": {
+  "images": {
+   "lunch": "demos/workout-hud/app/media/lunch*.jpg",
+   "dish": "~/.cache/content_os/nutrition5k/overhead/dish_1563389626/rgb.png"
+  },
+  "lunch": {
+   "log": "~/.cache/content_os/food-tracker/estimates.jsonl",
+   "log_id": "63e6ca37729b"
+  },
+  "simulated_log": "~/.cache/content_os/food-tracker/simulated_usage.jsonl"
+ },
+ "beats": [
+  {
+   "beat": 1,
+   "template": "photo",
+   "params": {
+    "title": "Gym Jarvis",
+    "image": "lunch",
+    "annotations": [
+     {
+      "id": "scan",
+      "kind": "scan",
+      "x": 0.5,
+      "y": 0.5,
+      "w": 0.8,
+      "h": 0.6,
+      "color": "blue"
+     },
+     {
+      "id": "protein",
+      "kind": "label",
+      "x": 0.3,
+      "y": 0.25,
+      "text": "protein?",
+      "color": "green"
+     },
+     {
+      "id": "kcal",
+      "kind": "label",
+      "x": 0.7,
+      "y": 0.75,
+      "text": "calories?",
+      "color": "red"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "Gym Jarvis",
+     "action": "fade",
+     "target": "photo",
+     "dur": 0.6
+    },
+    {
+     "on_word": "reads",
+     "action": "draw",
+     "target": "scan",
+     "dur": 0.8
+    },
+    {
+     "on_word": "protein",
+     "action": "write",
+     "target": "protein",
+     "emphasis": true
+    },
+    {
+     "on_word": "calories",
+     "action": "write",
+     "target": "kcal",
+     "emphasis": true
+    }
+   ]
+  },
+  {
+   "beat": 2,
+   "template": "paper",
+   "params": {
+    "title": "Nutrition5k",
+    "venue": "Google · CVPR {n5k_year}",
+    "icon": "scale",
+    "points": [
+     {
+      "id": "p1",
+      "text": "naming it: easy",
+      "color": "green"
+     },
+     {
+      "id": "p2",
+      "text": "how much: hard",
+      "color": "red"
+     }
+    ],
+    "chip": "none"
+   },
+   "cues": [
+    {
+     "on_word": "research papers",
+     "action": "draw",
+     "target": "paper",
+     "dur": 0.7
+    },
+    {
+     "on_word": "naming",
+     "action": "write",
+     "target": "p1",
+     "dur": 0.6
+    },
+    {
+     "on_word": "how much",
+     "action": "draw",
+     "target": "icon",
+     "dur": 0.6
+    },
+    {
+     "on_word": "hard part",
+     "action": "write",
+     "target": "p2",
+     "dur": 0.6,
+     "emphasis": true
+    }
+   ]
+  },
+  {
+   "beat": 3,
+   "template": "flow",
+   "params": {
+    "title": "what I tried",
+    "rows": 1,
+    "nodes": [
+     {
+      "id": "one",
+      "text": "one prompt",
+      "at": [
+       0,
+       0
+      ],
+      "color": "orange",
+      "dim": true
+     },
+     {
+      "id": "agents",
+      "text": "two agents",
+      "at": [
+       1,
+       0
+      ],
+      "color": "green"
+     }
+    ],
+    "edges": [],
+    "notes": [
+     {
+      "id": "kept",
+      "text": "kept",
+      "near": "agents",
+      "side": "below",
+      "color": "green"
+     }
+    ],
+    "chip": "none"
+   },
+   "cues": [
+    {
+     "on_word": "multiple approaches",
+     "action": "draw",
+     "target": "one",
+     "dur": 0.6
+    },
+    {
+     "on_word": "multiple approaches",
+     "action": "draw",
+     "target": "agents",
+     "offset": 0.4,
+     "dur": 0.6
+    },
+    {
+     "on_word": "kept",
+     "action": "pop",
+     "target": "kept",
+     "dur": 0.4,
+     "emphasis": true
+    }
+   ]
+  },
+  {
+   "beat": 4,
+   "template": "flow",
+   "params": {
+    "title": "three steps",
+    "rows": 1,
+    "nodes": [
+     {
+      "id": "find",
+      "text": "find each food",
+      "color": "blue",
+      "at": [
+       0,
+       0
+      ]
+     },
+     {
+      "id": "size",
+      "text": "estimate size",
+      "color": "orange",
+      "at": [
+       1,
+       0
+      ]
+     },
+     {
+      "id": "lookup",
+      "text": "look up nutrition",
+      "sub": "database",
+      "color": "green",
+      "at": [
+       2,
+       0
+      ]
+     }
+    ],
+    "edges": [
+     {
+      "from": "find",
+      "to": "size"
+     },
+     {
+      "from": "size",
+      "to": "lookup"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "find",
+     "action": "draw",
+     "target": "find",
+     "dur": 0.6
+    },
+    {
+     "on_word": "estimate",
+     "action": "draw",
+     "target": "e_find_size",
+     "offset": -0.3,
+     "dur": 0.3
+    },
+    {
+     "on_word": "estimate",
+     "action": "draw",
+     "target": "size",
+     "dur": 0.6
+    },
+    {
+     "on_word": "look up",
+     "action": "draw",
+     "target": "e_size_lookup",
+     "offset": -0.3,
+     "dur": 0.3
+    },
+    {
+     "on_word": "look up",
+     "action": "draw",
+     "target": "lookup",
+     "dur": 0.6
+    },
+    {
+     "on_word": "database",
+     "action": "highlight",
+     "target": "lookup",
+     "style": "underline",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "beat": 5,
+   "template": "flow",
+   "params": {
+    "rows": 3,
+    "nodes": [
+     {
+      "id": "photo",
+      "kind": "photo",
+      "text": "photo",
+      "at": [
+       0,
+       0
+      ]
+     },
+     {
+      "id": "vision",
+      "text": "vision agent",
+      "sub": "Fable {fable}",
+      "color": "blue",
+      "at": [
+       1,
+       0
+      ]
+     },
+     {
+      "id": "items",
+      "text": "items + grams",
+      "at": [
+       2,
+       0
+      ]
+     }
+    ],
+    "edges": [
+     {
+      "from": "photo",
+      "to": "vision"
+     },
+     {
+      "from": "vision",
+      "to": "items"
+     }
+    ],
+    "notes": [
+     {
+      "id": "kcal",
+      "text": "kcal",
+      "near": "items",
+      "side": "below",
+      "color": "red"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "two agents",
+     "action": "draw",
+     "target": "photo",
+     "dur": 0.6
+    },
+    {
+     "on_word": "vision agent",
+     "action": "draw",
+     "target": "e_photo_vision",
+     "offset": -0.35,
+     "dur": 0.3
+    },
+    {
+     "on_word": "vision agent",
+     "action": "draw",
+     "target": "vision",
+     "dur": 0.7
+    },
+    {
+     "on_word": "lists",
+     "action": "draw",
+     "target": "e_vision_items",
+     "dur": 0.35
+    },
+    {
+     "on_word": "item",
+     "action": "draw",
+     "target": "items",
+     "dur": 0.6
+    },
+    {
+     "on_word": "grams",
+     "action": "highlight",
+     "target": "items",
+     "style": "underline",
+     "color": "blue"
+    },
+    {
+     "on_word": "not",
+     "action": "pop",
+     "target": "kcal",
+     "dur": 0.4,
+     "emphasis": true
+    },
+    {
+     "on_word": "calories",
+     "action": "cross",
+     "target": "kcal",
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "beat": 6,
+   "template": "table_search",
+   "params": {
+    "query": "dal",
+    "search": "lentils cooked",
+    "pick": "Lentils, mature seeds, cooked, boiled, without salt",
+    "count": "@usda_foods",
+    "count_label": "USDA foods",
+    "matcher": "matcher agent",
+    "footer": "source: USDA FoodData Central"
+   },
+   "cues": [
+    {
+     "on_word": "matcher agent",
+     "action": "draw",
+     "target": "matcher",
+     "dur": 0.6
+    },
+    {
+     "on_word": "searches",
+     "action": "write",
+     "target": "query",
+     "dur": 0.5
+    },
+    {
+     "on_word": "searches",
+     "action": "countup",
+     "target": "table",
+     "offset": 0.3,
+     "dur": 0.8
+    },
+    {
+     "on_word": "thirteen thousand",
+     "action": "countup",
+     "target": "count",
+     "dur": 0.8,
+     "emphasis": true
+    },
+    {
+     "on_word": "USDA foods",
+     "action": "write",
+     "target": "count_l",
+     "dur": 0.4
+    },
+    {
+     "on_word": "picks",
+     "action": "highlight",
+     "target": "pick",
+     "dur": 0.5
+    },
+    {
+     "on_word": "right one",
+     "action": "pop",
+     "target": "pick_ok",
+     "dur": 0.4
+    },
+    {
+     "on_word": "rejects",
+     "action": "fade",
+     "target": "reject",
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "beat": 7,
+   "template": "flow",
+   "params": {
+    "frame": "Claude skill",
+    "rows": 2,
+    "nodes": [
+     {
+      "id": "agents",
+      "text": "two agents",
+      "at": [
+       0,
+       0
+      ],
+      "color": "blue"
+     },
+     {
+      "id": "unsure",
+      "kind": "diamond",
+      "text": "unsure?",
+      "at": [
+       1,
+       0
+      ],
+      "color": "orange"
+     },
+     {
+      "id": "review",
+      "kind": "bubble",
+      "text": "my review",
+      "at": [
+       1,
+       1
+      ],
+      "color": "red"
+     }
+    ],
+    "edges": [
+     {
+      "from": "agents",
+      "to": "unsure"
+     },
+     {
+      "from": "unsure",
+      "to": "review",
+      "label": "flag",
+      "color": "red"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "Claude skill",
+     "action": "draw",
+     "target": "frame",
+     "dur": 0.7
+    },
+    {
+     "on_word": "Claude skill",
+     "action": "fade",
+     "target": "agents",
+     "offset": 0.3,
+     "dur": 0.5
+    },
+    {
+     "on_word": "guardrail",
+     "action": "draw",
+     "target": "e_agents_unsure",
+     "dur": 0.3
+    },
+    {
+     "on_word": "unsure",
+     "action": "draw",
+     "target": "unsure",
+     "dur": 0.6,
+     "emphasis": true
+    },
+    {
+     "on_word": "flags",
+     "action": "draw",
+     "target": "e_unsure_review",
+     "dur": 0.5
+    },
+    {
+     "on_word": "review",
+     "action": "draw",
+     "target": "review",
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "beat": 8,
+   "template": "photo",
+   "params": {
+    "title": "the experiment",
+    "image": "lunch",
+    "annotations": [
+     {
+      "id": "scan",
+      "kind": "scan",
+      "x": 0.5,
+      "y": 0.5,
+      "w": 0.8,
+      "h": 0.6,
+      "color": "blue"
+     },
+     {
+      "id": "meals",
+      "kind": "label",
+      "x": 0.3,
+      "y": 0.2,
+      "text": "many meals",
+      "color": "blue"
+     },
+     {
+      "id": "days",
+      "kind": "label",
+      "x": 0.7,
+      "y": 0.8,
+      "text": "several days",
+      "color": "green"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "experimented",
+     "action": "fade",
+     "target": "photo",
+     "dur": 0.6
+    },
+    {
+     "on_word": "many meals",
+     "action": "write",
+     "target": "meals",
+     "dur": 0.5
+    },
+    {
+     "on_word": "several days",
+     "action": "write",
+     "target": "days",
+     "dur": 0.5
+    },
+    {
+     "on_word": "performs",
+     "action": "draw",
+     "target": "scan",
+     "dur": 0.8
+    }
+   ]
+  },
+  {
+   "beat": 9,
+   "template": "ticker",
+   "params": {
+    "left": {
+     "kind": "plates",
+     "n": "@n_dishes",
+     "suffix": "dishes",
+     "caption": "all kinds of food"
+    },
+    "label": "it missed by",
+    "number": {
+     "value": "@table_mae_spoken",
+     "prefix": "≈",
+     "suffix": "kcal"
+    },
+    "sub": "per plate",
+    "ci": "{ci_level} CI {table_ci}"
+   },
+   "cues": [
+    {
+     "on_word": "performed",
+     "action": "draw",
+     "target": "plates",
+     "dur": 0.8
+    },
+    {
+     "on_word": "reasonable",
+     "action": "fade",
+     "target": "label",
+     "dur": 0.4
+    },
+    {
+     "on_word": "accuracy",
+     "action": "countup",
+     "target": "num",
+     "dur": 0.8,
+     "emphasis": true
+    },
+    {
+     "on_word": "accuracy",
+     "action": "fade",
+     "target": "sub",
+     "offset": 0.5,
+     "dur": 0.4
+    },
+    {
+     "on_word": "all kinds of food",
+     "action": "write",
+     "target": "caption",
+     "dur": 0.5
+    },
+    {
+     "on_word": "all kinds of food",
+     "action": "fade",
+     "target": "ci",
+     "offset": 0.5,
+     "dur": 0.4
+    }
+   ]
+  },
+  {
+   "beat": 10,
+   "template": "photo",
+   "params": {
+    "title": "worst miss",
+    "image": "dish",
+    "credit": "Photo: Nutrition5k · {cc_by}",
+    "annotations": [
+     {
+      "id": "hidden",
+      "kind": "circle",
+      "x": 0.5,
+      "y": 0.5,
+      "w": 0.35,
+      "h": 0.25,
+      "color": "red"
+     }
+    ],
+    "rows": [
+     {
+      "id": "grams",
+      "kind": "change",
+      "text": "chicken",
+      "from": "@chicken_true_g",
+      "to": "@chicken_seen_g",
+      "suffix": "g",
+      "color": "red"
+     },
+     {
+      "id": "cal",
+      "kind": "change",
+      "text": "calories",
+      "from": "@dish_true_kcal",
+      "to": "@dish_est_kcal",
+      "suffix": "kcal",
+      "color": "red"
+     },
+     {
+      "id": "conf",
+      "kind": "number",
+      "text": "confidence",
+      "value": "@chicken_conf",
+      "color": "orange"
+     },
+     {
+      "id": "caught",
+      "kind": "text",
+      "text": "{caught} of {worst} worst caught",
+      "color": "green"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "worst miss",
+     "action": "fade",
+     "target": "photo",
+     "dur": 0.6
+    },
+    {
+     "on_word": "194",
+     "action": "write",
+     "target": "grams_from",
+     "dur": 0.5
+    },
+    {
+     "on_word": "hidden",
+     "action": "draw",
+     "target": "hidden",
+     "dur": 0.7,
+     "emphasis": true
+    },
+    {
+     "on_word": "35",
+     "action": "draw",
+     "target": "grams_arrow",
+     "offset": -0.3,
+     "dur": 0.3
+    },
+    {
+     "on_word": "35",
+     "action": "write",
+     "target": "grams",
+     "dur": 0.5
+    },
+    {
+     "on_word": "Five hundred",
+     "action": "write",
+     "target": "cal_from",
+     "dur": 0.5
+    },
+    {
+     "on_word": "became",
+     "action": "draw",
+     "target": "cal_arrow",
+     "dur": 0.3
+    },
+    {
+     "on_word": "ninety-four",
+     "action": "write",
+     "target": "cal",
+     "dur": 0.5
+    },
+    {
+     "on_word": "0.3",
+     "action": "countup",
+     "target": "conf",
+     "dur": 0.6,
+     "emphasis": true
+    },
+    {
+     "on_word": "12",
+     "action": "write",
+     "target": "caught",
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "beat": 11,
+   "template": "line_chart",
+   "params": {
+    "title": "monitoring",
+    "series": "simulated_log",
+    "legend": "red = it asked me",
+    "tag": "simulated data",
+    "rows": [
+     {
+      "id": "improve",
+      "kind": "text",
+      "text": "these improve the skill",
+      "color": "green"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "logged",
+     "action": "draw",
+     "target": "axes",
+     "dur": 0.6
+    },
+    {
+     "on_word": "logged",
+     "action": "fade",
+     "target": "tag",
+     "offset": 0.3,
+     "dur": 0.4
+    },
+    {
+     "on_word": "monitored",
+     "action": "draw",
+     "target": "line",
+     "dur": 0.8
+    },
+    {
+     "on_word": "unsure",
+     "action": "write",
+     "target": "legend",
+     "dur": 0.5,
+     "emphasis": true
+    },
+    {
+     "on_word": "improve",
+     "action": "write",
+     "target": "improve",
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "beat": 12,
+   "template": "checklist",
+   "params": {
+    "title": "next",
+    "photo": null,
+    "chip": "none",
+    "items": [
+     {
+      "id": "workout",
+      "text": "Workout Analyser",
+      "mark": "check"
+     },
+     {
+      "id": "sets",
+      "text": "every set",
+      "mark": "check"
+     },
+     {
+      "id": "parts",
+      "text": "every body part",
+      "mark": "check"
+     }
+    ]
+   },
+   "cues": [
+    {
+     "on_word": "Workout Analyser",
+     "action": "write",
+     "target": "workout",
+     "dur": 0.6,
+     "emphasis": true
+    },
+    {
+     "on_word": "every set",
+     "action": "write",
+     "target": "sets",
+     "dur": 0.5
+    },
+    {
+     "on_word": "every set",
+     "action": "draw",
+     "target": "sets_mark",
+     "offset": 0.4,
+     "dur": 0.3
+    },
+    {
+     "on_word": "every body part",
+     "action": "write",
+     "target": "parts",
+     "dur": 0.5
+    },
+    {
+     "on_word": "every body part",
+     "action": "draw",
+     "target": "parts_mark",
+     "offset": 0.4,
+     "dur": 0.3
+    }
+   ]
+  }
+ ]
+}

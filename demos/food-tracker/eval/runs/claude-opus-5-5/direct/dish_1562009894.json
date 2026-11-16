@@ -1,0 +1,119 @@
+{
+ "items": [
+  {
+   "name": "Cooked brown rice",
+   "grams_low": 110,
+   "grams_best": 140,
+   "grams_high": 180,
+   "kcal": 157,
+   "protein_g": 3.6,
+   "preparation": "steamed/boiled, plain",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Mixed salad greens (green leaf lettuce, arugula, red leaf, spinach)",
+   "grams_low": 45,
+   "grams_best": 60,
+   "grams_high": 85,
+   "kcal": 10,
+   "protein_g": 0.9,
+   "preparation": "raw",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted Brussels sprouts",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 55,
+   "protein_g": 1.4,
+   "preparation": "roasted with about 3 g of oil",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Crumbled goat cheese / feta",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 12,
+   "kcal": 22,
+   "protein_g": 1.3,
+   "preparation": "crumbled, raw",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "kcal": 2,
+   "protein_g": 0.1,
+   "preparation": "raw, julienned",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Onion piece",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "kcal": 2,
+   "protein_g": 0.1,
+   "preparation": "raw/lightly cooked",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Vinaigrette dressing (oil-based)",
+   "grams_low": 5,
+   "grams_best": 12,
+   "grams_high": 20,
+   "kcal": 55,
+   "protein_g": 0,
+   "preparation": "tossed on salad, implied by glossy leaves",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 272.0,
+  "kcal": 303,
+  "protein_g": 7.4,
+  "grams_range": [
+   195.0,
+   377.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 303,
+  "protein_g": 7.4
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "c1de8032d97cd371dbd18b0f0f46690e53dbd5b2eb6616f957967d013d629e90",
+ "scale_cues": "Square white dinner plate about 25-27 cm across. Fork edge visible at top left. Rice mound fills about one third of the plate and is about 2-3 cm high.",
+ "assumptions": [
+  "The round greenish items are roasted Brussels sprout halves, not small potatoes or falafel",
+  "The white crumbles are soft goat cheese or feta",
+  "The salad is lightly dressed with an oil-based vinaigrette, which can't be seen clearly",
+  "The rice is plain brown rice with no added butter",
+  "Small white specks on the greens are cheese crumbs or seeds and are counted in the cheese item"
+ ],
+ "latency_s": 15.11,
+ "calls": [
+  {
+   "wall_s": 15.11,
+   "duration_ms": 14400,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0682629,
+   "cost_basis": "list",
+   "input_tokens": 8724,
+   "output_tokens": 1413
+  }
+ ],
+ "cost_usd_cli": 0.06826,
+ "log_id": "3908949c3a73"
+}

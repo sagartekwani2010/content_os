@@ -1,0 +1,75 @@
+{
+ "items": [
+  {
+   "name": "Strawberries (halved)",
+   "grams_low": 35,
+   "grams_best": 50,
+   "grams_high": 70,
+   "kcal": 16,
+   "protein_g": 0.3,
+   "preparation": "raw, hulled and halved (4 halves)",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Mandarin orange / clementine (whole, unpeeled)",
+   "grams_low": 50,
+   "grams_best": 65,
+   "grams_high": 85,
+   "kcal": 34,
+   "protein_g": 0.5,
+   "preparation": "raw, whole with peel; mass given is edible flesh only",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Red grapes",
+   "grams_low": 65,
+   "grams_best": 85,
+   "grams_high": 110,
+   "kcal": 59,
+   "protein_g": 0.6,
+   "preparation": "raw, whole, about 15 grapes, mostly off the stem",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 200.0,
+  "kcal": 109,
+  "protein_g": 1.4,
+  "grams_range": [
+   150.0,
+   265.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 109,
+  "protein_g": 1.4
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "89c4b04c5507a5e79f8edabf101d116bf90fdf36b0bc41d176793ff326846bda",
+ "scale_cues": "White square plate assumed to be about 20-22 cm across; grape size (about 2 cm each, about 5-6 g) and the mandarin diameter (about 5.5 cm) relative to the plate; strawberry halves about 4-5 cm long.",
+ "assumptions": [
+  "Mandarin is unpeeled; edible mass excludes peel (about 25% of whole weight of roughly 85 g)",
+  "About 15 grapes visible at roughly 5.5 g each; a few may be hidden in the pile",
+  "Four strawberry halves correspond to about 2 medium-large strawberries",
+  "No dressings, sugar or oil are visible or implied",
+  "Plate size assumed, as there is no cutlery or hand for absolute scale"
+ ],
+ "latency_s": 9.97,
+ "calls": [
+  {
+   "wall_s": 9.97,
+   "duration_ms": 9154,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0554273,
+   "cost_basis": "unknown",
+   "input_tokens": 8662,
+   "output_tokens": 633
+  }
+ ],
+ "cost_usd_cli": 0.05543,
+ "log_id": "30e0c3a4d14f"
+}

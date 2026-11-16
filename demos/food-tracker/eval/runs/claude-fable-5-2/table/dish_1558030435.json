@@ -1,0 +1,189 @@
+{
+ "items": [
+  {
+   "name": "Honeydew melon cubes",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "fdc_query": "Melons, honeydew, raw",
+   "preparation": "raw, peeled, cut into roughly 2-3 cm cubes (about 16 pieces)",
+   "confidence": 0.6,
+   "kcal": 46.8,
+   "kcal_range": [
+    32,
+    65
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.5,
+    1.0
+   ],
+   "fdc": {
+    "fdc_id": "169911",
+    "description": "Melons, honeydew, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 36.0,
+    "protein_100g": 0.54
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted potato chunks",
+   "grams_low": 80,
+   "grams_best": 115,
+   "grams_high": 160,
+   "fdc_query": "Potatoes, roasted, salt added in processing, frozen, prepared",
+   "preparation": "skin-on potato chunks, roasted or pan-fried until browned (about 7 pieces)",
+   "confidence": 0.55,
+   "kcal": 181.7,
+   "kcal_range": [
+    126,
+    253
+   ],
+   "protein_g": 3.2,
+   "protein_range": [
+    2.2,
+    4.4
+   ],
+   "fdc": {
+    "fdc_id": "169264",
+    "description": "Potatoes, french fried, all types, salt added in processing, frozen, home-prepared, oven heated",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 158.0,
+    "protein_100g": 2.75
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Bacon strips",
+   "grams_low": 18,
+   "grams_best": 28,
+   "grams_high": 40,
+   "fdc_query": "Pork, cured, bacon, cooked, pan-fried",
+   "preparation": "pan-fried or baked until crisp, about 3 strips",
+   "confidence": 0.6,
+   "kcal": 131.0,
+   "kcal_range": [
+    84,
+    187
+   ],
+   "protein_g": 9.5,
+   "protein_range": [
+    6.1,
+    13.6
+   ],
+   "fdc": {
+    "fdc_id": "168322",
+    "description": "Pork, cured, bacon, pre-sliced, cooked, pan-fried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 468.0,
+    "protein_100g": 33.92
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil on potatoes",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "fdc_query": "Oil, vegetable, canola",
+   "preparation": "absorbed oil implied by glossy, browned surface of roasted potatoes",
+   "confidence": 0.35,
+   "kcal": 35.4,
+   "kcal_range": [
+    18,
+    71
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "172336",
+    "description": "Oil, canola",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 277.0,
+  "kcal": 394.9,
+  "protein_g": 13.4,
+  "grams_range": [
+   190.0,
+   388.0
+  ],
+  "kcal_range": [
+   260,
+   576
+  ],
+  "protein_range": [
+   8.8,
+   19.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 277.0,
+   "kcal": 359.3,
+   "protein_g": 12.8,
+   "grams_range": [
+    190.0,
+    388.0
+   ],
+   "kcal_range": [
+    236,
+    526
+   ],
+   "protein_range": [
+    8.4,
+    18.2
+   ]
+  },
+  "rows": [
+   "Melons, honeydew, raw",
+   "Potatoes, roasted, salt added in processing, frozen, unprepared",
+   "Pork, cured, bacon, pre-sliced, cooked, pan-fried",
+   "Oil, canola"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "7e8eb093a29f90a7f8b10c6bf423cdde15fd13720e7fbc7c8a56c61b0458784c",
+ "scale_cues": "Light blue dinner plate assumed to be about 26-27 cm in diameter, viewed from directly overhead; piece sizes of melon cubes, potato chunks and bacon strips judged relative to plate diameter. No cutlery or hands in frame.",
+ "assumptions": [
+  "Plate diameter is about 26-27 cm (standard dinner plate)",
+  "Green cubes are honeydew melon, not cucumber or other green melon",
+  "Potatoes are roasted with a small amount of vegetable oil; oil type not identifiable",
+  "Bacon is regular pork bacon, about 3 cooked strips at roughly 8-10 g each",
+  "Melon cubes and potato chunks are roughly 2-3 cm thick, as depth cannot be seen from overhead",
+  "No hidden items beneath visible food; no drink or sauce in frame"
+ ],
+ "latency_s": 13.27,
+ "calls": [
+  {
+   "wall_s": 9.06,
+   "duration_ms": 8349,
+   "num_turns": 2,
+   "cost_usd_cli": 0.055788700000000004,
+   "cost_basis": "unknown",
+   "input_tokens": 8844,
+   "output_tokens": 792
+  },
+  {
+   "wall_s": 4.2,
+   "duration_ms": 3165,
+   "num_turns": 1,
+   "cost_usd_cli": 0.029336,
+   "cost_basis": "unknown",
+   "input_tokens": 3088,
+   "output_tokens": 232
+  }
+ ],
+ "cost_usd_cli": 0.08512,
+ "log_id": "26f2310968d9"
+}

@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Roasted chicken (two pieces, skin-on, boneless-looking)",
+   "grams_low": 110,
+   "grams_best": 160,
+   "grams_high": 220,
+   "kcal": 320,
+   "protein_g": 40,
+   "preparation": "roasted/pan-seared with seasoning, skin on",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Brown rice",
+   "grams_low": 100,
+   "grams_best": 150,
+   "grams_high": 210,
+   "kcal": 170,
+   "protein_g": 3.5,
+   "preparation": "steamed/boiled",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Mixed salad greens (green leaf, red leaf, arugula)",
+   "grams_low": 40,
+   "grams_best": 65,
+   "grams_high": 95,
+   "kcal": 12,
+   "protein_g": 1,
+   "preparation": "raw, tossed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Chickpeas (in salad)",
+   "grams_low": 12,
+   "grams_best": 22,
+   "grams_high": 35,
+   "kcal": 36,
+   "protein_g": 2,
+   "preparation": "cooked, marinated/dressed",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Crumbled feta/blue cheese",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "kcal": 27,
+   "protein_g": 1.5,
+   "preparation": "crumbled over salad",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Shredded carrot and onion pieces",
+   "grams_low": 5,
+   "grams_best": 12,
+   "grams_high": 20,
+   "kcal": 5,
+   "protein_g": 0.1,
+   "preparation": "raw, shredded/sliced",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Salad dressing / oil (vinaigrette)",
+   "grams_low": 4,
+   "grams_best": 10,
+   "grams_high": 18,
+   "kcal": 60,
+   "protein_g": 0,
+   "preparation": "tossed on greens; implied by sheen",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil on chicken",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 9,
+   "kcal": 44,
+   "protein_g": 0,
+   "preparation": "absorbed during roasting/searing",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 434.0,
+  "kcal": 674,
+  "protein_g": 48.1,
+  "grams_range": [
+   278.0,
+   625.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 674,
+  "protein_g": 48.1
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "813774047d5673dbd032d33e5cafd68e64fe792d70a2d684b659520188378e54",
+ "scale_cues": "Square white dinner plate assumed about 26 cm across, seen from overhead; portions sized relative to the plate area and the individual rice grains and chickpeas.",
+ "assumptions": [
+  "Plate is a standard ~26 cm square dinner plate",
+  "Chicken is boneless or nearly so; mass given is edible portion with skin",
+  "Rice is plain brown rice without added fat",
+  "Salad is lightly dressed with an oil-based vinaigrette",
+  "White crumbles are feta or blue cheese",
+  "Round yellow-green items in the salad are chickpeas"
+ ],
+ "latency_s": 11.2,
+ "calls": [
+  {
+   "wall_s": 11.2,
+   "duration_ms": 10472,
+   "num_turns": 2,
+   "cost_usd_cli": 0.059507000000000004,
+   "cost_basis": "unknown",
+   "input_tokens": 8660,
+   "output_tokens": 984
+  }
+ ],
+ "cost_usd_cli": 0.05951,
+ "log_id": "22eb4f9203a0"
+}

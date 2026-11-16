@@ -1,16 +1,9 @@
-"""Small runtime helpers for Codex SDK orchestration."""
+"""Deprecated alias kept so older imports keep working.
 
-from __future__ import annotations
+The runtime moved to `content_os.llm_runtime` when the system switched from
+the Codex SDK to Claude. Import `trace` from there in new code.
+"""
 
-from contextlib import contextmanager
-from typing import Iterator
+from content_os.llm_runtime import trace
 
-
-@contextmanager
-def trace(*_args: object, **_kwargs: object) -> Iterator[None]:
-    """Keep workflow trace scopes while Codex thread IDs provide provenance.
-
-    The old API tracer is intentionally not started. `TrackedRunner` records the
-    Codex SDK thread ID in the existing agent-run ledger instead.
-    """
-    yield
+__all__ = ["trace"]

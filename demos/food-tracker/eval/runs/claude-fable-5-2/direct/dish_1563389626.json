@@ -1,0 +1,75 @@
+{
+ "items": [
+  {
+   "name": "shredded carrots",
+   "grams_low": 60,
+   "grams_best": 95,
+   "grams_high": 140,
+   "kcal": 39,
+   "protein_g": 0.9,
+   "preparation": "raw, shredded",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "cherry tomatoes",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 40,
+   "kcal": 4,
+   "protein_g": 0.2,
+   "preparation": "raw, whole or halved, mostly hidden under carrots",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "pale chunks under carrots (likely cauliflower or diced chicken)",
+   "grams_low": 15,
+   "grams_best": 35,
+   "grams_high": 70,
+   "kcal": 20,
+   "protein_g": 2.5,
+   "preparation": "appears raw or plainly cooked, diced, mostly hidden",
+   "confidence": 0.25,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 150.0,
+  "kcal": 63,
+  "protein_g": 3.6,
+  "grams_range": [
+   85.0,
+   250.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 63,
+  "protein_g": 3.6
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "ac61f72444153008ee0d019e3061106b7322b000e9eaf60eacc8af4ef051cf76",
+ "scale_cues": "Large stainless steel mixing bowl (assumed ~28-30 cm rim diameter) filling the frame; the carrot pile covers roughly a 13-15 cm patch of the bowl base; individual carrot shreds ~3-5 cm long.",
+ "assumptions": [
+  "Bowl is a standard ~28-30 cm mixing bowl; no cutlery or hand visible for a firmer scale",
+  "Carrot pile is a loose mound about 3-4 cm deep",
+  "Pale pieces under the carrots are partly hidden; identity is uncertain, kcal/protein taken as a midpoint between cauliflower and chicken",
+  "Red item at the bottom edge is cherry tomato, with possibly more hidden under the carrots",
+  "No visible dressing, oil or sauce, so none counted"
+ ],
+ "latency_s": 8.93,
+ "calls": [
+  {
+   "wall_s": 8.93,
+   "duration_ms": 8194,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0529095,
+   "cost_basis": "unknown",
+   "input_tokens": 8670,
+   "output_tokens": 652
+  }
+ ],
+ "cost_usd_cli": 0.05291,
+ "log_id": "8f8b244ce590"
+}

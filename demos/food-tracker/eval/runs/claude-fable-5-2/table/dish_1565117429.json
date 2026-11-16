@@ -1,0 +1,104 @@
+{
+ "items": [
+  {
+   "name": "Cheese pizza (3 small rectangular/wedge pieces, thin crust with tomato sauce and mozzarella)",
+   "grams_low": 110,
+   "grams_best": 160,
+   "grams_high": 220,
+   "fdc_query": "Pizza, cheese topping, thin crust, frozen, cooked",
+   "preparation": "baked; cut into three small pieces",
+   "confidence": 0.6,
+   "kcal": 420.8,
+   "kcal_range": [
+    289,
+    579
+   ],
+   "protein_g": 19.1,
+   "protein_range": [
+    13.1,
+    26.2
+   ],
+   "fdc": {
+    "fdc_id": "170373",
+    "description": "Pizza, cheese topping, thin crust, frozen, cooked",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 263.0,
+    "protein_100g": 11.91
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 160.0,
+  "kcal": 420.8,
+  "protein_g": 19.1,
+  "grams_range": [
+   110.0,
+   220.0
+  ],
+  "kcal_range": [
+   289,
+   579
+  ],
+  "protein_range": [
+   13.1,
+   26.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 160.0,
+   "kcal": 420.8,
+   "protein_g": 19.1,
+   "grams_range": [
+    110.0,
+    220.0
+   ],
+   "kcal_range": [
+    289,
+    579
+   ],
+   "protein_range": [
+    13.1,
+    26.2
+   ]
+  },
+  "rows": [
+   "Pizza, cheese topping, thin crust, frozen, cooked"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "0e505f0ae64cabd5327312e2e7cca36ee54d1d988d872c1f4de7ed57cf8f7032",
+ "scale_cues": "Large white square dinner plate (assumed ~26-28 cm across) on a cafeteria tray; each pizza piece spans roughly 8-10 cm by 6-8 cm, covering about a quarter of the plate in total.",
+ "assumptions": [
+  "Plate is a standard ~26-28 cm square dinner plate",
+  "Pizza is thin-crust cheese pizza with tomato sauce and mozzarella, no meat or vegetable toppings",
+  "Crust thickness about 1 cm, giving roughly 45-60 g per piece",
+  "Sauce, cheese and any oil are counted as part of the pizza, not separate items",
+  "The partially visible dish on the neighbouring plate at the left edge is outside the tray and not part of this meal"
+ ],
+ "latency_s": 9.88,
+ "calls": [
+  {
+   "wall_s": 7.27,
+   "duration_ms": 6559,
+   "num_turns": 2,
+   "cost_usd_cli": 0.049308500000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 8842,
+   "output_tokens": 471
+  },
+  {
+   "wall_s": 2.6,
+   "duration_ms": 1546,
+   "num_turns": 1,
+   "cost_usd_cli": 0.014136199999999998,
+   "cost_basis": "unknown",
+   "input_tokens": 1542,
+   "output_tokens": 81
+  }
+ ],
+ "cost_usd_cli": 0.06344,
+ "log_id": "e5e80e0aa4e7"
+}

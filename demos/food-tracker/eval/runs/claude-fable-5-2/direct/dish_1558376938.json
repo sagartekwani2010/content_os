@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "red seedless grapes",
+   "grams_low": 70,
+   "grams_best": 95,
+   "grams_high": 125,
+   "kcal": 66,
+   "protein_g": 0.7,
+   "preparation": "raw, whole, off the stem",
+   "confidence": 0.7,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 95.0,
+  "kcal": 66,
+  "protein_g": 0.7,
+  "grams_range": [
+   70.0,
+   125.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 66,
+  "protein_g": 0.7
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "318bbc47007f41bb3f0f768c7a6d6cd688b9e0f257bb4b014c95c1a18908f6c5",
+ "scale_cues": "White disposable paper plate assumed ~22 cm in diameter; 14 grapes counted, each about 2.5-3 cm long relative to the plate, at roughly 6-7 g per grape.",
+ "assumptions": [
+  "Plate is a standard ~22 cm paper plate",
+  "14 red seedless grapes averaging ~6.8 g each",
+  "No stems, sauces, oils or other items present",
+  "Nutrition based on ~69 kcal and 0.7 g protein per 100 g of grapes"
+ ],
+ "latency_s": 6.2,
+ "calls": [
+  {
+   "wall_s": 6.2,
+   "duration_ms": 5462,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0471185,
+   "cost_basis": "unknown",
+   "input_tokens": 8660,
+   "output_tokens": 365
+  }
+ ],
+ "cost_usd_cli": 0.04712,
+ "log_id": "db9952366d6d"
+}

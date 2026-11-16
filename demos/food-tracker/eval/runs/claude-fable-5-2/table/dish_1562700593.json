@@ -1,0 +1,274 @@
+{
+ "items": [
+  {
+   "name": "Sliced roast beef / steak",
+   "grams_low": 50,
+   "grams_best": 75,
+   "grams_high": 105,
+   "fdc_query": "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades, cooked, broiled",
+   "preparation": "roasted or grilled, sliced, medium",
+   "confidence": 0.55,
+   "kcal": 182.2,
+   "kcal_range": [
+    122,
+    255
+   ],
+   "protein_g": 20.2,
+   "protein_range": [
+    13.5,
+    28.3
+   ],
+   "fdc": {
+    "fdc_id": "168727",
+    "description": "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades, cooked, broiled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 243.0,
+    "protein_100g": 26.96
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "steamed or roasted, lightly oiled",
+   "confidence": 0.6,
+   "kcal": 23.0,
+   "kcal_range": [
+    16,
+    32
+   ],
+   "protein_g": 1.8,
+   "protein_range": [
+    1.3,
+    2.6
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula salad",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.6,
+   "kcal": 10.0,
+   "kcal_range": [
+    6,
+    15
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.6,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red/wild rice and grain salad with corn kernels",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 85,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked grain salad with corn and diced vegetables, scattered over the plate",
+   "confidence": 0.45,
+   "kcal": 61.6,
+   "kcal_range": [
+    39,
+    95
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.8,
+    1.9
+   ],
+   "fdc": {
+    "fdc_id": "2708431",
+    "description": "Rice, brown and wild, cooked, NS as to fat",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 112.0,
+    "protein_100g": 2.2
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Herb-crusted white fish fillet piece",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 90,
+   "fdc_query": "Fish, cod, Atlantic, cooked, dry heat",
+   "preparation": "baked with herb/seed topping; could alternatively be chicken or tofu",
+   "confidence": 0.3,
+   "kcal": 63.0,
+   "kcal_range": [
+    42,
+    94
+   ],
+   "protein_g": 13.7,
+   "protein_range": [
+    9.1,
+    20.5
+   ],
+   "fdc": {
+    "fdc_id": "171956",
+    "description": "Fish, cod, Atlantic, cooked, dry heat",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 105.0,
+    "protein_100g": 22.83
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Apple or pear slice",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "fdc_query": "Apples, raw, with skin",
+   "preparation": "raw, sliced, in salad",
+   "confidence": 0.35,
+   "kcal": 6.1,
+   "kcal_range": [
+    3,
+    11
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "2709215",
+    "description": "Apple, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 61.0,
+    "protein_100g": 0.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Oil-based dressing / cooking oil",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 14,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied by sheen on greens, grains and cauliflower",
+   "confidence": 0.35,
+   "kcal": 61.9,
+   "kcal_range": [
+    27,
+    124
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 347.0,
+  "kcal": 407.8,
+  "protein_g": 37.9,
+  "grams_range": [
+   228.0,
+   512.0
+  ],
+  "kcal_range": [
+   255,
+   626
+  ],
+  "protein_range": [
+   25.3,
+   54.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 347.0,
+   "kcal": 406.5,
+   "protein_g": 37.9,
+   "grams_range": [
+    228.0,
+    512.0
+   ],
+   "kcal_range": [
+    254,
+    624
+   ],
+   "protein_range": [
+    25.3,
+    54.8
+   ]
+  },
+  "rows": [
+   "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, all grades, cooked, broiled",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Arugula, raw",
+   "Rice, brown and wild, cooked, NS as to fat",
+   "Fish, cod, Atlantic, cooked, dry heat",
+   "Apples, raw, without skin",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "198d1eed30af2b27726c845a803ed05de1e09eaf20f57838ef688aeaeac98e65",
+ "scale_cues": "White square dinner plate with rounded corners, assumed about 25-26 cm across, on a cafeteria tray; fork partly visible at the top left edge. Portions sized relative to plate area and apparent pile height.",
+ "assumptions": [
+  "Plate assumed to be about 25-26 cm wide; no hand or packaging for a firmer scale.",
+  "Meat identified as beef (pink-brown sliced interior); cut is uncertain, sirloin used as a generic match.",
+  "The pale herb-topped block at the centre is ambiguous; logged as baked white fish, but it could be chicken breast or tofu.",
+  "Grain mix assumed to be red/wild rice with corn kernels and small diced vegetables; logged as one item under cooked brown rice.",
+  "Pale wedge in the salad assumed to be an apple or pear slice.",
+  "Dressing and cooking oil are not directly visible as a pool; amount inferred from light sheen.",
+  "Image is low resolution and overhead, so pile depth is estimated."
+ ],
+ "latency_s": 18.41,
+ "calls": [
+  {
+   "wall_s": 13.18,
+   "duration_ms": 12425,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0358145,
+   "cost_basis": "unknown",
+   "input_tokens": 5535,
+   "output_tokens": 1120
+  },
+  {
+   "wall_s": 5.22,
+   "duration_ms": 4053,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0453305,
+   "cost_basis": "unknown",
+   "input_tokens": 4717,
+   "output_tokens": 355
+  }
+ ],
+ "cost_usd_cli": 0.08114,
+ "log_id": "23d81d930b05"
+}

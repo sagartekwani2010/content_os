@@ -1,0 +1,22 @@
+key,item,kcal_100g,protein_100g,source,source_id,source_url,notes
+roti,"Chapati / roti, homemade",202.3,5.9,INDB (Vijayakumar et al. 2024),ASC096 Chapati/Roti,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,"USDA SR Legacy 171844 (commercially prepared) gives 297 kcal / 11.25 g, a 47% higher kcal density"
+rice_white_cooked,"Rice, white, boiled",117.2,2.6,INDB (Vijayakumar et al. 2024),ASC113 Boiled rice,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,"USDA SR Legacy 168878: 130 kcal / 2.69 g"
+dal_fndds,"Dal (cooked lentils, FNDDS recipe)",145,8.6,USDA FNDDS 2021-2023,FDC 2707427 Dal,https://fdc.nal.usda.gov/food-details/2707427/nutrients,"Thick dal. INDB home recipes are far thinner: ASC155 Mixed dal 61.9 kcal / 2.5 g; ASC151 washed moong dal 50.0 / 2.7. Water content dominates; we use the mean of the two as reference and report both."
+dal_indb,"Dal, home style (INDB mixed dal)",61.9,2.5,INDB (Vijayakumar et al. 2024),ASC155 Mixed dal,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,"thin home dal"
+curd,"Curd / dahi (whole-milk plain yogurt)",61,3.47,USDA SR Legacy 2018-04,FDC 171284 Yogurt plain whole milk,https://fdc.nal.usda.gov/food-details/171284/nutrients,"FNDDS 2705418 gives 78 / 3.82"
+greek_yogurt,"Greek yogurt, plain, whole milk",97,9.0,USDA SR Legacy 2018-04,FDC 171304,https://fdc.nal.usda.gov/food-details/171304/nutrients,"packet label preferred"
+paneer,"Paneer",299,15.86,USDA FNDDS 2021-2023,FDC 2705740 Cheese paneer,https://fdc.nal.usda.gov/food-details/2705740/nutrients,
+bhindi_sabzi,"Bhindi (okra) sabzi, dry",110.8,1.8,INDB (Vijayakumar et al. 2024),BFP269 Bhindi sabzi,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,"bhindi aloo approximated as mean of bhindi sabzi and aloo sabzi"
+aloo_sabzi,"Aloo sabzi (potato curry)",89.6,1.5,INDB (Vijayakumar et al. 2024),BFP239 Potato curry (Aloo ki sabzi),https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,
+dry_aloo,"Sookhe aloo (dry potato)",103.1,1.6,INDB (Vijayakumar et al. 2024),ASC178 Dry potato,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,
+chicken_curry,"Chicken curry",129.2,11.8,INDB (Vijayakumar et al. 2024),ASC240 Chicken curry,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,"FNDDS 2706437 Chicken curry: 107 / 6.48 (includes more gravy)"
+tandoori_chicken,"Tandoori chicken",145.2,16.3,INDB (Vijayakumar et al. 2024),ASC241 Tandoori chicken,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,
+chicken_breast_roasted,"Chicken breast, meat only, roasted",165,31.02,USDA SR Legacy 2018-04,FDC 171477,https://fdc.nal.usda.gov/food-details/171477/nutrients,"dry pieces without gravy"
+rajma,"Rajma curry",143.7,5.95,INDB (Vijayakumar et al. 2024),ASC165 Kidney bean curry,https://github.com/lindsayjaacks/Indian-Nutrient-Databank-INDB-,
+besan_flour,"Besan (chickpea flour), raw",387,22.39,USDA SR Legacy 2018-04,FDC 174288 Chickpea flour (besan),https://fdc.nal.usda.gov/food-details/174288/nutrients,"used for a recipe-based chilla value; INDB ASC461 besan-suji chilla lists 758.9 kcal/100 g, which we treat as implausible for a pancake and do not use"
+oil,"Cooking oil (any vegetable)",884,0,USDA SR Legacy 2018-04,FDC 172370 Oil vegetable soybean refined,https://fdc.nal.usda.gov/food-details/172370/nutrients,
+ghee,"Ghee",900,0,USDA SR Legacy 2018-04,FDC 171314 Butter clarified (ghee),https://fdc.nal.usda.gov/food-details/171314/nutrients,
+milk_whole,"Milk, whole",61,3.15,USDA SR Legacy 2018-04,FDC 171265,https://fdc.nal.usda.gov/food-details/171265/nutrients,
+whey_powder,"Whey protein powder (generic)",352,78.13,USDA SR Legacy 2018-04,FDC 173180 Protein powder whey based,https://fdc.nal.usda.gov/food-details/173180/nutrients,"brands differ a lot: use the packet label"
+oats_dry,"Oats, dry",389,16.89,USDA SR Legacy 2018-04,FDC 169705,https://fdc.nal.usda.gov/food-details/169705/nutrients,
+ketchup,"Ketchup",101,1.04,USDA SR Legacy 2018-04,FDC 168556 Catsup,https://fdc.nal.usda.gov/food-details/168556/nutrients,

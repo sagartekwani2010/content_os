@@ -1,0 +1,86 @@
+{
+ "items": [
+  {
+   "name": "watermelon cubes",
+   "grams_low": 90,
+   "grams_best": 140,
+   "grams_high": 200,
+   "kcal": 42,
+   "protein_g": 0.8,
+   "preparation": "raw, cubed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "pineapple chunks",
+   "grams_low": 70,
+   "grams_best": 105,
+   "grams_high": 150,
+   "kcal": 53,
+   "protein_g": 0.6,
+   "preparation": "raw, cut into chunks",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "blackberries",
+   "grams_low": 35,
+   "grams_best": 50,
+   "grams_high": 70,
+   "kcal": 22,
+   "protein_g": 0.7,
+   "preparation": "raw, whole (about 7-8 berries)",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "raspberries",
+   "grams_low": 20,
+   "grams_best": 32,
+   "grams_high": 50,
+   "kcal": 17,
+   "protein_g": 0.4,
+   "preparation": "raw, whole (about 7-9 berries)",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 327.0,
+  "kcal": 134,
+  "protein_g": 2.5,
+  "grams_range": [
+   215.0,
+   470.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 134,
+  "protein_g": 2.5
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "e52ed4ed6036d46b44f023764a48c5f6acb74e39e90edce44a099aa3a0289cbf",
+ "scale_cues": "White square plate assumed to be about 25-26 cm across; blackberries (about 2.5 cm, 6-7 g each) used as an internal size reference for the cube and chunk sizes.",
+ "assumptions": [
+  "Plate is a standard dinner-size square plate of roughly 25 cm",
+  "Fruit is plain and raw with no added sugar, syrup or dressing",
+  "Watermelon cubes are about 2.5 cm and 10-12 g each, around 12 pieces including partly hidden ones",
+  "Pineapple is fresh rather than canned in syrup, around 10 chunks of 10 g each",
+  "Some pieces hidden under the berry pile are estimated rather than counted"
+ ],
+ "latency_s": 8.77,
+ "calls": [
+  {
+   "wall_s": 8.76,
+   "duration_ms": 8029,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0528887,
+   "cost_basis": "unknown",
+   "input_tokens": 8662,
+   "output_tokens": 657
+  }
+ ],
+ "cost_usd_cli": 0.05289,
+ "log_id": "e967f634613f"
+}

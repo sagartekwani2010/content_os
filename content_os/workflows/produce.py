@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from content_os.codex_runtime import trace
+from content_os.llm_runtime import trace
 
 from content_os.agents import (
     brief_strategist,

@@ -1,0 +1,7 @@
+# Extra dependencies of content_os.pipeline (kept separate from the repo requirements.txt).
+# Install: .venv/bin/pip install -r content_os/pipeline/requirements.txt
+numpy>=2.0
+opencv-python-headless>=5.0   # cv2.FaceDetectorYN (YuNet); arm64 wheels for Python 3.12
+# External tools (not pip): ffmpeg/ffprobe >= 8 (libx264, libass, ebur128), whisper-cli (whisper.cpp),
+# macOS `say` for the synthetic test reel, and the `claude` CLI for the judge step.
+# Models: `python -m content_os.pipeline setup` downloads them into ~/.cache/content_os/.

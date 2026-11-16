@@ -1,0 +1,119 @@
+{
+ "items": [
+  {
+   "name": "Grilled chicken pieces (thigh/breast, charred, glazed)",
+   "grams_low": 80,
+   "grams_best": 115,
+   "grams_high": 160,
+   "kcal": 225,
+   "protein_g": 30,
+   "preparation": "grilled or pan-seared with a dark glaze, possibly balsamic or soy",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Brown rice",
+   "grams_low": 50,
+   "grams_best": 75,
+   "grams_high": 100,
+   "kcal": 84,
+   "protein_g": 2,
+   "preparation": "steamed or boiled",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Mixed salad greens (green leaf lettuce, fris\u00e9e, spinach)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 7,
+   "protein_g": 0.6,
+   "preparation": "raw",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Red leaf lettuce / radicchio, wilted or grilled",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "kcal": 9,
+   "protein_g": 0.5,
+   "preparation": "grilled or wilted with dressing",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Grilled asparagus spear",
+   "grams_low": 10,
+   "grams_best": 18,
+   "grams_high": 30,
+   "kcal": 5,
+   "protein_g": 0.4,
+   "preparation": "grilled",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Diced red bell pepper / tomato",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "kcal": 3,
+   "protein_g": 0.1,
+   "preparation": "raw, diced",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Vinaigrette / cooking oil",
+   "grams_low": 4,
+   "grams_best": 9,
+   "grams_high": 15,
+   "kcal": 65,
+   "protein_g": 0,
+   "preparation": "oil-based dressing and cooking oil, judged from the glossy surfaces",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 302.0,
+  "kcal": 398,
+  "protein_g": 33.6,
+  "grams_range": [
+   194.0,
+   438.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 398,
+  "protein_g": 33.6
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "7620b43e5febda273e0bae0d0f49f1bb953721b7feb2dc94d76cb587d0eb18d9",
+ "scale_cues": "Square white dinner plate about 25-27 cm across fills most of the frame; I judged the rice mound and chicken pieces against the plate width. There was no cutlery or hand to check scale against.",
+ "assumptions": [
+  "The dark charred pieces on the left and center are chicken. They could be pork or grilled eggplant, which would change the protein a lot.",
+  "The pale grain is brown rice. It could also be quinoa or farro, which have similar calories.",
+  "The glossy leaves suggest a dressing or oil of about 1 tablespoon or less.",
+  "Only food on the plate is counted. There is no visible drink.",
+  "The photo is taken from overhead, so mound height is estimated, not measured."
+ ],
+ "latency_s": 437.38,
+ "calls": [
+  {
+   "wall_s": 437.38,
+   "duration_ms": 25576,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0653725,
+   "cost_basis": "list",
+   "input_tokens": 15056,
+   "output_tokens": 1204
+  }
+ ],
+ "cost_usd_cli": 0.06537,
+ "log_id": "8ddfe904cac8"
+}

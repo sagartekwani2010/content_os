@@ -1,164 +1,227 @@
-# Codex SDK stage routing and prompt metadata.
+# Claude stage routing and prompt metadata.
 #
-# Each pipeline stage runs in a Codex SDK thread using the user's saved ChatGPT
-# authentication. This file selects a Codex model and prompt for that stage;
-# its legacy API pricing entries are retained only for historical records.
-# No model name is hardcoded anywhere in the codebase. Changing a model or a
-# prompt version is a config edit, and both are recorded with every artifact so
-# we can tell whether a better result came from a better topic, a better prompt,
-# or a better model.
+# Each pipeline stage is one structured Claude call. content_os/llm_runtime.py
+# picks the transport automatically: the Anthropic Messages API when API
+# credentials exist (ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN or an
+# `ant auth login` profile), otherwise the Claude Agent SDK on the local Claude
+# Code login. This file selects the provider, model, effort and prompt for each
+# stage.
+#
+# No model name is hardcoded anywhere in the codebase. Changing a model, an
+# effort level or a prompt version is a config edit, and all three are recorded
+# with every artifact so we can tell whether a better result came from a better
+# topic, a better prompt, or a better model.
+#
+# Effort is Claude's thinking-depth control: low | medium | high | xhigh | max.
+# Thinking itself is adaptive and always on for these models; effort is the
+# only lever. On claude-fable-5-2 start at high and only go to xhigh where a
+# measured gain justifies it. claude-opus-5-5 defaults to medium if unset, so
+# effort is always set explicitly here.
 
 defaults:
-  model: gpt-5.6-terra
+  provider: anthropic
+  model: claude-opus-5-5
   reasoning_effort: medium
-  verbosity: medium
+  # Agent SDK backend: cap on agentic turns. Stages have no tools, so a normal
+  # run takes two turns (answer + StructuredOutput confirmation).
   max_turns: 12
+  # Messages API backend: per-response output cap (non-streaming request).
+  max_tokens: 16000
+  # Messages API backend: opt into server-side refusal fallbacks
+  # (fallbacks: "default"). Claude Haiku has no server-side fallback, so the
+  # Haiku stages below turn this off.
+  server_fallbacks: true
   # Retry a structured-output failure once with the validation error fed back.
   structured_output_retries: 1
 
 agents:
-  # terra handles the high-volume, judgement-light work; sol handles the work
-  # where output quality is the product. Reasoning effort is set per agent
-  # rather than globally, so the expensive thinking is spent where it matters.
+  # Routing principle: claude-fable-5-2 where output quality is the product
+  # (briefs, hooks, scripts, story judgement, visual planning); claude-opus-5-5
+  # as the default for solid judgement work; claude-sonnet-5-5 and
+  # claude-haiku-5-5 for high-volume, judgement-light stages where an order of
+  # magnitude in cost matters more than the last bit of nuance.
 
   trend_scout:
-    model: gpt-5.6-terra
+    # Extraction and light filtering of raw trend items. High volume, little
+    # judgement: Haiku at low effort.
+    model: claude-haiku-5-5
     prompt_version: trend_scout_v2
     reasoning_effort: low
-    verbosity: low
+    server_fallbacks: false
 
   scorer:
-    # Highest-volume agent: one call per topic, so it runs on terra.
-    model: gpt-5.6-terra
+    # Highest-volume agent: one call per topic. Scores against a fixed rubric,
+    # which Sonnet handles well at a fraction of Opus cost; the brand-fit veto
+    # and portfolio balance are enforced in Python, not by this model.
+    model: claude-sonnet-5-5
     prompt_version: scorer_v2
     reasoning_effort: medium
-    verbosity: low
 
   strategist:
     # The hardest judgement call in the system: portfolio balance under
     # competing constraints.
-    model: gpt-5.6-sol
+    model: claude-fable-5-2
     prompt_version: strategist_v2
-    reasoning_effort: medium
-    verbosity: medium
+    reasoning_effort: high
 
   reel_writer:
-    model: gpt-5.6-sol
+    # The script is the product.
+    model: claude-fable-5-2
     prompt_version: reel_writer_v6
-    reasoning_effort: medium
-    verbosity: medium
+    reasoning_effort: high
 
   story_judge:
-    # Independent from the writer's stronger creative model. The role is
-    # adversarial first-viewer judgement, not prose generation.
-    model: gpt-5.6-terra
+    # Adversarial first-viewer judgement of the writer's draft. Same model
+    # family as the writer, but a separate call with its own prompt and no
+    # access to the writer's reasoning.
+    model: claude-fable-5-2
     prompt_version: story_judge_v1
     reasoning_effort: high
-    verbosity: low
 
   carousel_writer:
-    model: gpt-5.6-sol
+    model: claude-opus-5-5
     prompt_version: carousel_writer_v4
-    reasoning_effort: medium
-    verbosity: medium
+    reasoning_effort: high
 
   qa:
-    # QA must be sceptical and consistent rather than creative.
-    model: gpt-5.6-sol
+    # QA must be sceptical and consistent rather than creative. The approval
+    # gates themselves live in config/scoring.yaml and are checked in Python.
+    model: claude-opus-5-5
     prompt_version: qa_v4
     reasoning_effort: high
-    verbosity: low
 
   performance_analyst:
-    model: gpt-5.6-sol
+    # Summarises already-computed metrics and percentiles into findings. The
+    # numbers are deterministic; the model only narrates them, so Sonnet.
+    model: claude-sonnet-5-5
     prompt_version: performance_analyst_v1
-    reasoning_effort: high
-    verbosity: medium
+    reasoning_effort: medium
 
   brief_strategist:
-    # Plans how to execute a human-approved brief. Does not select topics.
-    # Narrative sequencing under hard constraints is the hardest judgement left
-    # in the system now that topic choice belongs to the human.
-    model: gpt-5.6-sol
+    # Plans how to execute a human-approved brief. Narrative sequencing under
+    # hard constraints is the hardest judgement left now that topic choice
+    # belongs to the human.
+    model: claude-fable-5-2
     prompt_version: brief_strategist_v1
     reasoning_effort: high
-    verbosity: medium
 
   hook_expander:
-    # Must stay inside human-approved conceptual territory, which is a
-    # constraint-following task more than a creative one.
-    model: gpt-5.6-sol
+    # Must stay inside human-approved conceptual territory. Hooks decide
+    # whether a reel is watched, so it gets the strongest model, at medium
+    # effort because the territory is already fixed.
+    model: claude-fable-5-2
     prompt_version: hook_expander_v2
     reasoning_effort: medium
-    verbosity: low
 
   visual_planner:
-    # Mechanical translation of finished copy into shots.
-    model: gpt-5.6-terra
+    # Turns finished copy into shots. Shot choice carries the reel visually,
+    # so it is treated as a quality-critical stage.
+    model: claude-fable-5-2
     prompt_version: visual_planner_v4
     reasoning_effort: medium
-    verbosity: medium
 
   brand_miner:
-    # Generates topics from the brand itself: series episodes, identity content,
-    # experiment formats. Runs weekly at most, and output quality is the whole
-    # point, so it gets the strong model.
-    model: gpt-5.6-sol
+    # Generates topics from the brand itself. Runs weekly at most; strong
+    # default model at high effort.
+    model: claude-opus-5-5
     prompt_version: brand_miner_v1
     reasoning_effort: high
-    verbosity: medium
 
   normalizer:
-    # Semantic dedup, tagging and canonicalisation. Runs only on the residue the
-    # deterministic slug match cannot settle, so it is high-volume but shallow.
-    model: gpt-5.6-luna
+    # Semantic dedup, tagging and canonicalisation. Runs only on the residue
+    # the deterministic slug match cannot settle: high-volume but shallow.
+    model: claude-haiku-5-5
     prompt_version: normalizer_v1
     reasoning_effort: low
-    verbosity: low
+    server_fallbacks: false
 
-# Cost estimation, USD per million tokens, used by the agent_runs ledger.
+  orchestrator_brief:
+    # Turns a one-line idea into a brief with the six immutable fields.
+    model: claude-fable-5-2
+    prompt_version: orchestrator_brief_v1
+    reasoning_effort: high
+
+  orchestrator_script:
+    # Script and beat sheet: the script is the product.
+    model: claude-fable-5-2
+    prompt_version: orchestrator_script_v1
+    reasoning_effort: high
+
+  orchestrator_post_package:
+    # Caption and cover text from an approved script; light judgement.
+    model: claude-sonnet-5-5
+    prompt_version: orchestrator_post_package_v1
+    reasoning_effort: medium
+
+  orchestrator_feedback_classifier:
+    # Maps creator feedback to the earliest pipeline stage it concerns and
+    # drafts a narrow candidate lesson. Wrong routing wastes re-shoots, so Fable.
+    model: claude-fable-5-2
+    prompt_version: orchestrator_feedback_classifier_v1
+    reasoning_effort: medium
+
+  orchestrator_heartbeat:
+    # Cheap liveness probe for the unattended runner (proves model access from launchd).
+    model: claude-haiku-5-5
+    prompt_version: orchestrator_heartbeat_v1
+    reasoning_effort: low
+    server_fallbacks: false
+
+# Cost estimation, USD per million tokens, used by the agent_runs ledger for
+# Messages API runs. Agent SDK runs record the cost the SDK itself reports.
 # Historical rows keep the cost computed at the time, so changing these numbers
 # never rewrites past spend.
 #
 # Four rate classes. Cached input is prompt content served from the cache.
-# Cache writes are billed separately at 1.25x the uncached input price; when
-# cache_write_per_mtok is omitted it is derived from input_per_mtok using
+# Cache writes (5-minute TTL) are billed at 1.25x the uncached input price;
+# when cache_write_per_mtok is omitted it is derived from input_per_mtok using
 # cache_write_multiplier below.
 pricing_defaults:
   cache_write_multiplier: 1.25
 
 pricing:
-  gpt-5.6-sol:
+  # Anthropic first-party API list prices (cached 2026-11-03).
+  claude-fable-5-2:
+    input_per_mtok: 8.00
+    cached_input_per_mtok: 0.20
+    output_per_mtok: 40.00
+
+  claude-opus-5-5:
     input_per_mtok: 4.00
-    cached_input_per_mtok: 0.40
+    cached_input_per_mtok: 0.20
     output_per_mtok: 20.00
 
-  gpt-5.6-terra:
+  claude-sonnet-5-5:
+    input_per_mtok: 2.00
+    cached_input_per_mtok: 0.10
+    output_per_mtok: 10.00
+
+  claude-haiku-5-5:
+    # Rate card for prompts of 100K tokens or fewer (stages stay well under
+    # that). Longer prompts bill at 0.50 / 2.50.
+    input_per_mtok: 0.10
+    cached_input_per_mtok: 0.01
+    output_per_mtok: 0.50
+
+  # Refusal-fallback targets, so a fallback-served run is still priced.
+  claude-opus-5:
+    input_per_mtok: 5.00
+    cached_input_per_mtok: 0.50
+    output_per_mtok: 25.00
+
+  claude-opus-4-8:
+    input_per_mtok: 5.00
+    cached_input_per_mtok: 0.50
+    output_per_mtok: 25.00
+
+  claude-sonnet-5:
     input_per_mtok: 2.00
     cached_input_per_mtok: 0.20
-    output_per_mtok: 12.00
-
-  gpt-5.6-luna:
-    input_per_mtok: 0.20
-    cached_input_per_mtok: 0.02
-    output_per_mtok: 1.20
-
-  gpt-5:
-    input_per_mtok: 1.25
-    cached_input_per_mtok: 0.125
     output_per_mtok: 10.00
-  gpt-5-mini:
-    input_per_mtok: 0.25
-    cached_input_per_mtok: 0.025
-    output_per_mtok: 2.00
-  gpt-5-nano:
-    input_per_mtok: 0.05
-    cached_input_per_mtok: 0.005
-    output_per_mtok: 0.40
 
 tracing:
   enabled: true
-  # Workflow names surfaced in the OpenAI traces dashboard.
+  # Workflow names recorded in the agent_runs ledger.
   workflows:
     discover: trend_discovery
     mine: brand_mining

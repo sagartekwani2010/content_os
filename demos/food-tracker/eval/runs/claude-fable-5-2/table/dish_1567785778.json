@@ -1,0 +1,300 @@
+{
+ "items": [
+  {
+   "name": "Pineapple chunks",
+   "grams_low": 80,
+   "grams_best": 120,
+   "grams_high": 170,
+   "fdc_query": "Pineapple, raw, all varieties",
+   "preparation": "raw, cut into chunks",
+   "confidence": 0.6,
+   "kcal": 60.0,
+   "kcal_range": [
+    40,
+    85
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "169124",
+    "description": "Pineapple, raw, all varieties",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 50.0,
+    "protein_100g": 0.54
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Strawberries",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 80,
+   "fdc_query": "Strawberries, raw",
+   "preparation": "raw, whole/halved",
+   "confidence": 0.65,
+   "kcal": 17.6,
+   "kcal_range": [
+    11,
+    26
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.2,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "167762",
+    "description": "Strawberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 32.0,
+    "protein_100g": 0.67
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Blueberries",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Blueberries, raw",
+   "preparation": "raw",
+   "confidence": 0.6,
+   "kcal": 8.6,
+   "kcal_range": [
+    5,
+    14
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "171711",
+    "description": "Blueberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 57.0,
+    "protein_100g": 0.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Chia seed pudding / oatmeal-style porridge with banana pieces",
+   "grams_low": 110,
+   "grams_best": 170,
+   "grams_high": 240,
+   "fdc_query": "Cereals, oats, regular and quick, unenriched, cooked with water",
+   "preparation": "cooked grey-brown porridge (possibly chia pudding made with milk), scooped onto plate with a few fruit pieces mixed in",
+   "confidence": 0.35,
+   "kcal": 120.7,
+   "kcal_range": [
+    78,
+    170
+   ],
+   "protein_g": 4.3,
+   "protein_range": [
+    2.8,
+    6.1
+   ],
+   "fdc": {
+    "fdc_id": "173905",
+    "description": "Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 71.0,
+    "protein_100g": 2.54
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Spinach leaves",
+   "grams_low": 15,
+   "grams_best": 28,
+   "grams_high": 45,
+   "fdc_query": "Spinach, raw",
+   "preparation": "raw salad greens, lightly dressed",
+   "confidence": 0.6,
+   "kcal": 6.4,
+   "kcal_range": [
+    3,
+    10
+   ],
+   "protein_g": 0.8,
+   "protein_range": [
+    0.4,
+    1.3
+   ],
+   "fdc": {
+    "fdc_id": "168462",
+    "description": "Spinach, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 6,
+   "grams_best": 12,
+   "grams_high": 20,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, shredded",
+   "confidence": 0.6,
+   "kcal": 4.9,
+   "kcal_range": [
+    2,
+    8
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cucumber slices",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 32,
+   "fdc_query": "Cucumber, with peel, raw",
+   "preparation": "raw, sliced",
+   "confidence": 0.6,
+   "kcal": 3.0,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "168409",
+    "description": "Cucumber, with peel, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 15.0,
+    "protein_100g": 0.65
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing (vinaigrette)",
+   "grams_low": 0,
+   "grams_best": 6,
+   "grams_high": 14,
+   "fdc_query": "Salad dressing, oil and vinegar (vinaigrette)",
+   "preparation": "light coating implied by sheen on salad leaves",
+   "confidence": 0.3,
+   "kcal": 26.9,
+   "kcal_range": [
+    27,
+    63
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 426.0,
+  "kcal": 248.1,
+  "protein_g": 6.4,
+  "grams_range": [
+   264.0,
+   626.0
+  ],
+  "kcal_range": [
+   168,
+   381
+  ],
+  "protein_range": [
+   4.1,
+   9.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 426.0,
+   "kcal": 284.1,
+   "protein_g": 7.3,
+   "grams_range": [
+    264.0,
+    626.0
+   ],
+   "kcal_range": [
+    186,
+    441
+   ],
+   "protein_range": [
+    4.5,
+    10.8
+   ]
+  },
+  "rows": [
+   "Pineapple, raw, all varieties",
+   "Strawberries, raw",
+   "Blueberries, raw",
+   "Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",
+   "Spinach, raw",
+   "Carrot, dehydrated",
+   "Cucumber, with peel, raw",
+   "Salad dressing, home recipe, vinegar and oil"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "32f950bf49aa0d3501162fde0e0ca3b0626535b3eebd1106c234f11a3e14cdbd",
+ "scale_cues": "White paper plate assumed ~22-23 cm diameter (standard cafeteria plate); food piece sizes judged against plate rim and typical strawberry/blueberry size.",
+ "assumptions": [
+  "Yellow chunks are pineapple (golden colour and fibrous cut); could be roasted potato or mango, which would change the lookup",
+  "Grey-brown mound is an oatmeal or chia-pudding style porridge; identity is uncertain and it could be a ground-meat or bean dish",
+  "Pale pieces in the porridge are assumed to be banana or apple and are included in its mass",
+  "Salad assumed lightly dressed with vinaigrette; dressing may be absent",
+  "Plate depth is shallow, so food pile heights estimated at 1.5-3 cm"
+ ],
+ "latency_s": 17.05,
+ "calls": [
+  {
+   "wall_s": 12.36,
+   "duration_ms": 11638,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0608505,
+   "cost_basis": "unknown",
+   "input_tokens": 8832,
+   "output_tokens": 1053
+  },
+  {
+   "wall_s": 4.67,
+   "duration_ms": 3553,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0451164,
+   "cost_basis": "unknown",
+   "input_tokens": 4819,
+   "output_tokens": 303
+  }
+ ],
+ "cost_usd_cli": 0.10597,
+ "log_id": "55fcd33f1450"
+}

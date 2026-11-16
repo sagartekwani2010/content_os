@@ -1,0 +1,120 @@
+{
+ "items": [
+  {
+   "name": "Beef steak (sirloin or tri-tip), sliced, with herb garnish",
+   "grams_low": 85,
+   "grams_best": 110,
+   "grams_high": 140,
+   "kcal": 230,
+   "protein_g": 32,
+   "preparation": "pan-seared or grilled, medium, sliced",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Chicken breast pieces, herb-seasoned",
+   "grams_low": 65,
+   "grams_best": 90,
+   "grams_high": 120,
+   "kcal": 150,
+   "protein_g": 28,
+   "preparation": "roasted or baked, seasoned with herbs and spices",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted potato cubes",
+   "grams_low": 65,
+   "grams_best": 90,
+   "grams_high": 120,
+   "kcal": 110,
+   "protein_g": 2,
+   "preparation": "roasted, skin on",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 150,
+   "grams_best": 200,
+   "grams_high": 250,
+   "kcal": 46,
+   "protein_g": 3.7,
+   "preparation": "steamed or boiled",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Leek or cabbage pieces mixed with cauliflower",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "kcal": 6,
+   "protein_g": 0.3,
+   "preparation": "steamed or saut\u00e9ed",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Garlic and fresh herbs on steak",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 8,
+   "kcal": 7,
+   "protein_g": 0.3,
+   "preparation": "minced garlic and chopped herbs",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil or butter (implied)",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 14,
+   "kcal": 70,
+   "protein_g": 0,
+   "preparation": "used to roast the potatoes and sear the meats",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 523.0,
+  "kcal": 619,
+  "protein_g": 66.3,
+  "grams_range": [
+   381.0,
+   687.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 619,
+  "protein_g": 66.3
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "1f3cda35d4522673d277082a51a2c9f40237d5348839763734830725cfaa2e7d",
+ "scale_cues": "Large square white dinner plate (about 26-28 cm) as the main reference. Cauliflower florets are about 4-6 cm across and potato cubes about 2.5-3 cm, which helps estimate volume. No cutlery or hand is in the frame.",
+ "assumptions": [
+  "The steak is a lean cut like sirloin or tri-tip, cooked medium",
+  "The light-colored meat at the top is skinless chicken breast, not pork or fish",
+  "The cauliflower has no butter or sauce, only a little oil carried over",
+  "The potatoes were roasted in roughly 5 g of oil and about 3 g of fat was used on the meats",
+  "The pale green pieces among the cauliflower are leek or cabbage",
+  "The image shows the whole dish and nothing is hidden underneath"
+ ],
+ "latency_s": 16.19,
+ "calls": [
+  {
+   "wall_s": 16.19,
+   "duration_ms": 15373,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0720607,
+   "cost_basis": "list",
+   "input_tokens": 8736,
+   "output_tokens": 1446
+  }
+ ],
+ "cost_usd_cli": 0.07206,
+ "log_id": "6c5e90d89026"
+}

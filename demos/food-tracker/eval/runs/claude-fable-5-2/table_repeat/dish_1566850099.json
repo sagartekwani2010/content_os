@@ -1,0 +1,189 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (spring mix with red-stemmed leaves)",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw, tossed",
+   "confidence": 0.6,
+   "kcal": 7.3,
+   "kcal_range": [
+    4,
+    12
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Broccoli florets",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "lightly cooked (steamed or roasted) florets, 4-5 small pieces",
+   "confidence": 0.55,
+   "kcal": 14.0,
+   "kcal_range": [
+    9,
+    21
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.6,
+    1.4
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, shredded",
+   "confidence": 0.55,
+   "kcal": 2.5,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing / oil coating",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 10,
+   "fdc_query": "Salad dressing, home recipe, vinegar and oil",
+   "preparation": "light coating implied by glossy leaves; no pooled dressing visible",
+   "confidence": 0.3,
+   "kcal": 22.4,
+   "kcal_range": [
+    9,
+    45
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 86.0,
+  "kcal": 46.2,
+  "protein_g": 1.6,
+  "grams_range": [
+   50.0,
+   135.0
+  ],
+  "kcal_range": [
+   23,
+   82
+  ],
+  "protein_range": [
+   0.9,
+   2.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 86.0,
+   "kcal": 61.4,
+   "protein_g": 2.0,
+   "grams_range": [
+    50.0,
+    135.0
+   ],
+   "kcal_range": [
+    31,
+    107
+   ],
+   "protein_range": [
+    1.1,
+    2.9
+   ]
+  },
+  "rows": [
+   "Lettuce, red leaf, raw",
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Carrot, dehydrated",
+   "Salad dressing, home recipe, vinegar and oil"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "f3d24b934b653cc527887039d35322de5207dc7b115b2852350c89fe7c9bef13",
+ "scale_cues": "White square plate with rounded corners, assumed about 25-26 cm across, filling most of the frame; fork tines partly visible at top-left edge. Food covers roughly a quarter of the plate in a thin, loose layer.",
+ "assumptions": [
+  "Plate assumed to be a standard ~25 cm square dinner plate; no other reliable size reference is fully visible",
+  "Greens are a thin single layer of spring mix, so low mass despite the area covered",
+  "Broccoli assumed lightly cooked based on soft, slightly yellowed appearance; could be raw",
+  "A small pale piece near the centre (possibly a nut, bean or garlic piece, under 2 g) was not listed separately",
+  "Dressing is inferred from sheen on the leaves, not directly visible; amount is uncertain and could be zero",
+  "Image is low resolution and slightly blurry, limiting identification of leaf varieties"
+ ],
+ "latency_s": 13.53,
+ "calls": [
+  {
+   "wall_s": 9.78,
+   "duration_ms": 9058,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0529587,
+   "cost_basis": "unknown",
+   "input_tokens": 8834,
+   "output_tokens": 769
+  },
+  {
+   "wall_s": 3.73,
+   "duration_ms": 2730,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0288702,
+   "cost_basis": "unknown",
+   "input_tokens": 2949,
+   "output_tokens": 240
+  }
+ ],
+ "cost_usd_cli": 0.08183,
+ "log_id": "0e059a39e485"
+}

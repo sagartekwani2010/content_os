@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "name": "Cheese pizza (flatbread-style, cut into ~6 small pieces; crust, tomato sauce, mozzarella)",
+   "grams_low": 140,
+   "grams_best": 200,
+   "grams_high": 270,
+   "kcal": 530,
+   "protein_g": 22,
+   "preparation": "baked, cut into small squares/wedges",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 200.0,
+  "kcal": 530,
+  "protein_g": 22,
+  "grams_range": [
+   140.0,
+   270.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 530,
+  "protein_g": 22
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a248f4bd2d79299597d4a60ef5f5a4e983917dd2fa3300bdbed531c858969b16",
+ "scale_cues": "White square dinner plate (assumed ~25 cm across) filling most of the frame; pizza pieces cover roughly 35-40% of the plate, each piece about 6-9 cm long.",
+ "assumptions": [
+  "Plate is about 25 cm wide",
+  "Medium-thickness crust, about 1.5 cm",
+  "Plain cheese pizza with tomato sauce, no meat toppings",
+  "About 265 kcal and 11 g protein per 100 g for cheese pizza",
+  "Sauce, cheese and any oil in the crust are included in the single pizza item, not listed separately",
+  "One piece is partly cut off at the image edge; its hidden portion is estimated"
+ ],
+ "latency_s": 6.93,
+ "calls": [
+  {
+   "wall_s": 6.93,
+   "duration_ms": 6199,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0487687,
+   "cost_basis": "unknown",
+   "input_tokens": 8662,
+   "output_tokens": 451
+  }
+ ],
+ "cost_usd_cli": 0.04877,
+ "log_id": "588a7469aaaf"
+}

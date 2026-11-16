@@ -1,0 +1,130 @@
+{
+ "items": [
+  {
+   "name": "Chia seed pudding / oatmeal-style porridge with banana chunks",
+   "grams_low": 110,
+   "grams_best": 160,
+   "grams_high": 220,
+   "kcal": 210,
+   "protein_g": 6.5,
+   "preparation": "chia seeds soaked in milk/plant milk, topped with banana pieces",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted potatoes",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 80,
+   "kcal": 70,
+   "protein_g": 1.2,
+   "preparation": "cubed, roasted with oil",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Pineapple chunks",
+   "grams_low": 45,
+   "grams_best": 65,
+   "grams_high": 90,
+   "kcal": 33,
+   "protein_g": 0.4,
+   "preparation": "raw, cut in chunks",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Strawberries",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 85,
+   "kcal": 19,
+   "protein_g": 0.4,
+   "preparation": "raw, whole/halved",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Blueberries",
+   "grams_low": 10,
+   "grams_best": 18,
+   "grams_high": 30,
+   "kcal": 10,
+   "protein_g": 0.1,
+   "preparation": "raw",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Spinach salad with shredded carrot and cucumber",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 90,
+   "kcal": 15,
+   "protein_g": 1.2,
+   "preparation": "raw leaves with shredded carrot and cucumber slices",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Salad dressing / oil on greens",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 14,
+   "kcal": 45,
+   "protein_g": 0,
+   "preparation": "light vinaigrette implied by glossy leaves",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil on roasted potatoes",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 7,
+   "kcal": 35,
+   "protein_g": 0,
+   "preparation": "absorbed roasting oil",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 429.0,
+  "kcal": 437,
+  "protein_g": 9.8,
+  "grams_range": [
+   285.0,
+   616.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 437,
+  "protein_g": 9.8
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "32f950bf49aa0d3501162fde0e0ca3b0626535b3eebd1106c234f11a3e14cdbd",
+ "scale_cues": "White paper plate assumed ~23 cm (9 in) diameter, viewed overhead; item sizes judged relative to the plate and to the strawberries and blueberries as known-size references.",
+ "assumptions": [
+  "Brown-grey mound is chia pudding or similar seed/grain porridge with banana pieces; it could instead be a ground-meat or bean dish, which would raise protein",
+  "Golden cubes at top are roasted potatoes and the paler yellow blocks at left are pineapple; both could be the same item",
+  "Salad is lightly dressed; dressing amount is inferred, not clearly visible",
+  "Plate is a standard 9-inch disposable plate",
+  "Low-resolution image limits identification accuracy"
+ ],
+ "latency_s": 11.94,
+ "calls": [
+  {
+   "wall_s": 11.94,
+   "duration_ms": 11184,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0603825,
+   "cost_basis": "unknown",
+   "input_tokens": 8660,
+   "output_tokens": 1032
+  }
+ ],
+ "cost_usd_cli": 0.06038,
+ "log_id": "29a63fb0e6f3"
+}

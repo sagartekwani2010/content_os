@@ -1,0 +1,65 @@
+# Reel-production orchestrator (content_os/orchestrator). Paths, gates, memory caps,
+# runner and the optional OpenAI audio/video review. Models for Claude stages live in
+# config/models.yaml under the orchestrator_* agents; nothing here is a Claude model.
+
+paths:
+  # Text artifacts, ledger and state for a reel: <outputs_root>/<reel-id>/
+  outputs_root: outputs
+  # Footage, audio, renders and the pipeline's work/ dir: <media_root>/<reel-id>/ (outside the repo)
+  media_root: ~/Movies/ContentOS
+  # Job queue, runner heartbeat (outside the repo)
+  state_dir: ~/Movies/ContentOS/.orchestrator
+  status_page: ~/Movies/ContentOS/status.html
+  logs_dir: ~/Library/Logs/content_os
+
+# Claude agent keys (config/models.yaml) used by each model stage.
+agents:
+  brief: orchestrator_brief
+  script: orchestrator_script
+  post_package: orchestrator_post_package
+  feedback_classifier: orchestrator_feedback_classifier
+  heartbeat: orchestrator_heartbeat
+
+# Gates that need the creator. Nothing downstream of a gate runs until the gate is
+# approved for the exact version (content hash) of the artifact it approves.
+creator_gates: [brief, script, cut_review, final_listen, posting]
+
+memory:
+  # Compact, curated lesson memory read by script/edit stages.
+  file: feedback/orchestrator/reel_memory.yaml
+  candidates_file: feedback/orchestrator/lesson_candidates.yaml
+  archive_file: feedback/orchestrator/lesson_archive.yaml
+  records_dir: feedback/orchestrator
+  promote_after_repeats: 2
+  max_lessons: 40
+  max_rule_chars: 280
+  # A new candidate merges into an existing one at or above this token similarity.
+  dedupe_similarity: 0.6
+  # Lessons injected into a single stage prompt.
+  max_lessons_per_stage: 8
+
+runner:
+  label: com.contentos.runner
+  poll_seconds: 20
+  # Refresh the status page at least this often while idle.
+  status_refresh_seconds: 300
+  # caffeinate flags held only while a job runs (-i idle sleep, -s system sleep on AC power).
+  caffeinate_flags: ["-i", "-s"]
+  job_timeout_seconds: 7200
+  notify: true
+
+pipeline:
+  # Extra binaries the delegated pipeline needs on PATH (ffmpeg, whisper-cli).
+  extra_path: ["/opt/homebrew/bin", "/usr/local/bin"]
+  judge_enabled: true
+
+av_review:
+  # OpenAI is used here only because Claude cannot hear. Key: macOS Keychain
+  # (service content_os_openai, account $USER) or OPENAI_API_KEY; never written to a file.
+  keychain_service: content_os_openai
+  audio_model: gpt-audio-mini
+  vision_model: gpt-5.4-mini
+  max_audio_seconds: 180
+  audio_sample_rate: 16000
+  frames: 6
+  timeout_seconds: 180

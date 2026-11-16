@@ -1,0 +1,85 @@
+{
+ "items": [
+  {
+   "name": "roasted sweet potato cubes",
+   "grams_low": 45,
+   "grams_best": 70,
+   "grams_high": 100,
+   "kcal": 63,
+   "protein_g": 1.4,
+   "preparation": "cubed and roasted, some charred skin on",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "raspberries",
+   "grams_low": 20,
+   "grams_best": 32,
+   "grams_high": 45,
+   "kcal": 17,
+   "protein_g": 0.4,
+   "preparation": "raw, some crushed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "blackberries",
+   "grams_low": 12,
+   "grams_best": 18,
+   "grams_high": 25,
+   "kcal": 8,
+   "protein_g": 0.3,
+   "preparation": "raw, whole (3 berries)",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "cooking oil (on sweet potato)",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "kcal": 27,
+   "protein_g": 0,
+   "preparation": "roasting oil absorbed/coating the cubes",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 123.0,
+  "kcal": 115,
+  "protein_g": 2.1,
+  "grams_range": [
+   78.0,
+   176.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 115,
+  "protein_g": 2.1
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "57cf016c2913489ecc7f0029188846a52ffd76cd67f7090fc2219cba713e4927",
+ "scale_cues": "White square dinner plate (assumed ~25 cm side) and the size of whole blackberries/raspberries (~2-3 cm each) used to scale the sweet potato cubes (~2.5-3 cm each, about 8 pieces).",
+ "assumptions": [
+  "Orange cubes are roasted sweet potato rather than butternut squash or carrot",
+  "Sweet potato was roasted with a small amount of oil, as implied by the glossy, browned surfaces",
+  "Plate is a standard ~25 cm square plate",
+  "About 6-7 raspberries (some crushed) and 3 blackberries, one of them small"
+ ],
+ "latency_s": 7.97,
+ "calls": [
+  {
+   "wall_s": 7.97,
+   "duration_ms": 7231,
+   "num_turns": 2,
+   "cost_usd_cli": 0.052743399999999996,
+   "cost_basis": "unknown",
+   "input_tokens": 8664,
+   "output_tokens": 645
+  }
+ ],
+ "cost_usd_cli": 0.05274,
+ "log_id": "4b7a88295ff9"
+}

@@ -1,0 +1,141 @@
+{
+ "items": [
+  {
+   "name": "Sliced chicken breast",
+   "grams_low": 65,
+   "grams_best": 90,
+   "grams_high": 120,
+   "kcal": 150,
+   "protein_g": 28,
+   "preparation": "grilled or roasted, skinless, sliced, lightly seasoned",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Mixed greens (arugula, spinach, red leaf)",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 85,
+   "kcal": 13,
+   "protein_g": 1.5,
+   "preparation": "raw",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cherry tomatoes",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 35,
+   "kcal": 5,
+   "protein_g": 0.2,
+   "preparation": "raw, halved",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cucumber",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "kcal": 2,
+   "protein_g": 0.1,
+   "preparation": "raw, diced",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Red onion",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 12,
+   "kcal": 3,
+   "protein_g": 0.1,
+   "preparation": "raw, sliced",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Kalamata olives",
+   "grams_low": 6,
+   "grams_best": 12,
+   "grams_high": 20,
+   "kcal": 30,
+   "protein_g": 0.1,
+   "preparation": "pitted, halved",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Pepperoncini or pickle slice",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 12,
+   "kcal": 2,
+   "protein_g": 0.1,
+   "preparation": "pickled",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Vinaigrette dressing",
+   "grams_low": 6,
+   "grams_best": 12,
+   "grams_high": 20,
+   "kcal": 55,
+   "protein_g": 0,
+   "preparation": "oil-based, tossed through the greens",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Seeds (sesame or chopped sunflower)",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 5,
+   "kcal": 17,
+   "protein_g": 0.5,
+   "preparation": "sprinkled garnish",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 233.0,
+  "kcal": 277,
+  "protein_g": 30.6,
+  "grams_range": [
+   149.0,
+   334.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 277,
+  "protein_g": 30.6
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "d2f0f25d1a3b3f25324692331dbea961db86e7165c3d022090a03d01c61d7cf7",
+ "scale_cues": "Large white square plate, about 27 cm across, seen from overhead. Food sizes were judged against the plate, cherry tomato halves (about 2.5 cm) and the width of the chicken slices.",
+ "assumptions": [
+  "The pale protein is chicken breast, not turkey or fish",
+  "The greens look glossy, so I assumed a light oil-based vinaigrette",
+  "The white flecks are seeds, not grated cheese",
+  "The dark purple pieces are kalamata olives mixed with red leaf lettuce",
+  "No drink is visible"
+ ],
+ "latency_s": 430.14,
+ "calls": [
+  {
+   "wall_s": 430.14,
+   "duration_ms": 18214,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0391491,
+   "cost_basis": "list",
+   "input_tokens": 8730,
+   "output_tokens": 1488
+  }
+ ],
+ "cost_usd_cli": 0.03915,
+ "log_id": "8d62f870e6bc"
+}

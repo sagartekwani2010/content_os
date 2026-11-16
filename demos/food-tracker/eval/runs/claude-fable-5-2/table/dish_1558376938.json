@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Red seedless grapes",
+   "grams_low": 65,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "preparation": "raw, whole, off the stem",
+   "confidence": 0.7,
+   "kcal": 62.1,
+   "kcal_range": [
+    45,
+    83
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.5,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "174683",
+    "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 69.0,
+    "protein_100g": 0.72
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 90.0,
+  "kcal": 62.1,
+  "protein_g": 0.6,
+  "grams_range": [
+   65.0,
+   120.0
+  ],
+  "kcal_range": [
+   45,
+   83
+  ],
+  "protein_range": [
+   0.5,
+   0.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 90.0,
+   "kcal": 62.1,
+   "protein_g": 0.6,
+   "grams_range": [
+    65.0,
+    120.0
+   ],
+   "kcal_range": [
+    45,
+    83
+   ],
+   "protein_range": [
+    0.5,
+    0.9
+   ]
+  },
+  "rows": [
+   "Grapes, red or green (European type, such as Thompson seedless), raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "318bbc47007f41bb3f0f768c7a6d6cd688b9e0f257bb4b014c95c1a18908f6c5",
+ "scale_cues": "White disposable paper plate/shallow bowl (assumed ~18-20 cm diameter); 14 grapes counted individually, each ~2.5-3 cm long relative to the plate.",
+ "assumptions": [
+  "14 grapes counted, at roughly 6-7 g each",
+  "Grapes are seedless and stems removed, so the whole mass is edible",
+  "Plate is a small paper plate of about 18-20 cm diameter",
+  "No dressing, oil or other items present"
+ ],
+ "latency_s": 9.19,
+ "calls": [
+  {
+   "wall_s": 6.14,
+   "duration_ms": 5390,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0467725,
+   "cost_basis": "unknown",
+   "input_tokens": 8832,
+   "output_tokens": 349
+  },
+  {
+   "wall_s": 3.05,
+   "duration_ms": 2027,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0132816,
+   "cost_basis": "unknown",
+   "input_tokens": 1439,
+   "output_tokens": 80
+  }
+ ],
+ "cost_usd_cli": 0.06005,
+ "log_id": "a5bcdb02ce0c"
+}

@@ -1,0 +1,159 @@
+{
+ "items": [
+  {
+   "name": "Arugula and mixed baby greens (arugula, mizuna, spinach)",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 65,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, loosely piled",
+   "confidence": 0.55,
+   "kcal": 9.4,
+   "kcal_range": [
+    6,
+    14
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, julienned/shredded",
+   "confidence": 0.5,
+   "kcal": 2.5,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Vinaigrette / oil dressing (possible light coating)",
+   "grams_low": 0,
+   "grams_best": 3,
+   "grams_high": 8,
+   "fdc_query": "Salad dressing, vinaigrette, olive oil and vinegar",
+   "preparation": "tossed lightly through the greens",
+   "confidence": 0.25,
+   "kcal": 13.5,
+   "kcal_range": [
+    13,
+    36
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 54.0,
+  "kcal": 25.4,
+  "protein_g": 0.7,
+  "grams_range": [
+   33.0,
+   83.0
+  ],
+  "kcal_range": [
+   20,
+   54
+  ],
+  "protein_range": [
+   0.4,
+   1.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 54.0,
+   "kcal": 45.2,
+   "protein_g": 1.7,
+   "grams_range": [
+    33.0,
+    83.0
+   ],
+   "kcal_range": [
+    31,
+    86
+   ],
+   "protein_range": [
+    1.0,
+    2.5
+   ]
+  },
+  "rows": [
+   "Arugula, raw",
+   "Carrot, dehydrated",
+   "Salad dressing, home recipe, vinegar and oil"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "cf5213c16c794f02cd31a4c466d9f1971d75b51600007c3d06e28fd7a062c01c",
+ "scale_cues": "I used the large square white dinner plate (about 26-28 cm across) as the scale reference. The pile of greens covers roughly 40% of the plate and is loose and airy, not packed down. No cutlery or hands are in the frame.",
+ "assumptions": [
+  "I think the greens are mostly arugula, with some mizuna and spinach-like leaves mixed in. I counted them as one item because their nutrition values are almost the same.",
+  "I counted the orange strips as shredded raw carrot.",
+  "The leaves look slightly glossy, which may mean a light coating of dressing or oil. I can't see any pooled dressing, so I kept the dressing amount low and gave it low confidence.",
+  "I didn't see any other toppings, such as cheese, nuts or croutons."
+ ],
+ "latency_s": 13.6,
+ "calls": [
+  {
+   "wall_s": 10.17,
+   "duration_ms": 9430,
+   "num_turns": 2,
+   "cost_usd_cli": 0.055217499999999996,
+   "cost_basis": "list",
+   "input_tokens": 8902,
+   "output_tokens": 757
+  },
+  {
+   "wall_s": 3.43,
+   "duration_ms": 2266,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0219666,
+   "cost_basis": "list",
+   "input_tokens": 2351,
+   "output_tokens": 145
+  }
+ ],
+ "cost_usd_cli": 0.07718,
+ "log_id": "8f581d306c88"
+}

@@ -1,0 +1,109 @@
+{
+ "items": [
+  {
+   "name": "Sliced beef steak with crumb/tomato topping",
+   "grams_low": 70,
+   "grams_best": 105,
+   "grams_high": 150,
+   "kcal": 250,
+   "protein_g": 27,
+   "preparation": "grilled or pan-seared, sliced, topped with a seasoned crumb and tomato mixture",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Sauteed spinach",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 65,
+   "kcal": 14,
+   "protein_g": 1.2,
+   "preparation": "wilted/sauteed",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Brown rice",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "kcal": 42,
+   "protein_g": 0.9,
+   "preparation": "boiled/steamed, mixed in with the spinach",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Sauteed mushrooms",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 30,
+   "kcal": 5,
+   "protein_g": 0.4,
+   "preparation": "sauteed slices mixed with the rice and spinach",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Green beans",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 85,
+   "kcal": 21,
+   "protein_g": 1.1,
+   "preparation": "roasted or sauteed, slightly blistered",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 12,
+   "kcal": 62,
+   "protein_g": 0,
+   "preparation": "implied by sauteed/roasted vegetables and seared meat, absorbed into the food",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 262.0,
+  "kcal": 394,
+  "protein_g": 30.6,
+  "grams_range": [
+   166.0,
+   397.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 394,
+  "protein_g": 30.6
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "33f29ac52f0c32d8551907de5fadbf77cdd7efa60861e367767fe6b53261ed4c",
+ "scale_cues": "White square dinner plate assumed about 25-26 cm across; food occupies roughly the upper third of the plate. Green bean length (about 8-10 cm each) used as a secondary size check. No cutlery or hand in frame.",
+ "assumptions": [
+  "Only the centre plate is logged; the partially visible side plate at left (olives, cherry tomatoes, shredded carrot) is treated as a separate dish and excluded.",
+  "Meat is assumed to be beef steak of moderate fat content; it could be another red meat such as lamb or liver.",
+  "The topping on the meat is assumed to be a small amount of crumb and tomato, included in the meat's mass and calories.",
+  "The brown pieces under the rice are assumed to be mushrooms; they could be small pieces of meat.",
+  "Cooking oil is not directly visible and is estimated from the sheen and preparation style.",
+  "Food depth is estimated from a single overhead view, so mass of the piled items is uncertain."
+ ],
+ "latency_s": 10.83,
+ "calls": [
+  {
+   "wall_s": 10.83,
+   "duration_ms": 10112,
+   "num_turns": 2,
+   "cost_usd_cli": 0.059129,
+   "cost_basis": "unknown",
+   "input_tokens": 8660,
+   "output_tokens": 965
+  }
+ ],
+ "cost_usd_cli": 0.05913,
+ "log_id": "fd6ace45abbd"
+}

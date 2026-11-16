@@ -1,0 +1,20 @@
+{
+  "reel_id": "example-hybrid-gym",
+  "target_duration_s": 58,
+  "beats": [
+    {"id": 1, "section": "hook", "text": "Last Reel, Jev was 73% faster and 99% cheaper than GPT for one clean decision."},
+    {"id": 2, "section": "hook", "text": "I still did not remove GPT."},
+    {"id": 3, "section": "problem", "text": "This Gym Assistant message is why: I slept badly and missed a workout. What should I do?"},
+    {"id": 4, "section": "problem", "text": "Jev cannot have that conversation. GPT can."},
+    {"id": 5, "section": "mechanism", "text": "GPT understands the message, asks when something is missing, and turns it into a clean check-in."},
+    {"id": 6, "section": "baseline", "text": "Then I have a choice. GPT-only can make the next call too."},
+    {"id": 7, "section": "baseline", "text": "It is simpler, and for a one-off decision, it may be the best option."},
+    {"id": 8, "section": "condition", "text": "I add Jev only when the next job repeats and is bounded."},
+    {"id": 9, "section": "condition", "text": "Judge risk, then pick progress, hold, ask for information, or human review."},
+    {"id": 10, "section": "condition", "text": "A system rule blocks risky input from becoming automatic progress."},
+    {"id": 11, "section": "result", "text": "So Jev replaces one GPT decision step, not GPT itself."},
+    {"id": 12, "section": "result", "text": "In this setup, that is an estimated 36% less waiting and 49% lower model cost."},
+    {"id": 13, "section": "rule", "text": "My rule for agents: use GPT for open-ended work."},
+    {"id": 14, "section": "rule", "text": "Split the system only when a repeatable decision can prove it earns the extra complexity."}
+  ]
+}

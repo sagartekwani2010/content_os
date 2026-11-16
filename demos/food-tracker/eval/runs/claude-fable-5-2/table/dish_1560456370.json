@@ -1,0 +1,217 @@
+{
+ "items": [
+  {
+   "name": "Roasted chicken thigh/drumstick piece with skin (bone-in)",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "fdc_query": "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+   "preparation": "roasted with skin, seasoned with herbs; edible mass excludes bone",
+   "confidence": 0.55,
+   "kcal": 232.0,
+   "kcal_range": [
+    162,
+    325
+   ],
+   "protein_g": 23.3,
+   "protein_range": [
+    16.3,
+    32.6
+   ],
+   "fdc": {
+    "fdc_id": "173625",
+    "description": "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 232.0,
+    "protein_100g": 23.26
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "White rice",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Rice, white, long-grain, regular, cooked",
+   "preparation": "steamed/boiled",
+   "confidence": 0.6,
+   "kcal": 117.0,
+   "kcal_range": [
+    78,
+    169
+   ],
+   "protein_g": 2.4,
+   "protein_range": [
+    1.6,
+    3.5
+   ],
+   "fdc": {
+    "fdc_id": "168878",
+    "description": "Rice, white, long-grain, regular, enriched, cooked",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 130.0,
+    "protein_100g": 2.69
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Green beans",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 45,
+   "fdc_query": "Beans, snap, green, cooked, boiled, drained, without salt",
+   "preparation": "cooked whole, possibly saut\u00e9ed lightly",
+   "confidence": 0.6,
+   "kcal": 10.5,
+   "kcal_range": [
+    7,
+    16
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "169141",
+    "description": "Beans, snap, green, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 1.89
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula",
+   "grams_low": 12,
+   "grams_best": 20,
+   "grams_high": 30,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw leaves, no visible dressing",
+   "confidence": 0.6,
+   "kcal": 5.0,
+   "kcal_range": [
+    3,
+    8
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (on chicken and green beans)",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied by roasted chicken skin sheen and glossy green beans",
+   "confidence": 0.35,
+   "kcal": 35.4,
+   "kcal_range": [
+    18,
+    71
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 244.0,
+  "kcal": 399.9,
+  "protein_g": 26.8,
+  "grams_range": [
+   164.0,
+   353.0
+  ],
+  "kcal_range": [
+   268,
+   589
+  ],
+  "protein_range": [
+   18.6,
+   37.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 244.0,
+   "kcal": 399.9,
+   "protein_g": 26.8,
+   "grams_range": [
+    164.0,
+    353.0
+   ],
+   "kcal_range": [
+    268,
+    589
+   ],
+   "protein_range": [
+    18.6,
+    37.8
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Beans, snap, green, cooked, boiled, drained, without salt",
+   "Arugula, raw",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "d1bc74f8e70ce94b3cff6fa273f175b43b70efb825e6e45350936502b28b23ed",
+ "scale_cues": "Large white square dinner plate (assumed ~26-28 cm across) filling most of the frame; food portions sized relative to the plate, with the chicken piece about one quarter of the plate width and the green beans roughly 8-10 cm long.",
+ "assumptions": [
+  "Plate is a standard ~27 cm square dinner plate",
+  "Chicken piece is a bone-in thigh or small drumstick/thigh cut with skin; grams are edible meat and skin only, bone excluded",
+  "Rice is plain white rice in a thin, spread-out layer with no added butter or oil",
+  "Arugula is undressed",
+  "A small amount of cooking oil was used on the chicken and green beans; not directly visible as a pool",
+  "Overhead view gives no depth information, so pile heights are assumed shallow"
+ ],
+ "latency_s": 15.33,
+ "calls": [
+  {
+   "wall_s": 10.98,
+   "duration_ms": 10255,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0565659,
+   "cost_basis": "unknown",
+   "input_tokens": 8826,
+   "output_tokens": 840
+  },
+  {
+   "wall_s": 4.34,
+   "duration_ms": 3354,
+   "num_turns": 1,
+   "cost_usd_cli": 0.03470449999999999,
+   "cost_basis": "unknown",
+   "input_tokens": 3595,
+   "output_tokens": 278
+  }
+ ],
+ "cost_usd_cli": 0.09127,
+ "log_id": "b9a86c92fa34"
+}

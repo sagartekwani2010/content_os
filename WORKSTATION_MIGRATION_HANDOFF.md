@@ -105,8 +105,9 @@ assets; the app/project re-link step may still be required on the home Mac.
    distinct rendered media. If the Whisper model is omitted as a redownloadable
    dependency, record that explicitly in the manifest.
 4. The archive index and `restore_media.py` are in the private repo. Any
-   Git commit made from Codex must include
-   `Co-authored-by: Codex <noreply@openai.com>` in the commit body. Keep all
+   Git commit made with Claude ends its message with the Claude attribution
+   trailer (`Co-Authored-By: Claude <noreply@anthropic.com>`, or the exact
+   line the Claude Code session specifies). Keep all
    credentials out of Git history and release assets.
 5. The repo was confirmed private. All nine release assets were checked
    against local size and SHA-256; GitHub reports matching digests. The release

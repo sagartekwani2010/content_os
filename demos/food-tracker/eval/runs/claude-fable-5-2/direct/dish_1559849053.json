@@ -1,0 +1,63 @@
+{
+ "items": [
+  {
+   "name": "red grapes",
+   "grams_low": 55,
+   "grams_best": 75,
+   "grams_high": 100,
+   "kcal": 52,
+   "protein_g": 0.5,
+   "preparation": "raw, whole, seedless (about 14 grapes)",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "almonds",
+   "grams_low": 30,
+   "grams_best": 40,
+   "grams_high": 52,
+   "kcal": 232,
+   "protein_g": 8.5,
+   "preparation": "whole, skin-on, raw or dry-roasted, unsalted (about 32 almonds)",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 115.0,
+  "kcal": 284,
+  "protein_g": 9.0,
+  "grams_range": [
+   85.0,
+   152.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 284,
+  "protein_g": 9.0
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "86d352404c151d8a6067d350f7cd7b51a0adddb12d1b5536ed28003122871ac4",
+ "scale_cues": "White square plate assumed about 20-22 cm across; individual counts of grapes (~14) and almonds (~32) multiplied by typical unit weights (grape ~5 g, almond ~1.2 g).",
+ "assumptions": [
+  "Red round items are small red grapes, not cherry tomatoes, based on dark red colour and glossy round shape",
+  "Almonds are plain with no added oil, salt or coating",
+  "Almonds are partly piled, so the count allows for a few hidden beneath the visible layer",
+  "No dressings, oils or drinks are present"
+ ],
+ "latency_s": 8.68,
+ "calls": [
+  {
+   "wall_s": 8.68,
+   "duration_ms": 7948,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0493651,
+   "cost_basis": "unknown",
+   "input_tokens": 8666,
+   "output_tokens": 480
+  }
+ ],
+ "cost_usd_cli": 0.04937,
+ "log_id": "60ab4f5ff780"
+}

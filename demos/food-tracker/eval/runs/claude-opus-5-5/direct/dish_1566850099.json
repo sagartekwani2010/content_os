@@ -1,0 +1,107 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (green leaf lettuce, spring mix)",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 65,
+   "kcal": 7,
+   "protein_g": 0.6,
+   "preparation": "raw, tossed",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Broccoli florets",
+   "grams_low": 35,
+   "grams_best": 50,
+   "grams_high": 75,
+   "kcal": 17,
+   "protein_g": 1.4,
+   "preparation": "steamed or roasted, glossy, likely oiled",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 4,
+   "grams_best": 7,
+   "grams_high": 12,
+   "kcal": 3,
+   "protein_g": 0.1,
+   "preparation": "raw, julienned",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Red chard/beet stems and red leaf pieces",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "kcal": 1,
+   "protein_g": 0.1,
+   "preparation": "raw",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Chickpea/white bean garnish",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "kcal": 4,
+   "protein_g": 0.2,
+   "preparation": "cooked",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Vinaigrette / olive oil dressing",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 14,
+   "kcal": 50,
+   "protein_g": 0,
+   "preparation": "tossed through salad and broccoli",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 119.0,
+  "kcal": 82,
+  "protein_g": 2.4,
+  "grams_range": [
+   77.0,
+   182.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 82,
+  "protein_g": 2.4
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "f3d24b934b653cc527887039d35322de5207dc7b115b2852350c89fe7c9bef13",
+ "scale_cues": "Large square white plate (~25-27 cm), with a fork tine edge visible at top left; the salad takes up about a third of the plate's surface and sits in a low pile.",
+ "assumptions": [
+  "Leaves and broccoli look glossy, so I assumed an oil-based vinaigrette or oil used in cooking.",
+  "I treated the broccoli as cooked because of its darker green color and slightly browned florets.",
+  "The small white round item is assumed to be a chickpea or bean; it could be a nut.",
+  "The red strips are assumed to be chard or beet stems rather than red onion."
+ ],
+ "latency_s": 10.67,
+ "calls": [
+  {
+   "wall_s": 10.67,
+   "duration_ms": 9930,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0591521,
+   "cost_basis": "list",
+   "input_tokens": 8736,
+   "output_tokens": 955
+  }
+ ],
+ "cost_usd_cli": 0.05915,
+ "log_id": "94f89b13825d"
+}

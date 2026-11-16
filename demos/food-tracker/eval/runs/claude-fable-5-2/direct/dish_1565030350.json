@@ -1,0 +1,74 @@
+{
+ "items": [
+  {
+   "name": "mixed salad greens (arugula/mizuna)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 65,
+   "kcal": 10,
+   "protein_g": 1.0,
+   "preparation": "raw, loosely piled",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "shredded carrot",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 10,
+   "kcal": 2,
+   "protein_g": 0.05,
+   "preparation": "raw, shredded, mixed into greens",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "vinaigrette / oil dressing",
+   "grams_low": 0,
+   "grams_best": 4,
+   "grams_high": 10,
+   "kcal": 25,
+   "protein_g": 0,
+   "preparation": "light coating tossed on leaves (inferred from slight sheen)",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 49.0,
+  "kcal": 37,
+  "protein_g": 1.1,
+  "grams_range": [
+   27.0,
+   85.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 37,
+  "protein_g": 1.05
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "cf5213c16c794f02cd31a4c466d9f1971d75b51600007c3d06e28fd7a062c01c",
+ "scale_cues": "Square white plate assumed about 25-27 cm across; the salad pile covers roughly a third of the plate area and is shallow, with individual leaf sizes used as a secondary cue.",
+ "assumptions": [
+  "Greens are a mix of arugula and mizuna-type baby leaves",
+  "Orange slivers are shredded carrot",
+  "A light oil-based dressing is assumed from the slight sheen on the leaves; if the salad is undressed, the total is about 12 kcal",
+  "No hidden items beneath the greens"
+ ],
+ "latency_s": 7.35,
+ "calls": [
+  {
+   "wall_s": 7.34,
+   "duration_ms": 6607,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0508782,
+   "cost_basis": "unknown",
+   "input_tokens": 8672,
+   "output_tokens": 549
+  }
+ ],
+ "cost_usd_cli": 0.05088,
+ "log_id": "b62515a18953"
+}

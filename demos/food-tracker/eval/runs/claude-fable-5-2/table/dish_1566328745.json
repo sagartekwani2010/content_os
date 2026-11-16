@@ -1,0 +1,133 @@
+{
+ "items": [
+  {
+   "name": "Diced grilled chicken breast",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "grilled or roasted, skinless, diced into roughly 1.5-2 cm cubes",
+   "confidence": 0.6,
+   "kcal": 214.5,
+   "kcal_range": [
+    148,
+    297
+   ],
+   "protein_g": 40.3,
+   "protein_range": [
+    27.9,
+    55.8
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cherry tomatoes",
+   "grams_low": 45,
+   "grams_best": 65,
+   "grams_high": 90,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, whole (6 cherry/grape tomatoes)",
+   "confidence": 0.7,
+   "kcal": 11.7,
+   "kcal_range": [
+    8,
+    16
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 195.0,
+  "kcal": 226.2,
+  "protein_g": 40.9,
+  "grams_range": [
+   135.0,
+   270.0
+  ],
+  "kcal_range": [
+   156,
+   313
+  ],
+  "protein_range": [
+   28.3,
+   56.6
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 195.0,
+   "kcal": 226.2,
+   "protein_g": 40.9,
+   "grams_range": [
+    135.0,
+    270.0
+   ],
+   "kcal_range": [
+    156,
+    313
+   ],
+   "protein_range": [
+    28.3,
+    56.6
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Tomatoes, red, ripe, raw, year round average"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "71f15377d3c011f19e4ea4db8cb6309bec7a50f79a0cacc8d9507c8d281ea6e7",
+ "scale_cues": "White square dinner plate assumed about 26-27 cm across, filling most of the frame; cherry tomatoes (about 2.5-3 cm each, roughly 10-12 g each) used as an internal size reference for the chicken cubes, which lie mostly in a single layer with some overlap.",
+ "assumptions": [
+  "Plate is a standard ~26-27 cm square dinner plate; no cutlery or hand in frame to confirm scale.",
+  "Chicken is skinless breast meat, grilled or roasted, with no visible sauce; no visible oil pooling, so any cooking oil is not listed separately.",
+  "About 55-65 chicken pieces at roughly 2 g each, mostly single layer.",
+  "Six cherry/grape tomatoes at about 10-12 g each.",
+  "Small crumbs on the plate are chicken fragments and are included in the chicken estimate.",
+  "The partial second plate at the left edge is empty and not part of the meal."
+ ],
+ "latency_s": 10.88,
+ "calls": [
+  {
+   "wall_s": 8.18,
+   "duration_ms": 7435,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0524281,
+   "cost_basis": "unknown",
+   "input_tokens": 8828,
+   "output_tokens": 629
+  },
+  {
+   "wall_s": 2.69,
+   "duration_ms": 1681,
+   "num_turns": 1,
+   "cost_usd_cli": 0.018756000000000002,
+   "cost_basis": "unknown",
+   "input_tokens": 2083,
+   "output_tokens": 105
+  }
+ ],
+ "cost_usd_cli": 0.07118,
+ "log_id": "d28f4fc32014"
+}

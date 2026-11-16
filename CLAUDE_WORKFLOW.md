@@ -1,8 +1,9 @@
 # Content production workflow
 
-Use this workflow when the user asks Codex to produce a Reel, carousel, or
-trial Reel from a brief. Codex is the creative executor; no API-backed agent
-workflow is involved.
+Use this workflow when the user asks Claude to produce a Reel, carousel, or
+trial Reel from a brief. Claude (in Claude Code) is the creative executor for
+the hand-written package; the coordinated `cli.py` workflows run the same stage
+sequence through `content_os/llm_runtime.py` when the result must be persisted.
 
 ## Inputs
 

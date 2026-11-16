@@ -1,0 +1,329 @@
+{
+ "items": [
+  {
+   "name": "Sliced grilled chicken breast",
+   "grams_low": 55,
+   "grams_best": 80,
+   "grams_high": 115,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, grilled",
+   "preparation": "grilled, sliced into 3-4 strips, laid on top of salad",
+   "confidence": 0.55,
+   "kcal": 120.8,
+   "kcal_range": [
+    83,
+    174
+   ],
+   "protein_g": 24.4,
+   "protein_range": [
+    16.8,
+    35.1
+   ],
+   "fdc": {
+    "fdc_id": "171534",
+    "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, grilled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 151.0,
+    "protein_100g": 30.54
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula and mixed greens (incl. red leaf lettuce)",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 70,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, tossed with dressing",
+   "confidence": 0.6,
+   "kcal": 9.4,
+   "kcal_range": [
+    6,
+    15
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cherry tomatoes",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, whole/halved",
+   "confidence": 0.6,
+   "kcal": 4.5,
+   "kcal_range": [
+    3,
+    7
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cucumber",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "fdc_query": "Cucumber, with peel, raw",
+   "preparation": "raw, diced chunks",
+   "confidence": 0.5,
+   "kcal": 3.0,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "168409",
+    "description": "Cucumber, with peel, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 15.0,
+    "protein_100g": 0.65
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Kalamata olives",
+   "grams_low": 6,
+   "grams_best": 12,
+   "grams_high": 20,
+   "fdc_query": "Olives, ripe, canned (small-extra large)",
+   "preparation": "whole/halved, brined",
+   "confidence": 0.45,
+   "kcal": 13.9,
+   "kcal_range": [
+    7,
+    23
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "169094",
+    "description": "Olives, ripe, canned (small-extra large)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 116.0,
+    "protein_100g": 0.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red onion",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 15,
+   "fdc_query": "Onions, red, raw",
+   "preparation": "raw, thinly sliced",
+   "confidence": 0.5,
+   "kcal": 3.2,
+   "kcal_range": [
+    2,
+    6
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170000",
+    "description": "Onions, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 40.0,
+    "protein_100g": 1.1
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Pepperoncini / green pepper piece",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "fdc_query": "Peppers, sweet, green, raw",
+   "preparation": "raw or pickled, one piece at salad edge",
+   "confidence": 0.35,
+   "kcal": 2.0,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170427",
+    "description": "Peppers, sweet, green, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 20.0,
+    "protein_100g": 0.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Crumbled feta cheese",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 15,
+   "fdc_query": "Cheese, feta",
+   "preparation": "crumbled, scattered over salad",
+   "confidence": 0.4,
+   "kcal": 21.2,
+   "kcal_range": [
+    11,
+    40
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.6,
+    2.1
+   ],
+   "fdc": {
+    "fdc_id": "173420",
+    "description": "Cheese, feta",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 265.0,
+    "protein_100g": 14.21
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Vinaigrette / olive oil dressing",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 20,
+   "fdc_query": "Salad dressing, vinaigrette, oil and vinegar, home recipe",
+   "preparation": "tossed onto greens, visible sheen on leaves",
+   "confidence": 0.35,
+   "kcal": 44.9,
+   "kcal_range": [
+    22,
+    90
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 218.0,
+  "kcal": 222.9,
+  "protein_g": 26.7,
+  "grams_range": [
+   134.0,
+   348.0
+  ],
+  "kcal_range": [
+   137,
+   364
+  ],
+  "protein_range": [
+   18.1,
+   39.3
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 218.0,
+   "kcal": 248.1,
+   "protein_g": 29.1,
+   "grams_range": [
+    134.0,
+    348.0
+   ],
+   "kcal_range": [
+    155,
+    399
+   ],
+   "protein_range": [
+    19.7,
+    42.7
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, fried",
+   "Lettuce, red leaf, raw",
+   "Tomatoes, red, ripe, raw, year round average",
+   "Cucumber, with peel, raw",
+   "Olives, ripe, canned (small-extra large)",
+   "Onions, raw",
+   "Peppers, sweet, green, raw",
+   "Cheese, feta",
+   "Salad dressing, home recipe, vinegar and oil"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "d2f0f25d1a3b3f25324692331dbea961db86e7165c3d022090a03d01c61d7cf7",
+ "scale_cues": "Square white dinner plate assumed ~26-27 cm across; salad covers roughly the central 45% of the plate; cherry tomatoes (~2.5 cm) used as an internal size reference for chicken strips (~9-10 cm long each).",
+ "assumptions": [
+  "Meat is grilled chicken breast (pale, sliced); could alternatively be turkey or pork loin",
+  "Greens are mostly arugula with some red leaf/spring mix, in a thin loose layer rather than a deep pile",
+  "Small white specks are feta crumbles (possibly sesame seeds or grated cheese)",
+  "Light vinaigrette implied by sheen on leaves; amount is uncertain as no pooling is visible",
+  "Dark purple pieces are kalamata olives plus red-leaf lettuce, not beets",
+  "Image is low-resolution and rotated; no cutlery or hand present for scale, so plate size is assumed"
+ ],
+ "latency_s": 18.11,
+ "calls": [
+  {
+   "wall_s": 13.0,
+   "duration_ms": 12276,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0617643,
+   "cost_basis": "unknown",
+   "input_tokens": 8840,
+   "output_tokens": 1212
+  },
+  {
+   "wall_s": 5.09,
+   "duration_ms": 4014,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0512566,
+   "cost_basis": "unknown",
+   "input_tokens": 5317,
+   "output_tokens": 403
+  }
+ ],
+ "cost_usd_cli": 0.11302,
+ "log_id": "4bfc0ab2a8ff"
+}

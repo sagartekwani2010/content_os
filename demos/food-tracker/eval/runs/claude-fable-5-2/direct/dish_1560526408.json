@@ -1,0 +1,86 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (red leaf lettuce, arugula, spring mix)",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "kcal": 7,
+   "protein_g": 0.6,
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Tomato pieces",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 50,
+   "kcal": 6,
+   "protein_g": 0.3,
+   "preparation": "raw, chopped/wedged, mixed into salad",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Vinaigrette / oil-based dressing",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 14,
+   "kcal": 32,
+   "protein_g": 0,
+   "preparation": "tossed on greens (glossy sheen visible)",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Black olives / dark garnish",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 10,
+   "kcal": 6,
+   "protein_g": 0.1,
+   "preparation": "chopped, mixed into salad",
+   "confidence": 0.25,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 77.0,
+  "kcal": 51,
+  "protein_g": 1.0,
+  "grams_range": [
+   40.0,
+   129.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 51,
+  "protein_g": 1.0
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "7124065f6df0e242347ee341714a232c75f114cd70d91bc694d059fc3bf9708f",
+ "scale_cues": "Large white square dinner plate (assumed ~26-28 cm wide) viewed from overhead; the salad covers roughly a quarter of the plate surface in a loose, low pile.",
+ "assumptions": [
+  "Plate assumed to be about 26-28 cm across",
+  "Red chunks under the greens assumed to be tomato rather than beet, pepper or meat",
+  "Glossy sheen on leaves assumed to be a light oil-based vinaigrette",
+  "Small dark cluster assumed to be chopped black olive",
+  "Low image resolution limits identification of ingredients hidden under the leaves"
+ ],
+ "latency_s": 8.41,
+ "calls": [
+  {
+   "wall_s": 8.41,
+   "duration_ms": 7681,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0531661,
+   "cost_basis": "unknown",
+   "input_tokens": 8676,
+   "output_tokens": 668
+  }
+ ],
+ "cost_usd_cli": 0.05317,
+ "log_id": "6b3dc641e079"
+}

@@ -1,0 +1,160 @@
+{
+ "items": [
+  {
+   "name": "Diced chicken breast",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "cooked (roasted/grilled), diced into ~1-2 cm cubes, light browning on some pieces",
+   "confidence": 0.6,
+   "kcal": 148.5,
+   "kcal_range": [
+    99,
+    214
+   ],
+   "protein_g": 27.9,
+   "protein_range": [
+    18.6,
+    40.3
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Kalamata olives",
+   "grams_low": 25,
+   "grams_best": 36,
+   "grams_high": 50,
+   "fdc_query": "Olives, ripe, canned (jumbo-super colossal)",
+   "preparation": "whole brined dark purple olives, about 9 visible",
+   "confidence": 0.6,
+   "kcal": 41.8,
+   "kcal_range": [
+    29,
+    58
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.2,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "2710090",
+    "description": "Olives, black",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 116.0,
+    "protein_100g": 0.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Oil/brine residue on chicken and olives",
+   "grams_low": 0,
+   "grams_best": 2,
+   "grams_high": 5,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "thin coating implied by slight sheen and browning; no pooled oil visible",
+   "confidence": 0.3,
+   "kcal": 17.7,
+   "kcal_range": [
+    18,
+    44
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 128.0,
+  "kcal": 208.0,
+  "protein_g": 28.2,
+  "grams_range": [
+   85.0,
+   185.0
+  ],
+  "kcal_range": [
+   146,
+   316
+  ],
+  "protein_range": [
+   18.8,
+   40.7
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 128.0,
+   "kcal": 195.4,
+   "protein_g": 28.2,
+   "grams_range": [
+    85.0,
+    185.0
+   ],
+   "kcal_range": [
+    137,
+    298
+   ],
+   "protein_range": [
+    18.8,
+    40.8
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Olives, ripe, canned (jumbo-super colossal)",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "1a353b0de279f264bbbf48e613948b83291d99e50d9d19910732d1d7ef02baeb",
+ "scale_cues": "Stainless steel mixing bowl filling most of the frame (assumed ~25-28 cm rim diameter) on a scale/tray; whole olives (~2-2.5 cm long, ~4 g each) used as an internal size reference for the chicken cubes (~35-40 pieces).",
+ "assumptions": [
+  "White cubed pieces are cooked chicken breast rather than tofu, turkey, or cheese, based on fibrous texture and browned edges",
+  "Dark oval items are Kalamata-type olives; counted about 9 at ~4 g each, treated as edible mass (pits, if present, not subtracted)",
+  "Chicken is a single loose layer with some overlap, about 35-40 cubes at ~2-3 g each",
+  "No visible sauce or dressing; only a trace of oil or brine assumed",
+  "Bowl size is assumed from typical mixing bowl dimensions as no cutlery or hand is in frame"
+ ],
+ "latency_s": 14.42,
+ "calls": [
+  {
+   "wall_s": 9.02,
+   "duration_ms": 8278,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0520295,
+   "cost_basis": "unknown",
+   "input_tokens": 8832,
+   "output_tokens": 727
+  },
+  {
+   "wall_s": 5.38,
+   "duration_ms": 4354,
+   "num_turns": 1,
+   "cost_usd_cli": 0.027712399999999998,
+   "cost_basis": "unknown",
+   "input_tokens": 2517,
+   "output_tokens": 365
+  }
+ ],
+ "cost_usd_cli": 0.07974,
+ "log_id": "b32a1c757189"
+}

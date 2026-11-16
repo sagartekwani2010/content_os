@@ -1,0 +1,271 @@
+{
+ "items": [
+  {
+   "name": "Brown rice",
+   "grams_low": 50,
+   "grams_best": 70,
+   "grams_high": 95,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "steamed/boiled",
+   "confidence": 0.6,
+   "kcal": 86.1,
+   "kcal_range": [
+    62,
+    117
+   ],
+   "protein_g": 1.9,
+   "protein_range": [
+    1.4,
+    2.6
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Grilled chicken pieces (charred, skin-on, thigh/breast chunks)",
+   "grams_low": 80,
+   "grams_best": 115,
+   "grams_high": 150,
+   "fdc_query": "Chicken, broilers or fryers, dark meat, meat and skin, cooked, roasted",
+   "preparation": "grilled with a glaze",
+   "confidence": 0.4,
+   "kcal": 274.9,
+   "kcal_range": [
+    191,
+    358
+   ],
+   "protein_g": 31.4,
+   "protein_range": [
+    21.8,
+    41.0
+   ],
+   "fdc": {
+    "fdc_id": "171450",
+    "description": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 239.0,
+    "protein_100g": 27.3
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Mixed salad greens (green leaf / fris\u00e9e)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw",
+   "confidence": 0.55,
+   "kcal": 8.4,
+   "kcal_range": [
+    5,
+    13
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red leaf lettuce / radicchio, grilled or wilted",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "fdc_query": "Radicchio, raw",
+   "preparation": "grilled or wilted",
+   "confidence": 0.35,
+   "kcal": 8.1,
+   "kcal_range": [
+    5,
+    13
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "168564",
+    "description": "Radicchio, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.43
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Asparagus spear",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Asparagus, cooked, boiled, drained",
+   "preparation": "grilled",
+   "confidence": 0.45,
+   "kcal": 3.3,
+   "kcal_range": [
+    2,
+    6
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.2,
+    0.6
+   ],
+   "fdc": {
+    "fdc_id": "168390",
+    "description": "Asparagus, cooked, boiled, drained",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 22.0,
+    "protein_100g": 2.4
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red bell pepper, diced",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Peppers, sweet, red, raw",
+   "preparation": "raw, diced",
+   "confidence": 0.45,
+   "kcal": 2.6,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170108",
+    "description": "Peppers, sweet, red, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 26.0,
+    "protein_100g": 0.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Vinaigrette / cooking oil",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 15,
+   "fdc_query": "Salad dressing, homemade, vinegar and oil",
+   "preparation": "dressing on the greens and oil from grilling",
+   "confidence": 0.35,
+   "kcal": 35.9,
+   "kcal_range": [
+    18,
+    67
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 293.0,
+  "kcal": 419.3,
+  "protein_g": 34.8,
+  "grams_range": [
+   192.0,
+   415.0
+  ],
+  "kcal_range": [
+   284,
+   578
+  ],
+  "protein_range": [
+   24.0,
+   45.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 293.0,
+   "kcal": 410.1,
+   "protein_g": 30.1,
+   "grams_range": [
+    192.0,
+    415.0
+   ],
+   "kcal_range": [
+    279,
+    565
+   ],
+   "protein_range": [
+    20.7,
+    39.7
+   ]
+  },
+  "rows": [
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+   "Lettuce, green leaf, raw",
+   "Lettuce, red leaf, raw",
+   "Asparagus, cooked, boiled, drained",
+   "Peppers, sweet, red, raw",
+   "Salad dressing, home recipe, vinegar and oil"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "7620b43e5febda273e0bae0d0f49f1bb953721b7feb2dc94d76cb587d0eb18d9",
+ "scale_cues": "A square white dinner plate about 25\u201327 cm across fills most of the frame. The food takes up roughly the centre half of the plate. There is no cutlery or hand to check scale.",
+ "assumptions": [
+  "The dark, charred pieces are taken to be grilled chicken with a glaze. They could also be grilled pork or eggplant.",
+  "The dark purple leaves are taken to be radicchio or red leaf lettuce that has been grilled or wilted.",
+  "The rice is taken to be brown rice because of its tan colour.",
+  "Oil and dressing are inferred because the greens and grilled items look glossy."
+ ],
+ "latency_s": 442.02,
+ "calls": [
+  {
+   "wall_s": 436.86,
+   "duration_ms": 25001,
+   "num_turns": 2,
+   "cost_usd_cli": 0.065045,
+   "cost_basis": "list",
+   "input_tokens": 15320,
+   "output_tokens": 1178
+  },
+  {
+   "wall_s": 5.13,
+   "duration_ms": 4096,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0440074,
+   "cost_basis": "list",
+   "input_tokens": 4544,
+   "output_tokens": 359
+  }
+ ],
+ "cost_usd_cli": 0.10905,
+ "log_id": "95091f1436f6"
+}

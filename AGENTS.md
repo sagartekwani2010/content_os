@@ -1,9 +1,14 @@
-# Content OS: Codex-native operating instructions
+# Content OS: operating instructions
 
-This repository is operated through Codex under the user's ChatGPT sign-in.
-Do not call the OpenAI API or use `OPENAI_API_KEY`. The active pipeline uses
-the `openai-codex` SDK; `openai-agents` remains installed for compatibility
-with historical schemas and optional local SDK utilities, not as the runner.
+This repository is operated through Claude (Claude Code for interactive work).
+The pipeline's model stages run on Claude through `content_os/llm_runtime.py`:
+the Anthropic Messages API (`anthropic` SDK) when `ANTHROPIC_API_KEY`,
+`ANTHROPIC_AUTH_TOKEN` or an `ant auth login` profile is available, otherwise
+the Claude Agent SDK (`claude-agent-sdk`) on the creator's local Claude Code
+login, with no API key. Models, effort and prompt versions are set per stage in
+`config/models.yaml`; never hardcode a model name in code. Do not use Codex or
+the OpenAI API for model stages. OpenAI may appear only as an optional
+transcription provider under `content_os/pipeline/`.
 
 ## Source of truth
 
@@ -16,9 +21,9 @@ with historical schemas and optional local SDK utilities, not as the runner.
   in place when changing its meaning.
 - `HANDOFF.md` records the system's decisions and current operating state.
 
-## Recovering a stalled Codex chat
+## Recovering a stalled chat
 
-The repository cannot detect or resume a stuck Codex desktop turn. To reduce
+The repository cannot detect or resume a stuck agent session. To reduce
 recovery work, run `python scripts/prepare_chat_handoff.py [path/to/focus-file]`
 and paste its output into a fresh chat. Add `--note "..."` for decisions that
 exist only in the conversation. The packet includes current project handoff,
@@ -27,7 +32,7 @@ attachments.
 
 ## When asked to produce content
 
-1. Read `CODEX_WORKFLOW.md`, the requested brief, `config/brand.yaml`, and the
+1. Read `CLAUDE_WORKFLOW.md`, the requested brief, `config/brand.yaml`, and the
    relevant versioned prompt files.
 2. Preserve the six immutable brief fields: topic, core thesis, learning
    objective, format, brand pillar, and high-level sections.
@@ -38,8 +43,8 @@ attachments.
    Apply `feedback/VIDEO_LEARNING_LOOP.md` after each generated video candidate
    and final export; preserve review evidence and version prompt changes.
 3. Produce the execution plan, content package, visual plan, and QA report in
-   one Markdown artifact under `outputs/`, or ask Codex to run the matching
-   `cli.py` workflow when the result must be persisted in the local database.
+   one Markdown artifact under `outputs/`, or run the matching `cli.py`
+   workflow when the result must be persisted in the local database.
 4. Never publish, schedule, buy ads, or invent a human approval. The creator
    has authorized credit-limited invideo or Magnific runs for active, unposted
    videos after a live cost check; fal.ai generations stay with the creator.
@@ -70,4 +75,9 @@ do not regenerate a posted video merely to test a connection.
 - Preserve append-only historical records and existing databases.
 - Keep generated content human-readable in `outputs/`.
 - Run `python -m pytest tests -q` after changing Python code.
-- Never commit secrets, API keys, or credentials.
+- Never commit secrets, API keys, or credentials. Never write an
+  `ANTHROPIC_API_KEY` or other credential into a file in this repository.
+- Commit or push only when the creator asks. Any Git commit made with Claude
+  ends its message with the Claude attribution trailer, for example
+  `Co-Authored-By: Claude <noreply@anthropic.com>` (use the exact line your
+  Claude Code session specifies, which names the model).

@@ -1,5 +1,7 @@
 pydantic>=2.7,<3.0
-openai-agents>=0.22.0,<0.23.0
-openai-codex
+# Claude runtime: Messages API when API credentials exist (content_os/llm_runtime.py)
+anthropic>=2.8,<3.0
+# Claude runtime fallback on the local Claude Code login (no API key)
+claude-agent-sdk>=0.2.182,<0.3
 PyYAML>=6.0
 pytest>=8.0

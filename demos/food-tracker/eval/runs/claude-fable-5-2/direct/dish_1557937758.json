@@ -1,0 +1,108 @@
+{
+ "items": [
+  {
+   "name": "Roasted sweet potato chunks",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 80,
+   "kcal": 52,
+   "protein_g": 1.0,
+   "preparation": "roasted, skin on, 5 small chunks",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Scrambled eggs",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 62,
+   "protein_g": 4.2,
+   "preparation": "scrambled, small curds, includes scattered crumbs",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Raspberries",
+   "grams_low": 30,
+   "grams_best": 42,
+   "grams_high": 55,
+   "kcal": 22,
+   "protein_g": 0.5,
+   "preparation": "raw, about 10 whole berries",
+   "confidence": 0.7,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Blackberries",
+   "grams_low": 10,
+   "grams_best": 16,
+   "grams_high": 24,
+   "kcal": 7,
+   "protein_g": 0.2,
+   "preparation": "raw, 3 whole berries",
+   "confidence": 0.7,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Strawberries",
+   "grams_low": 14,
+   "grams_best": 22,
+   "grams_high": 32,
+   "kcal": 7,
+   "protein_g": 0.2,
+   "preparation": "raw, 2 cut pieces (about one large berry halved)",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (on sweet potato and eggs)",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "kcal": 27,
+   "protein_g": 0,
+   "preparation": "implied by roasting and scrambling, not directly visible",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 178.0,
+  "kcal": 177,
+  "protein_g": 6.1,
+  "grams_range": [
+   115.0,
+   257.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 177,
+  "protein_g": 6.1
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "ca8532a191382aec476a864ee3efedb5df752085d9170492f0d0058e43bcf16e",
+ "scale_cues": "White square plate assumed about 25 cm across; raspberries (about 2 cm, 4 g each) and blackberries (about 5 g each) used as known-size references for the other items.",
+ "assumptions": [
+  "Plate is a standard dinner-size square plate of about 25 cm",
+  "Orange chunks with dark skin are roasted sweet potato, not squash or carrot",
+  "Yellow curds are plain scrambled egg without cheese",
+  "A small amount of oil was used for roasting the sweet potato and cooking the eggs",
+  "Red smears on the plate are berry juice with negligible mass"
+ ],
+ "latency_s": 9.25,
+ "calls": [
+  {
+   "wall_s": 9.25,
+   "duration_ms": 8514,
+   "num_turns": 2,
+   "cost_usd_cli": 0.056179900000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 8664,
+   "output_tokens": 821
+  }
+ ],
+ "cost_usd_cli": 0.05618,
+ "log_id": "1f53835b596f"
+}

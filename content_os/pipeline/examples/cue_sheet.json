@@ -1,0 +1,21 @@
+{
+  "layout": "split_vertical",
+  "layout_params": {"speaker_ratio": 0.5, "speaker_position": "bottom", "caption_position": "top_safe"},
+  "beats": [
+    {"beat": 1, "visual": {"type": "card", "text": "73% FASTER · 99% CHEAPER"}},
+    {"beat": 2, "visual": {"type": "card", "text": "WHY KEEP GPT?"}},
+    {"beat": 3, "visual": {"type": "image", "path": "assets/message_card.png", "fit": "contain"}, "start_offset": 0.4,
+     "sfx": [{"path": "assets/sfx/pop.wav", "at": 0.4, "gain_db": -16}]},
+    {"beat": 4, "visual": {"type": "card", "text": "JEV ✗   GPT ✓"}},
+    {"beat": 5, "visual": {"type": "video", "path": "assets/broll/check_in_flow.mov", "start": 1.5, "fit": "cover"}},
+    {"beat": 6, "visual": {"type": "card", "text": "GPT-ONLY = SIMPLEST PATH"}},
+    {"beat": 8, "visual": {"type": "image", "path": "assets/jev_routes.png", "fit": "contain", "bg": "#F4EFE6"},
+     "start_offset": 0.6},
+    {"beat": 10, "visual": {"type": "card", "text": "RISK + PROGRESS = BLOCKED", "bg": "#1E1E1E", "fg": "#F4EFE6"}},
+    {"beat": 11, "visual": {"type": "image", "path": "assets/gpt_vs_jev_split.png", "fit": "contain"}},
+    {"beat": 12, "visual": {"type": "card", "text": "36% LESS WAITING · 49% LOWER MODEL COST\nESTIMATE · LIVE LOGS PENDING"}},
+    {"beat": 13, "visual": {"type": "card", "text": "UNDERSTAND · DECIDE · PROTECT"}}
+  ],
+  "music": {"path": "music/bed.m4a", "gain_db": -20, "fade_in": 0.5, "fade_out": 2.0,
+            "duck": {"threshold": 0.03, "ratio": 6, "attack_ms": 15, "release_ms": 350}}
+}

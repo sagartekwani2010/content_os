@@ -1,0 +1,63 @@
+{
+ "items": [
+  {
+   "name": "Saut\u00e9ed rainbow Swiss chard (leaves and red/orange stems)",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 85,
+   "kcal": 11,
+   "protein_g": 1.0,
+   "preparation": "chopped, saut\u00e9ed/wilted",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (olive oil, absorbed)",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "kcal": 27,
+   "protein_g": 0,
+   "preparation": "used for saut\u00e9ing, implied by glossy sheen on the greens",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 58.0,
+  "kcal": 38,
+  "protein_g": 1.0,
+  "grams_range": [
+   36.0,
+   91.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 38,
+  "protein_g": 1.0
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "2586de477596c2cd73c573a939c9d730adbf6fdf8df6715dd2d6951a6678a960",
+ "scale_cues": "White square dinner plate (assumed ~25-27 cm across) fills most of the frame; the chard pile covers roughly 9-10 cm of its centre in a low mound.",
+ "assumptions": [
+  "Plate is a standard ~26 cm square dinner plate",
+  "Greens are cooked rainbow chard, identified by the red, pink and orange stems",
+  "A small amount of oil was used in cooking, inferred from the sheen rather than seen pooled",
+  "No visible sauce, dressing or other ingredients"
+ ],
+ "latency_s": 6.57,
+ "calls": [
+  {
+   "wall_s": 6.57,
+   "duration_ms": 5848,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0495271,
+   "cost_basis": "unknown",
+   "input_tokens": 8666,
+   "output_tokens": 484
+  }
+ ],
+ "cost_usd_cli": 0.04953,
+ "log_id": "12b0f171d0dc"
+}

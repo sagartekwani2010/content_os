@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Almonds, whole, skin-on",
+   "grams_low": 28,
+   "grams_best": 36,
+   "grams_high": 45,
+   "fdc_query": "Nuts, almonds",
+   "preparation": "raw or dry roasted whole kernels, no visible oil or salt",
+   "confidence": 0.8,
+   "kcal": 208.4,
+   "kcal_range": [
+    162,
+    261
+   ],
+   "protein_g": 7.6,
+   "protein_range": [
+    5.9,
+    9.5
+   ],
+   "fdc": {
+    "fdc_id": "170567",
+    "description": "Nuts, almonds",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 579.0,
+    "protein_100g": 21.15
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Tangerine (mandarin), whole, unpeeled",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 80,
+   "fdc_query": "Tangerines, (mandarin oranges), raw",
+   "preparation": "raw, whole with peel on; mass given is edible portion without peel",
+   "confidence": 0.55,
+   "kcal": 31.8,
+   "kcal_range": [
+    21,
+    42
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.6
+   ],
+   "fdc": {
+    "fdc_id": "169105",
+    "description": "Tangerines, (mandarin oranges), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 53.0,
+    "protein_100g": 0.81
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 96.0,
+  "kcal": 240.2,
+  "protein_g": 8.1,
+  "grams_range": [
+   68.0,
+   125.0
+  ],
+  "kcal_range": [
+   183,
+   303
+  ],
+  "protein_range": [
+   6.2,
+   10.1
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 96.0,
+   "kcal": 240.2,
+   "protein_g": 8.1,
+   "grams_range": [
+    68.0,
+    125.0
+   ],
+   "kcal_range": [
+    183,
+    303
+   ],
+   "protein_range": [
+    6.2,
+    10.1
+   ]
+  },
+  "rows": [
+   "Nuts, almonds",
+   "Tangerines, (mandarin oranges), raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "485f74a10381c9e55a05961276c36d77580623608ffac48b735a12cf92075f40",
+ "scale_cues": "Square white plate assumed about 24 cm wide (about 340 px, so roughly 0.07 cm/px). Almond kernels measure about 2.1 cm long at that scale, which matches typical almonds. About 30 almonds counted at about 1.2 g each. The fruit measures about 5.5-6 cm across after allowing for its height toward the camera.",
+ "assumptions": [
+  "The orange fruit is a small tangerine/clementine, not an orange tomato or persimmon.",
+  "Tangerine edible mass assumes about 74% of an estimated 80-85 g whole fruit, peel excluded.",
+  "Almonds are plain, with no oil, salt or coating.",
+  "A few almonds may be hidden under the pile or behind the fruit; the count of about 30 allows for this."
+ ],
+ "latency_s": 16.54,
+ "calls": [
+  {
+   "wall_s": 13.52,
+   "duration_ms": 12781,
+   "num_turns": 2,
+   "cost_usd_cli": 0.059083300000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 8840,
+   "output_tokens": 963
+  },
+  {
+   "wall_s": 3.02,
+   "duration_ms": 2013,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0181299,
+   "cost_basis": "unknown",
+   "input_tokens": 1949,
+   "output_tokens": 116
+  }
+ ],
+ "cost_usd_cli": 0.07721,
+ "log_id": "9ef472da1b01"
+}

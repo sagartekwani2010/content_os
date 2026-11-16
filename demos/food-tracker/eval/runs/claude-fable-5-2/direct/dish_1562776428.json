@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "name": "Roasted Brussels sprouts",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "kcal": 56,
+   "protein_g": 4.4,
+   "preparation": "halved/whole, oven-roasted until charred and glazed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (olive oil coating on sprouts)",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 12,
+   "kcal": 62,
+   "protein_g": 0,
+   "preparation": "absorbed/coated during roasting, implied by glossy surface",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 137.0,
+  "kcal": 118,
+  "protein_g": 4.4,
+  "grams_range": [
+   93.0,
+   192.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 118,
+  "protein_g": 4.4
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "4bec45599c78d96cc768ba5f03c5afa470d4589c370cd6e13637574664a91996",
+ "scale_cues": "White square dinner plate (assumed ~26 cm side) on a scale platform; roughly 14-16 sprout pieces each ~3-4 cm across, covering about a quarter of the plate.",
+ "assumptions": [
+  "Plate is a standard ~26 cm square dinner plate",
+  "Sprouts are roasted with oil; glossy yellowish sheen suggests oil and possibly a light glaze or seasoning",
+  "About 14-16 pieces at ~8-9 g each cooked weight",
+  "No separate sauce or other items present",
+  "Roasted Brussels sprouts taken at ~43 kcal and 3.4 g protein per 100 g excluding oil"
+ ],
+ "latency_s": 6.99,
+ "calls": [
+  {
+   "wall_s": 6.99,
+   "duration_ms": 6274,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0503635,
+   "cost_basis": "unknown",
+   "input_tokens": 8670,
+   "output_tokens": 529
+  }
+ ],
+ "cost_usd_cli": 0.05036,
+ "log_id": "dcb6da1f61e2"
+}

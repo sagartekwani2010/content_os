@@ -1,0 +1,96 @@
+{
+ "items": [
+  {
+   "name": "Roasted chicken drumstick, skin-on, herb-seasoned (edible meat and skin, bone excluded)",
+   "grams_low": 65,
+   "grams_best": 85,
+   "grams_high": 110,
+   "kcal": 184,
+   "protein_g": 23,
+   "preparation": "oven-roasted with skin, seasoned with herbs and spices",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Steamed white rice",
+   "grams_low": 80,
+   "grams_best": 110,
+   "grams_high": 140,
+   "kcal": 143,
+   "protein_g": 3,
+   "preparation": "steamed or boiled, plain",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Arugula (rocket) salad",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 35,
+   "kcal": 6,
+   "protein_g": 0.6,
+   "preparation": "raw, possibly lightly dressed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Green beans",
+   "grams_low": 30,
+   "grams_best": 40,
+   "grams_high": 55,
+   "kcal": 14,
+   "protein_g": 0.8,
+   "preparation": "steamed or saut\u00e9ed, whole",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil or light dressing (implied by roasting, saut\u00e9ing and dressed greens)",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 9,
+   "kcal": 44,
+   "protein_g": 0,
+   "preparation": "oil on the chicken skin, on the green beans and on the arugula",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 265.0,
+  "kcal": 391,
+  "protein_g": 27.4,
+  "grams_range": [
+   192.0,
+   349.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 391,
+  "protein_g": 27.4
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "d1bc74f8e70ce94b3cff6fa273f175b43b70efb825e6e45350936502b28b23ed",
+ "scale_cues": "Large white square dinner plate (about 27 cm wide); the drumstick bone tip and rice grain size helped judge portions; no cutlery or hand visible",
+ "assumptions": [
+  "The chicken piece is a drumstick, and the bone is excluded from the weight",
+  "The rice is plain with no butter",
+  "About 5 g of total oil is assumed from cooking and dressing, since the chicken skin and greens look slightly glossy",
+  "The few strands among the green beans are trimmed stems, not counted separately"
+ ],
+ "latency_s": 13.67,
+ "calls": [
+  {
+   "wall_s": 13.67,
+   "duration_ms": 12959,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0625367,
+   "cost_basis": "list",
+   "input_tokens": 8742,
+   "output_tokens": 1123
+  }
+ ],
+ "cost_usd_cli": 0.06254,
+ "log_id": "3c7e637509f3"
+}

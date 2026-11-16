@@ -1,0 +1,330 @@
+{
+ "items": [
+  {
+   "name": "Baked white fish fillet with herb crust",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Fish, cod, Atlantic, cooked, dry heat",
+   "preparation": "baked or roasted, topped with herbs",
+   "confidence": 0.4,
+   "kcal": 94.5,
+   "kcal_range": [
+    63,
+    136
+   ],
+   "protein_g": 20.5,
+   "protein_range": [
+    13.7,
+    29.7
+   ],
+   "fdc": {
+    "fdc_id": "171956",
+    "description": "Fish, cod, Atlantic, cooked, dry heat",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 105.0,
+    "protein_100g": 22.83
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red/brown rice and grain pilaf",
+   "grams_low": 40,
+   "grams_best": 65,
+   "grams_high": 100,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "boiled, mixed as a pilaf on top of and beside the fish",
+   "confidence": 0.45,
+   "kcal": 80.0,
+   "kcal_range": [
+    49,
+    123
+   ],
+   "protein_g": 1.8,
+   "protein_range": [
+    1.1,
+    2.7
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "steamed or boiled, 3-4 large florets",
+   "confidence": 0.7,
+   "kcal": 29.9,
+   "kcal_range": [
+    21,
+    41
+   ],
+   "protein_g": 2.4,
+   "protein_range": [
+    1.7,
+    3.3
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula salad",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.6,
+   "kcal": 10.0,
+   "kcal_range": [
+    6,
+    15
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.6,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Corn kernels",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "preparation": "cooked kernels scattered through the grains and salad",
+   "confidence": 0.45,
+   "kcal": 14.4,
+   "kcal_range": [
+    8,
+    24
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "169999",
+    "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 96.0,
+    "protein_100g": 3.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Edamame",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 20,
+   "fdc_query": "Edamame, frozen, prepared",
+   "preparation": "shelled, boiled, mixed in salad",
+   "confidence": 0.4,
+   "kcal": 12.1,
+   "kcal_range": [
+    6,
+    24
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.6,
+    2.4
+   ],
+   "fdc": {
+    "fdc_id": "168411",
+    "description": "Edamame, frozen, prepared",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 121.0,
+    "protein_100g": 11.91
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Apple slices",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Apples, raw, with skin",
+   "preparation": "raw thin slices in salad",
+   "confidence": 0.35,
+   "kcal": 9.2,
+   "kcal_range": [
+    5,
+    15
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "2709215",
+    "description": "Apple, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 61.0,
+    "protein_100g": 0.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Dried cranberries",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 10,
+   "fdc_query": "Cranberries, dried, sweetened",
+   "preparation": "dried, mixed into grain salad",
+   "confidence": 0.3,
+   "kcal": 15.4,
+   "kcal_range": [
+    6,
+    31
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171723",
+    "description": "Cranberries, dried, sweetened (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 308.0,
+    "protein_100g": 0.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing / oil",
+   "grams_low": 3,
+   "grams_best": 8,
+   "grams_high": 15,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "vinaigrette or oil coating the greens and grains, implied by sheen",
+   "confidence": 0.3,
+   "kcal": 70.7,
+   "kcal_range": [
+    27,
+    133
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 378.0,
+  "kcal": 336.2,
+  "protein_g": 27.4,
+  "grams_range": [
+   241.0,
+   565.0
+  ],
+  "kcal_range": [
+   191,
+   542
+  ],
+  "protein_range": [
+   18.0,
+   40.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 378.0,
+   "kcal": 343.2,
+   "protein_g": 27.7,
+   "grams_range": [
+    241.0,
+    565.0
+   ],
+   "kcal_range": [
+    196,
+    553
+   ],
+   "protein_range": [
+    18.2,
+    41.2
+   ]
+  },
+  "rows": [
+   "Fish, cod, Atlantic, cooked, dry heat",
+   "Rice pilaf",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Arugula, raw",
+   "Corn, sweet, yellow, cooked, boiled, drained, with salt",
+   "Edamame, frozen, prepared",
+   "Apples, raw, without skin",
+   "Cranberries, dried",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "55aecd8a40f90e0cdf4e52f883f388c0fd09bf6b02f7d2ca3b04a36cac095b11",
+ "scale_cues": "Square white dinner plate assumed about 25-26 cm across, filling most of the frame; fork tines visible at top-left edge; food sizes judged relative to the plate width and the cauliflower florets (each roughly 5-7 cm).",
+ "assumptions": [
+  "Plate is a standard ~25 cm square dinner plate",
+  "Protein is a baked white fish fillet (could instead be chicken breast or tofu); image resolution is low",
+  "Grain mix is a red/brown rice or wild rice blend, cooked without significant added fat",
+  "Cauliflower is plain steamed with no butter or sauce",
+  "Greens are arugula with a light oil-based dressing; dressing amount is inferred, not clearly visible",
+  "Small pale pieces near the fish are corn kernels; green pieces are shelled edamame; red pieces are dried cranberries",
+  "Pale wedge next to the fish is an apple slice"
+ ],
+ "latency_s": 19.09,
+ "calls": [
+  {
+   "wall_s": 13.08,
+   "duration_ms": 12336,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0639899,
+   "cost_basis": "unknown",
+   "input_tokens": 8846,
+   "output_tokens": 1207
+  },
+  {
+   "wall_s": 6.0,
+   "duration_ms": 5070,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0543116,
+   "cost_basis": "unknown",
+   "input_tokens": 5591,
+   "output_tokens": 450
+  }
+ ],
+ "cost_usd_cli": 0.1183,
+ "log_id": "9c09a410bcaa"
+}

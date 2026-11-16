@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Apple, whole, red-yellow (Gala/Fuji type)",
+   "grams_low": 130,
+   "grams_best": 165,
+   "grams_high": 205,
+   "fdc_query": "Apples, raw, with skin",
+   "preparation": "raw, whole, unpeeled; edible portion excludes core and stem",
+   "confidence": 0.8,
+   "kcal": 94.0,
+   "kcal_range": [
+    74,
+    117
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.3,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "168204",
+    "description": "Apples, raw, gala, with skin (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 57.0,
+    "protein_100g": 0.25
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 165.0,
+  "kcal": 94.0,
+  "protein_g": 0.4,
+  "grams_range": [
+   130.0,
+   205.0
+  ],
+  "kcal_range": [
+   74,
+   117
+  ],
+  "protein_range": [
+   0.3,
+   0.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 165.0,
+   "kcal": 104.0,
+   "protein_g": 0.3,
+   "grams_range": [
+    130.0,
+    205.0
+   ],
+   "kcal_range": [
+    82,
+    129
+   ],
+   "protein_range": [
+    0.3,
+    0.4
+   ]
+  },
+  "rows": [
+   "Apples, raw, fuji, with skin (Includes foods for USDA's Food Distribution Program)"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "9dc82e4355e2cb2f1e820b331701af124d3c610943aa8a2cd52c57289ae7d6c5",
+ "scale_cues": "White square dinner plate (assumed ~25-27 cm per side) on a scale rig; the apple spans roughly a quarter to a third of the plate width, suggesting a diameter of about 7 cm (small-to-medium apple).",
+ "assumptions": [
+  "Plate is a standard ~25-27 cm square dinner plate",
+  "Apple is whole and uncut; edible mass estimated as ~90% of whole weight (core and stem excluded)",
+  "The small yellow speck on the plate is a negligible crumb/residue (<1 g) and is not logged as an item",
+  "No sauces, oils or drinks are present"
+ ],
+ "latency_s": 9.65,
+ "calls": [
+  {
+   "wall_s": 6.76,
+   "duration_ms": 6025,
+   "num_turns": 2,
+   "cost_usd_cli": 0.048019599999999996,
+   "cost_basis": "unknown",
+   "input_tokens": 8828,
+   "output_tokens": 409
+  },
+  {
+   "wall_s": 2.88,
+   "duration_ms": 1849,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0141622,
+   "cost_basis": "unknown",
+   "input_tokens": 1506,
+   "output_tokens": 97
+  }
+ ],
+ "cost_usd_cli": 0.06218,
+ "log_id": "af25e5105b66"
+}

@@ -1,0 +1,104 @@
+{
+ "items": [
+  {
+   "name": "Cheese pizza (cut into rectangular/irregular pieces, ~6 pieces)",
+   "grams_low": 150,
+   "grams_best": 215,
+   "grams_high": 290,
+   "fdc_query": "Pizza, cheese topping, regular crust, frozen, cooked",
+   "preparation": "baked, cut into small squares/strips; tomato sauce and melted mozzarella on a medium-thick crust",
+   "confidence": 0.6,
+   "kcal": 576.2,
+   "kcal_range": [
+    402,
+    777
+   ],
+   "protein_g": 22.3,
+   "protein_range": [
+    15.5,
+    30.0
+   ],
+   "fdc": {
+    "fdc_id": "170317",
+    "description": "Pizza, cheese topping, regular crust, frozen, cooked",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 268.0,
+    "protein_100g": 10.36
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 215.0,
+  "kcal": 576.2,
+  "protein_g": 22.3,
+  "grams_range": [
+   150.0,
+   290.0
+  ],
+  "kcal_range": [
+   402,
+   777
+  ],
+  "protein_range": [
+   15.5,
+   30.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 215.0,
+   "kcal": 576.2,
+   "protein_g": 22.3,
+   "grams_range": [
+    150.0,
+    290.0
+   ],
+   "kcal_range": [
+    402,
+    777
+   ],
+   "protein_range": [
+    15.5,
+    30.0
+   ]
+  },
+  "rows": [
+   "Pizza, cheese topping, regular crust, frozen, cooked"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a248f4bd2d79299597d4a60ef5f5a4e983917dd2fa3300bdbed531c858969b16",
+ "scale_cues": "White square dinner plate (assumed ~25-26 cm wide) filling most of the frame; pizza pieces cover roughly 35-40% of the plate area, each piece about 6-9 cm long; crust thickness judged from the visible edge pieces.",
+ "assumptions": [
+  "Plate is a standard ~25 cm square dinner plate",
+  "Pizza is plain cheese with tomato sauce, no meat toppings visible",
+  "Regular (medium) crust thickness of about 1.5 cm",
+  "Sauce, cheese and any oil are counted within the pizza item rather than separately",
+  "Part of the pizza at the right edge is cut off by the frame; only the visible portion plus a small allowance is estimated"
+ ],
+ "latency_s": 10.46,
+ "calls": [
+  {
+   "wall_s": 7.77,
+   "duration_ms": 7050,
+   "num_turns": 2,
+   "cost_usd_cli": 0.049289900000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 8836,
+   "output_tokens": 474
+  },
+  {
+   "wall_s": 2.67,
+   "duration_ms": 1671,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0145573,
+   "cost_basis": "unknown",
+   "input_tokens": 1567,
+   "output_tokens": 92
+  }
+ ],
+ "cost_usd_cli": 0.06385,
+ "log_id": "8e10710b379c"
+}

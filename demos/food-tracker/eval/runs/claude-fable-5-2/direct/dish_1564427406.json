@@ -1,0 +1,64 @@
+{
+ "items": [
+  {
+   "name": "Grilled chicken breast, diced",
+   "grams_low": 70,
+   "grams_best": 105,
+   "grams_high": 150,
+   "kcal": 173,
+   "protein_g": 32,
+   "preparation": "grilled/roasted skinless chicken breast, cut into roughly 1.5-2 cm cubes, light browning on some pieces",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (residual on chicken)",
+   "grams_low": 0,
+   "grams_best": 2,
+   "grams_high": 5,
+   "kcal": 18,
+   "protein_g": 0,
+   "preparation": "implied thin coating from grilling/roasting; no pooled oil visible",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 107.0,
+  "kcal": 191,
+  "protein_g": 32,
+  "grams_range": [
+   70.0,
+   155.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 191,
+  "protein_g": 32
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a6eb9aabb4c4162d892289d189ed49d38d0b650ffd264102ee56c333477d3279",
+ "scale_cues": "Large stainless steel mixing bowl (assumed ~28-30 cm rim diameter) filling most of the frame; chicken cubes judged at ~1.5-2 cm each, about 45-50 pieces in a mostly single layer with some stacking.",
+ "assumptions": [
+  "White cubes are cooked skinless chicken breast rather than tofu or paneer, based on fibrous texture and browned edges",
+  "Bowl rim diameter is about 28-30 cm",
+  "Average piece weighs about 2-2.5 g",
+  "Chicken breast at ~165 kcal and 31 g protein per 100 g cooked",
+  "Small amount of cooking oil assumed from browning; no sauce or seasoning visible"
+ ],
+ "latency_s": 7.88,
+ "calls": [
+  {
+   "wall_s": 7.88,
+   "duration_ms": 7168,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0510708,
+   "cost_basis": "unknown",
+   "input_tokens": 8658,
+   "output_tokens": 563
+  }
+ ],
+ "cost_usd_cli": 0.05107,
+ "log_id": "f2e61755c901"
+}

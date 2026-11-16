@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Almonds (whole, skin-on)",
+   "grams_low": 45,
+   "grams_best": 60,
+   "grams_high": 80,
+   "fdc_query": "Nuts, almonds",
+   "preparation": "raw or dry roasted whole kernels with skin, no visible oil or salt",
+   "confidence": 0.72,
+   "kcal": 347.4,
+   "kcal_range": [
+    261,
+    463
+   ],
+   "protein_g": 12.7,
+   "protein_range": [
+    9.5,
+    16.9
+   ],
+   "fdc": {
+    "fdc_id": "170567",
+    "description": "Nuts, almonds",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 579.0,
+    "protein_100g": 21.15
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 60.0,
+  "kcal": 347.4,
+  "protein_g": 12.7,
+  "grams_range": [
+   45.0,
+   80.0
+  ],
+  "kcal_range": [
+   261,
+   463
+  ],
+  "protein_range": [
+   9.5,
+   16.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 60.0,
+   "kcal": 347.4,
+   "protein_g": 12.7,
+   "grams_range": [
+    45.0,
+    80.0
+   ],
+   "kcal_range": [
+    261,
+    463
+   ],
+   "protein_range": [
+    9.5,
+    16.9
+   ]
+  },
+  "rows": [
+   "Nuts, almonds"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "b485c2aa3a3e8b26143d023e5b678ba30d712a60960a32ae7d5f4bc5539566b5",
+ "scale_cues": "Square white plate (assumed about 25 cm across) on a food-scale tray; individual almond size (about 2.3 cm long, about 1.2 g each) used to count roughly 45-55 kernels, including some stacked in the pile.",
+ "assumptions": [
+  "Almonds are plain (raw or dry roasted, unsalted); no oil or coating is visible",
+  "Average kernel mass about 1.2 g",
+  "The pile is partly two layers deep, so the count includes some hidden kernels",
+  "A few kernels are broken or chipped and are counted as partial"
+ ],
+ "latency_s": 9.78,
+ "calls": [
+  {
+   "wall_s": 7.07,
+   "duration_ms": 6361,
+   "num_turns": 2,
+   "cost_usd_cli": 0.048736600000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 8838,
+   "output_tokens": 441
+  },
+  {
+   "wall_s": 2.71,
+   "duration_ms": 1659,
+   "num_turns": 1,
+   "cost_usd_cli": 0.013692000000000001,
+   "cost_basis": "unknown",
+   "input_tokens": 1450,
+   "output_tokens": 105
+  }
+ ],
+ "cost_usd_cli": 0.06243,
+ "log_id": "e1f8edb97b44"
+}

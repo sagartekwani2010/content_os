@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Mandarin orange / clementine (whole, unpeeled)",
+   "grams_low": 55,
+   "grams_best": 75,
+   "grams_high": 100,
+   "fdc_query": "Tangerines, (mandarin oranges), raw",
+   "preparation": "raw, whole with peel on; edible mass excludes peel (whole fruit roughly 100 g)",
+   "confidence": 0.6,
+   "kcal": 39.8,
+   "kcal_range": [
+    29,
+    53
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "169105",
+    "description": "Tangerines, (mandarin oranges), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 53.0,
+    "protein_100g": 0.81
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 75.0,
+  "kcal": 39.8,
+  "protein_g": 0.6,
+  "grams_range": [
+   55.0,
+   100.0
+  ],
+  "kcal_range": [
+   29,
+   53
+  ],
+  "protein_range": [
+   0.4,
+   0.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 75.0,
+   "kcal": 39.8,
+   "protein_g": 0.6,
+   "grams_range": [
+    55.0,
+    100.0
+   ],
+   "kcal_range": [
+    29,
+    53
+   ],
+   "protein_range": [
+    0.4,
+    0.8
+   ]
+  },
+  "rows": [
+   "Tangerines, (mandarin oranges), raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "ee7f44cc7bd070de1d1a61703a3bcda968c8cb5a060b309e447414b7841a1bec",
+ "scale_cues": "Square white plate assumed about 25-26 cm across; the fruit spans roughly a third of the plate width, giving a diameter of about 6-6.5 cm. Overhead camera rig frame also used as a rough reference.",
+ "assumptions": [
+  "Fruit is a mandarin/clementine rather than a small orange, judged by its size, slightly flattened shape and loose-looking peel",
+  "Fruit is whole and unpeeled; grams are the edible portion only, taken as about 74% of whole-fruit weight",
+  "Pinkish smears and the small dark speck on the plate are residue from earlier food, not a loggable item",
+  "Plate size is assumed, not measured, so the fruit's size could be off by 15-20%"
+ ],
+ "latency_s": 9.69,
+ "calls": [
+  {
+   "wall_s": 7.0,
+   "duration_ms": 6272,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0467534,
+   "cost_basis": "unknown",
+   "input_tokens": 8826,
+   "output_tokens": 460
+  },
+  {
+   "wall_s": 2.69,
+   "duration_ms": 1594,
+   "num_turns": 1,
+   "cost_usd_cli": 0.013564,
+   "cost_basis": "unknown",
+   "input_tokens": 1474,
+   "output_tokens": 89
+  }
+ ],
+ "cost_usd_cli": 0.06032,
+ "log_id": "b91fbb3421d5"
+}

@@ -1,0 +1,160 @@
+{
+ "items": [
+  {
+   "name": "Diced chicken breast",
+   "grams_low": 60,
+   "grams_best": 95,
+   "grams_high": 140,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "cooked (roasted/grilled), diced into roughly 1.5-2 cm cubes, lightly browned",
+   "confidence": 0.6,
+   "kcal": 156.8,
+   "kcal_range": [
+    99,
+    231
+   ],
+   "protein_g": 29.5,
+   "protein_range": [
+    18.6,
+    43.4
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Kalamata olives",
+   "grams_low": 25,
+   "grams_best": 36,
+   "grams_high": 50,
+   "fdc_query": "Olives, ripe, canned (jumbo-super colossal)",
+   "preparation": "whole brined dark purple olives, about 9 pieces, likely with pits",
+   "confidence": 0.65,
+   "kcal": 41.8,
+   "kcal_range": [
+    29,
+    58
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.2,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "169094",
+    "description": "Olives, ripe, canned (small-extra large)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 116.0,
+    "protein_100g": 0.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil on chicken",
+   "grams_low": 0,
+   "grams_best": 2,
+   "grams_high": 5,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "residual oil implied by the browned surface of the chicken and olive brine sheen; not visibly pooled",
+   "confidence": 0.3,
+   "kcal": 17.7,
+   "kcal_range": [
+    18,
+    44
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 133.0,
+  "kcal": 216.3,
+  "protein_g": 29.8,
+  "grams_range": [
+   85.0,
+   195.0
+  ],
+  "kcal_range": [
+   146,
+   333
+  ],
+  "protein_range": [
+   18.8,
+   43.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 133.0,
+   "kcal": 203.7,
+   "protein_g": 29.8,
+   "grams_range": [
+    85.0,
+    195.0
+   ],
+   "kcal_range": [
+    137,
+    315
+   ],
+   "protein_range": [
+    18.8,
+    43.9
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Olives, ripe, canned (jumbo-super colossal)",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "1a353b0de279f264bbbf48e613948b83291d99e50d9d19910732d1d7ef02baeb",
+ "scale_cues": "Stainless steel mixing bowl filling most of the frame (assumed ~25-28 cm rim diameter); olives used as an internal size reference at ~2-2.5 cm long and ~4 g each; chicken cubes sized relative to the olives.",
+ "assumptions": [
+  "White cubes are cooked chicken breast rather than tofu, feta or turkey, based on fibrous texture and browned edges",
+  "About 9 olives visible at ~4 g each; mass given includes pits if present, edible portion would be ~15-20% lower",
+  "Chicken forms a mostly single layer with some overlap, roughly 35-45 cubes at 2-3 g each",
+  "No visible sauce or dressing; a small amount of cooking oil is assumed from browning",
+  "Bowl diameter is assumed, not measured, so absolute scale is uncertain"
+ ],
+ "latency_s": 15.82,
+ "calls": [
+  {
+   "wall_s": 11.56,
+   "duration_ms": 10748,
+   "num_turns": 2,
+   "cost_usd_cli": 0.057649900000000004,
+   "cost_basis": "unknown",
+   "input_tokens": 8828,
+   "output_tokens": 710
+  },
+  {
+   "wall_s": 4.25,
+   "duration_ms": 3162,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0241141,
+   "cost_basis": "unknown",
+   "input_tokens": 2527,
+   "output_tokens": 181
+  }
+ ],
+ "cost_usd_cli": 0.08176,
+ "log_id": "9d68a96afcf4"
+}

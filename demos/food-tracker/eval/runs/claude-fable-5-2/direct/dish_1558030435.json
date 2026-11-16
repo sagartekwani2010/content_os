@@ -1,0 +1,86 @@
+{
+ "items": [
+  {
+   "name": "Roasted potatoes",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "kcal": 160,
+   "protein_g": 3,
+   "preparation": "Cubed/wedged potatoes, skin-on, roasted with oil",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Honeydew melon",
+   "grams_low": 100,
+   "grams_best": 140,
+   "grams_high": 190,
+   "kcal": 50,
+   "protein_g": 0.8,
+   "preparation": "Raw, cubed",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Bacon",
+   "grams_low": 18,
+   "grams_best": 28,
+   "grams_high": 40,
+   "kcal": 150,
+   "protein_g": 10,
+   "preparation": "Pan-fried or baked crisp strips (about 3 strips)",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil on potatoes",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "kcal": 35,
+   "protein_g": 0,
+   "preparation": "Absorbed roasting oil, implied by glossy browned surface",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 302.0,
+  "kcal": 395,
+  "protein_g": 13.8,
+  "grams_range": [
+   210.0,
+   418.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 395,
+  "protein_g": 13.8
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "7e8eb093a29f90a7f8b10c6bf423cdde15fd13720e7fbc7c8a56c61b0458784c",
+ "scale_cues": "Round light-blue dinner plate assumed ~26-27 cm diameter, viewed from overhead; item sizes judged relative to the plate (potato chunks ~4-5 cm, melon cubes ~2.5-3.5 cm, bacon strips ~12-15 cm cooked length).",
+ "assumptions": [
+  "Plate diameter assumed ~26-27 cm; no cutlery or hand for scale",
+  "Green cubes identified as honeydew melon (could be cucumber, which would lower calories)",
+  "Bacon counted as about 3 cooked pork strips at ~9 g each",
+  "Potatoes assumed roasted with a small amount of oil; oil listed separately and potato kcal given without the oil",
+  "Single layer of food, no hidden items beneath"
+ ],
+ "latency_s": 8.78,
+ "calls": [
+  {
+   "wall_s": 8.78,
+   "duration_ms": 8052,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0540569,
+   "cost_basis": "unknown",
+   "input_tokens": 8664,
+   "output_tokens": 715
+  }
+ ],
+ "cost_usd_cli": 0.05406,
+ "log_id": "ac957f54cfc5"
+}

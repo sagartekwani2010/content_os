@@ -1,0 +1,120 @@
+{
+ "items": [
+  {
+   "name": "Chia seed pudding",
+   "grams_low": 70,
+   "grams_best": 110,
+   "grams_high": 150,
+   "kcal": 140,
+   "protein_g": 4.5,
+   "preparation": "chia seeds soaked in milk/almond milk, lightly sweetened",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Banana slices with small fruit garnish",
+   "grams_low": 5,
+   "grams_best": 9,
+   "grams_high": 14,
+   "kcal": 8,
+   "protein_g": 0.1,
+   "preparation": "raw, sliced, on top of pudding",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Scrambled egg whites",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 125,
+   "kcal": 50,
+   "protein_g": 10,
+   "preparation": "scrambled, lightly oiled pan",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "English muffin half / biscuit",
+   "grams_low": 25,
+   "grams_best": 35,
+   "grams_high": 55,
+   "kcal": 85,
+   "protein_g": 3,
+   "preparation": "toasted, split",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Egg white (fried/poached) on muffin",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 22,
+   "protein_g": 4.3,
+   "preparation": "cooked egg white layered on the muffin, with pepper",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted potato cubes",
+   "grams_low": 55,
+   "grams_best": 80,
+   "grams_high": 110,
+   "kcal": 100,
+   "protein_g": 2,
+   "preparation": "diced, roasted/pan-fried with skin until browned",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (absorbed in potatoes and eggs)",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "kcal": 53,
+   "protein_g": 0,
+   "preparation": "implied by roasting/frying",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 370.0,
+  "kcal": 458,
+  "protein_g": 23.9,
+  "grams_range": [
+   243.0,
+   524.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 458,
+  "protein_g": 23.9
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "389f3916d204fbc6708b84e255c11f7d998c4ac27e7ff46b0ae5e77351c51f8f",
+ "scale_cues": "White square plate assumed ~25 cm across, filling most of the frame; item sizes judged relative to the plate, with potato cubes ~2 cm and banana slices ~2.5 cm diameter.",
+ "assumptions": [
+  "Brown-grey mound is chia pudding made with milk or almond milk, not a meat spread or buckwheat porridge",
+  "White scramble is egg whites only, no yolk",
+  "Round bread item is half an English muffin topped with cooked egg white rather than cream cheese or yogurt",
+  "Browned cubes are roasted potato with skin; could alternatively be roasted eggplant or sweet potato",
+  "Oil is not visible separately; ~6 g assumed absorbed from roasting and scrambling",
+  "Plate size assumed, no cutlery or hand in frame for a firm scale reference"
+ ],
+ "latency_s": 11.2,
+ "calls": [
+  {
+   "wall_s": 11.2,
+   "duration_ms": 10426,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0597091,
+   "cost_basis": "unknown",
+   "input_tokens": 8666,
+   "output_tokens": 992
+  }
+ ],
+ "cost_usd_cli": 0.05971,
+ "log_id": "78a7963da178"
+}

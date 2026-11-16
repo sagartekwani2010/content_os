@@ -1,0 +1,358 @@
+{
+ "items": [
+  {
+   "name": "Caesar salad romaine lettuce",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Lettuce, cos or romaine, raw",
+   "preparation": "raw, chopped, tossed in creamy dressing",
+   "confidence": 0.6,
+   "kcal": 15.3,
+   "kcal_range": [
+    10,
+    22
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.7,
+    1.6
+   ],
+   "fdc": {
+    "fdc_id": "169247",
+    "description": "Lettuce, cos or romaine, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 17.0,
+    "protein_100g": 1.23
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Caesar dressing",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "fdc_query": "Salad dressing, caesar dressing, regular",
+   "preparation": "creamy dressing coating the lettuce",
+   "confidence": 0.5,
+   "kcal": 108.4,
+   "kcal_range": [
+    54,
+    190
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.2,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "169055",
+    "description": "Salad dressing, caesar dressing, regular",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 542.0,
+    "protein_100g": 2.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Chicken in tomato-based sauce",
+   "grams_low": 90,
+   "grams_best": 140,
+   "grams_high": 190,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, stewed",
+   "preparation": "chicken pieces braised/stewed in red tomato sauce",
+   "confidence": 0.45,
+   "kcal": 247.8,
+   "kcal_range": [
+    159,
+    336
+   ],
+   "protein_g": 38.2,
+   "protein_range": [
+    24.6,
+    51.9
+   ],
+   "fdc": {
+    "fdc_id": "171451",
+    "description": "Chicken, broilers or fryers, meat only, cooked, stewed",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 177.0,
+    "protein_100g": 27.29
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Tomato sauce on chicken",
+   "grams_low": 25,
+   "grams_best": 45,
+   "grams_high": 70,
+   "fdc_query": "Sauce, tomato, canned, with onions, green peppers, and celery",
+   "preparation": "cooked tomato sauce with onion pieces, likely some oil",
+   "confidence": 0.4,
+   "kcal": 18.9,
+   "kcal_range": [
+    10,
+    29
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.4,
+    1.1
+   ],
+   "fdc": {
+    "fdc_id": "170056",
+    "description": "Tomato products, canned, sauce, with onions",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 42.0,
+    "protein_100g": 1.56
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Steamed broccoli floret",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 65,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "steamed or boiled, bright green florets",
+   "confidence": 0.7,
+   "kcal": 15.8,
+   "kcal_range": [
+    10,
+    23
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.7,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted broccoli",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 50,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "roasted, charred dark floret on top of rice",
+   "confidence": 0.55,
+   "kcal": 12.2,
+   "kcal_range": [
+    7,
+    18
+   ],
+   "protein_g": 0.8,
+   "protein_range": [
+    0.5,
+    1.2
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Brown/red rice",
+   "grams_low": 30,
+   "grams_best": 50,
+   "grams_high": 80,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked whole-grain rice, partly hidden under vegetables",
+   "confidence": 0.45,
+   "kcal": 61.5,
+   "kcal_range": [
+    37,
+    98
+   ],
+   "protein_g": 1.4,
+   "protein_range": [
+    0.8,
+    2.2
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted mixed vegetables (cherry tomato, bell pepper, squash/onion)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 65,
+   "fdc_query": "Vegetables, mixed, cooked, roasted with oil",
+   "preparation": "roasted with oil; cherry tomato, pepper strips, green vegetable pieces",
+   "confidence": 0.4,
+   "kcal": 11.2,
+   "kcal_range": [
+    7,
+    18
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.2,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "172274",
+    "description": "Babyfood, vegetables, squash, strained",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 28.0,
+    "protein_100g": 0.81
+   },
+   "nutrient_source": "USDA FoodData Central lookup",
+   "match_flag": "weak match"
+  },
+  {
+   "name": "Tofu or roasted potato cube",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Tofu, fried",
+   "preparation": "browned cube, likely roasted or pan-fried",
+   "confidence": 0.3,
+   "kcal": 40.5,
+   "kcal_range": [
+    22,
+    68
+   ],
+   "protein_g": 2.8,
+   "protein_range": [
+    1.5,
+    4.7
+   ],
+   "fdc": {
+    "fdc_id": "172451",
+    "description": "Tofu, fried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 270.0,
+    "protein_100g": 18.82
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil on roasted vegetables",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 10,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied by roasted/glossy vegetables",
+   "confidence": 0.35,
+   "kcal": 44.2,
+   "kcal_range": [
+    18,
+    88
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 485.0,
+  "kcal": 575.8,
+  "protein_g": 46.8,
+  "grams_range": [
+   300.0,
+   720.0
+  ],
+  "kcal_range": [
+   334,
+   890
+  ],
+  "protein_range": [
+   29.6,
+   65.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 485.0,
+   "kcal": 566.8,
+   "protein_g": 49.6,
+   "grams_range": [
+    300.0,
+    720.0
+   ],
+   "kcal_range": [
+    328,
+    887
+   ],
+   "protein_range": [
+    31.4,
+    69.6
+   ]
+  },
+  "rows": [
+   "Lettuce, cos or romaine, raw",
+   "Salad dressing, caesar dressing, regular",
+   "Chicken, broilers or fryers, breast, meat only, cooked, stewed",
+   "Tomato products, canned, sauce, with onions, green peppers, and celery",
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Classic mixed vegetables, frozen, cooked with oil",
+   "Tofu, fried",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "c0ac1f3cb2ea9d453fe6d81f175a728d9afc25758edb2575071c2caf27b65c83",
+ "scale_cues": "Square white dinner plate assumed ~26-27 cm per side, filling most of the frame; broccoli floret size (~6-7 cm) and cherry tomato (~3 cm) used as secondary references; shoes at left edge indicate overhead shot from standing height.",
+ "assumptions": [
+  "Plate is a standard ~26 cm square dinner plate",
+  "Salad is a Caesar-style salad with creamy dressing; no croutons or visible chicken in it, small parmesan amounts merged into dressing",
+  "Red-sauced item is boneless chicken in tomato sauce (could be chicken cacciatore or similar); sauce and meat split roughly 75/25 by weight",
+  "Dark grains are brown or red rice, partially hidden under roasted vegetables",
+  "Pale browned cube is tofu, but could be roasted potato or paneer",
+  "Roasted vegetables were cooked with a small amount of oil"
+ ],
+ "latency_s": 20.31,
+ "calls": [
+  {
+   "wall_s": 14.62,
+   "duration_ms": 13831,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0678806,
+   "cost_basis": "unknown",
+   "input_tokens": 8828,
+   "output_tokens": 1400
+  },
+  {
+   "wall_s": 5.67,
+   "duration_ms": 4597,
+   "num_turns": 1,
+   "cost_usd_cli": 0.060590899999999996,
+   "cost_basis": "unknown",
+   "input_tokens": 6322,
+   "output_tokens": 455
+  }
+ ],
+ "cost_usd_cli": 0.12847,
+ "log_id": "7ab0111ddaa8"
+}

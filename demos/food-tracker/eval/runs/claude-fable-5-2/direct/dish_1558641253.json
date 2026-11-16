@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "corn on the cob (2 short rounds, kernels only)",
+   "grams_low": 40,
+   "grams_best": 70,
+   "grams_high": 110,
+   "kcal": 67,
+   "protein_g": 2.4,
+   "preparation": "boiled or steamed, cut into short cob rounds, no visible butter or sauce",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 70.0,
+  "kcal": 67,
+  "protein_g": 2.4,
+  "grams_range": [
+   40.0,
+   110.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 67,
+  "protein_g": 2.4
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "fe75dd82c3e18a92baec81c78652e9cc6ebb0eb729ee0edbada22fc43432de9b",
+ "scale_cues": "White square plate assumed to be about 25 cm across; each cob round is about 5 cm in diameter relative to the plate. The overhead view hides the length of each round, which I assumed to be about 3-4 cm.",
+ "assumptions": [
+  "Grams are the edible kernels only; the inedible cob core is excluded (total with cob would be about 110-140 g).",
+  "Each round is assumed to be about 3-4 cm long, since the overhead view shows only the cut ends.",
+  "No butter, oil or salt is added; the surface looks dry with no visible sheen or pooling.",
+  "Calories use cooked sweet corn at about 96 kcal and 3.4 g protein per 100 g."
+ ],
+ "latency_s": 8.46,
+ "calls": [
+  {
+   "wall_s": 8.45,
+   "duration_ms": 7707,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0518453,
+   "cost_basis": "unknown",
+   "input_tokens": 8658,
+   "output_tokens": 602
+  }
+ ],
+ "cost_usd_cli": 0.05185,
+ "log_id": "4f6260b65bbf"
+}

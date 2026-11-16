@@ -56,14 +56,40 @@ every join. The learning-mission edit still failed, because:
 - Routine steps run as scripts; model judgment is spent on script and edit decisions.
 - Approval happens at the brief and beat sheet, where changes are cheap.
 
-## Open decisions
+## Decisions (16 November 2026)
 
-- Format: voiceover-led with B-roll (recommended, and what the mission brief asked for) or
-  line-by-line talking head.
-- First reel through the pipeline: the food tracker reel, or a re-record of the mission reel.
-- Music source for the final mix: a free library or a paid subscription. Edits' licensed catalog cannot
-  be exported.
-- Whether to trial a DaVinci Resolve or Premiere MCP after two or three reels work on Edits.
+- **Editing:** ffmpeg plus an editor. The selects/EDL file is the source of truth; ffmpeg renders a
+  measurable draft first; the editor (Edits) is used for finishing. Once a project is open in the
+  editor, change it in place rather than regenerating it.
+- **Transcription:** local whisper.cpp by default. Keep a provision for the OpenAI transcription API
+  behind one interface (`engine: whisper_cpp | openai`), with the key read from `OPENAI_API_KEY` in the
+  environment and never written to a file. The OpenAI engine uploads the voice, so it is opt-in per reel.
+- **Recording:** iPhone, front or back camera, with a teleprompter (see the shoot-plan stage below).
+- **First reel through the pipeline:** the food tracker reel.
+- Still open: format (voiceover-led or line-by-line talking head), music source, and whether to trial a
+  DaVinci Resolve MCP after two or three reels (it needs Resolve Studio for scripting).
+
+## Pipeline changes adopted from public editing pipelines
+
+Sources compared on 16 November 2026: Built to Click video-editing-playbook, browser-use video-use,
+ghost-editor, Takes for Mac, OpenMontage.
+
+1. **Line-by-line recording from the beat sheet.** The shoot plan gives one teleprompter card per beat.
+   Each line is said two or three times with a short pause; no slate is needed because selection
+   matches by words.
+2. **Mechanical take selection.** Match takes to script lines by words, never by timecodes; default to
+   the last complete take; cut points from the waveform with 40 ms lead-in and 80 ms tail; 30 ms audio
+   fade at every cut. A line with no clean take goes back for a re-record.
+3. **The agent reads transcripts, not video.** One packed transcript file per reel, plus a filmstrip,
+   waveform and words image only at decision points (retake comparisons, cut checks).
+4. **Cut-review gate.** A page with a frame at every cut and the face-jump numbers, approved by the
+   creator before captions, music or B-roll are added.
+5. **Self-check before the creator sees anything.** Check every cut boundary and the render (ffprobe,
+   black frames, -14 LUFS integrated, no clipping, captions present, transcript against script); fix and
+   re-render at most three times. Then the creator listens to the exact file that is posted.
+6. **Gates enforced in `cli.py`.** A stage cannot be marked complete without a recorded approval.
+7. **One cue sheet** drives picture, sound effects and music; a style recipe lives in
+   `config/design.yaml`.
 
 ## Build order
 

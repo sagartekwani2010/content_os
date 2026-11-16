@@ -1,0 +1,63 @@
+{
+ "items": [
+  {
+   "name": "almonds (whole, skin-on)",
+   "grams_low": 28,
+   "grams_best": 36,
+   "grams_high": 46,
+   "kcal": 208,
+   "protein_g": 7.6,
+   "preparation": "raw or dry-roasted whole almonds, no visible oil or salt",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "mandarin orange / clementine (whole, unpeeled)",
+   "grams_low": 45,
+   "grams_best": 60,
+   "grams_high": 80,
+   "kcal": 32,
+   "protein_g": 0.5,
+   "preparation": "raw, whole with peel; edible mass estimated without peel",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 96.0,
+  "kcal": 240,
+  "protein_g": 8.1,
+  "grams_range": [
+   73.0,
+   126.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 240,
+  "protein_g": 8.1
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "485f74a10381c9e55a05961276c36d77580623608ffac48b735a12cf92075f40",
+ "scale_cues": "White square plate assumed to be about 25 cm across; individual almond size (about 2.2 cm long, about 1.2 g each) used to count roughly 30 almonds; mandarin diameter about 5.5 cm relative to the almonds and plate.",
+ "assumptions": [
+  "About 30 almonds counted, including a few partly hidden in the pile, at about 1.2 g each",
+  "Almonds are plain (raw or dry-roasted) with no added oil",
+  "Orange fruit is a small mandarin/clementine rather than a kumquat or persimmon, about 80 g whole; edible mass excludes peel (about 25%)",
+  "No hidden items under the fruit or almonds"
+ ],
+ "latency_s": 8.2,
+ "calls": [
+  {
+   "wall_s": 8.2,
+   "duration_ms": 7472,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0505845,
+   "cost_basis": "unknown",
+   "input_tokens": 8670,
+   "output_tokens": 540
+  }
+ ],
+ "cost_usd_cli": 0.05058,
+ "log_id": "79083d3ce50b"
+}

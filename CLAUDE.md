@@ -1,9 +1,10 @@
 # Content OS: Claude Code entry point
 
-`AGENTS.md` holds the operating instructions for this repository and applies to Claude Code as well as
-Codex. Read it first, then:
+`AGENTS.md` holds the operating instructions for this repository and applies to Claude Code and any
+other agent working here. Read it first, then:
 
 1. `CURRENT_REEL_CONTEXT.md`: the current reels and where things stand.
+   For a content package from a brief, follow `CLAUDE_WORKFLOW.md`.
 2. `planning/reel-production-system-blueprint-2026-11-15.md`: the production pipeline being built.
 3. `feedback/learning-mission-final-edit-diagnosis-2026-11-15.md`: why the last reel fell short.
 4. `.agents/skills/reel-footage-edit/` (with `references/edits-automation.md`) before any edit, and

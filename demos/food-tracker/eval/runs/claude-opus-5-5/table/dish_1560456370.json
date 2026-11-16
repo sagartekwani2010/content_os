@@ -1,0 +1,216 @@
+{
+ "items": [
+  {
+   "name": "Roasted chicken drumstick with skin (seasoned with herbs)",
+   "grams_low": 70,
+   "grams_best": 95,
+   "grams_high": 125,
+   "fdc_query": "Chicken, broilers or fryers, drumstick, meat and skin, cooked, roasted",
+   "preparation": "roasted, skin-on, herb-seasoned; edible meat and skin only, bone excluded",
+   "confidence": 0.55,
+   "kcal": 181.4,
+   "kcal_range": [
+    134,
+    239
+   ],
+   "protein_g": 22.2,
+   "protein_range": [
+    16.3,
+    29.2
+   ],
+   "fdc": {
+    "fdc_id": "173612",
+    "description": "Chicken, broilers or fryers, drumstick, meat and skin, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 191.0,
+    "protein_100g": 23.35
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "White rice",
+   "grams_low": 80,
+   "grams_best": 110,
+   "grams_high": 145,
+   "fdc_query": "Rice, white, long-grain, regular, cooked",
+   "preparation": "steamed/boiled",
+   "confidence": 0.6,
+   "kcal": 143.0,
+   "kcal_range": [
+    104,
+    188
+   ],
+   "protein_g": 3.0,
+   "protein_range": [
+    2.2,
+    3.9
+   ],
+   "fdc": {
+    "fdc_id": "168878",
+    "description": "Rice, white, long-grain, regular, enriched, cooked",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 130.0,
+    "protein_100g": 2.69
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 45,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, apparently undressed",
+   "confidence": 0.6,
+   "kcal": 7.5,
+   "kcal_range": [
+    5,
+    11
+   ],
+   "protein_g": 0.8,
+   "protein_range": [
+    0.5,
+    1.2
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Green beans",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 60,
+   "fdc_query": "Beans, snap, green, cooked, boiled, drained, without salt",
+   "preparation": "boiled or steamed whole beans; looks lightly glossy",
+   "confidence": 0.6,
+   "kcal": 15.8,
+   "kcal_range": [
+    10,
+    21
+   ],
+   "protein_g": 0.9,
+   "protein_range": [
+    0.6,
+    1.1
+   ],
+   "fdc": {
+    "fdc_id": "169141",
+    "description": "Beans, snap, green, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 1.89
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (on chicken and beans)",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 9,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied by the roasting and the glossy beans; none visible pooled on the plate",
+   "confidence": 0.35,
+   "kcal": 44.2,
+   "kcal_range": [
+    18,
+    80
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 285.0,
+  "kcal": 391.9,
+  "protein_g": 26.9,
+  "grams_range": [
+   202.0,
+   384.0
+  ],
+  "kcal_range": [
+   271,
+   539
+  ],
+  "protein_range": [
+   19.6,
+   35.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 285.0,
+   "kcal": 391.9,
+   "protein_g": 26.9,
+   "grams_range": [
+    202.0,
+    384.0
+   ],
+   "kcal_range": [
+    271,
+    539
+   ],
+   "protein_range": [
+    19.6,
+    35.4
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, drumstick, meat and skin, cooked, roasted",
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Arugula, raw",
+   "Beans, snap, green, cooked, boiled, drained, without salt",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "d1bc74f8e70ce94b3cff6fa273f175b43b70efb825e6e45350936502b28b23ed",
+ "scale_cues": "I used the large square white dinner plate, about 27-28 cm across, as the main size reference. The green beans are about 10-12 cm long and the chicken drumstick is about 13 cm long including the bone.",
+ "assumptions": [
+  "I took the chicken to be a single drumstick (it could be a small leg quarter). The skin is included and the bone is excluded.",
+  "I estimated the rice mound at about 0.75 cup, judging from its height and spread.",
+  "The arugula looks undressed. If there is a vinaigrette, add about 5-10 g of dressing.",
+  "The small herb flecks on the chicken weigh under 5 g, so I merged them into the chicken item.",
+  "I assumed about 5 g of oil from roasting and from tossing the beans."
+ ],
+ "latency_s": 16.8,
+ "calls": [
+  {
+   "wall_s": 12.4,
+   "duration_ms": 11666,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0604011,
+   "cost_basis": "list",
+   "input_tokens": 8898,
+   "output_tokens": 1017
+  },
+  {
+   "wall_s": 4.38,
+   "duration_ms": 3386,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0353625,
+   "cost_basis": "list",
+   "input_tokens": 3652,
+   "output_tokens": 288
+  }
+ ],
+ "cost_usd_cli": 0.09576,
+ "log_id": "e61297429b06"
+}

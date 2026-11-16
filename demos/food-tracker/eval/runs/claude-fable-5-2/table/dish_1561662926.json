@@ -1,0 +1,303 @@
+{
+ "items": [
+  {
+   "name": "Roasted chicken breast, sliced, with crumb/grain crust",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "roasted, sliced, light crumb or quinoa coating",
+   "confidence": 0.5,
+   "kcal": 214.5,
+   "kcal_range": [
+    148,
+    297
+   ],
+   "protein_g": 40.3,
+   "protein_range": [
+    27.9,
+    55.8
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sauteed leafy greens (kale/chard)",
+   "grams_low": 30,
+   "grams_best": 50,
+   "grams_high": 80,
+   "fdc_query": "Kale, cooked, boiled, drained, without salt",
+   "preparation": "sauteed/wilted",
+   "confidence": 0.45,
+   "kcal": 18.0,
+   "kcal_range": [
+    11,
+    29
+   ],
+   "protein_g": 1.5,
+   "protein_range": [
+    0.9,
+    2.4
+   ],
+   "fdc": {
+    "fdc_id": "169238",
+    "description": "Kale, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 36.0,
+    "protein_100g": 2.94
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Quinoa mixed with greens and scattered on plate",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 50,
+   "fdc_query": "Quinoa, cooked",
+   "preparation": "boiled, mixed into greens",
+   "confidence": 0.4,
+   "kcal": 36.0,
+   "kcal_range": [
+    18,
+    60
+   ],
+   "protein_g": 1.3,
+   "protein_range": [
+    0.7,
+    2.2
+   ],
+   "fdc": {
+    "fdc_id": "168917",
+    "description": "Quinoa, cooked",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 120.0,
+    "protein_100g": 4.4
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted carrot piece",
+   "grams_low": 10,
+   "grams_best": 18,
+   "grams_high": 30,
+   "fdc_query": "Carrots, cooked, boiled, drained, without salt",
+   "preparation": "roasted",
+   "confidence": 0.5,
+   "kcal": 6.3,
+   "kcal_range": [
+    4,
+    10
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170394",
+    "description": "Carrots, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 0.76
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Mixed salad greens (green and red leaf lettuce)",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw",
+   "confidence": 0.6,
+   "kcal": 7.3,
+   "kcal_range": [
+    4,
+    12
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Tomato pieces",
+   "grams_low": 10,
+   "grams_best": 18,
+   "grams_high": 30,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, chopped",
+   "confidence": 0.5,
+   "kcal": 3.2,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Corn on the cob, small round slice",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "fdc_query": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "preparation": "boiled or roasted cob round, kernels only counted",
+   "confidence": 0.55,
+   "kcal": 24.0,
+   "kcal_range": [
+    14,
+    38
+   ],
+   "protein_g": 0.9,
+   "protein_range": [
+    0.5,
+    1.4
+   ],
+   "fdc": {
+    "fdc_id": "169999",
+    "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 96.0,
+    "protein_100g": 3.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (on greens and chicken)",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 12,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "used for sauteing/roasting, implied by sheen",
+   "confidence": 0.3,
+   "kcal": 53.0,
+   "kcal_range": [
+    27,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 312.0,
+  "kcal": 362.3,
+  "protein_g": 44.8,
+  "grams_range": [
+   193.0,
+   477.0
+  ],
+  "kcal_range": [
+   228,
+   557
+  ],
+  "protein_range": [
+   30.5,
+   63.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 312.0,
+   "kcal": 359.0,
+   "protein_g": 44.7,
+   "grams_range": [
+    193.0,
+    477.0
+   ],
+   "kcal_range": [
+    227,
+    552
+   ],
+   "protein_range": [
+    30.5,
+    62.8
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Kale, cooked, boiled, drained, without salt",
+   "Quinoa, cooked",
+   "Carrots, cooked, boiled, drained, with salt",
+   "Lettuce, red leaf, raw",
+   "Tomatoes, red, ripe, raw, year round average",
+   "Corn, sweet, yellow, frozen, kernels on cob, cooked, boiled, drained, without salt",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a1035442d79975c3667184c9778d321c3dff0de54cdda7da4172ab69955f0a72",
+ "scale_cues": "Large square white dinner plate (assumed ~26-28 cm across) filling most of the frame; fork tines partly visible at the top-left edge; corn cob round (~4-5 cm diameter) used as a secondary size reference.",
+ "assumptions": [
+  "Plate assumed to be ~26-28 cm square; no hand or packaging for absolute scale",
+  "Protein identified as roasted chicken breast with a crumb/grain crust; it could instead be pork loin or a breaded cutlet",
+  "Dark cooked greens assumed to be kale or chard",
+  "Small beige grains on the plate and in the greens assumed to be quinoa",
+  "Corn mass counts edible kernels only, excluding the cob core",
+  "No visible dressing on the salad greens; none logged",
+  "Cooking oil amount is inferred from preparation, not directly visible",
+  "Image is low resolution and slightly blurred, which limits identification confidence"
+ ],
+ "latency_s": 17.89,
+ "calls": [
+  {
+   "wall_s": 12.79,
+   "duration_ms": 12074,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0630024,
+   "cost_basis": "unknown",
+   "input_tokens": 8826,
+   "output_tokens": 1158
+  },
+  {
+   "wall_s": 5.08,
+   "duration_ms": 4079,
+   "num_turns": 1,
+   "cost_usd_cli": 0.049523500000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 5165,
+   "output_tokens": 383
+  }
+ ],
+ "cost_usd_cli": 0.11253,
+ "log_id": "531502a81b8b"
+}

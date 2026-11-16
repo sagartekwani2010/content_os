@@ -1,0 +1,274 @@
+{
+ "items": [
+  {
+   "name": "Sliced roast beef / steak",
+   "grams_low": 50,
+   "grams_best": 75,
+   "grams_high": 105,
+   "fdc_query": "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, cooked, broiled",
+   "preparation": "roasted or grilled, sliced, medium doneness",
+   "confidence": 0.55,
+   "kcal": 137.2,
+   "kcal_range": [
+    92,
+    192
+   ],
+   "protein_g": 22.9,
+   "protein_range": [
+    15.3,
+    32.1
+   ],
+   "fdc": {
+    "fdc_id": "168634",
+    "description": "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, all grades, cooked, broiled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 183.0,
+    "protein_100g": 30.55
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "steamed or boiled, possibly lightly oiled",
+   "confidence": 0.6,
+   "kcal": 23.0,
+   "kcal_range": [
+    16,
+    32
+   ],
+   "protein_g": 1.8,
+   "protein_range": [
+    1.3,
+    2.6
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula salad greens",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 50,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.6,
+   "kcal": 8.8,
+   "kcal_range": [
+    5,
+    12
+   ],
+   "protein_g": 0.9,
+   "protein_range": [
+    0.5,
+    1.3
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red/wild rice and grain salad with corn kernels",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 80,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked grain mix scattered over the plate, mixed with corn kernels and small vegetable pieces",
+   "confidence": 0.4,
+   "kcal": 61.6,
+   "kcal_range": [
+    39,
+    90
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.8,
+    1.8
+   ],
+   "fdc": {
+    "fdc_id": "2708431",
+    "description": "Rice, brown and wild, cooked, NS as to fat",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 112.0,
+    "protein_100g": 2.2
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Egg frittata / baked egg piece with herbs",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 80,
+   "fdc_query": "Egg, whole, cooked, omelet",
+   "preparation": "baked or pan-cooked egg slab, topped with grains and seasoning",
+   "confidence": 0.35,
+   "kcal": 84.7,
+   "kcal_range": [
+    54,
+    123
+   ],
+   "protein_g": 5.8,
+   "protein_range": [
+    3.7,
+    8.5
+   ],
+   "fdc": {
+    "fdc_id": "172185",
+    "description": "Egg, whole, cooked, omelet",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 154.0,
+    "protein_100g": 10.57
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Caramelized onions",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Onions, cooked, boiled, drained, without salt",
+   "preparation": "sauteed until browned, on top of the beef",
+   "confidence": 0.35,
+   "kcal": 6.6,
+   "kcal_range": [
+    4,
+    11
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "170001",
+    "description": "Onions, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 44.0,
+    "protein_100g": 1.36
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing / oil on greens and grains",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 12,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied light oil-based dressing on arugula and grain salad",
+   "confidence": 0.3,
+   "kcal": 61.9,
+   "kcal_range": [
+    27,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 342.0,
+  "kcal": 383.8,
+  "protein_g": 32.8,
+  "grams_range": [
+   221.0,
+   492.0
+  ],
+  "kcal_range": [
+   237,
+   566
+  ],
+  "protein_range": [
+   21.7,
+   46.6
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 342.0,
+   "kcal": 387.6,
+   "protein_g": 32.6,
+   "grams_range": [
+    221.0,
+    492.0
+   ],
+   "kcal_range": [
+    239,
+    571
+   ],
+   "protein_range": [
+    21.5,
+    46.3
+   ]
+  },
+  "rows": [
+   "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, choice, cooked, broiled",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Arugula, raw",
+   "Rice, brown and wild, cooked, NS as to fat",
+   "Egg, whole, cooked, omelet",
+   "Onions, cooked, boiled, drained, without salt",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "198d1eed30af2b27726c845a803ed05de1e09eaf20f57838ef688aeaeac98e65",
+ "scale_cues": "White square plate with rounded corners, assumed about 25-26 cm across, filling most of the frame; fork tines visible at the top-left edge; cauliflower floret size and beef slice thickness used as secondary cues.",
+ "assumptions": [
+  "Plate assumed to be roughly 25-26 cm wide; no hand or packaging for an absolute reference.",
+  "Meat identified as lean beef (sirloin-type roast or steak) from the pink interior and browned crust; cut is uncertain.",
+  "Pale yellow slab in the centre assumed to be an egg frittata; it could instead be tofu, polenta or a cheese-based bake.",
+  "Grain assumed to be a red/brown rice or wild rice blend with corn kernels; logged under brown rice as the closest match.",
+  "Brown strands on the beef assumed to be caramelized onions.",
+  "Light oil-based dressing assumed from the sheen on the greens and grains; amount is not directly visible.",
+  "Small red and pale pieces among the greens (possibly pepper, apple or nuts) are under 5 g each and folded into the grain salad estimate."
+ ],
+ "latency_s": 934.95,
+ "calls": [
+  {
+   "wall_s": 14.03,
+   "duration_ms": 13268,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0608823,
+   "cost_basis": "unknown",
+   "input_tokens": 8840,
+   "output_tokens": 1168
+  },
+  {
+   "wall_s": 920.9,
+   "duration_ms": 4006,
+   "num_turns": 1,
+   "cost_usd_cli": 0.045511100000000006,
+   "cost_basis": "unknown",
+   "input_tokens": 4739,
+   "output_tokens": 355
+  }
+ ],
+ "cost_usd_cli": 0.10639,
+ "log_id": "09f2109f3b80"
+}

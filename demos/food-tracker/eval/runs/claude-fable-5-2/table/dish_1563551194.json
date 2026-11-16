@@ -1,0 +1,302 @@
+{
+ "items": [
+  {
+   "name": "Chia/grain pudding (brown porridge-like mound)",
+   "grams_low": 70,
+   "grams_best": 110,
+   "grams_high": 160,
+   "fdc_query": "Chia pudding, made with milk",
+   "preparation": "soaked/chilled pudding, scooped onto plate",
+   "confidence": 0.4,
+   "kcal": 118.8,
+   "kcal_range": [
+    76,
+    173
+   ],
+   "protein_g": 3.6,
+   "protein_range": [
+    2.3,
+    5.2
+   ],
+   "fdc": {
+    "fdc_id": "2705685",
+    "description": "Pudding, rice",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 108.0,
+    "protein_100g": 3.23
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Banana slices (on pudding)",
+   "grams_low": 5,
+   "grams_best": 9,
+   "grams_high": 15,
+   "fdc_query": "Bananas, raw",
+   "preparation": "raw, sliced",
+   "confidence": 0.6,
+   "kcal": 8.0,
+   "kcal_range": [
+    4,
+    13
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "173944",
+    "description": "Bananas, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 89.0,
+    "protein_100g": 1.09
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Strawberry pieces (on pudding)",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 10,
+   "fdc_query": "Strawberries, raw",
+   "preparation": "raw, small pieces",
+   "confidence": 0.4,
+   "kcal": 1.6,
+   "kcal_range": [
+    1,
+    3
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "167762",
+    "description": "Strawberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 32.0,
+    "protein_100g": 0.67
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Scrambled egg whites",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Egg, white only, cooked, scrambled",
+   "preparation": "scrambled, lightly peppered",
+   "confidence": 0.55,
+   "kcal": 90.0,
+   "kcal_range": [
+    60,
+    130
+   ],
+   "protein_g": 9.0,
+   "protein_range": [
+    6.0,
+    13.0
+   ],
+   "fdc": {
+    "fdc_id": "2707283",
+    "description": "Egg white omelet, scrambled, or fried, NS as to fat",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 100.0,
+    "protein_100g": 9.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "English muffin half / biscuit",
+   "grams_low": 25,
+   "grams_best": 35,
+   "grams_high": 60,
+   "fdc_query": "English muffins, plain, toasted",
+   "preparation": "toasted, topped with white spread",
+   "confidence": 0.5,
+   "kcal": 94.5,
+   "kcal_range": [
+    68,
+    162
+   ],
+   "protein_g": 3.6,
+   "protein_range": [
+    2.6,
+    6.2
+   ],
+   "fdc": {
+    "fdc_id": "174995",
+    "description": "Muffins, English, plain, toasted, enriched, with calcium propionate (includes sourdough)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 270.0,
+    "protein_100g": 10.32
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "White spread on muffin (cream cheese or yogurt-like)",
+   "grams_low": 15,
+   "grams_best": 28,
+   "grams_high": 45,
+   "fdc_query": "Cheese, cream",
+   "preparation": "spread on top of muffin, with black pepper",
+   "confidence": 0.35,
+   "kcal": 82.6,
+   "kcal_range": [
+    44,
+    133
+   ],
+   "protein_g": 2.0,
+   "protein_range": [
+    1.1,
+    3.2
+   ],
+   "fdc": {
+    "fdc_id": "2705775",
+    "description": "Cheese spread, cream cheese",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 295.0,
+    "protein_100g": 7.1
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted potato cubes (skin-on, browned)",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 125,
+   "fdc_query": "Potatoes, roasted, flesh and skin, with oil",
+   "preparation": "cubed, roasted/pan-fried until browned",
+   "confidence": 0.5,
+   "kcal": 83.7,
+   "kcal_range": [
+    56,
+    116
+   ],
+   "protein_g": 2.2,
+   "protein_range": [
+    1.5,
+    3.1
+   ],
+   "fdc": {
+    "fdc_id": "170111",
+    "description": "Potatoes, baked, flesh and skin, with salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 93.0,
+    "protein_100g": 2.5
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil absorbed in potatoes and eggs",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 12,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "used for roasting/frying; implied by browning",
+   "confidence": 0.35,
+   "kcal": 53.0,
+   "kcal_range": [
+    27,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 373.0,
+  "kcal": 532.2,
+  "protein_g": 20.5,
+  "grams_range": [
+   240.0,
+   557.0
+  ],
+  "kcal_range": [
+   336,
+   836
+  ],
+  "protein_range": [
+   13.6,
+   31.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 373.0,
+   "kcal": 1077.9,
+   "protein_g": 32.9,
+   "grams_range": [
+    240.0,
+    557.0
+   ],
+   "kcal_range": [
+    673,
+    1647
+   ],
+   "protein_range": [
+    21.5,
+    48.9
+   ]
+  },
+  "rows": [
+   "Chia seeds",
+   "Banana pudding",
+   "Strawberries, raw",
+   "Egg, whole, cooked, scrambled",
+   "Muffins, English, plain, toasted, enriched, with calcium propionate (includes sourdough)",
+   "Margarine-like spread with yogurt, 70% fat, stick, with salt",
+   "Potatoes, flesh and skin, raw",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "389f3916d204fbc6708b84e255c11f7d998c4ac27e7ff46b0ae5e77351c51f8f",
+ "scale_cues": "Square white plate assumed ~25 cm across (standard Nutrition5k cafeteria plate) on a tray; fork tines visible at top-left edge; muffin half assumed ~9 cm diameter as an internal reference.",
+ "assumptions": [
+  "Brown mound is a chia or grain-based pudding/porridge; it could alternatively be a nut-butter oatmeal or a meat-based item such as p\u00e2t\u00e9",
+  "White scramble is egg whites only (no yellow visible); could be whole egg with very pale colour or cottage cheese",
+  "White topping on the bread is cream cheese; it could be Greek yogurt, sour cream or a fried egg white",
+  "Browned cubes are skin-on roasted potatoes; they could be roasted eggplant or sweet potato",
+  "Bread base is half an English muffin, mostly hidden under the topping and potatoes",
+  "Oil amount is inferred from browning, not directly visible",
+  "Red pieces on the pudding are strawberry; could be red pepper or another fruit"
+ ],
+ "latency_s": 21.37,
+ "calls": [
+  {
+   "wall_s": 12.69,
+   "duration_ms": 11941,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0628705,
+   "cost_basis": "unknown",
+   "input_tokens": 8832,
+   "output_tokens": 1154
+  },
+  {
+   "wall_s": 8.65,
+   "duration_ms": 7928,
+   "num_turns": 1,
+   "cost_usd_cli": 0.055196100000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 4868,
+   "output_tokens": 787
+  }
+ ],
+ "cost_usd_cli": 0.11807,
+ "log_id": "7f4134cdd31f"
+}

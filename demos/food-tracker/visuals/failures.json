@@ -1,0 +1,11 @@
+[
+ {"dish": "dish_1563389626", "title": "The chicken was hiding",
+  "lines": ["Under the carrots: 194 g of grilled chicken.", "The AI saw only 35 g, and said so: confidence 0.3.", "Protein: 45 g weighed, 12 g estimated."]},
+ {"dish": "dish_1563898084", "title": "Right food, wrong table row",
+  "lines": ["Chia pudding was matched to dry chia seeds (486 kcal per 100 g).", "That one row added 389 kcal. The plate held 11 g of chia."]},
+ {"dish": "dish_1559844272", "title": "Small miss, big calories",
+  "lines": ["80 g of almonds is 462 kcal.", "The AI saw 60 g. A 20 g miss cost 115 kcal."]},
+ {"dish": "dish_1562009934", "title": "When the answer key is wrong",
+  "lines": ["The label lists quinoa and rice, no chicken.", "The photo shows what looks like roast chicken; the AI added 335 kcal for it."],
+  "note": "Our reading of the photo; a likely label error, not confirmed with the dataset authors."}
+]

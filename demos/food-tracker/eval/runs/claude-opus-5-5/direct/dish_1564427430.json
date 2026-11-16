@@ -1,0 +1,76 @@
+{
+ "items": [
+  {
+   "name": "Diced chicken breast",
+   "grams_low": 70,
+   "grams_best": 90,
+   "grams_high": 120,
+   "kcal": 149,
+   "protein_g": 28,
+   "preparation": "Cooked (grilled or pan-seared), skinless, cut into roughly 1.5\u20132 cm cubes; a few pieces show browning",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Kalamata olives (whole, likely pitted)",
+   "grams_low": 30,
+   "grams_best": 40,
+   "grams_high": 50,
+   "kcal": 70,
+   "protein_g": 0.5,
+   "preparation": "Brined whole olives, about 11 visible",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (implied by browning)",
+   "grams_low": 0,
+   "grams_best": 3,
+   "grams_high": 6,
+   "kcal": 27,
+   "protein_g": 0,
+   "preparation": "A thin coating left over from pan-searing; not clearly visible",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 133.0,
+  "kcal": 246,
+  "protein_g": 28.5,
+  "grams_range": [
+   100.0,
+   176.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 246,
+  "protein_g": 28.5
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "1a353b0de279f264bbbf48e613948b83291d99e50d9d19910732d1d7ef02baeb",
+ "scale_cues": "Stainless steel mixing bowl about 25\u201328 cm across, seen from directly above. I used the olive size (each olive about 2\u20132.5 cm long, about 3.5 g pitted) to size the chicken cubes. The food covers a patch roughly 10 \u00d7 9 cm in the bottom of the bowl, in a single, partly overlapping layer.",
+ "assumptions": [
+  "The white cubes are cooked chicken breast, not tofu or turkey, based on the fibrous texture and seared edges.",
+  "The olives are Kalamata and pitted, at about 3.5 g each, with about 11 olives visible.",
+  "Cooked chicken breast has about 165 kcal and 31 g protein per 100 g.",
+  "Kalamata olives have about 175 kcal and 1.2 g protein per 100 g.",
+  "No dressing is visible. A small amount of cooking oil is included because some pieces are browned.",
+  "No food is hidden under other pieces beyond a single layer."
+ ],
+ "latency_s": 13.88,
+ "calls": [
+  {
+   "wall_s": 13.87,
+   "duration_ms": 12913,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0617757,
+   "cost_basis": "list",
+   "input_tokens": 8732,
+   "output_tokens": 1087
+  }
+ ],
+ "cost_usd_cli": 0.06178,
+ "log_id": "bf0ed1cda19d"
+}

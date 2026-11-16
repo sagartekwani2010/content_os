@@ -1,0 +1,761 @@
+{
+ "conditions": {
+  "claude-fable-5-2/direct": {
+   "n": 50,
+   "kcal": {
+    "MAE": 77.3,
+    "MAE_CI": [
+     55.79,
+     102.59
+    ],
+    "MAPE": 34.2,
+    "MAPE_CI": [
+     24.97,
+     46.52
+    ],
+    "median_APE": 26.8,
+    "MAE_pct_of_mean": 27.7,
+    "MAE_pct_of_mean_CI": [
+     20.85,
+     35.76
+    ],
+    "bias": -1.4,
+    "bias_CI": [
+     -33.64,
+     28.96
+    ],
+    "within_20pct": 42.0
+   },
+   "mass": {
+    "MAE": 40.9,
+    "MAE_CI": [
+     30.8,
+     52.62
+    ],
+    "MAPE": 22.2,
+    "MAPE_CI": [
+     17.34,
+     27.93
+    ],
+    "median_APE": 18.1,
+    "MAE_pct_of_mean": 19.1,
+    "MAE_pct_of_mean_CI": [
+     14.43,
+     24.74
+    ],
+    "bias": 4.4,
+    "bias_CI": [
+     -11.66,
+     19.8
+    ],
+    "within_20pct": 52.0
+   },
+   "protein": {
+    "MAE": 5.0,
+    "MAE_CI": [
+     3.03,
+     7.44
+    ],
+    "MAPE": 32.0,
+    "MAPE_CI": [
+     22.31,
+     45.56
+    ],
+    "median_APE": 23.5,
+    "MAE_pct_of_mean": 26.5,
+    "MAE_pct_of_mean_CI": [
+     17.71,
+     38.36
+    ],
+    "bias": -0.9,
+    "bias_CI": [
+     -3.57,
+     1.71
+    ],
+    "within_20pct": 44.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 45.2,
+    "MAE_CI": [
+     30.46,
+     63.05
+    ],
+    "n": 50
+   },
+   "latency_s": {
+    "mean": 9.5,
+    "median": 9.1,
+    "max": 14.6
+   },
+   "cost_usd_cli_per_image": 0.0536,
+   "cost_basis": [
+    "unknown"
+   ],
+   "calls_per_image": 1,
+   "tokens_in_per_image": 8783,
+   "tokens_out_per_image": 720
+  },
+  "claude-fable-5-2/table": {
+   "n": 50,
+   "kcal": {
+    "MAE": 83.6,
+    "MAE_CI": [
+     59.87,
+     109.92
+    ],
+    "MAPE": 38.8,
+    "MAPE_CI": [
+     26.76,
+     55.56
+    ],
+    "median_APE": 25.7,
+    "MAE_pct_of_mean": 29.9,
+    "MAE_pct_of_mean_CI": [
+     22.18,
+     38.88
+    ],
+    "bias": -1.2,
+    "bias_CI": [
+     -35.51,
+     32.93
+    ],
+    "within_20pct": 42.0
+   },
+   "mass": {
+    "MAE": 46.1,
+    "MAE_CI": [
+     34.34,
+     59.7
+    ],
+    "MAPE": 24.4,
+    "MAPE_CI": [
+     18.44,
+     31.28
+    ],
+    "median_APE": 19.9,
+    "MAE_pct_of_mean": 21.6,
+    "MAE_pct_of_mean_CI": [
+     16.37,
+     27.79
+    ],
+    "bias": 2.6,
+    "bias_CI": [
+     -15.64,
+     21.22
+    ],
+    "within_20pct": 50.0
+   },
+   "protein": {
+    "MAE": 5.0,
+    "MAE_CI": [
+     3.17,
+     7.28
+    ],
+    "MAPE": 34.1,
+    "MAPE_CI": [
+     23.15,
+     48.1
+    ],
+    "median_APE": 17.9,
+    "MAE_pct_of_mean": 26.7,
+    "MAE_pct_of_mean_CI": [
+     17.85,
+     38.2
+    ],
+    "bias": 0.2,
+    "bias_CI": [
+     -2.27,
+     2.72
+    ],
+    "within_20pct": 54.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 58.1,
+    "MAE_CI": [
+     39.84,
+     78.89
+    ],
+    "n": 50
+   },
+   "kcal_range_coverage_pct": 68.0,
+   "latency_s": {
+    "mean": 14.6,
+    "median": 13.7,
+    "max": 25.9
+   },
+   "cost_usd_cli_per_image": 0.0852,
+   "cost_basis": [
+    "unknown"
+   ],
+   "calls_per_image": 2,
+   "tokens_in_per_image": 12180,
+   "tokens_out_per_image": 1041
+  },
+  "claude-fable-5-2/table_bm25": {
+   "n": 50,
+   "kcal": {
+    "MAE": 84.0,
+    "MAE_CI": [
+     57.72,
+     116.64
+    ],
+    "MAPE": 47.0,
+    "MAPE_CI": [
+     28.39,
+     71.4
+    ],
+    "median_APE": 26.2,
+    "MAE_pct_of_mean": 30.1,
+    "MAE_pct_of_mean_CI": [
+     20.96,
+     41.19
+    ],
+    "bias": 19.7,
+    "bias_CI": [
+     -15.19,
+     60.04
+    ],
+    "within_20pct": 36.0
+   },
+   "mass": {
+    "MAE": 46.1,
+    "MAE_CI": [
+     34.34,
+     59.7
+    ],
+    "MAPE": 24.4,
+    "MAPE_CI": [
+     18.44,
+     31.28
+    ],
+    "median_APE": 19.9,
+    "MAE_pct_of_mean": 21.6,
+    "MAE_pct_of_mean_CI": [
+     16.37,
+     27.79
+    ],
+    "bias": 2.6,
+    "bias_CI": [
+     -15.64,
+     21.22
+    ],
+    "within_20pct": 50.0
+   },
+   "protein": {
+    "MAE": 4.7,
+    "MAE_CI": [
+     3.01,
+     6.7
+    ],
+    "MAPE": 45.4,
+    "MAPE_CI": [
+     26.04,
+     72.51
+    ],
+    "median_APE": 19.9,
+    "MAE_pct_of_mean": 24.8,
+    "MAE_pct_of_mean_CI": [
+     16.82,
+     36.07
+    ],
+    "bias": 1.6,
+    "bias_CI": [
+     -0.44,
+     3.97
+    ],
+    "within_20pct": 50.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 71.9,
+    "MAE_CI": [
+     41.52,
+     111.13
+    ],
+    "n": 50
+   },
+   "kcal_range_coverage_pct": 70.0
+  },
+  "claude-fable-5-2/table_repeat": {
+   "n": 20,
+   "kcal": {
+    "MAE": 80.8,
+    "MAE_CI": [
+     50.94,
+     116.34
+    ],
+    "MAPE": 47.8,
+    "MAPE_CI": [
+     26.0,
+     81.33
+    ],
+    "median_APE": 32.0,
+    "MAE_pct_of_mean": 29.3,
+    "MAE_pct_of_mean_CI": [
+     20.87,
+     39.22
+    ],
+    "bias": -11.6,
+    "bias_CI": [
+     -60.41,
+     34.4
+    ],
+    "within_20pct": 30.0
+   },
+   "mass": {
+    "MAE": 40.6,
+    "MAE_CI": [
+     29.1,
+     52.7
+    ],
+    "MAPE": 25.2,
+    "MAPE_CI": [
+     16.18,
+     36.7
+    ],
+    "median_APE": 20.2,
+    "MAE_pct_of_mean": 18.8,
+    "MAE_pct_of_mean_CI": [
+     13.22,
+     26.63
+    ],
+    "bias": -3.9,
+    "bias_CI": [
+     -25.1,
+     17.35
+    ],
+    "within_20pct": 50.0
+   },
+   "protein": {
+    "MAE": 5.2,
+    "MAE_CI": [
+     2.34,
+     8.77
+    ],
+    "MAPE": 38.3,
+    "MAPE_CI": [
+     19.88,
+     64.76
+    ],
+    "median_APE": 26.8,
+    "MAE_pct_of_mean": 30.7,
+    "MAE_pct_of_mean_CI": [
+     17.11,
+     55.61
+    ],
+    "bias": 1.5,
+    "bias_CI": [
+     -2.12,
+     5.76
+    ],
+    "within_20pct": 45.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 55.1,
+    "MAE_CI": [
+     33.96,
+     79.07
+    ],
+    "n": 20
+   },
+   "kcal_range_coverage_pct": 55.0,
+   "latency_s": {
+    "mean": 275.3,
+    "median": 15.3,
+    "max": 3393.5
+   },
+   "cost_usd_cli_per_image": 0.084,
+   "cost_basis": [
+    "unknown"
+   ],
+   "calls_per_image": 2,
+   "tokens_in_per_image": 12096,
+   "tokens_out_per_image": 1117
+  },
+  "claude-opus-5-5/direct": {
+   "n": 25,
+   "kcal": {
+    "MAE": 81.2,
+    "MAE_CI": [
+     52.42,
+     115.48
+    ],
+    "MAPE": 44.1,
+    "MAPE_CI": [
+     25.08,
+     72.46
+    ],
+    "median_APE": 28.8,
+    "MAE_pct_of_mean": 30.2,
+    "MAE_pct_of_mean_CI": [
+     20.37,
+     44.04
+    ],
+    "bias": 15.6,
+    "bias_CI": [
+     -28.55,
+     61.48
+    ],
+    "within_20pct": 32.0
+   },
+   "mass": {
+    "MAE": 50.4,
+    "MAE_CI": [
+     31.92,
+     74.64
+    ],
+    "MAPE": 31.3,
+    "MAPE_CI": [
+     19.2,
+     45.33
+    ],
+    "median_APE": 21.8,
+    "MAE_pct_of_mean": 23.8,
+    "MAE_pct_of_mean_CI": [
+     14.44,
+     37.45
+    ],
+    "bias": 31.1,
+    "bias_CI": [
+     6.52,
+     60.2
+    ],
+    "within_20pct": 48.0
+   },
+   "protein": {
+    "MAE": 6.0,
+    "MAE_CI": [
+     3.43,
+     9.29
+    ],
+    "MAPE": 45.5,
+    "MAPE_CI": [
+     27.38,
+     69.73
+    ],
+    "median_APE": 27.4,
+    "MAE_pct_of_mean": 33.9,
+    "MAE_pct_of_mean_CI": [
+     20.69,
+     57.05
+    ],
+    "bias": 2.8,
+    "bias_CI": [
+     -0.59,
+     6.68
+    ],
+    "within_20pct": 40.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 40.0,
+    "MAE_CI": [
+     23.71,
+     59.14
+    ],
+    "n": 25
+   },
+   "latency_s": {
+    "mean": 317.7,
+    "median": 13.7,
+    "max": 3401.2
+   },
+   "cost_usd_cli_per_image": 0.0622,
+   "cost_basis": [
+    "list"
+   ],
+   "calls_per_image": 1,
+   "tokens_in_per_image": 11301,
+   "tokens_out_per_image": 1116
+  },
+  "claude-opus-5-5/table": {
+   "n": 25,
+   "kcal": {
+    "MAE": 83.0,
+    "MAE_CI": [
+     48.62,
+     125.79
+    ],
+    "MAPE": 44.2,
+    "MAPE_CI": [
+     27.47,
+     64.02
+    ],
+    "median_APE": 29.4,
+    "MAE_pct_of_mean": 30.8,
+    "MAE_pct_of_mean_CI": [
+     18.53,
+     48.91
+    ],
+    "bias": 14.1,
+    "bias_CI": [
+     -32.82,
+     69.7
+    ],
+    "within_20pct": 40.0
+   },
+   "mass": {
+    "MAE": 57.2,
+    "MAE_CI": [
+     38.72,
+     81.76
+    ],
+    "MAPE": 33.1,
+    "MAPE_CI": [
+     23.29,
+     44.19
+    ],
+    "median_APE": 24.7,
+    "MAE_pct_of_mean": 27.1,
+    "MAE_pct_of_mean_CI": [
+     18.29,
+     39.98
+    ],
+    "bias": 28.0,
+    "bias_CI": [
+     0.52,
+     59.28
+    ],
+    "within_20pct": 48.0
+   },
+   "protein": {
+    "MAE": 6.1,
+    "MAE_CI": [
+     3.14,
+     9.75
+    ],
+    "MAPE": 42.7,
+    "MAPE_CI": [
+     24.58,
+     67.14
+    ],
+    "median_APE": 25.8,
+    "MAE_pct_of_mean": 34.0,
+    "MAE_pct_of_mean_CI": [
+     18.01,
+     59.9
+    ],
+    "bias": 2.9,
+    "bias_CI": [
+     -0.66,
+     7.24
+    ],
+    "within_20pct": 32.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 46.0,
+    "MAE_CI": [
+     30.5,
+     62.79
+    ],
+    "n": 25
+   },
+   "kcal_range_coverage_pct": 48.0,
+   "latency_s": {
+    "mean": 222.0,
+    "median": 17.2,
+    "max": 3402.6
+   },
+   "cost_usd_cli_per_image": 0.0933,
+   "cost_basis": [
+    "list"
+   ],
+   "calls_per_image": 2,
+   "tokens_in_per_image": 14066,
+   "tokens_out_per_image": 1228
+  },
+  "claude-opus-5-5/table_bm25": {
+   "n": 25,
+   "kcal": {
+    "MAE": 89.9,
+    "MAE_CI": [
+     56.93,
+     132.09
+    ],
+    "MAPE": 65.1,
+    "MAPE_CI": [
+     30.59,
+     116.73
+    ],
+    "median_APE": 29.4,
+    "MAE_pct_of_mean": 33.4,
+    "MAE_pct_of_mean_CI": [
+     21.92,
+     51.54
+    ],
+    "bias": 17.7,
+    "bias_CI": [
+     -29.36,
+     74.76
+    ],
+    "within_20pct": 36.0
+   },
+   "mass": {
+    "MAE": 57.2,
+    "MAE_CI": [
+     38.72,
+     81.76
+    ],
+    "MAPE": 33.1,
+    "MAPE_CI": [
+     23.29,
+     44.19
+    ],
+    "median_APE": 24.7,
+    "MAE_pct_of_mean": 27.1,
+    "MAE_pct_of_mean_CI": [
+     18.29,
+     39.98
+    ],
+    "bias": 28.0,
+    "bias_CI": [
+     0.52,
+     59.28
+    ],
+    "within_20pct": 48.0
+   },
+   "protein": {
+    "MAE": 6.0,
+    "MAE_CI": [
+     3.25,
+     9.62
+    ],
+    "MAPE": 74.3,
+    "MAPE_CI": [
+     31.54,
+     139.65
+    ],
+    "median_APE": 28.1,
+    "MAE_pct_of_mean": 33.8,
+    "MAE_pct_of_mean_CI": [
+     18.13,
+     60.2
+    ],
+    "bias": 2.9,
+    "bias_CI": [
+     -0.61,
+     7.16
+    ],
+    "within_20pct": 32.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 53.1,
+    "MAE_CI": [
+     35.09,
+     73.85
+    ],
+    "n": 25
+   },
+   "kcal_range_coverage_pct": 52.0
+  }
+ },
+ "paired": {
+  "claude-fable-5-2: table minus direct (kcal abs err)": {
+   "n": 50,
+   "mean_diff_abs_err": 6.2,
+   "CI": [
+    -5.07,
+    20.34
+   ]
+  },
+  "claude-fable-5-2: table minus direct (mass abs err)": {
+   "n": 50,
+   "mean_diff_abs_err": 5.2,
+   "CI": [
+    0.26,
+    10.7
+   ]
+  },
+  "claude-fable-5-2: table minus direct (protein abs err)": {
+   "n": 50,
+   "mean_diff_abs_err": 0.0,
+   "CI": [
+    -0.85,
+    1.01
+   ]
+  },
+  "claude-fable-5-2: table minus table_bm25 (kcal abs err)": {
+   "n": 50,
+   "mean_diff_abs_err": -0.5,
+   "CI": [
+    -29.14,
+    21.26
+   ]
+  },
+  "claude-fable-5-2: table minus table_bm25 (mass abs err)": {
+   "n": 50,
+   "mean_diff_abs_err": 0.0,
+   "CI": [
+    0.0,
+    0.0
+   ]
+  },
+  "claude-fable-5-2: table minus table_bm25 (protein abs err)": {
+   "n": 50,
+   "mean_diff_abs_err": 0.4,
+   "CI": [
+    -0.54,
+    1.78
+   ]
+  },
+  "claude-opus-5-5: table minus direct (kcal abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 1.8,
+   "CI": [
+    -13.12,
+    17.56
+   ]
+  },
+  "claude-opus-5-5: table minus direct (mass abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 6.9,
+   "CI": [
+    -2.68,
+    16.64
+   ]
+  },
+  "claude-opus-5-5: table minus direct (protein abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 0.0,
+   "CI": [
+    -1.37,
+    1.6
+   ]
+  },
+  "claude-opus-5-5: table minus table_bm25 (kcal abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": -6.9,
+   "CI": [
+    -17.47,
+    1.7
+   ]
+  },
+  "claude-opus-5-5: table minus table_bm25 (mass abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 0.0,
+   "CI": [
+    0.0,
+    0.0
+   ]
+  },
+  "claude-opus-5-5: table minus table_bm25 (protein abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 0.0,
+   "CI": [
+    -0.49,
+    0.6
+   ]
+  }
+ },
+ "test_retest": {
+  "model": "claude-fable-5-2",
+  "n": 20,
+  "mean_abs_kcal_diff": 18.2,
+  "CI": [
+   11.4,
+   25.82
+  ],
+  "median_abs_kcal_diff": 12.7,
+  "max_abs_kcal_diff": 57.1,
+  "mean_abs_pct_diff": 9.0,
+  "mean_abs_grams_diff": 7.7
+ }
+}

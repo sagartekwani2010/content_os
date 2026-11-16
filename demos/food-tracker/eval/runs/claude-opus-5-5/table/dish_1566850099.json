@@ -1,0 +1,215 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (lettuce, spring mix, arugula)",
+   "grams_low": 35,
+   "grams_best": 50,
+   "grams_high": 70,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw, tossed",
+   "confidence": 0.55,
+   "kcal": 10.5,
+   "kcal_range": [
+    7,
+    15
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.5,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Broccoli florets",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 65,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "cooked, likely steamed or roasted",
+   "confidence": 0.5,
+   "kcal": 15.8,
+   "kcal_range": [
+    10,
+    23
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.7,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 4,
+   "grams_best": 7,
+   "grams_high": 12,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, julienned",
+   "confidence": 0.5,
+   "kcal": 2.9,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red leaf / beet greens and red cabbage strips",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Lettuce, red leaf, raw",
+   "preparation": "raw",
+   "confidence": 0.4,
+   "kcal": 0.8,
+   "kcal_range": [
+    0,
+    1
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "168431",
+    "description": "Lettuce, red leaf, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 13.0,
+    "protein_100g": 1.33
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Vinaigrette dressing / oil coating",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 15,
+   "fdc_query": "Salad dressing, Italian dressing, commercial, regular",
+   "preparation": "tossed through salad (visible sheen)",
+   "confidence": 0.35,
+   "kcal": 19.2,
+   "kcal_range": [
+    10,
+    36
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "171019",
+    "description": "Salad dressing, italian dressing, commercial, regular",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 240.0,
+    "protein_100g": 0.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 116.0,
+  "kcal": 49.2,
+  "protein_g": 2.0,
+  "grams_range": [
+   76.0,
+   172.0
+  ],
+  "kcal_range": [
+   29,
+   80
+  ],
+  "protein_range": [
+   1.2,
+   2.7
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 116.0,
+   "kcal": 67.2,
+   "protein_g": 2.5,
+   "grams_range": [
+    76.0,
+    172.0
+   ],
+   "kcal_range": [
+    39,
+    111
+   ],
+   "protein_range": [
+    1.5,
+    3.7
+   ]
+  },
+  "rows": [
+   "Lettuce, green leaf, raw",
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Carrot, dehydrated",
+   "Lettuce, red leaf, raw",
+   "Salad dressing, italian dressing, commercial, regular"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "f3d24b934b653cc527887039d35322de5207dc7b115b2852350c89fe7c9bef13",
+ "scale_cues": "Square white plate about 25-27 cm across; the fork tines visible at the top left edge help confirm the scale. The salad covers roughly a third of the plate area in a thin, loose layer.",
+ "assumptions": [
+  "The green clumps are broccoli florets, cooked or roasted, rather than raw.",
+  "The small white piece (possibly a chickpea, bean or nut) weighs under 5 g, so it is included with the mixed greens.",
+  "The leaves look shiny, so I assumed a light vinaigrette or oil dressing.",
+  "The red-purple strips are beet greens or red cabbage, and only a small amount is present."
+ ],
+ "latency_s": 14.41,
+ "calls": [
+  {
+   "wall_s": 10.22,
+   "duration_ms": 9500,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0577294,
+   "cost_basis": "list",
+   "input_tokens": 8906,
+   "output_tokens": 878
+  },
+  {
+   "wall_s": 4.17,
+   "duration_ms": 3041,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0327016,
+   "cost_basis": "list",
+   "input_tokens": 3392,
+   "output_tokens": 255
+  }
+ ],
+ "cost_usd_cli": 0.09043,
+ "log_id": "cd4d6c481838"
+}

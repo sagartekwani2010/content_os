@@ -1,0 +1,159 @@
+{
+ "items": [
+  {
+   "name": "Strawberries, halved",
+   "grams_low": 40,
+   "grams_best": 55,
+   "grams_high": 70,
+   "fdc_query": "Strawberries, raw",
+   "preparation": "raw, hulled, halved (5 halves)",
+   "confidence": 0.65,
+   "kcal": 17.6,
+   "kcal_range": [
+    13,
+    22
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.3,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "167762",
+    "description": "Strawberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 32.0,
+    "protein_100g": 0.67
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Mandarin orange / clementine, whole",
+   "grams_low": 55,
+   "grams_best": 70,
+   "grams_high": 90,
+   "fdc_query": "Tangerines, (mandarin oranges), raw",
+   "preparation": "raw, whole with peel; grams are for the edible part without peel",
+   "confidence": 0.6,
+   "kcal": 37.1,
+   "kcal_range": [
+    29,
+    48
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "169105",
+    "description": "Tangerines, (mandarin oranges), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 53.0,
+    "protein_100g": 0.81
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red grapes",
+   "grams_low": 80,
+   "grams_best": 105,
+   "grams_high": 130,
+   "fdc_query": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "preparation": "raw, whole, off the stem (about 19 grapes)",
+   "confidence": 0.65,
+   "kcal": 72.5,
+   "kcal_range": [
+    55,
+    90
+   ],
+   "protein_g": 0.8,
+   "protein_range": [
+    0.6,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "174683",
+    "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 69.0,
+    "protein_100g": 0.72
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 230.0,
+  "kcal": 127.2,
+  "protein_g": 1.8,
+  "grams_range": [
+   175.0,
+   290.0
+  ],
+  "kcal_range": [
+   97,
+   160
+  ],
+  "protein_range": [
+   1.3,
+   2.1
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 230.0,
+   "kcal": 127.2,
+   "protein_g": 1.8,
+   "grams_range": [
+    175.0,
+    290.0
+   ],
+   "kcal_range": [
+    97,
+    160
+   ],
+   "protein_range": [
+    1.3,
+    2.1
+   ]
+  },
+  "rows": [
+   "Strawberries, raw",
+   "Tangerines, (mandarin oranges), raw",
+   "Grapes, red or green (European type, such as Thompson seedless), raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "89c4b04c5507a5e79f8edabf101d116bf90fdf36b0bc41d176793ff326846bda",
+ "scale_cues": "I used the standard square white dinner plate (about 26 cm across) for scale. The clementine is about 5.5\u20136 cm wide compared with the plate, and each grape is about 2 cm. I also counted the pieces: 5 strawberry halves and about 19 grapes.",
+ "assumptions": [
+  "The orange fruit is a clementine or mandarin, not a small navel orange. Its weight is the edible part with the peel removed (about 80% of the whole fruit).",
+  "The strawberry pieces are halves of medium berries, about 11 g per half.",
+  "Each grape weighs about 5.5 g; a few grapes may be hidden behind others.",
+  "Nothing was added: no sugar, dressing or dip is visible."
+ ],
+ "latency_s": 13.93,
+ "calls": [
+  {
+   "wall_s": 10.75,
+   "duration_ms": 9853,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0553175,
+   "cost_basis": "list",
+   "input_tokens": 8902,
+   "output_tokens": 762
+  },
+  {
+   "wall_s": 3.17,
+   "duration_ms": 2017,
+   "num_turns": 1,
+   "cost_usd_cli": 0.022797,
+   "cost_basis": "list",
+   "input_tokens": 2488,
+   "output_tokens": 131
+  }
+ ],
+ "cost_usd_cli": 0.07811,
+ "log_id": "42dab9481b8e"
+}

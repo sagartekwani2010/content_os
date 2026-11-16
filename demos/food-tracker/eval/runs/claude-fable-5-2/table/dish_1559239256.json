@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Mandarin orange (clementine/tangerine), whole, unpeeled",
+   "grams_low": 55,
+   "grams_best": 75,
+   "grams_high": 100,
+   "fdc_query": "Tangerines, (mandarin oranges), raw",
+   "preparation": "raw, whole with peel on; edible mass excludes peel",
+   "confidence": 0.7,
+   "kcal": 39.8,
+   "kcal_range": [
+    29,
+    53
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "169105",
+    "description": "Tangerines, (mandarin oranges), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 53.0,
+    "protein_100g": 0.81
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 75.0,
+  "kcal": 39.8,
+  "protein_g": 0.6,
+  "grams_range": [
+   55.0,
+   100.0
+  ],
+  "kcal_range": [
+   29,
+   53
+  ],
+  "protein_range": [
+   0.4,
+   0.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 75.0,
+   "kcal": 39.8,
+   "protein_g": 0.6,
+   "grams_range": [
+    55.0,
+    100.0
+   ],
+   "kcal_range": [
+    29,
+    53
+   ],
+   "protein_range": [
+    0.4,
+    0.8
+   ]
+  },
+  "rows": [
+   "Tangerines, (mandarin oranges), raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "ee7f44cc7bd070de1d1a61703a3bcda968c8cb5a060b309e447414b7841a1bec",
+ "scale_cues": "White square plate (assumed ~25 cm side) filling most of the frame; the fruit spans roughly one fifth to one quarter of the plate width, giving a diameter of about 6 cm.",
+ "assumptions": [
+  "Fruit is a mandarin/clementine rather than a small orange, based on its flattened shape, loose-looking skin and size.",
+  "Estimated whole weight is about 100 g; edible portion taken as ~75% after removing peel.",
+  "Reddish smears on the plate are residue from a previous food and carry negligible mass, so they are not logged.",
+  "Plate size assumed to be about 25 cm; no cutlery or hand visible for a firmer scale reference."
+ ],
+ "latency_s": 9.85,
+ "calls": [
+  {
+   "wall_s": 7.2,
+   "duration_ms": 6472,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0484561,
+   "cost_basis": "unknown",
+   "input_tokens": 8818,
+   "output_tokens": 436
+  },
+  {
+   "wall_s": 2.65,
+   "duration_ms": 1597,
+   "num_turns": 1,
+   "cost_usd_cli": 0.013219999999999999,
+   "cost_basis": "unknown",
+   "input_tokens": 1451,
+   "output_tokens": 72
+  }
+ ],
+ "cost_usd_cli": 0.06168,
+ "log_id": "7695c544b152"
+}

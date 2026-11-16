@@ -1,0 +1,54 @@
+{
+ "items": [
+  {
+   "name": "Cheese pizza (thin-crust flatbread, 3 small pieces: crust, tomato sauce, mozzarella)",
+   "grams_low": 110,
+   "grams_best": 160,
+   "grams_high": 220,
+   "kcal": 425,
+   "protein_g": 18,
+   "preparation": "baked, cut into small square/triangular pieces",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 160.0,
+  "kcal": 425,
+  "protein_g": 18,
+  "grams_range": [
+   110.0,
+   220.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 425,
+  "protein_g": 18
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "0e505f0ae64cabd5327312e2e7cca36ee54d1d988d872c1f4de7ed57cf8f7032",
+ "scale_cues": "Large white square dinner plate (assumed ~26-28 cm across) on a cafeteria tray; each pizza piece spans roughly 8-10 cm, about a quarter of the plate width.",
+ "assumptions": [
+  "Plate is about 26-28 cm wide",
+  "Pizza is plain cheese with tomato sauce, no meat toppings",
+  "Thin to medium crust, about 1 cm thick, around 50-55 g per piece",
+  "Energy density about 265 kcal/100 g and 11 g protein/100 g for cheese pizza",
+  "Any oil is part of the pizza and included in its estimate",
+  "The partially visible dish at the left edge is a separate plate and is excluded"
+ ],
+ "latency_s": 7.92,
+ "calls": [
+  {
+   "wall_s": 7.92,
+   "duration_ms": 7195,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0490767,
+   "cost_basis": "unknown",
+   "input_tokens": 8662,
+   "output_tokens": 459
+  }
+ ],
+ "cost_usd_cli": 0.04908,
+ "log_id": "5dcc2eec99e9"
+}

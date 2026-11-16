@@ -1,0 +1,102 @@
+{
+ "items": [
+  {
+   "name": "Corn on the cob (2 short cut rounds, kernels only)",
+   "grams_low": 20,
+   "grams_best": 40,
+   "grams_high": 70,
+   "fdc_query": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "preparation": "Boiled or steamed corn cob cut into two short rounds, standing on end; no visible butter, oil or seasoning",
+   "confidence": 0.5,
+   "kcal": 37.6,
+   "kcal_range": [
+    19,
+    66
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.6,
+    2.2
+   ],
+   "fdc": {
+    "fdc_id": "168401",
+    "description": "Corn, sweet, yellow, frozen, kernels on cob, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 94.0,
+    "protein_100g": 3.11
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 40.0,
+  "kcal": 37.6,
+  "protein_g": 1.2,
+  "grams_range": [
+   20.0,
+   70.0
+  ],
+  "kcal_range": [
+   19,
+   66
+  ],
+  "protein_range": [
+   0.6,
+   2.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 40.0,
+   "kcal": 32.4,
+   "protein_g": 1.0,
+   "grams_range": [
+    20.0,
+    70.0
+   ],
+   "kcal_range": [
+    16,
+    57
+   ],
+   "protein_range": [
+    0.5,
+    1.8
+   ]
+  },
+  "rows": [
+   "Corn, sweet, yellow, frozen, kernels cut off cob, boiled, drained, without salt"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "fe75dd82c3e18a92baec81c78652e9cc6ebb0eb729ee0edbada22fc43432de9b",
+ "scale_cues": "White square plate assumed to be about 20-25 cm across; each cob round is about 5 cm in diameter relative to the plate. The overhead view hides the height of the rounds, assumed to be about 2.5-4 cm each.",
+ "assumptions": [
+  "Grams are edible kernel mass only; the inedible cob core is excluded (total with cob would be about 80-120 g).",
+  "Height of each round cannot be seen from overhead; assumed about 3 cm, giving roughly 20 g of kernels per piece.",
+  "Corn is assumed cooked (boiled or steamed) and plain; no butter, oil or sauce is visible on the corn or plate."
+ ],
+ "latency_s": 12.39,
+ "calls": [
+  {
+   "wall_s": 9.67,
+   "duration_ms": 8912,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0536421,
+   "cost_basis": "unknown",
+   "input_tokens": 8828,
+   "output_tokens": 688
+  },
+  {
+   "wall_s": 2.71,
+   "duration_ms": 1693,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0150203,
+   "cost_basis": "unknown",
+   "input_tokens": 1629,
+   "output_tokens": 90
+  }
+ ],
+ "cost_usd_cli": 0.06866,
+ "log_id": "132f7ba58966"
+}

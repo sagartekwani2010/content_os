@@ -1,0 +1,244 @@
+{
+ "items": [
+  {
+   "name": "Sliced seared beef (steak) with seasoning/crumb and tomato topping",
+   "grams_low": 70,
+   "grams_best": 95,
+   "grams_high": 130,
+   "fdc_query": "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, choice, cooked, broiled",
+   "preparation": "pan-seared or grilled, sliced, topped with seasoning crumbs and bits of tomato",
+   "confidence": 0.45,
+   "kcal": 244.2,
+   "kcal_range": [
+    180,
+    334
+   ],
+   "protein_g": 25.5,
+   "protein_range": [
+    18.8,
+    34.8
+   ],
+   "fdc": {
+    "fdc_id": "168729",
+    "description": "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, choice, cooked, broiled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 257.0,
+    "protein_100g": 26.8
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Green beans",
+   "grams_low": 50,
+   "grams_best": 70,
+   "grams_high": 95,
+   "fdc_query": "Beans, snap, green, cooked, boiled, drained, without salt",
+   "preparation": "roasted or saut\u00e9ed, whole",
+   "confidence": 0.6,
+   "kcal": 24.5,
+   "kcal_range": [
+    18,
+    33
+   ],
+   "protein_g": 1.3,
+   "protein_range": [
+    0.9,
+    1.8
+   ],
+   "fdc": {
+    "fdc_id": "169141",
+    "description": "Beans, snap, green, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 1.89
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Spinach, wilted",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Spinach, cooked, boiled, drained, without salt",
+   "preparation": "saut\u00e9ed or wilted",
+   "confidence": 0.55,
+   "kcal": 9.2,
+   "kcal_range": [
+    6,
+    14
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.7,
+    1.8
+   ],
+   "fdc": {
+    "fdc_id": "168463",
+    "description": "Spinach, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.97
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Rice (brown or mixed grain)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked, served under the spinach",
+   "confidence": 0.45,
+   "kcal": 49.2,
+   "kcal_range": [
+    31,
+    74
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.7,
+    1.6
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Mushroom slices",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "fdc_query": "Mushrooms, white, cooked, boiled, drained, without salt",
+   "preparation": "saut\u00e9ed, under the rice and spinach",
+   "confidence": 0.3,
+   "kcal": 5.6,
+   "kcal_range": [
+    3,
+    10
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.2,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "169252",
+    "description": "Mushrooms, white, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 28.0,
+    "protein_100g": 2.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 12,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "used to saut\u00e9 or roast the vegetables and meat",
+   "confidence": 0.35,
+   "kcal": 61.9,
+   "kcal_range": [
+    27,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 272.0,
+  "kcal": 394.6,
+  "protein_g": 29.5,
+  "grams_range": [
+   183.0,
+   392.0
+  ],
+  "kcal_range": [
+   265,
+   571
+  ],
+  "protein_range": [
+   21.3,
+   40.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 272.0,
+   "kcal": 397.4,
+   "protein_g": 29.5,
+   "grams_range": [
+    183.0,
+    392.0
+   ],
+   "kcal_range": [
+    266,
+    575
+   ],
+   "protein_range": [
+    21.3,
+    40.8
+   ]
+  },
+  "rows": [
+   "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, choice, cooked, broiled",
+   "Beans, snap, green, cooked, boiled, drained, without salt",
+   "Spinach, cooked, boiled, drained, without salt",
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Mushrooms, white, cooked, boiled, drained, with salt",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "33f29ac52f0c32d8551907de5fadbf77cdd7efa60861e367767fe6b53261ed4c",
+ "scale_cues": "I used the large white square dinner plate, about 27 cm across, and the edge of the tray under it. The fork tines at the top left also helped. The food takes up roughly the upper half of the plate.",
+ "assumptions": [
+  "I only counted the food on the center plate. The plate partly visible on the left has olives, cherry tomatoes and shredded carrot, and I left it out because it looks like a separate dish.",
+  "The meat looks like sliced beef steak. It could also be liver or another dark meat, so I'm less sure about it.",
+  "The dark slices at the left edge, under the rice, look like mushroom. They could also be pieces of meat.",
+  "I assumed oil was used because the vegetables look saut\u00e9ed or roasted and have a shiny surface.",
+  "The tomato bits and seasoning crumbs on the meat are counted with the meat because they weigh less than 5 g."
+ ],
+ "latency_s": 937.79,
+ "calls": [
+  {
+   "wall_s": 13.83,
+   "duration_ms": 12908,
+   "num_turns": 2,
+   "cost_usd_cli": 0.06429399999999999,
+   "cost_basis": "list",
+   "input_tokens": 8902,
+   "output_tokens": 1207
+  },
+  {
+   "wall_s": 923.92,
+   "duration_ms": 7202,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0425794,
+   "cost_basis": "list",
+   "input_tokens": 8942,
+   "output_tokens": 272
+  }
+ ],
+ "cost_usd_cli": 0.10687,
+ "log_id": "6048850005ed"
+}

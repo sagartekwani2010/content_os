@@ -1,0 +1,120 @@
+{
+ "items": [
+  {
+   "name": "Breaded/crusted chicken breast, sliced",
+   "grams_low": 70,
+   "grams_best": 105,
+   "grams_high": 150,
+   "kcal": 215,
+   "protein_g": 25,
+   "preparation": "coated in crumb/grain crust and baked or pan-fried, sliced",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Sauteed leafy greens (kale/chard) with quinoa grains",
+   "grams_low": 35,
+   "grams_best": 55,
+   "grams_high": 85,
+   "kcal": 50,
+   "protein_g": 2.5,
+   "preparation": "wilted/sauteed greens mixed with a small amount of cooked quinoa",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted carrot piece",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "kcal": 8,
+   "protein_g": 0.1,
+   "preparation": "roasted",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Mixed salad greens (green and red leaf lettuce)",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 50,
+   "kcal": 5,
+   "protein_g": 0.4,
+   "preparation": "raw",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Tomato pieces",
+   "grams_low": 10,
+   "grams_best": 18,
+   "grams_high": 30,
+   "kcal": 3,
+   "protein_g": 0.2,
+   "preparation": "raw, chopped",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Corn on the cob slice",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 45,
+   "kcal": 28,
+   "protein_g": 1,
+   "preparation": "boiled or steamed round slice of cob; edible kernels only",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (absorbed in chicken crust and greens)",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 12,
+   "kcal": 53,
+   "protein_g": 0,
+   "preparation": "implied by fried/sauteed preparation, not directly visible",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 259.0,
+  "kcal": 362,
+  "protein_g": 29.2,
+  "grams_range": [
+   166.0,
+   397.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 362,
+  "protein_g": 29.2
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a1035442d79975c3667184c9778d321c3dff0de54cdda7da4172ab69955f0a72",
+ "scale_cues": "Large square white dinner plate (assumed ~26-28 cm across) filling most of the frame; corn cob slice (~4-5 cm diameter) used as a secondary size reference; fork tines partly visible at top left.",
+ "assumptions": [
+  "Protein is assumed to be crusted chicken breast; it could be fish or another white meat with a grain/crumb coating",
+  "Scattered grains on the plate and in the greens are assumed to be cooked quinoa",
+  "Dark greens under the chicken are assumed to be sauteed kale or chard with a little oil",
+  "No visible dressing on the salad greens; assumed undressed",
+  "Corn mass counts kernels only, excluding the inedible cob core",
+  "Plate assumed to be a standard ~27 cm square dinner plate"
+ ],
+ "latency_s": 11.44,
+ "calls": [
+  {
+   "wall_s": 11.44,
+   "duration_ms": 10704,
+   "num_turns": 2,
+   "cost_usd_cli": 0.059801499999999994,
+   "cost_basis": "unknown",
+   "input_tokens": 8670,
+   "output_tokens": 1001
+  }
+ ],
+ "cost_usd_cli": 0.0598,
+ "log_id": "d39ceaac5b28"
+}

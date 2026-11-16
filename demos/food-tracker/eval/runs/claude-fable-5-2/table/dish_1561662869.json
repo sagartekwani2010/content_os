@@ -1,0 +1,275 @@
+{
+ "items": [
+  {
+   "name": "Breaded chicken pieces (crusted, sliced)",
+   "grams_low": 70,
+   "grams_best": 110,
+   "grams_high": 160,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, fried",
+   "preparation": "breaded/crusted and pan-fried or baked, sliced",
+   "confidence": 0.5,
+   "kcal": 205.7,
+   "kcal_range": [
+    131,
+    299
+   ],
+   "protein_g": 36.8,
+   "protein_range": [
+    23.4,
+    53.5
+   ],
+   "fdc": {
+    "fdc_id": "171078",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, fried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 187.0,
+    "protein_100g": 33.44
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sauteed leafy greens (spinach/kale)",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 50,
+   "fdc_query": "Spinach, cooked, boiled, drained, without salt",
+   "preparation": "wilted/sauteed",
+   "confidence": 0.5,
+   "kcal": 6.9,
+   "kcal_range": [
+    3,
+    12
+   ],
+   "protein_g": 0.9,
+   "protein_range": [
+    0.4,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "168463",
+    "description": "Spinach, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.97
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Quinoa mixed into greens",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "fdc_query": "Quinoa, cooked",
+   "preparation": "boiled, tossed with greens",
+   "confidence": 0.45,
+   "kcal": 24.0,
+   "kcal_range": [
+    12,
+    42
+   ],
+   "protein_g": 0.9,
+   "protein_range": [
+    0.4,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "168917",
+    "description": "Quinoa, cooked",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 120.0,
+    "protein_100g": 4.4
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sauteed mushrooms",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 30,
+   "fdc_query": "Mushrooms, white, cooked, boiled, drained, without salt",
+   "preparation": "sauteed slices mixed with greens and under chicken",
+   "confidence": 0.4,
+   "kcal": 4.2,
+   "kcal_range": [
+    2,
+    8
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.2,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "169252",
+    "description": "Mushrooms, white, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 28.0,
+    "protein_100g": 2.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted carrot piece",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Carrots, cooked, boiled, drained, without salt",
+   "preparation": "roasted, one small piece",
+   "confidence": 0.5,
+   "kcal": 5.2,
+   "kcal_range": [
+    3,
+    9
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170394",
+    "description": "Carrots, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 0.76
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Corn on the cob (small round)",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 45,
+   "fdc_query": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "preparation": "boiled or steamed, one cob slice about 2-3 cm thick; edible kernels only",
+   "confidence": 0.6,
+   "kcal": 28.8,
+   "kcal_range": [
+    19,
+    43
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.7,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "169999",
+    "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 96.0,
+    "protein_100g": 3.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (absorbed in chicken and vegetables)",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 12,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied by frying/sauteing, not directly visible",
+   "confidence": 0.35,
+   "kcal": 61.9,
+   "kcal_range": [
+    27,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 227.0,
+  "kcal": 336.7,
+  "protein_g": 40.0,
+  "grams_range": [
+   134.0,
+   357.0
+  ],
+  "kcal_range": [
+   197,
+   519
+  ],
+  "protein_range": [
+   25.2,
+   58.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 227.0,
+   "kcal": 340.0,
+   "protein_g": 39.9,
+   "grams_range": [
+    134.0,
+    357.0
+   ],
+   "kcal_range": [
+    199,
+    524
+   ],
+   "protein_range": [
+    25.1,
+    58.8
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, fried",
+   "Kale, cooked, boiled, drained, without salt",
+   "Quinoa, cooked",
+   "Mushrooms, white, cooked, boiled, drained, with salt",
+   "Carrots, cooked, boiled, drained, with salt",
+   "Corn, sweet, yellow, frozen, kernels on cob, cooked, boiled, drained, without salt",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "11d7592005d6032906a330f4c45d9748064368404688b7fcd3739b35e69d0d17",
+ "scale_cues": "Square white dinner plate assumed about 26-27 cm wide, filling most of the frame; corn cob round (about 4-5 cm diameter) used as a secondary size reference.",
+ "assumptions": [
+  "Protein is taken to be breaded chicken breast; it could be breaded fish or pork, as the image is low resolution.",
+  "Leafy greens assumed to be spinach or kale, wilted with a small amount of oil.",
+  "Small grains on the greens assumed to be quinoa; could be breadcrumbs or another grain.",
+  "Dark pieces in the greens and beneath the chicken assumed to be mushrooms.",
+  "Orange-red piece assumed to be roasted carrot; could be roasted red pepper or sweet potato.",
+  "Corn mass counts kernels only, excluding the cob.",
+  "Oil quantity is inferred from the preparation, not seen.",
+  "Scattered crumbs on the plate are ignored as negligible."
+ ],
+ "latency_s": 17.61,
+ "calls": [
+  {
+   "wall_s": 12.17,
+   "duration_ms": 11431,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0621173,
+   "cost_basis": "unknown",
+   "input_tokens": 8840,
+   "output_tokens": 1111
+  },
+  {
+   "wall_s": 5.4,
+   "duration_ms": 4370,
+   "num_turns": 1,
+   "cost_usd_cli": 0.04591340000000001,
+   "cost_basis": "unknown",
+   "input_tokens": 4769,
+   "output_tokens": 358
+  }
+ ],
+ "cost_usd_cli": 0.10803,
+ "log_id": "6b0038b9e1db"
+}

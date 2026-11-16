@@ -1,0 +1,218 @@
+{
+ "items": [
+  {
+   "name": "Roasted pork loin slices (pale sliced meat, possibly turkey/chicken breast)",
+   "grams_low": 70,
+   "grams_best": 105,
+   "grams_high": 150,
+   "fdc_query": "Pork, fresh, loin, whole, separable lean only, cooked, roasted",
+   "preparation": "roasted, thinly sliced, about 4 slices with light seasoning on edges",
+   "confidence": 0.45,
+   "kcal": 219.4,
+   "kcal_range": [
+    146,
+    314
+   ],
+   "protein_g": 30.1,
+   "protein_range": [
+    20.0,
+    42.9
+   ],
+   "fdc": {
+    "fdc_id": "168233",
+    "description": "Pork, fresh, loin, whole, separable lean only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 209.0,
+    "protein_100g": 28.62
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Seasoned fried/baked fish fillet (breaded or spice-crusted, possibly chicken)",
+   "grams_low": 60,
+   "grams_best": 95,
+   "grams_high": 140,
+   "fdc_query": "Fish, tilapia, cooked, dry heat",
+   "preparation": "pan-fried or baked with a reddish-brown spice/crumb coating, topped with a few red onion slivers",
+   "confidence": 0.35,
+   "kcal": 171.0,
+   "kcal_range": [
+    108,
+    252
+   ],
+   "protein_g": 21.2,
+   "protein_range": [
+    13.4,
+    31.3
+   ],
+   "fdc": {
+    "fdc_id": "2706321",
+    "description": "Fish, tilapia, baked or broiled, coated",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 180.0,
+    "protein_100g": 22.33
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Honeydew melon cubes",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "fdc_query": "Melons, honeydew, raw",
+   "preparation": "raw, cut into about 10-12 chunks",
+   "confidence": 0.7,
+   "kcal": 46.8,
+   "kcal_range": [
+    32,
+    65
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.5,
+    1.0
+   ],
+   "fdc": {
+    "fdc_id": "169911",
+    "description": "Melons, honeydew, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 36.0,
+    "protein_100g": 0.54
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil absorbed in coated fillet",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 12,
+   "fdc_query": "Oil, canola",
+   "preparation": "implied by browned, crusted surface of the fried/baked fillet",
+   "confidence": 0.35,
+   "kcal": 53.0,
+   "kcal_range": [
+    27,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "172336",
+    "description": "Oil, canola",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Garnish: sauteed red onion slivers and crumb/bacon-like bits",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "fdc_query": "Onions, red, cooked",
+   "preparation": "cooked slivers and small browned bits scattered on meat and melon",
+   "confidence": 0.4,
+   "kcal": 4.9,
+   "kcal_range": [
+    2,
+    10
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170004",
+    "description": "Onions, yellow, sauteed",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 0.95
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 340.0,
+  "kcal": 495.1,
+  "protein_g": 52.0,
+  "grams_range": [
+   225.0,
+   490.0
+  ],
+  "kcal_range": [
+   315,
+   747
+  ],
+  "protein_range": [
+   33.9,
+   75.3
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 340.0,
+   "kcal": 459.8,
+   "protein_g": 56.9,
+   "grams_range": [
+    225.0,
+    490.0
+   ],
+   "kcal_range": [
+    292,
+    702
+   ],
+   "protein_range": [
+    36.8,
+    83.1
+   ]
+  },
+  "rows": [
+   "Pork, fresh, loin, whole, separable lean only, cooked, roasted",
+   "Fish, tilapia, cooked, dry heat",
+   "Melons, honeydew, raw",
+   "Oil, canola",
+   "Bacon bits"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "449300a607bd6f51ec5c07cca34712b1b8ebe819ab8ba5f51467e612599d0571",
+ "scale_cues": "White square dinner plate with rounded corners, assumed about 26-27 cm across, filling most of the overhead frame; item sizes judged relative to plate width (melon cubes about 2.5-3 cm, meat slices about 8-10 cm long). No cutlery or hands visible.",
+ "assumptions": [
+  "Plate assumed to be a standard ~26-27 cm square dinner plate",
+  "Pale sliced meat assumed to be roasted pork loin; could be turkey or chicken breast",
+  "Brown crusted item assumed to be a seasoned fish fillet; could be breaded chicken or pork",
+  "Meat slices assumed thin (about 5-7 mm), fillet about 1.5 cm thick",
+  "Green cubes assumed to be honeydew melon rather than cucumber or cooked squash",
+  "Small amount of cooking oil assumed absorbed in the crusted fillet; no visible sauce or dressing",
+  "No drink visible in the frame"
+ ],
+ "latency_s": 17.01,
+ "calls": [
+  {
+   "wall_s": 13.31,
+   "duration_ms": 12564,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0593823,
+   "cost_basis": "unknown",
+   "input_tokens": 8830,
+   "output_tokens": 980
+  },
+  {
+   "wall_s": 3.67,
+   "duration_ms": 2668,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0331952,
+   "cost_basis": "unknown",
+   "input_tokens": 3495,
+   "output_tokens": 237
+  }
+ ],
+ "cost_usd_cli": 0.09258,
+ "log_id": "afe002cff93b"
+}

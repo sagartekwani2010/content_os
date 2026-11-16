@@ -1,6 +1,6 @@
 # Current Reel context — 15 November 2026
 
-This is the short entry point for Claude Code or Codex working on the current
+This is the short entry point for Claude Code working on the current
 creator projects. Read `AGENTS.md`, `HANDOFF.md`, `config/brand.yaml`, and
 `feedback/VIDEO_LEARNING_LOOP.md` before changing the editorial system.
 

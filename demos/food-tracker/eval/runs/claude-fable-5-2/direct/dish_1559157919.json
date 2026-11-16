@@ -1,0 +1,98 @@
+{
+ "items": [
+  {
+   "name": "baby spinach leaves",
+   "grams_low": 12,
+   "grams_best": 20,
+   "grams_high": 32,
+   "kcal": 5,
+   "protein_g": 0.6,
+   "preparation": "raw, undressed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "arugula / mixed greens",
+   "grams_low": 10,
+   "grams_best": 18,
+   "grams_high": 28,
+   "kcal": 5,
+   "protein_g": 0.5,
+   "preparation": "raw, possibly lightly dressed",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "blueberries",
+   "grams_low": 5,
+   "grams_best": 8,
+   "grams_high": 12,
+   "kcal": 5,
+   "protein_g": 0.1,
+   "preparation": "raw, whole (about 5-6 berries)",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "walnut pieces",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 7,
+   "kcal": 26,
+   "protein_g": 0.6,
+   "preparation": "raw or candied pieces (2 visible)",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "salad dressing / oil (vinaigrette)",
+   "grams_low": 0,
+   "grams_best": 3,
+   "grams_high": 7,
+   "kcal": 14,
+   "protein_g": 0,
+   "preparation": "light coating on arugula mix, inferred from slight sheen",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 53.0,
+  "kcal": 55,
+  "protein_g": 1.8,
+  "grams_range": [
+   29.0,
+   86.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 55,
+  "protein_g": 1.8
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "c5ccf1dccca0b4642102e811383b4a9ca7b424ed467bb282b3be191fa58bae4f",
+ "scale_cues": "Pale blue dinner plate assumed ~26-27 cm diameter, filling most of the frame; blueberries (~1-1.5 cm each) and spinach leaf size (~5-7 cm) used as secondary references.",
+ "assumptions": [
+  "Plate is a standard ~26-27 cm dinner plate",
+  "Greens are a loose single layer, so mass is low despite the area covered",
+  "Left pile is an arugula-based mixed salad with blueberries and walnuts; right pile is plain baby spinach",
+  "Brown pieces are walnuts (could be candied walnuts or pecans)",
+  "A small amount of vinaigrette is assumed on the mixed salad; none on the spinach",
+  "No hidden items beneath the leaves"
+ ],
+ "latency_s": 9.17,
+ "calls": [
+  {
+   "wall_s": 9.17,
+   "duration_ms": 8438,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0552005,
+   "cost_basis": "unknown",
+   "input_tokens": 8660,
+   "output_tokens": 773
+  }
+ ],
+ "cost_usd_cli": 0.0552,
+ "log_id": "0be61614fc94"
+}

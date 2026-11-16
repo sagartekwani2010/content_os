@@ -1,0 +1,97 @@
+{
+ "items": [
+  {
+   "name": "scrambled eggs",
+   "grams_low": 140,
+   "grams_best": 190,
+   "grams_high": 250,
+   "kcal": 285,
+   "protein_g": 19,
+   "preparation": "scrambled, cooked with a little oil/butter (included in kcal)",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "bacon strips (thick-cut, possibly turkey bacon)",
+   "grams_low": 35,
+   "grams_best": 50,
+   "grams_high": 70,
+   "kcal": 210,
+   "protein_g": 15,
+   "preparation": "pan-fried/baked, about 4 strips",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "sauteed spinach/kale greens",
+   "grams_low": 50,
+   "grams_best": 80,
+   "grams_high": 110,
+   "kcal": 30,
+   "protein_g": 2.5,
+   "preparation": "wilted/sauteed",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "shredded carrot",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "kcal": 2,
+   "protein_g": 0.1,
+   "preparation": "raw shredded, scattered over greens",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "cooking oil on greens",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "kcal": 35,
+   "protein_g": 0,
+   "preparation": "implied by glossy sauteed greens",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 330.0,
+  "kcal": 562,
+  "protein_g": 36.6,
+  "grams_range": [
+   230.0,
+   448.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 562,
+  "protein_g": 36.6
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a1c504bf2592630875fcdc05197b87bd9cae1710d5c792b3fe302d3db0324b53",
+ "scale_cues": "Square white dinner plate assumed ~25 cm wide, sitting on a tray; food coverage relative to plate area and bacon strip length (~12-15 cm) used for scale.",
+ "assumptions": [
+  "Plate is roughly 25 cm square",
+  "Eggs are about 3-4 large eggs scrambled with a small amount of fat",
+  "Meat strips are cooked pork bacon; if turkey bacon, kcal would be lower (~120)",
+  "Greens are sauteed spinach or kale with a small amount of oil",
+  "No hidden items under the eggs"
+ ],
+ "latency_s": 13.32,
+ "calls": [
+  {
+   "wall_s": 13.32,
+   "duration_ms": 8567,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0373238,
+   "cost_basis": "unknown",
+   "input_tokens": 11631,
+   "output_tokens": 730
+  }
+ ],
+ "cost_usd_cli": 0.03732,
+ "log_id": "16d6f8aeaa7e"
+}

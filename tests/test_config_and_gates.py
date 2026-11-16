@@ -270,7 +270,8 @@ class TestPricingWarnings:
             resolved = models.resolved(agent)
             assert resolved.model
             assert resolved.prompt_version
-            assert resolved.reasoning_effort in ("low", "medium", "high")
+            assert resolved.reasoning_effort in ("low", "medium", "high", "xhigh")
+            assert resolved.provider == "anthropic"
 
 
 class TestBrandContextCompleteness:

@@ -1,0 +1,109 @@
+{
+ "items": [
+  {
+   "name": "scrambled eggs",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "kcal": 195,
+   "protein_g": 13,
+   "preparation": "scrambled, cooked with a little oil or butter",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "bacon strip",
+   "grams_low": 8,
+   "grams_best": 12,
+   "grams_high": 18,
+   "kcal": 60,
+   "protein_g": 4.2,
+   "preparation": "pan-fried or baked until crisp",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "pineapple chunks",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "kcal": 50,
+   "protein_g": 0.5,
+   "preparation": "raw, cut into chunks",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "chia pudding",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "kcal": 110,
+   "protein_g": 3.5,
+   "preparation": "chia seeds soaked in milk or plant milk, chilled",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "blueberries",
+   "grams_low": 12,
+   "grams_best": 18,
+   "grams_high": 25,
+   "kcal": 10,
+   "protein_g": 0.1,
+   "preparation": "raw, whole",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "cooking fat for eggs (butter or oil)",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 8,
+   "kcal": 32,
+   "protein_g": 0,
+   "preparation": "absorbed into the scrambled eggs during cooking, not directly visible",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 354.0,
+  "kcal": 457,
+  "protein_g": 21.3,
+  "grams_range": [
+   242.0,
+   501.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 457,
+  "protein_g": 21.3
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "cb1018a3157f85de8dc49facdf94a5004ee679859021b34c6d74edb36df4b4e8",
+ "scale_cues": "Square white dinner plate assumed about 25-26 cm across, filling most of the frame; individual blueberries (about 1.2-1.5 cm, 1.5 g each, roughly 11 counted) and the single bacon strip length (about 15 cm along its curve) used to cross-check portion sizes.",
+ "assumptions": [
+  "Plate is a standard square dinner plate of about 25-26 cm",
+  "Scrambled eggs are roughly 2 large eggs' worth, cooked with a small amount of butter or oil",
+  "Cooking fat is implied by preparation and listed separately; the eggs' kcal excludes it",
+  "Chia pudding is made with unsweetened or lightly sweetened plant milk; whole milk or added sweetener would raise the calories",
+  "Bacon is one regular-cut pork strip, cooked crisp",
+  "Pineapple is fresh rather than canned in syrup"
+ ],
+ "latency_s": 11.26,
+ "calls": [
+  {
+   "wall_s": 11.26,
+   "duration_ms": 10508,
+   "num_turns": 2,
+   "cost_usd_cli": 0.057921,
+   "cost_basis": "unknown",
+   "input_tokens": 8660,
+   "output_tokens": 905
+  }
+ ],
+ "cost_usd_cli": 0.05792,
+ "log_id": "0d3e2ef6bbb4"
+}

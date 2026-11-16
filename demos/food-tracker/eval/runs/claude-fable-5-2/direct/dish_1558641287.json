@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "grape tomatoes",
+   "grams_low": 55,
+   "grams_best": 75,
+   "grams_high": 100,
+   "kcal": 14,
+   "protein_g": 0.7,
+   "preparation": "raw, whole, undressed",
+   "confidence": 0.8,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 75.0,
+  "kcal": 14,
+  "protein_g": 0.7,
+  "grams_range": [
+   55.0,
+   100.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 14,
+  "protein_g": 0.7
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "6f28d3aa26d340c8805af42930c149385deb975b5d078dc44e2da87be7f822fe",
+ "scale_cues": "White square plate assumed about 25 cm across; each tomato spans roughly 3-4 cm against it, consistent with grape tomatoes of about 9-10 g each; 8 tomatoes counted.",
+ "assumptions": [
+  "8 whole grape tomatoes at about 9-10 g each",
+  "No oil, dressing or salt visible; tomatoes appear dry and plain",
+  "Small yellow specks on the plate rim are negligible residue and not counted",
+  "Plate size assumed to be a standard dinner plate of about 25 cm"
+ ],
+ "latency_s": 5.91,
+ "calls": [
+  {
+   "wall_s": 5.91,
+   "duration_ms": 4912,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0472845,
+   "cost_basis": "unknown",
+   "input_tokens": 8670,
+   "output_tokens": 375
+  }
+ ],
+ "cost_usd_cli": 0.04728,
+ "log_id": "04229ecba0c9"
+}

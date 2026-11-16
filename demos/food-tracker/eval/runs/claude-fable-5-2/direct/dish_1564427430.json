@@ -1,0 +1,75 @@
+{
+ "items": [
+  {
+   "name": "diced cooked chicken breast",
+   "grams_low": 50,
+   "grams_best": 80,
+   "grams_high": 120,
+   "kcal": 132,
+   "protein_g": 24.8,
+   "preparation": "roasted or grilled, diced into roughly 1.5 cm cubes, light browning",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "kalamata olives",
+   "grams_low": 25,
+   "grams_best": 36,
+   "grams_high": 50,
+   "kcal": 85,
+   "protein_g": 0.4,
+   "preparation": "whole brined olives, about 9 visible, likely with pits",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "cooking oil residue on chicken",
+   "grams_low": 0,
+   "grams_best": 2,
+   "grams_high": 5,
+   "kcal": 18,
+   "protein_g": 0,
+   "preparation": "implied by the browned surfaces of the chicken, not directly visible",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 118.0,
+  "kcal": 235,
+  "protein_g": 25.2,
+  "grams_range": [
+   75.0,
+   175.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 235,
+  "protein_g": 25.2
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "1a353b0de279f264bbbf48e613948b83291d99e50d9d19910732d1d7ef02baeb",
+ "scale_cues": "Stainless steel mixing bowl assumed to be about 25-28 cm in rim diameter; whole kalamata olives (about 2-2.5 cm long, roughly 4 g each) used as an internal size reference for the chicken cubes.",
+ "assumptions": [
+  "White cubes are diced cooked chicken breast rather than tofu, turkey or cheese",
+  "Olives are whole kalamata olives; mass given is the edible portion, and any pits would add about 20% to the weight on the plate",
+  "A small amount of cooking oil is assumed from the browning on the chicken",
+  "Food is a single loose layer with no hidden items underneath",
+  "Bowl size is assumed, as there is no cutlery or hand in frame for scale"
+ ],
+ "latency_s": 10.35,
+ "calls": [
+  {
+   "wall_s": 10.35,
+   "duration_ms": 9513,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0554801,
+   "cost_basis": "unknown",
+   "input_tokens": 8670,
+   "output_tokens": 634
+  }
+ ],
+ "cost_usd_cli": 0.05548,
+ "log_id": "0b2c17108e7f"
+}

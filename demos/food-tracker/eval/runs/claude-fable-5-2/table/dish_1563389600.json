@@ -1,0 +1,132 @@
+{
+ "items": [
+  {
+   "name": "Diced grilled chicken breast",
+   "grams_low": 70,
+   "grams_best": 110,
+   "grams_high": 160,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "grilled or roasted, skinless, cut into roughly 1.5-2.5 cm cubes",
+   "confidence": 0.6,
+   "kcal": 181.5,
+   "kcal_range": [
+    116,
+    264
+   ],
+   "protein_g": 34.1,
+   "protein_range": [
+    21.7,
+    49.6
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Grape tomatoes",
+   "grams_low": 60,
+   "grams_best": 85,
+   "grams_high": 115,
+   "fdc_query": "Tomatoes, grape, raw",
+   "preparation": "raw, whole (about 11 visible)",
+   "confidence": 0.7,
+   "kcal": 17.0,
+   "kcal_range": [
+    12,
+    23
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.5,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "2709719",
+    "description": "Tomatoes, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 20.0,
+    "protein_100g": 0.82
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 195.0,
+  "kcal": 198.5,
+  "protein_g": 34.8,
+  "grams_range": [
+   130.0,
+   275.0
+  ],
+  "kcal_range": [
+   128,
+   287
+  ],
+  "protein_range": [
+   22.2,
+   50.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 195.0,
+   "kcal": 260.5,
+   "protein_g": 38.9,
+   "grams_range": [
+    130.0,
+    275.0
+   ],
+   "kcal_range": [
+    172,
+    371
+   ],
+   "protein_range": [
+    25.1,
+    56.0
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Grape leaves, raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "68b1179652b8707efd0df56fd08efc255d760d91536ad5f7d506dad01ab46ea7",
+ "scale_cues": "Large stainless steel mixing bowl filling the frame (assumed ~28-30 cm rim diameter); grape tomatoes used as an internal size reference (~2.5-3 cm long, ~7-8 g each); chicken cube size judged relative to the tomatoes.",
+ "assumptions": [
+  "Bowl is a standard ~28-30 cm mixing bowl; no cutlery or hand in frame for direct scale",
+  "About 11 grape tomatoes at ~7-8 g each",
+  "Roughly 30-35 chicken pieces in a partly stacked pile, averaging ~3-4 g each",
+  "Chicken is skinless breast meat with light browning from grilling/roasting; no visible sauce, dressing or pooled oil, so no added fat itemised",
+  "Light seasoning specks on the chicken weigh under 1 g and are not listed separately"
+ ],
+ "latency_s": 10.6,
+ "calls": [
+  {
+   "wall_s": 7.75,
+   "duration_ms": 7017,
+   "num_turns": 2,
+   "cost_usd_cli": 0.051718299999999995,
+   "cost_basis": "unknown",
+   "input_tokens": 8840,
+   "output_tokens": 590
+  },
+  {
+   "wall_s": 2.83,
+   "duration_ms": 1818,
+   "num_turns": 1,
+   "cost_usd_cli": 0.018534000000000002,
+   "cost_basis": "unknown",
+   "input_tokens": 1991,
+   "output_tokens": 119
+  }
+ ],
+ "cost_usd_cli": 0.07025,
+ "log_id": "ebe3fbf7ab14"
+}

@@ -2,7 +2,7 @@
 """Print a compact, copy-ready Content OS context packet for a fresh chat.
 
 This captures repository state and selected project files. It cannot read or
-resume a Codex chat transcript; add conversation-only decisions with --note.
+resume an agent chat transcript; add conversation-only decisions with --note.
 """
 
 from __future__ import annotations
@@ -38,7 +38,7 @@ def newest_draft() -> Path | None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Print a concise handoff packet to paste into a fresh Codex chat."
+        description="Print a concise handoff packet to paste into a fresh Claude Code session."
     )
     parser.add_argument(
         "focus",
@@ -58,7 +58,7 @@ def main() -> int:
     print(f"Generated: {datetime.now().astimezone().isoformat(timespec='minutes')}")
     print(f"Repository: {ROOT}")
     print("\n## Instructions")
-    print("Read AGENTS.md and CODEX_WORKFLOW.md first. Continue the unfinished request; do not repeat completed work.")
+    print("Read AGENTS.md and CLAUDE_WORKFLOW.md first. Continue the unfinished request; do not repeat completed work.")
     print("This packet summarizes repository state only. It cannot recover chat-only context or unuploaded attachments.")
 
     handoff = ROOT / "HANDOFF.md"

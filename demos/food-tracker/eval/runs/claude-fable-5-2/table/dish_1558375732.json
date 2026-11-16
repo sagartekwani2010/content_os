@@ -1,0 +1,104 @@
+{
+ "items": [
+  {
+   "name": "Red seedless grapes (11 grapes, mostly red with one greenish)",
+   "grams_low": 50,
+   "grams_best": 68,
+   "grams_high": 90,
+   "fdc_query": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "preparation": "raw, whole, loose off the stem",
+   "confidence": 0.8,
+   "kcal": 46.9,
+   "kcal_range": [
+    34,
+    62
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.4,
+    0.6
+   ],
+   "fdc": {
+    "fdc_id": "174683",
+    "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 69.0,
+    "protein_100g": 0.72
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 68.0,
+  "kcal": 46.9,
+  "protein_g": 0.5,
+  "grams_range": [
+   50.0,
+   90.0
+  ],
+  "kcal_range": [
+   34,
+   62
+  ],
+  "protein_range": [
+   0.4,
+   0.6
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 68.0,
+   "kcal": 46.9,
+   "protein_g": 0.5,
+   "grams_range": [
+    50.0,
+    90.0
+   ],
+   "kcal_range": [
+    34,
+    62
+   ],
+   "protein_range": [
+    0.4,
+    0.6
+   ]
+  },
+  "rows": [
+   "Grapes, red or green (European type, such as Thompson seedless), raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "6d08ce05ecb1f044d198ccb1d001c8dcfac0677cfc92e65431ab95a0fcd3d110",
+ "scale_cues": "White disposable paper plate assumed ~7 in (18 cm) across including the rim; each grape spans roughly 2-3 cm against it, giving about 5-7 g per grape for 11 grapes.",
+ "assumptions": [
+  "Plate is a small ~7 in paper plate; if it is a 9 in plate the grapes are larger and the mass is nearer the high end",
+  "11 grapes counted, none hidden beneath others",
+  "Grapes are seedless and eaten whole, so the edible mass equals the visible mass",
+  "The greenish grape is the same variety, just less ripe, so it is merged into the one item",
+  "No other food, sauce or drink is present"
+ ],
+ "latency_s": 10.38,
+ "calls": [
+  {
+   "wall_s": 7.68,
+   "duration_ms": 6944,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0483947,
+   "cost_basis": "unknown",
+   "input_tokens": 8834,
+   "output_tokens": 426
+  },
+  {
+   "wall_s": 2.69,
+   "duration_ms": 1603,
+   "num_turns": 1,
+   "cost_usd_cli": 0.012904,
+   "cost_basis": "unknown",
+   "input_tokens": 1464,
+   "output_tokens": 60
+  }
+ ],
+ "cost_usd_cli": 0.0613,
+ "log_id": "ce33b8f84489"
+}

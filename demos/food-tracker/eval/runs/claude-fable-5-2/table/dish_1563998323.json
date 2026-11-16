@@ -1,0 +1,246 @@
+{
+ "items": [
+  {
+   "name": "Beef steak slices (medium-rare, herb/garlic topped)",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "fdc_query": "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, cooked, broiled",
+   "preparation": "grilled or seared, sliced, topped with minced garlic and herbs",
+   "confidence": 0.55,
+   "kcal": 334.1,
+   "kcal_range": [
+    231,
+    463
+   ],
+   "protein_g": 34.8,
+   "protein_range": [
+    24.1,
+    48.2
+   ],
+   "fdc": {
+    "fdc_id": "168729",
+    "description": "Beef, top sirloin, steak, separable lean and fat, trimmed to 1/8\" fat, choice, cooked, broiled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 257.0,
+    "protein_100g": 26.8
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Chicken breast pieces",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "roasted, sliced/chunked, light herb seasoning",
+   "confidence": 0.5,
+   "kcal": 148.5,
+   "kcal_range": [
+    99,
+    214
+   ],
+   "protein_g": 27.9,
+   "protein_range": [
+    18.6,
+    40.3
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted potatoes",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Potatoes, roasted, salt added in processing, frozen, unprepared",
+   "preparation": "cubed, skin-on, oven-roasted until browned",
+   "confidence": 0.5,
+   "kcal": 114.3,
+   "kcal_range": [
+    76,
+    165
+   ],
+   "protein_g": 2.0,
+   "protein_range": [
+    1.3,
+    2.9
+   ],
+   "fdc": {
+    "fdc_id": "170031",
+    "description": "Potatoes, roasted, salt added in processing, frozen, unprepared",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 127.0,
+    "protein_100g": 2.22
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 120,
+   "grams_best": 170,
+   "grams_high": 230,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "steamed or boiled florets, with a few pieces of leaf/stem",
+   "confidence": 0.6,
+   "kcal": 39.1,
+   "kcal_range": [
+    28,
+    53
+   ],
+   "protein_g": 3.1,
+   "protein_range": [
+    2.2,
+    4.2
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (on roasted potatoes and meats)",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 14,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "absorbed/coating from roasting and searing, implied by browning",
+   "confidence": 0.35,
+   "kcal": 70.7,
+   "kcal_range": [
+    35,
+    124
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Garlic and herb garnish on steak",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 5,
+   "fdc_query": "Garlic, raw",
+   "preparation": "minced garlic and chopped herbs sprinkled on steak",
+   "confidence": 0.4,
+   "kcal": 4.5,
+   "kcal_range": [
+    1,
+    7
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "169230",
+    "description": "Garlic, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 149.0,
+    "protein_100g": 6.36
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 491.0,
+  "kcal": 711.2,
+  "protein_g": 68.0,
+  "grams_range": [
+   335.0,
+   689.0
+  ],
+  "kcal_range": [
+   470,
+   1026
+  ],
+  "protein_range": [
+   46.3,
+   95.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 491.0,
+   "kcal": 644.9,
+   "protein_g": 71.7,
+   "grams_range": [
+    335.0,
+    689.0
+   ],
+   "kcal_range": [
+    424,
+    934
+   ],
+   "protein_range": [
+    48.9,
+    101.1
+   ]
+  },
+  "rows": [
+   "Beef, top sirloin, steak, separable lean and fat, trimmed to 0\" fat, select, cooked, broiled",
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Potatoes, roasted, salt added in processing, frozen, unprepared",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Oil, olive, salad or cooking",
+   "Garlic, raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "1f3cda35d4522673d277082a51a2c9f40237d5348839763734830725cfaa2e7d",
+ "scale_cues": "White square dinner plate assumed ~25-27 cm wide (standard Nutrition5k cafeteria plate) filling most of the frame; food piece sizes judged relative to the plate width and typical cauliflower floret size (~4-5 cm).",
+ "assumptions": [
+  "Plate is roughly 25-27 cm across; no cutlery or hand in frame for direct scale",
+  "Dark sliced meat is beef steak (sirloin-type), pink interior indicates medium-rare",
+  "Pale meat at top is roasted chicken breast, not pork or fish",
+  "Browned cubes at top right are skin-on roasted potatoes",
+  "Cauliflower is steamed/boiled with no visible sauce or butter; any added fat is not counted separately",
+  "Cooking oil amount is inferred from browning of potatoes and meats, not directly visible",
+  "Green pieces among the cauliflower are cauliflower leaf/stem, counted within the cauliflower mass"
+ ],
+ "latency_s": 25.88,
+ "calls": [
+  {
+   "wall_s": 16.76,
+   "duration_ms": 12032,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0410229,
+   "cost_basis": "unknown",
+   "input_tokens": 11795,
+   "output_tokens": 1065
+  },
+  {
+   "wall_s": 9.09,
+   "duration_ms": 4385,
+   "num_turns": 1,
+   "cost_usd_cli": 0.048584999999999996,
+   "cost_basis": "unknown",
+   "input_tokens": 7941,
+   "output_tokens": 372
+  }
+ ],
+ "cost_usd_cli": 0.08961,
+ "log_id": "86c374167e5a"
+}

@@ -1,0 +1,215 @@
+{
+ "items": [
+  {
+   "name": "Scrambled eggs",
+   "grams_low": 120,
+   "grams_best": 150,
+   "grams_high": 190,
+   "fdc_query": "Egg, whole, cooked, scrambled",
+   "preparation": "scrambled, likely cooked with a little fat",
+   "confidence": 0.6,
+   "kcal": 223.5,
+   "kcal_range": [
+    179,
+    283
+   ],
+   "protein_g": 15.0,
+   "protein_range": [
+    12.0,
+    19.0
+   ],
+   "fdc": {
+    "fdc_id": "172187",
+    "description": "Egg, whole, cooked, scrambled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 149.0,
+    "protein_100g": 9.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sliced smoked beef brisket (could be smoked ham or roast beef)",
+   "grams_low": 80,
+   "grams_best": 110,
+   "grams_high": 150,
+   "fdc_query": "Beef, brisket, flat half, separable lean and fat, trimmed to 1/8\" fat, all grades, cooked, braised",
+   "preparation": "smoked or roasted, sliced",
+   "confidence": 0.4,
+   "kcal": 317.9,
+   "kcal_range": [
+    231,
+    434
+   ],
+   "protein_g": 31.7,
+   "protein_range": [
+    23.1,
+    43.2
+   ],
+   "fdc": {
+    "fdc_id": "169488",
+    "description": "Beef, brisket, flat half, separable lean and fat, trimmed to 1/8\" fat, all grades, cooked, braised",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 289.0,
+    "protein_100g": 28.82
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Saut\u00e9ed spinach",
+   "grams_low": 60,
+   "grams_best": 85,
+   "grams_high": 120,
+   "fdc_query": "Spinach, cooked, boiled, drained, without salt",
+   "preparation": "saut\u00e9ed or wilted",
+   "confidence": 0.5,
+   "kcal": 19.6,
+   "kcal_range": [
+    14,
+    28
+   ],
+   "protein_g": 2.5,
+   "protein_range": [
+    1.8,
+    3.6
+   ],
+   "fdc": {
+    "fdc_id": "168463",
+    "description": "Spinach, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.97
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot garnish",
+   "grams_low": 4,
+   "grams_best": 7,
+   "grams_high": 12,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, shredded",
+   "confidence": 0.5,
+   "kcal": 2.9,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil for the eggs and spinach",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "used for saut\u00e9ing or scrambling",
+   "confidence": 0.3,
+   "kcal": 53.0,
+   "kcal_range": [
+    27,
+    88
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 358.0,
+  "kcal": 616.9,
+  "protein_g": 49.3,
+  "grams_range": [
+   267.0,
+   482.0
+  ],
+  "kcal_range": [
+   453,
+   838
+  ],
+  "protein_range": [
+   36.9,
+   65.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 358.0,
+   "kcal": 637.9,
+   "protein_g": 49.8,
+   "grams_range": [
+    267.0,
+    482.0
+   ],
+   "kcal_range": [
+    465,
+    874
+   ],
+   "protein_range": [
+    37.2,
+    66.8
+   ]
+  },
+  "rows": [
+   "Egg, whole, cooked, scrambled",
+   "Beef, brisket, flat half, separable lean and fat, trimmed to 1/8\" fat, all grades, cooked, braised",
+   "Spinach, cooked, boiled, drained, without salt",
+   "Carrot, dehydrated",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "a1c504bf2592630875fcdc05197b87bd9cae1710d5c792b3fe302d3db0324b53",
+ "scale_cues": "Square white dinner plate about 26-27 cm across fills most of the frame. Food portions are judged by how much of the plate they cover and how high they are piled. No cutlery or hand is visible.",
+ "assumptions": [
+  "The dark reddish-brown slices with a darker edge are taken to be smoked beef brisket. They could also be smoked ham, pastrami or roast beef.",
+  "The dark leafy greens are taken to be spinach, wilted or saut\u00e9ed. They could be kale or Swiss chard.",
+  "Oil is assumed because both the eggs and the greens look like they were cooked in a pan. No added butter is visible.",
+  "Grams are the edible weight on the plate, with no bones or packaging."
+ ],
+ "latency_s": 17.47,
+ "calls": [
+  {
+   "wall_s": 12.26,
+   "duration_ms": 11419,
+   "num_turns": 2,
+   "cost_usd_cli": 0.062450700000000005,
+   "cost_basis": "list",
+   "input_tokens": 8896,
+   "output_tokens": 933
+  },
+  {
+   "wall_s": 5.11,
+   "duration_ms": 3562,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0359299,
+   "cost_basis": "list",
+   "input_tokens": 3672,
+   "output_tokens": 308
+  }
+ ],
+ "cost_usd_cli": 0.09838,
+ "log_id": "243bc5164453"
+}

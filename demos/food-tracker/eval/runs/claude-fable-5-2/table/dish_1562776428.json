@@ -1,0 +1,132 @@
+{
+ "items": [
+  {
+   "name": "Roasted Brussels sprouts",
+   "grams_low": 90,
+   "grams_best": 135,
+   "grams_high": 190,
+   "fdc_query": "Brussels sprouts, cooked, roasted, fat added in cooking",
+   "preparation": "roasted until browned/charred, glistening with oil; roughly 15-18 small whole or halved sprouts",
+   "confidence": 0.6,
+   "kcal": 90.5,
+   "kcal_range": [
+    60,
+    127
+   ],
+   "protein_g": 4.6,
+   "protein_range": [
+    3.1,
+    6.5
+   ],
+   "fdc": {
+    "fdc_id": "2709884",
+    "description": "Brussels sprouts, fresh, cooked, fat added",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 67.0,
+    "protein_100g": 3.42
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (coating on sprouts)",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 12,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "absorbed/coated on sprouts during roasting, implied by glossy surface",
+   "confidence": 0.4,
+   "kcal": 61.9,
+   "kcal_range": [
+    27,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 142.0,
+  "kcal": 152.4,
+  "protein_g": 4.6,
+  "grams_range": [
+   93.0,
+   202.0
+  ],
+  "kcal_range": [
+   87,
+   233
+  ],
+  "protein_range": [
+   3.1,
+   6.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 142.0,
+   "kcal": 152.4,
+   "protein_g": 4.6,
+   "grams_range": [
+    93.0,
+    202.0
+   ],
+   "kcal_range": [
+    87,
+    233
+   ],
+   "protein_range": [
+    3.1,
+    6.5
+   ]
+  },
+  "rows": [
+   "Brussels sprouts, fresh, cooked, fat added",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "4bec45599c78d96cc768ba5f03c5afa470d4589c370cd6e13637574664a91996",
+ "scale_cues": "White square dinner plate assumed to be about 25-26 cm across; individual sprouts appear about 2.5-3.5 cm in diameter relative to the plate, clustered on the left-centre covering roughly 15-20% of the plate surface.",
+ "assumptions": [
+  "Plate is a standard ~25 cm square dinner plate",
+  "Sprouts are small, about 7-9 g each after roasting, about 15-18 pieces in a partly stacked pile",
+  "Oil type is unknown; olive oil assumed, with the amount inferred from surface sheen",
+  "Yellowish tint on the sprouts is taken as oil and browning rather than a separate sauce or cheese",
+  "No other items, sauces or drinks are visible"
+ ],
+ "latency_s": 11.3,
+ "calls": [
+  {
+   "wall_s": 8.25,
+   "duration_ms": 7519,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0510397,
+   "cost_basis": "unknown",
+   "input_tokens": 8824,
+   "output_tokens": 564
+  },
+  {
+   "wall_s": 3.04,
+   "duration_ms": 1835,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0181491,
+   "cost_basis": "unknown",
+   "input_tokens": 1978,
+   "output_tokens": 105
+  }
+ ],
+ "cost_usd_cli": 0.06919,
+ "log_id": "a83832027733"
+}

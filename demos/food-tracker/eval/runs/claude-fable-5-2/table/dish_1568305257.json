@@ -1,0 +1,217 @@
+{
+ "items": [
+  {
+   "name": "Scrambled eggs",
+   "grams_low": 130,
+   "grams_best": 185,
+   "grams_high": 250,
+   "fdc_query": "Egg, whole, cooked, scrambled",
+   "preparation": "scrambled, soft curds, likely cooked with a little fat",
+   "confidence": 0.6,
+   "kcal": 275.6,
+   "kcal_range": [
+    194,
+    372
+   ],
+   "protein_g": 18.5,
+   "protein_range": [
+    13.0,
+    25.0
+   ],
+   "fdc": {
+    "fdc_id": "172187",
+    "description": "Egg, whole, cooked, scrambled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 149.0,
+    "protein_100g": 9.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Bacon strips (thick-cut, possibly turkey bacon)",
+   "grams_low": 30,
+   "grams_best": 48,
+   "grams_high": 70,
+   "fdc_query": "Pork, cured, bacon, cooked, pan-fried",
+   "preparation": "pan-fried or baked, about 4 strips, dark and lean-looking",
+   "confidence": 0.45,
+   "kcal": 224.6,
+   "kcal_range": [
+    140,
+    328
+   ],
+   "protein_g": 16.3,
+   "protein_range": [
+    10.2,
+    23.7
+   ],
+   "fdc": {
+    "fdc_id": "168322",
+    "description": "Pork, cured, bacon, pre-sliced, cooked, pan-fried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 468.0,
+    "protein_100g": 33.92
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sauteed spinach",
+   "grams_low": 50,
+   "grams_best": 80,
+   "grams_high": 120,
+   "fdc_query": "Spinach, cooked, boiled, drained, without salt",
+   "preparation": "wilted/sauteed leaves",
+   "confidence": 0.5,
+   "kcal": 18.4,
+   "kcal_range": [
+    12,
+    28
+   ],
+   "protein_g": 2.4,
+   "protein_range": [
+    1.5,
+    3.6
+   ],
+   "fdc": {
+    "fdc_id": "168463",
+    "description": "Spinach, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.97
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 12,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw shreds scattered over the greens",
+   "confidence": 0.5,
+   "kcal": 2.5,
+   "kcal_range": [
+    1,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (for greens and eggs)",
+   "grams_low": 2,
+   "grams_best": 6,
+   "grams_high": 12,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied by sauteed greens and scrambled eggs; not directly visible beyond sheen",
+   "confidence": 0.3,
+   "kcal": 53.0,
+   "kcal_range": [
+    18,
+    106
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 325.0,
+  "kcal": 574.1,
+  "protein_g": 37.3,
+  "grams_range": [
+   215.0,
+   464.0
+  ],
+  "kcal_range": [
+   365,
+   839
+  ],
+  "protein_range": [
+   24.7,
+   52.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 325.0,
+   "kcal": 592.1,
+   "protein_g": 37.7,
+   "grams_range": [
+    215.0,
+    464.0
+   ],
+   "kcal_range": [
+    374,
+    875
+   ],
+   "protein_range": [
+    24.9,
+    53.3
+   ]
+  },
+  "rows": [
+   "Egg, whole, cooked, scrambled",
+   "Pork, cured, bacon, pre-sliced, cooked, pan-fried",
+   "Spinach, cooked, boiled, drained, without salt",
+   "Carrot, dehydrated",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a1c504bf2592630875fcdc05197b87bd9cae1710d5c792b3fe302d3db0324b53",
+ "scale_cues": "Square white dinner plate assumed about 25-26 cm across, sitting on a cafeteria tray; food portions sized relative to plate area and apparent pile height (eggs cover roughly 35% of the plate, greens about 20%, bacon strips each about 10-12 cm long).",
+ "assumptions": [
+  "Plate is a standard ~25 cm square dinner plate; no cutlery or hand visible for a tighter scale check",
+  "Meat strips are bacon; their dark, uniform, lean appearance could indicate turkey bacon, which would be lower in fat than pork bacon",
+  "Dark leafy greens are spinach; could be kale or a mixed greens saute",
+  "Eggs are whole eggs scrambled with no visible cheese or added vegetables; roughly 3-4 large eggs",
+  "Cooking fat amount is inferred from preparation, not directly seen, and may be partly included in the cooked egg and greens entries",
+  "No drink, sauce or dressing visible in the frame"
+ ],
+ "latency_s": 24.5,
+ "calls": [
+  {
+   "wall_s": 15.96,
+   "duration_ms": 11191,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0379259,
+   "cost_basis": "unknown",
+   "input_tokens": 11795,
+   "output_tokens": 914
+  },
+  {
+   "wall_s": 8.46,
+   "duration_ms": 3266,
+   "num_turns": 1,
+   "cost_usd_cli": 0.04015080000000001,
+   "cost_basis": "unknown",
+   "input_tokens": 7070,
+   "output_tokens": 303
+  }
+ ],
+ "cost_usd_cli": 0.07808,
+ "log_id": "a151570abef1"
+}

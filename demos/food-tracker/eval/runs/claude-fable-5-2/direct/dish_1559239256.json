@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "Mandarin orange / clementine (whole, unpeeled)",
+   "grams_low": 60,
+   "grams_best": 80,
+   "grams_high": 105,
+   "kcal": 42,
+   "protein_g": 0.6,
+   "preparation": "raw, whole with peel on; grams are edible flesh only (whole fruit with peel approx. 105 g)",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 80.0,
+  "kcal": 42,
+  "protein_g": 0.6,
+  "grams_range": [
+   60.0,
+   105.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 42,
+  "protein_g": 0.6
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "ee7f44cc7bd070de1d1a61703a3bcda968c8cb5a060b309e447414b7841a1bec",
+ "scale_cues": "White square plate assumed to be about 25 cm across; the fruit spans roughly a third of the plate width, giving a diameter of about 6-6.5 cm, consistent with a medium mandarin/clementine.",
+ "assumptions": [
+  "Fruit identified as a mandarin/clementine rather than a small orange, based on its size, slightly flattened shape and loose, pebbled skin.",
+  "Peel is not eaten; edible portion taken as about 75% of whole fruit weight.",
+  "Reddish smears on the plate are residue from earlier food and are not counted as an item.",
+  "Calories estimated at about 53 kcal per 100 g of edible flesh and protein at about 0.8 g per 100 g."
+ ],
+ "latency_s": 6.78,
+ "calls": [
+  {
+   "wall_s": 6.78,
+   "duration_ms": 6044,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0492619,
+   "cost_basis": "unknown",
+   "input_tokens": 8664,
+   "output_tokens": 471
+  }
+ ],
+ "cost_usd_cli": 0.04926,
+ "log_id": "69709e897b2a"
+}

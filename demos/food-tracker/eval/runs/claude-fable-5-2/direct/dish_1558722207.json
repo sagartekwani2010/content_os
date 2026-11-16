@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "apple (whole, red/yellow, e.g. Fuji or Gala)",
+   "grams_low": 130,
+   "grams_best": 165,
+   "grams_high": 210,
+   "kcal": 86,
+   "protein_g": 0.4,
+   "preparation": "raw, whole, unpeeled; edible mass excludes core and stem",
+   "confidence": 0.7,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 165.0,
+  "kcal": 86,
+  "protein_g": 0.4,
+  "grams_range": [
+   130.0,
+   210.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 86,
+  "protein_g": 0.4
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "9dc82e4355e2cb2f1e820b331701af124d3c610943aa8a2cd52c57289ae7d6c5",
+ "scale_cues": "Square white plate assumed to be about 25-27 cm across; the apple spans roughly a quarter to a third of the plate width, implying a diameter of about 7-7.5 cm (medium apple).",
+ "assumptions": [
+  "Plate is a standard dinner-size square plate of about 25-27 cm",
+  "Whole apple weighs about 180 g; about 8% removed for core and stem to give edible mass",
+  "The small yellow speck on the plate is a negligible crumb (under 1 g) and is not logged",
+  "Nutrition based on raw apple with skin at about 52 kcal and 0.26 g protein per 100 g"
+ ],
+ "latency_s": 7.54,
+ "calls": [
+  {
+   "wall_s": 7.53,
+   "duration_ms": 6784,
+   "num_turns": 2,
+   "cost_usd_cli": 0.048565300000000006,
+   "cost_basis": "unknown",
+   "input_tokens": 8668,
+   "output_tokens": 435
+  }
+ ],
+ "cost_usd_cli": 0.04857,
+ "log_id": "4381640a436e"
+}

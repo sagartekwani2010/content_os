@@ -1,0 +1,119 @@
+{
+ "items": [
+  {
+   "name": "cantaloupe cubes",
+   "grams_low": 50,
+   "grams_best": 75,
+   "grams_high": 105,
+   "kcal": 26,
+   "protein_g": 0.6,
+   "preparation": "raw, cubed",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "strawberries",
+   "grams_low": 18,
+   "grams_best": 28,
+   "grams_high": 40,
+   "kcal": 9,
+   "protein_g": 0.2,
+   "preparation": "raw, halved",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "blueberries",
+   "grams_low": 8,
+   "grams_best": 14,
+   "grams_high": 22,
+   "kcal": 8,
+   "protein_g": 0.1,
+   "preparation": "raw",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "spinach and mixed greens salad",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 10,
+   "protein_g": 1.1,
+   "preparation": "raw leaves, lightly dressed",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "salad dressing (vinaigrette)",
+   "grams_low": 3,
+   "grams_best": 7,
+   "grams_high": 12,
+   "kcal": 30,
+   "protein_g": 0,
+   "preparation": "light oil-based dressing coating leaves",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "roasted potatoes",
+   "grams_low": 55,
+   "grams_best": 80,
+   "grams_high": 110,
+   "kcal": 92,
+   "protein_g": 1.8,
+   "preparation": "roasted chunks with oil and seasoning",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "cooking oil on potatoes",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 7,
+   "kcal": 35,
+   "protein_g": 0,
+   "preparation": "absorbed/coating oil from roasting",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 248.0,
+  "kcal": 210,
+  "protein_g": 3.8,
+  "grams_range": [
+   161.0,
+   356.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 210,
+  "protein_g": 3.8
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "e8072382195f9f5042f8fb78ddd5e1f6c5478d841491d09c519f9c1a36d989a5",
+ "scale_cues": "White square plate assumed to be about 25-27 cm across; item sizes judged relative to the plate and to typical blueberry (~1.5 cm) and melon cube (~2.5-3 cm) sizes.",
+ "assumptions": [
+  "Orange cubes are cantaloupe, not papaya or squash",
+  "Golden chunks are roasted potatoes (4 pieces, ~20 g each)",
+  "Greens are mostly baby spinach with some mixed leaves, lightly dressed with a vinaigrette based on the sheen and orange flecks",
+  "Roasting oil estimated from the glossy surface and oil smear on the plate",
+  "No hidden items under the greens"
+ ],
+ "latency_s": 9.78,
+ "calls": [
+  {
+   "wall_s": 9.77,
+   "duration_ms": 9039,
+   "num_turns": 2,
+   "cost_usd_cli": 0.05740150000000001,
+   "cost_basis": "unknown",
+   "input_tokens": 8650,
+   "output_tokens": 885
+  }
+ ],
+ "cost_usd_cli": 0.0574,
+ "log_id": "700ad52b2531"
+}

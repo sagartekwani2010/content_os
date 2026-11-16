@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Diced grilled chicken breast",
+   "grams_low": 70,
+   "grams_best": 105,
+   "grams_high": 150,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, grilled",
+   "preparation": "Grilled or pan-seared, skinless, diced into roughly 1.5-2.5 cm cubes; light browning on some pieces",
+   "confidence": 0.6,
+   "kcal": 158.6,
+   "kcal_range": [
+    106,
+    226
+   ],
+   "protein_g": 32.1,
+   "protein_range": [
+    21.4,
+    45.8
+   ],
+   "fdc": {
+    "fdc_id": "171534",
+    "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, grilled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 151.0,
+    "protein_100g": 30.54
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 105.0,
+  "kcal": 158.6,
+  "protein_g": 32.1,
+  "grams_range": [
+   70.0,
+   150.0
+  ],
+  "kcal_range": [
+   106,
+   226
+  ],
+  "protein_range": [
+   21.4,
+   45.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 105.0,
+   "kcal": 196.3,
+   "protein_g": 35.1,
+   "grams_range": [
+    70.0,
+    150.0
+   ],
+   "kcal_range": [
+    131,
+    280
+   ],
+   "protein_range": [
+    23.4,
+    50.2
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, fried"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "a6eb9aabb4c4162d892289d189ed49d38d0b650ffd264102ee56c333477d3279",
+ "scale_cues": "Stainless steel mixing bowl filling most of the frame (assumed ~25-30 cm rim diameter); the chicken pile covers roughly a 12-14 cm patch of the bowl base in a mostly single layer of about 45-50 cubes, each estimated at 2-2.5 g.",
+ "assumptions": [
+  "Pieces are chicken breast rather than tofu or turkey, based on the fibrous texture and seared browning",
+  "Bowl diameter is assumed, since no cutlery, hand or packaging is visible for a firmer scale reference",
+  "No visible sauce, dressing or pooled oil; any cooking oil residue on the chicken is assumed negligible (under 2 g) and is not listed separately",
+  "Pieces are mostly in a single layer with little stacking"
+ ],
+ "latency_s": 9.86,
+ "calls": [
+  {
+   "wall_s": 7.24,
+   "duration_ms": 6524,
+   "num_turns": 2,
+   "cost_usd_cli": 0.049752899999999996,
+   "cost_basis": "unknown",
+   "input_tokens": 8846,
+   "output_tokens": 491
+  },
+  {
+   "wall_s": 2.62,
+   "duration_ms": 1570,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0143419,
+   "cost_basis": "unknown",
+   "input_tokens": 1575,
+   "output_tokens": 78
+  }
+ ],
+ "cost_usd_cli": 0.06409,
+ "log_id": "4c954e6175e5"
+}

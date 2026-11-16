@@ -5,7 +5,7 @@ description: Write or revise spoken scripts for Content OS Reels, especially fac
 
 # Reel script writing
 
-Read `AGENTS.md`, `CODEX_WORKFLOW.md`, the relevant brief when one exists, `config/brand.yaml`, and the current versioned Reel-writing guidance before drafting. Preserve the creator's hook promise, approved beat order and series label. Keep earlier drafts available when revising.
+Read `AGENTS.md`, `CLAUDE_WORKFLOW.md`, the relevant brief when one exists, `config/brand.yaml`, and the current versioned Reel-writing guidance before drafting. Preserve the creator's hook promise, approved beat order and series label. Keep earlier drafts available when revising.
 
 ## Spoken story
 

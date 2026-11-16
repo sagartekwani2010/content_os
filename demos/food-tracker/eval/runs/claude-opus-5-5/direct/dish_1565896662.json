@@ -1,0 +1,63 @@
+{
+ "items": [
+  {
+   "name": "Rainbow Swiss chard (leaves and stems), cooked",
+   "grams_low": 45,
+   "grams_best": 70,
+   "grams_high": 100,
+   "kcal": 14,
+   "protein_g": 1.3,
+   "preparation": "saut\u00e9ed or steamed until wilted, chopped",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (implied by saut\u00e9ing)",
+   "grams_low": 0,
+   "grams_best": 2,
+   "grams_high": 5,
+   "kcal": 18,
+   "protein_g": 0,
+   "preparation": "used for saut\u00e9ing; slight sheen on leaves",
+   "confidence": 0.3,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 72.0,
+  "kcal": 32,
+  "protein_g": 1.3,
+  "grams_range": [
+   45.0,
+   105.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 32,
+  "protein_g": 1.3
+ },
+ "mode": "direct",
+ "model": "claude-opus-5-5",
+ "image_sha256": "2586de477596c2cd73c573a939c9d730adbf6fdf8df6715dd2d6951a6678a960",
+ "scale_cues": "Used the standard square white dinner plate, about 26 cm across. The chard pile covers about 8 x 10 cm in a low mound with some loose stem pieces. The scale's metal frame and the counter edge confirm the plate size.",
+ "assumptions": [
+  "The red, orange and yellow stems mean this is rainbow chard, not spinach or beet greens",
+  "The chard is cooked (wilted, darkened leaves); I used about 20 kcal and 1.9 g protein per 100 g",
+  "I assumed a small amount of oil based on the slight sheen; it could also have been steamed with no fat",
+  "I didn't see any other sauces, seasonings or drinks"
+ ],
+ "latency_s": 10.25,
+ "calls": [
+  {
+   "wall_s": 10.25,
+   "duration_ms": 9318,
+   "num_turns": 2,
+   "cost_usd_cli": 0.053865899999999994,
+   "cost_basis": "list",
+   "input_tokens": 8734,
+   "output_tokens": 691
+  }
+ ],
+ "cost_usd_cli": 0.05387,
+ "log_id": "5d4720be4f5a"
+}

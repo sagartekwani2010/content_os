@@ -1,0 +1,98 @@
+{
+ "items": [
+  {
+   "name": "Beef steak (sliced, medium-rare, with herb/garlic topping)",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "kcal": 290,
+   "protein_g": 35,
+   "preparation": "grilled or pan-seared, sliced",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Chicken breast (herb-crusted pieces)",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "kcal": 165,
+   "protein_g": 30,
+   "preparation": "roasted/baked, sliced",
+   "confidence": 0.55,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cauliflower florets (with a little leek/celery)",
+   "grams_low": 150,
+   "grams_best": 210,
+   "grams_high": 280,
+   "kcal": 55,
+   "protein_g": 4,
+   "preparation": "steamed or boiled",
+   "confidence": 0.65,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted potatoes (cubed, skin-on)",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "kcal": 115,
+   "protein_g": 2.5,
+   "preparation": "oven-roasted cubes",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (on potatoes, meats and vegetables)",
+   "grams_low": 5,
+   "grams_best": 9,
+   "grams_high": 15,
+   "kcal": 80,
+   "protein_g": 0,
+   "preparation": "absorbed/coating from roasting and searing",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 549.0,
+  "kcal": 705,
+  "protein_g": 71.5,
+  "grams_range": [
+   385.0,
+   755.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 705,
+  "protein_g": 71.5
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "1f3cda35d4522673d277082a51a2c9f40237d5348839763734830725cfaa2e7d",
+ "scale_cues": "White square dinner plate assumed ~26 cm across; food covers roughly 60% of the plate. Floret and potato cube sizes (~3-5 cm) used as a secondary check.",
+ "assumptions": [
+  "Plate is a standard ~26 cm square dinner plate",
+  "Dark sliced meat is lean beef steak (e.g., sirloin/tri-tip), cooked medium-rare",
+  "Pale meat pieces at top are skinless chicken breast with herb seasoning",
+  "Potatoes roasted with a moderate amount of oil; oil not directly visible, estimated from preparation",
+  "Cauliflower is steamed with no significant butter or sauce",
+  "Steak slices about 1-1.5 cm thick; pile depth estimated from overhead view only"
+ ],
+ "latency_s": 14.62,
+ "calls": [
+  {
+   "wall_s": 14.62,
+   "duration_ms": 9805,
+   "num_turns": 2,
+   "cost_usd_cli": 0.039179599999999995,
+   "cost_basis": "unknown",
+   "input_tokens": 11639,
+   "output_tokens": 821
+  }
+ ],
+ "cost_usd_cli": 0.03918,
+ "log_id": "c3126a44c804"
+}

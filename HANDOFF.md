@@ -22,20 +22,21 @@ pipeline that replaces the old edit flow is in
 
 ## Current operating model
 
-Content OS is now operated through **Codex with ChatGPT authentication**. It is
-not a standalone API-backed agent application and does not require
-`OPENAI_API_KEY`. Codex reads `AGENTS.md` and follows `CODEX_WORKFLOW.md` to
-turn a human-approved brief into a reviewable Markdown package in `outputs/`.
+Content OS is now operated through **Claude** (moved from OpenAI Codex on
+16 November 2026). Claude Code reads `CLAUDE.md` and `AGENTS.md` and follows
+`CLAUDE_WORKFLOW.md` to turn a human-approved brief into a reviewable Markdown
+package in `outputs/`.
 
-The Python workflows remain the coordinator. Their stage runner now uses the
-`openai-codex` SDK, which starts read-only Codex threads with the user's saved
-ChatGPT login, validates Pydantic structured output, and records each thread ID
-and token usage locally. `openai-agents` remains installed but its API-key
-`Runner` is not used.
+The Python workflows remain the coordinator. Their stage runner
+(`content_os/llm_runtime.py`) sends each stage to Claude: the Anthropic
+Messages API when API credentials exist, otherwise the Claude Agent SDK on the
+creator's local Claude Code login, with no API key. It validates Pydantic
+structured output and records each request or session ID, token usage, and
+cost locally. Per-stage models and effort live in `config/models.yaml`.
 
 ## Product principle
 
-**Human decides WHAT and WHY. Codex decides HOW. Python remains deterministic.**
+**Human decides WHAT and WHY. Claude decides HOW. Python remains deterministic.**
 
 ## Generic AI two-part pilot — 9 November 2026
 
@@ -202,9 +203,9 @@ Never weaken these constraints:
 4. Do not publish, schedule, spend, or imply approval without a human action.
 5. Prompt files are versioned. Copy a version before materially changing it.
 
-## Recovering a stalled Codex chat
+## Recovering a stalled chat
 
-The repository cannot detect or resume a stuck Codex desktop turn. To reduce
+The repository cannot detect or resume a stuck agent session. To reduce
 recovery work, run `python scripts/prepare_chat_handoff.py [path/to/focus-file]`
 and paste its output into a fresh chat. Add `--note "..."` for decisions that
 exist only in the conversation. The packet includes current project handoff,
@@ -228,10 +229,10 @@ python cli.py check briefs/example_production_ai.yaml
 python -m pytest tests -q
 ```
 
-Then ask Codex to run the desired `cli.py` workflow or produce a package in the
+Then ask Claude to run the desired `cli.py` workflow or produce a package in the
 chat. The coordinated pipeline retains the stage sequence—brief strategist,
 hook expander, writer, visual planner, and QA—and passes Pydantic-validated
-results between isolated Codex SDK threads. The output must include a brief
+results between isolated Claude stage calls. The output must include a brief
 fingerprint, execution plan, hook options, complete content, visual plan,
 factual checks, and a QA report with an explicit human-review verdict.
 
@@ -261,7 +262,7 @@ factual checks, and a QA report with an explicit human-review verdict.
 
 - The approved brief in `content_os_v3.db` was never run through the old live
   API path; do not try to revive that path. Export or recreate the brief as YAML
-  and run it through Codex instead.
+  and run it through the current Claude pipeline instead.
 - The old system's strongest safeguards are still valuable: section coverage
   must use strict matching, recently generated content must not compare against
   itself, and brief-derived content needs a linked topic record for analytics.
@@ -274,7 +275,7 @@ factual checks, and a QA report with an explicit human-review verdict.
 ## Files to read before changing behavior
 
 - `AGENTS.md`
-- `CODEX_WORKFLOW.md`
+- `CLAUDE_WORKFLOW.md`
 - `config/brand.yaml`
 - `config/scoring.yaml`
 - `briefs/example_production_ai.yaml`

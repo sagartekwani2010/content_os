@@ -1,0 +1,2 @@
+meal_id,date,time,photo_file,photo_sha256,plate_or_bowl_diameter_cm,reference_object_in_photo,item_name,item_recipe_notes,oil_or_ghee_added_g,raw_or_cooked,weighed_grams,label_or_table_source,kcal_per_100g,protein_per_100g,item_kcal,item_protein_g,meal_total_grams,meal_total_kcal,meal_total_protein_g,estimator_mode,estimator_model,estimate_log_id,est_total_kcal,est_total_protein_g,est_total_grams,notes
+M01,2026-11-17,08:30,M01.jpg,,,,Example: Dal (toor),"1 tsp ghee tadka",5,cooked,180,IFCT 2017 raw toor dal x recipe yield OR packet label,,,,,,,,table,claude-fable-5-2,,,,,

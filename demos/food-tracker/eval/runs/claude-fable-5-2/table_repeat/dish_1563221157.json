@@ -1,0 +1,303 @@
+{
+ "items": [
+  {
+   "name": "Steamed broccoli florets",
+   "grams_low": 70,
+   "grams_best": 105,
+   "grams_high": 150,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "steamed/boiled florets",
+   "confidence": 0.6,
+   "kcal": 36.8,
+   "kcal_range": [
+    24,
+    52
+   ],
+   "protein_g": 2.5,
+   "protein_range": [
+    1.7,
+    3.6
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted pork tenderloin slices",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "fdc_query": "Pork, fresh, loin, tenderloin, separable lean only, cooked, roasted",
+   "preparation": "roasted/grilled, sliced into medallions",
+   "confidence": 0.45,
+   "kcal": 143.0,
+   "kcal_range": [
+    100,
+    200
+   ],
+   "protein_g": 26.2,
+   "protein_range": [
+    18.3,
+    36.6
+   ],
+   "fdc": {
+    "fdc_id": "168250",
+    "description": "Pork, fresh, loin, tenderloin, separable lean only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 143.0,
+    "protein_100g": 26.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Baby spinach (salad)",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "fdc_query": "Spinach, raw",
+   "preparation": "raw leaves, lightly dressed",
+   "confidence": 0.55,
+   "kcal": 8.1,
+   "kcal_range": [
+    5,
+    13
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.6,
+    1.6
+   ],
+   "fdc": {
+    "fdc_id": "168462",
+    "description": "Spinach, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Mixed lettuce/romaine (salad)",
+   "grams_low": 20,
+   "grams_best": 35,
+   "grams_high": 55,
+   "fdc_query": "Lettuce, cos or romaine, raw",
+   "preparation": "raw, chopped, dressed",
+   "confidence": 0.45,
+   "kcal": 6.0,
+   "kcal_range": [
+    3,
+    9
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.2,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "169247",
+    "description": "Lettuce, cos or romaine, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 17.0,
+    "protein_100g": 1.23
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 45,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "roasted or steamed, small florets",
+   "confidence": 0.45,
+   "kcal": 6.9,
+   "kcal_range": [
+    3,
+    10
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.3,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Breaded chicken strip",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, fried",
+   "preparation": "breaded and fried/baked strip",
+   "confidence": 0.35,
+   "kcal": 65.0,
+   "kcal_range": [
+    39,
+    104
+   ],
+   "protein_g": 6.2,
+   "protein_range": [
+    3.7,
+    9.9
+   ],
+   "fdc": {
+    "fdc_id": "171475",
+    "description": "Chicken, broilers or fryers, breast, meat and skin, cooked, fried, batter",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 260.0,
+    "protein_100g": 24.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing / oil (vinaigrette)",
+   "grams_low": 4,
+   "grams_best": 10,
+   "grams_high": 18,
+   "fdc_query": "Salad dressing, vinaigrette, oil and vinegar",
+   "preparation": "tossed on salad greens (glossy sheen)",
+   "confidence": 0.3,
+   "kcal": 44.9,
+   "kcal_range": [
+    18,
+    81
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad garnishes (shredded carrot, red onion, dried cranberry)",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 12,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, shredded/diced, mixed into salad",
+   "confidence": 0.35,
+   "kcal": 2.7,
+   "kcal_range": [
+    1,
+    5
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "174856",
+    "description": "Beverages, OCEAN SPRAY, Ruby Red cranberry",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 45.0,
+    "protein_100g": 0.07
+   },
+   "nutrient_source": "USDA FoodData Central lookup",
+   "match_flag": "weak match"
+  }
+ ],
+ "totals": {
+  "grams": 346.0,
+  "kcal": 313.4,
+  "protein_g": 36.9,
+  "grams_range": [
+   217.0,
+   515.0
+  ],
+  "kcal_range": [
+   193,
+   474
+  ],
+  "protein_range": [
+   24.8,
+   53.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 346.0,
+   "kcal": 326.5,
+   "protein_g": 40.7,
+   "grams_range": [
+    217.0,
+    515.0
+   ],
+   "kcal_range": [
+    199,
+    498
+   ],
+   "protein_range": [
+    26.9,
+    59.1
+   ]
+  },
+  "rows": [
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Pork, fresh, loin, tenderloin, separable lean only, cooked, roasted",
+   "Spinach salad, no dressing",
+   "Lettuce, cos or romaine, raw",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Chicken, broilers or fryers, breast, meat only, cooked, fried",
+   "Salad dressing, home recipe, vinegar and oil",
+   "Carrots, raw, salad"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "4b8ca73536b643b7cb0f6a080a83cc6d800eacbe2893e206701c833c6c786ca0",
+ "scale_cues": "Square white dinner plate assumed ~25-26 cm per side; food covers roughly 55-60% of the plate surface in a mostly single layer; broccoli floret size (~5-6 cm) and pork medallion diameter (~4-5 cm) used as secondary cues. No cutlery or hand visible.",
+ "assumptions": [
+  "Plate is a standard ~25 cm square dinner plate",
+  "Sliced meat is pork tenderloin (could be chicken thigh or turkey); identified by pale grey-brown colour and round medallion shape",
+  "Thin golden strip at the bottom edge is a breaded chicken strip (could be breaded fish)",
+  "Salad greens appear lightly dressed with an oil-based vinaigrette judging by their sheen; amount is uncertain",
+  "White pieces in the salad are cauliflower, not cheese or egg",
+  "Broccoli is steamed with no visible added butter or oil",
+  "Small yellow fleck on the meat and red/orange flecks in the salad are minor garnishes (carrot, onion, dried cranberry) under ~10 g total"
+ ],
+ "latency_s": 21.21,
+ "calls": [
+  {
+   "wall_s": 12.95,
+   "duration_ms": 12209,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0621544,
+   "cost_basis": "unknown",
+   "input_tokens": 8836,
+   "output_tokens": 1228
+  },
+  {
+   "wall_s": 8.22,
+   "duration_ms": 7514,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0569852,
+   "cost_basis": "unknown",
+   "input_tokens": 5201,
+   "output_tokens": 733
+  }
+ ],
+ "cost_usd_cli": 0.11914,
+ "log_id": "1d010b92de49"
+}

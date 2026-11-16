@@ -1,0 +1,52 @@
+{
+ "items": [
+  {
+   "name": "whole almonds (raw, skin-on)",
+   "grams_low": 42,
+   "grams_best": 55,
+   "grams_high": 72,
+   "kcal": 318,
+   "protein_g": 11.6,
+   "preparation": "raw or dry-roasted whole almonds, unsalted in appearance, no visible oil",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 55.0,
+  "kcal": 318,
+  "protein_g": 11.6,
+  "grams_range": [
+   42.0,
+   72.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 318,
+  "protein_g": 11.6
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "b485c2aa3a3e8b26143d023e5b678ba30d712a60960a32ae7d5f4bc5539566b5",
+ "scale_cues": "Square white plate (assumed ~22-25 cm side) on a scale tray; mass estimated mainly by counting about 40-50 almonds, partly piled, at about 1.2 g each.",
+ "assumptions": [
+  "Almonds are plain (raw or dry-roasted) with no added oil, salt or coating",
+  "Average almond mass about 1.2 g; a few almonds are hidden in the pile",
+  "Nutrition at about 579 kcal and 21 g protein per 100 g",
+  "A few almonds look chipped or broken but all are counted as edible"
+ ],
+ "latency_s": 7.96,
+ "calls": [
+  {
+   "wall_s": 7.96,
+   "duration_ms": 7226,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0500133,
+   "cost_basis": "unknown",
+   "input_tokens": 8668,
+   "output_tokens": 512
+  }
+ ],
+ "cost_usd_cli": 0.05001,
+ "log_id": "243f7de3103e"
+}

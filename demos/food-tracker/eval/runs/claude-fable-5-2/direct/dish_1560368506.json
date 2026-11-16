@@ -1,0 +1,97 @@
+{
+ "items": [
+  {
+   "name": "Roasted pork loin slices (or turkey breast), seasoned",
+   "grams_low": 80,
+   "grams_best": 115,
+   "grams_high": 160,
+   "kcal": 195,
+   "protein_g": 31,
+   "preparation": "roasted, sliced, light seasoning rub",
+   "confidence": 0.5,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Breaded/seasoned fried fish fillet (or chicken) with sauteed red onion",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "kcal": 210,
+   "protein_g": 19,
+   "preparation": "coated and pan-fried, topped with a little sauteed onion",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Honeydew melon cubes",
+   "grams_low": 110,
+   "grams_best": 150,
+   "grams_high": 200,
+   "kcal": 54,
+   "protein_g": 0.8,
+   "preparation": "raw, cubed",
+   "confidence": 0.7,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil absorbed in fried item",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "kcal": 53,
+   "protein_g": 0,
+   "preparation": "frying oil implied by browned coating",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Bacon bits / crispy crumbs garnish",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "kcal": 14,
+   "protein_g": 1,
+   "preparation": "scattered crispy bits",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 374.0,
+  "kcal": 526,
+  "protein_g": 51.8,
+  "grams_range": [
+   264.0,
+   516.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 526,
+  "protein_g": 51.8
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "449300a607bd6f51ec5c07cca34712b1b8ebe819ab8ba5f51467e612599d0571",
+ "scale_cues": "White square dinner plate assumed about 26 cm across; melon cubes assumed about 2.5-3 cm per side; meat slices sized relative to the plate.",
+ "assumptions": [
+  "Pale sliced meat is lean roasted pork loin; turkey breast would give similar calories and protein",
+  "Browned coated piece is a pan-fried breaded fish or chicken fillet with moderate oil absorption",
+  "Green cubes are honeydew melon, not cooked squash or cucumber",
+  "Small reddish-brown bits are bacon bits or fried crumbs",
+  "No hidden sauces or extra butter beyond what is visible"
+ ],
+ "latency_s": 10.95,
+ "calls": [
+  {
+   "wall_s": 10.95,
+   "duration_ms": 10232,
+   "num_turns": 2,
+   "cost_usd_cli": 0.055288699999999996,
+   "cost_basis": "unknown",
+   "input_tokens": 8662,
+   "output_tokens": 777
+  }
+ ],
+ "cost_usd_cli": 0.05529,
+ "log_id": "31f06f8d02f3"
+}

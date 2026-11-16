@@ -1,0 +1,160 @@
+{
+ "items": [
+  {
+   "name": "Almonds, whole, skin-on",
+   "grams_low": 35,
+   "grams_best": 45,
+   "grams_high": 55,
+   "fdc_query": "Nuts, almonds",
+   "preparation": "raw (could also be dry roasted, unsalted)",
+   "confidence": 0.7,
+   "kcal": 260.6,
+   "kcal_range": [
+    203,
+    318
+   ],
+   "protein_g": 9.5,
+   "protein_range": [
+    7.4,
+    11.6
+   ],
+   "fdc": {
+    "fdc_id": "170567",
+    "description": "Nuts, almonds",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 579.0,
+    "protein_100g": 21.15
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red grapes, seedless",
+   "grams_low": 75,
+   "grams_best": 95,
+   "grams_high": 120,
+   "fdc_query": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "preparation": "raw, whole, off the stem",
+   "confidence": 0.65,
+   "kcal": 65.5,
+   "kcal_range": [
+    52,
+    83
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.5,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "174683",
+    "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 69.0,
+    "protein_100g": 0.72
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Pear, green/yellow (Bartlett-type), whole",
+   "grams_low": 120,
+   "grams_best": 150,
+   "grams_high": 185,
+   "fdc_query": "Pears, raw",
+   "preparation": "raw, whole, unpeeled",
+   "confidence": 0.6,
+   "kcal": 94.5,
+   "kcal_range": [
+    76,
+    117
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.5,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "167776",
+    "description": "Pears, raw, bartlett (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 63.0,
+    "protein_100g": 0.39
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 290.0,
+  "kcal": 420.6,
+  "protein_g": 10.8,
+  "grams_range": [
+   230.0,
+   360.0
+  ],
+  "kcal_range": [
+   331,
+   518
+  ],
+  "protein_range": [
+   8.4,
+   13.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 290.0,
+   "kcal": 420.6,
+   "protein_g": 10.8,
+   "grams_range": [
+    230.0,
+    360.0
+   ],
+   "kcal_range": [
+    331,
+    518
+   ],
+   "protein_range": [
+    8.4,
+    13.2
+   ]
+  },
+  "rows": [
+   "Nuts, almonds",
+   "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "Pears, raw, bartlett (Includes foods for USDA's Food Distribution Program)"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-opus-5-5",
+ "image_sha256": "570f8fa6675b70a1455a06ae2c6474465e4625a5aebf595b2c7a474c4abd032d",
+ "scale_cues": "Square white plate about 25\u201326 cm wide; the pear is about 9 \u00d7 8 cm across. Individual almonds (about 2.2 cm long, 1.2 g each) and grapes (about 2 cm across, 4\u20135 g each) were counted and checked against the plate size.",
+ "assumptions": [
+  "I counted about 37 almonds at about 1.2 g each.",
+  "I counted about 20 grapes at about 4.5\u20135 g each; some may be hidden under others.",
+  "The pear weight is its whole weight, including skin. The core and stem (about 8\u201310% of the weight) are usually not eaten.",
+  "The almonds look raw. Dry-roasted almonds would have similar macros.",
+  "There is no added oil, dressing or drink."
+ ],
+ "latency_s": 12.82,
+ "calls": [
+  {
+   "wall_s": 9.61,
+   "duration_ms": 8908,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0546749,
+   "cost_basis": "list",
+   "input_tokens": 8906,
+   "output_tokens": 729
+  },
+  {
+   "wall_s": 3.2,
+   "duration_ms": 2215,
+   "num_turns": 1,
+   "cost_usd_cli": 0.022930300000000004,
+   "cost_basis": "list",
+   "input_tokens": 2431,
+   "output_tokens": 161
+  }
+ ],
+ "cost_usd_cli": 0.07761,
+ "log_id": "170904e2e2f6"
+}

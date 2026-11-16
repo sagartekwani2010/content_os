@@ -1,0 +1,132 @@
+{
+ "items": [
+  {
+   "name": "Sauteed rainbow Swiss chard (leaves and chopped red/orange stems)",
+   "grams_low": 35,
+   "grams_best": 60,
+   "grams_high": 95,
+   "fdc_query": "Chard, swiss, cooked, boiled, drained, without salt",
+   "preparation": "chopped, cooked (sauteed or steamed), wilted",
+   "confidence": 0.6,
+   "kcal": 12.0,
+   "kcal_range": [
+    7,
+    19
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.7,
+    1.8
+   ],
+   "fdc": {
+    "fdc_id": "170401",
+    "description": "Chard, swiss, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 20.0,
+    "protein_100g": 1.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (implied by glossy sauteed greens)",
+   "grams_low": 0,
+   "grams_best": 3,
+   "grams_high": 7,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "used for sauteing, absorbed/coating the greens",
+   "confidence": 0.35,
+   "kcal": 26.5,
+   "kcal_range": [
+    27,
+    62
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 63.0,
+  "kcal": 38.5,
+  "protein_g": 1.1,
+  "grams_range": [
+   35.0,
+   102.0
+  ],
+  "kcal_range": [
+   34,
+   81
+  ],
+  "protein_range": [
+   0.7,
+   1.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 63.0,
+   "kcal": 38.5,
+   "protein_g": 1.1,
+   "grams_range": [
+    35.0,
+    102.0
+   ],
+   "kcal_range": [
+    34,
+    81
+   ],
+   "protein_range": [
+    0.7,
+    1.8
+   ]
+  },
+  "rows": [
+   "Chard, swiss, cooked, boiled, drained, with salt",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "2586de477596c2cd73c573a939c9d730adbf6fdf8df6715dd2d6951a6678a960",
+ "scale_cues": "White square dinner plate with rounded corners (assumed ~26-28 cm across) fills most of the frame; the chard pile covers roughly 20-25% of the plate width (~8-9 cm across) and is a low mound about 2-3 cm high.",
+ "assumptions": [
+  "Plate assumed to be a standard ~26-28 cm square dinner plate; no cutlery or hand in frame for a firmer scale",
+  "Greens identified as rainbow Swiss chard from the red, pink and orange stem pieces with dark green wilted leaves",
+  "Chard appears cooked (wilted, compact), so mass estimated at cooked density",
+  "Small amount of cooking oil assumed from the slight sheen; no visible pooled oil or sauce, so it could be zero if steamed",
+  "No other foods, dressings, garnishes or drinks visible"
+ ],
+ "latency_s": 12.52,
+ "calls": [
+  {
+   "wall_s": 8.91,
+   "duration_ms": 8189,
+   "num_turns": 2,
+   "cost_usd_cli": 0.049534100000000005,
+   "cost_basis": "unknown",
+   "input_tokens": 8838,
+   "output_tokens": 601
+  },
+  {
+   "wall_s": 3.6,
+   "duration_ms": 2601,
+   "num_turns": 1,
+   "cost_usd_cli": 0.019717000000000002,
+   "cost_basis": "unknown",
+   "input_tokens": 2031,
+   "output_tokens": 162
+  }
+ ],
+ "cost_usd_cli": 0.06925,
+ "log_id": "f4a365ed0f17"
+}

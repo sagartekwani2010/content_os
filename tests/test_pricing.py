@@ -20,9 +20,10 @@ class TestPublishedRates:
     @pytest.mark.parametrize(
         "model,inp,cached,out",
         [
-            ("gpt-5.6-sol", 4.00, 0.40, 20.00),
-            ("gpt-5.6-terra", 2.00, 0.20, 12.00),
-            ("gpt-5.6-luna", 0.20, 0.02, 1.20),
+            ("claude-fable-5-2", 8.00, 0.20, 40.00),
+            ("claude-opus-5-5", 4.00, 0.20, 20.00),
+            ("claude-sonnet-5-5", 2.00, 0.10, 10.00),
+            ("claude-haiku-5-5", 0.10, 0.01, 0.50),
         ],
     )
     def test_rates_match_official_pricing(self, models, model, inp, cached, out):
@@ -33,7 +34,8 @@ class TestPublishedRates:
 
     @pytest.mark.parametrize(
         "model,expected",
-        [("gpt-5.6-sol", 5.00), ("gpt-5.6-terra", 2.50), ("gpt-5.6-luna", 0.25)],
+        [("claude-fable-5-2", 10.00), ("claude-opus-5-5", 5.00),
+         ("claude-sonnet-5-5", 2.50), ("claude-haiku-5-5", 0.125)],
     )
     def test_cache_write_is_derived_at_1_25x_input(self, models, model, expected):
         multiplier = models.pricing_defaults.cache_write_multiplier
@@ -51,7 +53,7 @@ class TestPublishedRates:
 class TestCostComputation:
     def test_plain_call_with_no_caching(self, models):
         cost = models.compute_cost(
-            "gpt-5.6-sol", input_tokens=1_000_000, output_tokens=1_000_000
+            "claude-opus-5-5", input_tokens=1_000_000, output_tokens=1_000_000
         )
         assert cost.uncached_input_cost == pytest.approx(4.00)
         assert cost.output_cost == pytest.approx(20.00)
@@ -61,7 +63,7 @@ class TestCostComputation:
         """Cached and cache-write tokens are subsets of input_tokens. Charging
         them at the uncached rate as well would inflate every bill."""
         cost = models.compute_cost(
-            "gpt-5.6-sol",
+            "claude-opus-5-5",
             input_tokens=100_000,
             output_tokens=0,
             cached_input_tokens=60_000,
@@ -69,16 +71,16 @@ class TestCostComputation:
         )
         assert cost.uncached_input_tokens == 20_000
         assert cost.uncached_input_cost == pytest.approx(20_000 * 4.00 / 1e6)
-        assert cost.cached_input_cost == pytest.approx(60_000 * 0.40 / 1e6)
+        assert cost.cached_input_cost == pytest.approx(60_000 * 0.20 / 1e6)
         assert cost.cache_write_cost == pytest.approx(20_000 * 5.00 / 1e6)
-        assert cost.total_cost == pytest.approx(0.08 + 0.024 + 0.10)
+        assert cost.total_cost == pytest.approx(0.08 + 0.012 + 0.10)
 
     def test_caching_is_cheaper_than_not_caching(self, models):
         uncached = models.compute_cost(
-            "gpt-5.6-sol", input_tokens=100_000, output_tokens=0
+            "claude-opus-5-5", input_tokens=100_000, output_tokens=0
         )
         cached = models.compute_cost(
-            "gpt-5.6-sol", input_tokens=100_000, output_tokens=0,
+            "claude-opus-5-5", input_tokens=100_000, output_tokens=0,
             cached_input_tokens=90_000,
         )
         assert cached.total_cost < uncached.total_cost
@@ -86,7 +88,7 @@ class TestCostComputation:
     def test_components_never_go_negative(self, models):
         """A provider reporting an unexpected split must not produce a refund."""
         cost = models.compute_cost(
-            "gpt-5.6-sol",
+            "claude-opus-5-5",
             input_tokens=1000,
             output_tokens=-50,
             cached_input_tokens=900,
@@ -97,19 +99,22 @@ class TestCostComputation:
         assert cost.total_cost >= 0.0
 
     def test_variant_costs_are_correctly_ordered_and_separated(self, models):
-        """The spread is what makes the terra-versus-luna benchmark worth
-        running: same workload, an order of magnitude apart in cost."""
+        """The spread is what makes routing worth doing: same workload, the
+        quality tier costs 80x the volume tier."""
         args = dict(input_tokens=100_000, output_tokens=20_000)
-        sol = models.compute_cost("gpt-5.6-sol", **args).total_cost
-        terra = models.compute_cost("gpt-5.6-terra", **args).total_cost
-        luna = models.compute_cost("gpt-5.6-luna", **args).total_cost
+        fable = models.compute_cost("claude-fable-5-2", **args).total_cost
+        opus = models.compute_cost("claude-opus-5-5", **args).total_cost
+        sonnet = models.compute_cost("claude-sonnet-5-5", **args).total_cost
+        haiku = models.compute_cost("claude-haiku-5-5", **args).total_cost
 
-        # 100k in + 20k out: sol 0.40+0.40, terra 0.20+0.24, luna 0.02+0.024
-        assert sol == pytest.approx(0.80)
-        assert terra == pytest.approx(0.44)
-        assert luna == pytest.approx(0.044)
-        assert sol > terra > luna
-        assert terra / luna == pytest.approx(10.0)
+        # 100k in + 20k out: fable 0.80+0.80, opus 0.40+0.40,
+        # sonnet 0.20+0.20, haiku 0.01+0.01
+        assert fable == pytest.approx(1.60)
+        assert opus == pytest.approx(0.80)
+        assert sonnet == pytest.approx(0.40)
+        assert haiku == pytest.approx(0.02)
+        assert fable > opus > sonnet > haiku
+        assert fable / haiku == pytest.approx(80.0)
 
     def test_unknown_model_costs_zero_and_is_flagged(self, models):
         cost = models.compute_cost("no-such-model", input_tokens=1000, output_tokens=1000)
@@ -134,19 +139,16 @@ class TestUsageExtraction:
         assert tokens["reasoning_tokens"] == 0
 
     def test_full_usage_object_is_read_completely(self):
-        from agents.usage import Usage
-        from openai.types.responses.response_usage import (
-            InputTokensDetails,
-            OutputTokensDetails,
-        )
+        from types import SimpleNamespace
+
         from content_os.tracking.run_logger import extract_usage
 
-        usage = Usage(
+        usage = SimpleNamespace(
             requests=2, input_tokens=1000, output_tokens=400, total_tokens=1400,
-            input_tokens_details=InputTokensDetails(
+            input_tokens_details=SimpleNamespace(
                 cached_tokens=600, cache_write_tokens=200
             ),
-            output_tokens_details=OutputTokensDetails(reasoning_tokens=250),
+            output_tokens_details=SimpleNamespace(reasoning_tokens=250),
         )
         tokens = extract_usage(usage)
         assert tokens == {

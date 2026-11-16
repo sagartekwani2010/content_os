@@ -1,0 +1,217 @@
+{
+ "items": [
+  {
+   "name": "Baby spinach leaves",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "fdc_query": "Spinach, raw",
+   "preparation": "raw, undressed loose leaves",
+   "confidence": 0.6,
+   "kcal": 5.8,
+   "kcal_range": [
+    3,
+    9
+   ],
+   "protein_g": 0.7,
+   "protein_range": [
+    0.4,
+    1.1
+   ],
+   "fdc": {
+    "fdc_id": "168462",
+    "description": "Spinach, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula / mixed greens salad",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, tossed salad, appears lightly dressed",
+   "confidence": 0.5,
+   "kcal": 6.2,
+   "kcal_range": [
+    4,
+    10
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.4,
+    1.0
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Blueberries",
+   "grams_low": 6,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Blueberries, raw",
+   "preparation": "raw, whole (about 6-7 berries)",
+   "confidence": 0.6,
+   "kcal": 5.7,
+   "kcal_range": [
+    3,
+    9
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "171711",
+    "description": "Blueberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 57.0,
+    "protein_100g": 0.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Walnuts",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Nuts, walnuts, english",
+   "preparation": "raw or candied pieces (about 2-3 pieces)",
+   "confidence": 0.45,
+   "kcal": 39.2,
+   "kcal_range": [
+    20,
+    65
+   ],
+   "protein_g": 0.9,
+   "protein_range": [
+    0.5,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "170187",
+    "description": "Nuts, walnuts, english",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 654.0,
+    "protein_100g": 15.23
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing (vinaigrette)",
+   "grams_low": 0,
+   "grams_best": 4,
+   "grams_high": 10,
+   "fdc_query": "Salad dressing, home recipe, vinegar and oil",
+   "preparation": "light coating on arugula salad, inferred from slight sheen",
+   "confidence": 0.25,
+   "kcal": 18.0,
+   "kcal_range": [
+    18,
+    45
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 70.0,
+  "kcal": 74.9,
+  "protein_g": 2.3,
+  "grams_range": [
+   39.0,
+   115.0
+  ],
+  "kcal_range": [
+   48,
+   138
+  ],
+  "protein_range": [
+   1.3,
+   3.7
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 70.0,
+   "kcal": 73.9,
+   "protein_g": 2.0,
+   "grams_range": [
+    39.0,
+    115.0
+   ],
+   "kcal_range": [
+    47,
+    136
+   ],
+   "protein_range": [
+    1.1,
+    3.2
+   ]
+  },
+  "rows": [
+   "Spinach, raw",
+   "Mixed salad greens, raw",
+   "Blueberries, raw",
+   "Nuts, walnuts, english",
+   "Salad dressing, home recipe, vinegar and oil"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "c5ccf1dccca0b4642102e811383b4a9ca7b424ed467bb282b3be191fa58bae4f",
+ "scale_cues": "Round light-blue dinner plate assumed about 27 cm in diameter; leaf size of baby spinach (about 5-8 cm) and blueberries (about 1-1.5 cm) used to cross-check scale.",
+ "assumptions": [
+  "Plate diameter assumed about 27 cm; no cutlery or hand in frame for a firmer scale.",
+  "Greens lie in a thin, loose layer, so mass is low relative to the area covered.",
+  "Left pile identified as arugula-based mixed greens from the lobed, narrow leaves; could include other baby greens.",
+  "Brown pieces identified as walnuts (possibly candied); one reddish-brown piece could be a dried fruit or candied nut.",
+  "Dressing is not clearly visible; a small amount is assumed from the slightly wilted, glossy look of the arugula salad and may be absent.",
+  "Spinach pile appears dry and undressed."
+ ],
+ "latency_s": 13.41,
+ "calls": [
+  {
+   "wall_s": 9.76,
+   "duration_ms": 9007,
+   "num_turns": 2,
+   "cost_usd_cli": 0.05647870000000001,
+   "cost_basis": "unknown",
+   "input_tokens": 8834,
+   "output_tokens": 834
+  },
+  {
+   "wall_s": 3.63,
+   "duration_ms": 2610,
+   "num_turns": 1,
+   "cost_usd_cli": 0.030608,
+   "cost_basis": "unknown",
+   "input_tokens": 3257,
+   "output_tokens": 228
+  }
+ ],
+ "cost_usd_cli": 0.08709,
+ "log_id": "8c4e3d03349b"
+}

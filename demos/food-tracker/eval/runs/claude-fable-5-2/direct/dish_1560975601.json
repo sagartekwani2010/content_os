@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Caesar salad (romaine lettuce)",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "kcal": 15,
+   "protein_g": 1.1,
+   "preparation": "raw, chopped, tossed in dressing",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Caesar dressing with parmesan",
+   "grams_low": 12,
+   "grams_best": 22,
+   "grams_high": 35,
+   "kcal": 105,
+   "protein_g": 1.2,
+   "preparation": "creamy dressing coating the lettuce",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Chicken in tomato-based sauce",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "kcal": 210,
+   "protein_g": 22,
+   "preparation": "chicken pieces braised/stewed in red tomato sauce with onions",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Broccoli",
+   "grams_low": 45,
+   "grams_best": 70,
+   "grams_high": 95,
+   "kcal": 25,
+   "protein_g": 1.9,
+   "preparation": "steamed florets, one piece roasted/charred",
+   "confidence": 0.6,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Brown/red rice",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 45,
+   "protein_g": 1,
+   "preparation": "cooked, mixed with roasted vegetables",
+   "confidence": 0.45,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Roasted mixed vegetables (cherry tomato, pepper, onion)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "kcal": 20,
+   "protein_g": 0.6,
+   "preparation": "roasted with oil",
+   "confidence": 0.4,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Tofu cube",
+   "grams_low": 8,
+   "grams_best": 14,
+   "grams_high": 22,
+   "kcal": 20,
+   "protein_g": 2,
+   "preparation": "roasted/pan-fried cube",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  },
+  {
+   "name": "Cooking oil (on roasted vegetables and rice)",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 9,
+   "kcal": 44,
+   "protein_g": 0,
+   "preparation": "implied by roasting/saut\u00e9ing",
+   "confidence": 0.35,
+   "nutrient_source": "model estimate"
+  }
+ ],
+ "totals": {
+  "grams": 411.0,
+  "kcal": 484,
+  "protein_g": 29.8,
+  "grams_range": [
+   267.0,
+   591.0
+  ]
+ },
+ "model_stated_totals": {
+  "kcal": 484,
+  "protein_g": 29.8
+ },
+ "mode": "direct",
+ "model": "claude-fable-5-2",
+ "image_sha256": "c0ac1f3cb2ea9d453fe6d81f175a728d9afc25758edb2575071c2caf27b65c83",
+ "scale_cues": "Square white dinner plate assumed about 26 cm across, viewed from overhead; broccoli floret size (about 5-6 cm) and the shoe at the frame edge used as secondary size references.",
+ "assumptions": [
+  "Plate is a standard ~26 cm square dinner plate",
+  "Salad is a Caesar-style salad with creamy dressing and parmesan; no croutons visible",
+  "Red-sauced dish is boneless chicken in tomato sauce rather than a vegetarian or fish dish",
+  "Pale cube beside the rice is tofu (could be potato or paneer)",
+  "Rice is a brown/red rice variety, cooked",
+  "Small amount of oil used for roasting the vegetables; oil in the chicken sauce is included in that item's calories"
+ ],
+ "latency_s": 11.71,
+ "calls": [
+  {
+   "wall_s": 11.71,
+   "duration_ms": 10861,
+   "num_turns": 2,
+   "cost_usd_cli": 0.061084900000000004,
+   "cost_basis": "unknown",
+   "input_tokens": 8674,
+   "output_tokens": 1060
+  }
+ ],
+ "cost_usd_cli": 0.06108,
+ "log_id": "76d2040f7bac"
+}

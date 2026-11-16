@@ -243,20 +243,77 @@ class ScoringConfig(BaseModel):
 # --------------------------------------------------------------------------
 
 
+EFFORT_LEVELS = ("low", "medium", "high", "xhigh", "max")
+PROVIDERS = ("anthropic",)
+
+
+def _check_effort(value: str | None) -> str | None:
+    if value is not None and value not in EFFORT_LEVELS:
+        raise ValueError(
+            f"effort {value!r} is not one of {', '.join(EFFORT_LEVELS)}. "
+            "Fix config/models.yaml."
+        )
+    return value
+
+
+def _check_provider(value: str | None) -> str | None:
+    if value is not None and value not in PROVIDERS:
+        raise ValueError(
+            f"provider {value!r} is not one of {', '.join(PROVIDERS)}. "
+            "Fix config/models.yaml."
+        )
+    return value
+
+
 class AgentModelConfig(BaseModel):
-    model: str
+    # `model` may be omitted to inherit defaults.model.
+    model: str | None = None
     prompt_version: str
+    provider: str | None = None
+    # Claude effort level (low | medium | high | xhigh | max). The name is kept
+    # because the agent_runs ledger column is called reasoning_effort.
     reasoning_effort: str | None = None
+    # Accepted for older configs; Claude has no verbosity setting.
     verbosity: str | None = None
     max_turns: int | None = None
+    max_tokens: int | None = None
+    # Messages API only: opt into server-side refusal fallbacks.
+    server_fallbacks: bool | None = None
+
+    @model_validator(mode="after")
+    def _valid_values(self) -> "AgentModelConfig":
+        _check_effort(self.reasoning_effort)
+        _check_provider(self.provider)
+        return self
+
+
+class ResolvedAgentModelConfig(BaseModel):
+    model: str
+    prompt_version: str
+    provider: str
+    reasoning_effort: str | None
+    verbosity: str | None = None
+    max_turns: int
+    max_tokens: int
+    server_fallbacks: bool
 
 
 class ModelDefaults(BaseModel):
-    model: str = "gpt-5"
+    provider: str = "anthropic"
+    # No built-in model name: the default model comes from config/models.yaml.
+    model: str | None = None
     reasoning_effort: str | None = "medium"
-    verbosity: str | None = "medium"
+    verbosity: str | None = None
     max_turns: int = 12
+    max_tokens: int = 16000
+    server_fallbacks: bool = True
     structured_output_retries: int = 1
+
+    @model_validator(mode="after")
+    def _valid_values(self) -> "ModelDefaults":
+        _check_effort(self.reasoning_effort)
+        _check_provider(self.provider)
+        return self
 
 
 class ModelPricing(BaseModel):
@@ -325,15 +382,28 @@ class ModelsConfig(BaseModel):
             )
         return cfg
 
-    def resolved(self, name: str) -> AgentModelConfig:
+    def resolved(self, name: str) -> ResolvedAgentModelConfig:
         """Agent config with defaults filled in."""
         cfg = self.for_agent(name)
-        return AgentModelConfig(
-            model=cfg.model or self.defaults.model,
+        d = self.defaults
+        model = cfg.model or d.model
+        if not model:
+            raise ConfigError(
+                f"Agent '{name}' has no model and defaults.model is unset in "
+                "config/models.yaml."
+            )
+        return ResolvedAgentModelConfig(
+            model=model,
             prompt_version=cfg.prompt_version,
-            reasoning_effort=cfg.reasoning_effort or self.defaults.reasoning_effort,
-            verbosity=cfg.verbosity or self.defaults.verbosity,
-            max_turns=cfg.max_turns or self.defaults.max_turns,
+            provider=cfg.provider or d.provider,
+            reasoning_effort=cfg.reasoning_effort or d.reasoning_effort,
+            verbosity=cfg.verbosity or d.verbosity,
+            max_turns=cfg.max_turns or d.max_turns,
+            max_tokens=cfg.max_tokens or d.max_tokens,
+            server_fallbacks=(
+                d.server_fallbacks if cfg.server_fallbacks is None
+                else cfg.server_fallbacks
+            ),
         )
 
     def workflow_name(self, key: str) -> str:
@@ -464,13 +534,13 @@ def load_prompt(version: str, prompts_dir: str | None = None) -> str:
     if not path.exists():
         raise ConfigError(
             f"Missing prompt file {path}. "
-            "Use a versioned prompt file for every Codex workflow stage."
+            "Use a versioned prompt file for every Claude workflow stage."
         )
     return path.read_text(encoding="utf-8")
 
 
 def config_warnings() -> list[str]:
-    """Surface incomplete legacy cost metadata without calling any API."""
+    """Surface missing cost metadata without calling any API."""
     warnings: list[str] = []
     try:
         models = load_models_config()
@@ -483,11 +553,11 @@ def config_warnings() -> list[str]:
         if pricing is None:
             warnings.append(
                 f"agent '{agent_name}' uses model '{model}', which has no "
-                "legacy pricing entry."
+                "pricing entry in config/models.yaml."
             )
         elif not pricing.is_priced:
             warnings.append(
-                f"model '{model}' has zero legacy pricing metadata."
+                f"model '{model}' has zero pricing in config/models.yaml."
             )
     return sorted(set(warnings))
 
@@ -506,7 +576,7 @@ def validate_all() -> list[str]:
         except Exception as exc:  # noqa: BLE001 - surfaced to the operator
             problems.append(f"{label}: {exc}")
 
-    # Prompt versions remain useful Codex reference material and must resolve.
+    # Every agent's prompt version must resolve to a prompt file.
     try:
         models = load_models_config()
         for agent_name, cfg in models.agents.items():

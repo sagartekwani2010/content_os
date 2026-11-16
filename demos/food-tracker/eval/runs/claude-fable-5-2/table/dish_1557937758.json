@@ -1,0 +1,245 @@
+{
+ "items": [
+  {
+   "name": "Roasted sweet potato chunks",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 85,
+   "fdc_query": "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "preparation": "roasted/baked cubes, some with skin, about 5 pieces",
+   "confidence": 0.6,
+   "kcal": 54.0,
+   "kcal_range": [
+    36,
+    76
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.8,
+    1.7
+   ],
+   "fdc": {
+    "fdc_id": "168483",
+    "description": "Sweet potato, cooked, baked in skin, flesh, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 90.0,
+    "protein_100g": 2.01
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Scrambled eggs",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Egg, whole, cooked, scrambled",
+   "preparation": "scrambled, small curds, including a few scattered crumbs",
+   "confidence": 0.6,
+   "kcal": 59.6,
+   "kcal_range": [
+    37,
+    89
+   ],
+   "protein_g": 4.0,
+   "protein_range": [
+    2.5,
+    6.0
+   ],
+   "fdc": {
+    "fdc_id": "172187",
+    "description": "Egg, whole, cooked, scrambled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 149.0,
+    "protein_100g": 9.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Raspberries",
+   "grams_low": 30,
+   "grams_best": 40,
+   "grams_high": 55,
+   "fdc_query": "Raspberries, raw",
+   "preparation": "raw, whole, about 10 berries",
+   "confidence": 0.75,
+   "kcal": 20.8,
+   "kcal_range": [
+    16,
+    29
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.4,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "167755",
+    "description": "Raspberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 52.0,
+    "protein_100g": 1.2
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Blackberries",
+   "grams_low": 12,
+   "grams_best": 18,
+   "grams_high": 26,
+   "fdc_query": "Blackberries, raw",
+   "preparation": "raw, whole, 3 berries",
+   "confidence": 0.75,
+   "kcal": 7.7,
+   "kcal_range": [
+    5,
+    11
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.2,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "173946",
+    "description": "Blackberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 43.0,
+    "protein_100g": 1.39
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Strawberries",
+   "grams_low": 15,
+   "grams_best": 24,
+   "grams_high": 35,
+   "fdc_query": "Strawberries, raw",
+   "preparation": "raw, cut into halves/pieces, 2 pieces",
+   "confidence": 0.7,
+   "kcal": 7.7,
+   "kcal_range": [
+    5,
+    11
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "167762",
+    "description": "Strawberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 32.0,
+    "protein_100g": 0.67
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (on sweet potato and eggs)",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "implied by roasting the sweet potato and scrambling the eggs; not directly visible",
+   "confidence": 0.35,
+   "kcal": 26.5,
+   "kcal_range": [
+    9,
+    53
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 185.0,
+  "kcal": 176.3,
+  "protein_g": 6.2,
+  "grams_range": [
+   123.0,
+   267.0
+  ],
+  "kcal_range": [
+   108,
+   269
+  ],
+  "protein_range": [
+   4.0,
+   9.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 185.0,
+   "kcal": 176.3,
+   "protein_g": 6.2,
+   "grams_range": [
+    123.0,
+    267.0
+   ],
+   "kcal_range": [
+    108,
+    269
+   ],
+   "protein_range": [
+    4.0,
+    9.0
+   ]
+  },
+  "rows": [
+   "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "Egg, whole, cooked, scrambled",
+   "Raspberries, raw",
+   "Blackberries, raw",
+   "Strawberries, raw",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-fable-5-2",
+ "image_sha256": "ca8532a191382aec476a864ee3efedb5df752085d9170492f0d0058e43bcf16e",
+ "scale_cues": "Square white dinner plate assumed to be about 25-27 cm across, filling most of the frame; individual raspberries (about 4 g each) and blackberries (about 6 g each) used as unit-size references for the other items.",
+ "assumptions": [
+  "Plate is a standard square dinner plate of roughly 26 cm; no cutlery or hand in frame to confirm scale.",
+  "Orange cubes are roasted sweet potato rather than butternut squash or carrot, based on colour and dark skin on some pieces.",
+  "Yellow curds are plain scrambled egg with no visible cheese or added vegetables.",
+  "Cooking fat type and amount are not visible; a small amount of oil is assumed from the preparation, and it could be butter instead.",
+  "Red smears on the plate are berry juice, not a sauce, and are not counted as a separate item.",
+  "Single overhead view gives no depth information, so piece thickness is estimated from typical sizes."
+ ],
+ "latency_s": 14.9,
+ "calls": [
+  {
+   "wall_s": 10.75,
+   "duration_ms": 10041,
+   "num_turns": 2,
+   "cost_usd_cli": 0.05892990000000001,
+   "cost_basis": "unknown",
+   "input_tokens": 8836,
+   "output_tokens": 956
+  },
+  {
+   "wall_s": 4.14,
+   "duration_ms": 3056,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0368918,
+   "cost_basis": "unknown",
+   "input_tokens": 3897,
+   "output_tokens": 265
+  }
+ ],
+ "cost_usd_cli": 0.09582,
+ "log_id": "54280e22949d"
+}
