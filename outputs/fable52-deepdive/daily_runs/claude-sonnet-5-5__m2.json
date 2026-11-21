@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "The EMI is about ₹10,379 per month.\n\nUsing the standard reducing-balance formula, EMI = P · r · (1+r)ⁿ / ((1+r)ⁿ − 1):\n\n- P = ₹5,00,000\n- r = 9% / 12 = 0.0075 per month\n- n = 5 × 12 = 60 months\n- (1.0075)⁶⁰ ≈ 1.565681\n\nEMI = 5,00,000 × 0.0075 × 1.565681 / 0.565681 ≈ 3750 × 2.76778 ≈ ₹10,379.17\n\nANSWER: ₹10,379",
+ "seconds": 837.4,
+ "served": [
+  "claude-sonnet-5-5",
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 1278.4,
+ "out_tok": 763,
+ "usd_list": 0.01019,
+ "cli_cost": 0.011637100000000001,
+ "item": "m2"
+}

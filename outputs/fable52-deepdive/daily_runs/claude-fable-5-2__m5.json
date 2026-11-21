@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "**Step 1 – Daily protein need:** 1.6 g/kg × 78 kg = 124.8 g\n\n**Step 2 – 40% of that:** 0.40 × 124.8 g = 49.92 g\n\n**Step 3 – Chicken required:** 49.92 g ÷ 31 g × 100 g ≈ 161.03 g, which rounds to 161 g\n\nANSWER: 161 g",
+ "seconds": 5.1,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1145.75,
+ "out_tok": 199,
+ "usd_list": 0.01713,
+ "cli_cost": 0.0228002,
+ "item": "m5"
+}

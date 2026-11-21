@@ -371,6 +371,186 @@
    "tokens_in_per_image": 12096,
    "tokens_out_per_image": 1117
   },
+  "claude-haiku-5-5/table": {
+   "n": 25,
+   "kcal": {
+    "MAE": 125.6,
+    "MAE_CI": [
+     79.59,
+     178.55
+    ],
+    "MAPE": 61.7,
+    "MAPE_CI": [
+     39.22,
+     89.78
+    ],
+    "median_APE": 38.2,
+    "MAE_pct_of_mean": 46.7,
+    "MAE_pct_of_mean_CI": [
+     33.33,
+     62.93
+    ],
+    "bias": 49.4,
+    "bias_CI": [
+     -18.56,
+     116.88
+    ],
+    "within_20pct": 16.0
+   },
+   "mass": {
+    "MAE": 74.6,
+    "MAE_CI": [
+     49.0,
+     104.08
+    ],
+    "MAPE": 44.6,
+    "MAPE_CI": [
+     28.48,
+     63.19
+    ],
+    "median_APE": 25.8,
+    "MAE_pct_of_mean": 35.3,
+    "MAE_pct_of_mean_CI": [
+     22.26,
+     51.59
+    ],
+    "bias": 62.2,
+    "bias_CI": [
+     31.52,
+     95.76
+    ],
+    "within_20pct": 32.0
+   },
+   "protein": {
+    "MAE": 10.5,
+    "MAE_CI": [
+     5.84,
+     15.72
+    ],
+    "MAPE": 68.0,
+    "MAPE_CI": [
+     43.51,
+     96.54
+    ],
+    "median_APE": 47.3,
+    "MAE_pct_of_mean": 59.0,
+    "MAE_pct_of_mean_CI": [
+     38.1,
+     86.94
+    ],
+    "bias": 9.3,
+    "bias_CI": [
+     4.19,
+     14.88
+    ],
+    "within_20pct": 28.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 68.5,
+    "MAE_CI": [
+     43.06,
+     98.35
+    ],
+    "n": 25
+   },
+   "kcal_range_coverage_pct": 40.0,
+   "latency_s": {
+    "mean": 1692.1,
+    "median": 841.9,
+    "max": 7932.8
+   },
+   "cost_usd_cli_per_image": 0.0037,
+   "cost_basis": [
+    "list"
+   ],
+   "calls_per_image": 2,
+   "tokens_in_per_image": 25573,
+   "tokens_out_per_image": 2485
+  },
+  "claude-haiku-5-5/table_bm25": {
+   "n": 25,
+   "kcal": {
+    "MAE": 119.3,
+    "MAE_CI": [
+     74.0,
+     170.47
+    ],
+    "MAPE": 53.7,
+    "MAPE_CI": [
+     36.4,
+     73.57
+    ],
+    "median_APE": 34.0,
+    "MAE_pct_of_mean": 44.3,
+    "MAE_pct_of_mean_CI": [
+     31.05,
+     59.57
+    ],
+    "bias": 51.6,
+    "bias_CI": [
+     -13.09,
+     116.76
+    ],
+    "within_20pct": 20.0
+   },
+   "mass": {
+    "MAE": 74.6,
+    "MAE_CI": [
+     49.0,
+     104.08
+    ],
+    "MAPE": 44.6,
+    "MAPE_CI": [
+     28.48,
+     63.19
+    ],
+    "median_APE": 25.8,
+    "MAE_pct_of_mean": 35.3,
+    "MAE_pct_of_mean_CI": [
+     22.26,
+     51.59
+    ],
+    "bias": 62.2,
+    "bias_CI": [
+     31.52,
+     95.76
+    ],
+    "within_20pct": 32.0
+   },
+   "protein": {
+    "MAE": 9.7,
+    "MAE_CI": [
+     5.29,
+     14.66
+    ],
+    "MAPE": 62.4,
+    "MAPE_CI": [
+     40.53,
+     87.7
+    ],
+    "median_APE": 41.3,
+    "MAE_pct_of_mean": 54.4,
+    "MAE_pct_of_mean_CI": [
+     33.8,
+     80.6
+    ],
+    "bias": 8.4,
+    "bias_CI": [
+     3.7,
+     13.8
+    ],
+    "within_20pct": 32.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 64.8,
+    "MAE_CI": [
+     40.57,
+     92.68
+    ],
+    "n": 25
+   },
+   "kcal_range_coverage_pct": 52.0
+  },
   "claude-opus-5-5/direct": {
    "n": 25,
    "kcal": {
@@ -645,6 +825,186 @@
     "n": 25
    },
    "kcal_range_coverage_pct": 52.0
+  },
+  "claude-sonnet-5-5/table": {
+   "n": 25,
+   "kcal": {
+    "MAE": 113.8,
+    "MAE_CI": [
+     74.94,
+     160.1
+    ],
+    "MAPE": 58.5,
+    "MAPE_CI": [
+     38.46,
+     82.18
+    ],
+    "median_APE": 36.8,
+    "MAE_pct_of_mean": 42.3,
+    "MAE_pct_of_mean_CI": [
+     29.61,
+     62.08
+    ],
+    "bias": 33.4,
+    "bias_CI": [
+     -23.41,
+     97.64
+    ],
+    "within_20pct": 12.0
+   },
+   "mass": {
+    "MAE": 72.3,
+    "MAE_CI": [
+     47.12,
+     102.44
+    ],
+    "MAPE": 40.8,
+    "MAPE_CI": [
+     28.25,
+     55.03
+    ],
+    "median_APE": 27.7,
+    "MAE_pct_of_mean": 34.2,
+    "MAE_pct_of_mean_CI": [
+     21.74,
+     51.02
+    ],
+    "bias": 47.1,
+    "bias_CI": [
+     12.96,
+     84.28
+    ],
+    "within_20pct": 44.0
+   },
+   "protein": {
+    "MAE": 6.7,
+    "MAE_CI": [
+     3.54,
+     10.76
+    ],
+    "MAPE": 52.5,
+    "MAPE_CI": [
+     33.49,
+     78.22
+    ],
+    "median_APE": 37.4,
+    "MAE_pct_of_mean": 37.7,
+    "MAE_pct_of_mean_CI": [
+     20.82,
+     65.87
+    ],
+    "bias": 3.6,
+    "bias_CI": [
+     -0.2,
+     8.31
+    ],
+    "within_20pct": 24.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 52.2,
+    "MAE_CI": [
+     38.38,
+     66.33
+    ],
+    "n": 25
+   },
+   "kcal_range_coverage_pct": 64.0,
+   "latency_s": {
+    "mean": 11.3,
+    "median": 11.8,
+    "max": 15.2
+   },
+   "cost_usd_cli_per_image": 0.0436,
+   "cost_basis": [
+    "list"
+   ],
+   "calls_per_image": 2,
+   "tokens_in_per_image": 12151,
+   "tokens_out_per_image": 951
+  },
+  "claude-sonnet-5-5/table_bm25": {
+   "n": 25,
+   "kcal": {
+    "MAE": 108.7,
+    "MAE_CI": [
+     68.61,
+     156.81
+    ],
+    "MAPE": 54.3,
+    "MAPE_CI": [
+     36.96,
+     74.5
+    ],
+    "median_APE": 36.9,
+    "MAE_pct_of_mean": 40.4,
+    "MAE_pct_of_mean_CI": [
+     26.57,
+     61.39
+    ],
+    "bias": 39.4,
+    "bias_CI": [
+     -15.83,
+     103.31
+    ],
+    "within_20pct": 24.0
+   },
+   "mass": {
+    "MAE": 72.3,
+    "MAE_CI": [
+     47.12,
+     102.44
+    ],
+    "MAPE": 40.8,
+    "MAPE_CI": [
+     28.25,
+     55.03
+    ],
+    "median_APE": 27.7,
+    "MAE_pct_of_mean": 34.2,
+    "MAE_pct_of_mean_CI": [
+     21.74,
+     51.02
+    ],
+    "bias": 47.1,
+    "bias_CI": [
+     12.96,
+     84.28
+    ],
+    "within_20pct": 44.0
+   },
+   "protein": {
+    "MAE": 7.3,
+    "MAE_CI": [
+     4.02,
+     11.41
+    ],
+    "MAPE": 55.3,
+    "MAPE_CI": [
+     35.46,
+     81.65
+    ],
+    "median_APE": 37.0,
+    "MAE_pct_of_mean": 41.2,
+    "MAE_pct_of_mean_CI": [
+     24.47,
+     68.05
+    ],
+    "bias": 4.4,
+    "bias_CI": [
+     0.37,
+     9.18
+    ],
+    "within_20pct": 20.0
+   },
+   "kcal_if_true_mass_known": {
+    "MAE": 44.5,
+    "MAE_CI": [
+     32.07,
+     57.72
+    ],
+    "n": 25
+   },
+   "kcal_range_coverage_pct": 64.0
   }
  },
  "paired": {
@@ -696,6 +1056,30 @@
     1.78
    ]
   },
+  "claude-haiku-5-5: table minus table_bm25 (kcal abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 6.3,
+   "CI": [
+    -4.23,
+    16.16
+   ]
+  },
+  "claude-haiku-5-5: table minus table_bm25 (mass abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 0.0,
+   "CI": [
+    0.0,
+    0.0
+   ]
+  },
+  "claude-haiku-5-5: table minus table_bm25 (protein abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 0.8,
+   "CI": [
+    -0.23,
+    2.37
+   ]
+  },
   "claude-opus-5-5: table minus direct (kcal abs err)": {
    "n": 25,
    "mean_diff_abs_err": 1.8,
@@ -742,6 +1126,30 @@
    "CI": [
     -0.49,
     0.6
+   ]
+  },
+  "claude-sonnet-5-5: table minus table_bm25 (kcal abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 5.1,
+   "CI": [
+    -5.58,
+    15.71
+   ]
+  },
+  "claude-sonnet-5-5: table minus table_bm25 (mass abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": 0.0,
+   "CI": [
+    0.0,
+    0.0
+   ]
+  },
+  "claude-sonnet-5-5: table minus table_bm25 (protein abs err)": {
+   "n": 25,
+   "mean_diff_abs_err": -0.6,
+   "CI": [
+    -1.81,
+    0.3
    ]
   }
  },

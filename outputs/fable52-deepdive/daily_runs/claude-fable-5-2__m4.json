@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "`SUMPRODUCT({2,3,4},{5,6,7})` multiplies the arrays pairwise and sums the results: 2×5 + 3×6 + 4×7 = 10 + 18 + 28 = 56.\n\nDividing by 3 gives 18.666…, and `ROUND(...,1)` rounds that to one decimal place: 18.7.\n\nANSWER: 18.7",
+ "seconds": 5.4,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1102.0,
+ "out_tok": 183,
+ "usd_list": 0.01614,
+ "cli_cost": 0.0216321,
+ "item": "m4"
+}

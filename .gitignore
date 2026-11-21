@@ -24,3 +24,24 @@ music/*
 !music/README.md
 reels/*/raw/
 reels/*/exports/
+
+# Frames, pose data and labels derived from personal workout footage
+demos/workout-hud/data/
+*.pt
+outputs/workout-analyser-reel/visuals/
+outputs/workout-analyser-reel/music_preview/
+outputs/hiring-posttraining-reel/*.png
+outputs/workout-analyser-reel/previews
+
+# 21 Nov 2026: keep renders, third-party documents and run noise out of the public repo
+outputs/**/moodboard/*.png
+outputs/**/paper/
+outputs/**/*.log
+outputs/**/log
+outputs/**/*.out
+outputs/**/*.err
+outputs/**/*.raw
+outputs/**/*.done
+outputs/**/*.bak
+outputs/**/*.png
+!outputs/workout-analyser-reel/share/architecture.png

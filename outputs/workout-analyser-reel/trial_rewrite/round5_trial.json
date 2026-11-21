@@ -1,0 +1,80 @@
+{
+ "beats": [
+  {
+   "n": 1,
+   "line": "My Gym Jarvis checked twenty-three sets, and called stop on a good one."
+  },
+  {
+   "n": 2,
+   "line": "So let's open my Workout Analyser."
+  },
+  {
+   "n": 3,
+   "line": "After over 200 papers and tools, I realized counting reps is easy, but judging one is hard."
+  },
+  {
+   "n": 4,
+   "line": "So I built one pose tool and two agents."
+  },
+  {
+   "n": 5,
+   "line": "It tracks my joints, and rep maths turns each rep into a wave."
+  },
+  {
+   "n": 6,
+   "line": "A taller wave means I moved further, so cut-short reps look shorter."
+  },
+  {
+   "n": 7,
+   "line": "And like a trainer, it compares each wave with my own best."
+  },
+  {
+   "n": 8,
+   "line": "The first agent is the judge, which reads my numbers."
+  },
+  {
+   "n": 9,
+   "line": "The second agent is the coach, a second opinion that isn't allowed the numbers."
+  },
+  {
+   "n": 10,
+   "line": "And one guardrail before any AI: if the code can't see the joint, it won't judge."
+  },
+  {
+   "n": 11,
+   "line": "Then I ran every set, and most were continue or hold."
+  },
+  {
+   "n": 12,
+   "line": "Except this one, where the judge said stop and the coach said good."
+  },
+  {
+   "n": 13,
+   "line": "I had only turned towards the camera, like the research warned."
+  },
+  {
+   "n": 14,
+   "line": "So now, stop needs both agents to agree, or I check the footage."
+  },
+  {
+   "n": 15,
+   "line": "And only one stop survived, my reverse crunch, which was fair."
+  },
+  {
+   "n": 16,
+   "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience."
+  },
+  {
+   "n": 17,
+   "line": "How can you be that one? Follow along to know."
+  }
+ ],
+ "changes": [
+  "The fact notes are numbered for a 19-beat version, so I mapped them by content: note 8 -> beat 6, note 12 -> beat 10, note 13 -> beat 11, note 18 -> beat 16.",
+  "Beat 6: 'tired reps' -> 'cut-short reps'. The system measures range, not fatigue.",
+  "Beat 10: 'if it can't see the joint, it won't judge' -> 'before any AI: if the code can't see the joint, it won't judge'. The refusal is a code check that runs before either agent, not the coach's decision.",
+  "Beat 11: unchanged. Note 13 targeted an older wording ('six continue, eleven hold, two stop'). The current line is true: all 23 sets were run, and 17 of 23 final verdicts are continue (6) or hold (11).",
+  "Beat 16: unchanged as instructed (same tease as the main reel), so the note asking for 'AI engineers with post-training experience' is not applied. The on-screen source tag 'People Matters, DNA \u00b7 19-20 Nov 2026 \u00b7 not confirmed by Salesforce' is still needed.",
+  "Beat 17 and all other beats: unchanged."
+ ]
+}

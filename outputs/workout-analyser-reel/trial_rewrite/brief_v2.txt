@@ -1,0 +1,46 @@
+You are Claude Fable 5.2, head writer for a creator's Instagram reel series "Gym Jarvis" (an AI system he is building for his own training). Write the TRIAL-REEL rewrite of Ep 3 (Workout Analyser).
+
+READ FIRST (use the Read tool): ../facts.md (all measured facts; never invent numbers), ../SCRIPT_FINAL.md (the main reel's script, already posted soon; the creator called its script weak: "no connection to Jarvis"), SPINES.md (your earlier spines; the creator REJECTED them as too far from the structure that works).
+
+CREATOR NOTE (verbatim, treat as the brief): "again the narration here is very different than the calories tracker that we had. Gym Jarvis and the second element needs to be called out, then lets show system components, exactly tell how bad rep is distinguished from good rep using wave form comparison and things like that. 23 reels also results from that should be shown, think through such things should happen by default across all use-cases."
+
+REFERENCE: Ep 2 (calories tracker) as actually spoken. This is the narration the creator loves. Match its STRUCTURE and VOICE (short plain sentences, first person, builder telling you how he built it), not its words:
+1 In last video, you met my Gym Jarvis.
+2 Today, let's see how it scans my plate for protein and calories.
+3 For building a system like this, I had Claude dig through a lot of research papers online.
+4 And I realized, naming items in your plate is super easy. But identifying the quantity of items is the hard part.
+5 So, I split the problem into three parts: find, size, and look up.
+6 Then I built two agents.
+7 The first agent is the vision agent on Fable 5.2, which lists the items and its grams.
+8 It's not allowed to say calories or proteins in those items.
+9 The second agent is the matcher agent, which finds all the items identified by the vision agent in our database.
+10 So every number traces back to a real source.
+11 I packaged all of it as a Claude skill with a single guardrail.
+12 Which was: if unsure, flag the meal for my review.
+13 Then I tested it on many meals that I had across days.
+14 And it performed with reasonable accuracy across all kinds of food.
+15 Except this one. Chicken hidden under carrots.
+16 And 500 calories just became 94.
+17 To explicitly handle cases like this, I added a confidence score.
+18 Now every meal is logged, and the less confident ones come to me for review.
+19 Next up, we'll see how my Workout Analyser tracks every set.
+
+Skeleton it follows (make this explicit in your output, it becomes the default for every system/build reel): SERIES ANCHOR -> TODAY'S TASK -> RESEARCH -> EASY vs HARD insight -> SPLIT INTO PARTS -> COMPONENT 1 (what it does + what it is NOT allowed to do) -> COMPONENT 2 (and why it exists) -> GUARDRAIL -> TESTED ON MANY (real count) -> RESULTS (shown as a dashboard) -> "EXCEPT THIS ONE" failure -> THE FIX -> NEXT / CTA.
+
+REQUIREMENTS
+- Name Gym Jarvis in beat 1 and tie today's feature to it.
+- Call out BOTH agents by role (judge agent = numbers + 4 key frames; coach agent = frames only, never sees numbers), and the pose tool + rep maths as the system components.
+- Explain EXACTLY, in spoken plain words a gym trainer gets, how a bad rep is told from a good one: the moving joint's angle over time draws a wave; one wave = one rep; the height of a wave = the range of that rep; every wave is compared with my own best wave in the same set (not a textbook). Use the real example numbers from facts.md (e.g. lat pulldown rep 4: 62 degrees vs 86 on the best rep; crunch hip 53 vs 122). Spoken line short; the diagram carries the numbers.
+- The guardrail: CAN'T SEE (>25% frames hidden -> no verdict), fired on 4 of 23.
+- Show the 23 sets results: CONTINUE 6, HOLD 11, STOP 1, CHECK FOOTAGE 1, CAN'T SEE 4, across body parts (from facts.md).
+- "Except this one" = the lunge false alarm (judge STOP, coach GOOD, I only turned towards the camera; research had warned camera angle fools it). Fix = STOP only when both agents agree, else CHECK FOOTAGE. The one surviving STOP = the crunch, in one line, never "stopped me mid-set" (footage predates the analyser).
+- This is the TRIAL variant for an A/B test: the emotion must differ from the main reel (main = builder pride + curiosity). Pick one arc (e.g. suspicion -> vindication -> earned trust) and say which. Different hook from the main, but the structure above stays.
+- Tease next episode the same way as the main (read SCRIPT_FINAL.md last beat; keep the Salesforce tease with "reportedly" if it is there). Follow CTA if the main has it.
+- 14 to 20 beats, one short sentence per beat (creator reads a teleprompter), 55 to 70 s at 1.15x.
+- For each beat give an ON-SCREEN visual using existing assets where possible (pose skeleton overlay, rep wave diagram with best-rep ghost line, system block diagram building up SEE -> JUDGE -> CHECK, verdict stamps, results dashboard with bars where taller = better).
+
+THEN self-evaluate:
+(a) principle checks, each with applies_when decided for this reel and one-line evidence: SERIES-ANCHOR, ARCHITECTURE-SHOWN (components named + how it decides), MECHANISM-CONCRETE (a viewer could repeat how bad vs good rep is detected), RESULTS-SHOWN (real count + dashboard), FAILURE-AND-FIX, CLAIMS-TRUE (vs facts.md), EMOTION-DIFFERS-FROM-MAIN, HOOK-PAYOFF-BY-8S.
+(b) the 16-persona panel (Indian Instagram viewers, 10 pm scroll: 1 TCS support eng Pune 24; 2 CA Ahmedabad 31; 3 HR exec Bengaluru 28; 4 bank RM Lucknow 35; 5 teacher Jaipur 38; 6 BTech final-year Hyderabad 21; 7 FP&A Gurgaon 25; 8 equity research Mumbai 33; 9 Big4 analyst Bengaluru 24; 10 strategy mgr Mumbai 32; 11 perf marketing Delhi 26; 12 FMCG brand mgr Mumbai 34; 13 startup backend dev Bengaluru 27; 14 ML eng Hyderabad 30; 15 gym trainer Delhi 29; 16 BCom student Kolkata 20). Score engagement 0-10 strict (ordinary good reel = 5-6), with group averages (mass 2-5,12,15,16; fin-consult-mktg 7-12; builders 1,6,13,14) and overall. If overall < 7, revise ONCE yourself and re-score, showing both.
+
+OUTPUT: write the final result as Markdown to SCRIPT_TRIAL_v2.md in the current directory (Write tool) with sections: Emotion arc + hook rationale; Skeleton mapping table; Script (beat | spoken line | on-screen visual | skeleton step | emotion); Principle checks; Panel scores; Open risks. Then reply with a 5-line summary.

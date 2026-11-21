@@ -1,0 +1,159 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (arugula and spinach-type leaves)",
+   "grams_low": 25,
+   "grams_best": 35,
+   "grams_high": 50,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw, torn leaves, plated loosely; some may be lightly dressed",
+   "confidence": 0.5,
+   "kcal": 7.3,
+   "kcal_range": [
+    5,
+    10
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red leaf lettuce or radicchio",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 40,
+   "fdc_query": "Lettuce, red leaf, raw",
+   "preparation": "raw, torn or whole leaves, plated on the right side of the plate",
+   "confidence": 0.4,
+   "kcal": 3.9,
+   "kcal_range": [
+    3,
+    5
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.3,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "168431",
+    "description": "Lettuce, red leaf, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 13.0,
+    "protein_100g": 1.33
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red-tinted sliced vegetable (possibly beet or tomato)",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 20,
+   "fdc_query": "Beets, cooked, boiled, drained, without salt",
+   "preparation": "unclear; appears sliced and possibly roasted or pickled, small pieces mixed with greens",
+   "confidence": 0.2,
+   "kcal": 4.4,
+   "kcal_range": [
+    2,
+    9
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "169146",
+    "description": "Beets, cooked, boiled, drained",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 44.0,
+    "protein_100g": 1.68
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 75.0,
+  "kcal": 15.6,
+  "protein_g": 1.1,
+  "grams_range": [
+   50.0,
+   110.0
+  ],
+  "kcal_range": [
+   10,
+   24
+  ],
+  "protein_range": [
+   0.7,
+   1.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 75.0,
+   "kcal": 13.5,
+   "protein_g": 1.1,
+   "grams_range": [
+    50.0,
+    110.0
+   ],
+   "kcal_range": [
+    9,
+    22
+   ],
+   "protein_range": [
+    0.7,
+    1.5
+   ]
+  },
+  "rows": [
+   "Lettuce, green leaf, raw",
+   "Lettuce, red leaf, raw",
+   "Beets, cooked, boiled. drained, with salt"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "7124065f6df0e242347ee341714a232c75f114cd70d91bc694d059fc3bf9708f",
+ "scale_cues": "Plate is a large white square plate, roughly 27 cm across, used as the scale reference. The salad covers about one-sixth of the plate surface. No cutlery or hands are visible for a finer scale.",
+ "assumptions": [
+  "Greens are raw and lightly dressed; no visible dressing pool, so no separate dressing item is included.",
+  "Dark seeds or specks are treated as part of the greens or garnish, not a separate item.",
+  "Mass is estimated from plated surface area and typical leaf density, so it is approximate.",
+  "The red-tinted item's identity is uncertain and may be beet, tomato, or meat; it is listed with low confidence."
+ ],
+ "latency_s": 1568.44,
+ "calls": [
+  {
+   "wall_s": 1460.85,
+   "duration_ms": 31151,
+   "num_turns": 3,
+   "cost_usd_cli": 0.00103618,
+   "cost_basis": "list",
+   "input_tokens": 13276,
+   "output_tokens": 1071
+  },
+  {
+   "wall_s": 107.57,
+   "duration_ms": 5184,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0010732,
+   "cost_basis": "list",
+   "input_tokens": 5159,
+   "output_tokens": 615
+  }
+ ],
+ "cost_usd_cli": 0.00211,
+ "log_id": "5872867ce43f"
+}

@@ -1,0 +1,273 @@
+{
+ "items": [
+  {
+   "name": "Broccoli florets",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 130,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "steamed/cooked",
+   "confidence": 0.6,
+   "kcal": 35.0,
+   "kcal_range": [
+    24,
+    46
+   ],
+   "protein_g": 2.4,
+   "protein_range": [
+    1.7,
+    3.1
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Spinach and mixed greens salad",
+   "grams_low": 50,
+   "grams_best": 80,
+   "grams_high": 110,
+   "fdc_query": "Spinach, raw",
+   "preparation": "raw, lightly dressed, mixed with lettuce",
+   "confidence": 0.5,
+   "kcal": 18.4,
+   "kcal_range": [
+    12,
+    25
+   ],
+   "protein_g": 2.3,
+   "protein_range": [
+    1.4,
+    3.1
+   ],
+   "fdc": {
+    "fdc_id": "168462",
+    "description": "Spinach, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower pieces",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 45,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "cooked, mixed into the salad",
+   "confidence": 0.45,
+   "kcal": 6.9,
+   "kcal_range": [
+    3,
+    10
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.3,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted pork tenderloin slices",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Pork, fresh, loin, tenderloin, separable lean and fat, cooked, roasted",
+   "preparation": "roasted/seared, sliced",
+   "confidence": 0.5,
+   "kcal": 132.3,
+   "kcal_range": [
+    88,
+    176
+   ],
+   "protein_g": 23.4,
+   "protein_range": [
+    15.6,
+    31.2
+   ],
+   "fdc": {
+    "fdc_id": "167905",
+    "description": "Pork, fresh, loin, tenderloin, separable lean and fat, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 147.0,
+    "protein_100g": 26.04
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Breaded chicken strip",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 45,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat and skin, coated, fried",
+   "preparation": "breaded and pan-fried",
+   "confidence": 0.35,
+   "kcal": 78.0,
+   "kcal_range": [
+    39,
+    117
+   ],
+   "protein_g": 7.5,
+   "protein_range": [
+    3.7,
+    11.2
+   ],
+   "fdc": {
+    "fdc_id": "171475",
+    "description": "Chicken, broilers or fryers, breast, meat and skin, cooked, fried, batter",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 260.0,
+    "protein_100g": 24.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing / cooking oil",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Salad dressing, vinaigrette, commercial, regular",
+   "preparation": "light coating on the greens",
+   "confidence": 0.3,
+   "kcal": 24.0,
+   "kcal_range": [
+    12,
+    36
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "171019",
+    "description": "Salad dressing, italian dressing, commercial, regular",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 240.0,
+    "protein_100g": 0.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Carrot shreds, dried cranberries and corn garnish",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Carrots, raw",
+   "preparation": "small garnish scattered on the salad and pork",
+   "confidence": 0.25,
+   "kcal": 18.5,
+   "kcal_range": [
+    9,
+    31
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "2709202",
+    "description": "Cranberries, dried",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 308.0,
+    "protein_100g": 0.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 346.0,
+  "kcal": 313.1,
+  "protein_g": 36.2,
+  "grams_range": [
+   218.0,
+   475.0
+  ],
+  "kcal_range": [
+   187,
+   441
+  ],
+  "protein_range": [
+   22.7,
+   49.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 346.0,
+   "kcal": 343.9,
+   "protein_g": 35.0,
+   "grams_range": [
+    218.0,
+    475.0
+   ],
+   "kcal_range": [
+    201,
+    488
+   ],
+   "protein_range": [
+    22.1,
+    47.9
+   ]
+  },
+  "rows": [
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Mixed salad greens, raw",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Pork, fresh, loin, tenderloin, separable lean and fat, cooked, roasted",
+   "Chicken, broilers or fryers, breast, meat and skin, cooked, fried, batter",
+   "Salad dressing, peppercorn dressing, commercial, regular",
+   "Cranberries, dried"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "4b8ca73536b643b7cb0f6a080a83cc6d800eacbe2893e206701c833c6c786ca0",
+ "scale_cues": "The square white plate is about 25 cm wide and is seen from overhead. I used it to estimate food footprints and portion sizes, and the food is a fairly thin single layer.",
+ "assumptions": [
+  "The dark meat slices are pork tenderloin, not beef.",
+  "The pale piece at the bottom left is a breaded chicken strip.",
+  "The greens are mostly spinach with some lettuce.",
+  "The broccoli was steamed without added fat.",
+  "A light dressing or oil is implied by the glossy greens.",
+  "The total weight is roughly 350 g."
+ ],
+ "latency_s": 12.92,
+ "calls": [
+  {
+   "wall_s": 8.91,
+   "duration_ms": 8180,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0298075,
+   "cost_basis": "list",
+   "input_tokens": 8994,
+   "output_tokens": 936
+  },
+  {
+   "wall_s": 4.0,
+   "duration_ms": 2969,
+   "num_turns": 1,
+   "cost_usd_cli": 0.022914200000000003,
+   "cost_basis": "list",
+   "input_tokens": 4697,
+   "output_tokens": 363
+  }
+ ],
+ "cost_usd_cli": 0.05272,
+ "log_id": "f28dd614364e"
+}

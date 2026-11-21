@@ -1,0 +1,110 @@
+[
+ {
+  "id": "F",
+  "round": 5,
+  "score": 6.09,
+  "summary": {
+   "panel": 6.38,
+   "critic": 7.0,
+   "must_fix": 2,
+   "approve": false,
+   "groups": {
+    "mass": 5.43,
+    "fin_consult_mktg": 6.25,
+    "builders": 8.0
+   }
+  },
+  "angle": "cold-open scene: drop the viewer into the moment, no setup",
+  "writer": "gpt-6.2-astra"
+ },
+ {
+  "id": "B",
+  "round": 0,
+  "score": 5.35,
+  "summary": {
+   "panel": 6.0,
+   "critic": 6.5,
+   "must_fix": 3,
+   "approve": false,
+   "groups": {
+    "mass": 5,
+    "fin_consult_mktg": 5.92,
+    "builders": 7.63
+   }
+  },
+  "angle": "contrarian self-correction: what I believed vs what the data showed",
+  "writer": "claude-fable-5-2"
+ },
+ {
+  "id": "D",
+  "round": 0,
+  "score": 4.989999999999999,
+  "summary": {
+   "panel": 5.88,
+   "critic": 6.5,
+   "must_fix": 4,
+   "approve": false,
+   "groups": {
+    "mass": 5.0,
+    "fin_consult_mktg": 5.67,
+    "builders": 7.5
+   }
+  },
+  "angle": "curiosity gap: an odd visual or number in second 1, explained by the end",
+  "writer": "claude-fable-5-2"
+ },
+ {
+  "id": "A",
+  "round": 0,
+  "score": 4.845000000000001,
+  "summary": {
+   "panel": 6.19,
+   "critic": 6.5,
+   "must_fix": 5,
+   "approve": false,
+   "groups": {
+    "mass": 5.29,
+    "fin_consult_mktg": 6.08,
+    "builders": 7.75
+   }
+  },
+  "angle": "personal test: show my measured result first, then how it works",
+  "writer": "claude-fable-5-2"
+ },
+ {
+  "id": "C",
+  "round": 0,
+  "score": 4.515,
+  "summary": {
+   "panel": 6.13,
+   "critic": 6.5,
+   "must_fix": 6,
+   "approve": false,
+   "groups": {
+    "mass": 5.43,
+    "fin_consult_mktg": 5.83,
+    "builders": 7.75
+   }
+  },
+  "angle": "fear -> relief: the risk in plain words, then the fix",
+  "writer": "claude-fable-5-2"
+ },
+ {
+  "id": "E",
+  "round": 0,
+  "score": 4.489999999999999,
+  "summary": {
+   "panel": 5.88,
+   "critic": 5.5,
+   "must_fix": 4,
+   "approve": false,
+   "groups": {
+    "mass": 5.0,
+    "fin_consult_mktg": 5.67,
+    "builders": 7.5
+   }
+  },
+  "angle": "surprise number: the single most surprising measured number as the hook",
+  "writer": "gpt-6.2-astra"
+ }
+]

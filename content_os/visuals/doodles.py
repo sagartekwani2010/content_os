@@ -126,7 +126,7 @@ def bubble(id, x, y, w, h, lines, col=R.BLUE, tail="left", size=40, **kw) -> Doo
                   labels=labels, **kw)
 
 
-def dashed_rect(x, y, w, h, col=R.GREY, key="dash", dash=26, gap=16):
+def dashed_rect(x, y, w, h, col=R.GREY, key="dash", dash=26, gap=16, width=4):
     out = []
     edges = [((x, y), (x + w, y)), ((x + w, y), (x + w, y + h)), ((x + w, y + h), (x, y + h)), ((x, y + h), (x, y))]
     k = 0
@@ -138,7 +138,7 @@ def dashed_rect(x, y, w, h, col=R.GREY, key="dash", dash=26, gap=16):
             if s0 >= 1:
                 break
             out.append(R.Stroke([(a[0] + (b[0] - a[0]) * s0, a[1] + (b[1] - a[1]) * s0),
-                                 (a[0] + (b[0] - a[0]) * s1, a[1] + (b[1] - a[1]) * s1)], col, 4, f"{key}{k}",
+                                 (a[0] + (b[0] - a[0]) * s1, a[1] + (b[1] - a[1]) * s1)], col, width, f"{key}{k}",
                                 double=False))
             k += 1
     return out

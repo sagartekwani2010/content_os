@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "I finished my first half marathon in Bengaluru in 2:05:30.\n\nThe biggest lesson from training: consistency beat motivation. Motivation came and went. Showing up on the days I didn't feel like running is what carried me to the finish line.\n\nHuge thanks to my running group, Sunday Striders, for the encouragement and the miles we shared along the way.\n\n#HalfMarathon #Running #Bengaluru",
+ "seconds": 6.3,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2446.75,
+ "out_tok": 783,
+ "usd_list": 0.00064,
+ "cli_cost": 0.0007078000000000001,
+ "item": "w2"
+}

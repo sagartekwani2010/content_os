@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "```python\nfrom decimal import Decimal, ROUND_HALF_UP\nimport math\n\n\ndef format_inr(amount: float) -> str:\n    \"\"\"Format an amount in rupees using Indian digit grouping and 2 decimals.\n\n    Examples:\n        1234567.5 -> '₹12,34,567.50'\n        999       -> '₹999.00'\n        0         -> '₹0.00'\n        -1000     -> '-₹1,000.00'\n    \"\"\"\n    if isinstance(amount, float) and (math.isnan(amount) or math.isinf(amount)):\n        raise ValueError(f\"Cannot format non-finite amount: {amount!r}\")\n\n    # Use Decimal via str() to avoid binary float rounding surprises (e.g. 2.675)\n    value = Decimal(str(amount)).quantize(Decimal(\"0.01\"), rounding=ROUND_HALF_UP)\n\n    negative = value < 0  # after rounding, so -0.001 -> '₹0.00', not '-₹0.00'\n    int_part, frac_part = f\"{abs(value):.2f}\".split(\".\")\n\n    if len(int_part) > 3:\n        last_three = int_part[-3:]\n        rest = int_part[:-3]\n        groups = []\n        while len(rest) > 2:\n            groups.insert(0, rest[-2:])\n            rest = rest[:-2]\n        if rest:\n            groups.insert(0, rest)\n        int_part = \",\".join(groups + [last_three])\n\n    return f\"{'-' if negative else ''}₹{int_part}.{frac_part}\"\n```",
+ "seconds": 610.9,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 2470.25,
+ "out_tok": 875,
+ "usd_list": 0.02738,
+ "cli_cost": 0.033569100000000004,
+ "item": "c1"
+}

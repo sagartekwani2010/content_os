@@ -6,7 +6,7 @@ Cue (one entry of ``beats[i].cues`` in visual_cues.json)::
     {"on_word": "seventy-seven" | "77" | "thirteen thousand" | 5,   # phrase in the beat line, or word index
      "occurrence": 1,           # nth occurrence of the phrase in the line (default 1)
      "anchor": "start|end",     # word start (default) or the phrase's last word end
-     "offset": -0.1,            # seconds relative to the anchor (default -0.1: motion leads the sound slightly)
+     "offset": -0.25,           # seconds relative to the anchor (default -0.25: land early, the picture leads the word)
      "action": "draw|pop|countup|write|highlight|cross|fade|shake",
      "target": "element_id",
      "dur": 0.5,                # 0.3-0.8 s (default 0.45, emphasis 0.7)
@@ -28,7 +28,7 @@ from dataclasses import dataclass
 from content_os.pipeline.textmatch import align, norm
 
 ACTIONS = {"draw", "pop", "countup", "write", "highlight", "cross", "fade", "shake"}
-DEFAULT_OFFSET = -0.1
+DEFAULT_OFFSET = -0.25  # policy (16 Nov): every element lands on or ~0.2-0.3 s before the word naming it
 DEFAULT_DUR = 0.45
 EMPHASIS_DUR = 0.7
 MIN_DUR, MAX_DUR = 0.3, 0.8

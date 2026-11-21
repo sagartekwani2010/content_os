@@ -1,0 +1,272 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (arugula, spinach, red leaf lettuce)",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw, torn leaves, dressed",
+   "confidence": 0.5,
+   "kcal": 18.9,
+   "kcal_range": [
+    13,
+    25
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.8,
+    1.6
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Grilled chicken breast, sliced",
+   "grams_low": 65,
+   "grams_best": 90,
+   "grams_high": 115,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "cooked, sliced into three strips",
+   "confidence": 0.6,
+   "kcal": 148.5,
+   "kcal_range": [
+    107,
+    190
+   ],
+   "protein_g": 27.9,
+   "protein_range": [
+    20.2,
+    35.7
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Creamy dressing or sauce",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Salad dressing, ranch dressing, regular",
+   "preparation": "creamy, drizzled over chicken and greens",
+   "confidence": 0.35,
+   "kcal": 64.5,
+   "kcal_range": [
+    34,
+    108
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "173592",
+    "description": "Salad dressing, ranch dressing, regular",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 430.0,
+    "protein_100g": 1.32
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cherry tomatoes",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 35,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, halved",
+   "confidence": 0.6,
+   "kcal": 4.5,
+   "kcal_range": [
+    3,
+    6
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red onion",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 12,
+   "fdc_query": "Onions, red, raw",
+   "preparation": "raw, thinly sliced",
+   "confidence": 0.5,
+   "kcal": 3.2,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170000",
+    "description": "Onions, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 40.0,
+    "protein_100g": 1.1
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cucumber slices",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 12,
+   "fdc_query": "Cucumber, with peel, raw",
+   "preparation": "raw, sliced",
+   "confidence": 0.3,
+   "kcal": 1.2,
+   "kcal_range": [
+    1,
+    2
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "168409",
+    "description": "Cucumber, with peel, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 15.0,
+    "protein_100g": 0.65
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Crumbled cheese or seed garnish",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 6,
+   "fdc_query": "Cheese, feta",
+   "preparation": "crumbled, sprinkled on top",
+   "confidence": 0.2,
+   "kcal": 10.6,
+   "kcal_range": [
+    5,
+    16
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.3,
+    0.9
+   ],
+   "fdc": {
+    "fdc_id": "173420",
+    "description": "Cheese, feta",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 265.0,
+    "protein_100g": 14.21
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 240.0,
+  "kcal": 251.4,
+  "protein_g": 30.3,
+  "grams_range": [
+   158.0,
+   325.0
+  ],
+  "kcal_range": [
+   165,
+   352
+  ],
+  "protein_range": [
+   21.5,
+   39.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 240.0,
+   "kcal": 244.2,
+   "protein_g": 30.3,
+   "grams_range": [
+    158.0,
+    325.0
+   ],
+   "kcal_range": [
+    160,
+    343
+   ],
+   "protein_range": [
+    21.5,
+    39.0
+   ]
+  },
+  "rows": [
+   "Lettuce, red leaf, raw",
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Salad dressing, ranch dressing, regular",
+   "Tomatoes, red, ripe, raw, year round average",
+   "Onions, raw",
+   "Cucumber, with peel, raw",
+   "Cheese, feta"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "d2f0f25d1a3b3f25324692331dbea961db86e7165c3d022090a03d01c61d7cf7",
+ "scale_cues": "Plate is a white square plate about 26 cm across, used as the scale reference. Food covers roughly the central 60% of the plate. No utensils or hands are visible for a second reference, so portion sizes are inferred from the plate size and typical single-serving salad with grilled chicken.",
+ "assumptions": [
+  "Chicken is a single serving of grilled or roasted breast, about 90 g cooked.",
+  "The pale green slices are assumed to be cucumber; they could be avocado, which would change the mass and nutrition.",
+  "The white specks are assumed to be crumbled cheese or seeds; they are under 5 g, so they are merged into one garnish item.",
+  "The creamy dressing is an estimate of about 15 g, based on the sheen over the chicken and greens.",
+  "Mass estimates are for edible portions only and exclude the plate and any visible residue."
+ ],
+ "latency_s": 630.12,
+ "calls": [
+  {
+   "wall_s": 624.39,
+   "duration_ms": 25706,
+   "num_turns": 3,
+   "cost_usd_cli": 0.00316358,
+   "cost_basis": "list",
+   "input_tokens": 16850,
+   "output_tokens": 2315
+  },
+  {
+   "wall_s": 5.71,
+   "duration_ms": 4708,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0017238,
+   "cost_basis": "list",
+   "input_tokens": 8855,
+   "output_tokens": 808
+  }
+ ],
+ "cost_usd_cli": 0.00489,
+ "log_id": "e5684b2a78d6"
+}

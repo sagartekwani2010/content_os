@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "The two coins are a ₹10 coin and a ₹5 coin.\n\nThe statement \"one of them is not a ₹10 coin\" is true: the ₹5 coin is not a ₹10 coin, but the other one is. With Indian coin denominations (₹1, ₹2, ₹5, ₹10, ₹20), ₹10 + ₹5 is the only pair that adds up to ₹15.\n\nANSWER: ₹10 and ₹5",
+ "seconds": 5.6,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1090.75,
+ "out_tok": 244,
+ "usd_list": 0.01849,
+ "cli_cost": 0.0239376,
+ "item": "r7"
+}

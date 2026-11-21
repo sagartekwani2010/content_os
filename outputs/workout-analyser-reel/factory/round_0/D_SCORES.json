@@ -1,0 +1,194 @@
+{
+ "check": {
+  "must_fix": [
+   "TRIAL variant breaks the shared body. Trial beat 1 plays over IMG_2649 with a green tick and no ghost, yet beat 7 asks 'So what is that green ghost?' and says 'Opening frame returns'. Beat 10 also cuts back to 'the beat-1 frame'. In the trial both refer to something the viewer never saw. Trial beat 2 also stacks two openers: 'The real problem was this one: The real me is...'. Either keep the ghost frame on screen right after the trial hook line, or write trial-specific versions of beats 2, 7 and 10. Then confirm the variants still differ in only the hook (E2).",
+   "Beat 6 visual (K9/K10) gets the cause of the count error wrong. FACTS: the 3 extra reps came from a 0.2 s tracker jump (one rep) and from reps 1 and 14, which were half reps cut by the clip start and end. The hidden leg produced the impossible 11 degree depth on one rep; it did not add reps. The count was fixed by the 0.8 s minimum rep length and by trimming the half reps, not by 'can't see'. Do not circle 'fake dips' on 'hid' and roll 14 to 11 on 'can't see'. Keep the 11 degree / can't-see visual separate from the count fix, or show the real causes.",
+   "'My AI watched every set I've filmed' (beat 3, hook 2) is not measured. Only IMG_2649 has been run, and more clips are still uploading. It must stay a marked condition or [SLOT: n clips run] until the [AGREE] run covers every clip. Otherwise reword it to what was actually run.",
+   "The CTA 'I'll send you the complete blueprint' overclaims. The draft itself says only the diagram is packaged. Say 'the full diagram' (or name exactly what is sent) in speech, on screen and in the caption."
+  ],
+  "should_fix": [
+   "Runtime is labelled and timed at 1.15x. The brief and REEL_DEFAULTS say 1.1x. Recomputed at 1.1x: about 40 s of sped speech becomes 36.4 s, plus 7.5 s for beats 1 and 7 at 1.0x, plus 2.9 s of holds, about 46.8 s before the beat 2 slots are filled. Fault and risk words will add about 2 s and can push it past 48 s. Re-time the table at 1.1x and cap the beat 2 slot words.",
+   "'now it says can't see instead of guessing' describes judge output, and the judge is still being built. What was measured is frames being discarded (58 of 877). Check that reps_clean.json flags reps with a hidden knee before claiming the message. If it doesn't, say it 'throws out what it can't see'.",
+   "'The machine hid my leg' can be heard as the AI hiding the leg, against the one-actor rule. Say 'The squat machine hid my leg'.",
+   "Beat 2 'The real me is [fault]' conflicts with beat 7 'It's me: my own best set'; both figures are you. Use 'This rep' or 'This me' in beat 2.",
+   "The ghost overlay only works if [BEST_SET] is the same lift, from a similar camera angle, as [BAD_SET], since it is rendered from real pose data. State this as a selection constraint, with a fallback (side-by-side, not overlay) if it can't be met.",
+   "Beat 4 wave (K7) points to IMG_2649 reps_clean.json, which counts 11. That shows the corrected count before beat 5 reveals '14'. Use the raw series, or don't show a final count in beat 4.",
+   "Beat 2 'that's exactly how you [risk]' asserts injury causation. Phrase it as a trainer would ('that's how people [risk]') and keep 'Not training advice' visible.",
+   "E2 is locked as 'personal test (MAIN) vs contrarian self-correction (TRIAL)'. 'Why are there two of me in this set?' is a visual-curiosity hook, which changes the variable under test. Either reword MAIN as a personal-test hook (hook 2 is close) or get creator sign-off before logging it in EXPERIMENTS.md.",
+   "TRIAL hook 'My AI said it was fine' is the coach labeller's verdict: confidence 0.6, and it could not check heel lift or knee cave. Add 'as far as the camera could see' on screen. 'I thought this was my worst set' must be the creator's real belief.",
+   "Beat 8 is 26 words over 8 s, which breaks the one-short-sentence-per-beat rule. It sits on the 2/3 point, where a flat stretch loses viewers. Split it into two beats (the judge line, then the marks comparison) so the comparison can be skipped cleanly.",
+   "The 2/3 re-hook lands at 55% (24.6 s). Around 30 s there is only the comparison line. Consider a light flash (the STOP light pulsing on the diagram) or a verdict tease near 30 s.",
+   "Beat 9 and the locked wording 'would have stopped me' assume a STOP verdict. Write the HOLD and CONTINUE fallbacks for beat 9, both stamps, the caption and the cover now, so an unexpected verdict doesn't force a rewrite after the shoot.",
+   "The caption's first paragraph and the cover ghost depend on [BAD_SET], [BEST_SET] and the judge. Mark them as [SLOT] inline, not only in a 'Pending' note.",
+   "No Fable engagement score (target 7.5 or more) or SCRIPT_CHECK is reported for this draft. Run one before taking it to the creator."
+  ],
+  "facts_ok": false
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "The knee wave gets me past the hook. Seeing exactly why the counter went wrong is the part I'd send to a colleague."
+   },
+   {
+    "id": 2,
+    "score": 5,
+    "drop_beat": "beat 8",
+    "why": "I stay to see how 14 becomes 11. Once the ghost is explained, the marks analogy feels like a second explanation of something I already got."
+   },
+   {
+    "id": 3,
+    "score": 4,
+    "drop_beat": "beat 4",
+    "why": "The red gap makes me want to know what went wrong with the rep. When the knee turns into a graph, it feels like I've switched from a gym story to a software demo."
+   },
+   {
+    "id": 4,
+    "score": 4,
+    "drop_beat": "beat 3",
+    "why": "The joint close-up gets my attention. I'd stay for the two reps moving side by side, but the contact sheet looks like the start of a longer explanation."
+   },
+   {
+    "id": 5,
+    "score": 5,
+    "drop_beat": "beat 6",
+    "why": "I can follow one dip per rep, and the wrong answer is a nice surprise. At the fix, I'm choosing between watching the hidden leg, reading the angle and following the counter."
+   },
+   {
+    "id": 6,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "A knee dot turning into a rep counter is something I can imagine building. I'd save the diagram and send the 14-versus-11 bit to a project teammate."
+   },
+   {
+    "id": 7,
+    "score": 6,
+    "drop_beat": "beat 8",
+    "why": "The count has a number I can check against what actually happened. Once I hear the benchmark is his own best set, I want the result, not another analogy."
+   },
+   {
+    "id": 8,
+    "score": 5,
+    "drop_beat": "beat 7",
+    "why": "Explaining the three extra reps earns some trust. Calling one set his best raises a new question: who picked that benchmark, and on what basis?"
+   },
+   {
+    "id": 9,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "The failure and correction make the final diagram worth saving: I can explain why the system sometimes declines to count rather than just list its steps."
+   },
+   {
+    "id": 10,
+    "score": 5,
+    "drop_beat": "beat 7",
+    "why": "The opening already gives me the rep number and a verdict. Finding out whose silhouette it is doesn't change either, so I don't wait for the second stamp."
+   },
+   {
+    "id": 11,
+    "score": 6,
+    "drop_beat": "beat 9",
+    "why": "I stay to see the opening image come back with a reason under it. Once I've read that reason, the reel feels finished; I'm not looking for a build guide."
+   },
+   {
+    "id": 12,
+    "score": 5,
+    "drop_beat": "beat 7",
+    "why": "The green double is the image I'd remember. But 'two of me' already tells me whose body it is, and 'my best set' is a small reveal for a 25-second wait."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "The machine blocking the leg is a better demo than a perfect count. I'd send that sequence to another dev because it shows a specific failure and what the app does about it."
+   },
+   {
+    "id": 14,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I'd replay the occluded frames against the wave. Filtering a bad pose estimate is convincing; matching the human count on one clip doesn't establish that the form verdict is right."
+   },
+   {
+    "id": 15,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I'd watch both reps and pause on the final reason. I might comment on whether the difference matters: looking different from your best rep isn't automatically dangerous."
+   },
+   {
+    "id": 16,
+    "score": 5,
+    "drop_beat": "beat 6",
+    "why": "The big '14 \u2260 11' card pulls me back because I instantly get the mistake. Once the counter lands on 11, that little story feels over."
+   }
+  ],
+  "groups": {
+   "mass": 5.0,
+   "fin_consult_mktg": 5.67,
+   "builders": 7.5
+  },
+  "overall": 5.88,
+  "top_fixes": [
+   "Label the ghost 'my best set' up front and play both reps in motion. Make the open question 'Can you spot where this rep changes?' Save the verdict stamp for the answer instead of showing it twice.",
+   "Move 'It counted 14. I did 11.' ahead of the contact sheet. Then replay the moment the machine hides the knee, synced to one false dip. That's a reason to watch the graph, not just an explanation of how it works.",
+   "Keep counting accuracy separate from form judgment. Label the counting demo as a test clip, then return to the opening pair for the actual verdict. Name the visible difference and how the reference set was chosen; cut 'that's exactly how you' get injured.",
+   "Cut from the one-line 'my own best, not a textbook' explanation straight to the verdict. Use the time saved on the topper analogy for a clean hold on the full-size diagram.",
+   "Make the spoken CTA and caption match the deliverable: 'Comment GHOST for this diagram.' A diagram is useful on its own; 'complete blueprint' sets up builders to expect implementation details."
+  ]
+ },
+ "critic": {
+  "predicted_score": 6.5,
+  "would_approve": false,
+  "change_list": [
+   "Posting is tomorrow and beats 1, 2, 7 and 9 are still slots. First do then show: run the analyser and judge on all my clips today, fill the bad set, best set and verdict, then send me the complete script again.",
+   "Hook 1 is clever but it does not say what the reel is. Lets make MAIN 'My AI watched every set I've filmed and found the one I should never have done', over the same ghost visual. That is the test only I can run, and it is what E2 calls the personal-test hook. Keep 'two of me' as on-screen text.",
+   "The trial is broken. With hook 3 there is no ghost in the opening, so 'The real me is...' and 'So what is that green ghost?' make no sense, and the loop cuts back to a different frame. Make beats 2 and 7 work with both hooks so the body is actually the same.",
+   "Beats 2 and 7 only work if I say beat 1 word for word. I will reword on camera, so make each beat stand alone.",
+   "Wat is the impact for an everyday user? Add one line after the marks comparison: 'So always...' with one action, like filming your best set and comparing with that.",
+   "'Complete blueprint' and then you only send a diagram? Package the form-labeller skill with the diagram, like we did for the Meal Analyser, and say the benefit in the CTA: 'Comment GHOST to access the skill and the complete architecture'.",
+   "Arch diagram is missing the 'can't see' check, and that is the best technical part. Add it as a box before the judge, and hold the full diagram longer than 1.5 s so people can actually save it.",
+   "In beat 2 the risk has to be the judge's own reason in plain gym words, not a made-up injury line. In beat 9, if the judge says HOLD, the line and both stamps change.",
+   "Runtime says 1.15x in one place and 1.1x in another. Pick one and give me one number.",
+   "Where is the Fable score? I want it above 7.5 before I record. And add a one-second tease of the next episode over my gym footage with the red mark at the end, or put it in the caption."
+  ],
+  "taste_violations": [
+   "Measured test before recording (non-negotiable; checklist 15): the stake, the best set, the verdict and '[n] sets' are unmeasured, so 4 of 10 beats cannot be recorded one day before posting. The draft flags this itself and keeps them as slots, which is the allowed form, but it is not a finished option.",
+   "Finished options only (non-negotiable): the draft arrives as 'not recordable yet' with a pending list, which forces another round.",
+   "Lead with the strongest words (checklist 7; voice): MAIN opens on a question, while the strongest words ('the one I should never have done') sit in hook 2.",
+   "One variable between main and trial (checklist 23): the trial swaps beat 1 and the beat 2 opener, and it breaks beat 7, K11 and the K17 loop, which all refer to the ghost opening. The MAIN line is also a curiosity question, not the personal-test hook that E2 logs.",
+   "Beats recordable alone (checklist 19): 'The real me' in beat 2 and 'that green ghost' in beat 7 depend on the exact wording of beat 1.",
+   "Each finding ends in one action for the everyday user (checklist 5; strong preference): the script has the everyday comparison (own last marks vs the topper's) but no 'So always...' line.",
+   "CTA names the real benefit; something to run from episode 1 (strong preferences): 'complete blueprint' promises more than the diagram the trigger note says will be sent, and the form-labeller skill is not offered.",
+   "Engagement score of at least 7.5 before lock (checklist 22): no Fable judge or panel score is attached. The runtime is fine at about 45-47 s, but it is labelled 1.15x against the 1.1x house default.",
+   "Section heading card for the 'how it works' section (checklist 11): there is a running label but no full-frame title card at the bridge. The two full-frame cards are a number card and a verdict card.",
+   "Next-reel tease over own footage with a red mark (checklist 21): absent. The draft ends on the loop, as the brief and REEL_DEFAULTS ask, but the creator added a tease on camera last time.",
+   "Repeats the name instead of 'it' (voice): beats 3, 5, 6 and 9 say 'it'. Expect 'my AI counted fourteen reps' on camera."
+  ],
+  "what_they_will_love": [
+   "The whole package is in one place: spoken lines, visuals, on-screen text, sound, teleprompter, caption, first comment and cover (checklist 1, 25).",
+   "The payoff image is at second 0 and the ghost of their own best set is the hero visual, rendered from real pose data: awe without complexity.",
+   "The architecture diagram builds across beats 4 to 8 under a running label and completes as the save asset, with Fable 5.2 on the judge box and not in the voice.",
+   "'First try, it counted fourteen reps. I did eleven.' is a real measured failure, said deadpan. Every spoken number (17, 14, 11) and on-screen number (11\u00b0, 58 of 877) traces to the facts sheet.",
+   "'Like how we all tried to beat our own last marks, not the topper's' is their own sentence shape and a comparison any Indian viewer gets. It is marked skippable, so the story does not depend on it (checklist 20).",
+   "English only, no spoken hedges, and the caveat sits in an on-screen footnote (checklist 2, 3). There are three ideas, not more (checklist 4).",
+   "No cost-led hook, boilerplate, lab showpieces or attributed tips (checklist 8, 14, 16, 17). The deep-dive-only items (paper page cuts, people-building clips, one percentage against the next-best model, bar heights; checklist 9, 10, 12, 13) do not apply to this build reel. The entertaining failure arrives by 17 s (checklist 6).",
+   "Beats alternate hook and emotion with no two in a row, with re-hooks at 17 s and 25 s (checklist 18).",
+   "There is a sound effect on every visual event, with one signature stamp hit reused at beats 1 and 9 (checklist 24).",
+   "The locked wording is respected: 'my AI' as the one actor, 'would have stopped me', no 'pose tool' or 'guardrail' in speech, and the IMG_2649 twist is kept to the caption and the trial hook.",
+   "The honesty notes ('worst set' must be their real belief; 'fine' is the coach labeller at 0.6 confidence), plus a fully measured fallback hook they could record today."
+  ]
+ },
+ "score": 4.989999999999999,
+ "summary": {
+  "panel": 5.88,
+  "critic": 6.5,
+  "must_fix": 4,
+  "approve": false,
+  "groups": {
+   "mass": 5.0,
+   "fin_consult_mktg": 5.67,
+   "builders": 7.5
+  }
+ }
+}

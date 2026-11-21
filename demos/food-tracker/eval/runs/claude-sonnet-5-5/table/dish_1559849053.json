@@ -1,0 +1,132 @@
+{
+ "items": [
+  {
+   "name": "Almonds",
+   "grams_low": 30,
+   "grams_best": 40,
+   "grams_high": 55,
+   "fdc_query": "Nuts, almonds",
+   "preparation": "raw/whole, unsalted, no visible oil",
+   "confidence": 0.6,
+   "kcal": 231.6,
+   "kcal_range": [
+    174,
+    318
+   ],
+   "protein_g": 8.5,
+   "protein_range": [
+    6.3,
+    11.6
+   ],
+   "fdc": {
+    "fdc_id": "170567",
+    "description": "Nuts, almonds",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 579.0,
+    "protein_100g": 21.15
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Grapes, red",
+   "grams_low": 50,
+   "grams_best": 70,
+   "grams_high": 95,
+   "fdc_query": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "preparation": "raw, whole",
+   "confidence": 0.55,
+   "kcal": 48.3,
+   "kcal_range": [
+    34,
+    66
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.4,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "174683",
+    "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 69.0,
+    "protein_100g": 0.72
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 110.0,
+  "kcal": 279.9,
+  "protein_g": 9.0,
+  "grams_range": [
+   80.0,
+   150.0
+  ],
+  "kcal_range": [
+   208,
+   384
+  ],
+  "protein_range": [
+   6.7,
+   12.3
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 110.0,
+   "kcal": 279.9,
+   "protein_g": 9.0,
+   "grams_range": [
+    80.0,
+    150.0
+   ],
+   "kcal_range": [
+    208,
+    384
+   ],
+   "protein_range": [
+    6.7,
+    12.3
+   ]
+  },
+  "rows": [
+   "Nuts, almonds",
+   "Grapes, red or green (European type, such as Thompson seedless), raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "86d352404c151d8a6067d350f7cd7b51a0adddb12d1b5536ed28003122871ac4",
+ "scale_cues": "The square white plate is about 25 cm across, and its diagonal is roughly 350 px in the image. By that scale each almond is about 2 cm long, about 22 almonds in the pile plus 1 loose, and the 11 or so grapes are about 2 cm each.",
+ "assumptions": [
+  "The dark red round fruits are red grapes. They could be small tomatoes or cherries, but grapes are more likely given the almonds.",
+  "Almonds are raw or dry-roasted with no added oil.",
+  "I counted about 23 almonds at about 1.2 g each, giving roughly 28 g. I put the best estimate higher, at 40 g, to allow for ones hidden in the overlapping pile.",
+  "I counted about 12 grapes at about 5 to 6 g each.",
+  "No sauce or dressing is visible."
+ ],
+ "latency_s": 9.84,
+ "calls": [
+  {
+   "wall_s": 6.99,
+   "duration_ms": 6267,
+   "num_turns": 2,
+   "cost_usd_cli": 0.025744999999999997,
+   "cost_basis": "list",
+   "input_tokens": 8984,
+   "output_tokens": 532
+  },
+  {
+   "wall_s": 2.85,
+   "duration_ms": 1770,
+   "num_turns": 1,
+   "cost_usd_cli": 0.009056,
+   "cost_basis": "list",
+   "input_tokens": 1960,
+   "output_tokens": 122
+  }
+ ],
+ "cost_usd_cli": 0.0348,
+ "log_id": "4257e4333d79"
+}

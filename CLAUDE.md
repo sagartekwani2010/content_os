@@ -9,7 +9,7 @@ other agent working here. Read it first, then:
 3. `feedback/learning-mission-final-edit-diagnosis-2026-11-15.md`: why the last reel fell short.
 4. `.agents/skills/reel-footage-edit/` (with `references/edits-automation.md`) before any edit, and
    `.agents/skills/reel-script-writing/` before any script.
-5. `production/RECORDING_KIT.md` when planning a shoot; `production/SETUP_NEW_LAPTOP.md` on a new Mac.
+5. `production/REEL_DEFAULTS.md` and `production/EXPERIMENTS.md` for every reel (pace, captions, audio levels, cards, packaging, and the playable `MOODBOARD.html` standard built with `scripts/moodboard/build_moodboard.py`); `production/RECORDING_KIT.md` when planning a shoot; `production/SETUP_NEW_LAPTOP.md` on a new Mac.
 6. `WORKSTATION_MIGRATION_HANDOFF.md` before moving creator media from the work Mac to the home Mac. The private release is uploaded and verified; download and restore it on the home Mac.
 
 ## Rules that hold in every session

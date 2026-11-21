@@ -1,0 +1,272 @@
+{
+ "items": [
+  {
+   "name": "Brown rice, cooked",
+   "grams_low": 40,
+   "grams_best": 60,
+   "grams_high": 80,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "Steamed or boiled, plain, served as a small mound on the upper left of the plate",
+   "confidence": 0.6,
+   "kcal": 73.8,
+   "kcal_range": [
+    49,
+    98
+   ],
+   "protein_g": 1.6,
+   "protein_range": [
+    1.1,
+    2.2
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Mixed leafy greens (lettuce)",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "Raw leaves, tossed or lightly dressed, scattered across the center and right of the plate",
+   "confidence": 0.6,
+   "kcal": 8.4,
+   "kcal_range": [
+    5,
+    13
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.3,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Seared poultry or meat, pale pieces",
+   "grams_low": 50,
+   "grams_best": 70,
+   "grams_high": 90,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "Pan-seared or grilled, with browned crust, cut into pieces; the pale center piece appears to be chicken breast",
+   "confidence": 0.35,
+   "kcal": 115.5,
+   "kcal_range": [
+    82,
+    148
+   ],
+   "protein_g": 21.7,
+   "protein_range": [
+    15.5,
+    27.9
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Seared dark meat or eggplant strips",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Eggplant, raw",
+   "preparation": "Grilled or seared strips with dark charred edges, arranged along the lower left and across the center; identity uncertain, could be duck, beef, or grilled eggplant",
+   "confidence": 0.25,
+   "kcal": 22.5,
+   "kcal_range": [
+    15,
+    30
+   ],
+   "protein_g": 0.9,
+   "protein_range": [
+    0.6,
+    1.2
+   ],
+   "fdc": {
+    "fdc_id": "169228",
+    "description": "Eggplant, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 0.98
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Green vegetable stalks (asparagus or green bean)",
+   "grams_low": 10,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Asparagus, cooked, boiled",
+   "preparation": "Cooked and lightly charred, thin green stalks near the bottom center",
+   "confidence": 0.45,
+   "kcal": 3.3,
+   "kcal_range": [
+    2,
+    6
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.2,
+    0.6
+   ],
+   "fdc": {
+    "fdc_id": "168390",
+    "description": "Asparagus, cooked, boiled, drained",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 22.0,
+    "protein_100g": 2.4
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Garnish: red chili pieces and sesame seeds",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 6,
+   "fdc_query": "Peppers, hot chili, red, raw",
+   "preparation": "Sliced fresh red chili and scattered toasted sesame seeds, merged because each is under 5 g",
+   "confidence": 0.5,
+   "kcal": 1.6,
+   "kcal_range": [
+    1,
+    2
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170106",
+    "description": "Peppers, hot chili, red, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 40.0,
+    "protein_100g": 1.87
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil or sauce residue",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Oil, vegetable, soybean, salad or cooking",
+   "preparation": "Glossy sheen on the seared pieces suggests a light oil or glaze left from cooking",
+   "confidence": 0.2,
+   "kcal": 53.0,
+   "kcal_range": [
+    27,
+    88
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171411",
+    "description": "Oil, soybean, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 285.0,
+  "kcal": 278.1,
+  "protein_g": 25.2,
+  "grams_range": [
+   190.0,
+   391.0
+  ],
+  "kcal_range": [
+   181,
+   385
+  ],
+  "protein_range": [
+   17.7,
+   32.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 285.0,
+   "kcal": 279.9,
+   "protein_g": 25.2,
+   "grams_range": [
+    190.0,
+    391.0
+   ],
+   "kcal_range": [
+    183,
+    387
+   ],
+   "protein_range": [
+    17.7,
+    32.8
+   ]
+  },
+  "rows": [
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Lettuce, green leaf, raw",
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Eggplant, raw",
+   "Asparagus, cooked, boiled, drained",
+   "Peppers, hot chili, red, raw",
+   "Oil, soybean, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "7620b43e5febda273e0bae0d0f49f1bb953721b7feb2dc94d76cb587d0eb18d9",
+ "scale_cues": "Plate is a square white dinner plate, roughly 25 to 26 cm across, used as the main scale reference. Food portions were estimated against its surface area. No cutlery or hand is visible.",
+ "assumptions": [
+  "Overhead view, so heights and depths are inferred from shading and typical portion sizes.",
+  "Plate diameter assumed about 25 to 26 cm.",
+  "Dark seared strips are ambiguous between eggplant and meat; grams are a rough split.",
+  "Sesame seeds and chili are small and merged into one garnish item.",
+  "Oil is inferred from sheen only and may be overestimated or absent."
+ ],
+ "latency_s": 622.54,
+ "calls": [
+  {
+   "wall_s": 12.33,
+   "duration_ms": 11602,
+   "num_turns": 2,
+   "cost_usd_cli": 0.00221843,
+   "cost_basis": "list",
+   "input_tokens": 10266,
+   "output_tokens": 2106
+  },
+  {
+   "wall_s": 610.19,
+   "duration_ms": 11474,
+   "num_turns": 1,
+   "cost_usd_cli": 0.00204183,
+   "cost_basis": "list",
+   "input_tokens": 14394,
+   "output_tokens": 1110
+  }
+ ],
+ "cost_usd_cli": 0.00426,
+ "log_id": "55fa6f0f13db"
+}

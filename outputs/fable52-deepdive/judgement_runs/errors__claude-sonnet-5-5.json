@@ -1,0 +1,27 @@
+{
+ "found": [
+  {
+   "wrong": "So I read all 246 pages.",
+   "correct": "The system card is 264 pages."
+  },
+  {
+   "wrong": "About one in three cheating attempts worked.",
+   "correct": "About 11% of its reward-hack attempts succeeded (about one in nine)."
+  },
+  {
+   "wrong": "This plate weighed 430 grams",
+   "correct": "The example plate weighed 340 g."
+  },
+  {
+   "wrong": "Fable's portion error was 54% lower than Haiku's",
+   "correct": "Fable's portion error was 34% lower than Haiku's."
+  },
+  {
+   "wrong": "Haiku matched Fable at 79% lower cost.",
+   "correct": "Haiku cost about 97% less (₹0.60 vs ₹22 for the 11 tasks, Fable about 40x Haiku)."
+  }
+ ],
+ "caught": 5,
+ "n_reported": 5,
+ "seconds": 7.9
+}

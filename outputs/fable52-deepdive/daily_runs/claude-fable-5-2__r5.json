@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "This is the \"Monty Fall\" variant, and switching wins with probability **1/2**, not the 2/3 of the classic problem.\n\nBecause the host opens door 3 at random, the fact that it shows a goat is itself evidence. Each door starts with a 1/3 chance of hiding the car:\n\n- **Car behind door 1 (1/3):** door 3 shows a goat with certainty.\n- **Car behind door 2 (1/3):** door 3 shows a goat with certainty.\n- **Car behind door 3 (1/3):** door 3 cannot show a goat, so this case is ruled out.\n\nThe two remaining cases are equally likely, so by Bayes' rule:\n\nP(car behind door 2 | door 3 shows a goat) = (1/3) / (1/3 + 1/3) = 1/2\n\nIn the classic problem the host knows where the car is and always reveals a goat, so his reveal tells you nothing about your own door and switching wins 2/3 of the time. Here the goat appeared by luck, which is equally likely whether the car is behind door 1 or door 2, so neither is favoured.\n\nANSWER: 1/2",
+ "seconds": 7.8,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1149.5,
+ "out_tok": 496,
+ "usd_list": 0.02904,
+ "cli_cost": 0.0347783,
+ "item": "r5"
+}

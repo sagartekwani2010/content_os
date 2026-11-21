@@ -144,7 +144,22 @@ agents:
   orchestrator_script:
     # Script and beat sheet: the script is the product.
     model: claude-fable-5-2
-    prompt_version: orchestrator_script_v1
+    prompt_version: orchestrator_script_v2
+    reasoning_effort: high
+
+  orchestrator_moodboard:
+    # Mood board + keyframes from the approved screenplay: the look of the reel
+    # is decided here and every later stage (shot list, visuals, edit) follows it.
+    model: claude-fable-5-2
+    prompt_version: orchestrator_moodboard_v1
+    reasoning_effort: high
+
+  orchestrator_story_check:
+    # Independent emotion + hook checker for the script and the visual plan.
+    # Deliberately a different model from the Fable writer, so the read is not
+    # anchored on the writer's own taste.
+    model: claude-opus-5-5
+    prompt_version: orchestrator_story_check_v1
     reasoning_effort: high
 
   orchestrator_post_package:

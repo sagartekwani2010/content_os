@@ -1,0 +1,13 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "Hi, I hope you're well. My salary is credited late this month, so could I please pay December's rent of ₹18,500 by 10 December instead of on the usual date? I'm sorry for the inconvenience. I'm happy to pay any late fee. Thank you for understanding.",
+ "seconds": 3.0,
+ "served": [
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1184.5,
+ "out_tok": 91,
+ "usd_list": 0.00328,
+ "cli_cost": 0.004698,
+ "item": "w1"
+}

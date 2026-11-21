@@ -1,0 +1,189 @@
+{
+ "items": [
+  {
+   "name": "Fried breaded chicken pieces",
+   "grams_low": 90,
+   "grams_best": 125,
+   "grams_high": 160,
+   "fdc_query": "Chicken, broilers or fryers, thigh, meat and skin, breaded and fried",
+   "preparation": "Breaded/battered pieces, pan- or deep-fried, golden-brown, stacked on the upper left of the plate",
+   "confidence": 0.6,
+   "kcal": 346.2,
+   "kcal_range": [
+    249,
+    443
+   ],
+   "protein_g": 27.0,
+   "protein_range": [
+    19.4,
+    34.6
+   ],
+   "fdc": {
+    "fdc_id": "172386",
+    "description": "Chicken, broilers or fryers, thigh, meat and skin, cooked, fried, batter",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 277.0,
+    "protein_100g": 21.61
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted sliced white meat (chicken breast or similar)",
+   "grams_low": 130,
+   "grams_best": 170,
+   "grams_high": 220,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "Thin slices and one thicker piece, pale, lightly browned edges, roasted or pan-cooked without breading",
+   "confidence": 0.5,
+   "kcal": 280.5,
+   "kcal_range": [
+    214,
+    363
+   ],
+   "protein_g": 52.7,
+   "protein_range": [
+    40.3,
+    68.2
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooked onion",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 30,
+   "fdc_query": "Onions, raw",
+   "preparation": "Cooked onion slices placed under and alongside the fried and roasted meat, lightly caramelized",
+   "confidence": 0.4,
+   "kcal": 9.4,
+   "kcal_range": [
+    5,
+    14
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.1,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "2710796",
+    "description": "Onions, cooked, as ingredient",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 47.0,
+    "protein_100g": 1.29
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cucumber, cubed",
+   "grams_low": 90,
+   "grams_best": 120,
+   "grams_high": 150,
+   "fdc_query": "Cucumber, with peel, raw",
+   "preparation": "Raw pale green cubes, roughly 2 cm, on the right side of the plate",
+   "confidence": 0.5,
+   "kcal": 18.0,
+   "kcal_range": [
+    14,
+    22
+   ],
+   "protein_g": 0.8,
+   "protein_range": [
+    0.6,
+    1.0
+   ],
+   "fdc": {
+    "fdc_id": "168409",
+    "description": "Cucumber, with peel, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 15.0,
+    "protein_100g": 0.65
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 435.0,
+  "kcal": 654.1,
+  "protein_g": 80.8,
+  "grams_range": [
+   320.0,
+   560.0
+  ],
+  "kcal_range": [
+   482,
+   842
+  ],
+  "protein_range": [
+   60.4,
+   104.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 435.0,
+   "kcal": 652.7,
+   "protein_g": 80.7,
+   "grams_range": [
+    320.0,
+    560.0
+   ],
+   "kcal_range": [
+    481,
+    840
+   ],
+   "protein_range": [
+    60.4,
+    104.1
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, thigh, meat and skin, cooked, fried, batter",
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Onions, raw",
+   "Cucumber, with peel, raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "449300a607bd6f51ec5c07cca34712b1b8ebe819ab8ba5f51467e612599d0571",
+ "scale_cues": "Used the white dinner plate as the scale reference: it is roughly 27 cm across, so each chicken slice is about 6-8 cm long and each cucumber cube about 2 cm. Cutlery and hands are not visible. Grams come from typical piece thickness and volume estimated against the plate area.",
+ "assumptions": [
+  "Meat slices are assumed to be chicken breast; they could be pork or turkey, which would change the FDC entry but not the mass much.",
+  "The battered pieces are assumed to be fried chicken thigh with skin and breading.",
+  "Green cubes are assumed to be cucumber; they could be chayote or zucchini.",
+  "Small brown specks near the cucumber (possibly seasoning or bacon bits) are under 5 g in total and are not listed separately.",
+  "No sauces, dressings, oil, or drinks are visible. Any cooking oil absorbed into the fried coating is included in the fried chicken estimate.",
+  "Masses refer to edible cooked weight on the plate, not raw weight."
+ ],
+ "latency_s": 2819.43,
+ "calls": [
+  {
+   "wall_s": 1795.63,
+   "duration_ms": 37183,
+   "num_turns": 4,
+   "cost_usd_cli": 0.0035857800000000002,
+   "cost_basis": "list",
+   "input_tokens": 23485,
+   "output_tokens": 1832
+  },
+  {
+   "wall_s": 1023.78,
+   "duration_ms": 4704,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0013864,
+   "cost_basis": "list",
+   "input_tokens": 6486,
+   "output_tokens": 843
+  }
+ ],
+ "cost_usd_cli": 0.00497,
+ "log_id": "46d645043d65"
+}

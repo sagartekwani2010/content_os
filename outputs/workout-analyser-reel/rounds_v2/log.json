@@ -1,0 +1,22 @@
+[
+ {
+  "round": 1,
+  "overall": 5.3,
+  "groups": {
+   "mass": 4.4,
+   "fin_consult_mktg": 5.3,
+   "builders": 7.0
+  },
+  "must_fix": true
+ },
+ {
+  "round": 2,
+  "overall": 5.2,
+  "groups": {
+   "mass": 4.2,
+   "fin_consult_mktg": 5.1,
+   "builders": 7.1
+  },
+  "must_fix": true
+ }
+]

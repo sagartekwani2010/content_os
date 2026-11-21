@@ -18,7 +18,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from . import graph, memory, modelcall, settings
+from . import graph, memory, modelcall, moodboard, settings, story_check
 from .state import Reel, sha256_file, sha256_json
 
 MEDIA_EXT = {".mov", ".mp4", ".m4v"}
@@ -118,20 +118,54 @@ def run_script(reel: Reel) -> StageResult:
                                     lessons, _feedback_block(reel, "script"), previous] if x)
     out, prov = modelcall.call("script", prompt, modelcall.ScriptOut)
     s = out.model_dump()
+    # Independent emotion + hook check (Opus); Fable revises from its notes up to max_revisions times.
+    rounds: list[dict[str, Any]] = []
+    check, cprov = story_check.check_script(s, brief_text)
+    rounds.append(check)
+    for _ in range(int(story_check.cfg()["max_revisions"])):
+        if check["verdict"] == "pass":
+            break
+        revise = "\n\n".join([prompt, "YOUR PREVIOUS DRAFT:\n" + json.dumps(s, ensure_ascii=False),
+                               story_check.feedback_block(check)])
+        out, prov = modelcall.call("script", revise, modelcall.ScriptOut)
+        s = out.model_dump()
+        check, cprov = story_check.check_script(s, brief_text)
+        rounds.append(check)
     files = write_script_files(reel, s, provenance_note=f"{prov.get('model')} / {prov.get('prompt_version')}")
-    return StageResult(files=files, provenance={**prov, "lessons": ids},
-                       result={"beats": len(s["beats"]), "words": sum(len(b["text"].split()) for b in s["beats"])})
+    files.update(story_check.write_report(reel.dir, "SCRIPT_CHECK", f"{s.get('title') or reel.id}: emotion + hook check",
+                                          check, rounds, cprov.get("model", "")))
+    return StageResult(files=files, provenance={**prov, "lessons": ids, "story_check": {
+                           "model": cprov.get("model"), "prompt_version": cprov.get("prompt_version"),
+                           "rounds": len(rounds), "verdict": check["verdict"], "scores": check["scores"]}},
+                       result={"beats": len(s["beats"]), "words": sum(len(b["text"].split()) for b in s["beats"]),
+                               "check": check["verdict"], "hook_score": check["scores"]["hook"]},
+                       note=f"story check: {check['verdict']} after {len(rounds)} round(s), hook {check['scores']['hook']}/10")
+
+
+BEAT_EXTRA = ("emotion", "delivery", "continuity")
 
 
 def write_script_files(reel: Reel, s: dict[str, Any], provenance_note: str = "") -> dict[str, Path]:
-    beats = [{"id": b["id"], "text": b["text"], "section": b.get("section", "body")} for b in s["beats"]]
+    beats = [{"id": b["id"], "text": b["text"], "section": b.get("section", "body"),
+              **{k: b[k] for k in BEAT_EXTRA if b.get(k)}} for b in s["beats"]]
     words = sum(len(b["text"].split()) for b in beats)
     rows = "\n".join(f"| {b['id']} | \"{b['text']}\" | {b.get('visual', '')} |" for b in s["beats"])
+    feel = [b for b in s["beats"] if any(b.get(k) for k in BEAT_EXTRA)]
+    feel_md = ("\n## Emotion, delivery and continuity\n\n| # | Viewer feels | Delivery | Continuity |\n|---|---|---|---|\n"
+               + "\n".join(f"| {b['id']} | {b.get('emotion', '')} | {b.get('delivery', '')} | {b.get('continuity', '')} |"
+                           for b in feel) + "\n") if feel else ""
+    hooks = s.get("hook_variants") or []
+    hooks_md = ("\n## Hook variants (Trial Reels)\n\n| # | Emotion | Spoken | On screen | First frame |\n|---|---|---|---|---|\n"
+                + "\n".join(f"| {i} | {h['emotion']} | {h['text']} | {h['on_screen_text']} | {h['first_frame']} |"
+                            for i, h in enumerate(hooks, 1)) + "\n") if hooks else ""
     md = (f"# {s.get('title') or reel.id}: script\n\nStatus: **draft for creator approval** "
           f"(`python -m content_os.orchestrator approve {reel.id} script`). {provenance_note}\n\n"
           f"- **Promise:** {s.get('promise', '')}\n- **Hook:** {s.get('hook', '')}\n"
-          f"- **Length:** about {words} spoken words, target {s.get('target_duration_s')} s.\n\n"
-          "| # | Spoken line | Top-half visual |\n|---|---|---|\n" + rows + "\n"
+          + (f"- **Emotional arc:** {s['emotional_arc']}\n" if s.get("emotional_arc") else "")
+          + (f"- **Save asset:** {s['save_asset']}\n" if s.get("save_asset") else "")
+          + (f"- **Comment trigger:** {s['comment_trigger']}\n" if s.get("comment_trigger") else "")
+          + f"- **Length:** about {words} spoken words, target {s.get('target_duration_s')} s.\n\n"
+          "| # | Spoken line | Top-half visual |\n|---|---|---|\n" + rows + "\n" + feel_md + hooks_md
           + ("\n## Open questions\n\n" + "\n".join(f"- {q}" for q in s.get("open_questions", [])) + "\n"
              if s.get("open_questions") else "")
           + ("\n## Caption notes\n\n" + "\n".join(f"- {q}" for q in s.get("caption_notes", [])) + "\n"
@@ -166,7 +200,50 @@ def parse_script_md(text: str) -> dict[str, Any]:
             "target_duration_s": round(words / 2.5)}
 
 
+# --------------------------------------------------------------------------- mood board
+def run_moodboard(reel: Reel) -> StageResult:
+    """Fable designs the look: palette, type, sound, keyframes per beat and the shot list. The creator
+    approves it at gate:moodboard; shoot plan, visuals and the edit follow it."""
+    existing = reel.dir / "moodboard.json"
+    if reel.state.get("adopted") and not existing.exists():
+        return StageResult(files={}, status="skipped", provenance={"kind": "adopted"},
+                           note="adopted reel without a mood board; visuals follow visual_cues.json as written")
+    parts = [f"REEL ID: {reel.id}"]
+    for name in ("SCREENPLAY.md", "SCRIPT.md"):
+        f = reel.dir / name
+        if f.exists():
+            parts.append(f"{name}:\n{f.read_text(encoding='utf-8')[:14000]}")
+    bj = reel.dir / "beats.json"
+    if bj.exists():
+        parts.append("BEATS (ids to reference):\n" + bj.read_text(encoding="utf-8")[:6000])
+    lessons, ids = memory.prompt_block("moodboard", reel.state.get("idea", ""))
+    prompt = "\n\n".join(x for x in [*parts, lessons, _feedback_block(reel, "moodboard"), _previous(reel, "moodboard.json")] if x)
+    out, prov = modelcall.call("moodboard", prompt, modelcall.MoodboardOut)
+    mb = out.model_dump()
+    files = moodboard.write_board(reel.dir, mb, f"{reel.id}: mood board")
+    if moodboard.render_frames(reel.dir, mb):
+        files = moodboard.write_board(reel.dir, mb, f"{reel.id}: mood board")
+    return StageResult(files=files, provenance={**prov, "lessons": ids},
+                       result={"keyframes": len(mb["keyframes"]), "shots": len(mb["shot_list"])},
+                       note=f"{len(mb['keyframes'])} keyframes; open MOODBOARD.html")
+
+
 # --------------------------------------------------------------------------- shoot plan
+# Printed on every teleprompter and shoot plan. Learned from Ep 2 (Meal Analyser), where cuts between
+# takes showed: same chin-on-hand pose for 81 s, energy and hand position changing across a cut.
+CONTINUITY_RULES = (
+    "Reset to the base pose before every take: sit back, hands resting together in the lap (or on the table), "
+    "shoulders square to the lens.",
+    "Hold 1 s looking at the lens before you speak and 1 s after the last word; do not look away or "
+    "move your hands until the second has passed.",
+    "Start each beat at the energy the previous beat ended on; the FEEL line says where it goes from there.",
+    "Gestures happen mid-line and return to the base pose before the last word.",
+    "Record beats in order in one sitting; same clothes, hair, glasses, light and chair position.",
+    "When a beat's POSE note says the energy changes sharply, still finish in the base pose: the edit will "
+    "cover that cut with a full-frame visual or a punch-in.",
+    "Vary the bottom half on purpose, not by accident: lean-ins and pose changes only where the script asks.",
+)
+
 def run_shoot_plan(reel: Reel) -> StageResult:
     adopted = (reel.state.get("adopted") or {}).get("shoot_plan_for_script")
     existing = {k: reel.dir / k for k in ("SHOOT_PLAN.md", "TELEPROMPTER.md")}
@@ -179,10 +256,14 @@ def run_shoot_plan(reel: Reel) -> StageResult:
     if bv.exists():
         visuals = {v["beat"]: v["visual"] for v in _read_json(bv)["beats"]}
     tp = [f"# Teleprompter: {reel.id}\n",
-          "Say \"beat N\", read the line, look at the lens, say it. Pause 2 s. Say it again. Third time if needed.\n"]
+          "Say \"beat N\", read the line, look at the lens, say it. Pause 2 s. Say it again. Third time if needed.\n",
+          "Continuity: " + " ".join(CONTINUITY_RULES[:3]) + "\n"]
     for b in beats:
         lines = re.split(r"(?<=[.?!:])\s+", b["text"].strip())
-        tp.append(f"**beat {b['id']}**\n" + "\n".join(lines) + "\n")
+        cues = " · ".join(x for x in (f"FEEL: {b['emotion']}" if b.get("emotion") else "",
+                                      f"FACE/VOICE: {b['delivery']}" if b.get("delivery") else "",
+                                      f"POSE: {b['continuity']}" if b.get("continuity") else "") if x)
+        tp.append(f"**beat {b['id']}**\n" + (f"({cues})\n" if cues else "") + "\n".join(lines) + "\n")
     plan = [f"# Shoot plan: {reel.id}\n",
             f"Footage goes in `{settings.tilde(reel.media)}/raw/` (outside the repo). When every beat is recorded run\n"
             f"`python -m content_os.orchestrator approve {reel.id} recorded`.\n",
@@ -191,12 +272,28 @@ def run_shoot_plan(reel: Reel) -> StageResult:
             "- Quiet room, mic clipped or phone within 1 m; 5 s of room tone at the start.",
             "- Say \"beat N\" before each beat; 2-3 takes per line with a short pause; no slate needed.",
             "- See `production/RECORDING_KIT.md`.\n",
-            "## Beats and planned visuals\n", "| Beat | Line | Visual (top half) |", "|---|---|---|"]
-    plan += [f"| {b['id']} | {b['text']} | {visuals.get(b['id'], '')} |" for b in beats]
+            "## Continuity (so the cuts do not show)\n", *[f"- {r}" for r in CONTINUITY_RULES], "",
+            *_moodboard_shots(reel),
+            "## Beats, emotion and planned visuals\n",
+            "| Beat | Line | Viewer feels | Face/voice | Pose/continuity | Visual (top half) |",
+            "|---|---|---|---|---|---|"]
+    plan += [f"| {b['id']} | {b['text']} | {b.get('emotion', '')} | {b.get('delivery', '')} | {b.get('continuity', '')} "
+             f"| {visuals.get(b['id'], '')} |" for b in beats]
     files = {"TELEPROMPTER.md": _write(reel.dir / "TELEPROMPTER.md", "\n".join(tp)),
              "SHOOT_PLAN.md": _write(reel.dir / "SHOOT_PLAN.md", "\n".join(plan) + "\n")}
     return StageResult(files=files, provenance={"kind": "auto", "generator": "shoot_plan@1"},
                        result={"beats": len(beats)})
+
+
+def _moodboard_shots(reel: Reel) -> list[str]:
+    mb = moodboard.load(reel.dir)
+    if not mb:
+        return []
+    out = ["## Shot list from the mood board (film these too)\n", *[f"{i}. {s}" for i, s in enumerate(mb["shot_list"], 1)], "",
+           "## Keyframes to match (see MOODBOARD.html)\n", "| KF | Time | Beats | Layout | Shot | Creator |", "|---|---|---|---|---|---|"]
+    out += [f"| {k['id']} | {k['time_s']:.0f}s | {','.join(map(str, k.get('beats', [])))} | {k.get('layout', '')} | "
+            f"{k.get('shot', '')} | {k.get('creator_direction', '')} |" for k in mb["keyframes"]]
+    return out + [""]
 
 
 # --------------------------------------------------------------------------- creator nodes
@@ -230,7 +327,7 @@ def pipeline_env() -> dict[str, str]:
 
 def sync_pipeline_inputs(reel: Reel) -> None:
     reel.media.mkdir(parents=True, exist_ok=True)
-    for name in ("beats.json", "cue_sheet.json", "pipeline.yaml", "visual_cues.json"):
+    for name in ("beats.json", "cue_sheet.json", "pipeline.yaml", "visual_cues.json", "moodboard.json"):
         src = reel.dir / name
         if src.exists():
             shutil.copy2(src, reel.media / name)
@@ -289,6 +386,9 @@ def run_visuals(reel: Reel) -> StageResult:
                            provenance={"kind": "auto"}, note=f"{why}; render uses cue_sheet.json as written")
     sync_pipeline_inputs(reel)
     out = []
+    vcheck = run_visuals_check(reel)
+    if vcheck["verdict"] != "pass" and story_check.cfg()["visuals_blocking"]:
+        raise StageFailed(f"visuals story check: {vcheck['verdict']}; see VISUALS_CHECK.md")
     for step in ("check", "render"):
         cmd = [sys.executable, "-m", "content_os.visuals", step, str(reel.media)]
         proc = subprocess.run(cmd, cwd=settings.PROJECT_ROOT, env=pipeline_env(), capture_output=True, text=True,
@@ -301,6 +401,17 @@ def run_visuals(reel: Reel) -> StageResult:
     if manifest.exists():
         files["work/visuals/visuals.json"] = manifest
     return StageResult(files=files, provenance={"kind": "visuals", "module": "content_os.visuals"}, note=out[-1][-300:])
+
+
+def run_visuals_check(reel: Reel) -> dict[str, Any]:
+    """Opus checks the visual plan against each beat's spoken line and intended emotion."""
+    beats_p = reel.dir / "beats.json"
+    beats = _read_json(beats_p)["beats"] if beats_p.exists() else []
+    spec = _read_json(reel.dir / "visual_cues.json")
+    check, prov = story_check.check_visuals(beats, spec)
+    story_check.write_report(reel.dir, "VISUALS_CHECK", f"{reel.id}: visual plan emotion + hook check", check, None,
+                             prov.get("model", ""))
+    return check
 
 
 # --------------------------------------------------------------------------- av review / post
@@ -351,7 +462,8 @@ def _extract_cover(reel: Reel, beat: int) -> Path | None:
     return out if out.exists() else None
 
 
-RUNNERS = {"idea": run_idea, "brief": run_brief, "script": run_script, "shoot_plan": run_shoot_plan,
+RUNNERS = {"idea": run_idea, "brief": run_brief, "script": run_script, "moodboard": run_moodboard,
+           "shoot_plan": run_shoot_plan,
            "visuals": run_visuals, "av_review": run_av_review, "post_package": run_post_package}
 
 

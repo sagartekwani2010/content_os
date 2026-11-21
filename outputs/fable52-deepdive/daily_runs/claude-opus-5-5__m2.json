@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "The EMI is **₹10,379** (₹10,379.18 before rounding).\n\n**Formula:** EMI = P·r·(1+r)ⁿ / [(1+r)ⁿ − 1]\n\n- Principal P = ₹5,00,000\n- Monthly rate r = 9% ÷ 12 = 0.0075\n- Number of months n = 5 × 12 = 60\n\n**Working:**\n- (1.0075)⁶⁰ ≈ 1.565681\n- EMI = 5,00,000 × 0.0075 × 1.565681 / 0.565681\n- EMI = 3,750 × 2.76778 ≈ ₹10,379.18\n\nANSWER: ₹10,379",
+ "seconds": 7.2,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1177.0,
+ "out_tok": 617,
+ "usd_list": 0.01705,
+ "cli_cost": 0.0201572,
+ "item": "m2"
+}

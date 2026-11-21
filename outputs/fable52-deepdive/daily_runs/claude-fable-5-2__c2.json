@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "```python\nimport re\n\n_DURATION_RE = re.compile(r\"^\\s*(?:(\\d+)\\s*h)?\\s*(?:(\\d+)\\s*m)?\\s*$\", re.IGNORECASE)\n\n\ndef parse_duration(s: str) -> int:\n    \"\"\"Parse a duration string like '1h 30m', '45m', '2h', or '1h5m' into minutes.\n\n    Raises ValueError if the input is not a valid duration.\n    \"\"\"\n    if not isinstance(s, str):\n        raise ValueError(f\"Invalid duration: {s!r}\")\n\n    match = _DURATION_RE.match(s)\n    if not match:\n        raise ValueError(f\"Invalid duration: {s!r}\")\n\n    hours, minutes = match.group(1), match.group(2)\n    if hours is None and minutes is None:\n        raise ValueError(f\"Invalid duration: {s!r}\")\n\n    return int(hours or 0) * 60 + int(minutes or 0)\n```",
+ "seconds": 6.1,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1133.25,
+ "out_tok": 321,
+ "usd_list": 0.02191,
+ "cli_cost": 0.0274696,
+ "item": "c2"
+}

@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "I finished my first half marathon in Bengaluru, crossing the line in 2:05:30. 🏃\n\nIf I had to sum up the journey in one lesson, it's this: consistency beat motivation.\n\nMotivation showed up some mornings and disappeared on others. What carried me to the finish was simply turning up, again and again, whether I felt like it or not.\n\nA huge thank you to my running group, Sunday Striders, for being part of that routine and for making the miles so much better.\n\nTo anyone thinking about a first big goal: don't wait to feel motivated. Start, then keep showing up.\n\n#HalfMarathon #Running #Consistency",
+ "seconds": 3.8,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1170.75,
+ "out_tok": 205,
+ "usd_list": 0.00439,
+ "cli_cost": 0.0060331,
+ "item": "w2"
+}

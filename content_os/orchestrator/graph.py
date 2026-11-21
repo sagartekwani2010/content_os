@@ -35,7 +35,9 @@ NODES: tuple[Node, ...] = (
     Node("gate:brief", "gate", "Creator approves brief", gate="brief", approves="brief"),
     Node("script", "model", "Script + beat sheet", inputs=("brief",), lessons=True),
     Node("gate:script", "gate", "Creator approves script", gate="script", approves="script"),
-    Node("shoot_plan", "auto", "Shoot plan + teleprompter", inputs=("script",)),
+    Node("moodboard", "model", "Mood board + keyframes", inputs=("script",), lessons=True),
+    Node("gate:moodboard", "gate", "Creator approves mood board", gate="moodboard", approves="moodboard"),
+    Node("shoot_plan", "auto", "Shoot plan + teleprompter", inputs=("script", "moodboard")),
     Node("record", "creator", "Creator records the beats", gate="recorded", inputs=("shoot_plan",)),
     Node("ingest", "pipeline", "Ingest footage", inputs=("script", "record"), pipeline=("ingest",)),
     Node("transcribe", "pipeline", "Transcribe", pipeline=("transcribe",)),
@@ -45,7 +47,7 @@ NODES: tuple[Node, ...] = (
     Node("cut_review", "pipeline", "Cut review page", pipeline=("cut_review", "judge_cuts")),
     Node("gate:cut_review", "gate", "Creator approves cuts", gate="cut_review", approves="cut_review"),
     Node("draft_render", "pipeline", "Draft render + draft QA", pipeline=("render:draft", "qa:draft")),
-    Node("visuals", "auto", "Visuals (content_os.visuals)", inputs=("script",), lessons=True),
+    Node("visuals", "auto", "Visuals (content_os.visuals)", inputs=("script", "moodboard"), lessons=True),
     Node("render", "pipeline", "Final render + master", inputs=("visuals",), pipeline=("render",), lessons=True),
     Node("qa", "pipeline", "Measured QA", pipeline=("qa",)),
     Node("av_review", "external", "Audio/video review (OpenAI)", inputs=("render",)),
@@ -60,10 +62,10 @@ NODES: tuple[Node, ...] = (
 ORDER: tuple[str, ...] = tuple(n.name for n in NODES)
 BY_NAME: dict[str, Node] = {n.name: n for n in NODES}
 GATE_NODES: dict[str, str] = {n.gate: n.name for n in NODES if n.gate}
-CREATOR_GATES = ("brief", "script", "cut_review", "final_listen", "posting")
+CREATOR_GATES = ("brief", "script", "moodboard", "cut_review", "final_listen", "posting")
 
 # Stages feedback may be routed to (the classifier's label set), earliest first.
-FEEDBACK_TARGETS = ("brief", "script", "shoot_plan", "record", "score", "cutpoints", "visuals",
+FEEDBACK_TARGETS = ("brief", "script", "moodboard", "shoot_plan", "record", "score", "cutpoints", "visuals",
                     "render", "post_package")
 
 
@@ -91,7 +93,7 @@ def downstream(name: str, include_self: bool = True) -> tuple[str, ...]:
 
 def lesson_scope(name: str) -> str:
     """Which lesson bucket a stage reads."""
-    if name in ("brief", "script", "shoot_plan", "post_package"):
+    if name in ("brief", "script", "moodboard", "shoot_plan", "post_package"):
         return name
     if name in ("score", "cutpoints", "cut_review", "record"):
         return "edit"

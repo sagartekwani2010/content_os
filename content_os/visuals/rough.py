@@ -26,6 +26,8 @@ FONTS = {
     "digits": ("PatrickHand-Regular.ttf", "https://github.com/google/fonts/raw/main/ofl/patrickhand/PatrickHand-Regular.ttf",
                "0f173b3e6cb6d1af25babf7f0057c5ac4ee11f9992b0469bb817e967ef4ad0fc"),
 }
+SYMBOL_FONTS = ["/System/Library/Fonts/Supplemental/Arial Unicode.ttf", "/Library/Fonts/Arial Unicode.ttf",
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"]
 FONT_LICENSES = {"OFL-Kalam.txt": "https://github.com/google/fonts/raw/main/ofl/kalam/OFL.txt",
                  "OFL-PatrickHand.txt": "https://github.com/google/fonts/raw/main/ofl/patrickhand/OFL.txt"}
 
@@ -34,8 +36,21 @@ from .palette import (BLUE, GREEN, GREY, HATCH_LINE_ALPHA, HATCH_TINT_MAX, HATCH
                       ORANGE, PAPER, PURPLE, RED, STROKE_SCALE, YELLOW)
 
 
+_THEME: dict[str, str] = {}
+
+
+def set_theme(theme: str | dict | None) -> None:
+    """Spec-level colour theme: "paper" (default, the approved whiteboard look), "dark", "cold", or a
+    {"#OLD": "#NEW"} map. Every colour passes through ``color()``, so remapping here re-themes every template."""
+    from .palette import THEMES
+    m = THEMES[theme or "paper"] if isinstance(theme, str) or theme is None else theme
+    _THEME.clear()
+    _THEME.update({k.lstrip("#").upper(): v.lstrip("#").upper() for k, v in m.items()})
+
+
 def color(c: str, alpha: float = 1.0) -> int:
-    c = c.lstrip("#")
+    c = c.lstrip("#").upper()
+    c = _THEME.get(c, c)
     r, g, b = int(c[0:2], 16), int(c[2:4], 16), int(c[4:6], 16)
     return skia.Color(r, g, b, int(round(255 * max(0.0, min(1.0, alpha)))))
 
@@ -56,6 +71,13 @@ def font_path(weight: str = "bold") -> Path:
 
 @lru_cache(maxsize=None)
 def typeface(weight: str = "bold") -> skia.Typeface:
+    if weight.startswith("sym"):  # a symbol neither hand font has (→): a fixed system font with wide coverage
+        for f in SYMBOL_FONTS:
+            if Path(f).exists():
+                tf = skia.Typeface.MakeFromFile(f)
+                if tf is not None:
+                    return tf
+        return typeface("bold")
     tf = skia.Typeface.MakeFromFile(str(font_path(weight)))
     if tf is None:
         raise RuntimeError(f"could not load {font_path(weight)}")
@@ -73,12 +95,44 @@ def font(size: float, weight: str = "bold") -> skia.Font:
 
 
 def pick(s: str, weight: str) -> str:
-    """Any text containing a digit is set in the digits font (bold faces only)."""
+    """Any text containing a digit is set in the digits font (bold faces only). ``letters`` (mixed runs: Kalam
+    letters, Patrick Hand digits) is handled by ``runs``."""
     return "digits" if weight == "bold" and any(ch.isdigit() for ch in s) else weight
 
 
+def runs(s: str, weight: str) -> list[tuple[str, str]]:
+    """(text, font weight) runs: ``letters`` sets letters in bold Kalam and digit runs in the digits font, so a
+    title line that names Nutrition5k keeps its Kalam face while its 5 still reads as a 5. Characters the chosen
+    face lacks (₹ in Patrick Hand, → anywhere) fall back to Kalam, then to a system font."""
+    if weight != "letters":
+        base = [(s, pick(s, weight))]
+    else:
+        import re as _re
+        base = [(m.group(0), "digits" if m.group(0)[0].isdigit() else "bold") for m in _re.finditer(r"\d+|\D+", s)]
+    return _fallback_runs(base)
+
+
+@lru_cache(maxsize=4096)
+def _has_glyph(weight: str, ch: str) -> bool:
+    return ch.isspace() or typeface(weight).unicharToGlyph(ord(ch)) != 0
+
+
+def _fallback_runs(base: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    out: list[tuple[str, str]] = []
+    for text, w in base:
+        for ch in text:
+            wt = w
+            if not _has_glyph(w, ch):
+                wt = "bold" if _has_glyph("bold", ch) else "sym"
+            if out and out[-1][1] == wt:
+                out[-1] = (out[-1][0] + ch, wt)
+            else:
+                out.append((ch, wt))
+    return out
+
+
 def text_width(s: str, size: float, weight: str = "bold") -> float:
-    return font(size, pick(s, weight)).measureText(s)
+    return sum(font(size, w).measureText(t) for t, w in runs(s, weight))
 
 
 def draw_text(canvas: skia.Canvas, s: str, x: float, y: float, size: float, col: str = INK, *,
@@ -87,16 +141,20 @@ def draw_text(canvas: skia.Canvas, s: str, x: float, y: float, size: float, col:
     """Draw ``s`` with its baseline at y. ``reveal`` < 1 clips left-to-right (write-on). Returns (x0, width)."""
     if reveal <= 0 or alpha <= 0:
         return x, 0.0
-    f = font(size, pick(s, weight))
-    w = f.measureText(s)
+    parts = runs(s, weight)
+    w = text_width(s, size, weight)
     x0 = x - w / 2 if align == "center" else (x - w if align == "right" else x)
     paint = skia.Paint(AntiAlias=True, Color=color(col, alpha))
     canvas.save()
     if reveal < 1:
         canvas.clipRect(skia.Rect.MakeXYWH(x0 - 4, y - size * 1.4, (w + 8) * reveal, size * 2.0))
-    if halo:  # light outline so text stays legible on a photo
-        canvas.drawString(s, x0, y, f, stroke_paint(halo, max(6.0, size * 0.18), alpha * 0.9))
-    canvas.drawString(s, x0, y, f, paint)
+    xx = x0
+    for t, wt in parts:
+        f = font(size, wt)
+        if halo:  # light outline so text stays legible on a photo
+            canvas.drawString(t, xx, y, f, stroke_paint(halo, max(6.0, size * 0.18), alpha * 0.9))
+        canvas.drawString(t, xx, y, f, paint)
+        xx += f.measureText(t)
     canvas.restore()
     return x0, w
 

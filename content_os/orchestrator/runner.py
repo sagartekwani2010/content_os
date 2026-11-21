@@ -85,6 +85,21 @@ def exec_job(job_id: int) -> int:
             st = "done" if not str(res.get("status", "")).startswith("error") else "failed"
             jobs.finish(job_id, st, {k: v for k, v in res.items() if k != "raw"}, res.get("error"))
             notify.send("A/V review", f"{reel or args.get('file')}: {res.get('status')}")
+        elif kind == "pipeline_steps":
+            import subprocess
+
+            done = []
+            for st in jobs.validate_steps(args.get("steps")):
+                p = subprocess.run([sys.executable, "-m", *st], cwd=str(settings.PROJECT_ROOT),
+                                   capture_output=True, text=True)
+                tail = (p.stdout + p.stderr).strip().splitlines()[-6:]
+                done.append({"step": st, "rc": p.returncode, "tail": tail})
+                if p.returncode != 0:
+                    jobs.finish(job_id, "failed", {"steps": done}, f"step failed: {' '.join(st[:2])}")
+                    notify.send(f"Job {job_id} failed", f"{' '.join(st[:2])}: {tail[-1] if tail else ''}"[:200])
+                    return 1
+            jobs.finish(job_id, "done", {"steps": done})
+            notify.send(f"Job {job_id} done", f"{len(done)} pipeline steps finished")
         else:
             jobs.finish(job_id, "failed", error=f"unknown kind {kind}")
             return 1

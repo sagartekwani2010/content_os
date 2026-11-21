@@ -1,8 +1,22 @@
-# Current Reel context — 15 November 2026
+# Current Reel context — updated 21 November 2026
 
 This is the short entry point for Claude Code working on the current
 creator projects. Read `AGENTS.md`, `HANDOFF.md`, `config/brand.yaml`, and
 `feedback/VIDEO_LEARNING_LOOP.md` before changing the editorial system.
+
+## Where things stand (21 Nov 2026) — each reel's STATUS.md is the source of truth
+
+| Reel | State | Read |
+|---|---|---|
+| Gym Jarvis Ep 1 (launch) | Posted 12 Nov | this file, below |
+| Gym Jarvis Ep 2 (calories / food tracker) | Posted 16 Nov. Its as-spoken narration is the reference voice and skeleton for every build reel | `outputs/food-tracker-reel/TELEPROMPTER.md` |
+| Fable 5.2 deep-dive | Posted 19 Nov | `outputs/fable52-deepdive/` |
+| Gym Jarvis Ep 3 (Workout Analyser) | Main final, awaiting posting; trial shelved (not different enough to record) | `outputs/workout-analyser-reel/STATUS.md` |
+| Salesforce hiring / post-training reel (paid off from the Ep 3 tease) | NEXT, starting in a new chat | `outputs/hiring-posttraining-reel/STATUS.md` |
+
+Process rules added 21 Nov (Ep 3 retro): `.agents/skills/reel-script-writing/SKILL.md` — hard gates, default
+skeleton for system/build reels, blind scoring loop (only blind-judge scores count for gates).
+When a chat ends, update the reel's STATUS.md and this table.
 
 ## Repository boundaries
 

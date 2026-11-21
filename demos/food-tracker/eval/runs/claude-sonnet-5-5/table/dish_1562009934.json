@@ -1,0 +1,272 @@
+{
+ "items": [
+  {
+   "name": "Mixed green salad",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 170,
+   "fdc_query": "Lettuce, mixed salad greens, raw",
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.55,
+   "kcal": 27.3,
+   "kcal_range": [
+    19,
+    36
+   ],
+   "protein_g": 1.7,
+   "protein_range": [
+    1.2,
+    2.2
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Brown rice",
+   "grams_low": 100,
+   "grams_best": 150,
+   "grams_high": 200,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked, steamed",
+   "confidence": 0.55,
+   "kcal": 184.5,
+   "kcal_range": [
+    123,
+    246
+   ],
+   "protein_g": 4.1,
+   "protein_range": [
+    2.7,
+    5.5
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted chicken pieces (thigh and drumstick)",
+   "grams_low": 120,
+   "grams_best": 170,
+   "grams_high": 230,
+   "fdc_query": "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+   "preparation": "roasted or pan-seared, skin on, bone-in or boneless",
+   "confidence": 0.45,
+   "kcal": 394.4,
+   "kcal_range": [
+    278,
+    534
+   ],
+   "protein_g": 39.5,
+   "protein_range": [
+    27.9,
+    53.5
+   ],
+   "fdc": {
+    "fdc_id": "173625",
+    "description": "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 232.0,
+    "protein_100g": 23.26
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Chickpeas or roasted vegetable pieces (in salad)",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 50,
+   "fdc_query": "Chickpeas, mature seeds, cooked, boiled, without salt",
+   "preparation": "cooked, marinated",
+   "confidence": 0.3,
+   "kcal": 49.2,
+   "kcal_range": [
+    25,
+    82
+   ],
+   "protein_g": 2.7,
+   "protein_range": [
+    1.3,
+    4.4
+   ],
+   "fdc": {
+    "fdc_id": "173757",
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 164.0,
+    "protein_100g": 8.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Crumbled cheese (feta or blue)",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "fdc_query": "Cheese, feta",
+   "preparation": "crumbled topping",
+   "confidence": 0.4,
+   "kcal": 26.5,
+   "kcal_range": [
+    13,
+    48
+   ],
+   "protein_g": 1.4,
+   "protein_range": [
+    0.7,
+    2.6
+   ],
+   "fdc": {
+    "fdc_id": "173420",
+    "description": "Cheese, feta",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 265.0,
+    "protein_100g": 14.21
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing / cooking oil",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 20,
+   "fdc_query": "Salad dressing, vinaigrette, oil and vinegar",
+   "preparation": "light coating on salad and oil from cooking chicken",
+   "confidence": 0.25,
+   "kcal": 24.0,
+   "kcal_range": [
+    12,
+    48
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "2710203",
+    "description": "Italian dressing, made with vinegar and oil",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 240.0,
+    "protein_100g": 0.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot and onion",
+   "grams_low": 5,
+   "grams_best": 12,
+   "grams_high": 25,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, shredded or sliced",
+   "confidence": 0.3,
+   "kcal": 4.9,
+   "kcal_range": [
+    2,
+    10
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 512.0,
+  "kcal": 710.8,
+  "protein_g": 49.5,
+  "grams_range": [
+   340.0,
+   713.0
+  ],
+  "kcal_range": [
+   472,
+   1004
+  ],
+  "protein_range": [
+   33.8,
+   68.5
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 512.0,
+   "kcal": 778.2,
+   "protein_g": 50.3,
+   "grams_range": [
+    340.0,
+    713.0
+   ],
+   "kcal_range": [
+    504,
+    1135
+   ],
+   "protein_range": [
+    34.2,
+    70.1
+   ]
+  },
+  "rows": [
+   "Mixed salad greens, raw",
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+   "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+   "Cheese, feta",
+   "Salad dressing, home recipe, vinegar and oil",
+   "Carrot, dehydrated"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "813774047d5673dbd032d33e5cafd68e64fe792d70a2d684b659520188378e54",
+ "scale_cues": "The square white dinner plate is about 25-27 cm across and fills most of the frame. I used it to size the food portions. The rice and chicken take up about a third of the plate's width.",
+ "assumptions": [
+  "The dark spots in the salad are chickpeas or roasted vegetables, which I can't tell apart.",
+  "The chicken is skin-on and bone-in or boneless, with only a small bone allowance in the estimate.",
+  "The rice is brown rice because of its tan color and visible grains.",
+  "The salad has a light dressing, and the chicken was cooked in some oil or butter.",
+  "The cheese is crumbled feta or blue cheese."
+ ],
+ "latency_s": 12.7,
+ "calls": [
+  {
+   "wall_s": 8.29,
+   "duration_ms": 7548,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0301009,
+   "cost_basis": "list",
+   "input_tokens": 8982,
+   "output_tokens": 959
+  },
+  {
+   "wall_s": 4.39,
+   "duration_ms": 3353,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0224506,
+   "cost_basis": "list",
+   "input_tokens": 4575,
+   "output_tokens": 367
+  }
+ ],
+ "cost_usd_cli": 0.05255,
+ "log_id": "1bcf7fedc62d"
+}

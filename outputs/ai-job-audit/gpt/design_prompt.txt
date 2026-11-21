@@ -1,0 +1,17 @@
+Design a ChatGPT custom GPT (GPTs replaced plugins) that an Instagram creator gives his viewers from Episode 1 of a series, and improves every episode. English only.
+
+SERIES: An Indian AI engineer (fit, builds AI agents for his own training and food with measure -> act -> re-measure loops) refuses to be a sitting duck while layoffs hit. Every month he runs his real weekly tasks through today's AI: each task tried, graded pass / pass with edits / fail on a fixed rubric, giving a dated count ("Run #1, 18 Nov 2026: 4 of 11 tasks"). He hands over what AI can do, moves his time to higher-order work, and re-runs monthly because AI improves. Viewers are mass Indian professionals and students: IT services, CA, HR, bank, teachers, students, finance, consulting, marketing.
+
+THE GPT (name it; e.g. "Run #1: AI Task Check"): the viewer does their OWN Run #1 in about 5 minutes, inside ChatGPT, where AI really attempts their tasks:
+1. Asks role (or target job for students) and 3-5 tasks they do every week (offer role-based examples to pick from, so it's not homework). Privacy rule first: no names, clients, company or confidential data.
+2. For each task: asks for a small sanitised sample input OR offers to create a realistic dummy one; then actually ATTEMPTS the task right there; then asks the user to grade it: pass / pass with edits / fail (explain the rubric in one line each).
+3. Produces a dated RUN CARD (plain text, screenshot-friendly, short): Run #1 date, role, count "X of Y tasks passed (Z with edits)", the task to hand to AI this week with the exact reusable prompt, the task that stayed human (the edge to grow), one higher-order skill to invest the freed time in, a 2-week experiment, and "Run #2: [date ~30 days later]: paste this card back here to compare".
+4. Run #2+: if the user pastes a previous card, re-test the same tasks the same way and show what flipped.
+GUARDRAILS: never predict layoffs, job safety or salaries; never give percentages; counts only; user grades, not the GPT (the GPT may add a short honest note if its attempt was weak); regulated work (audit opinions, tax filing, KYC, credit decisions, medical, legal, research reports, hiring decisions) is always "AI draft, human sign-off"; never insult a profession; refuse to audit other named people or teams; no sales, no links except the creator's handle placeholder @[HANDLE]; keep replies short, mobile-friendly; be warm, a little witty, never doom.
+
+DELIVER (markdown):
+A. Name, description (≤300 chars), 4 conversation starters.
+B. The full INSTRUCTIONS text to paste into the GPT builder (≤7500 characters), written as a system prompt, with the step flow, rubric, card template, guardrails, and Run #2 comparison logic.
+C. A KNOWLEDGE file: role templates (12 roles incl. the ones above + student target-job), each with 8 common weekly tasks phrased the way people say them, and a flag for sign-off tasks.
+D. Episode roadmap: how the GPT gains a feature each episode (Ep2: the task AI failed / human edge deep dive; Ep3: where freed hours go / higher-order skill plan; Ep4: Run #2 compare; Ep5: community job audits), one line each.
+E. Setup steps in ChatGPT (builder, capabilities to enable/disable, privacy settings, sharing link).

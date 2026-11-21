@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "The two coins are a **₹10 coin** and a **₹5 coin**. The statement that one isn't a ₹10 coin means the other one is, so the remaining coin must be ₹5 to total ₹15.\n\nANSWER: ₹10 and ₹5",
+ "seconds": 868.9,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 7402.2,
+ "out_tok": 609,
+ "usd_list": 0.00104,
+ "cli_cost": 0.00138762,
+ "item": "r7"
+}

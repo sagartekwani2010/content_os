@@ -1,0 +1,62 @@
+{
+ "X": {
+  "personas": [
+   6,
+   5,
+   5,
+   5,
+   4,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   5,
+   7,
+   7,
+   6,
+   5
+  ],
+  "mass": 5.0,
+  "fcm": 5.8,
+  "builders": 6.5,
+  "overall": 5.7,
+  "voice_match": 7,
+  "mechanism": 6.5,
+  "weakest": [
+   "Beat 11: 'the coach isn't allowed the numbers' never says why, so the second agent reads as arbitrary, and 'it refuses to judge' in beat 12 has no clear subject.",
+   "Beat 13: three spoken counts (6, 11, 2) are a list the ear drops, and they sum to 19 against the hook's twenty-three sets; with beats 6-9 spending four beats on the wave, the middle drags for mass viewers."
+  ]
+ },
+ "Y": {
+  "personas": [
+   6,
+   5,
+   6,
+   5,
+   5,
+   6,
+   6,
+   6,
+   6,
+   7,
+   6,
+   6,
+   7,
+   6,
+   7,
+   5
+  ],
+  "mass": 5.6,
+  "fcm": 6.2,
+  "builders": 6.25,
+  "overall": 5.9,
+  "voice_match": 7,
+  "mechanism": 7,
+  "weakest": [
+   "Beat 3: 'After over 200 papers and tools, I realized...' is crammed and awkward to say aloud, and it drops the 'I had Claude dig through' step that is part of the Ep 2 voice.",
+   "Beat 11: 'most were continue or hold' is vague with no concrete result, so the 'except this one' turn in beat 12 has less to push against; beat 9 is also long for one breath."
+  ]
+ }
+}

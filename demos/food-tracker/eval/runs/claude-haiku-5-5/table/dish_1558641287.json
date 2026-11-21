@@ -1,0 +1,104 @@
+{
+ "items": [
+  {
+   "name": "Cherry tomatoes (red, whole, raw)",
+   "grams_low": 130,
+   "grams_best": 180,
+   "grams_high": 230,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, whole, uncut",
+   "confidence": 0.7,
+   "kcal": 32.4,
+   "kcal_range": [
+    23,
+    41
+   ],
+   "protein_g": 1.6,
+   "protein_range": [
+    1.1,
+    2.0
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 180.0,
+  "kcal": 32.4,
+  "protein_g": 1.6,
+  "grams_range": [
+   130.0,
+   230.0
+  ],
+  "kcal_range": [
+   23,
+   41
+  ],
+  "protein_range": [
+   1.1,
+   2.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 180.0,
+   "kcal": 32.4,
+   "protein_g": 1.6,
+   "grams_range": [
+    130.0,
+    230.0
+   ],
+   "kcal_range": [
+    23,
+    41
+   ],
+   "protein_range": [
+    1.1,
+    2.0
+   ]
+  },
+  "rows": [
+   "Tomatoes, red, ripe, raw, year round average"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "6f28d3aa26d340c8805af42930c149385deb975b5d078dc44e2da87be7f822fe",
+ "scale_cues": "Plate used as scale: white square dinner plate, roughly 26 cm across. Tomato size estimated relative to the plate rim. Counted 8 whole oval tomatoes, roughly 3-4 cm long each.",
+ "assumptions": [
+  "Count is 8 whole tomatoes; none are cut or hidden.",
+  "Each tomato is about 20-25 g (plum or grape-cherry type), so about 180 g total.",
+  "No dressing, oil, or garnish is visible, so none is listed.",
+  "Plate weight is not included in the edible mass.",
+  "Tomatoes are treated as raw, whole, and ripe."
+ ],
+ "latency_s": 11.92,
+ "calls": [
+  {
+   "wall_s": 8.56,
+   "duration_ms": 7813,
+   "num_turns": 2,
+   "cost_usd_cli": 0.00171309,
+   "cost_basis": "list",
+   "input_tokens": 10258,
+   "output_tokens": 1097
+  },
+  {
+   "wall_s": 3.35,
+   "duration_ms": 2335,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0003696,
+   "cost_basis": "list",
+   "input_tokens": 1539,
+   "output_tokens": 124
+  }
+ ],
+ "cost_usd_cli": 0.00208,
+ "log_id": "395b613e7798"
+}

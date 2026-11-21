@@ -1,0 +1,540 @@
+{
+ "models": [
+  "claude-fable-5-2",
+  "claude-opus-5-5",
+  "claude-sonnet-5-5",
+  "claude-haiku-5-5"
+ ],
+ "effort": "high",
+ "n": {
+  "think": 8,
+  "maths": 6,
+  "code": 3,
+  "write": 2,
+  "summary": 1
+ },
+ "results": {
+  "claude-fable-5-2": {
+   "think": 8,
+   "maths": 6,
+   "code": 3,
+   "write": 1.875,
+   "summary": 0.25,
+   "usd": 0.41449,
+   "sec": 120.1,
+   "invented": 0
+  },
+  "claude-opus-5-5": {
+   "think": 8,
+   "maths": 6,
+   "code": 3,
+   "write": 1.875,
+   "summary": 0.25,
+   "usd": 0.22416999999999995,
+   "sec": 2498.5,
+   "invented": 0
+  },
+  "claude-sonnet-5-5": {
+   "think": 8,
+   "maths": 6,
+   "code": 3,
+   "write": 2.0,
+   "summary": 0.75,
+   "usd": 0.09308,
+   "sec": 3382.9999999999995,
+   "invented": 0
+  },
+  "claude-haiku-5-5": {
+   "think": 8,
+   "maths": 6,
+   "code": 3,
+   "write": 1.875,
+   "summary": 0.25,
+   "usd": 0.013329999999999998,
+   "sec": 7304.800000000001,
+   "invented": 0
+  }
+ },
+ "detail": [
+  [
+   "claude-fable-5-2",
+   "r1",
+   true,
+   "1"
+  ],
+  [
+   "claude-fable-5-2",
+   "r2",
+   true,
+   "Two kilograms of iron"
+  ],
+  [
+   "claude-fable-5-2",
+   "r3",
+   true,
+   "10"
+  ],
+  [
+   "claude-fable-5-2",
+   "r4",
+   true,
+   "20 minutes"
+  ],
+  [
+   "claude-fable-5-2",
+   "r5",
+   true,
+   "1/2"
+  ],
+  [
+   "claude-fable-5-2",
+   "r6",
+   true,
+   "Day 46"
+  ],
+  [
+   "claude-fable-5-2",
+   "r7",
+   true,
+   "₹10 and ₹5"
+  ],
+  [
+   "claude-fable-5-2",
+   "r8",
+   true,
+   "His father"
+  ],
+  [
+   "claude-fable-5-2",
+   "m1",
+   true,
+   "₹180"
+  ],
+  [
+   "claude-fable-5-2",
+   "m2",
+   true,
+   "₹10,379"
+  ],
+  [
+   "claude-fable-5-2",
+   "m3",
+   true,
+   "-1"
+  ],
+  [
+   "claude-fable-5-2",
+   "m4",
+   true,
+   "18.7"
+  ],
+  [
+   "claude-fable-5-2",
+   "m5",
+   true,
+   "161 g"
+  ],
+  [
+   "claude-fable-5-2",
+   "m6",
+   true,
+   "15:20"
+  ],
+  [
+   "claude-fable-5-2",
+   "c1",
+   true,
+   ""
+  ],
+  [
+   "claude-fable-5-2",
+   "c2",
+   true,
+   ""
+  ],
+  [
+   "claude-fable-5-2",
+   "c3",
+   true,
+   ""
+  ],
+  [
+   "claude-fable-5-2",
+   "w1",
+   "7/8",
+   "55 words"
+  ],
+  [
+   "claude-fable-5-2",
+   "w2",
+   "9/9",
+   "61 words"
+  ],
+  [
+   "claude-fable-5-2",
+   "s1",
+   "2/8",
+   "invented 0 | 116 words"
+  ],
+  [
+   "claude-opus-5-5",
+   "r1",
+   true,
+   "1"
+  ],
+  [
+   "claude-opus-5-5",
+   "r2",
+   true,
+   "Two kilograms of iron"
+  ],
+  [
+   "claude-opus-5-5",
+   "r3",
+   true,
+   "₹10"
+  ],
+  [
+   "claude-opus-5-5",
+   "r4",
+   true,
+   "20 minutes"
+  ],
+  [
+   "claude-opus-5-5",
+   "r5",
+   true,
+   "1/2"
+  ],
+  [
+   "claude-opus-5-5",
+   "r6",
+   true,
+   "Day 46"
+  ],
+  [
+   "claude-opus-5-5",
+   "r7",
+   true,
+   "A ₹10 coin and a ₹5 coin"
+  ],
+  [
+   "claude-opus-5-5",
+   "r8",
+   true,
+   "His father"
+  ],
+  [
+   "claude-opus-5-5",
+   "m1",
+   true,
+   "₹180"
+  ],
+  [
+   "claude-opus-5-5",
+   "m2",
+   true,
+   "₹10,379"
+  ],
+  [
+   "claude-opus-5-5",
+   "m3",
+   true,
+   "-1%"
+  ],
+  [
+   "claude-opus-5-5",
+   "m4",
+   true,
+   "18.7"
+  ],
+  [
+   "claude-opus-5-5",
+   "m5",
+   true,
+   "161 g"
+  ],
+  [
+   "claude-opus-5-5",
+   "m6",
+   true,
+   "15:20"
+  ],
+  [
+   "claude-opus-5-5",
+   "c1",
+   true,
+   ""
+  ],
+  [
+   "claude-opus-5-5",
+   "c2",
+   true,
+   ""
+  ],
+  [
+   "claude-opus-5-5",
+   "c3",
+   true,
+   ""
+  ],
+  [
+   "claude-opus-5-5",
+   "w1",
+   "7/8",
+   "45 words"
+  ],
+  [
+   "claude-opus-5-5",
+   "w2",
+   "9/9",
+   "86 words"
+  ],
+  [
+   "claude-opus-5-5",
+   "s1",
+   "2/8",
+   "invented 0 | 170 words"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r1",
+   true,
+   "1"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r2",
+   true,
+   "Two kilograms of iron"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r3",
+   true,
+   "₹10"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r4",
+   true,
+   "20 minutes"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r5",
+   true,
+   "1/2"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r6",
+   true,
+   "Day 46"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r7",
+   true,
+   "₹10 and ₹5"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "r8",
+   true,
+   "His father"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "m1",
+   true,
+   "₹180"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "m2",
+   true,
+   "₹10,379"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "m3",
+   true,
+   "-1%"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "m4",
+   true,
+   "18.7"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "m5",
+   true,
+   "161 g"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "m6",
+   true,
+   "15:20"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "c1",
+   true,
+   ""
+  ],
+  [
+   "claude-sonnet-5-5",
+   "c2",
+   true,
+   ""
+  ],
+  [
+   "claude-sonnet-5-5",
+   "c3",
+   true,
+   ""
+  ],
+  [
+   "claude-sonnet-5-5",
+   "w1",
+   "8/8",
+   "46 words"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "w2",
+   "9/9",
+   "104 words"
+  ],
+  [
+   "claude-sonnet-5-5",
+   "s1",
+   "6/8",
+   "invented 0 | 137 words"
+  ],
+  [
+   "claude-haiku-5-5",
+   "r1",
+   true,
+   "1"
+  ],
+  [
+   "claude-haiku-5-5",
+   "r2",
+   true,
+   "Two kilograms of iron are heavier."
+  ],
+  [
+   "claude-haiku-5-5",
+   "r3",
+   true,
+   "₹10"
+  ],
+  [
+   "claude-haiku-5-5",
+   "r4",
+   true,
+   "20 minutes"
+  ],
+  [
+   "claude-haiku-5-5",
+   "r5",
+   true,
+   "1/2"
+  ],
+  [
+   "claude-haiku-5-5",
+   "r6",
+   true,
+   "Day 46"
+  ],
+  [
+   "claude-haiku-5-5",
+   "r7",
+   true,
+   "₹10 and ₹5"
+  ],
+  [
+   "claude-haiku-5-5",
+   "r8",
+   true,
+   "The boy's father"
+  ],
+  [
+   "claude-haiku-5-5",
+   "m1",
+   true,
+   "₹180"
+  ],
+  [
+   "claude-haiku-5-5",
+   "m2",
+   true,
+   "₹10,379"
+  ],
+  [
+   "claude-haiku-5-5",
+   "m3",
+   true,
+   "-1%"
+  ],
+  [
+   "claude-haiku-5-5",
+   "m4",
+   true,
+   "18.7"
+  ],
+  [
+   "claude-haiku-5-5",
+   "m5",
+   true,
+   "161 g of chicken breast"
+  ],
+  [
+   "claude-haiku-5-5",
+   "m6",
+   true,
+   "15:20"
+  ],
+  [
+   "claude-haiku-5-5",
+   "c1",
+   true,
+   ""
+  ],
+  [
+   "claude-haiku-5-5",
+   "c2",
+   true,
+   ""
+  ],
+  [
+   "claude-haiku-5-5",
+   "c3",
+   true,
+   ""
+  ],
+  [
+   "claude-haiku-5-5",
+   "w1",
+   "7/8",
+   "48 words"
+  ],
+  [
+   "claude-haiku-5-5",
+   "w2",
+   "9/9",
+   "62 words"
+  ],
+  [
+   "claude-haiku-5-5",
+   "s1",
+   "2/8",
+   "invented 0 | 125 words"
+  ]
+ ]
+}

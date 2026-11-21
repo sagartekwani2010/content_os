@@ -1,0 +1,199 @@
+{
+ "check": {
+  "must_fix": [
+   "Hook breaks the locked outline. BRIEF section 1 says the hook is the payoff image: green ghost of the best rep over the bad rep, red gap and STOP stamp. The draft speaks the 0.2 s counting error and makes '0.2 s' the biggest type, so the payoff ghost becomes background and a cold viewer hears about one clip while seeing another. The writer seems to have swapped hooks because BAD_SET and VERDICT are unmeasured. The fix is to measure them, not to change the locked hook. Restore the ghost and STOP as the hook, and move the 0.2 s reading back to the FAIL section only.",
+   "The E2 experiment drifted. LOCKED: MAIN is a personal-test hook and TRIAL is a contrarian self-correction, both positive. The draft's MAIN is a counting-error joke, not the personal test of catching the bad set. Its TRIAL ('I'm crossing that point-two-second squat off my count') is not contrarian and needs context because of 'that'. Rewrite MAIN on the caught bad set. Use the brief's cold-safe TRIAL ('I thought this was my worst set. My AI said it was fine.') or an equivalent. The hypothesis in EXPERIMENTS.md must name this variable.",
+   "Wrong speed. The draft times the reel at 1.15x, but REEL_DEFAULTS and the BRIEF use 1.1x (cold open and punchline at 1.0x). Rescaled to 1.1x, the 47 s estimate becomes about 49 s, which is over the 42-48 s target. Recompute at 1.1x and 2.8 words/s, include the reading holds, and trim to fit, for example by cutting the filler in beat 2.",
+   "Not recordable yet. The hook (beat 1 visual), the stake (beat 2), the ghost (beat 10) and the payoff (beat 12) all depend on BAD_SET, BEST_SET and VERDICT, which are unmeasured. The judge is not built. The 19 Nov skill rule says to run the test first and then write; the last Ep 3 rounds scored 5.0-5.2 because the stake was a slot. Mark the package as blocked from recording and lock until these slots are filled from real output, then rewrite beats 1, 2 and 12 around the measured fault."
+  ],
+  "should_fix": [
+   "Beat 2 opens with filler ('Here's what mattered on my...'). Lead with the fault and the risk in plain gym words, as the creator does ('strongest words first'), and add one personal stake line ('this could have cost me...') only if the measured fault supports it.",
+   "Beat 8 credits '\"can't see\" instead of guessing' for the whole 14 -> 11 fix. The measured fix also dropped impossible angles (<30 degrees) and enforced a 0.8 s minimum rep, which is what removed the 0.2 s rep. Keep the locked 'can't see' line, but put 'impossible readings thrown out' on screen with it. 'I get eleven' reads as if the creator is counting: use 'it gets eleven' or 'it counts eleven'. Also confirm the 'can't see your knee on rep N' message exists in real output, because guardrail and judge output are not marked measured.",
+   "Beat 11 asks 'So which set would I skip?'. The judge returns CONTINUE / HOLD / STOP per rep, so 'skip' implies a decision made before the set. Use the brief's wording, e.g. 'So where would it have stopped me?'.",
+   "The ghost overlay is only honest if BEST_SET is the same lift and a similar camera angle as BAD_SET. State this as a requirement in the source key and on K01/K17.",
+   "Beat 1 packs a ghost overlay, a verdict stamp, a separate count slip and two lines of on-screen text into 3 s. That breaks 'one idea per beat' and the 1.5 s stranger test. One image and at most one label.",
+   "The CTA keyword 'MAP' is arbitrary, and the creator's CTAs name the benefit ('Comment Fable to access skills and tips...'). Pick a word tied to the reel (e.g. 'FORM' or 'JARVIS') and say what they get. The pinned-comment delivery is honest; keep it.",
+   "Cover and caption are built on the 0.2 s hook. If the hook goes back to the payoff, rebuild the cover around the caught set (series name, one hook, the creator's face) and lead the caption with the payoff. Keep the IMG_2649 'was actually a good set' twist in the caption body, which the brief allows.",
+   "There is no Fable engagement score. The taste model requires >=7.5/10 from a Fable judge before lock, and an Opus story check (SCRIPT_CHECK.md). Run both once the slots are filled.",
+   "The draft treats the v2 outline as signed off. The BRIEF says it 'needs creator sign-off before beats are written'. Confirm the sign-off is recorded.",
+   "The beat-1 visual and its loop-back frame (K21) still carry '[VERDICT stamp]', and the gate text says to use STOP only if the verdict supports it. Good, but the beat-1 caption/visual spec should name the fallback (HOLD stamp, or no stamp) so the edit doesn't stall.",
+   "The teleprompter section is bare lines. House rules want FEEL / FACE-VOICE / POSE per beat and the Chrome teleprompter.html; carry the delivery and continuity notes from the table into it.",
+   "'Not training advice' appears only in the caption. Add a small on-screen line during the verdict beat (12), since that beat gives a form judgement."
+  ],
+  "facts_ok": true
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "The jumping dot makes the bug visible without code. I'd send the 14-versus-11 sequence to a teammate; the later form verdict interests me less."
+   },
+   {
+    "id": 2,
+    "score": 5,
+    "drop_beat": "9",
+    "why": "I want to know where the three extra reps came from. Once the count gets back to 11, the question I stayed for is answered."
+   },
+   {
+    "id": 3,
+    "score": 4,
+    "drop_beat": "3",
+    "why": "The impossible squat gets my attention, and the freeze makes me look for the fault. Then HOW IT WORKS appears when I'm still waiting to see the supposed squat."
+   },
+   {
+    "id": 4,
+    "score": 4,
+    "drop_beat": "4",
+    "why": "I can follow the knee wave. I just wanted to see what the camera mistook for a squat, and by ten seconds I'm still waiting."
+   },
+   {
+    "id": 5,
+    "score": 6,
+    "drop_beat": "9",
+    "why": "The pencil lifting when the knee disappears is a lovely way to explain missing evidence. That feels like a complete lesson; I don't need a second one on form."
+   },
+   {
+    "id": 6,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "Seeing a real clip turn into joints, then a wave, then a wrong count makes this feel like a project I could try. I'd save the build map."
+   },
+   {
+    "id": 7,
+    "score": 6,
+    "drop_beat": "11",
+    "why": "The raw, reference and cleaned counts are easy to compare. I'm still interested in the personal baseline, but the judge diagram interrupts just when I want the result."
+   },
+   {
+    "id": 8,
+    "score": 5,
+    "drop_beat": "10",
+    "why": "The count has a number I can check. Calling another set 'my best' doesn't yet tell me why a difference from it warrants stopping."
+   },
+   {
+    "id": 9,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I'd save the hidden-knee example for explaining why a system should sometimes give no answer. The clip and the blank trace make that point better than a slide would."
+   },
+   {
+    "id": 10,
+    "score": 5,
+    "drop_beat": "4",
+    "why": "The marked rep makes me curious about the decision. When the reel starts deriving a knee wave instead, it feels like a long route back to that decision."
+   },
+   {
+    "id": 11,
+    "score": 6,
+    "drop_beat": "9",
+    "why": "The misplaced tick and the jump are the moment I'd replay. After the clean 11 lands, the form question feels like the hook for another reel."
+   },
+   {
+    "id": 12,
+    "score": 5,
+    "drop_beat": "3",
+    "why": "The 0.2-second slip is memorable, but my eye went to the verdict stamp. By the section card I'm unsure which reveal I'm waiting for."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "The raw frame beside the bad reading is the bit I'd send to another dev. It shows what failed rather than just putting a skeleton over gym footage."
+   },
+   {
+    "id": 14,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I'd stay for the trace and comment to ask which detections were rejected. Getting 11 in total is encouraging, but doesn't show it found the right 11."
+   },
+   {
+    "id": 15,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I want to compare the two actual reps, so I'll wait for the ghost overlay. I'd discuss the visible difference with a client, not treat the AI's stamp as a coaching cue."
+   },
+   {
+    "id": 16,
+    "score": 4,
+    "drop_beat": "2",
+    "why": "I stopped to see a ridiculously fast squat. Switching to a different set before showing the counting mistake loses me."
+   }
+  ],
+  "groups": {
+   "mass": 5.0,
+   "fin_consult_mktg": 5.67,
+   "builders": 7.5
+  },
+  "overall": 5.88,
+  "top_fixes": [
+   "Give the opening to the count error alone. Put the real jumping dot beside '0.2 s,' then land 'It counted 14. I did 11' within the first five seconds. Move the verdict stamp and best-set ghost out of that frame.",
+   "Consider ending this reel on the clean 11 and giving the form comparison its own reel. If both stay, replace 'Were those eleven reps any good?' with an explicit switch: 'That was the count test. Here's a different set I'd review.'",
+   "Show which detections were rejected, not just that the totals match. Keep the jumping-dot frame distinct from the hidden-knee frame so the edit doesn't imply the rail caused all three extra counts.",
+   "Let the viewer inspect the aligned reps full-screen before revealing the verdict. Keep the build map in the pinned comment; use the final seconds for a question the footage lets people answer, such as 'Which rep would you review?'"
+  ]
+ },
+ "critic": {
+  "predicted_score": 5.5,
+  "would_approve": false,
+  "change_list": [
+   "Hook is not what we locked. The one idea is: my AI watched every set I have filmed and found the one I should never have done. The 0.2 sec squat is a tracking bug, not the story. Lead with the strongest words, and the voice has to match the ghost + STOP image, not talk about something else.",
+   "Beat 1 shows two things at once (ghost + STOP, and a count slip). One idea per beat. Move the 0.2 s into the FAIL section or drop it.",
+   "Beats 2 and 12 are still slots, so this is not a complete script. First do, then show. Find the bad set and the best set from my clips, get the judge verdict, then give me the complete script. I will not record on placeholders.",
+   "Trial hook is weak. Use the one we discussed: 'I thought this was my worst set. My AI said it was fine.' All 3 hooks are the same 0.2 sec joke; give me actually different ones.",
+   "Too many questions: 'So how does it know', 'what happens when the machine hides my leg', 'were those eleven reps any good', 'which set would I skip'. Keep 2 at most. Remove 'watch where that dot jumps'.",
+   "Two failures (dot jump and hidden leg) is one too many. Keep 14 vs 11 and the hidden leg, as in the outline.",
+   "Where is the impact for an everyday user? Give one 'So always...' line and one comparison everyone relates to, like how we all left a question blank in exams instead of guessing.",
+   "Comment MAP gives people nothing. The CTA should name the benefit: comment a word to access the actual skill or the architecture, so that people feel valued. Only promise what we can send.",
+   "Skeleton lock-on is a hero visual and it gets under 2 secs behind a title card. Give it room. Same for the full diagram: it completes in a 2 sec beat, so let it build through the 'my best set' section.",
+   "SFX are too soft (dry, muted, soft everywhere). I asked for SFX significantly up across the complete reel. Make the lock-on, counter and STOP stamp hit.",
+   "Where is the Fable score? Run the judge and panel, breach at least 7.5, then show me the top 1-2 finished options. Not this round.",
+   "Speed says 1.15x here but the brief says 1.1x. Pick one and tell me if delivery suffers.",
+   "Cover should carry the real hook (the set I should have skipped), not '0.2-second squat?'.",
+   "Add a one-line tease for the next episode in the caption or the last second over my footage with the red mark.",
+   "Remove the long recording-gate note on top. Short and to the point."
+  ],
+  "taste_violations": [
+   "Non-negotiable: complete script before review. The stake (beat 2) and payoff (beat 12) are slots, so the reel's own measured result is missing. The facts sheet has no BAD_SET, BEST_SET or judge verdict yet, so this is a measurement gap more than a writing fault, but the creator will still not approve.",
+   "Non-negotiable: Fable-judged at 7.5 or above before the creator sees it. The draft states no score or independent check (checklist 22 fails on the score; runtime of about 47 s passes).",
+   "Brief's one idea and locked HOOK section: the spoken hook is about a counting glitch while the visual shows the ghost and STOP verdict. This is an audio-visual mismatch and a tech-bug opening where a human-stakes opening exists.",
+   "Checklist 7 fail: beat 1 does not lead with the strongest words.",
+   "Checklist 23 partial: main and trial differ in one variable, but the trial is not the locked contrarian self-correction, and the three hooks share one gag instead of three emotions.",
+   "Checklist 4 fail: more than three ideas (wave, dot jump, 14 vs 11, hidden leg, own best, verdict).",
+   "Checklist 5 partial: evidence on screen and plain lines are there, but no everyday comparison and no 'So always...' action.",
+   "Checklist 12 partial: no single one-line measured result; the [AGREE] slot is unused and the count test spreads over beats 5-8.",
+   "Checklist 14 partial: no tip of the creator's own to keep. The save sheet is the only take-away, and the CTA names no benefit ('Comment MAP' with nothing delivered).",
+   "Checklist 19 partial: beats 5, 8 and 9 lean on neighbouring beats ('that dot', 'I get eleven', 'those eleven'), so skipping one breaks the thread.",
+   "Checklist 21 partial: the loop returns to the creator's own footage with the stamp, but there is no next-episode tease in the reel or caption.",
+   "Checklist 24 passes on coverage (a sound on every visual event), but the sounds are specified as dry, soft or muted, against the ask for clearly audible SFX.",
+   "Extra hook devices: four spoken questions in 47 s, plus 'watch where that dot jumps'.",
+   "Speed stated as 1.15x against the brief and REEL_DEFAULTS at 1.1x, without flagging the change.",
+   "Awe: the skeleton lock-on gets about 1.9 s and shares the beat with a title card."
+  ],
+  "what_they_will_love": [
+   "The whole package sits in one file: spoken lines, top-half visuals, bottom half, on-screen text, emotion, delivery and sound side by side, plus keyframe board, teleprompter, caption, pinned comment and cover (checklist 1 and 25 pass).",
+   "The architecture stays as the signature: it builds progressively from beat 4 and is held as the save asset from beat 11 through the CTA, with Fable 5.2 only on the judge box and in the caption (checklist 11 passes).",
+   "'First try, it counted 14 reps. I did 11.' and 'I use my own best set as the reference, not a textbook.' are short declaratives the creator would say almost verbatim.",
+   "Every number traces to the facts sheet and nothing is invented; slots stay slots and the STOP stamp is conditional on a real verdict (checklist 15 passes).",
+   "Locked wording is respected: 'my AI' is the only actor in speech, there is no 'pose tool', 'guardrail' or 'rep maths', and the footage is framed as old clips with no fake live alert.",
+   "No spoken hedges, no Hindi or Hinglish, no closing aphorism, no boilerplate or lab showpieces, and the hook is not cost-led (checklist 2, 3, 8, 16, 17, 20 pass).",
+   "Beats are labelled and alternate E/H, with re-hooks at about one third and two thirds (checklist 18 passes).",
+   "Visuals are drawn from real pose data in the hand-drawn style, with amber for 'can't see' kept apart from red for bad form.",
+   "The caption carries the IMG_2649 twist (the teased STOP clip was a good set) instead of making it a cold hook, as locked.",
+   "Checklist items 6, 9, 10 and 13 do not apply to this build reel (no paper findings, credited clips, page count or bar chart)."
+  ]
+ },
+ "score": 4.489999999999999,
+ "summary": {
+  "panel": 5.88,
+  "critic": 5.5,
+  "must_fix": 4,
+  "approve": false,
+  "groups": {
+   "mass": 5.0,
+   "fin_consult_mktg": 5.67,
+   "builders": 7.5
+  }
+ }
+}

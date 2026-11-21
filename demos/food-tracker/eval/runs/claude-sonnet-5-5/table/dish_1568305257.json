@@ -1,0 +1,216 @@
+{
+ "items": [
+  {
+   "name": "Scrambled eggs",
+   "grams_low": 140,
+   "grams_best": 180,
+   "grams_high": 230,
+   "fdc_query": "Egg, whole, cooked, scrambled",
+   "preparation": "Scrambled, soft curds, likely cooked with a little butter or oil",
+   "confidence": 0.65,
+   "kcal": 268.2,
+   "kcal_range": [
+    209,
+    343
+   ],
+   "protein_g": 18.0,
+   "protein_range": [
+    14.0,
+    23.0
+   ],
+   "fdc": {
+    "fdc_id": "172187",
+    "description": "Egg, whole, cooked, scrambled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 149.0,
+    "protein_100g": 9.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooked kale or spinach greens",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 130,
+   "fdc_query": "Kale, cooked, boiled, drained, without salt",
+   "preparation": "Saut\u00e9ed or wilted dark leafy greens",
+   "confidence": 0.5,
+   "kcal": 32.4,
+   "kcal_range": [
+    22,
+    47
+   ],
+   "protein_g": 2.6,
+   "protein_range": [
+    1.8,
+    3.8
+   ],
+   "fdc": {
+    "fdc_id": "169238",
+    "description": "Kale, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 36.0,
+    "protein_100g": 2.94
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Carrots, raw",
+   "preparation": "Raw shreds scattered over the greens",
+   "confidence": 0.4,
+   "kcal": 2.5,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooked bacon or cured pork strips",
+   "grams_low": 40,
+   "grams_best": 65,
+   "grams_high": 95,
+   "fdc_query": "Pork, cured, bacon, cooked, pan-fried",
+   "preparation": "Thick strips, dark and well-cooked; could be turkey bacon or ham",
+   "confidence": 0.4,
+   "kcal": 304.2,
+   "kcal_range": [
+    187,
+    445
+   ],
+   "protein_g": 22.0,
+   "protein_range": [
+    13.6,
+    32.2
+   ],
+   "fdc": {
+    "fdc_id": "168322",
+    "description": "Pork, cured, bacon, pre-sliced, cooked, pan-fried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 468.0,
+    "protein_100g": 33.92
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil or butter",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Butter, without salt",
+   "preparation": "Implied by the scrambled eggs and saut\u00e9ed greens; not directly visible",
+   "confidence": 0.25,
+   "kcal": 53.0,
+   "kcal_range": [
+    27,
+    88
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171016",
+    "description": "Oil, sesame, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup",
+   "match_flag": "weak match"
+  }
+ ],
+ "totals": {
+  "grams": 347.0,
+  "kcal": 660.3,
+  "protein_g": 42.7,
+  "grams_range": [
+   246.0,
+   475.0
+  ],
+  "kcal_range": [
+   446,
+   927
+  ],
+  "protein_range": [
+   29.4,
+   59.1
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 347.0,
+   "kcal": 678.3,
+   "protein_g": 43.1,
+   "grams_range": [
+    246.0,
+    475.0
+   ],
+   "kcal_range": [
+    455,
+    957
+   ],
+   "protein_range": [
+    29.6,
+    59.8
+   ]
+  },
+  "rows": [
+   "Egg, whole, cooked, scrambled",
+   "Kale, cooked, boiled, drained, without salt",
+   "Carrot, dehydrated",
+   "Pork, cured, bacon, pre-sliced, cooked, pan-fried",
+   "Oil, sesame, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "a1c504bf2592630875fcdc05197b87bd9cae1710d5c792b3fe302d3db0324b53",
+ "scale_cues": "The square white plate is about 25-27 cm across and fills most of the frame. I used it to size the portions. The eggs cover about a third of the plate and are a loose mound about 3-4 cm high.",
+ "assumptions": [
+  "The greens are kale or spinach. They look dark and wilted, and could be either.",
+  "The brown strips are bacon, possibly turkey bacon or cured ham.",
+  "The cooking fat is counted separately and is a guess based on how the food was prepared.",
+  "The plate is empty apart from this food, with no other sauces or drinks visible."
+ ],
+ "latency_s": 12.44,
+ "calls": [
+  {
+   "wall_s": 8.46,
+   "duration_ms": 7437,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0341147,
+   "cost_basis": "list",
+   "input_tokens": 8992,
+   "output_tokens": 763
+  },
+  {
+   "wall_s": 3.97,
+   "duration_ms": 2891,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0169721,
+   "cost_basis": "list",
+   "input_tokens": 3486,
+   "output_tokens": 251
+  }
+ ],
+ "cost_usd_cli": 0.05109,
+ "log_id": "dda00aa1f4ce"
+}

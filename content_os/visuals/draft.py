@@ -54,6 +54,15 @@ def build_prompt(lines: dict[int, str], examples: list[dict], beats: list[int]) 
     return "\n".join(parts)
 
 
+def _beat_emotions(reel_dir: Path) -> dict[int, str]:
+    p = Path(reel_dir) / "beats.json"
+    try:
+        beats = json.loads(p.read_text())["beats"] if p.exists() else []
+    except (ValueError, KeyError):
+        return {}
+    return {int(b["id"]): b["emotion"] for b in beats if b.get("emotion")}
+
+
 def run_claude(prompt: str, model: str, system: str = SYSTEM, timeout: int = 900) -> dict:
     """One headless call: no tools, no session, from an empty temp dir (no project instructions)."""
     with tempfile.TemporaryDirectory() as d:
@@ -82,7 +91,22 @@ def draft_spec(reel_dir: Path, *, model: str = "claude-fable-5-2", beats: list[i
     examples = [{k: b[k] for k in ("beat", "template", "params", "cues")} for b in current.get("beats", [])
                 if b.get("template") in ("flow", "bars", "photo")][:3]
     prompt = build_prompt(lines, examples, todo)
-    keep = [b for b in current.get("beats", []) if int(b["beat"]) not in todo and int(b["beat"]) in lines]
+    mbp = Path(reel_dir) / "moodboard.json"
+    if mbp.exists():  # the approved mood board: follow its keyframes for each beat
+        try:
+            kfs = json.loads(mbp.read_text())["keyframes"]
+            rows = [f"beat {n}: " + " | ".join(f"{k['id']} {k.get('layout', '')}: {k.get('top_visual') or k.get('shot', '')}"
+                                                  f" (template {k.get('template') or '-'}; text '{k.get('on_screen_text', '')}';"
+                                                  f" motion {k.get('motion', '')})" for k in kfs if n in (k.get("beats") or []))
+                    for n in todo]
+            prompt += "\n\n# Approved mood board keyframes per beat (follow them)\n" + "\n".join(r for r in rows if "|" in r or "KF" in r)
+        except (ValueError, KeyError):
+            pass
+    feel = _beat_emotions(reel_dir)
+    if feel:  # the script's per-beat target emotion: the visual should carry it, not work against it
+        prompt += "\n\n# Target viewer emotion per beat (match it; the twist beat must not look calm)\n" + "\n".join(
+            f"beat {n}: {feel[n]}" for n in todo if n in feel)
+    keep = [b for b in current.get("beats", []) if int(b["beat"]) not in todo and (int(b["beat"]) in lines or "line_from" in b)]
     errors: list[str] = []
     cost = 0.0
     draft = None

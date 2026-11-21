@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "```python\nfrom decimal import Decimal, ROUND_HALF_UP\n\n\ndef split_bill(total: float, people: int, tip_pct: float) -> list[float]:\n    if people <= 0:\n        raise ValueError(\"people must be a positive integer\")\n\n    # Add the tip using exact decimal arithmetic, rounded to whole paise.\n    amount = Decimal(str(total)) * (Decimal(\"100\") + Decimal(str(tip_pct))) / Decimal(\"100\")\n    amount = amount.quantize(Decimal(\"0.01\"), rounding=ROUND_HALF_UP)\n\n    # Work in integer paise so the shares sum exactly to the total.\n    paise = int(amount * 100)\n    base, extra = divmod(paise, people)\n\n    # The first `extra` shares receive one additional paisa.\n    shares_paise = [base + 1 if i < extra else base for i in range(people)]\n    return [s / 100 for s in shares_paise]\n```",
+ "seconds": 5.9,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2561.25,
+ "out_tok": 1033,
+ "usd_list": 0.00077,
+ "cli_cost": 0.0008483,
+ "item": "c3"
+}

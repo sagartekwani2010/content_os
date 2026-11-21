@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Corn on the cob pieces (2 short segments)",
+   "grams_low": 120,
+   "grams_best": 170,
+   "grams_high": 230,
+   "fdc_query": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "preparation": "Cob cut into two short rounds, appears boiled or steamed, no visible butter or seasoning. Mass includes the kernels only, with the cob core excluded from the edible portion.",
+   "confidence": 0.5,
+   "kcal": 163.2,
+   "kcal_range": [
+    115,
+    221
+   ],
+   "protein_g": 5.8,
+   "protein_range": [
+    4.1,
+    7.8
+   ],
+   "fdc": {
+    "fdc_id": "169999",
+    "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 96.0,
+    "protein_100g": 3.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 170.0,
+  "kcal": 163.2,
+  "protein_g": 5.8,
+  "grams_range": [
+   120.0,
+   230.0
+  ],
+  "kcal_range": [
+   115,
+   221
+  ],
+  "protein_range": [
+   4.1,
+   7.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 170.0,
+   "kcal": 159.8,
+   "protein_g": 5.3,
+   "grams_range": [
+    120.0,
+    230.0
+   ],
+   "kcal_range": [
+    113,
+    216
+   ],
+   "protein_range": [
+    3.7,
+    7.2
+   ]
+  },
+  "rows": [
+   "Corn, sweet, yellow, frozen, kernels on cob, cooked, boiled, drained, without salt"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "fe75dd82c3e18a92baec81c78652e9cc6ebb0eb729ee0edbada22fc43432de9b",
+ "scale_cues": "The square white plate is about 24-26 cm across. Each corn segment is about 8 cm wide, which is about a third of the plate width. This fits a 3-4 cm long cob round, about 80-100 g each with the cob. The wooden-framed tray is a secondary reference.",
+ "assumptions": [
+  "Both pieces are sweet yellow corn cob segments, plain and cooked.",
+  "No butter, oil or salt is visible, so none is included.",
+  "Edible mass is estimated as kernels only, with about 40-50% of the cob weight treated as non-edible core.",
+  "The plate holds no other food and no drink is visible."
+ ],
+ "latency_s": 8.75,
+ "calls": [
+  {
+   "wall_s": 6.29,
+   "duration_ms": 5550,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0250121,
+   "cost_basis": "list",
+   "input_tokens": 8986,
+   "output_tokens": 458
+  },
+  {
+   "wall_s": 2.46,
+   "duration_ms": 1431,
+   "num_turns": 1,
+   "cost_usd_cli": 0.00756,
+   "cost_basis": "list",
+   "input_tokens": 1671,
+   "output_tokens": 88
+  }
+ ],
+ "cost_usd_cli": 0.03257,
+ "log_id": "519a1170532f"
+}

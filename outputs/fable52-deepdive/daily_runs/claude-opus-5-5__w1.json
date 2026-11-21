@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "Hello, I'm sorry, but my salary is being credited late this month, so I'd like to request a 5-day extension on this month's rent of ₹18,500. I can pay by 10 December. I'm happy to pay any late fee if applicable. Thank you for understanding.",
+ "seconds": 605.2,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1180.75,
+ "out_tok": 469,
+ "usd_list": 0.0141,
+ "cli_cost": 0.0171658,
+ "item": "w1"
+}

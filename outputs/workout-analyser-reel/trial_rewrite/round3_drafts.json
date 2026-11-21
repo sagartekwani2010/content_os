@@ -1,0 +1,455 @@
+{
+ "voice": {
+  "lever": "Every line rewritten in the creator's Ep 2 spoken voice: full conversational sentences, spoken connectives, and 'I' doing the building. No semicolons, colons or clipped fragments in beats 1-15.",
+  "beats": [
+   {
+    "n": 1,
+    "line": "In last video, my Gym Jarvis scanned my plate.",
+    "visual": "Ep 2 plate-scan clip for 1 s, then `gj_zoom.mp4`: Gym Jarvis diagram. Text: GYM JARVIS \u00b7 EP 3"
+   },
+   {
+    "n": 2,
+    "line": "Today, let's see why my Workout Analyser said stop on a good set.",
+    "visual": "Zoom to WORKOUT ANALYSER, then `wall_of_sets.mp4`: 23 tiles, two flash red with a \"?\" between them (no set singled out). Text: IT SAID STOP \u00b7 ON A GOOD SET"
+   },
+   {
+    "n": 3,
+    "line": "First, I had Claude go through over 200 papers and tools.",
+    "visual": "`research_blocks.mp4`, first block. Text: OVER 200 PAPERS + TOOLS"
+   },
+   {
+    "n": 4,
+    "line": "And I realized, counting reps is easy, but judging a rep is hard.",
+    "visual": "`research_blocks.mp4`: COUNT THEM -> EASY (green), JUDGE THEM -> HARD (red). Small third block stays grey: CAMERA ANGLE CAN FOOL IT (pays off in beat 13)"
+   },
+   {
+    "n": 5,
+    "line": "So I built one tool and two agents.",
+    "visual": "`system_card.mp4`: three empty boxes drawn left to right, SEE -> JUDGE -> CHECK. Tags: TOOL \u00b7 AGENT 1 \u00b7 AGENT 2"
+   },
+   {
+    "n": 6,
+    "line": "The pose tool tracks my joints, and rep maths turns each rep into a wave.",
+    "visual": "SEE box fills: POSE TOOL \u00b7 17 JOINTS + REP MATHS. `lockon_red.mp4`: skeleton on the lat pulldown, elbow ringed, the elbow angle draws a live wave, each wave numbered. Text: 1 WAVE = 1 REP"
+   },
+   {
+    "n": 7,
+    "line": "Its height is how far I moved, compared with my own best wave.",
+    "visual": "Rep wave diagram (`dual_wave.mp4`, relabelled): vertical arrow on one wave, HEIGHT = RANGE. Best wave lifts off as a ghost line and lands on rep 4, the gap shades amber. Text: LAT PULLDOWN \u00b7 REP 4: 62\u00b0 \u00b7 BEST REP: 86\u00b0 \u00b7 \"RANGE SHRINKING LATE\" \u00b7 HOLD stamp (`judge_hold.mp4`)"
+   },
+   {
+    "n": 8,
+    "line": "The first agent is the judge, which reads those numbers.",
+    "visual": "Gym footage stays underneath. JUDGE box fills: FIRST AGENT: JUDGE \u00b7 FABLE 5.2 \u00b7 REP TABLE + 4 KEY FRAMES -> CONTINUE / HOLD / STOP. The rep table from beat 7 slides into it"
+   },
+   {
+    "n": 9,
+    "line": "The second agent is the coach, which is not allowed to see numbers.",
+    "visual": "CHECK box fills: SECOND AGENT: COACH \u00b7 FABLE 5.2 \u00b7 VIDEO FRAMES ONLY. The rep table slides towards it and hits a barrier. Text: NEVER SEES THE NUMBERS -> GOOD / BAD / UNCLEAR"
+   },
+   {
+    "n": 10,
+    "line": "And if a joint is hidden, it refuses to judge.",
+    "visual": "`hidden_diagram.mp4`, then `cant_see.mp4` on the leg extension: \"CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET.\" Text: HIDDEN IN OVER 25% OF FRAMES -> NO VERDICT \u00b7 4 OF 23 SETS"
+   },
+   {
+    "n": 11,
+    "line": "Then I tested it on 23 sets, and only six got a continue.",
+    "visual": "Results dashboard: 23 bars, one per set, grouped CHEST \u00b7 BACK \u00b7 LEGS \u00b7 CORE (CONTINUE tall green, HOLD mid amber, CAN'T SEE grey stub). Tally counts up: CONTINUE 6 \u00b7 HOLD 11 \u00b7 CAN'T SEE 4. Two bars stay red and pulsing"
+   },
+   {
+    "n": 12,
+    "line": "Except this one, where the judge said stop and the coach said good.",
+    "visual": "`false_alarm.mp4`: the lunge with skeleton overlay. Left stamp JUDGE: STOP, right stamp COACH: GOOD. Text: DUMBBELL LUNGE \u00b7 17 REPS"
+   },
+   {
+    "n": 13,
+    "line": "I had only turned towards the camera, like the research warned.",
+    "visual": "Lunge split: side-on rep vs turned-to-camera rep, same depth, knee angle reads shallower from the front. The grey block from beat 4 turns red: CAMERA ANGLE CAN FOOL IT. STOP struck through: FALSE ALARM"
+   },
+   {
+    "n": 14,
+    "line": "So now stop needs both agents to agree, or else I check the footage.",
+    "visual": "`check_gate.mp4`: JUDGE and CHECK feed one gate. BOTH SAY STOP -> STOP \u00b7 ELSE -> CHECK FOOTAGE. Dashboard: the lunge bar flips from red to CHECK FOOTAGE 1"
+   },
+   {
+    "n": 15,
+    "line": "And the one stop that survived is my reverse crunch.",
+    "visual": "`ghost_stop.mp4`: crunch with best-rep ghost. Text: HIP RANGE \u00b7 WORST REP 53\u00b0 \u00b7 BEST REP 122\u00b0 \u00b7 SHORT, SWUNG REPS \u00b7 JUDGE: STOP + COACH: BAD = STOP. Final tally: CONTINUE 6 \u00b7 HOLD 11 \u00b7 STOP 1 \u00b7 CHECK FOOTAGE 1 \u00b7 CAN'T SEE 4. Corner: COMMENT FORM"
+   },
+   {
+    "n": 16,
+    "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience.",
+    "visual": "`news_jobs.mp4`: real headline on top, real posting below, title ringed. Text: REPORTEDLY \u00b7 NOT CONFIRMED BY SALESFORCE \u00b7 LMTS - LEAD AI/ML ENGINEER (LLM POST-TRAINING)"
+   },
+   {
+    "n": 17,
+    "line": "How can you be that one? Follow along to know.",
+    "visual": "`ending_screen.mp4`"
+   }
+  ],
+  "why_better": "It now sounds like the Ep 2 narrator: 17 beats, 200 words, 11.8 words a line (v3 about 8, Ep 2 12.3), with no semicolons, no colons before beat 16 and no fragments such as \"Fair.\" or \"Joint hidden?\". Ten of the 17 lines open on a spoken connective (Today, First, And, So, Then, Except, Next), and beats 8 and 9 copy the Ep 2 pattern \"The first agent is the X, which...\" and \"not allowed to\". Beat 1 opens with his own \"In last video, my Gym Jarvis\", and \"I\" does the work in beats 3, 4, 5, 11, 13 and 14. The Ep 2 skeleton order is unchanged, and beats 16-17 are word for word. The suspicion hook is now a spoken promise (\"said stop on a good set\") that lands at word 22, about 7.6 s at 2.9 words a second and about 8.8 s at 2.5. Vindication is beats 12-13, and earned trust is beats 14-15. Every number is from facts.md.\n\nTrade-offs to hit 200 words:\n- \"One wave = one rep\" is spoken as \"turns each rep into a wave\", with the exact label on screen.\n- Rep 4 (62\u00b0 vs 86\u00b0), the HOLD 11 and CAN'T SEE 4 counts, the body parts and the word \"lunge\" are on screen only.\n- \"Reads those numbers\" is shorthand, because the judge also gets 4 key frames, which the beat 8 screen states.\n- \"Said stop on a good set\" refers to the judge's verdict before the fix. The final verdict for the lunge is CHECK FOOTAGE, and \"good\" rests on the coach's verdict plus the creator's eye check.\n- \"Fair.\" is gone, so no spoken line depends on the creator's opinion of the crunch.\n\nNot checked: nothing is recorded or timed, I cannot hear the lines, and I opened no asset file or `verdicts.json`. Asset names are carried over from v3. The creator should read beats 2, 7 and 14 aloud before approving."
+ },
+ "stake": {
+  "lever": "Give the wave and component beats a gym stake any viewer can feel, in the Ep 2 spoken voice: tired reps look shorter (beat 6), a trainer compares you with your own best (beat 7), and the coach is a second opinion who isn't allowed the numbers (beat 9).",
+  "beats": [
+   {
+    "n": 1,
+    "line": "My Gym Jarvis checked twenty-three sets, and called stop on a good one.",
+    "visual": "wall_of_sets.mp4, all 23 clips; one tile flashes red with a '?' on it (set not identified yet). Text: GYM JARVIS \u00b7 23 SETS \u00b7 1 WRONG STOP"
+   },
+   {
+    "n": 2,
+    "line": "So let's open my Workout Analyser.",
+    "visual": "gj_zoom.mp4: Gym Jarvis diagram, zoom to WORKOUT ANALYSER"
+   },
+   {
+    "n": 3,
+    "line": "After over 200 papers and tools, I realized counting reps is easy, but judging one is hard.",
+    "visual": "research_blocks.mp4. Text: CLAUDE WENT THROUGH 200+ PAPERS + TOOLS, then COUNT THEM -> EASY (green), JUDGE THEM -> HARD (red). Small third block stays grey: CAMERA ANGLE CAN FOOL IT (pays off in beat 13)"
+   },
+   {
+    "n": 4,
+    "line": "So I built one pose tool and two agents.",
+    "visual": "system_card.mp4: three empty boxes drawn left to right, SEE -> JUDGE -> CHECK. Tags: TOOL \u00b7 AGENT 1 \u00b7 AGENT 2"
+   },
+   {
+    "n": 5,
+    "line": "It tracks my joints, and rep maths turns each rep into a wave.",
+    "visual": "SEE box fills: POSE TOOL \u00b7 17 JOINTS + REP MATHS. lockon_red.mp4 on the lat pulldown, elbow ringed; the elbow angle draws a live wave beside the footage, each wave numbered. Text: 1 WAVE = 1 REP"
+   },
+   {
+    "n": 6,
+    "line": "A taller wave means I moved further, so tired reps look shorter.",
+    "visual": "Gym footage stays under the wave. A vertical arrow measures one tall wave, then a visibly smaller wave beside it. Text: HEIGHT = RANGE"
+   },
+   {
+    "n": 7,
+    "line": "And like a trainer, it compares each wave with my own best.",
+    "visual": "The best rep's wave lifts off as a ghost line and slides across the others, stopping on rep 4; the gap shades amber. Text: LAT PULLDOWN \u00b7 REP 4: 62\u00b0 \u00b7 BEST REP: 86\u00b0 \u00b7 NOT A TEXTBOOK \u00b7 \"RANGE SHRINKING LATE\" \u00b7 HOLD stamp (judge_hold.mp4)"
+   },
+   {
+    "n": 8,
+    "line": "The first agent is the judge, which reads my numbers.",
+    "visual": "JUDGE box fills: FIRST AGENT: JUDGE \u00b7 FABLE 5.2 \u00b7 REP TABLE + 4 KEY FRAMES -> CONTINUE / HOLD / STOP. The rep table from beat 7 slides into it"
+   },
+   {
+    "n": 9,
+    "line": "The second agent is the coach, a second opinion that isn't allowed the numbers.",
+    "visual": "CHECK box fills: SECOND AGENT: COACH \u00b7 FABLE 5.2 \u00b7 VIDEO ONLY. The rep table slides towards it and hits a barrier. Text: CAN'T COPY THE JUDGE -> GOOD / BAD / UNCLEAR"
+   },
+   {
+    "n": 10,
+    "line": "And one guardrail: if it can't see the joint, it won't judge.",
+    "visual": "hidden_diagram.mp4, then cant_see.mp4 on the leg extension: \"CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET.\" Text: HIDDEN IN OVER 25% OF FRAMES -> NO VERDICT \u00b7 4 OF 23 SETS"
+   },
+   {
+    "n": 11,
+    "line": "Then I ran every set, and most were continue or hold.",
+    "visual": "Results dashboard: 23 bars grouped CHEST \u00b7 BACK \u00b7 LEGS \u00b7 CORE (CONTINUE tall green, HOLD mid amber, CAN'T SEE grey stub). Tally counts up: CONTINUE 6 \u00b7 HOLD 11 \u00b7 CAN'T SEE 4. Two bars stay red and pulsing"
+   },
+   {
+    "n": 12,
+    "line": "Except this one, where the judge said stop and the coach said good.",
+    "visual": "false_alarm.mp4: the lunge with skeleton overlay. Left stamp JUDGE: STOP, right stamp COACH: GOOD. Text: DUMBBELL LUNGE \u00b7 17 REPS"
+   },
+   {
+    "n": 13,
+    "line": "I had only turned towards the camera, like the research warned.",
+    "visual": "Lunge split: side-on rep vs turned-to-camera rep, same depth, knee angle reads shallower from the front. The grey block from beat 3 turns red: CAMERA ANGLE CAN FOOL IT. STOP struck through: FALSE ALARM"
+   },
+   {
+    "n": 14,
+    "line": "So now, stop needs both agents to agree, or I check the footage.",
+    "visual": "check_gate.mp4: JUDGE and COACH feed one gate. BOTH SAY STOP -> STOP \u00b7 ELSE -> CHECK FOOTAGE. On the dashboard the lunge bar flips from red to CHECK FOOTAGE 1"
+   },
+   {
+    "n": 15,
+    "line": "And only one stop survived, my reverse crunch, which was fair.",
+    "visual": "ghost_stop.mp4: crunch with best-rep ghost. Text: HIP RANGE \u00b7 WORST REP 53\u00b0 \u00b7 BEST REP 122\u00b0 \u00b7 SHORT, SWUNG REPS \u00b7 JUDGE: STOP + COACH: BAD = STOP. Final tally: CONTINUE 6 \u00b7 HOLD 11 \u00b7 STOP 1 \u00b7 CHECK FOOTAGE 1 \u00b7 CAN'T SEE 4. Corner: COMMENT FORM"
+   },
+   {
+    "n": 16,
+    "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience.",
+    "visual": "news_jobs.mp4: real headline on top, real posting below, title ringed. Text: REPORTEDLY \u00b7 NOT CONFIRMED BY SALESFORCE \u00b7 LMTS - LEAD AI/ML ENGINEER (LLM POST-TRAINING)"
+   },
+   {
+    "n": 17,
+    "line": "How can you be that one? Follow along to know.",
+    "visual": "ending_screen.mp4"
+   }
+  ],
+  "why_better": "17 beats, 200 spoken words by my count (201 if \"twenty-three\" counts as two), no semicolons, one sentence per beat except the word-for-word final beat. Nothing is recorded or timed, and I opened no asset file or verdicts.json.\n\nVoice: beats 1-15 average 11.7 words (v3 about 8) and 10 of them open with a spoken connective (So, After, And, Then, Except). The fragments \"Fair.\" and \"Joint hidden?\" are gone. I could not reach Ep 2's 12.3 average with all 19 beats inside the 200-word cap, so two beats were merged away.\n\nLever: the mechanism now takes three beats instead of four, and each has a reason to care.\n- Beat 6 ties wave height to something every gym-goer knows: tired reps get shorter.\n- Beat 7 turns the baseline into a person (a trainer comparing you with your own best), with 62\u00b0 vs 86\u00b0 on screen.\n- Beat 9 makes \"numbers not allowed\" a fairness rule a CA, HR exec or teacher understands: a second opinion who can't copy the first.\n- Gym footage stays under every diagram in beats 5-10 so mass viewers always have a body to watch.\n\nArc: suspicion is in beat 1 (a wrong stop on a good set), vindication in 12-13, earned trust in 14-15.\n\nTrade-offs and claims the creator must confirm:\n1. Beat 1 \"called stop on a good one\" is the judge's verdict before the fix; the final verdict for the lunge is CHECK FOOTAGE. \"Good\" rests on the coach's GOOD and the creator's own check by eye.\n2. Beat 3 merges research and easy-vs-hard, so \"Claude went through\" is on screen only. If he wants it spoken, split the beat back into two and cut about 6 words elsewhere.\n3. Beat 4 replaces both \"I split the problem into three parts\" and \"Then I built two agents\"; SEE -> JUDGE -> CHECK is on screen only.\n4. Beat 6 \"tired reps look shorter\" is a general gym statement, not a measured fact; the measured example is rep 4 in beat 7.\n5. Beat 8 \"reads my numbers\" is shorthand; the judge also gets 4 key frames, shown on screen.\n6. Beat 11 \"most\" is 17 of 23. The hook no longer says \"only six got a clear continue\", which also removes the risk of HOLD being heard as a fail.\n7. Beat 15 \"which was fair\" is the creator's opinion and only he can confirm it. No line says the system stopped a set mid-way.\n8. The caption still has to carry the limits: 9 of 16 agreement, one phone angle, not training advice."
+ },
+ "anchor": {
+  "lever": "Open on Ep 2's series anchor, put today's task and the reason to stay (one of its two stops was wrong) in beat 2, then plant the two red bars at beat 11 so the middle carries the question of which stop is the wrong one.",
+  "beats": [
+   {
+    "n": 1,
+    "line": "In last video, Gym Jarvis read my plate.",
+    "visual": "Ep 2 plate-scan clip for one second, then the Gym Jarvis diagram. Text: GYM JARVIS \u00b7 EP 3"
+   },
+   {
+    "n": 2,
+    "line": "Today it judges my gym sets, and one of its two stops was wrong.",
+    "visual": "gj_zoom.mp4 zooms to WORKOUT ANALYSER, then wall_of_sets.mp4: two tiles flash red with a \"?\" between them, neither singled out. Text: 2 STOPS \u00b7 1 WAS WRONG"
+   },
+   {
+    "n": 3,
+    "line": "From the research, I realized counting reps is easy, but judging them is hard.",
+    "visual": "research_blocks.mp4: OVER 200 PAPERS + TOOLS, then COUNT THEM -> EASY (green), JUDGE THEM -> HARD (red). A small third block stays grey: CAMERA ANGLE CAN FOOL IT (pays off in beat 13)"
+   },
+   {
+    "n": 4,
+    "line": "So a pose tool tracks my joints, and rep maths turns one angle into a wave.",
+    "visual": "system_card.mp4: SEE -> JUDGE -> CHECK, SEE box fills (POSE TOOL \u00b7 17 JOINTS + REP MATHS). lockon_red.mp4: skeleton on the lat pulldown, elbow ringed, the elbow angle draws a live line"
+   },
+   {
+    "n": 5,
+    "line": "One wave is one rep, and its height is how far I moved.",
+    "visual": "Rep wave diagram over the gym footage: each wave numbered as it is drawn, a vertical arrow on one wave. Text: 1 WAVE = 1 REP \u00b7 HEIGHT = RANGE"
+   },
+   {
+    "n": 6,
+    "line": "Then each wave is compared with my own best wave.",
+    "visual": "The best rep's wave lifts off as a ghost line, slides across the others and settles on rep 4, the gap shaded amber. Text: LAT PULLDOWN \u00b7 REP 4: 62\u00b0 \u00b7 BEST REP: 86\u00b0 \u00b7 \"RANGE SHRINKING LATE\" \u00b7 HOLD stamp. Small tag: MY BEST REP, NOT A TEXTBOOK"
+   },
+   {
+    "n": 7,
+    "line": "Then I built two agents.",
+    "visual": "JUDGE and CHECK boxes light up empty, tagged AGENT 1 and AGENT 2 \u00b7 FABLE 5.2. Gym footage stays underneath"
+   },
+   {
+    "n": 8,
+    "line": "The first agent is the judge, which goes by those numbers.",
+    "visual": "JUDGE box fills: FIRST AGENT: JUDGE \u00b7 REP TABLE + 4 KEY FRAMES -> CONTINUE / HOLD / STOP. The rep table from beat 6 slides into it"
+   },
+   {
+    "n": 9,
+    "line": "The second agent is the coach, and it's not allowed to see the numbers.",
+    "visual": "CHECK box fills: SECOND AGENT: COACH \u00b7 VIDEO FRAMES ONLY -> GOOD / BAD / UNCLEAR. The rep table slides towards it and hits a barrier"
+   },
+   {
+    "n": 10,
+    "line": "And if a joint is hidden, it refuses to judge.",
+    "visual": "hidden_diagram.mp4, then cant_see.mp4 on the leg extension: \"CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET.\" Text: HIDDEN IN OVER 25% OF FRAMES -> NO VERDICT \u00b7 4 OF 23 SETS"
+   },
+   {
+    "n": 11,
+    "line": "Then on twenty-three sets, it gave six continues, eleven holds and two stops.",
+    "visual": "Results dashboard: 23 bars grouped CHEST \u00b7 BACK \u00b7 LEGS \u00b7 CORE. Tally counts up: CONTINUE 6 (green) \u00b7 HOLD 11 (amber) \u00b7 CAN'T SEE 4 (grey stubs). Two bars stay red and pulsing: STOP 2, with the \"?\" from beat 2 back between them"
+   },
+   {
+    "n": 12,
+    "line": "Except this one, where the judge said stop but the coach said good.",
+    "visual": "One red bar opens into false_alarm.mp4: the lunge with skeleton overlay. Left stamp JUDGE: STOP, right stamp COACH: GOOD. Text: DUMBBELL LUNGE \u00b7 17 REPS"
+   },
+   {
+    "n": 13,
+    "line": "I had only turned towards the camera, as the research warned.",
+    "visual": "Lunge split: side-on rep vs turned-to-camera rep, same depth, knee angle reads shallower from the front. The grey block from beat 3 turns red: CAMERA ANGLE CAN FOOL IT. STOP struck through: FALSE ALARM"
+   },
+   {
+    "n": 14,
+    "line": "So now it says stop only when both agents agree, otherwise check footage.",
+    "visual": "check_gate.mp4: JUDGE and COACH feed one gate. BOTH SAY STOP -> STOP \u00b7 ELSE -> CHECK FOOTAGE. On the dashboard the lunge bar flips from red to CHECK FOOTAGE 1"
+   },
+   {
+    "n": 15,
+    "line": "And the one stop that survived is my reverse crunch.",
+    "visual": "The second red bar opens into ghost_stop.mp4: crunch with best-rep ghost. Text: HIP RANGE \u00b7 WORST REP 53\u00b0 \u00b7 BEST REP 122\u00b0 \u00b7 SHORT, SWUNG REPS \u00b7 JUDGE: STOP + COACH: BAD = STOP. Final tally: CONTINUE 6 \u00b7 HOLD 11 \u00b7 STOP 1 \u00b7 CHECK FOOTAGE 1 \u00b7 CAN'T SEE 4. No rep count shown. Corner: COMMENT FORM"
+   },
+   {
+    "n": 16,
+    "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience.",
+    "visual": "news_jobs.mp4: real headline on top, real posting below, title ringed. Text: REPORTEDLY \u00b7 NOT CONFIRMED BY SALESFORCE \u00b7 LMTS - LEAD AI/ML ENGINEER (LLM POST-TRAINING)"
+   },
+   {
+    "n": 17,
+    "line": "How can you be that one? Follow along to know.",
+    "visual": "ending_screen.mp4"
+   }
+  ],
+  "why_better": "17 beats, 198 spoken words by my count (\"twenty-three\" as one word), averaging 11.6 words a line against v3's roughly 8. There are no semicolons or clipped fragments (\"Fair.\" and \"Joint hidden?\" are gone), and 11 of the 15 new lines start with a spoken connective (Today, So, Then, And, Except). Nothing is recorded or timed, and I cannot hear it, so the creator has to read it aloud.\n\nWhat changed against v3:\n- **Opening:** beat 1 is Ep 2's anchor shape (\"In last video, Gym Jarvis read my plate.\"). Beat 2 carries the task and the reason to stay in one sentence.\n- **Hook timing:** \"was wrong\" lands at word 22, about 7.6 s at 2.9 words a second and about 8.8 s at 2.5. A slow read misses the 8 s mark.\n- **Tension through the middle:** beat 2 says \"two stops\", so the viewer holds a count. Beat 11 pays it as two pulsing red bars, beat 12 opens one (the lunge false alarm) and beat 15 opens the other (the crunch). v3 showed the red bars only at beat 13.\n- **Builder voice:** \"Then I built two agents.\" is back word for word from Ep 2, followed by \"The first agent is the judge\" and \"The second agent is the coach\". \"As the research warned\" is spoken again, set up by the grey block in beat 3.\n\nClaims to check against facts.md:\n- **Beat 11 tally is pre-fix:** 6 continue, 11 hold and 2 judge stops are spoken, with the 4 can't-see on screen (23 in total). The final tally with STOP 1 and CHECK FOOTAGE 1 appears in beat 15.\n- **\"Goes by those numbers\" is shorthand:** the judge also reads 4 key frames, which the screen states.\n- **\"Over 200 papers and tools\" is on screen only** in beat 3, not spoken.\n- **The crunch:** it is never described as \"stopped me mid-set\", and no rep count is shown for it.\n\nAt 198 words the script is about 68 s at 2.9 words a second, which is longer than v3's 184. If it runs long, the first cut is beat 6's voice, since the ghost line and the 62\u00b0 vs 86\u00b0 numbers stay on screen (-10 words)."
+ },
+ "v3": {
+  "beats": [
+   {
+    "n": 1,
+    "line": "SERIES ANCHOR"
+   },
+   {
+    "n": 2,
+    "line": "TODAY'S TASK"
+   },
+   {
+    "n": 3,
+    "line": "RESEARCH"
+   },
+   {
+    "n": 4,
+    "line": "EASY vs HARD insight"
+   },
+   {
+    "n": 6,
+    "line": "COMPONENT 1 (what it does)"
+   },
+   {
+    "n": 7,
+    "line": "COMPONENT 1 is NOT allowed to"
+   },
+   {
+    "n": 10,
+    "line": "TESTED ON MANY (real count)"
+   },
+   {
+    "n": 11,
+    "line": "RESULTS (dashboard)"
+   },
+   {
+    "n": 14,
+    "line": "NEXT / CTA"
+   },
+   {
+    "n": 1,
+    "line": "Gym Jarvis checked twenty-three of my sets; only six got a clear continue."
+   },
+   {
+    "n": 2,
+    "line": "One of its stops was wrong. Let's open the Workout Analyser."
+   },
+   {
+    "n": 3,
+    "line": "First, Claude went through over 200 papers and tools."
+   },
+   {
+    "n": 4,
+    "line": "Counting reps is easy; judging one is hard."
+   },
+   {
+    "n": 5,
+    "line": "So I split it: one tool, two agents."
+   },
+   {
+    "n": 6,
+    "line": "A pose tool tracks my joints; rep maths turns one angle into a wave."
+   },
+   {
+    "n": 7,
+    "line": "One wave is one rep; its height is how far I moved."
+   },
+   {
+    "n": 8,
+    "line": "Each wave is checked against my best, not a textbook."
+   },
+   {
+    "n": 9,
+    "line": "Rep four is clearly shorter."
+   },
+   {
+    "n": 10,
+    "line": "The first agent is the judge: it goes by my numbers."
+   },
+   {
+    "n": 11,
+    "line": "The second agent is the coach: video only, numbers not allowed."
+   },
+   {
+    "n": 12,
+    "line": "Joint hidden? Gym Jarvis refuses to guess."
+   },
+   {
+    "n": 13,
+    "line": "Chest, back, legs, core: six continue, eleven hold, four refused."
+   },
+   {
+    "n": 14,
+    "line": "Except this one: judge said stop, coach said good."
+   },
+   {
+    "n": 15,
+    "line": "I'd only turned towards the camera."
+   },
+   {
+    "n": 16,
+    "line": "Now stop needs both agents; otherwise, check footage."
+   },
+   {
+    "n": 17,
+    "line": "Only one stop survived: my reverse crunch. Fair."
+   },
+   {
+    "n": 18,
+    "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience."
+   },
+   {
+    "n": 19,
+    "line": "How can you be that one? Follow along to know."
+   },
+   {
+    "n": 1,
+    "line": "TCS support eng, Pune, 24"
+   },
+   {
+    "n": 2,
+    "line": "CA, Ahmedabad, 31"
+   },
+   {
+    "n": 3,
+    "line": "HR exec, Bengaluru, 28"
+   },
+   {
+    "n": 4,
+    "line": "Bank RM, Lucknow, 35"
+   },
+   {
+    "n": 5,
+    "line": "Teacher, Jaipur, 38"
+   },
+   {
+    "n": 6,
+    "line": "BTech final-year, Hyderabad, 21"
+   },
+   {
+    "n": 7,
+    "line": "FP&A, Gurgaon, 25"
+   },
+   {
+    "n": 8,
+    "line": "Equity research, Mumbai, 33"
+   },
+   {
+    "n": 9,
+    "line": "Big4 analyst, Bengaluru, 24"
+   },
+   {
+    "n": 10,
+    "line": "Strategy mgr, Mumbai, 32"
+   },
+   {
+    "n": 11,
+    "line": "Perf marketing, Delhi, 26"
+   },
+   {
+    "n": 12,
+    "line": "FMCG brand mgr, Mumbai, 34"
+   },
+   {
+    "n": 13,
+    "line": "Startup backend dev, Bengaluru, 27"
+   },
+   {
+    "n": 14,
+    "line": "ML eng, Hyderabad, 30"
+   },
+   {
+    "n": 15,
+    "line": "Gym trainer, Delhi, 29"
+   },
+   {
+    "n": 16,
+    "line": "BCom student, Kolkata, 20"
+   }
+  ]
+ }
+}

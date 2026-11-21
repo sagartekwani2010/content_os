@@ -80,15 +80,19 @@ DEFAULTS: dict[str, Any] = {
         "tail_s": 0.080,
         "snap_window_s": 0.020,
         "crossfade_ms": 30,
+        "cold_open_max_lead_s": 0.040,  # cold open starts on the word: at most this much lead silence
     },
+    # playback speed (cue sheet "speed" / per-beat "speed"); picture setpts, voice atempo (WSOLA,
+    # pitch preserved). Allowed range:
+    "speed": {"min": 0.5, "max": 2.0},
     "speaker": {
         "zoom": 1.0,                  # 1.0 = full source height in the speaker panel
-        "eye_line": 0.40,             # eyes at 40% from the panel top when zoom > 1
+        "eye_line": 0.32,             # eyes at 32% from the panel top (face high; captions sit low)
         "realign_threshold": 0.02,    # take face offset (fraction of source width) that re-centres
     },
     "layout": {
         "name": "split_vertical",
-        "params": {"speaker_ratio": 0.5, "speaker_position": "bottom", "caption_position": "top_safe"},
+        "params": {"speaker_ratio": 0.5, "speaker_position": "bottom", "caption_position": "seam"},
     },
     "safe_area": {"bottom": 250, "right": 120, "left": 60, "top": 220},
     "captions": {
@@ -106,6 +110,7 @@ DEFAULTS: dict[str, Any] = {
         "shadow_px": 0,
         "uppercase": False,
         "margin_above_seam": 36,
+        "bottom_px": 120,              # bottom_safe: caption box bottom edge this far above the frame bottom
     },
     "cards": {
         "font_file": "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
@@ -118,11 +123,19 @@ DEFAULTS: dict[str, Any] = {
         "target_lufs": -14.0,
         "true_peak_db": -1.5,
         "take_gain_clamp_db": 12.0,
+        # Voice leveller before loudness targeting: low-cut, speech-paced dynamic normaliser (evens
+        # sentence-final decay and hot onsets across takes), then gentle 3:1 compression. "" disables.
+        "voice_chain": ("highpass=f=75,"
+                        "dynaudnorm=f=200:g=11:p=0.85:m=4:r=0.4:b=1,"
+                        "acompressor=threshold=-22dB:ratio=3:attack=8:release=200:makeup=1"),
         "music_gain_db": -20.0,
         "duck": {"threshold": 0.03, "ratio": 6, "attack_ms": 15, "release_ms": 350},
     },
     "video": {"crf": 18, "preset": "medium", "draft_crf": 23, "draft_preset": "veryfast",
               "audio_bitrate": "192k"},
+    # final render also writes <name>_clean.mp4: same picture, mastered voice only (no music, no SFX),
+    # for finishing in another editor with its own SFX library
+    "render": {"clean_stem": True},
     "judge": {
         "enabled": True,               # `run` calls it after score and after cut_review
         "cli": "claude",

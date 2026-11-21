@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "Since the patch doubles every day, working backward halves it each day:\n\n- Day 48: whole lake\n- Day 47: half the lake\n- Day 46: a quarter of the lake\n\nANSWER: Day 46",
+ "seconds": 4.6,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1103.25,
+ "out_tok": 70,
+ "usd_list": 0.01163,
+ "cli_cost": 0.0170458,
+ "item": "r6"
+}

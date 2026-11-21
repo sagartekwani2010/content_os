@@ -1,0 +1,95 @@
+{
+ "items": [
+  {
+   "beat": 1,
+   "pick": "b1_t2",
+   "truth": "b1_t3",
+   "ok": false
+  },
+  {
+   "beat": 2,
+   "pick": "b2_t2",
+   "truth": "b2_t3",
+   "ok": false
+  },
+  {
+   "beat": 3,
+   "pick": "b3_t9",
+   "truth": "b3_t9",
+   "ok": true
+  },
+  {
+   "beat": 4,
+   "pick": "b4_t17",
+   "truth": "b4_t17",
+   "ok": true
+  },
+  {
+   "beat": 5,
+   "pick": "b5_t9",
+   "truth": "b5_t13",
+   "ok": false
+  },
+  {
+   "beat": 6,
+   "pick": "b6_t3",
+   "truth": "b6_t3",
+   "ok": true
+  },
+  {
+   "beat": 7,
+   "pick": "b7_t7",
+   "truth": "b7_t7",
+   "ok": true
+  },
+  {
+   "beat": 8,
+   "pick": "b8_t5",
+   "truth": "b8_t5",
+   "ok": true
+  },
+  {
+   "beat": 9,
+   "pick": "b9_t15",
+   "truth": "b9_t15",
+   "ok": true
+  },
+  {
+   "beat": 11,
+   "pick": "b11_t5",
+   "truth": "b11_t10",
+   "ok": false
+  },
+  {
+   "beat": 12,
+   "pick": "b12_t6",
+   "truth": "b12_t9",
+   "ok": false
+  },
+  {
+   "beat": 13,
+   "pick": "b13_t12",
+   "truth": "b13_t13",
+   "ok": false
+  },
+  {
+   "beat": 15,
+   "pick": "b15_t7",
+   "truth": "b15_t7",
+   "ok": true
+  },
+  {
+   "beat": 16,
+   "pick": "b16_t1",
+   "truth": "b16_t3",
+   "ok": false
+  },
+  {
+   "beat": 19,
+   "pick": "b19_t6",
+   "truth": "b19_manual",
+   "ok": false
+  }
+ ],
+ "seconds": 1919.4
+}

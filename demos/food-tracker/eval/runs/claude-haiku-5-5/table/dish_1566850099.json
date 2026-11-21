@@ -1,0 +1,245 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (lettuce, red leaf and spinach-type leaves)",
+   "grams_low": 55,
+   "grams_best": 75,
+   "grams_high": 95,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw, torn leaves, mixed with red-tinged leaves",
+   "confidence": 0.6,
+   "kcal": 15.8,
+   "kcal_range": [
+    12,
+    20
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.7,
+    1.2
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Broccoli florets",
+   "grams_low": 20,
+   "grams_best": 30,
+   "grams_high": 40,
+   "fdc_query": "Broccoli, raw",
+   "preparation": "raw or lightly steamed florets, chopped",
+   "confidence": 0.6,
+   "kcal": 10.2,
+   "kcal_range": [
+    7,
+    14
+   ],
+   "protein_g": 0.8,
+   "protein_range": [
+    0.6,
+    1.1
+   ],
+   "fdc": {
+    "fdc_id": "170379",
+    "description": "Broccoli, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 34.0,
+    "protein_100g": 2.82
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Carrot, shredded",
+   "grams_low": 5,
+   "grams_best": 8,
+   "grams_high": 12,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, julienned or shredded strips",
+   "confidence": 0.6,
+   "kcal": 3.3,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Green beans or snap pea pods",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Beans, snap, green, raw",
+   "preparation": "raw, sliced pale green strips",
+   "confidence": 0.35,
+   "kcal": 3.1,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "169961",
+    "description": "Beans, snap, green, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 31.0,
+    "protein_100g": 1.83
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Pine nuts",
+   "grams_low": 1,
+   "grams_best": 2,
+   "grams_high": 3,
+   "fdc_query": "Nuts, pine nuts, dried",
+   "preparation": "raw, whole and slivered, sparse garnish",
+   "confidence": 0.4,
+   "kcal": 13.5,
+   "kcal_range": [
+    7,
+    20
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.1,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "170591",
+    "description": "Nuts, pine nuts, dried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 673.0,
+    "protein_100g": 13.69
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Vinaigrette dressing",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Salad dressing, vinaigrette, Italian, regular",
+   "preparation": "oil and vinegar based, light coating on leaves",
+   "confidence": 0.3,
+   "kcal": 24.0,
+   "kcal_range": [
+    12,
+    36
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "171019",
+    "description": "Salad dressing, italian dressing, commercial, regular",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 240.0,
+    "protein_100g": 0.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 135.0,
+  "kcal": 69.9,
+  "protein_g": 2.4,
+  "grams_range": [
+   91.0,
+   180.0
+  ],
+  "kcal_range": [
+   42,
+   100
+  ],
+  "protein_range": [
+   1.5,
+   3.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 135.0,
+   "kcal": 87.9,
+   "protein_g": 2.9,
+   "grams_range": [
+    91.0,
+    180.0
+   ],
+   "kcal_range": [
+    52,
+    128
+   ],
+   "protein_range": [
+    1.9,
+    4.2
+   ]
+  },
+  "rows": [
+   "Lettuce, red leaf, raw",
+   "Broccoli, raw",
+   "Carrot, dehydrated",
+   "Beans, snap, green, raw",
+   "Nuts, pine nuts, dried",
+   "Salad dressing, italian dressing, commercial, regular"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "f3d24b934b653cc527887039d35322de5207dc7b115b2852350c89fe7c9bef13",
+ "scale_cues": "Plate is a white square dish roughly 25 to 27 cm across, used as the scale reference. The salad spreads across about 40 to 50 percent of the plate's surface, forming a thin, low layer. Portion estimates are based on that coverage and typical thickness of a side or starter salad.",
+ "assumptions": [
+  "Total salad mass is roughly 120 to 150 g, typical of a side or starter salad on a 26 cm plate.",
+  "Leaves are assumed to be raw mixed greens; the broccoli may be raw or lightly steamed.",
+  "The pale green strips are assumed to be green beans or snap peas, which is uncertain.",
+  "The white bits are assumed to be pine nuts; they are small enough to be a garnish under 5 g.",
+  "Dressing is inferred from the glossy sheen on the leaves and is not clearly visible; it may be absent.",
+  "The purple-red leaves are counted within the mixed greens rather than as a separate item because they are small."
+ ],
+ "latency_s": 2648.01,
+ "calls": [
+  {
+   "wall_s": 838.38,
+   "duration_ms": 10735,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0012563700000000001,
+   "cost_basis": "list",
+   "input_tokens": 6792,
+   "output_tokens": 1573
+  },
+  {
+   "wall_s": 1809.62,
+   "duration_ms": 14275,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0025328700000000004,
+   "cost_basis": "list",
+   "input_tokens": 15681,
+   "output_tokens": 1069
+  }
+ ],
+ "cost_usd_cli": 0.00379,
+ "log_id": "6cd9b60f3486"
+}

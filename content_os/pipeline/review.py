@@ -158,6 +158,12 @@ def run(reel: Reel, cfg: dict) -> dict:
     return data
 
 
+def _dur(s: dict) -> str:
+    sp = s.get("speed", 1.0)
+    tag = " (cold open)" if s.get("cold_open") else ""
+    return f"{s['duration']:.2f}" + ("" if sp == 1.0 else f" @{sp:g}x") + tag
+
+
 def _cls(v, warn, fail):
     if v is None:
         return "na"
@@ -195,7 +201,7 @@ def render_html(reel: Reel, cfg: dict, cuts: dict, joins: list[dict], audio: dic
 </section>""")
     seg_rows = "".join(
         f"<tr><td>{s['index'] + 1}</td><td>{s['beat']}</td><td>{html.escape(s['take'])}</td><td>{s['out_start']:.2f}</td>"
-        f"<td>{s['duration']:.2f}</td><td>{s['gain_db']:+.1f}</td><td>{s['lead_s']:.3f}/{s['tail_s']:.3f}</td>"
+        f"<td>{_dur(s)}</td><td>{s['gain_db']:+.1f}</td><td>{s['lead_s']:.3f}/{s['tail_s']:.3f}</td>"
         f"<td>{'yes' if s['crop_realigned'] else ''}</td><td>{html.escape(s['text'])}</td></tr>" for s in cuts["segments"])
     cmd = f"python -m content_os.pipeline approve {html.escape(str(reel.root))} cut_review --by YOUR_NAME"
     return f"""<!doctype html>

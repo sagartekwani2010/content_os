@@ -1,0 +1,300 @@
+{
+ "items": [
+  {
+   "name": "Beef steak slices",
+   "grams_low": 50,
+   "grams_best": 70,
+   "grams_high": 95,
+   "fdc_query": "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, cooked, broiled",
+   "preparation": "grilled/roasted, sliced",
+   "confidence": 0.5,
+   "kcal": 128.1,
+   "kcal_range": [
+    92,
+    174
+   ],
+   "protein_g": 21.4,
+   "protein_range": [
+    15.3,
+    29.0
+   ],
+   "fdc": {
+    "fdc_id": "168634",
+    "description": "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, all grades, cooked, broiled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 183.0,
+    "protein_100g": 30.55
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 135,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "steamed/boiled florets",
+   "confidence": 0.6,
+   "kcal": 23.0,
+   "kcal_range": [
+    16,
+    31
+   ],
+   "protein_g": 1.8,
+   "protein_range": [
+    1.3,
+    2.5
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Arugula salad greens",
+   "grams_low": 40,
+   "grams_best": 65,
+   "grams_high": 90,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.55,
+   "kcal": 16.2,
+   "kcal_range": [
+    10,
+    22
+   ],
+   "protein_g": 1.7,
+   "protein_range": [
+    1.0,
+    2.3
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Wild/brown rice mix with corn",
+   "grams_low": 40,
+   "grams_best": 65,
+   "grams_high": 90,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked, mixed with corn kernels and caramelized onion",
+   "confidence": 0.4,
+   "kcal": 78.0,
+   "kcal_range": [
+    48,
+    108
+   ],
+   "protein_g": 1.9,
+   "protein_range": [
+    1.2,
+    2.6
+   ],
+   "fdc": {
+    "fdc_id": "2708427",
+    "description": "Rice, brown and wild, cooked, no added fat",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 120.0,
+    "protein_100g": 2.89
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cheese or tofu block topped with grain salad",
+   "grams_low": 30,
+   "grams_best": 50,
+   "grams_high": 70,
+   "fdc_query": "Cheese, feta",
+   "preparation": "cubed/sliced, with herbs and dressing",
+   "confidence": 0.3,
+   "kcal": 132.5,
+   "kcal_range": [
+    80,
+    186
+   ],
+   "protein_g": 7.1,
+   "protein_range": [
+    4.3,
+    9.9
+   ],
+   "fdc": {
+    "fdc_id": "173420",
+    "description": "Cheese, feta",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 265.0,
+    "protein_100g": 14.21
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Caramelized onions",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 30,
+   "fdc_query": "Onions, cooked, boiled, drained, without salt",
+   "preparation": "saut\u00e9ed in oil",
+   "confidence": 0.35,
+   "kcal": 8.8,
+   "kcal_range": [
+    4,
+    13
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.1,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "170001",
+    "description": "Onions, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 44.0,
+    "protein_100g": 1.36
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing/olive oil",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "drizzled/cooking oil implied",
+   "confidence": 0.3,
+   "kcal": 88.4,
+   "kcal_range": [
+    44,
+    133
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Apple slice",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Apples, raw, with skin",
+   "preparation": "raw slice",
+   "confidence": 0.3,
+   "kcal": 9.2,
+   "kcal_range": [
+    5,
+    15
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "2709215",
+    "description": "Apple, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 61.0,
+    "protein_100g": 0.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 395.0,
+  "kcal": 484.2,
+  "protein_g": 34.2,
+  "grams_range": [
+   253.0,
+   550.0
+  ],
+  "kcal_range": [
+   299,
+   682
+  ],
+  "protein_range": [
+   23.2,
+   46.7
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 395.0,
+   "kcal": 480.5,
+   "protein_g": 33.5,
+   "grams_range": [
+    253.0,
+    550.0
+   ],
+   "kcal_range": [
+    297,
+    677
+   ],
+   "protein_range": [
+    22.7,
+    46.0
+   ]
+  },
+  "rows": [
+   "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, choice, cooked, broiled",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Arugula, raw",
+   "Rice, brown and wild, cooked, NS as to fat",
+   "Cheese, feta",
+   "Onions, cooked, boiled, drained, without salt",
+   "Oil, olive, salad or cooking",
+   "Apples, raw, without skin"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "198d1eed30af2b27726c845a803ed05de1e09eaf20f57838ef688aeaeac98e65",
+ "scale_cues": "Square white dinner plate approx 26-28 cm across; food portions judged relative to plate size.",
+ "assumptions": [
+  "Plate is a standard ~27 cm dinner plate.",
+  "Beef cut assumed to be sirloin/roast beef, lean trimmed.",
+  "Pale block in the center is uncertain; assumed feta-like cheese.",
+  "Oil/dressing implied by glossy salad and caramelized onions.",
+  "Mixed grain is assumed to be brown/wild rice with corn."
+ ],
+ "latency_s": 13.8,
+ "calls": [
+  {
+   "wall_s": 9.14,
+   "duration_ms": 8393,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0301255,
+   "cost_basis": "list",
+   "input_tokens": 8974,
+   "output_tokens": 972
+  },
+  {
+   "wall_s": 4.62,
+   "duration_ms": 3444,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0250057,
+   "cost_basis": "list",
+   "input_tokens": 5131,
+   "output_tokens": 376
+  }
+ ],
+ "cost_usd_cli": 0.05513,
+ "log_id": "72f08484d08c"
+}

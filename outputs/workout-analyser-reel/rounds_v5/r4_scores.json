@@ -1,0 +1,710 @@
+{
+ "A": {
+  "overall": 5.15,
+  "groups": {
+   "mass": 4.2,
+   "fin_consult_mktg": 4.95,
+   "builders": 6.9
+  },
+  "panels": [
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "none (attention sags at beats 8-13, returns at 21)",
+      "why": "Frame 1's ghost overlay and 'my AI system' hold him, and the Salesforce layoff/hiring ending is directly about his fear. The SEE/JUDGE/CHECK middle is a little diagram-heavy but short. Likely follows for 'how to get hired'; unlikely to send."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 8",
+      "why": "Hook is clear enough and the 3-2-1 blast carries him to 14.5 s, but 'I split it into three parts' with node diagrams signals a tech explainer not for him. The job ending is irrelevant to a CA. If he stays, the false-alarm lunge is the only part he enjoys."
+     },
+     {
+      "id": 3,
+      "score": 5.5,
+      "drop": "beat 9",
+      "why": "Gym-goer curiosity gets her past the blast, and the pinned 'what this means for your job' tag is a real reason to stay for an HR person. Joints/wave jargon tests her patience. The Salesforce beat is her payoff and might earn a share to a colleague, but 'LLM post-training' means nothing to her."
+     },
+     {
+      "id": 4,
+      "score": 3,
+      "drop": "beat 2",
+      "why": "The 3.9 s hook lands as a statement, but frame 1 carries six pieces of text and he cannot parse 122\u00b0/53\u00b0 in time. 'How did I build it' tells him this is a coder's reel. Nothing in it speaks to his life."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "beat 4",
+      "why": "Mild interest in the gym footage, but 'Claude', arXiv IDs and PMC numbers on screen are alienating. She leaves before the blast. The job ending does not apply to her."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "This is his dream project reel: pose tracking, a judge model, a second checker, a real failure case, then a job description with a named role. The line 'Gym Jarvis calls a model. This role trains one.' hits hard and drives a follow and a save. He may comment FORM."
+     },
+     {
+      "id": 7,
+      "score": 5,
+      "drop": "beat 11",
+      "why": "Likes the '23 sets on trial, one STOP' data framing and the verdict chips. The architecture stretch from 16 to 32 s is long for a non-builder, and he may skip before the lunge payoff. The layoff news would interest him if he reaches it."
+     },
+     {
+      "id": 8,
+      "score": 4,
+      "drop": "beat 8",
+      "why": "Time-poor and sceptical. The hook is decent but the 10 s of build montage and research before any result feels like throat-clearing. 'Reportedly' with a 'not confirmed' label is honest but weak as a headline for someone who reads filings."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "none (may skip around beat 12)",
+      "why": "Gym-going, AI-curious, and anxious about jobs, so the pinned job tag works on him. The three-part framework is consultant-friendly. He might send it to a gym buddy on 'called out by my own AI'. The follow is plausible."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 20",
+      "why": "Appreciates the structure and the both-must-agree rule as a clean idea. Once the gym story resolves at beat 19 he has his payoff, and the pivot to an engineering job posting is not for him. No send or follow."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "beat 13",
+      "why": "Notices the craft: music drop, loop, pinned tag, comment prompt. Stays through the blast and the verdict chips out of professional interest. The third architecture part is where the pattern gets repetitive. Might save it as a format reference rather than for the content."
+     },
+     {
+      "id": 12,
+      "score": 4,
+      "drop": "beat 8",
+      "why": "The Desi Boyz beat and the red STOP visual carry him to the blast, and the wall of 23 tiles is satisfying. Then it turns into a system diagram. He has no stake in the hiring angle."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "Respects the honest engineering: refusing to judge occluded sets, a false positive shown openly, a second model that never sees the numbers. The ending is relevant to his career. He would follow, and may comment for the prompt. Slight irritation at the hype pacing and 'Jarvis' branding."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "none (eye-roll risk at beat 23)",
+      "why": "The refusal behaviour and the video-only checker are credible design choices, and the paper IDs on screen earn trust. But he knows the gap between calling an API and post-training, so the ending promise feels thin unless the next reel delivers. Watches to the end, follows cautiously, does not send."
+     },
+     {
+      "id": 15,
+      "score": 5.5,
+      "drop": "beat 9",
+      "why": "The hook is squarely his world: half reps on reverse crunches, best rep ghosted over worst. He wants to see the STOP set, but it is held back until 39 s behind diagrams. If he lasts, 'send this to your half-rep buddy' is a real send for him. The Salesforce ending loses him completely."
+     },
+     {
+      "id": 16,
+      "score": 4,
+      "drop": "beat 8",
+      "why": "Music and the countdown hold him to the blast. He has no context for joints, judges or LLM roles, and the reel never tells him why he should care. A scroll at the first diagram."
+     }
+    ],
+    "groups": {
+     "mass": 4.1,
+     "fin_consult_mktg": 4.9,
+     "builders": 6.9
+    },
+    "overall": 5.1,
+    "top_fixes": [
+     "Cut frame 1 to one idea. It currently carries a headline, a STOP, two degree tags, a brand definition and two dates. Keep the ghost overlay, 'WORST REP: UNDER HALF MY BEST' and the red STOP; move 122\u00b0/53\u00b0 to beat 18 where they are already held, and shrink the dates to a corner footnote.",
+     "Make the pinned job tag mean something to non-engineers from beat 7. 'AT THE END: WHAT THIS MEANS FOR YOUR JOB' is vague; something like 'AT THE END: WHO IS GETTING HIRED WHILE OTHERS ARE LET GO' gives personas 2, 3, 7 and 12 a reason to sit through the architecture.",
+     "Keep real gym footage full-frame through beats 8-13 and shrink the nodes to a small corner label. Each part should be shown happening on his body (skeleton, the refused set, best rep against current rep), so the mass group sees a workout being judged rather than a diagram.",
+     "Tease the real STOP set before the middle. Showing one second of the swung reverse crunch at beat 7, with the exercise name hidden, gives the gym trainer and other gym-goers a specific thing to wait for until beat 17.",
+     "Put a plain-English gloss on screen at beats 22-23. 'LLM post-training' is opaque to 12 of 16 personas; a small line such as 'post-training = teaching an AI model after it is built' keeps the spoken line intact, and beat 24's text could widen to 'next: how to get ready' to match the spoken question."
+    ]
+   },
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "none (wobble at beats 2-4)",
+      "why": "AI-built-my-own-gym-system plus the Salesforce layoff/hiring ending is squarely his anxiety. The pinned job tag carries him through. Would follow for the next part, but 'calls a model vs trains one' is the only genuinely new idea for him and it is on screen for 3 s."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 8 (16.4 s)",
+      "why": "Hook is clear enough and the countdown blast holds him, but 'I split it into three parts' signals a tech explainer. Not a gym person, not an AI job seeker; no reason to stay for architecture."
+     },
+     {
+      "id": 3,
+      "score": 5.5,
+      "drop": "beat 9-11 (18-28 s)",
+      "why": "The pinned 'what this means for your job' tag and the Salesforce layoffs are professionally relevant to HR, but she has to sit through 30 s of joints and judges to get there. If she survives, she shares beat 21-22 to a work group; most likely she skips ahead or leaves."
+     },
+     {
+      "id": 4,
+      "score": 3.5,
+      "drop": "beat 4 (7.7 s)",
+      "why": "arXiv IDs and 'Claude dug through the research' mean nothing to him. The hook's '122\u00b0 / 53\u00b0' tags are too small and abstract at 10 pm. Desi Boyz gets him 6-7 s, no more."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "beat 2-4 (4-10 s)",
+      "why": "Does not know what 'AI system', HUD or Claude are; the hook promise ('one set I should never have done') is not paid off for 40 s. The ending is about a job market she is not in."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "Final-year BTech: a weekend project with a real architecture, a failure case, and a concrete JD naming 'LLM post-training' is exactly what he saves. Would comment FORM and follow. Loses half a point because the ending only teases; no payoff in this reel."
+     },
+     {
+      "id": 7,
+      "score": 5,
+      "drop": "beat 9-13 (18-32 s)",
+      "why": "Gym-going analyst likes the 23-set verdict breakdown and the under-half-my-best stat, but SEE/JUDGE/CHECK is three near-identical node animations in a row. Might return for the Salesforce beat if the pinned tag keeps her."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "beat 8 (16.4 s)",
+      "why": "Sceptical reader: 'reportedly', 'not confirmed by Salesforce' and 'many companies are doing the same' read as soft claims. He would respect the sourcing label but the jump from reverse crunches to layoffs feels like two reels stitched together."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "none (soft at beat 11-13)",
+      "why": "Young, career-anxious, gym-curious. The false alarm and both-must-agree rule is a neat, retellable idea. 'Send this to your half-rep buddy' is a real send trigger for him. Follow is a maybe."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 20 (48.3 s)",
+      "why": "Appreciates the structure and the two-model check as a governance idea, watches the STOP payoff, then leaves when the reel pivots to a second topic with a weak bridge line. No send."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "beat 13 (29-32 s)",
+      "why": "Rates the craft: frame-1 text, countdown, pinned open loop, loop-matched last frame. But she notices the screen is overloaded (4-6 text elements in under 4 s in beats 1, 7, 16) and the middle is diagram-heavy. Watches as a professional, not as a fan."
+     },
+     {
+      "id": 12,
+      "score": 4,
+      "drop": "beat 8-9 (16-21 s)",
+      "why": "Hook and blast are well produced, but there is no human moment (no face reaction, no laugh) until beat 19. Brand-manager instinct: too many messages, one reel trying to sell a gym tool, an AI architecture and a careers series."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "Likes the honest failure case, the refusal on hidden joints, and judging against a personal baseline. Would comment FORM for the prompt. Mildly irritated that the Salesforce ending is a cliffhanger with no substance, and that the diagram beats show nodes rather than real output."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "beat 21 (50.5 s) or none",
+      "why": "The second-model-blind-to-numbers check and the camera-angle failure are credible and well told. But 'this role trains one' is obvious to him, and 'how do you get ready?' is aimed below his level. Watches the build, skips the pitch; may follow out of peer interest."
+     },
+     {
+      "id": 15,
+      "score": 6,
+      "drop": "beat 8-13 (16-32 s)",
+      "why": "The ghost overlay of best rep over worst rep is immediately legible to a trainer and is the most shareable image in the reel; he would send it to clients. The architecture section loses him, and the job ending is irrelevant. If he scrubs to beat 17-18, he sends."
+     },
+     {
+      "id": 16,
+      "score": 4,
+      "drop": "beat 4-5 (8-12 s)",
+      "why": "Song and countdown are fun, but the jargon is dense and the payoff is slow. The layoffs ending might catch him if he reached it; he will not."
+     }
+    ],
+    "groups": {
+     "mass": 4.3,
+     "fin_consult_mktg": 5.0,
+     "builders": 6.9
+    },
+    "overall": 5.2,
+    "top_fixes": [
+     "Pay the hook earlier without changing the order: in beats 2-7 make the pinned red STOP thumbnail a readable mini-clip of the swung reverse crunch with a plain-word label ('half reps'), so non-tech viewers know what the STOP is about before the 40 s mark.",
+     "Cut on-screen text per beat to one big line plus at most one small tag. Beats 1, 7 and 16 carry four to six elements in 2-4 s; drop the arXiv/PMC IDs to a tiny corner credit, and move the FORM prompt off beat 16, where it competes with the both-agree rule and the chip flip.",
+     "Make SEE, JUDGE and CHECK look different from each other and show real footage first: skeleton on his body, then best-vs-current rep side by side, then the coach's actual one-line verdict on the clip. Three node animations in a row is where the mass and finance groups leave (16-32 s).",
+     "Tighten the bridge into the Salesforce ending. Beat 20's 'where Gym Jarvis is heading' does not connect a gym tool to layoffs; put the link in the visual and text (for example 'I only call a model. Companies now hire people who train them') so beat 23's best line arrives at beat 20 and the pivot feels earned, not stitched on.",
+     "Add a human reaction in the result beats: his face or a laugh on beat 15 (false alarm) and beat 19 (called out by my own AI), with the send prompt held for the full beat. That is the only emotional payoff in the reel, and currently the 'NOW: YOUR JOB' slide-in overwrites it in the last second."
+    ]
+   }
+  ]
+ },
+ "B": {
+  "overall": 5.1,
+  "groups": {
+   "mass": 3.9,
+   "fin_consult_mktg": 5.05,
+   "builders": 7.15
+  },
+  "panels": [
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 7,
+      "drop": "none",
+      "why": "AI plus job anxiety is his exact feed. The pinned job tag from beat 8 carries him through the architecture, and the Salesforce beats land hard. He follows, but the ending gives him nothing to save and he doesn't know what 'LLM post-training' means."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 4",
+      "why": "The hook is clear enough to hold 3 s, but 'how did I build it' and arXiv IDs tell him this is a tech-build reel, not for him. The job promise that might hold him only appears at 16.6 s, after he has left."
+     },
+     {
+      "id": 3,
+      "score": 4.5,
+      "drop": "beat 9",
+      "why": "Layoffs and hiring are her work topic, but nothing signals that until the small tag at beat 8. '17 joints, joints \u2192 angles' reads as engineering, and she swipes before the Salesforce section she would have sent to colleagues."
+     },
+     {
+      "id": 4,
+      "score": 3,
+      "drop": "beat 2",
+      "why": "Frame 1 has five text elements and two angle numbers he can't parse in a glance. Once the reel turns to 'how I built it', there is no stake for him."
+     },
+     {
+      "id": 5,
+      "score": 2.5,
+      "drop": "beat 2",
+      "why": "No relatable stake in the first 4 s: an AI system, degrees, and 'Gym Jarvis'. The music keeps her about 2 s longer, and she never sees the job angle."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "A project-build story with a clean three-part architecture, a failure case, and a real job posting is placement-season gold. He comments FORM and follows. He's mildly annoyed that 'how do you get ready' is deferred to the next reel."
+     },
+     {
+      "id": 7,
+      "score": 5.5,
+      "drop": "beat 14",
+      "why": "He goes to the gym and is AI-curious, and the blast and verdict chips hold him. The second trip into the lunge, in silence, feels like a detour 33 s in with the promised STOP payoff still not shown."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "beat 9",
+      "why": "He's low on patience at 10 pm. The 10 s of build-up before the blast is tolerated, but the SEE explanation is detail he doesn't need. He would engage with the Salesforce contrast but won't reach it."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "beat 14",
+      "why": "He likes the SEE \u2192 JUDGE \u2192 CHECK framework and the both-agree rule, which is slide-worthy. He may skim to the end for the job tag and would possibly save the diagram, but the FORM ask is tiny text in an overloaded beat."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 11",
+      "why": "He appreciates the structure and the 'reported, not confirmed' honesty in principle. But the courtroom metaphor plus the architecture is 25 s of process before any result, and he judges the payoff too small for the time."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "beat 13",
+      "why": "He notices the craft: the pinned thumbnail, the countdown, the loop. He stays through the blast for the edit, but three explanation beats in a row with the same whoosh-and-node visual flatten the pacing."
+     },
+     {
+      "id": 12,
+      "score": 4.5,
+      "drop": "beat 9",
+      "why": "The hook and the blast are good creative. After the verdict chips he feels the story is already told (23 sets, 1 STOP), and the diagram section feels like a tutorial he didn't ask for."
+     },
+     {
+      "id": 13,
+      "score": 7.5,
+      "drop": "none",
+      "why": "The honest failure case, the refusal on hidden joints, and the two-agent agreement rule are real engineering lessons. 'Gym Jarvis calls a model. This role trains one.' is the best line, and he follows. He loses half a point because the ending is a pure cliffhanger."
+     },
+     {
+      "id": 14,
+      "score": 7,
+      "drop": "none",
+      "why": "He respects the 'can't see, not judging' rule and the judge/witness separation, and watches to the end to see the job description. He's sceptical that a pose-and-LLM wrapper bridges to post-training, and of one STOP in 23 as a headline, so he might comment but is unlikely to send."
+     },
+     {
+      "id": 15,
+      "score": 5,
+      "drop": "beat 20",
+      "why": "Half-rep reverse crunches and the ghost overlay are exactly his content, and beat 19 is sendable to clients. But the form payoff comes only at 41 s after jargon he half-follows, and the Salesforce turn is not his world, so he leaves before the follow ask."
+     },
+     {
+      "id": 16,
+      "score": 4,
+      "drop": "beat 4",
+      "why": "The music and hook hold 4-5 s. The research beat with paper IDs feels like homework, and the job tag that might matter to a student isn't on screen yet."
+     }
+    ],
+    "groups": {
+     "mass": 3.9,
+     "fin_consult_mktg": 5.2,
+     "builders": 7.3
+    },
+    "overall": 5.2,
+    "top_fixes": [
+     "Put the job promise on screen from beat 2 instead of beat 8, as a small pinned tag next to the STOP thumbnail (AT THE END: WHAT THIS MEANS FOR YOUR JOB). Eight of the sixteen panellists leave between beats 2 and 9, before they learn the reel is about their career. This is an on-screen change only, with no change to order or spoken lines.",
+     "Cut frame 1 to two things: the ghost overlay with WORST REP: UNDER HALF MY BEST and the red STOP. Move the 122\u00b0/53\u00b0 tags, the 'GYM JARVIS = my AI gym system' label and the date tags to beats 2-3, where the build montage has room. Five text elements in 4.3 s is unreadable cold.",
+     "Tighten beats 2-5 so the blast lands near 12 s instead of 14.7 s. Trim the montage holds, drop the arXiv/PMC IDs to a one-frame flash or remove them from screen, and keep only CLAUDE READ THE RESEARCH and the warning large. The order and the single research line stay as locked.",
+     "Keep the result alive through the middle (beats 8-16). Hold the red tile or STOP thumbnail with a label such as 'the STOP set: coming up', vary the visuals of the three arch3 beats with more of his own footage and less node diagram, and replace the full silence at beats 14-15 with a low pulse. Mid-reel silence reads as the reel ending.",
+     "Fix the two asks and the ending. Beat 16 carries four text items in 3.1 s, so give 'comment FORM' its own large one-second hold on the both-agree diagram. At beats 22-24, add a small plain-words gloss for 'LLM post-training' and make the next-reel promise specific to the posting, so the cliffhanger feels like a trade and not a withheld answer."
+    ]
+   },
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 7,
+      "drop": "none (attention dips at beats 9-13)",
+      "why": "AI plus job anxiety is exactly his feed. The pinned 'what this means for your job' tag carries him through the architecture, and the Salesforce beat lands hard for a support engineer. Follows for the next reel, but is unlikely to send because the reel ends on a tease with no answer."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 9",
+      "why": "The hook is curious enough, but beats 2-6 are 10 s of build-up with no new payoff. 'Joints \u2192 angles \u2192 every dip = 1 rep' is where it starts to feel like a tech tutorial that is not for him. The Salesforce ending is not his world."
+     },
+     {
+      "id": 3,
+      "score": 5,
+      "drop": "beat 11",
+      "why": "The layoffs-plus-hiring ending is squarely HR-relevant, but only the small pinned tag promises it. SEE/JUDGE/CHECK node diagrams lose her before she gets there. If she does reach beat 21 she might send it to a colleague."
+     },
+     {
+      "id": 4,
+      "score": 3,
+      "drop": "beat 4",
+      "why": "Frame 1 has too much text to parse in 3 s. 'Claude dig through the research' and arXiv IDs mean nothing to him, and nothing visual has paid off by 10 s."
+     },
+     {
+      "id": 5,
+      "score": 2.5,
+      "drop": "beat 2",
+      "why": "'My AI system' with a HUD over gym footage reads as niche tech content. There is no personal stake, and the montage confirms it is not for her."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "A built project, Claude, a three-part architecture and an AI-engineer job posting are all placement fuel for him. Comments FORM, follows for the next reel, and may send to a batchmate. The hype countdown feels slightly cringe to him but does not cost the view."
+     },
+     {
+      "id": 7,
+      "score": 5,
+      "drop": "beat 11",
+      "why": "Gym-goer, so the ghost overlay and STOP hook work, and the blast is satisfying. The courtroom-plus-architecture middle is 17 s without a human moment. Likely skips before the lunge story."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "beat 9",
+      "why": "Low patience at 10 pm. The countdown feels like padding and the wave explanation is the exit. Would respect the 'reported, not confirmed' label if he saw it, but he does not."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "beat 13 (borderline)",
+      "why": "He likes the AI-builder angle and the clean SEE \u2192 JUDGE \u2192 CHECK framing, which is slide-like. The job tag keeps him to the end about half the time. Might follow, but the ending gives no takeaway to save."
+     },
+     {
+      "id": 10,
+      "score": 4.5,
+      "drop": "beat 8",
+      "why": "Appreciates the craft but spots the structure: 14.7 s of wind-up, then 'I split it into three parts' signals a lecture. The job angle is aimed at people junior to him."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "beat 12",
+      "why": "Trending audio, the loop and the countdown blast hold him, and he notices the retention mechanics. The trial metaphor on top of chips and nodes gets dense. May save it as a format reference, not for the content."
+     },
+     {
+      "id": 12,
+      "score": 4,
+      "drop": "beat 5",
+      "why": "The hook visual is strong, but by 10-13 s it is still promising rather than showing. 'The camera angle can fool it' is an abstract warning with nothing at stake for her yet."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "The refuse-to-judge and both-must-agree design choices are genuinely interesting to a dev. 'Gym Jarvis calls a model. This role trains one.' is the sharpest line in the reel. Follows, and might comment FORM. Mild eye-roll at the courtroom wording."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "none (sceptical at beat 22)",
+      "why": "Likes the abstention and the false-positive case told honestly, since the camera-angle confound is real. Finds the jump from a pose-plus-LLM pipeline to post-training thin, and the reel only teases. Watches to the end, with a 50/50 chance of following."
+     },
+     {
+      "id": 15,
+      "score": 5,
+      "drop": "beat 20",
+      "why": "The best-rep ghost over a swung reverse crunch is exactly his content, and 'your gym buddy's half reps' is sendable to clients. Joints, wave and witness talk is tolerable because his exercise is on screen. The Salesforce pivot is an instant exit, and no form tip is ever given."
+     },
+     {
+      "id": 16,
+      "score": 3.5,
+      "drop": "beat 4",
+      "why": "The beat and frame 1 hold for 4 s, then 'months of weekends' and research papers feel like someone else's homework. Might return for the 3-2-1 if still there, but usually is not."
+     }
+    ],
+    "groups": {
+     "mass": 3.9,
+     "fin_consult_mktg": 4.9,
+     "builders": 7.0
+    },
+    "overall": 5.0,
+    "top_fixes": [
+     "Declutter frame 1 and save the numbers for the reveal. It carries five text elements. Keep only WORST REP: UNDER HALF MY BEST plus the red STOP over the ghost, move the Gym Jarvis and date tags to beat 2, and hold 122\u00b0 vs 53\u00b0 back until beat 18. As written, the climax repeats frame 1 and gives no new information.",
+     "Tighten beats 2-5 without reordering so the blast lands at about 12-12.5 s, not 14.7 s. Trim the spoken lines (for example 'How did I build it? Months of weekends.' and 'Claude dug through the research first.'), drop the arXiv/PMC IDs to a barely visible corner, and add one visual payoff per beat, such as the red tile already flickering on the filling wall. Mass viewers currently leave at beats 2-5 because nothing has paid off for 10 s.",
+     "Run SEE, JUDGE and CHECK on the creator's real footage full-frame, not on node diagrams, ideally on the reverse-crunch set itself so the 'guilty set' tension continues. Use one text line per beat. The 16.6-33.4 s stretch is where the mass and finance groups drop, because it looks like an architecture lecture with no human moment.",
+     "Simplify the courtroom vocabulary and unstack beat 16. 'Wrongful conviction', 'retrial' and 'witness' on top of chips and nodes is heavy for a 10 pm scroll; plain words like 'It got one wrong: STOP, on my lunges' travel further. Beat 16 carries the rule, the lunge flip and the FORM comment ask in 3.1 s, so give the FORM ask its own 1 s hold on the diagram.",
+     "Make the job pivot land for non-builders. Enlarge the pinned 'what this means for your job' tag and introduce it by beat 7. Say the bridge aloud in plain words in beat 23 (for example 'I only use AI. They're hiring people who train it.'), because the on-screen-only 'calls a model / trains one' line is the best idea in the reel and mass viewers will miss it. Add one concrete promise for the next reel, such as 'NEXT REEL: 3 things this role asks for', so FOLLOW has a reason."
+    ]
+   }
+  ]
+ },
+ "C": {
+  "overall": 5.1,
+  "groups": {
+   "mass": 4.1,
+   "fin_consult_mktg": 5.1,
+   "builders": 6.9
+  },
+  "panels": [
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "none (attention sags beats 7-12, returns at beat 20)",
+      "why": "Hook is clear and the Salesforce layoff/hiring ending hits his exact fear as a TCS support engineer. The pinned 'AT THE END: YOUR JOB' tag keeps him through the architecture. Likely follows for the next reel, but the ending gives him nothing usable today, so no save."
+     },
+     {
+      "id": 2,
+      "score": 3.5,
+      "drop": "beat 4",
+      "why": "Not a gym or AI person. 'Under half my best' with degrees means little to him, and an arXiv number plus 'Claude' at 8-12 s signals tech content for someone else. The job ending is about AI engineers, not him, so the pinned tag would not have saved it."
+     },
+     {
+      "id": 3,
+      "score": 5.5,
+      "drop": "beat 8",
+      "why": "Mild interest in the hook, loses the thread at skeletons and waves. If she survives, the Salesforce beat is directly relevant to HR and she might share it with a colleague, but most of the time she is gone before the tag at beat 7 registers."
+     },
+     {
+      "id": 4,
+      "score": 3,
+      "drop": "beat 2",
+      "why": "Hook is readable but the pivot to 'how did I build it' answers a question he never asked. He wanted to see the bad set, not a build montage. No stake in AI hiring."
+     },
+     {
+      "id": 5,
+      "score": 2.5,
+      "drop": "beat 2",
+      "why": "No gym, no tech, no job relevance. Dense on-screen text in frame 1 (five text elements) is too much to read in 3.9 s and she scrolls."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "Core audience: a build story, a clean three-part design, a real failure case, and a real job posting naming a skill he can chase. Would follow and probably comment FORM. Slight annoyance that the ending is a cliffhanger with no answer."
+     },
+     {
+      "id": 7,
+      "score": 5,
+      "drop": "beat 9",
+      "why": "Stays for the 3-2-1 blast and the 23-set wall, which read as data she understands. Three explained parts in a row feel like a lecture by the refusal beat. The job hook is too far away and too engineer-specific."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "beat 7",
+      "why": "Appreciates the audit framing ('23 sets on trial, one STOP') but 'I split it into three parts' announces 30 s of explanation. Sceptical of 'reportedly' as a tease, reads it as bait."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "beat 12",
+      "why": "Gym-going, AI-curious, likes the umpire/third umpire framing. Third consecutive 'Part X' beat is where the scroll thumb twitches. If they hold, the lunge false alarm and the Salesforce beat are both shareable in an office group."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 10",
+      "why": "Recognises a well-structured reel and that is the problem: it feels structured, not urgent. The 'both must agree' rule is the genuinely smart insight but arrives at 36 s. The ending is a tease with no takeaway, so no send."
+     },
+     {
+      "id": 11,
+      "score": 6,
+      "drop": "none (skims 7-12)",
+      "why": "Reads the craft: loop, pinned tag, comment keyword. Watches as a professional. Notices two calls to action competing (comment FORM, then follow) plus 'send this to yours', and that the reel changes subject at 49 s."
+     },
+     {
+      "id": 12,
+      "score": 4,
+      "drop": "beat 4",
+      "why": "Hook lands, Desi Boyz helps, but the research line and arXiv tag are the moment it stops being about a relatable gym mistake. Not the target for LLM post-training jobs."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "The false alarm and the two-model agreement rule are honest engineering, rare on reels. Refusing 4 of 23 sets is the detail that earns trust. Would follow. Finds the Salesforce turn bolted on but relevant enough to stay."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "beat 20",
+      "why": "Enjoys the abstain behaviour and the video-only checker. 'Gym Jarvis calls a model. This role trains one.' is the sharpest line in the script and he agrees with it, but the layoff news is already in his feed and the reel offers nothing new on it. May leave before the final tease."
+     },
+     {
+      "id": 15,
+      "score": 5.5,
+      "drop": "beat 7",
+      "why": "Frame 1 is his world: ghost of best rep over worst rep, half reps called out. He would send the half-rep line to clients, but it arrives at 46 s and he leaves at the architecture section. The payoff he wants is 30 s too late."
+     },
+     {
+      "id": 16,
+      "score": 3.5,
+      "drop": "beat 4",
+      "why": "Music and STOP graphic hold him for the hook, the countdown is 8 s away and nothing in between is for him. Job ending concerns a role he cannot picture."
+     }
+    ],
+    "groups": {
+     "mass": 3.9,
+     "fin_consult_mktg": 5.1,
+     "builders": 6.9
+    },
+    "overall": 5.0,
+    "top_fixes": [
+     "Cut frame-1 text to two elements (STOP and WORST REP: UNDER HALF MY BEST). Move 'how far my legs lowered, 122\u00b0 vs 53\u00b0', the GYM JARVIS definition and the filmed/analysed dates to beat 2 or beat 18; five text items in 3.9 s is unreadable on a phone and costs the mass group at the hook.",
+     "Make beats 2-4 keep showing the bad set instead of leaving it: enlarge the pinned STOP thumbnail and let the swung reps keep playing in it, and shrink the arXiv id to the smallest legible size so the research beat reads as a warning about the footage, not as a paper citation. Order and spoken lines stay as locked.",
+     "Break the 'Part one / Part two / Part three' lecture rhythm in beats 8-12 without changing order: drop the spoken 'Part one/two/three' labels (the lit node already shows it) and spend the words on the outcome, as beat 9 already does. Each part should open on his own footage with a visible result, not on the diagram.",
+     "Give non-engineers a stake in the ending. The pinned tag and beat 20-22 text speak only to AI engineers; add on-screen text that widens it using facts already in the script (for example 'letting people go AND hiring, same company, same week') and keep the title block as the proof, so personas 2-5, 7-12 see a pattern that concerns them, not a job listing for someone else.",
+     "Reduce to one action per moment and pay something off before the tease. 'Send this to yours', 'comment FORM' and 'FOLLOW' all land inside 14 s; keep the send line spoken, FORM in the caption only, FOLLOW on the last frame. Hold 'Gym Jarvis calls a model. This role trains one.' as the largest text of the ending, since it is the one concrete takeaway the viewer gets before the cliffhanger."
+    ]
+   },
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "none (attention sags beats 7-12, re-hooks at 20)",
+      "why": "Gym + AI + layoffs is squarely his feed. The red STOP and ghost overlay hold him past 3 s, and the Salesforce beat hits his own job anxiety at TCS. But the ending only promises a next reel, so he follows half-heartedly rather than saves; nothing in this reel tells him what to do."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 7-8",
+      "why": "Hook is visually clear, but '122\u00b0 vs 53\u00b0', arXiv number and 'three parts' feel like a tech demo for someone else. Umpire analogy is nice but arrives after he has already decided this is not for him. Salesforce ending never reached."
+     },
+     {
+      "id": 3,
+      "score": 5.5,
+      "drop": "beat 9-10",
+      "why": "Would have loved the layoffs-plus-hiring ending (it is her profession), but the only signal is a tiny pinned tag from beat 7 she probably does not read under dense on-screen text. If she survives to beat 20 she shares it to an HR group; most likely she leaves in the architecture stretch."
+     },
+     {
+      "id": 4,
+      "score": 3.5,
+      "drop": "beat 4",
+      "why": "Stays for the STOP frame and the music, then 'I had Claude dig through the research' and an arXiv ID mean nothing to him. No stake for him until 49 s, which he never sees."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "beat 2-4",
+      "why": "Not a gym-goer, not in tech. The hook is legible but not relevant, and the build montage plus research line confirm it is niche. The cricket umpire framing would have landed but comes too late."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "Ideal viewer: gym-going final-year student terrified of placements. Wants to build this, comments FORM for the prompt and diagram, follows for 'how to get hired'. Slight irritation that the job section is a pure tease."
+     },
+     {
+      "id": 7,
+      "score": 5,
+      "drop": "beat 12-13",
+      "why": "Likes the '23 sets, 1 STOP' data framing and the verdict chips. Loses the thread at the lunge detour, where a second STOP appears and is then retracted; too much to track with the sound half-attended. May scrub ahead to the job tag but not send."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "beat 8",
+      "why": "Sceptical reader. Hook is fine, but text density per frame (four to five lines on beat 1) feels like work at 10 pm. Would respect the 'reported, not confirmed by Salesforce' tag if he saw it, but he is gone by SEE."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "none, or beat 16",
+      "why": "Likes frameworks, so SEE \u2192 JUDGE \u2192 CHECK and the both-agree rule appeal. Gym-going and AI-curious. The Salesforce beat is relevant to peers; might send to one friend. Docked because the lunge resolution ('Check footage') is an anticlimax spoken in three words."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 19-20",
+      "why": "Appreciates the structure and the refusal beat ('It won't guess') as a genuinely smart point about AI. Reads the gym-to-Salesforce pivot as bolted on, with 'Now, your job.' and no logical bridge, and exits on the tease rather than following."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "beat 13",
+      "why": "Evaluates it as a creative: strong frame 1, good drop at 12 s, loop is tidy. Thinks the middle is over-explained and the two asks (FORM comment plus FOLLOW) split the conversion. Watches about 35 s, no action."
+     },
+     {
+      "id": 12,
+      "score": 4.5,
+      "drop": "beat 8-9",
+      "why": "Hook lands and 'every gym has a half-rep guy' would be his share trigger, but that line is at 46 s. He is gone before it, during joints-per-second text and node diagrams."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "Cares about exactly the engineering details shown: abstaining when the knee is occluded, a second model checking video only, a real false positive admitted. Saves it, comments FORM. Finds the job ending a bit clickbaity but relevant."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "none",
+      "why": "Respects the honesty of the false alarm and the sourcing tags. 'Gym Jarvis calls a model. This role trains one.' is the sharpest line in the reel for her and earns the follow. Docked because the pipeline itself is routine pose estimation plus an LLM, and the 60 s gives her no new technique."
+     },
+     {
+      "id": 15,
+      "score": 6,
+      "drop": "beat 10-12",
+      "why": "The ghost overlay of best versus worst rep is immediately meaningful, and the half-rep guy line is something he would send to clients. But he must sit through umpires and node diagrams to reach it, and the last 11 s on Salesforce is irrelevant to him. Likely watches the hook twice and leaves mid-way."
+     },
+     {
+      "id": 16,
+      "score": 4,
+      "drop": "beat 4-6",
+      "why": "Music and countdown carry him to the blast, then the content turns into explanation. No job stake visible yet, no gym identity strong enough to hold. Swipes around 15-18 s."
+     }
+    ],
+    "groups": {
+     "mass": 4.3,
+     "fin_consult_mktg": 5.1,
+     "builders": 6.9
+    },
+    "overall": 5.2,
+    "top_fixes": [
+     "Plant the job payoff where non-builders can see it before they leave: the 'AT THE END: WHAT THIS MEANS FOR YOUR JOB' tag only appears at beat 7 (15.8 s) and is small. Show it as a readable tag in beats 1-3 (order unchanged, text only) so HR, finance and mass viewers have a reason to sit through the three parts.",
+     "Cut on-screen text per beat to one big line plus at most one small line. Beat 1 carries five text elements in 3.9 s and beat 8 carries four in 2.8 s; nobody reads '122\u00b0 vs 53\u00b0', the Jarvis definition and the date stamp at once. Move the date and the definition to the caption or a later beat, and keep 'UNDER HALF MY BEST' as the only number in frame 1.",
+     "Make the gym-to-job bridge a reason rather than a jump. 'Now, your job.' reads as a second reel stapled on. The existing beat-22 text 'Gym Jarvis calls a model. This role trains one.' is the real link; say it aloud (it is nine words) so the pivot feels earned, and put the 'many companies' line on screen instead.",
+     "Give the last 11 s one takeaway inside this reel, not only a tease. Viewers who waited 50 s for 'what this means for your job' get a question and a follow ask. One on-screen line naming the skill gap (for example what LLM post-training is, in plain words) pays the promise and still leaves the next reel open.",
+     "Tighten the lunge sequence so the viewer never thinks there are two STOPs. Beats 13-16 spend 8.3 s and end on a flat 'Check footage'. Keep 'JUDGE ALONE' large from the first frame of beat 13, and let the amber chip flip land as the punchline with a hit rather than a soft pop. Also drop the FORM corner tag from beats 18-19 to the caption only, so FOLLOW is the single ask and the half-rep send line is not competing with it."
+    ]
+   }
+  ]
+ }
+}

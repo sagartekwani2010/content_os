@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "```python\nfrom decimal import Decimal, ROUND_HALF_UP\n\n\ndef split_bill(total: float, people: int, tip_pct: float) -> list[float]:\n    if people <= 0:\n        raise ValueError(\"people must be a positive integer\")\n\n    # Work in integer paise to avoid floating-point errors\n    total_dec = Decimal(str(total))\n    tip_dec = Decimal(str(tip_pct))\n    grand_total = total_dec * (Decimal(1) + tip_dec / Decimal(100))\n    total_paise = int((grand_total * 100).quantize(Decimal(\"1\"), rounding=ROUND_HALF_UP))\n\n    base, extra = divmod(total_paise, people)\n\n    # First `extra` people each pay one additional paisa\n    shares = [base + 1 if i < extra else base for i in range(people)]\n    return [s / 100 for s in shares]\n```",
+ "seconds": 3.7,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1225.75,
+ "out_tok": 298,
+ "usd_list": 0.00543,
+ "cli_cost": 0.0071718,
+ "item": "c3"
+}

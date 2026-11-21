@@ -259,9 +259,11 @@ class Picture(Element):
     appear = "fade"
     burst = False
 
-    def __init__(self, id, image: skia.Image, rect, *, frame_col=R.INK, cover=True, radius=18, **kw):
+    def __init__(self, id, image: skia.Image, rect, *, frame_col=R.INK, cover=True, radius=18, tilt=0.0,
+                 polaroid=False, **kw):
         super().__init__(id, **kw)
         self.image, self.rect, self.cover, self.radius = image, rect, cover, radius
+        self.tilt, self.polaroid = tilt, polaroid
         x, y, w, h = rect
         self.frame = R.Stroke(R.rect_pts(x - 6, y - 6, w + 12, h + 12), frame_col, 5, f"{id}:frame", closed=True)
 
@@ -269,6 +271,17 @@ class Picture(Element):
         return self.rect
 
     def paint(self, c, p, alpha, t):
+        x, y, w, h = self.rect
+        c.save()
+        if self.tilt:
+            c.rotate(self.tilt, x + w / 2, y + h / 2)
+        if self.polaroid:  # white print border with a soft shadow
+            c.drawRect(skia.Rect.MakeXYWH(x - 14 + 7, y - 14 + 9, w + 28, h + 70), R.fill_paint(R.INK, 0.18 * alpha * clamp(p)))
+            c.drawRect(skia.Rect.MakeXYWH(x - 14, y - 14, w + 28, h + 70), R.fill_paint("#FFFFFF", alpha * clamp(p)))
+        self._paint(c, p, alpha, t)
+        c.restore()
+
+    def _paint(self, c, p, alpha, t):
         x, y, w, h = self.rect
         iw, ih = self.image.width(), self.image.height()
         s = max(w / iw, h / ih) if self.cover else min(w / iw, h / ih)

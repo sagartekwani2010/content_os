@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "22:45 plus 16 hours is 14:45 the next day. Adding 35 minutes gives 15:20.\n\nANSWER: 15:20",
+ "seconds": 3.1,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 1193.25,
+ "out_tok": 97,
+ "usd_list": 0.00017,
+ "cli_cost": 0.0002393,
+ "item": "m6"
+}

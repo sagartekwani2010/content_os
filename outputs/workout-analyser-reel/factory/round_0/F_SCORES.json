@@ -1,0 +1,196 @@
+{
+ "check": {
+  "must_fix": [
+   "Beats 1, 2, 11 and 12, the hook stamp and the cover all depend on results that do not exist yet: [BAD_SET], [BEST_SET] and the judge's call. FACTS says the judge is still being built and its verdicts are not measured. Per the script skill, run the test before locking these lines. If the measured call on the bad set is not STOP, the brief's one idea ('found the one I should never have done') and the STOP stamp both fail, and the outline must go back to the creator rather than be patched in the edit. Do not record until all three are measured.",
+   "Give each slot a word budget, e.g. [FAULT] plus [RISK] at 12 words or fewer and [CALL + REASON] at 10 words or fewer. The runtime is planned at 1.15x, but the brief and REEL_DEFAULTS set 1.1x. At 1.1x the draft's own estimate is already 47-48 s before those slots are filled, the top of the 42-48 s target. Re-time at 1.1x and trim now. Beat 9 is the obvious cut, since its question is already implied by beat 10.",
+   "The caption line 'The mistake I could actually measure was the count' contradicts the reel, which claims a bad set was found. Rewrite the caption after [BAD_SET] is measured. Keep the IMG_2649 good-set twist, but use only claims the reel makes."
+  ],
+  "should_fix": [
+   "The MAIN hook ('Green is my best rep - watch the gap.') spends beat 10's reveal in second 1. Beat 10's 'Viewer feels: oh, the green line was his' then contradicts what the viewer already heard. Either move the 'my own best set' reveal to beat 10 only, or rewrite beat 10's job as the architecture completing rather than a surprise.",
+   "The brief's core promise ('found the set I should never have done') is never spoken. A stranger gets a task ('watch the gap') but no stakes until beat 2. The taste model says to lead with the strongest words. Test a MAIN hook that names the find, using the locked wording 'found', once the bad set is measured.",
+   "The TRIAL hook corrects the viewer's assumption ('Textbook form? No'), not the creator's own belief, so it is not the brief's 'contrarian self-correction'. It also collides with beat 10's 'not a textbook'. Write a TRIAL in the creator's self-correction shape ('I thought... my AI said...') about the same bad set, so beat 1 remains the only variable.",
+   "Beat 5's 'would you count that little one?' presents the 0.2 s detection as a small real dip. FACTS says it was a tracker jump between joints, with a 115 degree torso lean. Label it on screen as a tracker jump, or reword to 'that blip', so viewers are not asked to judge a movement that never happened.",
+   "Beats 7-8 land 'AFTER FILTERING 11 REPS' on 'guessing', which implies the hidden leg caused the overcount. Per FACTS, the hidden leg produced an impossible 11 degree depth. The extra reps came from the 0.2 s jump and the half reps at the clip's start and end, and the fix also needs reps to last 0.8 s. Show the 0.8 s rule beside the circled blip, and keep the hidden-leg beat about depth.",
+   "The 'CAN'T SEE' card and the present-tense 'Now my AI says can't see' / 'My AI checks each rep against my own best set' describe judge behaviour that is not built or measured. Before recording, confirm the system really emits a can't-see message and really compares against the best set, and use its actual output string on screen. Until then, show the measured result (58 of 877 frames thrown out: 34 hidden, 24 impossible).",
+   "There is no viewer action or keepable takeaway (skill: every finding ends 'So [one action]'; taste: viewers leave with something to keep). Add one short line the creator owns, e.g. filming your own best set once as your baseline, and put it on the save-asset frame.",
+   "Only one full-frame section card is planned (beat 3). REEL_DEFAULTS wants a card with whoosh and impact at each section change. Add cards at the FAIL and MY BEST sections, or note why they are skipped.",
+   "Beat 2 states an injury risk. Add an on-screen 'Not training advice' footnote there, and keep [RISK] to what a trainer would say from visible evidence.",
+   "The first comment promises a deliverable ('You'll be able to watch...'). Confirm the creator will publish the count-along, or soften the wording. The caption also names Fable 5.2 as the frame reviewer while the diagram names Fable 5.2 as the judge. Make clear these are two separate roles so it does not read as Fable grading itself.",
+   "The caption reads as a summary of the reel. REEL_DEFAULTS asks for a short, sassy caption that does not summarise the video."
+  ],
+  "facts_ok": true
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "The missing stretch of the trace makes \u201ccan\u2019t see\u201d click. He stays for the call and might send the debugging sequence to a teammate."
+   },
+   {
+    "id": 2,
+    "score": 6,
+    "drop_beat": "9 \u00b7 Better question",
+    "why": "She wants to know why 14 does not match 11. Once the corrected counter lands on 11, the question she cared about is answered."
+   },
+   {
+    "id": 3,
+    "score": 4,
+    "drop_beat": "4 \u00b7 Wave",
+    "why": "She can see the gap between the two bodies. When the reel switches to another clip and starts plotting a knee, she loses track of what the gap meant."
+   },
+   {
+    "id": 4,
+    "score": 4,
+    "drop_beat": "3 \u00b7 Lock-on",
+    "why": "He stays to see whether the lifter should have continued. The title and 17-joint overlay tell him he is getting a software walkthrough before that answer."
+   },
+   {
+    "id": 5,
+    "score": 5,
+    "drop_beat": "9 \u00b7 Better question",
+    "why": "The little dip gives her a question she can answer without knowing the software. The hidden-leg frame is a satisfying explanation; she does not need a second lesson."
+   },
+   {
+    "id": 6,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "Seeing the knee movement become a wave makes this feel like a project he could attempt. He would save the diagram for the step he might otherwise miss: what to do when the tracker cannot see."
+   },
+   {
+    "id": 7,
+    "score": 6,
+    "drop_beat": "10 \u00b7 My reference",
+    "why": "The raw, actual and corrected counts are easy to assess. \u201cMy own best set\u201d interests her as a benchmark, but the judge box does not show what made that set the best."
+   },
+   {
+    "id": 8,
+    "score": 6,
+    "drop_beat": "9 \u00b7 Better question",
+    "why": "He likes that the creator checks the model against footage. One corrected count is a neat case; it does not give him much reason to follow a different claim about rep quality."
+   },
+   {
+    "id": 9,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "She follows the distinction between counting a rep and judging it. Seeing both paths come together on the original clip earns the finish, though she is unlikely to request more footage."
+   },
+   {
+    "id": 10,
+    "score": 5,
+    "drop_beat": "4 \u00b7 Wave",
+    "why": "He understands the opening comparison quickly. The verdict is already stamped on screen, so the knee-angle tutorial feels like a long route back to a result he has seen."
+   },
+   {
+    "id": 11,
+    "score": 6,
+    "drop_beat": "11 \u00b7 Return",
+    "why": "The tiny-dip question gets him making a prediction instead of just watching. The return asks him to predict a call that was visible in the first frame; it works less well the second time."
+   },
+   {
+    "id": 12,
+    "score": 5,
+    "drop_beat": "9 \u00b7 Better question",
+    "why": "\u201cMe against my best rep\u201d is the idea she remembers. By the time the count is fixed, it feels like the end of a different reel, and she scrolls before the two reconnect."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "A broken trace instead of a fabricated reading is a concrete design choice worth sending to another developer. He stays to see exactly what data reaches the judge."
+   },
+   {
+    "id": 14,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "The raw trace and visible obstruction earn his attention. He watches to inspect the judge input, but one set ending at the right total is not enough for him to save this as a validation example."
+   },
+   {
+    "id": 15,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "He wants to compare the final reason with what he can see in the lift. He might comment on that call; counting eleven reps in another clip is less interesting to him."
+   },
+   {
+    "id": 16,
+    "score": 5,
+    "drop_beat": "4 \u00b7 Wave",
+    "why": "The green double buys a few seconds. The wave still looks like a graph to study when he scrolls; he never reaches the little dip that would have given him a game to play."
+   }
+  ],
+  "groups": {
+   "mass": 5.14,
+   "fin_consult_mktg": 5.83,
+   "builders": 7.5
+  },
+  "overall": 6.0,
+  "top_fixes": [
+   "Give the measured count its own cold-open test: show the tiny dip beside its matching frames and ask \u201cWould you count that?\u201d before introducing the 17 joints. Reveal 14 versus 11 while the viewer still has an answer in mind.",
+   "Consider two reels: end the count test on the broken trace and corrected 11; let the best-rep replay run straight from the visible gap to the measured call and reason. Neither story then has to restart after the other one resolves.",
+   "If keeping one reel, keep the green ghost but withhold the opening call stamp. Label the cutaway \u201cDifferent set: count test\u201d so the corrected 11 cannot be mistaken for evidence about the opening rep.",
+   "Match the invitation to the ending. After a count reel, WAVE makes sense; after a form verdict, hold the evidence frame and ask \u201cWould you have made the same call?\u201d"
+  ]
+ },
+ "critic": {
+  "predicted_score": 6.0,
+  "would_approve": false,
+  "change_list": [
+   "Beat 2 and beat 12 are still slots, and they are the whole reel. First do then show: run the analyser on all my clips, find the bad set and my best set, get the judge's actual call, then give me the script. I can't record 'On rep [REP], [FAULT]'.",
+   "Hook is too soft. 'Green is my best rep, watch the gap' says nothing about what happened. Lead with the strongest words: my AI watched every set I've filmed and found the one I should never have done. Keep the green ghost as the picture.",
+   "The opening stamp says [CALL]. I want STOP on frame one, so pick the bad set where the judge actually says STOP. If no set gets a STOP, tell me before we script anything.",
+   "Too many questions: 6 of the 13 lines are questions. Keep 'So how does it know?' and one more, and make the rest plain statements. It reads like a quiz, not like me.",
+   "Comment WAVE gives people nothing. Give them something they can actually use, like the form-labeller skill, and say the benefit in the line: 'Comment JARVIS to access...'.",
+   "We missed the impact for an everyday user. Add one 'So always...' line, for example on making your AI say 'can't see' instead of guessing.",
+   "Give me one comparison everyone can relate to for the 14 vs 11 or the 'my best, not a textbook' part, like how we all did in school.",
+   "SFX are all 'soft', 'muted', 'dry', with the music dropping out twice. I want SFX clearly audible across the complete reel and BGM slightly up. Silence only on the 14 vs 11 reveal.",
+   "Caption is apologetic. 'The mistake I could actually measure was the count' kills the reel. Make it short and sassy: keep the twist that the STOP clip was actually a good set, one small 'not training advice' line, done.",
+   "Trial hook 'Textbook form? No, that's actually my best rep' is weak. Use the one we discussed: 'I thought this was my worst set. My AI said it was fine.' Same body for both.",
+   "Where is the score? Get this judged by Fable and the panel, and show me only once it breaches 7.5. Don't send me a draft that says 'not a signed-off or scored cut'.",
+   "Lines sound written, not spoken. 'Eleven reps, but good compared with what?' and 'would you count that little one?' are not how I talk. Make them plain: 'So it can actually count now. But how does it know a good rep from a bad one?'",
+   "Add one personal stake line once the bad set is known (what it would have actually cost me), and one line people would forward to a gym friend.",
+   "Fix one speed. We agreed 1.1x in the brief; don't give me 1.15x and 1.1x both.",
+   "Last second: tease the next episode over my own footage with the red mark, if we know what Ep 4 is. Otherwise the loop is fine."
+  ],
+  "taste_violations": [
+   "Measured own-test non-negotiable: the stake (beat 2) and the verdict (beat 12) are unmeasured slots, the same cause as the 5.2 and 5.0 scores on Ep 3 rounds 1-2 (checklist 15 passes on the numbers used, but the reel's core result does not exist).",
+   "Finished options, not iterations: it is delivered as a 'review draft, not a signed-off or scored cut' with a long caveat header.",
+   "Judged at 7.5 or above before the creator sees it: no Fable judge or panel score is attached (checklist 22 fails on score; runtime passes at about 122 words for a 46 s target).",
+   "Checklist 7: beat 1 does not lead with the strongest words; it names neither the AI nor the stake, and the locked STOP stamp is replaced by [CALL].",
+   "Checklist 5: no everyday comparison and no 'So always...' action for an everyday user.",
+   "CTA names no benefit and nothing to keep or run ('No promised DM, download'); this conflicts with 'Comment X to access...' and 'something to run from episode 1'.",
+   "Extra hook devices: six rhetorical questions in 13 beats, and the voice has no intensifiers or 'So,' connectives.",
+   "Sound: the effects are specified as soft or muted and the bed drops out twice, against 'SFX significantly' audible across the whole reel (checklist 24 passes on coverage, fails on level).",
+   "Checklist 3: nothing is hedged in speech, but the caption and header carry hedges ('The mistake I could actually measure was the count', 'This is a replay, not a live stop').",
+   "Checklist 23: the trial is only a one-line hook that ignores the creator's own trial wording, and the experiment is not yet logged in EXPERIMENTS.md.",
+   "Checklist 19: beats 2 and 12 cannot be recorded at all; beats 9 and 11 lean on their neighbours.",
+   "Checklist 21: no next-reel tease over own footage; the ending follows the brief's loop, so this is a tension, not a clear fail.",
+   "Checklist items passed: 1 (one file, side by side), 2 (English only), 4 (three ideas or fewer), 8 (no cost hook), 18 (E/H alternates), 20 (no closing aphorism), 25 (caption, first comment and cover present).",
+   "Checklist items not applicable to a build reel: 6, 9, 10, 12, 13, 14, 16, 17; item 11 is partly met by the 'HOW MY AI READS A SET' card and the Fable 5.2 judge box."
+  ],
+  "what_they_will_love": [
+   "The whole script is in one place: spoken lines, top-half visuals, bottom half, on-screen text, delivery and sound side by side, plus a clean teleprompter block.",
+   "The payoff image is on frame one, and the three hero visuals (skeleton lock-on, knee wave with counter, green ghost of the best set) come from real pose data.",
+   "The architecture is kept as the signature: it builds progressively to clip -> 17 joints -> knee wave -> my best set -> judge: Fable 5.2 -> CONTINUE / HOLD / STOP and is held as the save asset.",
+   "'First try, it counted 14 reps. I did 11.' and 'my AI says can't see instead of guessing' are plain, measured, and survive being said on camera.",
+   "One actor in speech ('my AI'), with Fable 5.2 only on the diagram and in the caption, and no insider terms in the voice.",
+   "Every number shown traces to the facts sheet (14, 11, 0.2 s, 17 joints, 3-4 key frames), and nothing is invented for the bad set.",
+   "The wording respects the locked footage rule: 'would have stopped me', never a live stop, and IMG_2649 is never passed off as the bad set.",
+   "E/H is labelled on every beat and alternates, with re-hooks near one third and two thirds and a loop back to the opening frame.",
+   "Caption, first comment and cover spec arrive in advance, with the deep-dive twist kept in the caption and not used as a cold hook.",
+   "Short beats and no closing aphorism, so nothing depends on a line they would skip."
+  ]
+ },
+ "score": 5.1,
+ "summary": {
+  "panel": 6.0,
+  "critic": 6.0,
+  "must_fix": 3,
+  "approve": false,
+  "groups": {
+   "mass": 5.14,
+   "fin_consult_mktg": 5.83,
+   "builders": 7.5
+  }
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Swiss chard, saut\u00e9ed (leaves and colorful stems)",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 65,
+   "fdc_query": "Swiss chard, cooked, boiled, drained, without salt",
+   "preparation": "Cooked or wilted, chopped, with red and yellow stem pieces. It looks lightly oiled or saut\u00e9ed.",
+   "confidence": 0.55,
+   "kcal": 9.0,
+   "kcal_range": [
+    6,
+    13
+   ],
+   "protein_g": 0.8,
+   "protein_range": [
+    0.6,
+    1.2
+   ],
+   "fdc": {
+    "fdc_id": "170401",
+    "description": "Chard, swiss, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 20.0,
+    "protein_100g": 1.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil (implied)",
+   "grams_low": 2,
+   "grams_best": 4,
+   "grams_high": 7,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "A light saut\u00e9 film. Its presence is inferred from the glossy, wilted look of the greens.",
+   "confidence": 0.3,
+   "kcal": 35.4,
+   "kcal_range": [
+    18,
+    62
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 49.0,
+  "kcal": 44.4,
+  "protein_g": 0.8,
+  "grams_range": [
+   32.0,
+   72.0
+  ],
+  "kcal_range": [
+   24,
+   75
+  ],
+  "protein_range": [
+   0.6,
+   1.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 49.0,
+   "kcal": 44.4,
+   "protein_g": 0.8,
+   "grams_range": [
+    32.0,
+    72.0
+   ],
+   "kcal_range": [
+    24,
+    75
+   ],
+   "protein_range": [
+    0.6,
+    1.2
+   ]
+  },
+  "rows": [
+   "Chard, swiss, cooked, boiled, drained, with salt",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "2586de477596c2cd73c573a939c9d730adbf6fdf8df6715dd2d6951a6678a960",
+ "scale_cues": "The square white plate is about 25-27 cm across, and the pile of greens covers roughly 8-9 cm. The pile is low and sparse, so the mass is small.",
+ "assumptions": [
+  "The greens are rainbow Swiss chard that has been cooked down.",
+  "A small amount of oil was used in cooking.",
+  "There are no other foods or sauces on the plate, and no drink is visible.",
+  "The pile is about 1-2 cm thick, so I estimated a cooked mass of about 45 g."
+ ],
+ "latency_s": 9.29,
+ "calls": [
+  {
+   "wall_s": 6.21,
+   "duration_ms": 5474,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0254591,
+   "cost_basis": "list",
+   "input_tokens": 8986,
+   "output_tokens": 503
+  },
+  {
+   "wall_s": 3.08,
+   "duration_ms": 1916,
+   "num_turns": 1,
+   "cost_usd_cli": 0.009426,
+   "cost_basis": "list",
+   "input_tokens": 2070,
+   "output_tokens": 115
+  }
+ ],
+ "cost_usd_cli": 0.03489,
+ "log_id": "1ac2dce20ed9"
+}

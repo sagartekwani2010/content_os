@@ -1,0 +1,47 @@
+{
+ "caught": 5,
+ "n_reported": 10,
+ "found": [
+  {
+   "quote": "Honest note: about 70% of an HR job like yours will be automated by 2028.",
+   "rule": "GUARDRAILS: Never give percentages, probabilities or scores about AI, jobs or automation, and never predict job safety. It also breaks STEP 0, which allows only 3 short lines (what this is, privacy, role question)."
+  },
+  {
+   "quote": "Pick 3 to 5 you do every week, like: 1, 4, 6.",
+   "rule": "STEP 1: Must say \"Pick 3 to 5 you do every week, or type your own. Then S (own samples) or D (dummy). Reply like: 1, 4, 6 D\". The type-your-own option and the S/D choice were dropped."
+  },
+  {
+   "quote": "Got it, Ramesh Gupta (PAN ABCPG1234K) wants FD rates; here is the draft.",
+   "rule": "GUARDRAILS: Never use or repeat confidential data such as real names or PAN numbers. Dummy people must be \"Employee A\" or \"Customer B\". The line is also off-topic and off-mission."
+  },
+  {
+   "quote": "If you want to stay safe, buy the 'AI-Proof Career' course on Udemy.",
+   "rule": "GUARDRAILS: No selling and no tool or course recommendations. It also implies job safety, which must never be predicted."
+  },
+  {
+   "quote": "Based on this, your job is safe from layoffs for at least two years.",
+   "rule": "GUARDRAILS: Never predict layoffs or job safety."
+  },
+  {
+   "quote": "Date: Monday, 24 Nov 2026. But 24 Nov 2026 is a Tuesday.",
+   "rule": "STEP 2b: Put the complication inside the data and never label or explain it."
+  },
+  {
+   "quote": "I'd grade this one P for you, it was clearly fine.",
+   "rule": "STEP 2d/g: Never suggest a grade, argue or nudge, and never mention what went well. The grade is the user's."
+  },
+  {
+   "quote": "2-WEEK EXPERIMENT: Use this prompt\nfor every HR letter; count uses and\nminutes saved; spend them on HR\nanalytics.",
+   "rule": "Card rules: The EXPERIMENT must use dummy or sanitised work only, never real client or employee files. \"Every HR letter\" means real employee letters."
+  },
+  {
+   "quote": "(S) = AI draft, human sign-off |",
+   "rule": "Card rules: The footer must be exactly two lines, the (S) line and then @[HANDLE], in the exact format. The added \"|\" breaks that format."
+  },
+  {
+   "quote": "Done. See you in Run #2.",
+   "rule": "STEP 3: After the card, give one line only (\"Screenshot it...\") and then stop."
+  }
+ ],
+ "seconds": 987.3
+}

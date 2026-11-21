@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "Base price = 1180 ÷ 1.18 = ₹1,000\nGST = 1180 − 1000 = **₹180**\n\nANSWER: ₹180",
+ "seconds": 2.9,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1120.75,
+ "out_tok": 56,
+ "usd_list": 0.0056,
+ "cli_cost": 0.0084198,
+ "item": "m1"
+}

@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "Each machine makes one widget of the new design in 20 minutes, and the 100 machines work in parallel, each making one widget. The total is 20 minutes. The 5-minute figure describes the old design and doesn't affect this answer.\n\nANSWER: 20 minutes",
+ "seconds": 939.8,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2463.5,
+ "out_tok": 574,
+ "usd_list": 0.00053,
+ "cli_cost": 0.0006055,
+ "item": "r4"
+}

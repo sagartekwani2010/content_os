@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Cooked chicken breast pieces",
+   "grams_low": 90,
+   "grams_best": 130,
+   "grams_high": 180,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "Diced into roughly 1.5-2 cm cubes, pale cooked meat with some browned edges, served loose in the bowl",
+   "confidence": 0.5,
+   "kcal": 214.5,
+   "kcal_range": [
+    148,
+    297
+   ],
+   "protein_g": 40.3,
+   "protein_range": [
+    27.9,
+    55.8
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red kidney beans",
+   "grams_low": 25,
+   "grams_best": 40,
+   "grams_high": 70,
+   "fdc_query": "Beans, kidney, red, mature seeds, canned, drained solids",
+   "preparation": "Whole, dark red-brown kidney-shaped beans, about 14 visible, likely canned and drained",
+   "confidence": 0.45,
+   "kcal": 49.6,
+   "kcal_range": [
+    31,
+    87
+   ],
+   "protein_g": 3.2,
+   "protein_range": [
+    2.0,
+    5.6
+   ],
+   "fdc": {
+    "fdc_id": "174285",
+    "description": "Beans, kidney, red, mature seeds, canned, drained solids",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 124.0,
+    "protein_100g": 7.98
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 170.0,
+  "kcal": 264.1,
+  "protein_g": 43.5,
+  "grams_range": [
+   115.0,
+   250.0
+  ],
+  "kcal_range": [
+   179,
+   384
+  ],
+  "protein_range": [
+   29.9,
+   61.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 170.0,
+   "kcal": 264.1,
+   "protein_g": 43.5,
+   "grams_range": [
+    115.0,
+    250.0
+   ],
+   "kcal_range": [
+    179,
+    384
+   ],
+   "protein_range": [
+    29.9,
+    61.4
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Beans, kidney, red, mature seeds, canned, drained solids"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "1a353b0de279f264bbbf48e613948b83291d99e50d9d19910732d1d7ef02baeb",
+ "scale_cues": "Stainless steel mixing bowl roughly 25-30 cm across fills the frame; chicken cubes were sized against the bowl width (about 1.5-2 cm each). Bean size was compared with the chicken cubes.",
+ "assumptions": [
+  "No sauce, dressing, or visible added oil identified; any residual oil or marinade on the meat is included in the chicken estimate.",
+  "Beans assumed to be canned kidney beans, drained.",
+  "Chicken assumed to be cooked breast meat, since the pale color and dense cube texture fit breast rather than thigh.",
+  "Visible mass is approximately the total on the plate; hidden pieces under the surface are not accounted for beyond the visible count."
+ ],
+ "latency_s": 13.83,
+ "calls": [
+  {
+   "wall_s": 9.99,
+   "duration_ms": 9257,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0018603,
+   "cost_basis": "list",
+   "input_tokens": 10260,
+   "output_tokens": 1391
+  },
+  {
+   "wall_s": 3.83,
+   "duration_ms": 2833,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0007923000000000001,
+   "cost_basis": "list",
+   "input_tokens": 4554,
+   "output_tokens": 235
+  }
+ ],
+ "cost_usd_cli": 0.00265,
+ "log_id": "705cc960e34b"
+}

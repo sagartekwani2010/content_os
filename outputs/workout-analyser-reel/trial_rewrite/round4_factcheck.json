@@ -1,0 +1,111 @@
+{
+ "claims": [
+  {
+   "beat": 1,
+   "ok": true,
+   "note": "23 sets is correct. The judge did call STOP on the lunge, which was a good set. Nothing suggests it happened mid-set. Small catch: after the fix, Gym Jarvis's final verdict on that set was CHECK FOOTAGE, so 'called stop' only holds for the judge before the fix. That works because beats 14-16 tell that story."
+  },
+  {
+   "beat": 2,
+   "ok": true,
+   "note": "No factual claim."
+  },
+  {
+   "beat": 3,
+   "ok": true,
+   "note": "facts.md allows 'Claude went through over 200 papers and tools' word for word (225 sources)."
+  },
+  {
+   "beat": 4,
+   "ok": true,
+   "note": "facts.md allows 'Counting reps is easy. Judging a rep is the hard part.'"
+  },
+  {
+   "beat": 5,
+   "ok": true,
+   "note": "Pose tool plus judge and coach checks out. Rep maths and the can't-see check are code, not tools or agents, so 'one tool' undercounts a little but nothing in it is false."
+  },
+  {
+   "beat": 6,
+   "ok": true,
+   "note": "YOLO11n-pose tracks 17 joints, and rep maths finds each rep and measures its range. 'Wave' is a picture of the joint angle over time, not a measured output. Fine as long as the diagram shows the joint-angle curve."
+  },
+  {
+   "beat": 7,
+   "ok": true,
+   "note": "Height = range in degrees, which matches 'how far I moved'."
+  },
+  {
+   "beat": 8,
+   "ok": false,
+   "note": "'Tired' is not measured anywhere. The system measures range, not fatigue. Use 'So short reps look shorter' or 'So cut-short reps stand out.'"
+  },
+  {
+   "beat": 9,
+   "ok": true,
+   "note": "Lat pulldown IMG_2783: rep 4 is 62 degrees against 86 on the best rep, with HOLD 'Range shrinking late'. This is only true over that clip. Don't put it over the hack squat or the reverse crunch (the reverse crunch has no rep count to show)."
+  },
+  {
+   "beat": 10,
+   "ok": true,
+   "note": "The judge reads the rep table plus 4 key frames. Leaving out the frames is OK because it sets up the contrast with the coach."
+  },
+  {
+   "beat": 11,
+   "ok": true,
+   "note": "The coach gets frames only and never sees the numbers."
+  },
+  {
+   "beat": 12,
+   "ok": false,
+   "note": "Wrong attribution. 'It' grammatically means the coach, but the refusal is a code safety check that runs before any AI is asked (joint hidden in more than 25% of frames; it fired on 4 of 23 sets). Fix: 'And if a joint is hidden, the system refuses to judge.'"
+  },
+  {
+   "beat": 13,
+   "ok": false,
+   "note": "6 + 11 + 2 = 19, not every set: 4 of the 23 got CAN'T SEE. '2 stop' is only the judge's count before the fix. The final verdicts are STOP 1 and CHECK FOOTAGE 1. Fix: 'Then the judge ran every set it could see: six continue, eleven hold, two stop.'"
+  },
+  {
+   "beat": 14,
+   "ok": true,
+   "note": "Lunge IMG_2650: judge STOP, coach GOOD."
+  },
+  {
+   "beat": 15,
+   "ok": true,
+   "note": "Checked by eye: I turned towards the camera on some reps. 'Only' is acceptable; 'on some reps' would be more exact."
+  },
+  {
+   "beat": 16,
+   "ok": true,
+   "note": "Matches the two-agent rule: STOP needs judge STOP and coach BAD, otherwise CHECK FOOTAGE."
+  },
+  {
+   "beat": 17,
+   "ok": true,
+   "note": "IMG_2661 reverse crunch is the only final STOP. Both agents agree it has short, swung reps, so 'fair' is backed. No injury wording, which complies."
+  },
+  {
+   "beat": 18,
+   "ok": false,
+   "note": "'Reportedly letting people go' complies. 'People with AI experience' is too vague: facts.md says to name the role as 'AI engineers with post-training experience'. Fix: 'Next up: Salesforce is reportedly letting people go, but hiring AI engineers with post-training experience.' On screen it needs the source tag 'People Matters, DNA \u00b7 19-20 Nov 2026 \u00b7 not confirmed by Salesforce'."
+  },
+  {
+   "beat": 19,
+   "ok": true,
+   "note": "No factual claim."
+  }
+ ],
+ "voice_issues": [
+  "It mostly follows Ep 2: 'So I split/built\u2026', 'The first agent\u2026', 'isn't allowed\u2026', 'Then I ran\u2026', 'Except this one\u2026', 'So now\u2026', 'Next up\u2026'. Good continuity.",
+  "Line 1 drops the Ep 2-style series callback ('In last video\u2026'). That's OK because it's the hook, but think about adding a quick 'my Gym Jarvis' callback in line 2.",
+  "Line 6 packs two ideas into one sentence. The short-beat rule says one sentence per idea: 'The pose tool tracks my joints. Rep maths turns each rep into a wave.'",
+  "Lines 10-11: Ep 2 named the model ('the vision agent on Fable 5.2'). To match, say 'The first agent, the judge, on Fable 5.2, reads my numbers.'",
+  "Line 11: 'isn't allowed the numbers' sounds awkward. Ep 2 said 'It's not allowed to say\u2026'. Use 'The second, the coach, isn't allowed to see the numbers.'",
+  "Line 9: 'And against my best, rep four is clearly shorter' is stiff. Try 'Rep four is clearly shorter than my best.'",
+  "Line 13 is a dense list of numbers. Ep 2 put the result in one plain sentence. Think about letting the dashboard carry the counts.",
+  "Line 19: 'that one' has nothing to refer back to after the plural 'people/engineers'. Try 'How do you become one? Follow along.'",
+  "Line 18 breaks Ep 2's 'Next up, we'll see\u2026' pattern by jumping straight to news. That's acceptable for a series pivot, but 'Next up, we'll see why Salesforce\u2026' would keep the rhythm."
+ ],
+ "verdict": "FIX"
+}

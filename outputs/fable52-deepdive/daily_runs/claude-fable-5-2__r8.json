@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "The surgeon is the boy's father — the puzzle states it directly. (This is a twist on the classic riddle where the answer is usually \"his mother,\" but here there's no trick: the surgeon is his dad.)\n\nANSWER: His father",
+ "seconds": 4.5,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1110.75,
+ "out_tok": 77,
+ "usd_list": 0.01197,
+ "cli_cost": 0.0175083,
+ "item": "r8"
+}

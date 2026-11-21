@@ -1,0 +1,46 @@
+## MAIN
+| Beat | E/H | Time | Spoken | Top-half visual | On-screen text | Music / SFX |
+|---|---|---|---|---|---|---|
+| 1 | H | 0.0-4.3 | "My AI system found the one set I should never have done." | `ghost_stop.mp4` (best-rep ghost over worst rep, from frame 1) | Big: WORST REP: UNDER HALF MY BEST · red STOP · small tags: "how far my legs lowered: best 122° · worst 53°" · GYM JARVIS = my AI gym system · "filmed 15 Aug 2026 · analysed Nov 2026" | Desi Boyz beat in from frame 1; 1.0x; HUD lock-on tick on "one set" |
+| 2 | E | 4.3-7.1 | "But how did I build it? Months of weekends." | `build_montage.mp4` (quick cuts; the 23-set wall fills in tile by tile behind; red STOP thumbnail pinned in a corner) | MONTHS OF WEEKENDS · SEPT → NOV 2026 · small: built later, run on my old gym footage | Desi Boyz builds; soft click per cut |
+| 3 | H | 7.1-8.1 | "Come, let's see." | `build_montage.mp4` (last cut, lands on the HUD; thumbnail stays pinned) | COME, LET'S SEE | Desi Boyz; whoosh -5 dB |
+| 4 | E | 8.1-10.6 | "I had Claude dig through the research first." | `build_montage.mp4` (research cut: paper pages flick past in the HUD) | CLAUDE READ THE RESEARCH FIRST · small: arXiv 2608.24384 · PMC12978916 | Desi Boyz; page-flick ticks -6 dB |
+| 5 | H | 10.6-13.1 | "One warning: the camera angle can fool it." | `false_alarm.mp4` (0.6 s flash of the lunge, then freeze) | WARNING: THE CAMERA ANGLE CAN FOOL IT · small: remember this | Desi Boyz riser; warning blip -5 dB |
+| 6 | E | 13.1-14.7 | (no line) | `wait_over_wall.mp4` (0.4 s) → `countdown_wall.mp4` (1.0 s) → `wall_from_count.mp4` (blast; one tile glows red) | THE WAIT IS OVER → 3 · 2 · 1 → wall of 23 sets, 1 red tile | Desi Boyz drop on the blast; bass impact 0 dB; Desi Boyz ends here |
+| 7 | H | 14.7-16.6 | "Twenty-three sets on trial. One guilty." | `verdict_chips.mp4` (STOP 1 pops last and largest) | 23 SETS ON TRIAL · STOP 1 · small: CONTINUE 6 · HOLD 11 · CHECK FOOTAGE 1 · CAN'T SEE 4 | Driving percussive bed in, same pulse as the drop, no energy dip; gavel hit -4 dB on "guilty" |
+| 8 | E | 16.6-18.5 | "I split it into three parts." | `arch3_overview.mp4` (gym footage behind the nodes) | SEE → JUDGE → CHECK · small pinned tag, stays to beat 19: AT THE END: WHAT THIS MEANS FOR YOUR JOB | Whoosh -5 dB; bed stays up |
+| 9 | H | 18.5-21.6 | "Part one, SEE: every dip in the wave, one rep." | `arch3_see.mp4` (skeleton drawn over his own body) → `dual_wave.mp4` | SEE · 17 joints · 30 times a second · joints → angles → every dip = 1 rep | Scan sweep -6 dB; tick on each dip |
+| 10 | E | 21.6-24.7 | "Joint hidden? No evidence, no verdict. It refused four sets." | `cant_see.mp4` | "CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET." · IT REFUSED TO JUDGE 4 OF 23 (hold 1 s) | Low denied tone -5 dB; bed holds |
+| 11 | H | 24.7-28.4 | "Part two, JUDGE: every rep against my best rep, not a textbook." | `arch3_judge.mp4` (opens on his best rep, footage behind the node) | JUDGE · MY BEST REP, NOT A TEXTBOOK · small: Claude Fable 5.2 | Whoosh -5 dB; bed |
+| 12 | E | 28.4-30.3 | "It rules: continue, hold, or STOP." | `arch3_judge.mp4` (three chips light in turn) | CONTINUE · HOLD · STOP | Three chip pops -5 dB; gavel tap on STOP |
+| 13 | H | 30.3-33.4 | "Part three, CHECK: a witness that only watches the video." | `arch3_check.mp4` (coach node lit) | CHECK · COACH = THE WITNESS · video only, never sees the numbers | Whoosh -5 dB; bed |
+| 14 | E | 33.4-35.9 | "Why? A wrongful conviction: STOP, on my lunges." | `false_alarm.mp4` | JUDGE ALONE: STOP · reverse lunge · small: before the both-agree rule, not a final verdict | Flicker in; bed cuts to silence |
+| 15 | H | 35.9-38.0 | "I'd only turned to the camera." | `false_alarm.mp4` (turn-to-camera reps, punch-in) | THE WARNING CAME TRUE · witness: GOOD, same depth · judge fooled by the camera angle | Silence; 1.0x; one soft "wrong" blip -6 dB |
+| 16 | E | 38.0-41.1 | "Now both must agree to call STOP. The lunge? Retrial." | `arch3_check.mp4` (rule lit) → `false_alarm.mp4` (STOP chip flips to amber) | JUDGE + COACH agree → STOP · disagree → CHECK FOOTAGE · LUNGE: CHECK FOOTAGE · small: comment FORM → my AI coach prompt + this diagram | Light wipe out; bed returns; two-lock click -4 dB; chip flip pop -5 dB |
+| 17 | H | 41.1-43.3 | "The one guilty verdict? My reverse crunches." | `lockon_red.mp4` | STOP · "Legs not lowering fully" · JUDGE: STOP · COACH: BAD | Red lock-on hit 0 dB; bed dips |
+| 18 | E | 43.3-46.5 | "Short, swung reps. Worst rep: under half my best." | `raw_swing.mp4` → `ghost_stop.mp4` (best and worst rep held) | BEST REP 122° · WORST REP 53° (hold 1.5 s) · how far my legs lowered | 1.0x; bed low; ghost whoosh -6 dB; gavel hit on "half my best" |
+| 19 | H | 46.5-48.7 | "Your gym buddy's half reps? Same verdict." | `sample_result.mp4` | SEND THIS TO THAT BUDDY · pinned tag grows and pulses: NOW: YOUR JOB | Bed stays level, no swell; pop -5 dB |
+| 20 | E | 48.7-50.6 | "So where is Gym Jarvis heading?" | `build_montage.mp4` (last 1 s) → `tease_jd.mp4` (posting slides in before the line ends) | WHERE THIS IS GOING · NOW: YOUR JOB | Bed drops to a low pulse; whoosh -5 dB |
+| 21 | H | 50.6-53.1 | "Salesforce is reportedly letting people go in India." | `tease_jd.mp4` | Large: REPORTED, NOT CONFIRMED BY SALESFORCE · People Matters, DNA · 19-20 Nov 2026 | Low pulse |
+| 22 | E | 53.1-55.9 | "And hiring AI engineers with LLM post-training experience." | `tease_jd.mp4` (title block) | LMTS - Lead AI/ML Engineer (LLM Post-Training) · Bangalore / Hyderabad · Posted 6 Days Ago (hold 1.5 s) | Highlight tick -5 dB |
+| 23 | H | 55.9-59.3 | "Many companies are doing the same. How do you get ready?" | `tease_jd.mp4` (title block stays, punch-in) | Gym Jarvis calls a model. This role trains one. (alone on screen, hold 2 s) | Pulse builds |
+| 24 | E | 59.3-60.9 | "Come, let's find out." | `tease_jd.mp4` → `ghost_stop.mp4` (last 0.4 s, matches frame 1 for the loop) | NEXT REEL: HOW TO GET READY FOR THIS ROLE · FOLLOW | Bass impact on "out"; 1.5 s fade, cut on the STOP frame |
+
+## TRIAL
+| Beat | E/H | Time | Spoken | Top-half visual | On-screen text | Music / SFX |
+|---|---|---|---|---|---|---|
+| 1 | H | 0.0-4.3 | "My AI flagged one of my sets as STOP. It was wrong." | `false_alarm.mp4` | Big STOP struck through → FALSE ALARM · small: GYM JARVIS = my AI gym system · "filmed 15 Aug 2026 · analysed Nov 2026" | Desi Boyz beat in from frame 1; 1.0x; glitch tick on "wrong" |
+| 2-6 | E/H/E/H/E | 4.3-14.7 | Same as MAIN beats 2-6 | Same as MAIN; the pinned thumbnail is the struck-through STOP | Same as MAIN; beat 5 small text: this is how it went wrong | Same as MAIN; Desi Boyz ends on the blast |
+| 7-13 | H/E alternating | 14.7-33.4 | Same as MAIN beats 7-13 | Same as MAIN | Same as MAIN | Same as MAIN |
+| 14 | E | 33.4-35.9 | "Here's the wrongful conviction: STOP, on my lunges." | `false_alarm.mp4` | JUDGE ALONE: STOP · reverse lunge · tag: THE WRONG ONE · small: before the both-agree rule | Flicker in; bed cuts to silence |
+| 15-23 | H/E alternating | 35.9-59.3 | Same as MAIN beats 15-23 | Same as MAIN | Same as MAIN | Same as MAIN |
+| 24 | E | 59.3-60.9 | "Come, let's find out." | `tease_jd.mp4` → `false_alarm.mp4` (last 0.4 s, matches frame 1 for the loop) | NEXT REEL: HOW TO GET READY FOR THIS ROLE · FOLLOW | Bass impact on "out"; 1.5 s fade, cut on the struck-through STOP frame |
+
+## WHY THIS LANDS
+- **The courtroom now includes the research line as its warning.** The locked research beat, missing from the last draft, sits before the blast with a flash of the lunge. Beat 15 pays it off on screen as THE WARNING CAME TRUE, so the wrongful conviction feels set up.
+- **Frame 1 says what went wrong in plain words.** WORST REP: UNDER HALF MY BEST is the big text, and the angles are small tags labelled "how far my legs lowered". The date tags ("filmed 15 Aug · analysed Nov", "built later, run on my old gym footage") remove the Aug vs Sept contradiction.
+- **The build-up carries information and the middle is lighter.** The wall fills in behind the montage, the countdown is 1.0 s, and the bed keeps the drop's pulse. In SEE, "17 joints · 30 times a second" is on screen only, and the spoken time goes to "It refused four sets."
+- **The job ending is seeded and nothing before it sounds like an end card.** A pinned tag from beat 8 promises "what this means for your job" and becomes NOW: YOUR JOB at beat 19, with no bed swell. The send ask is on-screen text, FORM sits on the both-agree diagram (the save frame), and the last frame has one ask, FOLLOW.
+- **Both checker must-fixes are applied, and two new lines need the creator's sign-off.** Beat 18 uses only measured facts (53° against 122°), and beat 20 is a bridge ("So where is Gym Jarvis heading?"), not a motive. Beat 19's "Your gym buddy's half reps? Same verdict." is a new joke line, and beat 20's wording is also new.
+
+The script is 185 spoken words across 24 beats, estimated at about 60.9 s for both MAIN and TRIAL after 1.15x, with beats 1, 15 and 18 held at 1.0x. The blast lands at 14.7 s, later than the last draft, because the research beats are now in. `arch_job_split.mp4` is not used.

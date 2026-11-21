@@ -1,0 +1,206 @@
+{
+ "check": {
+  "must_fix": [
+   "Caption line 1 invents facts: 'I filmed my sets for months and never watched them. So I made my AI watch all of them.' Nothing measured supports 'months' or 'never watched'. The analyser has only been run on IMG_2649; more clips are still being uploaded and [AGREE: x of n sets] is a slot. Replace it with slotted wording, e.g. 'So I made my AI watch [n] of my sets.'",
+   "Beat 1, the cover hook and the caption ('It found the one I should never have done') state an outcome that has not been measured: [BAD_SET] is unidentified and the judge's verdicts are not measured. TELEPROMPTER line 1 shows no [SLOT] marker. Mark beat 1, the cover title and the caption sentence as conditional, e.g. [IF JUDGE = STOP on exactly one set], so they cannot be recorded or locked before the result exists. The draft's 'What blocks recording' note is not enough, because the teleprompter line reads as final.",
+   "Beat 7, 'I did 11' and the on-screen 'ME: 11 / 11 = checked frame by frame': the measured 11 comes from the Fable 5.2 coach labeller, not from the creator's own count. That labeller saw 2 fps frame sheets, not every frame, so 'frame by frame' overclaims. Either the creator counts the 29.2 s clip before recording (a 30-second check, which makes 'I did 11' true), or change the speech and screen to match the labeller ('COACH CHECK: 11'). Drop 'frame by frame' in either case.",
+   "Runtime line says 'Runtime at 1.15x: about 45 s', but the brief and REEL_DEFAULTS set 1.1x. Recomputed: 115 fixed words plus about 29 slot words is about 144 words. Beats 1 and 7 (20 words) at 1.0x take about 7.1 s; the other words at 1.1x take about 40 s; total about 47 s. That is near the 48 s ceiling, so slot overruns break the target. Fix the speed, state the 1.1x figure and set hard caps on the slot beats.",
+   "Beats 2 and 14 run 14-16 words, which breaks the one-short-sentence rule (6-12 words, from the reel-short-beats rule) and the 'each beat recordable alone' learning. Split each into two beats. Beat 2 becomes fault, then risk. Beat 14 becomes '[JUDGE reason].' then 'My AI would have stopped me at rep [n].' Keep E/H alternation after the split."
+  ],
+  "should_fix": [
+   "No spoken everyday comparison or viewer action, which the script skill (every finding: evidence -> plain line -> Indian comparison -> 'So [one action]') and the taste model both require. The best line in the package, 'like checking your exam against your own best paper, not the topper's', sits only in the caption. Move it into beat 11/12 speech. Add one 'So [action]' the creator owns, e.g. filming the best set as the baseline.",
+   "The fix story overclaims its cause. The 14 -> 11 correction also came from the 0.8 s minimum rep (which removed the 0.2 s tracker-jump rep and the half reps at clip start and end) and from 24 impossible readings, not only from 'can't see, says so'. Add on-screen text in beat 10: 'tracker jumps & half reps dropped \u00b7 reps \u2265 0.8 s'.",
+   "Beat 10 'it says so': the measured fix is frames thrown out. The spoken 'can't see your knee on rep N' message belongs to the judge, which is still being built. Only show a 'can't see' output on screen if it was actually produced; otherwise the visual should show the grey thrown-out stretches only.",
+   "K09 hatches the machine frame on IMG_2649 in red. The palette defines red as 'fault / STOP', and IMG_2649 is the good set the last reel teased with a red STOP. Cold and returning viewers may read it as the bad set. Use grey ('can't see') for the hidden leg.",
+   "K09 data source: the 34 hidden frames are 'joints below 0.4 confidence', not specifically the knee. Pick and verify a frame where the knee itself is below 0.4, or relabel the source.",
+   "Beat 2 fault and risk: the analyser measures only the knee-angle wave and depth per rep, plus 3-4 key frames. Torso lean means nothing on a hack squat because the pad fixes the torso. [BAD_SET: what went wrong] must be a fault the analyser or judge actually output. The [risk] wording must be plain and sourced, not a medical claim (not training advice).",
+   "[BEST_SET] for the ghost overlay (K01, K12) must be the same lift from a comparable camera angle as [BAD_SET], or the ghost-vs-rep gap is not a real comparison. Add this as a constraint on the slot.",
+   "TRIAL hook 'My AI said it was fine': the 'AI' here is the coach labeller (confidence 0.6; could not check heel lift or knee cave), not the analyser's judge. Add a small on-screen line in the trial ('coach check: good set \u00b7 heels not visible'). The trial body never closes its own loop. Before the CTA, add a closing beat or on-screen line that returns to IMG_2649 being a good set.",
+   "The A/B entry says MAIN and TRIAL 'differ only in beat 1', but TRIAL also changes beat 2 ('The real one:'). Log the exact difference in production/EXPERIMENTS.md, or make 'The real one:' an on-screen card so the voice track differs only in beat 1.",
+   "The diagram should carry the tool and model names that speech omits, per the locked 'architecture is signature, make it clearer' decision. Label the joints box 'YOLO11n-pose \u00b7 17 joints \u00b7 30 fps' alongside 'judge: Fable 5.2'.",
+   "The cover lacks the series pairing and episode. REEL_DEFAULTS says 'Ep N' lives on the cover and that paired feature names are part of packaging. Add 'EP 3 \u00b7 WORKOUT ANALYSER', and keep the hook slot-conditional as for beat 1.",
+   "The caption is a long recap, but REEL_DEFAULTS asks for short and sassy, not a summary. Cut it to hook + twist + honest note + CTA + disclaimer.",
+   "The single section card (beat 7) deviates from REEL_DEFAULTS. Record the reason in the reel folder, and keep a whoosh plus bass impact at the beat 3 and beat 11 section changes so they still read as section breaks.",
+   "Voice match: 'And it does not judge me against a textbook' reads as written. The creator's on-camera pattern suggests 'And it doesn't judge me against some textbook'. This can be left to on-camera drift (audio is ground truth)."
+  ],
+  "facts_ok": false
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7.5,
+    "drop_beat": "none",
+    "why": "The STOP overlay gets me past three seconds. What I'd send to a teammate is the hidden-leg clip: you can actually see why the software got 14 instead of 11."
+   },
+   {
+    "id": 2,
+    "score": 5.5,
+    "drop_beat": "11",
+    "why": "I stay to see whether the count reconciles. Once it lands on 11, the crossed-out textbook feels like the start of another explanation."
+   },
+   {
+    "id": 3,
+    "score": 4.5,
+    "drop_beat": "5",
+    "why": "I can see the gap between the two reps, so I want to see the bad one play. When the knee turns into a graph instead, I swipe."
+   },
+   {
+    "id": 4,
+    "score": 4,
+    "drop_beat": "4",
+    "why": "The red arrow answers my first question: what went wrong? Seventeen tracking dots answer a question I wasn't asking."
+   },
+   {
+    "id": 5,
+    "score": 6,
+    "drop_beat": "11",
+    "why": "I like being able to count the dips myself. The machine blocking the leg is a lovely explanation of how a computer can be wrong; that's a satisfying ending for me."
+   },
+   {
+    "id": 6,
+    "score": 8.5,
+    "drop_beat": "none",
+    "why": "I could try the knee-wave counter as a project. Seeing it fail on an ordinary gym machine makes me want the diagram more than a flawless demo would. I'd comment FORM."
+   },
+   {
+    "id": 7,
+    "score": 6.5,
+    "drop_beat": "13",
+    "why": "The manual count gives me a number to check, and comparing against a personal best makes sense. The three verdict buttons don't tell me what size of difference warrants STOP."
+   },
+   {
+    "id": 8,
+    "score": 5.5,
+    "drop_beat": "11",
+    "why": "I'll watch the 14-to-11 correction because there's footage behind it. But getting the count right isn't evidence that the set was risky, and that's the claim I stopped for."
+   },
+   {
+    "id": 9,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I want to see the green ghost from the opening come back and explain the verdict. I'd save that comparison frame before I'd request the whole diagram."
+   },
+   {
+    "id": 10,
+    "score": 5.5,
+    "drop_beat": "6",
+    "why": "By the third dip I understand the counting method. I'm still waiting for the decision about the set, and I swipe just before the first genuinely surprising number."
+   },
+   {
+    "id": 11,
+    "score": 6.5,
+    "drop_beat": "15",
+    "why": "The silent 14-versus-11 card wins my attention back, and I stay for the replay. FORM sounds like a useful gym takeaway; a diagram of the software isn't what I'd comment for."
+   },
+   {
+    "id": 12,
+    "score": 5.5,
+    "drop_beat": "10",
+    "why": "I came in for a story about a regrettable set. By the time the counter turns green, I can't tell whether that corrected count changes the red verdict I saw at the start."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "The greyed-out frames are the bit I'd send to another dev: the system improves by declining to guess. I stay to see what the judge gets to decide after that."
+   },
+   {
+    "id": 14,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I stay for the occlusion footage and the count checked against 11. I'd share that example, but one corrected clip doesn't sell me on the STOP classifier."
+   },
+   {
+    "id": 15,
+    "score": 6.5,
+    "drop_beat": "15",
+    "why": "I wait for the full-speed rep because I want to judge the fault with my own eyes. A client's best-looking rep is a useful comparison, not proof their next rep is unsafe. I don't need the flowchart."
+   },
+   {
+    "id": 16,
+    "score": 5,
+    "drop_beat": "6",
+    "why": "I'd send a friend the red-versus-green replay if we could argue over the rep. At 'one dip is one rep' I'm watching a counter instead, and I scroll."
+   }
+  ],
+  "groups": {
+   "mass": 5.29,
+   "fin_consult_mktg": 6.08,
+   "builders": 7.75
+  },
+  "overall": 6.19,
+  "top_fixes": [
+   "Pull the measured surprise forward. Test going straight from the opening comparison to 'First it had to count. I did 11. It counted 14.' Then use the joint dots and knee wave to explain a mistake viewers already want solved.",
+   "Make the clip switch unmistakable. Label beat 7 'Different set \u00b7 count check' and beat 14 'Back to the flagged set.' Otherwise the green 11 can look like the AI reversing the opening STOP.",
+   "Earn the verdict with footage. Play the best rep and flagged rep in sync, then freeze at the first visible difference and name it. Use the judge's actual wording, including HOLD if that's the result; 'flagged on replay' is more credible than 'should never have done.'",
+   "Give each audience a distinct takeaway: let gym viewers save the labelled comparison frame, then offer builders the pipeline diagram. 'Comment FORM for the build diagram' makes the exchange clear before anyone comments."
+  ]
+ },
+ "critic": {
+  "predicted_score": 6.5,
+  "would_approve": false,
+  "change_list": [
+   "Beats 1, 2 and 14 are still blanks, and so is the best set in beat 12. First do, then show: run the analyser on all my clips, find the bad set and my best set, get the judge's verdict, then send me the complete script. I can't approve a hook when what went wrong is a slot.",
+   "The body (beats 3 to 13) is good, keep it. Don't send me another round on it, just fill the slots and send me the final.",
+   "Hook: you dropped 'watched every set I've filmed'. Bring it back and lead with the strongest words, like 'My AI watched every single set I filmed and found the one I should never have done.'",
+   "The topper's paper comparison is sitting in the caption. Say it in the reel at beats 11-12, like how we all compared our paper with the topper's. If time is crossing 48 secs, merge 'every dip is one rep' into the wave beat.",
+   "What is the impact for an everyday user? We missed that. Give me one 'So always...' line before the CTA, about checking against your own best, and make sure it doesn't become training advice.",
+   "Beat 2 needs one personal line once the bad set is known: what this set nearly cost me, the way a trainer would actually say it.",
+   "CTA is weak with only a diagram. People should have something to run, like the Ep 2 skill. Make it 'Comment FORM to access the skill and the complete diagram', if the form-labeller skill can be shared.",
+   "Give me the complete trial script, not one line. Right now the trial changes the beat 1 line, the beat 1 visual and the beat 2 opening. Keep it to one variable and state the hypothesis.",
+   "Where is the Fable score? Hooks and script should breach at least 7.5 before they come to me.",
+   "Runtime says 1.15x in one place and 1.1x in another. Lock 1.1x and give me the final seconds once the slots are filled.",
+   "Caption: I never said I filmed for months and never watched them, so don't invent that. It also says the AI found the bad set before we have measured it. Make it shorter and sassier, and keep the twist about the STOP clip.",
+   "The '11 = checked frame by frame' label is not right. The 11 is the coach's count from frame sheets at 2 fps, so fix the label.",
+   "What is the tease for the next episode? Put it in the last second over my footage with the red mark, or in the caption.",
+   "Send me the actual cover image, not a description."
+  ],
+  "taste_violations": [
+   "[C15] The hook, stake, ghost baseline and payoff (beats 1, 2, 12, 14) depend on [BAD_SET], [BEST_SET] and a judge verdict that are not measured. This breaks 'first do then show' and the 19 Nov learning that slot-led stakes scored 5.2 and 5.0.",
+   "[C15] The STOP stamp in the first frame (K01) states an unmeasured outcome. The creator holds that a tease or hook never does this.",
+   "[C15] The caption invents 'I filmed my sets for months and never watched them' and asserts 'It found the one I should never have done'. Neither is in FACTS.",
+   "[C15] The on-screen 'ME: 11 \u00b7 checked frame by frame' overstates the source. The 11 is the Fable coach labeller's count from 2 fps frame sheets.",
+   "[C5] No everyday comparison is spoken. The exam and topper line exists only in the caption.",
+   "[C5] There is no 'So always...' action and no line on what this means for an everyday user. The page-cut part of this item does not apply to a build reel.",
+   "[C22] No Fable judge or panel score is attached, against the 7.5/10 bar. Runtime is fine at about 46.7 s but the note mixes 1.15x and 1.1x, and it sits at the top of the 42-48 s window with two slot beats still only budgeted.",
+   "[C23] The trial is one line, not a written script. It changes three things (beat 1 line, beat 1 image, beat 2 opening 'The real one:') while claiming to differ only in beat 1. The hypothesis is stated, but the draft only says to log it in EXPERIMENTS.md.",
+   "[C14] There are no tips, so nothing is misattributed, but the comment trigger offers only a diagram. The creator's CTAs name a benefit to run (skills and tips), and they want viewers to have something to run.",
+   "[C21] There is no next-episode tease in the last second or the caption. The loop ending follows the brief, but last time the creator closed with their own 'Next up' over footage with a red mark.",
+   "[C25] Caption and first comment are present, but the cover is a text spec, not an image. The caption is long and reads as a summary, not 'short and sassy'.",
+   "[C11] The architecture diagram is present but has no section heading card. Only beat 7 gets a card, a stated deviation from REEL_DEFAULTS the creator has not approved.",
+   "[C7] Beat 1 is voice-over on footage with no face, and the strongest words ('should never have done') come last. The brief's scale phrase 'watched every set I've filmed' was dropped.",
+   "[C18] E/H labels alternate on paper, but beats 4 to 6 are three mechanism beats in a row and will play flat. Two of the H labels (beats 5 and 13) are statements, not hooks.",
+   "[C6] The entertaining finding (14 vs 11, the impossible knee) arrives at 17 s. The first finding is the slot beat.",
+   "[C19] Beats 5, 11 and 13 open with 'Then' or 'And', so they lean on the previous beat if recorded alone. The story does survive a skipped beat.",
+   "[C12] The own-test result is spread over four beats (7 to 10) with no single result line. The agreement figure [AGREE: x of n] is unused, and there is no next-best-model percentage or rupee cost.",
+   "[C8, C9, C10, C13, C16, C17] Not applicable or clean: the hook is not cost-led, this is not a paper deep-dive so no 'people are building' or page-count beat is expected, there is no chart, no training boilerplate and no lab showpieces."
+  ],
+  "what_they_will_love": [
+   "[C1] The whole package is in one place: spoken lines, visuals, on-screen text, delivery and sound side by side, plus the visual board, hooks, caption and teleprompter.",
+   "[C2, C3] It is English only with no spoken hedges. The 'old clip, analysed later' honesty sits on screen and in the caption, and the locked wording 'found' and 'would have stopped me' is respected.",
+   "The architecture is kept as the signature. The diagram builds progressively on a rail across beats 4 to 13, is held as the save asset, and has 'Fable 5.2' on the judge box only.",
+   "The payoff image comes first (green ghost, red gap, STOP), with the hero visuals rendered from real pose data: skeleton lock-on, knee wave and counter. This is awe without complexity.",
+   "The measured failure is told as their own test: 'First try, it counted 14 reps. I did 11', the impossible knee, and the fix back to 11 with '58 of 877 frames thrown out' on screen.",
+   "'It does not judge me against a textbook' and 'my own best set' match their positioning of a test only they can run.",
+   "[C24] Every visual event has a sound effect, with a bass hit on STOP and the 14 card and silence through the twist.",
+   "[C20] There is no closing aphorism. The reel ends on the verdict, the comment trigger and the loop.",
+   "One actor ('my AI') is used in speech, in short one-sentence beats, with 'actually' in the bridge question. It is close to how they speak.",
+   "[C4] It has three hooks on different emotions with a stated A/B hypothesis, and the reel stays on one idea with no list of findings to trim.",
+   "The 'What blocks recording' section says honestly which beats are recordable today and that IMG_2649 never gets a STOP stamp.",
+   "The caption carries the twist about the STOP clip and the exam-paper comparison, and the first comment is a forwardable line."
+  ]
+ },
+ "score": 4.845000000000001,
+ "summary": {
+  "panel": 6.19,
+  "critic": 6.5,
+  "must_fix": 5,
+  "approve": false,
+  "groups": {
+   "mass": 5.29,
+   "fin_consult_mktg": 6.08,
+   "builders": 7.75
+  }
+ }
+}

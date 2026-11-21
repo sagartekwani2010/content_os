@@ -1,0 +1,215 @@
+{
+ "items": [
+  {
+   "name": "Beef steak, sliced",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 130,
+   "fdc_query": "Beef, steak, sirloin or top loin, lean only, cooked, grilled",
+   "preparation": "grilled/pan-seared, sliced, with herbs and garlic",
+   "confidence": 0.55,
+   "kcal": 177.0,
+   "kcal_range": [
+    124,
+    230
+   ],
+   "protein_g": 29.4,
+   "protein_range": [
+    20.6,
+    38.3
+   ],
+   "fdc": {
+    "fdc_id": "171805",
+    "description": "Beef, short loin, top loin, steak, separable lean only, trimmed to 1/8\" fat, select, cooked, grilled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 177.0,
+    "protein_100g": 29.44
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cauliflower florets",
+   "grams_low": 150,
+   "grams_best": 210,
+   "grams_high": 270,
+   "fdc_query": "Cauliflower, cooked, boiled, drained, without salt",
+   "preparation": "steamed or boiled",
+   "confidence": 0.65,
+   "kcal": 48.3,
+   "kcal_range": [
+    34,
+    62
+   ],
+   "protein_g": 3.9,
+   "protein_range": [
+    2.8,
+    5.0
+   ],
+   "fdc": {
+    "fdc_id": "170397",
+    "description": "Cauliflower, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 1.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted potatoes",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Potatoes, roasted, baked or oven-roasted, with oil, cooked",
+   "preparation": "diced, roasted with oil",
+   "confidence": 0.6,
+   "kcal": 83.7,
+   "kcal_range": [
+    56,
+    112
+   ],
+   "protein_g": 2.2,
+   "protein_range": [
+    1.5,
+    3.0
+   ],
+   "fdc": {
+    "fdc_id": "170093",
+    "description": "Potatoes, baked, flesh and skin, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 93.0,
+    "protein_100g": 2.5
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Chicken breast pieces",
+   "grams_low": 50,
+   "grams_best": 80,
+   "grams_high": 110,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "roasted, some pieces sliced, some seasoned with herbs",
+   "confidence": 0.5,
+   "kcal": 132.0,
+   "kcal_range": [
+    82,
+    182
+   ],
+   "protein_g": 24.8,
+   "protein_range": [
+    15.5,
+    34.1
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil/butter and herbs (implied)",
+   "grams_low": 4,
+   "grams_best": 8,
+   "grams_high": 14,
+   "fdc_query": "Oil, olive, salad or cooking",
+   "preparation": "used for roasting and searing, seen as sheen on food",
+   "confidence": 0.3,
+   "kcal": 70.7,
+   "kcal_range": [
+    35,
+    124
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171413",
+    "description": "Oil, olive, salad or cooking",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 488.0,
+  "kcal": 511.7,
+  "protein_g": 60.3,
+  "grams_range": [
+   334.0,
+   644.0
+  ],
+  "kcal_range": [
+   331,
+   710
+  ],
+  "protein_range": [
+   40.4,
+   80.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 488.0,
+   "kcal": 560.6,
+   "protein_g": 70.0,
+   "grams_range": [
+    334.0,
+    644.0
+   ],
+   "kcal_range": [
+    363,
+    775
+   ],
+   "protein_range": [
+    46.8,
+    93.2
+   ]
+  },
+  "rows": [
+   "Beef, loin, top sirloin cap steak, boneless, separable lean only, trimmed to 1/8\" fat, choice, cooked, grilled",
+   "Cauliflower, cooked, boiled, drained, with salt",
+   "Chicken breast, roll, oven-roasted",
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Oil, olive, salad or cooking"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "1f3cda35d4522673d277082a51a2c9f40237d5348839763734830725cfaa2e7d",
+ "scale_cues": "Square white dinner plate, about 25-27 cm wide, fills most of the frame. Food portions were sized relative to the plate.",
+ "assumptions": [
+  "The pale pieces at the top are chicken breast, one stuffed or herbed and the rest sliced.",
+  "The green bits mixed into the cauliflower are leek or celery and are negligible, so they're folded into the cauliflower.",
+  "The cooking fat is estimated from the visible sheen on the potatoes and steak.",
+  "The dark meat is beef steak cooked medium."
+ ],
+ "latency_s": 12.19,
+ "calls": [
+  {
+   "wall_s": 8.38,
+   "duration_ms": 7363,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0342308,
+   "cost_basis": "list",
+   "input_tokens": 8994,
+   "output_tokens": 777
+  },
+  {
+   "wall_s": 3.78,
+   "duration_ms": 2750,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0185339,
+   "cost_basis": "list",
+   "input_tokens": 3880,
+   "output_tokens": 260
+  }
+ ],
+ "cost_usd_cli": 0.05276,
+ "log_id": "0c2cc1f27d2c"
+}

@@ -1,0 +1,63 @@
+{
+ "P": {
+  "overall": 6,
+  "mass": 5,
+  "fcm": 6,
+  "builders": 7,
+  "voice_match": 6.5,
+  "mechanism": 6.5,
+  "jarvis_connection": 7.5,
+  "weakest": [
+   "2: 'It took me months of weekends, so let's open...' is a non sequitur, and 'It' is ambiguous (only Gym Jarvis may be said to have taken months, not the analyser)",
+   "1: the hook leads with the system's failure and assumes the viewer knows Gym Jarvis and what 'stop' means",
+   "5-6: 'rep maths turns each rep into a wave' plus a double-claim beat 6 is dense for mass viewers",
+   "7-8: clipped appositive lines ('The first agent, the judge, reads my numbers') are terser than the Ep 2 voice",
+   "10: 'continue or hold' is never introduced in speech"
+  ]
+ },
+ "Q": {
+  "overall": 6.5,
+  "mass": 7,
+  "fcm": 6.5,
+  "builders": 5.5,
+  "voice_match": 5,
+  "mechanism": 6.5,
+  "jarvis_connection": 3.5,
+  "weakest": [
+   "1: 'the one set I should never have done' overclaims; the facts show short, swung reps and risk wording is cut, so 'the one set that didn't count' would be the honest version",
+   "No spoken 'Gym Jarvis' anywhere (screen only), so the series link is weak",
+   "7 and 9: 'Part one, SEE:' and 'Part two, JUDGE:' read like slide labels, not the Ep 2 conversational voice",
+   "4: three claims in one beat, and the camera-angle line pre-spoils beat 10",
+   "11: 'To overcome things like this' is stiff, the beat is the longest, and 'second judge' blurs the judge/coach distinction builders want",
+   "10: 'It raised a false alarm' comes before any verdict vocabulary is set up in speech"
+  ]
+ },
+ "R": {
+  "overall": 6,
+  "mass": 4.5,
+  "fcm": 5.5,
+  "builders": 7,
+  "voice_match": 8,
+  "mechanism": 7,
+  "jarvis_connection": 7,
+  "weakest": [
+   "15: 'which was fair' is a flat payoff with no reason and no number; the reel's finding dies in a subordinate clause",
+   "No share or comment line, so there is no engagement driver before the tease",
+   "1: same failure-first, insider hook as P",
+   "2: 'So let's open my Workout Analyser' has no stakes or effort beat",
+   "10: 'one guardrail before any AI' is builder talk mass viewers will skip",
+   "Beats 4-10 are seven straight architecture beats before any result"
+  ]
+ },
+ "ranking": [
+  "Q",
+  "P",
+  "R"
+ ],
+ "why": "I judged Q on the MAIN table of SCRIPT_FINAL.md v6.3 (14 spoken beats), not the TRIAL variant. All three sit in the ordinary-good band and none is a clear 7. Q edges ahead because it opens on the finding rather than the failure, and that is the set the 19 Nov tease promised. It also explains the mechanism in plain words (seventeen joints, one dip per rep, my best rep not a textbook, a second pair of eyes), pays off concretely (chest fly continue, reverse crunch stop, half reps) and has the most shareable line. Its costs are an overclaiming hook, a label-reading cadence unlike Ep 2, and no spoken Gym Jarvis. P and R share the Ep 2 skeleton (research, tool plus two agents, guardrail, 'except this one', fix), which builders will like, but the hook sells a false alarm and the wave and agent wording loses mass viewers. P beats R because it closes the loop with a reason that checks out (worst rep 53 degrees against 122 best, so under half) and has a share line. R sounds most like the creator, with Ep 2's connectives and 'isn't allowed' echo, and has the cleanest mechanism order, but it ends on 'which was fair' and asks the viewer for nothing. The best version would be Q's hook (softened) and payoff in R's voice, with P's 'under half my best' line. Every spoken claim in all three checks against facts.md, apart from Q's hook wording.",
+ "labels": {
+  "trial6": "P",
+  "main": "Q",
+  "trial5": "R"
+ }
+}

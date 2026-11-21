@@ -1,0 +1,13 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "The bat costs ₹100 and the total is ₹110, so the ball costs ₹110 − ₹100 = ₹10.\n\n(This differs from the classic version of the puzzle, where the bat costs ₹100 *more* than the ball. Here the bat's price is stated directly as ₹100.)\n\nANSWER: ₹10",
+ "seconds": 2.6,
+ "served": [
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1143.25,
+ "out_tok": 110,
+ "usd_list": 0.00339,
+ "cli_cost": 0.004756,
+ "item": "r3"
+}

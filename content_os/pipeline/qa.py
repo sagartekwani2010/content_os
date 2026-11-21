@@ -9,6 +9,7 @@ import numpy as np
 
 from . import media, textmatch as tm
 from .face import get_detector
+from .cue import source_beat
 from .layouts import build_layout
 from .reel import Reel, load_beats, read_json, schema, write_json
 from .transcribe import transcribe_file
@@ -109,7 +110,11 @@ def run(reel: Reel, cfg: dict, draft: bool = False) -> dict:
     checks.append(_check("clips_min_length", "fail" if short else "pass", min(s["duration"] for s in cuts["segments"]),
                          f">= {q['min_clip_s']} s", detail=str(short)))
 
-    checks.append(captions_check(reel, rinfo, out, layout, rdir))
+    if cfg["captions"]["enabled"]:
+        checks.append(captions_check(reel, rinfo, out, layout, rdir))
+    else:  # captions are added later in another editor (e.g. Edits); nothing to measure here
+        checks.append(_check("captions_present", "pass", "disabled", "captions added downstream", detail="added in Edits",
+                             hard=False))
     checks.append(caption_placement_check(layout, cfg, cuts))
     checks += face_jump_checks(reel, cfg, cuts, out, layout)
     if q["transcribe_render"]:
@@ -156,9 +161,10 @@ def captions_check(reel: Reel, rinfo: dict, out, layout, rdir) -> dict:
 def caption_placement_check(layout, cfg: dict, cuts: dict) -> dict:
     box = layout.caption_box
     safe = cfg["safe_area"]
-    problems = []
+    problems, notes = [], []
+    low_by_choice = layout.params.get("caption_position") == "bottom_safe"
     if box.bottom > layout.height - safe["bottom"]:
-        problems.append("enters bottom UI area")
+        (notes if low_by_choice else problems).append("enters bottom UI area" + (" (creator-chosen low captions)" if low_by_choice else ""))
     if box.right > layout.width - safe["right"]:
         problems.append("enters right UI area")
     spk = layout.panels["speaker"]
@@ -169,12 +175,14 @@ def caption_placement_check(layout, cfg: dict, cuts: dict) -> dict:
                 continue
             sw, sh = seg["src_size"]
             c = seg["crop"]
-            face_top_src = f["cy"] * sh - 0.6 * (f.get("w") or 0.15) * sw  # face box ~1.2x its width tall
-            face_top_out = spk.y + (face_top_src - c["y"]) * spk.h / c["h"]
-            if box.bottom > face_top_out:
+            half = 0.6 * (f.get("w") or 0.15) * sw  # face box ~1.2x its width tall
+            to_out = lambda ysrc: spk.y + (ysrc - c["y"]) * spk.h / c["h"]
+            face_top, face_bottom = to_out(f["cy"] * sh - half), to_out(f["cy"] * sh + half)
+            if box.y < face_bottom and box.bottom > face_top:
                 problems.append(f"overlaps the face in segment {seg['index'] + 1}")
                 break
-    return _check("captions_clear_of_face_and_ui", "fail" if problems else "pass", box.as_dict(), detail="; ".join(problems))
+    return _check("captions_clear_of_face_and_ui", "fail" if problems else "pass", box.as_dict(),
+                  detail="; ".join(problems + notes))
 
 
 def face_jump_checks(reel: Reel, cfg: dict, cuts: dict, out, layout) -> list[dict]:
@@ -217,7 +225,7 @@ def wer_checks(reel: Reel, cfg: dict, cuts: dict, out) -> list[dict]:
         a, b = s["out_start"], s["out_start"] + s["duration"]
         heard = [w["text"] for w in words if a <= (w["start"] + w["end"]) / 2 < b]
         hyp = [t for w in heard for t in tm.tokens(w)]
-        w_script = tm.wer(hyp, tm.tokens(beats[s["beat"]]["text"]))
+        w_script = tm.wer(hyp, tm.tokens(beats[source_beat(s)]["text"]))
         w_take = tm.wer(hyp, tm.tokens(s["text"]))
         per_beat.append({"beat": s["beat"], "wer_vs_script": w_script, "wer_vs_selected_take": w_take,
                          "heard": " ".join(heard)})

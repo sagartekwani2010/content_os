@@ -1,6 +1,10 @@
 """Stage 7, render: speaker panel + per-beat visuals + captions + mastered voice/music/SFX -> one MP4.
 
 ``render --draft`` works without approval: placeholder cards per beat, no music, a DRAFT label.
+Segments with ``speed`` != 1 are retimed (picture ``setpts``, voice ``atempo``: pitch preserved) to
+their output frame count. Cue-sheet ``section_cards`` are full-frame overlays on top of everything
+(see cards.py). The final render also writes ``<name>_clean.mp4`` (voice only) unless
+``render.clean_stem`` is false.
 The full render refuses unless ``approvals.json`` records a cut_review approval whose hash
 matches the current cuts.json.
 """
@@ -12,29 +16,46 @@ import shutil
 import textwrap
 from pathlib import Path
 
-from . import media
+from . import cards, media
+from .cue import beat_windows, drop_expr, entry_for, resolve_music_drops, resolve_sfx, source_beat, words_overlapping
 from .approvals import require_approval
-from .captions import chunk_words, write_ass
+from .captions import chunk_words, correct_words, write_ass
 from .layouts import Layout, build_layout
 from .reel import Reel, StageError, read_json, write_json
 
 
 # ------------------------------------------------------------------ voice
 
-def build_voice(reel: Reel, cuts: dict, sources: dict, out_wav: Path) -> Path:
-    """Gain-matched voice with 30 ms crossfades at every join; length == sum of segment durations."""
+def build_voice(reel: Reel, cuts: dict, sources: dict, out_wav: Path, cue: dict | None = None) -> Path:
+    """Gain-matched voice with 30 ms crossfades at every join; length == sum of segment durations.
+
+    A cue-sheet beat may carry ``voice_ramp_db: [start_db, end_db]``: a linear gain ride across that
+    take, for sentences that start hot and trail off (fixes a level step the leveller cannot).
+    """
     segs = cuts["segments"]
     if not segs:
         raise StageError("cuts.json has no segments")
     half = cuts["joins"][0]["crossfade_ms"] / 2000 if cuts["joins"] else 0.015
     args = ["-v", "error"]
     for i, s in enumerate(segs):
-        a = s["in"] - (half if i > 0 else 0)
-        b = s["out"] + (half if i < len(segs) - 1 else 0)
+        sp = float(s.get("speed", 1.0))  # extensions are output time; read speed x as much source
+        a = s["in"] - (half * sp if i > 0 else 0)
+        b = s["out"] + (half * sp if i < len(segs) - 1 else 0)
         args += ["-ss", f"{max(0, a):.4f}", "-t", f"{b - max(0, a):.4f}", "-i", str(reel.resolve(sources[s["source"]]["wav48"]))]
     fg = []
     for i, s in enumerate(segs):
-        fg.append(f"[{i}:a]aresample=48000,volume={s['gain_db']}dB[a{i}]")
+        r = entry_for(cue, int(s["beat"]), source_beat(s)).get("voice_ramp_db")
+        if r:
+            d = max(s["out"] - s["in"], 0.1)
+            ride = f",volume='pow(10,({r[0]}+({r[1]}-{r[0]})*t/{d:.3f})/20)':eval=frame"
+        else:
+            ride = ""
+        sp = float(s.get("speed", 1.0))
+        tempo = ""
+        if sp != 1.0:  # retime after the ride (its t is source time); trim to the exact output length
+            n = s["duration"] + (half if i > 0 else 0) + (half if i < len(segs) - 1 else 0)
+            tempo = f",atempo={sp:.6f},apad,atrim=0:{n:.5f}"
+        fg.append(f"[{i}:a]aresample=48000,asetpts=PTS-STARTPTS,volume={s['gain_db']}dB{ride}{tempo}[a{i}]")
     last = "a0"
     for i in range(1, len(segs)):
         fg.append(f"[{last}][a{i}]acrossfade=d={2 * half:.3f}:c1=tri:c2=tri[x{i}]")
@@ -66,7 +87,9 @@ def render_speaker(reel: Reel, cfg: dict, cuts: dict, sources: dict, layout: Lay
         src = sources[s["source"]]
         c = s["crop"]
         sdr = media.sdr_filter(src["video"], cfg["ingest"]["hdr_method"])
-        vf = (f"{sdr},crop={c['w']}:{c['h']}:{c['x']}:{c['y']},scale={panel.w}:{panel.h}:flags=lanczos,"
+        sp = float(s.get("speed", 1.0))
+        retime = f"setpts=(PTS-STARTPTS)/{sp:.6f}," if sp != 1.0 else ""
+        vf = (f"{retime}{sdr},crop={c['w']}:{c['h']}:{c['x']}:{c['y']},scale={panel.w}:{panel.h}:flags=lanczos,"
               f"fps={fps},setsar=1,tpad=stop_mode=clone:stop_duration=1,format=yuv420p,{media.SETPARAMS_709}")
         out = rdir / f"spk_{s['index']:03d}.mp4"
         media.ffmpeg("-v", "error", "-ss", f"{s['in']:.4f}", "-i", str(reel.resolve(src["path"])), "-map", "0:v:0",
@@ -83,17 +106,6 @@ def concat(parts: list[Path], out: Path) -> Path:
 
 
 # ------------------------------------------------------------------ visual panel
-
-def beat_windows(cuts: dict) -> dict[int, tuple[float, float]]:
-    win: dict[int, list[float]] = {}
-    for s in cuts["segments"]:
-        a, b = s["out_start"], s["out_start"] + s["duration"]
-        if s["beat"] in win:
-            win[s["beat"]][1] = b
-        else:
-            win[s["beat"]] = [a, b]
-    return {k: (v[0], v[1]) for k, v in win.items()}
-
 
 def clip_for_beat(cue: dict | None, beat: int, root: Path | None) -> dict | None:
     """Per-beat clip from ``cue_sheet.visual_clips`` (a dir of beat_NN.mp4 rendered by
@@ -232,21 +244,38 @@ def _limit_lin(db: float) -> float:
     return round(10 ** (db / 20), 4)
 
 
-def master_audio(reel: Reel, cfg: dict, voice: Path, cue: dict | None, cuts: dict, out: Path, draft: bool) -> dict:
+def sfx_plan(reel: Reel, cfg: dict, cue: dict | None, cuts: dict) -> list[dict]:
+    """Resolved SFX with their applied gain and the words each one overlaps (for the masking check)."""
+    target = cfg["master"]["target_lufs"]
+    plan = []
+    for s in resolve_sfx(cue, cuts, reel.root):
+        path = reel.resolve(s["path"])
+        if not path.exists():
+            raise StageError(f"sfx file missing: {path} (regenerate with `python -m content_os.pipeline sfx`)")
+        info = media.probe(path)
+        dur = float(info.get("duration") or 0.0)
+        if "level_db" in s:  # relative to the voice target, by the effect's max momentary loudness
+            ref = media.momentary_max(path)
+            gain = target + s["level_db"] - media.finite(ref, target)
+        else:
+            gain = s["gain_db"]
+        plan.append({**s, "file": str(path), "duration": round(dur, 3), "applied_gain_db": round(gain, 2),
+                     "overlaps_words": words_overlapping(cuts, s["at"], s["at"] + dur)})
+    return plan
+
+
+def master_audio(reel: Reel, cfg: dict, voice: Path, cue: dict | None, cuts: dict, out: Path, draft: bool,
+                 clean: bool = False) -> dict:
+    """Voice (+ music with drops, + SFX) mastered to the target. ``clean``: voice only."""
     m = cfg["master"]
     target = m["target_lufs"]
     total = cuts["duration"]
     v_ld = media.loudness(voice)
     g = target - media.finite(v_ld["integrated_lufs"], target)
-    music = (cue or {}).get("music") if not draft else None
-    windows = beat_windows(cuts)
-    sfx = []
-    if not draft:
-        for b in (cue or {}).get("beats", []):
-            for s in b.get("sfx", []) or []:
-                if int(b["beat"]) in windows:
-                    sfx.append({"path": reel.resolve(s["path"]), "at": windows[int(b["beat"])][0] + float(s.get("at", 0)),
-                                "gain_db": float(s.get("gain_db", -12))})
+    bare = draft or clean
+    music = (cue or {}).get("music") if not bare else None
+    sfx = sfx_plan(reel, cfg, cue, cuts) if not bare else []
+    drops = resolve_music_drops(cue, cuts) if music else []
     music_norm = None
     if music:
         mpath = reel.resolve(music["path"])
@@ -255,16 +284,18 @@ def master_audio(reel: Reel, cfg: dict, voice: Path, cue: dict | None, cuts: dic
     report = {"voice_lufs_in": v_ld["integrated_lufs"], "iterations": []}
     for _ in range(3):
         args = ["-v", "error", "-i", str(voice)]
-        fg = [f"[0:a]volume={g:.3f}dB,asplit=2[v][vsc]"]
+        chain = m.get("voice_chain") or ""
+        fg = [f"[0:a]{chain + ',' if chain else ''}volume={g:.3f}dB,asplit=2[v][vsc]"]
         mix = ["[v]"]
         k = 1
         if music:
             mg = target + float(music.get("gain_db", m["music_gain_db"])) - music_norm
             d = music.get("duck", m["duck"])
             fi, fo = float(music.get("fade_in", 0.5)), float(music.get("fade_out", 2.0))
+            auto = f",asetnsamples=n=240:p=0,volume='{drop_expr(drops)}':eval=frame" if drops else ""
             args += ["-stream_loop", "-1", "-i", str(reel.resolve(music["path"]))]
             fg.append(f"[{k}:a]aresample=48000,aformat=channel_layouts=mono,atrim=0:{total:.3f},asetpts=PTS-STARTPTS,"
-                      f"volume={mg:.2f}dB,afade=t=in:d={fi},afade=t=out:st={max(0, total - fo):.3f}:d={fo}[m0]")
+                      f"volume={mg:.2f}dB,afade=t=in:d={fi},afade=t=out:st={max(0, total - fo):.3f}:d={fo}{auto}[m0]")
             fg.append(f"[m0][vsc]sidechaincompress=threshold={d['threshold']}:ratio={d['ratio']}:"
                       f"attack={d['attack_ms']}:release={d['release_ms']}[m]")
             mix.append("[m]")
@@ -272,9 +303,10 @@ def master_audio(reel: Reel, cfg: dict, voice: Path, cue: dict | None, cuts: dic
         else:
             fg.append("[vsc]anullsink")
         for s in sfx:
-            args += ["-i", str(s["path"])]
-            ms = int(round(s["at"] * 1000))
-            fg.append(f"[{k}:a]aresample=48000,aformat=channel_layouts=mono,volume={s['gain_db']}dB,"
+            args += ["-i", s["file"]]
+            pre = f"atrim=start={-s['at']:.4f},asetpts=PTS-STARTPTS," if s["at"] < 0 else ""
+            ms = int(round(max(0.0, s["at"]) * 1000))
+            fg.append(f"[{k}:a]aresample=48000,aformat=channel_layouts=mono,{pre}volume={s['applied_gain_db']}dB,"
                       f"adelay={ms}:all=1[s{k}]")
             mix.append(f"[s{k}]")
             k += 1
@@ -290,7 +322,8 @@ def master_audio(reel: Reel, cfg: dict, voice: Path, cue: dict | None, cuts: dic
             break
         g += err
     report.update(media.loudness(out))
-    report.update({"music": bool(music), "sfx": len(sfx)})
+    report.update({"music": bool(music), "sfx": len(sfx), "clean": clean,
+                   "sfx_plan": [{k2: v for k2, v in s.items() if k2 != "file"} for s in sfx], "music_drops": drops})
     return report
 
 
@@ -313,30 +346,46 @@ def run(reel: Reel, cfg: dict, draft: bool = False) -> dict:
     for f in {cfg["cards"]["font_file"], cfg["captions"]["font_file"]}:
         if Path(f).exists():
             shutil.copy(f, rdir / "fonts" / Path(f).name)
-    voice = build_voice(reel, cuts, sources, rdir / "voice.wav")
+    voice = build_voice(reel, cuts, sources, rdir / "voice.wav", cue)
     audio_out = rdir / "mix.wav"
     loud = master_audio(reel, cfg, voice, cue, cuts, audio_out, draft)
     speaker = render_speaker(reel, cfg, cuts, sources, layout, rdir)
     visual, plan = render_visual_track(reel, cfg, cuts, cue, layout, rdir, draft)
-    chunks = chunk_words(cuts["segments"], cfg["captions"]) if cfg["captions"]["enabled"] else []
+    segs_for_captions = cuts["segments"]
+    if reel.beats_file.exists():  # the confirmed spoken line is ground truth for caption spelling
+        truth = {b["id"]: b["text"] for b in read_json(reel.beats_file)["beats"]}
+        segs_for_captions = [{**s, "words": correct_words(s["words"], truth[source_beat(s)])}
+                             if source_beat(s) in truth else s for s in cuts["segments"]]
+    chunks = chunk_words(segs_for_captions, cfg["captions"]) if cfg["captions"]["enabled"] else []
     write_ass(rdir / "captions.ass", chunks, layout, cfg["captions"])
     fg = ["[0:v]setsar=1[vis]", "[1:v]setsar=1[spk]", layout.compose({"visual": "[vis]", "speaker": "[spk]"})]
     last = "[base]"
     if chunks:
         fg.append(f"{last}subtitles=filename=captions.ass:fontsdir=fonts[cap]")
         last = "[cap]"
+    card_args, card_fg, last, card_plan = cards.build(cuts, cue, layout.width, layout.height, rdir, 3, last)
+    fg += card_fg
     if draft:
         fg.append(f"{last}drawtext=fontfile=fonts/{Path(cfg['cards']['font_file']).name}:text='DRAFT - cuts not approved':"
                   f"expansion=none:fontsize=34:fontcolor=0xC0392B:x=60:y=60[lab]")
         last = "[lab]"
     fg.append(f"{last}format=yuv420p,{media.SETPARAMS_709}[vout]")
     out = rdir / f"{name}.mp4"
-    _run_in(rdir, ["-v", "error", "-i", visual.name, "-i", speaker.name, "-i", audio_out.name,
+    _run_in(rdir, ["-v", "error", "-i", visual.name, "-i", speaker.name, "-i", audio_out.name, *card_args,
                    "-filter_complex", ";".join(fg), "-map", "[vout]", "-map", "2:a", *x264(cfg, draft),
                    "-r", str(cuts["fps"]), "-c:a", "aac", "-b:a", cfg["video"]["audio_bitrate"], "-ar", "48000",
                    "-ac", "2", "-t", f"{cuts['duration']:.4f}", "-movflags", "+faststart", out.name])
-    info = {"output": reel.rel(out), "draft": draft, "duration_planned": cuts["duration"], "layout": layout.describe(),
-            "cuts_sha256": cuts["sha256"], "visual_plan": plan, "captions": chunks, "audio": loud,
+    clean_out = None
+    if not draft and cfg.get("render", {}).get("clean_stem", True):
+        clean_wav = rdir / "mix_clean.wav"
+        loud["clean"] = master_audio(reel, cfg, voice, cue, cuts, clean_wav, draft, clean=True)
+        clean_out = rdir / f"{name}_clean.mp4"
+        _run_in(rdir, ["-v", "error", "-i", out.name, "-i", clean_wav.name, "-map", "0:v:0", "-map", "1:a", "-c:v", "copy",
+                       "-c:a", "aac", "-b:a", cfg["video"]["audio_bitrate"], "-ar", "48000", "-ac", "2",
+                       "-t", f"{cuts['duration']:.4f}", "-movflags", "+faststart", clean_out.name])
+    info = {"output": reel.rel(out), "clean_output": reel.rel(clean_out) if clean_out else None, "draft": draft, "duration_planned": cuts["duration"], "layout": layout.describe(),
+            "cuts_sha256": cuts["sha256"], "visual_plan": plan,
+            "section_cards": [{k: c[k] for k in ("beat", "title", "start", "start_frame", "frames")} for c in card_plan], "captions": chunks, "audio": loud,
             "intermediates": {"visual": reel.rel(visual), "speaker": reel.rel(speaker), "voice": reel.rel(voice),
                               "mix": reel.rel(audio_out)}}
     write_json(rdir / "render.json", info)

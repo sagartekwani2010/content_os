@@ -1,0 +1,206 @@
+You are a screenwriter for short-form video who understands Indian mass audiences. Write a SCREENPLAY (concept stage, not the final teleprompter) for one Instagram reel, 45-60 s.
+
+CREATOR: Indian, works as an AI engineer, visibly fit, builds personal AI agents ("Gym Jarvis") and tests them on his own training and food. Audiences trust him because he has both AI and fitness credibility. Format: 9:16; top half hand-drawn line diagrams / screen recordings, bottom half him talking (seated, landscape), but scenes may break that format (phone screen recording, gym floor, full-frame cards).
+
+IDEA: "AI Job Audit", a free custom GPT he built. A person describes their typical work week; the tool splits it into tasks, rates each task (AI does it well today / AI helps / still needs a human) with a one-line reason, and says what to do differently: which tasks to hand to AI now, which skills to grow with the freed time, and one 2-week experiment. It does NOT predict layoffs (no fake prediction). Grounding: task-level exposure research (OpenAI/UPenn "GPTs are GPTs" 2023; Anthropic Economic Index). Viewers get it by commenting AUDIT (auto-DM link).
+
+CONTEXT: AI layoff anxiety in India is high (a Business Today report, Aug 2026, says 66% of AI/ML workers expect cuts within 3-6 months). Saturated content: salary lists, "AI roadmap" posts, "AI will take your job" doom. Instagram rewards sends, watch time, comments.
+
+The creator's own audit result is NOT known yet: use [MY_RESULT_%] and [MY_TASK_X] placeholders. Never invent his numbers, stories or anyone's outcome. A second audit on someone relatable is allowed only as a placeholder to be run for real (e.g. [FRIEND_ROLE]).
+
+Deliver, in markdown:
+1. Logline (1 sentence) and the core emotional promise to the viewer.
+2. Emotional arc: the emotion per scene and why it turns.
+3. SCREENPLAY: scenes with timestamps; for each: VISUAL (top/full frame), SPOKEN (short, conversational Indian English; one sentence per beat), ON-SCREEN TEXT, EMOTION, DELIVERY (face/voice).
+4. Five hooks (first 1.5 s), each on a different emotion (fear, surprise, curiosity, defiance/pride, humour), with first frame + on-screen text. Rank them.
+5. Relatability: which everyday roles must appear on screen (e.g. IT services employee, CA, HR, sales, teacher, bank staff) and how, so a non-tech viewer sees themselves in 5 s.
+6. Participation engine: exactly why a viewer comments AUDIT and runs it; how they share their result (e.g. a result card designed to be screenshotted and sent to friends/family groups); the follow-up reel loop (audit viewers' jobs).
+7. Risks: what would make this feel like fear-mongering, a sales funnel, or fake; how the script avoids it.
+Under 1100 words.
+
+YOUR PREVIOUS DRAFT:
+# AI Job Audit: screenplay (concept stage)
+
+## 1. Logline and promise
+
+An AI engineer runs his own job through a task-by-task AI audit on camera, shows the result that stings, and hands viewers the same free tool.
+
+**Promise:** you will swap a vague fear ("AI will take my job") for a specific list of what to hand over, what to grow, and what to try for two weeks.
+
+## 2. Emotional arc
+
+| Scene | Emotion | Why it turns |
+|---|---|---|
+| 1 Hook | Surprise | The AI guy is exposed too |
+| 2 Reframe | Recognition | Names the fear, then shrinks it from "job" to "tasks" |
+| 3 Tool | Curiosity | A method, not an opinion |
+| 4 His audit | Vulnerability | He takes the hit first, so it is safe to look |
+| 5 Gym | Relief | Familiar logic: find the weak lift, train it |
+| 6 Friend | "That's me" | A non-tech job gets the same treatment |
+| 7 Output | Control | Fear becomes a 2-week plan |
+| 8 CTA | Agency | Their turn |
+
+## 3. Screenplay (about 56 s)
+
+**S1, 0:00–0:02. Hook**
+- VISUAL: Full-frame real screen recording of his result, zooming on the number.
+- SPOKEN: "I build AI for a living. AI can already do [MY_RESULT_%] of my week."
+- TEXT: "AI engineer. [MY_RESULT_%] of my week = AI can do it."
+- EMOTION: Surprise.
+- DELIVERY: Flat and matter-of-fact, with half a smile.
+
+**S2, 0:02–0:09. Reframe**
+- VISUAL: Top: hand-drawn headline "AI will take your job" gets scratched out, and a job box cracks into small tiles.
+- SPOKEN: "Everyone says AI will take your job. Nobody tells you which part. Jobs don't go in one shot. Tasks do."
+- TEXT: "Not jobs. Tasks."
+- EMOTION: Recognition.
+- DELIVERY: Leaning in, slower on "tasks do".
+
+**S3, 0:09–0:16. Tool**
+- VISUAL: Top: a week drawn as a strip splitting into tiles, with role labels flickering (see section 5).
+- SPOKEN: "So I built a free tool. You describe your normal work week. It splits it into tasks, the way researchers study this."
+- TEXT: "AI Job Audit, free." Small: "Method: GPTs are GPTs (2023), Anthropic Economic Index."
+- EMOTION: Curiosity.
+- DELIVERY: Brisk builder energy.
+
+**S4, 0:16–0:28. His audit**
+- VISUAL: Full-frame real screen recording of three rows lighting up red, amber and green, each with its one-line reason.
+- SPOKEN: "[MY_TASK_1]: AI does it well today. That one hurt. [MY_TASK_2]: AI helps, I still drive. [MY_TASK_3]: still needs a human."
+- TEXT: The three labels as tags.
+- EMOTION: Vulnerability.
+- DELIVERY: Genuine wince on "that one hurt", with a one-beat pause.
+
+**S5, 0:28–0:35. Gym floor**
+- VISUAL: Full-frame, between sets, phone in hand.
+- SPOKEN: "It's like training. You don't say 'my body is weak.' You find the weak lift and fix that."
+- TEXT: "Find the weak lift."
+- EMOTION: Relief.
+- DELIVERY: Relaxed, slightly out of breath, smiling.
+
+**S6, 0:35–0:44. Friend**
+- VISUAL: Full-frame real recording of the second audit, with a role tag on top.
+- SPOKEN: "Then I ran it for my friend, a [FRIEND_ROLE]. [FRIEND_RESULT_LINE, written only after the real run]."
+- TEXT: "[FRIEND_ROLE]: [FRIEND_RESULT_%]"
+- EMOTION: "That's me."
+- DELIVERY: Warm, like telling a friend's story with permission.
+
+**S7, 0:44–0:51. Output**
+- VISUAL: Top: three hand-drawn boxes ticking in: "Hand to AI now", "Skill to grow", "2-week experiment".
+- SPOKEN: "It tells you what to hand over now, what skill to grow with that time, and one two-week experiment. It won't predict layoffs. Nobody honestly can."
+- TEXT: "No layoff prediction. Just your tasks."
+- EMOTION: Control.
+- DELIVERY: Firm and steady on the last line.
+
+**S8, 0:51–0:56. CTA**
+- VISUAL: Full-frame result card mock-up, then his face.
+- SPOKEN: "Comment AUDIT, I'll DM it, free. Send me your result. I'll audit the most common jobs next."
+- TEXT: "Comment AUDIT."
+- EMOTION: Agency.
+- DELIVERY: Direct to lens, short.
+
+## 4. Hooks, ranked
+
+1. **Surprise (use this).** Frame: his real result number. Text: "I build AI. AI can do [MY_RESULT_%] of my job." Authority and vulnerability land in one frame.
+2. **Curiosity.** Frame: a blurred result card with one red row visible. Text: "Which part of your job goes first?"
+3. **Defiance.** Frame: him at the gym, arms crossed. Text: "AI won't take your job. It'll take [MY_TASK_1]."
+4. **Humour.** Frame: deadpan to lens. Text: "I asked AI if AI can replace me. It was rude."
+5. **Fear (last).** Frame: a real headline, properly sourced. Text: "Everyone's scared. Nobody's checked." This is the saturated doom lane.
+
+If [MY_RESULT_%] turns out low, hook 1 flips to "only [MY_RESULT_%], and I build this stuff", which leans toward defiance.
+
+## 5. Relatability
+
+- **0:09–0:14 flicker:** six hand-drawn tiles, each a role with one real task, not just a title. The tool must be able to rate every task shown.
+  - IT services: "weekly status report"
+  - CA: "GST reconciliation"
+  - HR: "screening resumes"
+  - Sales: "follow-up messages"
+  - Teacher: "making question papers"
+  - Bank staff: "KYC checks"
+- **S6:** [FRIEND_ROLE] should be non-tech (CA, HR or bank), so the proof is not only an engineer's.
+- **Language:** "your normal work week", never "workflow" or "LLM".
+- **Caption:** opens with "Works for any desk job. No tech knowledge needed."
+
+## 6. Participation engine
+
+- **Why they comment:** the reel shows his result and withholds theirs. One word gets it, it is free, and the creator went first.
+- **Why they run it:** the input is easy, just "describe your week like you'd tell a friend." The DM carries one starter line to paste.
+- **Result card:** the tool ends with a square, screenshot-ready card.
+  - Role, three coloured bars (AI does it / AI helps / needs human) and the top task to hand over.
+  - The 2-week experiment and a footer: "Do yours: comment AUDIT @handle".
+  - No employer name, so it is safe for family and office WhatsApp groups.
+- **Send trigger:** the card ends with "Compare with a friend in a different job", so the comparison drives sends.
+- **Loop:**
+  - Reel 2: "I audited the 5 most-commented jobs", from real submissions, anonymised and with permission.
+  - Reel 3: his own 2-week experiment result, reported honestly even if it fails.
+  - The pinned comment asks "Which job should I audit next?", so comments double as research.
+
+## 7. Risks and how the script avoids them
+
+- **Fear-mongering:**
+  - No layoff numbers are spoken.
+  - The 66% Business Today figure covers AI/ML workers, not the general viewer, so it stays out of the script. It goes in the caption at most, with the source.
+  - Fear lasts under 9 seconds, and every red row is paired with an action.
+- **Sales funnel:**
+  - "Free" is said twice, with no email gate, course or waitlist.
+  - The DM contains the link and one line, nothing else.
+- **Fake:**
+  - All screens are real recordings of real runs, and placeholders stay until then.
+  - The friend's audit is run for real with consent, or S6 is cut and S4 is extended.
+  - The limits are stated on screen: "No layoff prediction."
+  - The research is named as the method, not as proof of his numbers.
+- **Over-claiming:** the ratings say "AI does this task well today", never "you will be replaced".
+
+INDEPENDENT REVIEW (a panel of mass Indian viewers simulated by another model). Apply every fix unless it breaks honesty; keep what works. Also add a short section 8: TOOL SPEC v1 (inputs, output card layout, guardrails) so the tool is reliable. Same format, under 1300 words:
+# Review: AI Job Audit screenplay
+
+## Panel (10 pm scroll)
+
+1. **TCS support engineer, Pune.** Stops: "AI engineer says AI can do X% of his job" is my exact office anxiety. Would comment AUDIT and run it during standup. Sends it to the team group with "bhai check yours."
+2. **CA, Ahmedabad.** Scrolls past at the gym clip and only comes back if "GST reconciliation" appears before 0:09. Wouldn't paste client details into a random tool. Might send it to a junior.
+3. **HR executive, Bengaluru.** Interested, but as an evaluator: "can I run this on my team's roles?" Comments AUDIT. Seeing "screening resumes: AI does it well" feels like a threat to them and a liability to their employer.
+4. **Bank RM, Lucknow.** The English tech pitch loses them by 0:05. If it were Hinglish with a bank example up front, they'd watch it and forward it to their brother-in-law, not run it.
+5. **Teacher, Jaipur.** Likes "nobody tells you which part," but "describe your work week" means typing a lot on a phone at night. A card saying 60% of a teacher's job is automatable would upset them, not motivate them.
+6. **BTech final-year, Hyderabad.** Most likely to run it, but they have no work week to describe. Wants "will I get placed," and the reel doesn't speak to them.
+
+## Scores
+
+| Hook | Emotion | Relatability (non-tech) | Credibility | Participation | Sends |
+|---|---|---|---|---|---|
+| 6 | 5 | 4 | 6 | 4 | 5 |
+
+## Where people scroll away
+
+1. **0:02–0:09, the reframe.** "Everyone says AI will take your job" is the most saturated line on Indian Instagram. It's spoken over doodles, and nothing personal arrives for 7 seconds.
+2. **0:09–0:16, tool explainer.** "GPTs are GPTs (2023)" reads like a typo to a mass audience, and "the way researchers study this" is filler. The flicker tiles move too fast to find your own job.
+3. **0:28–0:35, gym.** The metaphor comes when curiosity peaks. Non-gym viewers leave, and it pushes the non-tech proof (the friend) to 0:35, after most viewers are gone.
+
+## Making people actually run it
+
+| Friction | Fix |
+|---|---|
+| Comment → DM → link → tool is 4 steps, and Instagram's DM automation can fail or land in requests | Test delivery on fresh accounts. Put the link in the pinned comment as a backup. |
+| Typing a week in English on a phone | Pick a role, tick 8–12 prefilled tasks, add 1–2 of your own. Accept Hindi/Hinglish and voice notes. Target under 90 seconds. |
+| Account or login | None. State "no login" on screen in S8. |
+| Privacy (CA client data, RM KYC data) | Add an on-tool warning: "Don't enter names, clients or employer." Don't store inputs by default. Use an explicit opt-in checkbox for Reel 2 submissions. |
+| Students have no job | Add a "target job" mode. |
+
+## Reliability and harm
+
+- **False precision.** A single "% of your job" from an LLM will vary run to run. Viewers will rerun it, get 45% then 62%, and screenshot the mismatch. Fix: use a fixed rubric, temperature 0, and cache per role or task. Show counts ("4 of 11 tasks"), not percentages.
+- **Regulated tasks rated "AI does it well."** KYC checks (RBI accountability), GST filing (penalties) and resume screening (bias, legal exposure) are examples. A green or red label here is wrong and embarrassing. Fix: flag regulated tasks as "AI can draft, human must sign off."
+- **The teacher problem.** A high number on a shareable card can hurt someone's standing if a principal or manager sees it. Fix: lead the card with "what to hand over and what to grow." Put the bars second, and never show a headline percentage.
+- **Misuse by HR or managers** auditing other people. Fix: frame the tool as "your own week," with first-person inputs only.
+- **Method attribution.** Naming Anthropic Economic Index and GPTs are GPTs implies your numbers come from them. A critic will check. Fix: say "inspired by task-based research," with a link in the caption only.
+- **"AI does it well today"** needs the qualifier "with your checking." It should never read as "this part of you is replaceable."
+- **The creator's own number.** If the real result is low, the hook flips (as the screenplay already notes). Decide after the real run, not before.
+
+## Top 5 fixes (highest impact first)
+
+1. **Bring the non-tech job forward.** Keep the 2-second hook, then go straight to the friend's real CA, bank or HR audit by 0:06. Cut the gym scene, or reduce it to a 2-second line. Collapse S2 and S3 into one sentence: "Not your job. Your tasks." Then show the screen.
+2. **Switch to Hinglish delivery and Hinglish captions,** with role examples on screen long enough to read (3 to 4, not 6 flickering).
+3. **Rebuild the input as tap-to-tick role templates,** with Hindi/Hinglish and voice input, no login, a privacy warning, and a test of the DM flow plus a pinned-link fallback.
+4. **Replace percentages with task counts,** both in the hook ("AI can already do 4 of my 11 weekly tasks") and on the card. Add deterministic scoring and regulated-task flags before launch.
+5. **Change the CTA to "Comment AUDIT + your job."** The job titles in comments are relatable social proof for the next viewer, they feed Reel 2 research, and they drive replies such as "same, HR here," which help reach and sends.
+
+**Verdict: revise.** The core is strong: the creator goes first, the fear is broken into tasks, and the reel ends on a 2-week plan. But as written it's a tech-audience reel with non-tech examples bolted on. The tool also needs guardrails before a teacher or bank RM screenshots a number that isn't stable or fair.

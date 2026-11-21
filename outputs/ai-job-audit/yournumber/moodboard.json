@@ -1,0 +1,445 @@
+{
+  "concept": "A real evidence board, filmed like a dated lab log: paper cards, stickies and tape carry every beat, hand-drawn lines only annotate them, and the reel opens and closes on a \"?\" card at the lens.",
+  "palette": [
+    "#0E1116 background: top-panel backing, caption plate, letterbox behind screen recordings",
+    "#F5F1E8 paper white: cards, on-screen text, captions",
+    "#FFD23F sticky yellow: task stickies and the big numbers ([N], [TOTAL], [OLD_N])",
+    "#4CC9F0 chalk cyan: hand-drawn annotations over real footage (circle, arrow, loop)",
+    "#3DDC84 pass green: three ticks, the [FREED_WORK] sticky, [AI_TIME]",
+    "#FF4D4D fail red: the three crosses and the [FAILED_TASK] label only",
+    "#FFB86B warm amber: grade lift for the calm turn (scene 8) and the invitation (scene 10)"
+  ],
+  "typography": "Big numbers and main on-screen lines: heavy condensed uppercase sans, paper white, with the number itself in sticky yellow. Annotations (circle, arrow, loop words): marker-style handwriting in chalk cyan that matches the lettering on the real cards. Small-print disclosure lines: clean regular sans, one line, paper white at 70% opacity, placed directly under the main line. Captions: one line, low, white on a soft dark plate, above Instagram's bottom overlay. Physical cards: thick black chisel marker on matte white A5, with the \"?\" filling at least 60% of card height.",
+  "texture": "Real matte paper, marker ink and matte tape under soft even light. Overlays are a slightly wobbly 6-8 px hand-drawn line with a faint glow, drawn on in 8-12 frames, with no drop shadows and no 3D. Light film grain over everything so screen recordings and camera footage sit together. Screen recordings sit in a thin paper-white rounded frame on the dark background.",
+  "music": "Low minimal pulse bed (soft synth pulse, no melody, about 100 bpm) at the REEL_DEFAULTS.md level, which I have not checked. Silent under the opening question, enters on the card snap at 0:03. Thins to a single pulse for the confession (0:08.5). Level through the method and the older-model card, with no sting. Cuts out on the tape tap (0:27.5) and returns on the cut. Fullest and warmest for the loop (0:30.5-0:37.5). Drops to silence under \"For now\" (0:41.3). Returns warm on \"Now your number\" and resolves on the card push at 0:52.4.",
+  "sfx_palette": [
+    "Card snap (the flip), recorded on set, up front",
+    "Card slap (two cards into the slots)",
+    "Soft tick (three task phrases, three grades)",
+    "Sticky peel",
+    "Sticky press (soft thump)",
+    "Finger tap on tape (dry, with the music cut)",
+    "Tape rip (one pull, up front)",
+    "No whooshes, risers or bass impacts in this reel"
+  ],
+  "pacing": "21 keyframes in 54.5 s, so a frame change roughly every 2.6 s, faster in the first 12 s (five changes) and around the reveal. Hard cuts only, and no title cards: the real cards do the section work, so the house whoosh and bass impact are not used. Three deliberate still points break the rhythm: the music-free question (0:00-0:03), the tap (0:27.5) and \"For now\" (0:41.3). The layout alternates full-frame creator, split and full-frame prop, so no layout holds longer than about 7 s. Split frames run 0:13.5-0:27.5, 0:30.5-0:37.5 and 0:47.2-0:50.3. The reel ends at 0:54.5, inside the 58 s limit carried over from the last draft.",
+  "references": [
+    "A detective's evidence wall, but tidy: one column of notes, a dated header, and one item deliberately covered",
+    "A scoreboard number flip: one physical card turn that changes what the frame means",
+    "A lab notebook page: a date, a run number, tick and cross marks in three boxes, nothing decorative",
+    "A team task wall with sticky notes, where an empty slot reads as work that has moved",
+    "A teacher's flashcard held beside the face, question on one side and answer on the other",
+    "Chalk annotations over live footage, the way a sports analyst circles one player and draws one arrow"
+  ],
+  "keyframes": [
+    {
+      "id": "KF01",
+      "time_s": 0.0,
+      "beats": [
+        1
+      ],
+      "emotion": "curiosity",
+      "layout": "full_creator",
+      "shot": "Full frame, medium close-up, static, eye level. Face and the A5 '?' card are side by side and both sharp from frame one. The board is soft behind. Keep the card above the caption zone and clear of the right-side UI icons.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "How many can AI do?",
+      "motion": "None. Stillness is the hook.",
+      "transition_in": "Cold open",
+      "sfx": "",
+      "music": "Silent, room tone only",
+      "creator_direction": "Brows up, ask it as a real question. Hold still with the card beside the right cheek."
+    },
+    {
+      "id": "KF02",
+      "time_s": 2.6,
+      "beats": [
+        1
+      ],
+      "emotion": "'that's a real number'",
+      "layout": "full_creator",
+      "shot": "Same frame. The card flips on 'Mine' to show '[N] of [TOTAL]', and holds for 0.4 s with the number side square to the lens.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "Mine: [N] of [TOTAL]",
+      "motion": "The on-screen text swaps on the flip frame. No punch-in.",
+      "transition_in": "In-shot flip",
+      "sfx": "Card snap, up front",
+      "music": "Pulse bed enters right after the snap",
+      "creator_direction": "Flat voice, no smile. Flip with the wrist only, and end with the card number-side out in the right hand."
+    },
+    {
+      "id": "KF03",
+      "time_s": 4.0,
+      "beats": [
+        2
+      ],
+      "emotion": "'he means my job'",
+      "layout": "full_creator",
+      "shot": "Full frame, punched in about 10% on the face. The number card is lowered but still in the frame edge.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "GST reco? / Lesson plans? / Client decks?",
+      "motion": "One phrase at a time, in sync with the word. Each replaces the last in the same spot beside the face.",
+      "transition_in": "Hard cut with the 10% punch-in",
+      "sfx": "Soft tick on each phrase",
+      "music": "Low",
+      "creator_direction": "Quick on the three tasks, eyes on the lens, with a small head tick on each."
+    },
+    {
+      "id": "KF04",
+      "time_s": 6.8,
+      "beats": [
+        2
+      ],
+      "emotion": "'what's mine?' (the viewer loop opens)",
+      "layout": "full_creator",
+      "shot": "Same punch-in. The 'YOU: ?' card rises from the left hand to the lens on 'Your week' and fills about a third of the frame, sharp.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "Follow-ups?",
+      "motion": "'Follow-ups?' appears beside the 'YOU: ?' card as it settles.",
+      "transition_in": "In-shot card raise",
+      "sfx": "",
+      "music": "Low",
+      "creator_direction": "Slow down and point the card at the lens. End with one card in each hand."
+    },
+    {
+      "id": "KF05",
+      "time_s": 8.5,
+      "beats": [
+        3
+      ],
+      "emotion": "'he's exposed too' (trust)",
+      "layout": "full_creator",
+      "shot": "Full frame, tight close-up on the face. Both cards are down at the chest and just visible at the bottom edge. No on-screen text, only the caption.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "",
+      "motion": "None",
+      "transition_in": "Cut to a tighter frame",
+      "sfx": "",
+      "music": "Thins to a single pulse",
+      "creator_direction": "Level, with a small breath between the two sentences. No fear and no bravado. Completely still."
+    },
+    {
+      "id": "KF06",
+      "time_s": 11.5,
+      "beats": [
+        4
+      ],
+      "emotion": "'this is a fair test'",
+      "layout": "full_creator",
+      "shot": "Full frame, medium shot of the creator at the board. The header strip 'Run #1 · 18 Nov 2026' is readable, with the two empty slots under it. Both cards go into the slots in one two-handed move on 'eighteenth November'.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "[TOTAL] tasks · 3 runs",
+      "motion": "The text lands on '[TOTAL] tasks', with the number big in yellow.",
+      "transition_in": "Cut on 'So'",
+      "sfx": "One card slap",
+      "music": "Level",
+      "creator_direction": "Brisk and factual. Press both cards at once, then turn back to the lens."
+    },
+    {
+      "id": "KF07",
+      "time_s": 13.5,
+      "beats": [
+        4
+      ],
+      "emotion": "recognition ('that row is my kind of task')",
+      "layout": "split",
+      "shot": "Top: a close, slow pan down the sticky column that pauses on three legible rows. Bottom: the creator beside the board, counting the three grades on his fingers.",
+      "top_visual": "Real board footage. A chalk-cyan hand-drawn circle draws around the [COMMON_TASK] row as the pan pauses on it, tracked to the footage. The small line under the main text reads: [N] passed 3 of 3 · [MODEL] · graded by me · rubric in caption.",
+      "template": "",
+      "on_screen_text": "Pass / edits / fail",
+      "motion": "Calm downward pan. The circle draws on in about 10 frames.",
+      "transition_in": "Hard cut to split",
+      "sfx": "Tick on each grade",
+      "music": "Level",
+      "creator_direction": "Count one, two, three on the fingers for pass, edits, fail."
+    },
+    {
+      "id": "KF08",
+      "time_s": 17.5,
+      "beats": [
+        5
+      ],
+      "emotion": "'it moved' (notice, not alarm)",
+      "layout": "split",
+      "shot": "Top: a close shot of the smaller old-model card being stuck to the left of the [N] card, with a finger sliding from old to new. Bottom: the creator's face.",
+      "top_visual": "Real cards. A chalk-cyan hand-drawn arrow draws from the old card to the new one, following the finger. The small line reads: [OLD_MODEL], [OLD_MODEL_DATE] · same prompts · one comparison.",
+      "template": "",
+      "on_screen_text": "[OLD_N] → [N]",
+      "motion": "The arrow draws left to right on the finger slide.",
+      "transition_in": "Cut",
+      "sfx": "",
+      "music": "Level, no sting",
+      "creator_direction": "Even voice, then a half-second look at the lens. No adjective and no eyebrow."
+    },
+    {
+      "id": "KF09",
+      "time_s": 20.5,
+      "beats": [
+        6
+      ],
+      "emotion": "'he acted on it'",
+      "layout": "split",
+      "shot": "Top: a 2 s close shot of the [TASK] sticky, with its three green ticks, being peeled off the board and pressed onto the laptop lid. The gap in the column stays visible. Bottom: the creator's face.",
+      "top_visual": "Real prop footage, no drawing.",
+      "template": "",
+      "on_screen_text": "[TASK]: [BEFORE_TIME]",
+      "motion": "The text lands on '[BEFORE_TIME]'.",
+      "transition_in": "Cut",
+      "sfx": "Sticky peel, then press",
+      "music": "Level",
+      "creator_direction": "Rueful on '[TASK] took me [BEFORE_TIME]'."
+    },
+    {
+      "id": "KF10",
+      "time_s": 22.5,
+      "beats": [
+        6
+      ],
+      "emotion": "proof",
+      "layout": "split",
+      "shot": "Top: about 3 s of the real laptop screen recording, with the creator's old version on the left and the AI output on the right, both scrolling, in a thin paper-white frame. Bottom: the creator's face.",
+      "top_visual": "The real recording only, with employer and client data removed. The small line under the main text reads: includes my check.",
+      "template": "monitor",
+      "on_screen_text": "[BEFORE_TIME] → [AI_TIME]",
+      "motion": "Slow synced scroll on both panes. '[AI_TIME]' turns green on the word.",
+      "transition_in": "Cut inside the top panel only",
+      "sfx": "",
+      "music": "Level",
+      "creator_direction": "Plain on 'AI drafts it, I check it'. A small nod on '[AI_TIME]'."
+    },
+    {
+      "id": "KF11",
+      "time_s": 27.5,
+      "beats": [
+        7
+      ],
+      "emotion": "curiosity (the second loop opens)",
+      "layout": "full_visual",
+      "shot": "Full frame, close on the taped row with its three red crosses. The finger and part of the face are in frame, with the eyes visible. One tap on the tape, then the look to the lens.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "Failed 3 of 3 · remember this",
+      "motion": "None. 'remember this' appears after the tap.",
+      "transition_in": "Cut to full frame",
+      "sfx": "Dry finger tap on tape",
+      "music": "Cuts out on the tap, returns on the next cut",
+      "creator_direction": "Lower voice. Tap once, then hold the look."
+    },
+    {
+      "id": "KF12",
+      "time_s": 30.5,
+      "beats": [
+        8
+      ],
+      "emotion": "calm (a plan, not a pitch)",
+      "layout": "split",
+      "shot": "Top: a close shot of the empty gap in the sticky column. Bottom: the creator's face, slightly warmer grade.",
+      "top_visual": "Over the real gap footage, three words draw on as a chalk-cyan hand-drawn loop, one per sentence: 'Measure' on 're-run it', 'hand over' on 'I hand over', 're-measure' as the loop closes.",
+      "template": "flow",
+      "on_screen_text": "Measure → hand over → re-measure",
+      "motion": "The loop draws clockwise around the gap, slowly.",
+      "transition_in": "Cut to split as the music returns",
+      "sfx": "",
+      "music": "Fullest and warmest point",
+      "creator_direction": "Steady and warm, with open shoulders."
+    },
+    {
+      "id": "KF13",
+      "time_s": 35.8,
+      "beats": [
+        8
+      ],
+      "emotion": "calm (the gap gets filled)",
+      "layout": "split",
+      "shot": "Top: the same close shot. The pre-written green '[FREED_WORK]' sticky is pressed into the gap on the last sentence. Bottom: the creator's face.",
+      "top_visual": "The real green sticky, readable. The loop drawing stays, dimmed to 50%, so the sticky is the brightest thing in the frame.",
+      "template": "",
+      "on_screen_text": "",
+      "motion": "Warm amber lift on the grade as the sticky lands.",
+      "transition_in": "In-shot press",
+      "sfx": "Sticky press",
+      "music": "Full, then cuts with the picture on the press",
+      "creator_direction": "Plain, like reading a log entry. No smile of relief."
+    },
+    {
+      "id": "KF14",
+      "time_s": 37.5,
+      "beats": [
+        9
+      ],
+      "emotion": "anticipation",
+      "layout": "full_creator",
+      "shot": "Full frame on the face and the hand reaching for the taped row. The grade returns to neutral. No on-screen text, only the caption.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "",
+      "motion": "A slow 5% push toward the row.",
+      "transition_in": "Cut on the press",
+      "sfx": "",
+      "music": "Low, thinning",
+      "creator_direction": "'The one it failed?' is asked to the lens, with the fingers already on the tape corner."
+    },
+    {
+      "id": "KF15",
+      "time_s": 39.0,
+      "beats": [
+        9
+      ],
+      "emotion": "payoff",
+      "layout": "full_visual",
+      "shot": "Full frame, close on the row. The tape comes off in one pull and the camera holds on the [FAILED_TASK] sticky for 0.8 s, with part of the face still in frame as in KF11.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "[FAILED_TASK] ✗ ✗ ✗",
+      "motion": "The text lands on the name, with the crosses in red.",
+      "transition_in": "Cut on the rip",
+      "sfx": "Tape rip, up front",
+      "music": "Fading out",
+      "creator_direction": "Flat on 'Still mine', no smile. Park the used tape on the board edge."
+    },
+    {
+      "id": "KF16",
+      "time_s": 41.3,
+      "beats": [
+        9
+      ],
+      "emotion": "small jolt",
+      "layout": "full_visual",
+      "shot": "The same close frame. The eyes come to the lens for 'For now' and the look holds. No on-screen text, only the caption.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "",
+      "motion": "None",
+      "transition_in": "Held shot",
+      "sfx": "",
+      "music": "Silence",
+      "creator_direction": "A beat, then 'For now', serious. Hold the look until the cut."
+    },
+    {
+      "id": "KF17",
+      "time_s": 42.5,
+      "beats": [
+        10
+      ],
+      "emotion": "'my turn'",
+      "layout": "full_creator",
+      "shot": "Full frame, medium. The board is behind, with the [N] card, the 'YOU: ?' card and the empty dashed 'Run #2' outline all in view. The 'YOU: ?' card comes off the board on 'your number'.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "Now your number",
+      "motion": "Warm amber lift returns.",
+      "transition_in": "Cut on silence",
+      "sfx": "",
+      "music": "Returns warm",
+      "creator_direction": "Friendly and direct. The energy lifts one notch."
+    },
+    {
+      "id": "KF18",
+      "time_s": 43.8,
+      "beats": [
+        10
+      ],
+      "emotion": "'that's easy'",
+      "layout": "full_creator",
+      "shot": "The same medium frame. The free hand points down toward the comments on 'Comment RUN'.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "Comment RUN + your guess",
+      "motion": "'RUN' pops in yellow on the word.",
+      "transition_in": "Held shot",
+      "sfx": "Soft tick on 'RUN'",
+      "music": "Warm, level",
+      "creator_direction": "Point straight down with one finger. The 'YOU: ?' card stays in the other hand at chest height."
+    },
+    {
+      "id": "KF19",
+      "time_s": 47.2,
+      "beats": [
+        10
+      ],
+      "emotion": "'I can get mine'",
+      "layout": "split",
+      "shot": "Top: about 3 s of the real phone recording of the Run #1 GPT in a free account. Bottom: the creator's face.",
+      "top_visual": "The real recording in a thin paper-white phone frame. A job title and three tasks go in, it writes its own dummy input and attempts a non-IT task, and the cut ends on a 1 s hold of the dated Run card. The small line reads: 1 try per task · dummy input · graded by you · link in bio.",
+      "template": "monitor",
+      "on_screen_text": "Free GPT → post your real number",
+      "motion": "Two quick in-recording jump cuts, then a still hold on the Run card.",
+      "transition_in": "Hard cut to split",
+      "sfx": "",
+      "music": "Warm, level",
+      "creator_direction": "Explain it simply, with a small 'you' gesture toward the lens on 'you grade'."
+    },
+    {
+      "id": "KF20",
+      "time_s": 50.3,
+      "beats": [
+        10
+      ],
+      "emotion": "anticipation",
+      "layout": "full_creator",
+      "shot": "Full frame, medium close-up. The creator taps the empty dashed 'Run #2' outline on 'Run two'.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "Run #2 · [RUN2_DATE]",
+      "motion": "A chalk-cyan dashed line traces the outline once.",
+      "transition_in": "Cut to full frame",
+      "sfx": "Soft tap",
+      "music": "Building to the resolve",
+      "creator_direction": "One tap on the outline, then turn back to the lens."
+    },
+    {
+      "id": "KF21",
+      "time_s": 52.4,
+      "beats": [
+        10
+      ],
+      "emotion": "'I want my number'",
+      "layout": "full_creator",
+      "shot": "Full frame, medium close-up matched to KF01. The '?' card is pushed to the lens and stops in the same position as frame one. Hold for half a second and end at 0:54.5. No on-screen text, because the card is the text.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "",
+      "motion": "None after the push, so the last frame loops into the first.",
+      "transition_in": "In-shot card push",
+      "sfx": "",
+      "music": "Resolves on the card push",
+      "creator_direction": "'Bring your number' is an invitation with a smile, not a dare. Stop the card on the mark and freeze."
+    }
+  ],
+  "shot_list": [
+    "1. Laptop screen recording (before shoot day): [TASK] with your old version on the left and the AI output on the right, both scrolling slowly. Employer and client data removed. Record 20 s for about 3 s of use, framed so it reads in a 1440x1280 top panel.",
+    "2. Phone screen recording (before shoot day): the Run #1 GPT in a free account. A job title and three tasks go in, it writes its own dummy input, attempts a non-IT task, and the dated Run card appears. Record the whole run for about 3 s of use, and end with the Run card on screen for at least 2 s.",
+    "3. Board insert, full column (before any sticky moves): a close, slow pan down the stickies that pauses 1 s on each of three legible rows including [COMMON_TASK]. 8 s, two takes, locked exposure.",
+    "4. Card insert: a close shot of the old-model card being stuck to the left of the [N] card, with the finger sliding old to new. 4 s, two takes.",
+    "5. Sticky insert: a close shot of the [TASK] sticky with three green ticks being peeled off and pressed onto the laptop lid, with the gap left visible. 3 s. Have a spare sticky ready for a second take.",
+    "6. Gap insert: a close shot of the empty gap held for 5 s, then the green [FREED_WORK] sticky pressed in and held for 2 s. Same framing throughout.",
+    "7. Tape safety insert: a close shot of the taped row with the tap, then the one-pull peel and a 1 s hold on [FAILED_TASK]. Prepare three spare taped stickies, because the peel is a one-take prop.",
+    "8. Clean plates: the board in each state (cards in slots, gap open, gap filled, tape off) for 3 s each, for continuity checks and the cover frame.",
+    "9. Wild sound, room quiet: card snap, card slap, sticky peel, sticky press, finger tap on tape and tape rip, three clean takes each, plus 20 s of room tone.",
+    "10. Loop match check: after the last take, hold the '?' card at the KF01 position for 3 s against the floor and card marks, so the last frame can be matched to the first."
+  ],
+  "risks": [
+    "The screenplay text I received stops mid-row in section 5, so the remaining result-dependent alternates and the CTA note flagged for approval are not reflected here.",
+    "Every number and name is still a placeholder ([N], [TOTAL], [OLD_N], [TASK], [BEFORE_TIME], [AI_TIME], [FREED_WORK], [FAILED_TASK], [MODEL], [OLD_MODEL], [OLD_MODEL_DATE], [COMMON_TASK], [RUN2_DATE]). Write no card and build no overlay until the run is measured. The header strip must show the real run date.",
+    "If [N] is 0 or equals [TOTAL], KF02, KF11 and KF14-KF16 change to the screenplay's alternates. Decide before writing the cards.",
+    "The small-print disclosure lines run longer than six words and may be unreadable on a phone. Keep each to one line under the main text and repeat the detail in the caption.",
+    "The split frames show the same action from two angles. Shoot the inserts with a second locked phone, or match hand position exactly, or the top and bottom will visibly disagree.",
+    "The creator stands at a board here, not seated as in the house style. In split frames, crop the bottom half so the face still sits high and the caption line stays clear.",
+    "Glare on tape, cards and the laptop screen would hide the text that carries the payoff. Use matte tape and matte card, and check every close shot on the phone before moving on.",
+    "Handwriting that is too thin will not read. Use a chisel marker, write task names in three words or fewer, and test legibility at phone size.",
+    "The circle, arrow and loop must be tracked to the moving footage. A circle that slides off the [COMMON_TASK] row looks fake.",
+    "Three seconds of screen recording is too fast to read. Each recording needs one still, legible moment: the two panes side by side in KF10, and the dated Run card in KF19.",
+    "Show only the real recordings. Do not mock up the GPT screen, add a product logo graphic or rebuild the Run card in graphics. Remove employer and client data before the laptop recording.",
+    "The old-model card needs a verified release date, and 'one comparison' must stay on screen so [OLD_N] → [N] does not read as a trend.",
+    "The warm grade and full music in scene 8 must not tip into reassurance. No text, colour or sound should imply this keeps anyone safe.",
+    "'For now' only lands if the eyes are in frame. KF15 and KF16 must keep part of the face in the close shot, as in KF11.",
+    "The loop depends on KF21 matching KF01. Mark the floor, the tripod and the card position, and check both frames side by side in the edit.",
+    "There are no title cards, whooshes or bass impacts in this reel. Adding them for house consistency would fight the real-prop sound and the three silences.",
+    "I have not checked pace, caption or audio-level rules against production/REEL_DEFAULTS.md. Confirm the music level and the caption safe zone there before the edit."
+  ]
+}

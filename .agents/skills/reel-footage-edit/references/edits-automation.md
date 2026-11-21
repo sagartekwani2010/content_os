@@ -70,3 +70,20 @@ automation server on 2026-11-15. Read this before the first Edits call in a new 
 - Transcribing the export and comparing with the script (clipped words, stray syllables).
 - Loudness per section of the export.
 - None of these replace listening: Claude cannot hear the audio.
+
+## Edits 455 on macOS 27 (17 November 2026)
+
+- The app container (`~/Library/Containers/com.burbn.basel.mac/Data/Documents`) is no longer writable by
+  other processes. `importMedia` reads straight from `~/Movies/...`, so import from there.
+- `importMedia` inserts at the playhead, not at the end: `seek` to the intended start before each import.
+- Transitions (`addTransition fromId/toId/filterId/durationSeconds`) do not change any clip's start, end or
+  source range, so voice stays in sync.
+- `addMusicTrack` fills a single music slot (a second call replaces the first) and that slot was missing
+  from the export. Import a pre-mixed, pre-ducked bed with `importMedia` instead: it lands as a normal
+  audio element and exports.
+- Library music downloads (`addSongToComposition`) failed again with DownloadError 3.
+- Library sound effects can be long samples (Boom impact ~7 s, Impact (tense) ~12.7 s): trim each to about
+  2 s and never past the end, or the export grows a black tail.
+- Captions: `generateCaptions`, then `editCaption` for spellings, `setCaptionStyle`, and
+  `setTextPosition` (x 0.5, y 0.5) per caption to sit on the split-screen seam instead of over the face.
+- Export to any path under `~/Movies` works; output was 1440x2560, 60 fps, HEVC, AAC 44.1 kHz.

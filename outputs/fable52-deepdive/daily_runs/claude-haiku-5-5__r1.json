@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "Because the boat can hold the farmer and all three items at once, he can take everything across in a single trip. Nothing is left alone on either bank, so the wolf, goat, and cabbage constraints never come into play.\n\nANSWER: 1",
+ "seconds": 4.3,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2445.75,
+ "out_tok": 405,
+ "usd_list": 0.00045,
+ "cli_cost": 0.0005187,
+ "item": "r1"
+}

@@ -42,7 +42,8 @@ def synth_voice(sheet: dict, work: Path, voice: str = "Samantha", rate: int = 17
         x, _ = media.read_wav(aiff, SR)
         nz = np.nonzero(np.abs(x) > 1e-3)[0]
         x = x[nz[0]: nz[-1] + 1] if len(nz) else x
-        frames = int(np.ceil((LEAD + len(x) / SR + TAIL) * FPS))
+        hold = float(b.get("hold_after", 0))  # a scripted silent hold (e.g. 1 s on a quote)
+        frames = int(np.ceil((LEAD + len(x) / SR + TAIL + hold) * FPS))
         n = int(round(frames / FPS * SR))
         seg = np.zeros(n, np.float32)
         a = int(LEAD * SR)

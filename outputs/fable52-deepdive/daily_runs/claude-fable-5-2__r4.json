@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "For the new design, each machine needs 20 minutes to make one widget on its own. With 100 machines working in parallel, each makes one widget, so all 100 widgets are finished at the same time, after 20 minutes.\n\nThe first sentence (5 machines, 5 minutes, 5 widgets) describes the old rate of 5 minutes per widget and doesn't apply to the new design.\n\nANSWER: 20 minutes",
+ "seconds": 5.4,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1143.25,
+ "out_tok": 184,
+ "usd_list": 0.01651,
+ "cli_cost": 0.0221974,
+ "item": "r4"
+}

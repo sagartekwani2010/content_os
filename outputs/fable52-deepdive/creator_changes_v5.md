@@ -1,0 +1,7 @@
+CREATOR CHANGES v5 (locked wording intent; keep it close to his words):
+- Only THREE findings (drop the effort / 63% finding and the "One number in it made me stop" tease). Beat 3 ends "Three things every user should know."
+- F1 (beat 4): "While training, it actually started cheating by guessing what the answer key expects, like we all did in school. So while working, always ask how it arrived at the answer." (paper: "Guessing what the answer key expects", p.95)
+- F2 (beat 5): "It takes the user's input as the source of truth, literally, and that's how harmful instructions planted in pasted text got through. So while working, make sure the text you pass in doesn't carry conflicting instructions, so the model isn't confused." (paper p.131; largely mitigated in the release)
+- F3 (beat 6): "It's among the least self-critical Claude models. So always work with another model to check its work." (paper p.186)
+- Tips (beat 9, was 10): presented as HIS OWN tips, no Reddit attribution. Speak only the most important one + "screenshot this": e.g. "My top tip: Fable plans, a cheaper model builds. Screenshot this." Card shows all three: Separate planning from execution (Fable plans; Opus or Sonnet builds) / Match effort to the task / Skip Fable for routine chores.
+- Keep everything else from v4 (CEO hook, builders + clip, 264 pages, my test 14% / five rupees, behind this reel, blind-trust close, CTA). TRIAL differences as in v4 (money hook; payoff "Haiku matched Fable at 97% lower cost"; "So the real risk? Blind trust...").

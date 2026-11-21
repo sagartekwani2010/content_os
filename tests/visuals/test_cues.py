@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from content_os.visuals.cues import default_duration, expand, proportional_words, resolve_beat, spoken_tokens
+from content_os.visuals.cues import DEFAULT_OFFSET, default_duration, expand, proportional_words, resolve_beat, spoken_tokens
 
 ROOT = Path(__file__).resolve().parents[2]
 LINE = "The lazy version, one prompt asking for calories: 77. Statistically, a tie."
@@ -32,7 +32,7 @@ def test_exact_match_on_digits_vs_words():
             {"on_word": "tie", "action": "pop", "target": "t", "offset": 0.0}]
     res, rep = resolve_beat(LINE, cues, ws, 6.0)
     assert [r.method for r in res] == ["exact", "exact"]
-    assert res[0].t == pytest.approx(0.3 + 8 * 0.4 - 0.1)
+    assert res[0].t == pytest.approx(0.3 + 8 * 0.4 + DEFAULT_OFFSET)
     assert res[0].dur == pytest.approx(0.7)  # emphasis default
     assert res[1].t == pytest.approx(0.3 + 11 * 0.4)
     assert rep["fallbacks"] == []
@@ -78,13 +78,14 @@ def test_bad_cues_raise():
 
 
 def test_food_tracker_cues_resolve_against_teleprompter_lines():
-    from content_os.visuals.script import load_lines
+    from content_os.visuals.script import beat_line, load_lines
 
     sheet = json.loads((ROOT / "outputs/food-tracker-reel/visual_cues.json").read_text())
     lines = load_lines(ROOT / "outputs/food-tracker-reel/TELEPROMPTER.md")
-    assert sorted(lines) == [b["beat"] for b in sheet["beats"]]
+    assert sorted(lines) == [b["beat"] for b in sheet["beats"] if "line_from" not in b]
     for b in sheet["beats"]:
-        resolve_beat(lines[b["beat"]], b["cues"], [], 8.0)  # raises if a phrase is not in the line
+        assert beat_line(b, lines)
+        resolve_beat(beat_line(b, lines), b["cues"], [], 8.0)  # raises if a phrase is not in the line
 
 
 def test_default_duration_and_proportional_words():

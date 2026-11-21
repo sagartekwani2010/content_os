@@ -1,0 +1,196 @@
+{
+ "check": {
+  "must_fix": [
+   "Cut A reopens locked brief decisions without creator sign-off. It changes the One Idea from 'found the one set I should never have done' to a rep-count story, drops the locked hero visual (the ghost of the best set), and replaces the outlined payoff-first hook (ghost, red gap, STOP). Do not ship it as the package. Show the creator one Gate-1 decision, Cut A (record today, no slots) vs wait for BAD_SET/BEST_SET/judge, and list each brief item Cut A breaks.",
+   "Beat 11 breaks a locked decision. The brief puts the IMG_2649 'actually a good set' twist in the caption, or in the TRIAL hook only if it works cold. Cut A makes it the PAYOFF of the shared body, so MAIN also gets it. In MAIN it also has no setup: 'the set I marked as wrong' is never established for cold viewers, so it leans on the previous reel. That breaks the skill rule 'never rely on a previous reel for a twist'. Give MAIN a payoff that closes its own hook, and keep the twist in the TRIAL hook and the caption.",
+   "Beat 11 overclaims who gave the verdict. 'was actually good, says my AI' credits the verdict to the analyser the reel just explained. In fact it came from the form-labeller (Fable 5.2 reading 2 fps frame sheets, never pose data, confidence 0.6). The judge is unbuilt and its verdicts are not measured. It also contradicts beat 8's 'My AI WILL judge me'. Reword so the spoken line does not imply the analyser or judge produced a verdict. Do not fix it with a footnote: the skill says to rewrite any spoken claim that needs a footnote to be true.",
+   "The draft is unscored. Run the Fable engagement judge and the frozen 16-persona panel (iterate.py personas, engagement 0-10 mean), with the locked decisions passed in. It reaches the creator only at 7.5 or above, with SCRIPT_CHECK.md attached."
+  ],
+  "should_fix": [
+   "MAIN beat 1 visual already shows the 14 strike-through and '11 \u2713', so the 1/3 re-hook at beat 5 repeats a reveal the viewer has already seen. Hold K1 on '14' (with a '?') and let the correction land at beat 5 or 7.",
+   "The E2 variable drifted. The brief sets MAIN as 'personal test' vs TRIAL 'contrarian self-correction'. The new MAIN ('my AI couldn't count my reps') is an AI-mistake or admission hook, so both arms are self-correction and the hypothesis no longer tests what E2 named. Restore a personal-test MAIN or log the changed hypothesis. Write the entry to production/EXPERIMENTS.md, which is not done.",
+   "Cut A has no human stake. Beat 2 is a goal ('I want my AI to stop me...') with no fault and no risk in plain gym words. That is the gap the skill names as the cause of the 5.0-5.2 rounds. Add one personal stake line, or record that it is deliberately absent.",
+   "Beat 6 spoken cause is incomplete. FACTS give several causes of 14 vs 11: a 0.2 s tracker jump (115\u00b0 lean), half reps 1 and 14 cut by the clip edges, and the leg hidden by the machine (11\u00b0 knee). The fix also used the 0.8 s minimum. 'The squat machine was actually hiding my leg' presents one cause as the whole story. Say 'partly', or show the other causes on screen in K6/K7.",
+   "One-actor rule: on-screen 'my AI coach' (K7 '11 \u2713 same as my AI coach', the CTA 'the AI coach from this reel') and a second Fable box on the architecture diagram ('AI COACH CHECK (Fable 5.2)') add a second character beside 'my AI'. The labeller is a reference check, not part of the analyser pipeline. Label it 'reference check' off the main diagram, or drop it from K8b.",
+   "Two claims about the creator are not in FACTS. 'I thought this was my worst set' (TRIAL, a creator-authored line) and 'I marked as wrong' / 'my pick' / 'I stamped STOP' (beat 11, caption) conflict with the tease, which framed the STOP as Fable stopping him. Confirm with the creator. Make the caption say the tease promised a STOP and the AI disagreed, rather than recasting the stamp as his own pick.",
+   "Beat 11 timing: 14 words at 1.0x is about 5.0 s, but the slot is 4.6 s (37.6-42.2). Retime or trim, and recheck that the total stays in 42-48 s.",
+   "CTA honesty: FORM promises the form-labeller skill, which is untracked in the repo. Confirm it is packaged, shareable and free of creator media before locking beat 12. Otherwise use the fallback comment trigger.",
+   "captions.bottom_px 440 is still 'pending the creator's OK' in REEL_DEFAULTS. Flag it as a decision; do not treat it as settled.",
+   "Record the deviations in the reel folder as the draft promises: no ghost, two section cards instead of one per section, and the E-E pair at beats 6-7."
+  ],
+  "facts_ok": false
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "The flickering knee dot makes a bad count feel like a bug I could actually diagnose. I'd save the diagram; the exam analogy slows me down."
+   },
+   {
+    "id": 2,
+    "score": 5,
+    "drop_beat": "5",
+    "why": "Fourteen versus eleven is a discrepancy I want explained. When the counter does the same reveal again, I assume I've already seen the interesting bit and swipe just before the cause."
+   },
+   {
+    "id": 3,
+    "score": 4,
+    "drop_beat": "3",
+    "why": "I'd watch to see what a bad squat looks like. The skeleton catches my eye, but '17 joints' sounds like the start of a software walkthrough."
+   },
+   {
+    "id": 4,
+    "score": 4,
+    "drop_beat": "3",
+    "why": "A warning before a bad rep sounds useful. Once I see it's an old clip and the next question is how the tracker works, I'm not waiting for the warning."
+   },
+   {
+    "id": 5,
+    "score": 5,
+    "drop_beat": "8",
+    "why": "I can follow the whole mistake: a dip means a rep, the machine hides the knee, the count goes wrong. It feels finished at eleven. A second diagram looks like another lesson."
+   },
+   {
+    "id": 6,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "The knee line peeling off into a wave is the bit I'd send to my project group. I can picture building the counter, and FORM gives me somewhere to start."
+   },
+   {
+    "id": 7,
+    "score": 6,
+    "drop_beat": "9",
+    "why": "Seeing suspect dips grey out is satisfying: I can see why the number changed. I already get the idea of a personal baseline without the exam-paper example."
+   },
+   {
+    "id": 8,
+    "score": 5,
+    "drop_beat": "8",
+    "why": "The corrected count is a result. The dashed judge is a proposal. I'd stay for a second set that tested the rule, not a diagram of what it might decide."
+   },
+   {
+    "id": 9,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I'd screenshot the solid-versus-dashed diagram. It's a compact way to show a teammate what a prototype does today versus what the creator wants it to do."
+   },
+   {
+    "id": 10,
+    "score": 5,
+    "drop_beat": "8",
+    "why": "I want to know whether the tool would change the decision to keep lifting. By the second title card, I've seen it fix a count, but the decision is still labelled 'next'."
+   },
+   {
+    "id": 11,
+    "score": 6,
+    "drop_beat": "9",
+    "why": "The red strike buys the first three seconds and the hidden-leg zoom earns my attention back. The exam doodle keeps explaining a point the title card already landed."
+   },
+   {
+    "id": 12,
+    "score": 5,
+    "drop_beat": "5",
+    "why": "The opening counter tells a neat little story even on mute. Seventeen seconds later I recognise the same strike-through, not a new twist worth waiting for."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "Rejecting an unreliable detection instead of guessing is a design choice I can reuse. I'd comment for the skill to see what the separate coach check actually takes as input."
+   },
+   {
+    "id": 14,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I'd save the occlusion example: footage, keypoint and signal error are visible together. Agreement on eleven is interesting; it doesn't tell me the form verdict is reliable."
+   },
+   {
+    "id": 15,
+    "score": 6,
+    "drop_beat": "12",
+    "why": "I stay for the replay because a machine blocking the camera is a real filming problem. Depth and steady reps are useful observations, but I can't see the knees clearly enough to send a client that green GOOD SET card."
+   },
+   {
+    "id": 16,
+    "score": 5,
+    "drop_beat": "8",
+    "why": "I don't need to know AI to spot the rail hiding his leg. Once the count is fixed, I'd rather see another lifting clip than read the boxes above his face."
+   }
+  ],
+  "groups": {
+   "mass": 4.86,
+   "fin_consult_mktg": 5.67,
+   "builders": 7.5
+  },
+  "overall": 5.81,
+  "top_fixes": [
+   "For Cut A MAIN, open on the moving clip with 'I did 11. My AI counted 14. Watch my knee.' Freeze where the machine rail hides it, then show the bad dip. Make the viewer discover the cause instead of watching the same correction at beats 1 and 5.",
+   "Keep the knee-to-wave animation and the greyed-out dips. Cut beats 9 and 10; put the full architecture in the FORM asset. After the counter lands on eleven, give the future baseline one line rather than starting a second explainer.",
+   "Separate counting from coaching in the payoff. Show 'Counter: 11 reps' and 'Coach: consistent depth; heels not visible' on the replay. That gives a cold viewer something to check with their own eyes instead of asking them to trust a green GOOD SET stamp.",
+   "Account for viewers who won't want a skill file. Leave them with a useful still of the blocked knee and 'Keep the knee visible when filming from the side'; reserve the FORM prompt for people who want the implementation."
+  ]
+ },
+ "critic": {
+  "predicted_score": 6,
+  "would_approve": false,
+  "change_list": [
+   "This is not the reel I briefed. The one idea was that my AI found the set I should never have done, with the ghost of my best rep and the STOP stamp in the first 3 secs. Cut A has no bad set, no ghost and no STOP. Run the analyser on the other clips tonight and find the bad set first, then write. First do, then show.",
+   "If nothing gets measured before Saturday, tell me that as one yes/no decision: post Cut A, or hold the reel. Don't give me Cut A plus Cut B plus slots. Show Cut B only once the bad set, best set and judge are measured.",
+   "Why am I seeing this without a score? The draft itself says it is not judged and the panel fixes are not applied. Run the Fable judge and the panel, get it to 7.5, then send me one finished option.",
+   "Beat 2 is not a stake. 'I want my AI to stop me before a bad set' is a wish. I need what went wrong and what it could have cost me, in gym words.",
+   "Half the diagram is dashed and tagged 'next', and beat 8 says 'my AI will judge'. The architecture is my signature and the save asset, so I don't want people saving something that isn't built. Build the judge and the baseline, or draw only what is actually running.",
+   "Beat 11 in the main version makes no sense to a new viewer. Nobody was told I marked that set as wrong; that came from the last reel. We locked that this twist goes in the caption or the trial hook only. Give main its own payoff.",
+   "In the trial, beat 11 just repeats the hook. In the main, the 14 vs 11 reveal is in beat 1, again in beat 5 and again on the cover. Show each reveal once and keep the other moment for something new.",
+   "Beat 10, 'So always film your best set first': the baseline is not built, so the tip has no measurement behind it. And what does a normal viewer do with that clip? Make the action something they can actually use today, tied to the skill I am sending.",
+   "Comment FORM is fine, but only if the form-check skill is actually packaged and ready to send. Get it ready before I record. Don't even ask.",
+   "Too much text in beat 1: gloss line, footage tag, counter and captions in 4.6 secs. Keep it awe, not complex. One line plus the counter.",
+   "Only one actor. 'My AI coach' and the 'AI coach check' box on screen read as a second AI, next to the AI that could not count. Make it clear and simple who said 11 and who said good set.",
+   "'Actually' is in 5 of the 12 beats. Keep it in two, I will add my own words while recording. Also there is no headroom at 47 secs, so tell me now which beat drops if I run long.",
+   "Log the E2 hypothesis in EXPERIMENTS.md before I shoot. And give me a 1 sec tease at the end over my own footage with the red mark, like last time."
+  ],
+  "taste_violations": [
+   "Checklist 22 and the non-negotiable 'judged at 7.5 before lock': the draft is unscored and says its panel feedback was cut off, so the creator would be seeing an intermediate round.",
+   "Non-negotiable 'creator sees finished options': the package is a decision tree (Cut A, Cut B with slots, a fallback CTA, three open render checks) plus process notes such as 'What changed'.",
+   "Locked brief decision, hero visuals: the ghost of the best set is missing from Cut A, and the hook is no longer the briefed payoff image (ghost, red gap, STOP stamp). The approved outline was restructured without sign-off (new SCHOOL and ACTION beats, different payoff).",
+   "Locked brief decision, deep-dive twist: 'the set I marked as wrong was actually good' is the body payoff of MAIN (beat 11), where cold viewers have no setup. It was allowed only in the caption or the TRIAL hook.",
+   "'First do then show': beat 8 ('will judge'), the dashed half of the diagram and the beat 10 tip all rest on the judge and baseline, which FACTS says are not built or measured.",
+   "Checklist 7 and the human-stakes preference: beat 1 MAIN opens on a low-stakes counting error and an abstract second sentence. No fault and no risk appears anywhere in Cut A, and the script skill asks for one personal stake line.",
+   "Checklist 14 and the 'what it means for an everyday user' preference: 'So always film your best set first' has no measurement behind it and no clear use for a viewer without the analyser.",
+   "Checklist 19: beat 11 does not stand alone in MAIN. In TRIAL it restates the hook, so the shared body plays differently in the two variants and blurs the one-variable test.",
+   "Checklist 23: main and trial are written with one variable, but the hypothesis is not logged in production/EXPERIMENTS.md.",
+   "Checklist 5, partial: the fail-and-fix finding (beats 5-7) has evidence and a plain line but no everyday comparison or action. Only the 'my best' finding has the full chain.",
+   "Checklist 21, partial: the reel ends on CTA plus loop, with the next-up tease in the caption only. This follows REEL_DEFAULTS, but last time the creator closed with a spoken tease over gym footage.",
+   "Checklist 15, minor: every spoken number traces to FACTS, but 'I actually did 11' and 'ME: 11' credit the creator with a count FACTS attributes to the labeller (the brief outline does use 'I did 11'). The raw-run file for the 14 is not located.",
+   "Checklist 12, loosely applicable: the measured test (14 vs 11) spans beats 1, 5, 6 and 7 and is shown three times including the cover. There is no single one-line result.",
+   "One-actor rule on screen: 'my AI coach' and a solid 'AI COACH CHECK (Fable 5.2)' box add a second character beside 'my AI'. The brief put Fable 5.2 on the judge box only.",
+   "Short-beats rule, minor: beats 1, 3 and 5 are two sentences and beat 11 is 14 words. Runtime sits at 47 s against a 42-48 s target, with no room for the creator's usual on-camera additions.",
+   "Unapproved defaults adopted silently: captions.bottom_px 440 is still 'pending the creator's OK', and two section cards replace one per section."
+  ],
+  "what_they_will_love": [
+   "The whole package is in one place: spoken lines, visuals, on-screen text, delivery, sound, keyframe board with data sources, hooks, caption, first comment, cover and teleprompter (checklist 1 and 25).",
+   "Nothing is invented. Every number (17, 14, 11, 11 degrees, 0.8 s, 58 of 877, 34 and 24) traces to FACTS, unmeasured values stay as slots, and caveats sit on screen instead of in the voice (checklist 3 and 15).",
+   "Beat 9, 'Like comparing with your own best exam paper, not the topper's', is the school comparison they keep asking for. Beat 10 uses the 'So always...' shape they say verbatim.",
+   "The architecture stays as the signature and save asset: a progressively built rail with a running label, full and still for about 5 s, returning on the CTA card.",
+   "The CTA is in their own shape and names the benefit: 'Comment FORM to access the full diagram and my form-check skill'. It gives viewers something to run.",
+   "There is a sound effect on every visual event, the music cuts for the 14 vs 11 moment, and visuals land on the named word (checklist 24).",
+   "The TRIAL hook is their own locked line used verbatim, with one variable between main and trial and a stated hypothesis.",
+   "The fail, cause, fix run in plain words ('The squat machine was actually hiding my leg') has one actor in speech and no jargon. It is also an entertaining first finding (checklist 6).",
+   "Checklist passes: 1, 2, 3, 4, 6, 8, 16, 17, 18 (one declared E pair), 24, 25. Checklist 11 passes in spirit (headed diagram of their own system). Not applicable to this build reel: 9, 10, 13.",
+   "Short sassy caption that carries the deep-dive twist where they locked it, and a plain cover with one hook and their face."
+  ]
+ },
+ "score": 4.704999999999999,
+ "summary": {
+  "panel": 5.81,
+  "critic": 6.0,
+  "must_fix": 4,
+  "approve": false,
+  "groups": {
+   "mass": 4.86,
+   "fin_consult_mktg": 5.67,
+   "builders": 7.5
+  }
+ }
+}

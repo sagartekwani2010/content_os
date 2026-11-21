@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "The net change is a 1% fall.\n\nA 10% rise multiplies your salary by 1.10, and the 10% fall then multiplies it by 0.90, so the result is 1.10 × 0.90 = 0.99 of the original. The fall is larger in absolute terms because it is taken from the higher, post-rise salary.\n\nANSWER: -1",
+ "seconds": 5.2,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1090.75,
+ "out_tok": 115,
+ "usd_list": 0.01333,
+ "cli_cost": 0.018684,
+ "item": "m3"
+}

@@ -1,0 +1,7 @@
+**MUST-FIX**
+
+1. **Beat 18, "I counted that set. It didn't count."** This is a personal claim that isn't in FACTS. Nothing records the creator logging or counting IMG_2661 as a completed set. Either the creator confirms it, or swap in a line built only on measured facts, e.g. "Short, swung reps. 53 degrees, not 122." The script already notes that this line needs approval, so keep it out until the creator signs off.
+
+2. **Beat 20, "Months of weekends on Gym Jarvis. Here's why." and the on-screen "WHY I'M BUILDING THIS".** This says Gym Jarvis was built *because of* the layoff and hiring trend. FACTS records no such motive: the tease is a series bridge, and Gym Jarvis was planned in Sept 2026, before the Salesforce India reports of 19-20 Nov. Reword it as a bridge, not a cause, e.g. "Months of weekends on Gym Jarvis. Here's where it's heading." with the on-screen "WHERE THIS IS GOING". Otherwise the creator must confirm the motive.
+
+Everything else passes. All clips are on the allowed list. There are 3 architecture parts and no "film from the side" line. "Reportedly" is present on beat 21, and the script says "AI engineers", not "AI scientists". No line implies the analysis was live or mid-set. All numbers match FACTS.

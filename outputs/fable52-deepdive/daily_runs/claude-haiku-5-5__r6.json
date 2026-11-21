@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "The patch doubles each day, so the day before it covers the whole lake is the day it covers half. The day before that, it covers a quarter.\n\n- Day 48: whole lake\n- Day 47: half the lake\n- Day 46: a quarter of the lake\n\nANSWER: Day 46",
+ "seconds": 1802.3,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2508.7,
+ "out_tok": 197,
+ "usd_list": 0.00035,
+ "cli_cost": 0.00042002000000000006,
+ "item": "r6"
+}

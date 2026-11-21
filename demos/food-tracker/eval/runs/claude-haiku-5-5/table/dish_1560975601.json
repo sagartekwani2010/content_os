@@ -1,0 +1,301 @@
+{
+ "items": [
+  {
+   "name": "Romaine/iceberg lettuce salad",
+   "grams_low": 90,
+   "grams_best": 120,
+   "grams_high": 150,
+   "fdc_query": "Lettuce, cos or romaine, raw",
+   "preparation": "Raw leaves, torn and tossed, plated as a large mound",
+   "confidence": 0.6,
+   "kcal": 20.4,
+   "kcal_range": [
+    15,
+    26
+   ],
+   "protein_g": 1.5,
+   "protein_range": [
+    1.1,
+    1.8
+   ],
+   "fdc": {
+    "fdc_id": "169247",
+    "description": "Lettuce, cos or romaine, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 17.0,
+    "protein_100g": 1.23
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Creamy dressing on lettuce (Caesar-style)",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Salad dressing, Caesar dressing, creamy, regular",
+   "preparation": "Pale creamy coating visible on the lettuce leaves",
+   "confidence": 0.4,
+   "kcal": 81.3,
+   "kcal_range": [
+    43,
+    136
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.2,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "169055",
+    "description": "Salad dressing, caesar dressing, regular",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 542.0,
+    "protein_100g": 2.17
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Stewed meat in tomato-based sauce",
+   "grams_low": 120,
+   "grams_best": 160,
+   "grams_high": 200,
+   "fdc_query": "Chicken, broilers or fryers, meat only, cooked, stewed",
+   "preparation": "Bite-sized pieces simmered in tomato sauce with onion, likely chicken (could be pork)",
+   "confidence": 0.45,
+   "kcal": 283.2,
+   "kcal_range": [
+    212,
+    354
+   ],
+   "protein_g": 43.7,
+   "protein_range": [
+    32.7,
+    54.6
+   ],
+   "fdc": {
+    "fdc_id": "171451",
+    "description": "Chicken, broilers or fryers, meat only, cooked, stewed",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 177.0,
+    "protein_100g": 27.29
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Broccoli florets, steamed or sauteed",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 130,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "Two clusters of florets, one left-center and one lower-right, appear cooked and bright green",
+   "confidence": 0.7,
+   "kcal": 35.0,
+   "kcal_range": [
+    24,
+    46
+   ],
+   "protein_g": 2.4,
+   "protein_range": [
+    1.7,
+    3.1
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Brown rice with mixed grains",
+   "grams_low": 60,
+   "grams_best": 85,
+   "grams_high": 110,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "Reddish-brown grains scattered and clustered lower-right, plain",
+   "confidence": 0.5,
+   "kcal": 104.5,
+   "kcal_range": [
+    74,
+    135
+   ],
+   "protein_g": 2.3,
+   "protein_range": [
+    1.6,
+    3.0
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Fried or pan-seared tofu cubes",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 35,
+   "fdc_query": "Tofu, raw, firm, prepared with calcium sulfate and magnesium chloride",
+   "preparation": "Tan cubes with browned edges, one to two pieces",
+   "confidence": 0.45,
+   "kcal": 67.5,
+   "kcal_range": [
+    40,
+    94
+   ],
+   "protein_g": 4.7,
+   "protein_range": [
+    2.8,
+    6.6
+   ],
+   "fdc": {
+    "fdc_id": "174304",
+    "description": "Tofu, fried, prepared with calcium sulfate",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 270.0,
+    "protein_100g": 18.82
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cherry tomato",
+   "grams_low": 10,
+   "grams_best": 15,
+   "grams_high": 20,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "Whole raw cherry tomato",
+   "confidence": 0.7,
+   "kcal": 2.7,
+   "kcal_range": [
+    2,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Green bell pepper strips, sauteed",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 35,
+   "fdc_query": "Peppers, sweet, green, raw",
+   "preparation": "Thin strips with some onion, appear cooked",
+   "confidence": 0.5,
+   "kcal": 29.0,
+   "kcal_range": [
+    17,
+    41
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "170024",
+    "description": "Peppers, sweet, green, sauteed",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 116.0,
+    "protein_100g": 0.78
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 545.0,
+  "kcal": 623.6,
+  "protein_g": 55.2,
+  "grams_range": [
+   388.0,
+   705.0
+  ],
+  "kcal_range": [
+   427,
+   836
+  ],
+  "protein_range": [
+   40.3,
+   70.1
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 545.0,
+   "kcal": 581.6,
+   "protein_g": 52.8,
+   "grams_range": [
+    388.0,
+    705.0
+   ],
+   "kcal_range": [
+    403,
+    777
+   ],
+   "protein_range": [
+    38.9,
+    66.7
+   ]
+  },
+  "rows": [
+   "Lettuce, cos or romaine, raw",
+   "Salad dressing, caesar dressing, regular",
+   "Chicken, broilers or fryers, meat only, cooked, stewed",
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
+   "Tomatoes, red, ripe, raw, year round average",
+   "Peppers, sweet, green, sauteed"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "c0ac1f3cb2ea9d453fe6d81f175a728d9afc25758edb2575071c2caf27b65c83",
+ "scale_cues": "Plate is a large white square plate, roughly 27 cm across, used as the main scale. Broccoli florets are about 3-4 cm across, consistent with typical portions. Cherry tomato about 2 cm diameter used to size small items.",
+ "assumptions": [
+  "Plate diameter about 27 cm used as scale reference",
+  "Meat in red sauce assumed chicken; could be pork or another protein",
+  "Broccoli treated as one combined item across two clusters",
+  "Rice assumed brown and plain, no added oil visible",
+  "Dressing mass estimated from visible coating only",
+  "Edible mass estimates are on-plate weights, excluding any unseen food under the top layer"
+ ],
+ "latency_s": 2466.31,
+ "calls": [
+  {
+   "wall_s": 2459.88,
+   "duration_ms": 60122,
+   "num_turns": 5,
+   "cost_usd_cli": 0.00473442,
+   "cost_basis": "list",
+   "input_tokens": 43248,
+   "output_tokens": 1771
+  },
+  {
+   "wall_s": 6.41,
+   "duration_ms": 5564,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0021898,
+   "cost_basis": "list",
+   "input_tokens": 10885,
+   "output_tokens": 1130
+  }
+ ],
+ "cost_usd_cli": 0.00692,
+ "log_id": "e7b1fc57dc65"
+}

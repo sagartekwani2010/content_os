@@ -1,0 +1,710 @@
+{
+ "A": {
+  "overall": 5.35,
+  "groups": {
+   "mass": 4.3,
+   "fin_consult_mktg": 5.45,
+   "builders": 6.8
+  },
+  "panels": [
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "none",
+      "why": "The red STOP and the Desi Boyz beat hold him, and the Salesforce layoffs-versus-AI-hiring ending is his own anxiety, so he follows. He does not send it: \"LLM post-training\" is never explained and the gym build does not obviously connect to it."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 7",
+      "why": "The hook and the 3-2-1 blast carry him to the wall, but \"seventeen joints, thirty times a second\" is where it turns into a tech tutorial. He has not yet seen the bad set, so he has no reason to sit through the architecture."
+     },
+     {
+      "id": 3,
+      "score": 4.5,
+      "drop": "beat 7",
+      "why": "She likes the self-deprecating \"months of weekends\" but leaves at SEE. The Salesforce layoffs line is the one part she would share, and it sits at 48 s where she never arrives."
+     },
+     {
+      "id": 4,
+      "score": 3.5,
+      "drop": "beat 5",
+      "why": "Beats 2-4 are 7 s of build-up to a wall of tiny videos, then five verdict chips in 2.2 s that he cannot read. He cannot tell what he is being shown or why it matters to him."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "beat 6",
+      "why": "The countdown is fun, but \"I split it into three parts\" signals a lecture on something she will never use. The hook's question (which set, and why it was bad) is still unanswered when she leaves."
+     },
+     {
+      "id": 6,
+      "score": 7,
+      "drop": "none",
+      "why": "A weekend project with a visible architecture, a named model and an honest failure case is what he wants to copy. He comments FORM and follows for the \"how to get ready\" part. The pivot to Salesforce feels abrupt but relevant."
+     },
+     {
+      "id": 7,
+      "score": 5.5,
+      "drop": "beat 19",
+      "why": "She goes to the gym and likes the tally and \"my best rep, not a textbook\". The real STOP gets under 2 s and the reel feels finished at beat 18, so she swipes when the jobs segment starts."
+     },
+     {
+      "id": 8,
+      "score": 5,
+      "drop": "beat 13",
+      "why": "The false alarm and \"refuses to judge\" earn his respect. By 32 s he has the idea (two checks must agree) and does not need the rest. The \"reportedly\" tag is appreciated but never reached."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "none",
+      "why": "SEE / JUDGE / CHECK is a clean framework and the pace suits him. He might send it to a gym friend, but the send prompt and the FORM comment prompt land in the same beat and he does neither."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 19",
+      "why": "He admires the structure, but the ending reads as a second reel bolted on. Nothing links a form-checker to model-training roles, so the layoffs line feels like borrowed fear."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "beat 17",
+      "why": "He rates the hook and the loop, but sees the retention problem: the drop at 10.6 s is followed by a quiet bed and an explainer. He also counts three calls to action (send, comment, follow) in 14 s, which split the response."
+     },
+     {
+      "id": 12,
+      "score": 4.5,
+      "drop": "beat 9",
+      "why": "The opening is well produced, but two diagram beats in a row with a model name on screen lose her. The payoff she was promised is still 15 s away."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "A pose model plus an LLM judge plus a video-only second model with an agreement rule is a real design. Showing the lunge false positive is rare honesty. He saves it and comments FORM."
+     },
+     {
+      "id": 14,
+      "score": 6,
+      "drop": "none",
+      "why": "He watches to the end and respects the abstain case and the two-model check. But the posting line on screen says \"not a wrapper around a hosted LLM\", and this system is exactly that around Claude. He would not send it, and may comment to point this out."
+     },
+     {
+      "id": 15,
+      "score": 5.5,
+      "drop": "beat 9",
+      "why": "The best-rep-versus-worst-rep ghost is the content he would send to clients, but it arrives at 40 s for 1.9 s. \"The one set I should never have done\" turning out to be short reverse crunches feels oversold. The joints and model talk in between is not for him."
+     },
+     {
+      "id": 16,
+      "score": 4.5,
+      "drop": "beat 6",
+      "why": "The song, countdown and blast are fun. Then the music ends and the diagrams begin, and nothing has shown him the bad rep. He scrolls."
+     }
+    ],
+    "groups": {
+     "mass": 4.2,
+     "fin_consult_mktg": 5.3,
+     "builders": 6.6
+    },
+    "overall": 5.2,
+    "top_fixes": [
+     "Show the proof early without changing the order: run the best-rep-versus-worst-rep ghost overlay (122\u00b0 vs 53\u00b0) under the beat 1 hook, and highlight the one red tile in the beat 4-5 wall. Mass viewers then know what STOP looks like before SEE / JUDGE / CHECK begins.",
+     "Fix the energy drop at 10.6 s. Desi Boyz ends on the blast and a -18 LUFS bed starts exactly where the explainer does. Carry a rhythmic bed through beats 5-9, cut the five-chip tally to \"23 sets \u00b7 1 STOP\" with the rest as small type, and keep real gym footage behind the diagram nodes.",
+     "Give the payoff room and a stake. Beats 15-16 carry the hook's promise in 4.3 s, with the key comparison in 1.9 s. Take about 1.5 s from the countdown and beat 6, hold the ghost overlay at 1.0x, and add one short line on why swung half reps made the set worthless. Otherwise \"should never have done\" feels oversold, especially to the trainer.",
+     "Use one call to action per moment. Beat 17 speaks \"send this\" while the screen says \"Comment FORM\", and beat 22 adds FOLLOW. Make beat 17 send-only on screen and in voice, and move the FORM prompt to the caption and pinned comment, or to a small tag on beat 18.",
+     "Bridge the Salesforce ending and remove the line that undercuts it. Open beat 19 with a link such as \"I built this on weekends. Here's why.\" so it does not read as a second reel. Replace the on-screen \"not a wrapper around a hosted LLM\" quote in beat 21, since this system is one, with the role title or a five-word plain gloss of \"post-training\"."
+    ]
+   },
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 7,
+      "drop": "none (wobbles at beat 13)",
+      "why": "'I built an AI' plus the Jarvis label holds him past 3 s. SEE/JUDGE/CHECK is simple enough to follow, and the Salesforce layoffs-plus-hiring ending is his exact anxiety, so he follows for the next part. He would not send it to anyone."
+     },
+     {
+      "id": 2,
+      "score": 4.5,
+      "drop": "beat 7",
+      "why": "The STOP hook and countdown carry him to the 23-set tally. 'Seventeen joints, thirty times a second' then sounds like a tech demo not meant for him, and he leaves before the real STOP at 37 s."
+     },
+     {
+      "id": 3,
+      "score": 5,
+      "drop": "beat 9",
+      "why": "She is mildly curious about the gym angle, but the architecture diagrams feel like a lecture. The layoffs ending would stop her thumb, but it arrives at 48 s, after she has gone."
+     },
+     {
+      "id": 4,
+      "score": 3.5,
+      "drop": "beat 4",
+      "why": "The hook is fine, but 'how did I build it', 'come, let's see' and a silent 3-2-1 give him nearly 7 s of no new information. He swipes during the countdown."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "beat 6",
+      "why": "She has no stake in gym form or AI. 'I split it into three parts' signals an explanation she did not ask for."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "This is a portfolio-project template for him: a named model, a failure case and a fix. He comments FORM for the prompt and diagram, and follows because the ending is about how to get hired."
+     },
+     {
+      "id": 7,
+      "score": 6,
+      "drop": "none (skims beats 12-14)",
+      "why": "He likes the tally and the 'refuses to judge' honesty. The 122\u00b0 vs 53\u00b0 payoff is on screen too briefly for him to read. The ending is relevant, but it is only a teaser, so he does not save."
+     },
+     {
+      "id": 8,
+      "score": 5,
+      "drop": "beat 7",
+      "why": "He is sceptical of AI-flex reels. The tally at 12 s is the best moment for him, then it turns to diagrams. He would respect the 'reportedly' and source tag if he got that far."
+     },
+     {
+      "id": 9,
+      "score": 6.5,
+      "drop": "none",
+      "why": "The three-part framework, the false alarm and the 'both must agree' rule all read cleanly to a consultant. The ending hits his career anxiety, so he probably follows and may send it to a batchmate."
+     },
+     {
+      "id": 10,
+      "score": 5.5,
+      "drop": "beat 12",
+      "why": "He appreciates the structure and the admitted failure. Once he gets the idea of a second checker, he has what he wanted and feels no pull to stay for the crunch payoff."
+     },
+     {
+      "id": 11,
+      "score": 6,
+      "drop": "beat 19",
+      "why": "He notices the hook craft, the loop and the comment trigger, and the gym-buddy line is sendable. The Salesforce turn feels like a second reel stapled on, so he leaves there."
+     },
+     {
+      "id": 12,
+      "score": 4.5,
+      "drop": "beat 7",
+      "why": "The blast and tally are well produced, but the energy falls off when Desi Boyz ends and a quiet bed starts under the diagrams. Joint counts are not her world."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "A measured judge plus a video-only coach that must agree is a real design idea told quickly, and the lunge false alarm earns his trust. He comments FORM. He finds the countdown a bit cringe and the ending vague."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "none",
+      "why": "He respects the abstain case and the false-alarm fix. But the quoted job line, 'not a wrapper around a hosted LLM', makes him notice that Gym Jarvis is exactly that, so the ending reads as bait unless the script owns the gap."
+     },
+     {
+      "id": 15,
+      "score": 5.5,
+      "drop": "beat 19",
+      "why": "A set he should never have done is strong bait for a trainer. He sits through 37 s of diagrams, then gets about 4 s of the actual bad reps with degrees he cannot read in time. He might send the gym-buddy line, then leaves at Salesforce."
+     },
+     {
+      "id": 16,
+      "score": 4.5,
+      "drop": "beat 6",
+      "why": "The song, countdown and Jarvis label hold him to the wall of sets. 'Three parts' feels like class, and the job ending is too far from his life."
+     }
+    ],
+    "groups": {
+     "mass": 4.4,
+     "fin_consult_mktg": 5.6,
+     "builders": 7.0
+    },
+    "overall": 5.5,
+    "top_fixes": [
+     "Tighten beats 2-4 without reordering: they run 6.8 s with no new information, including a 2.8 s countdown with no line. Cut to about 4.5 s (a faster 3-2-1, 'Come, let's see' spoken over the wall card) and keep a small red STOP thumbnail pinned in a corner so the hook's promise stays visible.",
+     "Give the payoff more room: the hook's promise is paid in 4.3 s (beats 15-16), and beat 16 puts three text lines on screen in 1.9 s. Take about 1.5 s from beats 13-14, hold best rep and worst rep side by side at 1.0x, and show only '122\u00b0 vs 53\u00b0' first, then the JUDGE/COACH chips.",
+     "Fix the energy drop at 10.6 s: Desi Boyz ends and a quiet -18 LUFS bed starts exactly where the explaining begins, which is where most mass viewers leave. Use a rhythmic bed there, and in beats 7 and 9 open on the skeleton drawn over his own body before the diagram.",
+     "Thin the on-screen text to one focal item per beat: beat 5 shows six chips in 2.2 s (pop STOP 1 last and largest), and beat 14 shows three lines in 2.1 s. On beat 10, add a small 'not the real one' tag so the lunge STOP is not confused with 'One STOP'.",
+     "Bridge the Salesforce turn inside the existing beats: a text line on beats 18-19 such as 'why I'm building this' makes the ending read as the reason for the project, not a second reel. On beat 21, own the gap for builders with something like 'Gym Jarvis is a wrapper. This role isn't.' Also relabel beat 1 as 'footage: 15 Aug 2026' so it does not seem to contradict 'SEPT \u2192 NOV 2026' in beat 2."
+    ]
+   }
+  ]
+ },
+ "C": {
+  "overall": 5.25,
+  "groups": {
+   "mass": 4.2,
+   "fin_consult_mktg": 5.15,
+   "builders": 6.9
+  },
+  "panels": [
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 7,
+      "drop": "none",
+      "why": "A gym plus AI side project is aspirational for a support engineer, and the Salesforce layoffs-while-hiring ending hits a real job fear, so they follow. The silent beats 4-6 feel like filler, and they would not comment FORM."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 8",
+      "why": "The red STOP holds them through the countdown out of curiosity. They leave when 'three parts' brings up an architecture diagram, which reads as a tech explainer not meant for them."
+     },
+     {
+      "id": 3,
+      "score": 4.5,
+      "drop": "beat 9",
+      "why": "The opening is fine, but '17 joints, 30 times a second' over a wave graph loses them. The Salesforce ending is the part they would forward to HR groups, and they never reach it."
+     },
+     {
+      "id": 4,
+      "score": 3,
+      "drop": "beat 4",
+      "why": "After the hook they get 5 s of 'how I built it' and then nearly 4 s with no voice. Nothing has told them why they should care, so they swipe."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "beat 7",
+      "why": "The music and countdown carry them to the blast, but the payoff is a wall of tiles and a diagram. The friend, referee and doctor analogies would work for them, but they arrive too late."
+     },
+     {
+      "id": 6,
+      "score": 7.5,
+      "drop": "none",
+      "why": "This is exactly their content: a project idea plus a job-market signal. They comment FORM and follow, and the judge-plus-coach agreement rule is the part they save."
+     },
+     {
+      "id": 7,
+      "score": 5.5,
+      "drop": "beat 14",
+      "why": "They go to the gym and like the 'my best rep, not a textbook' idea. By the verdict chips it has been 15 s of diagrams with no set shown, so attention fades and they may skip ahead."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "beat 8",
+      "why": "They are sceptical of the hype hook and impatient with the countdown. They would respect the false-alarm honesty and the sourced Salesforce tag, but both sit past their drop point."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "beat 23",
+      "why": "The three-part framing is consulting-friendly and the false-alarm twist lands. They read the comment CTA as the end and swipe, so they miss the Salesforce close that would have earned a share."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 23",
+      "why": "They appreciate the both-must-agree rule and the admitted failure. The on-screen text is too dense to read at this pace, and the CTA signals the reel is over."
+     },
+     {
+      "id": 11,
+      "score": 6,
+      "drop": "none",
+      "why": "They watch to study the structure, and the hook, re-hooks and forwardable line all register. They notice the Salesforce pivot is bolted on after the CTA, and they don't send it."
+     },
+     {
+      "id": 12,
+      "score": 4,
+      "drop": "beat 5",
+      "why": "The production gets a nod, but 'months of weekends' followed by a countdown is the creator talking about themself. There is no benefit to the viewer by 12 s."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "The refuse-to-judge behaviour and the second model that never sees the numbers are real design choices they respect. They save it, and find the Salesforce ending relevant but abrupt."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "none",
+      "why": "They stay to audit it. They like the abstention and the disagreement rule, but will ask how an LLM judges angles, and will spot that 6 + 11 + 1 is not 23 and that the film date is before the build start. The post-training tease is directly relevant, so they may follow."
+     },
+     {
+      "id": 15,
+      "score": 6,
+      "drop": "beat 24",
+      "why": "The reverse-crunch swing and the lunge camera-turn are things they see daily, and 'send this to the buddy who swings every rep' gets forwarded to clients. Beats 7-17 are tolerated, not enjoyed, and the Salesforce part is irrelevant, so they leave."
+     },
+     {
+      "id": 16,
+      "score": 4.5,
+      "drop": "beat 9",
+      "why": "The song and countdown hold them, and the blast is fun. The joints-and-wave beat feels like a lecture, and the job angle they would care about is 35 s away."
+     }
+    ],
+    "groups": {
+     "mass": 4.1,
+     "fin_consult_mktg": 5.2,
+     "builders": 7.0
+    },
+    "overall": 5.2,
+    "top_fixes": [
+     "Make beats 2-6 earn their 9 s without changing the order. Beat 2 says 'build' twice, so replace it with one line that tells a non-coder what the system does (for example 'It watches my gym videos and grades every rep. Months of weekends.'). Compress the silent 3.8 s of beats 4-6 to about 2.5 s and keep one red STOP tile pulsing in the wall, so the hook's promise stays visible through the countdown. Personas 4 and 12 are lost here.",
+     "Put gym footage under SEE, JUDGE and CHECK instead of 24 s of arch3 diagrams. Show the skeleton overlay on a real set for SEE, a verdict chip landing on a real rep for JUDGE, and a split screen of judge and coach for CHECK, with the diagram as a small corner inset for builders. Cut each on-screen text to one phrase, because the current lines cannot be read in 2 s. Most of the mass and finance drop-offs fall in beats 7-14.",
+     "Fix the number and date inconsistencies before commenters do. 'Filmed 15 Aug 2026' is earlier than 'weekends since Sept 2026'. The verdict chips total 18 (6 + 11 + 1), not 23, so add 'CHECK FOOTAGE 1 \u00b7 NOT JUDGED 4'. '1 of 23 sets flagged' contradicts the lunge set the judge also flagged, so use '1 real STOP in 23 sets'.",
+     "Use MAIN, but sharpen the hook. 'The one set I should never have done' implies injury, which the script itself avoids claiming, and it does not say what the AI does. Try 'My AI watched 23 gym sets. It told me to stop one.' over the worst rep with the red lock-on from frame 1. Keep TRIAL's 'It was wrong' energy for the beat 18-19 twist, because using it as the hook spends the twist early and weakens beat 21.",
+     "Stop the reel ending at beat 23 and bridge into Salesforce. The spoken comment CTA reads as the end, which is where personas 9 and 10 leave, and the jump from reverse crunch to layoffs has no link. Make 'Comment FORM' on-screen only across beats 21-23 and again on the last frame. Use the freed line as a bridge ('That was a weekend project. This is why I built it.'), and gloss the jargon on screen ('LLM post-training = teaching a model after it's built') so the mass group understands the stake."
+    ]
+   },
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "none",
+      "why": "The red STOP and the beat hold him through the countdown, and 17 joints plus two AIs is aspirational at his level. The Salesforce garden-leave beat hits his job anxiety, so he likely follows. He won't comment FORM, because he doesn't know what he'd do with a 'coach prompt'."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "beat 9",
+      "why": "The hook is clear and the blast is fun, but 'I split it into three parts' signals a tech lecture. The dual-wave graph with 17 joints is where the thumb moves. He never reaches the lunge twist or the Salesforce beat."
+     },
+     {
+      "id": 3,
+      "score": 5,
+      "drop": "beat 12",
+      "why": "She stays through SEE, since 'a friend filming you' is easy, and 'it refused 4' is mildly intriguing. The referee, judge and Claude label feel like someone else's reel. The layoffs and hiring ending is exactly her topic, but it sits 52 s deep with nothing earlier promising it."
+     },
+     {
+      "id": 4,
+      "score": 3.5,
+      "drop": "beat 7",
+      "why": "The beat and countdown carry him to 12.8 s, but the blast pays off with a wall of tiles, not a result he understands. When the architecture diagram appears, he's gone."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "beat 7",
+      "why": "Beat 1 has four text elements in under 4 s, and she can't tell what was flagged or why it matters to her. The countdown feels like hype for something not meant for her."
+     },
+     {
+      "id": 6,
+      "score": 7,
+      "drop": "none",
+      "why": "A project idea, a named model, a two-model agreement rule and a real job description make this the reel he saves. He comments FORM and follows for the 'how do you get ready' part. He's slightly let down that the build is told through metaphors, not shown."
+     },
+     {
+      "id": 7,
+      "score": 5.5,
+      "drop": "beat 16",
+      "why": "She likes the CONTINUE 6 \u00b7 HOLD 11 \u00b7 STOP 1 scoreboard and the baseline idea. By the third part, with a second AI, the explanation has run over 20 s without a new payoff. She might catch the lunge twist if she lingers."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "beat 12",
+      "why": "He's impatient: the reel gives the result, then spends 9 s on build-up and a countdown for something he's already seen. 'Part two' tells him there's a lot left. The Salesforce beat would hold him, but he never gets there."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "beat 24",
+      "why": "He's AI-curious and gyms, and both-must-agree with a false alarm is a tidy framework he enjoys. He may forward the 'buddy who swings' line. The Salesforce pivot after the CTA feels like a second reel starting, so he swipes mid-tease."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "beat 15",
+      "why": "He appreciates the structure but gets the idea by beat 14, and the third part is predictable. He'd respect the false-alarm honesty if he saw it. 'Reportedly\u2026 not confirmed' reads as thin sourcing to him."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "beat 14",
+      "why": "He rates the craft: result up front, re-hooks at thirds, a send line. But he clocks 24 s of straight explanation in the middle, and a comment CTA that only builders want. He'd watch the Salesforce tease as a professional curiosity if he scrolled back."
+     },
+     {
+      "id": 12,
+      "score": 4,
+      "drop": "beat 9",
+      "why": "Good production, but the '17 joints, 30 times a second' spec doesn't tell him what he gets. With no human stake until 37 s, he's off at the graph."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "A judge on numbers plus a video-only coach as a cross-check is a pattern he'd actually steal, and refusing to judge on a hidden joint is a credible detail. He comments FORM for the diagram. The Salesforce posting is relevant enough for a follow."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "none",
+      "why": "He watches to the end and likes abstention and the personal-best baseline. He also sees the irony: the quoted job description says 'not a wrapper around a hosted LLM', and this reel is a system built on a hosted LLM. He doubts the next reel can bridge to post-training, so he may hold off following."
+     },
+     {
+      "id": 15,
+      "score": 6,
+      "drop": "beat 24",
+      "why": "The reverse-crunch swing with the ghost overlay and 122\u00b0 vs 53\u00b0 is his daily life, and he sends the 'buddy who swings every rep' line to clients. The lunge false alarm rings true. The architecture middle is a slog, and the Salesforce ending means nothing to him."
+     },
+     {
+      "id": 16,
+      "score": 4.5,
+      "drop": "beat 8",
+      "why": "The Desi Boyz beat and 3-2-1 blast are the best part for him, and he stays to 12.8 s on the music. The music then drops to a low bed and a diagram appears at the same moment. He'd enjoy the swing set and send line if they came sooner."
+     }
+    ],
+    "groups": {
+     "mass": 4.3,
+     "fin_consult_mktg": 5.1,
+     "builders": 6.8
+    },
+    "overall": 5.3,
+    "top_fixes": [
+     "Make the visuals in beats 7-17 show the creator's body, not diagrams. Keep the spoken lines and order, but play each part over real gym footage (skeleton overlay on the actual set, the verdict chip landing on a real rep), with the diagram as a small corner inset. Use one picture per part and reconcile the labels: the script currently stacks friend, referee, judge, second doctor and coach for three components, so the on-screen names should match the spoken ones.",
+     "Cut beat 1 to one idea on screen. STOP, 1 OF 23 SETS FLAGGED, the Gym Jarvis definition and the filmed date are four reads in 3.9 s. Show only the red STOP over the swinging rep with '1 OF 23 SETS', and move the definition and date to beat 2. Also check the dates against FACTS: 'filmed 15 Aug 2026' beside 'WEEKENDS SINCE SEPT 2026' reads as footage shot before the build began.",
+     "Make the blast at beat 6 pay off with a result. After 3.8 s without speech and a countdown, the drop lands on a tile wall captioned '23 SETS \u00b7 2 GYM SESSIONS', which is where four mass personas leave. Let the wall resolve on the drop into coloured verdicts with one tile pulsing red, and keep the music from collapsing to a low bed on the very next beat.",
+     "Plant the Salesforce stake earlier and bridge into it, without moving the ending. A small persistent tag from beat 2 (for example 'why this matters for your job \u2192 end') gives non-gym viewers a reason to sit through the middle. At beat 24, add a bridging caption so it doesn't read as a second reel after the CTA. Address the 'not a wrapper around a hosted LLM' quote honestly, for example 'this build is step 1, here is the gap', or builders will notice the reel is the thing the job description excludes.",
+     "Widen the comment CTA and make the numbers add up on screen. 'Coach prompt and diagram' only pulls builders; offer what a gym-goer can use, such as 'the prompt to check your own set', in the same beat. At beat 14, add a 'CHECK FOOTAGE 1' chip so 6 + 11 + 1 + 1 visibly equals the 19 judged sets. Finally, A/B the TRIAL hook: 'It was wrong' is the stronger open for non-builders."
+    ]
+   }
+  ]
+ },
+ "B": {
+  "overall": 5.2,
+  "groups": {
+   "mass": 4.25,
+   "fin_consult_mktg": 5.15,
+   "builders": 6.8
+  },
+  "panels": [
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "21",
+      "why": "The build story and 'months of weekends' are aspirational for him, and the lunge false alarm is relatable debugging. The Salesforce turn feels like a second reel, though the layoff fear keeps him half-watching. Might follow, unlikely to send."
+     },
+     {
+      "id": 2,
+      "score": 4,
+      "drop": "8",
+      "why": "The hook holds him to the blast, but 'I split it into three parts' signals a tech explainer. The courtroom frame is cute but gives him no personal stake, so he is gone before the Salesforce beat."
+     },
+     {
+      "id": 3,
+      "score": 4.5,
+      "drop": "9",
+      "why": "The countdown and blast carry her to 13 s, then 'seventeen joints, thirty times a second' is where she swipes. The layoffs-and-hiring ending is the one part she would share, but it sits at 52 s with no early signal."
+     },
+     {
+      "id": 4,
+      "score": 3,
+      "drop": "2",
+      "why": "'My AI system' plus a ghost overlay reads as a techie flex. 'But how did I build it?' answers a question he never asked; he wanted to know which set and why."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "2-4",
+      "why": "She cannot parse the ghost-rep visual in 3 s, and the hook has four text items on screen. The 3.8 s of silent countdown offers her nothing new."
+     },
+     {
+      "id": 6,
+      "score": 7,
+      "drop": "none",
+      "why": "A portfolio-grade project, a named model, two AIs cross-checking, then a real job posting: this is his feed. He would comment FORM and follow. The payoff feels small, but he does not mind."
+     },
+     {
+      "id": 7,
+      "score": 5,
+      "drop": "12-14",
+      "why": "He likes the verdict-chips idea but leaves before it arrives; the middle is architecture with no number that matters to him. If he reached beat 21 he would stay."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "8",
+      "why": "He respects the 'reportedly' and source-tag honesty, but 62 s is long at 10 pm. The hook promise ('never should have done') is not paid until 46 s, and then only mildly."
+     },
+     {
+      "id": 9,
+      "score": 5.5,
+      "drop": "16",
+      "why": "SEE \u2192 JUDGE \u2192 CHECK is a framework he enjoys, and the wrongful-conviction twist lands. Attention sags at the third component, and he might skip to the end. He might save it for the Salesforce angle."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "19",
+      "why": "He appreciates the structure and the two-must-agree rule. The payoff, 'reverse crunch, short swung reps', is underwhelming against the hook, so he exits before the careers pivot that was actually for him."
+     },
+     {
+      "id": 11,
+      "score": 5.5,
+      "drop": "20",
+      "why": "He clocks the craft: the beat drop, the re-hooks, the loop. He also sees three stacked CTAs (send, comment FORM, follow) and a topic switch, and treats beat 20 as the end."
+     },
+     {
+      "id": 12,
+      "score": 4.5,
+      "drop": "9",
+      "why": "Too many brand worlds at once: Gym Jarvis, courtroom, Desi Boyz, SEE/JUDGE/CHECK. The premise is not clear in one line, though she finds the courtroom gag charming."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "Refusing to judge when the joint is hidden, and requiring two models to agree, are real engineering choices shown visually. He would send it to a dev friend. The Salesforce part is mildly annoying but relevant."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "22",
+      "why": "He likes the abstain and cross-check design and the honest false positive. But this build is LLM application work, not post-training, so the ending reads as a bait-and-switch. He would want the prompt and the eval, not a tease."
+     },
+     {
+      "id": 15,
+      "score": 5.5,
+      "drop": "12",
+      "why": "The ghost of best rep over worst rep is the most interesting thing for him, and he would like the 'my best rep, not a textbook' line. He tunes out at the AI judge, and '122\u00b0 vs 53\u00b0' with no plain-words meaning will not make him send it; he can see swung reps himself."
+     },
+     {
+      "id": 16,
+      "score": 4,
+      "drop": "7-8",
+      "why": "The music and blast keep him to about 13 s, then it becomes a lecture. Jobs anxiety would hook him, but nothing in the first 50 s tells him it is coming."
+     }
+    ],
+    "groups": {
+     "mass": 4.1,
+     "fin_consult_mktg": 5.0,
+     "builders": 6.8
+    },
+    "overall": 5.1,
+    "top_fixes": [
+     "Make the hook match the payoff and give it a countable open loop. 'The one set I should never have done' promises danger, but the payoff is 'short, swung reps' on a reverse crunch. Try 'My AI watched 23 of my sets. It stopped exactly one.' and cut the frame-1 text to the STOP stamp plus one label.",
+     "Compress beats 2-6 without reordering, from 9 s to about 5 s. Beat 2 says 'build' twice; make it 'Months of weekends went into this.' Run THE WAIT IS OVER and 3-2-1 in about 1.5 s total so the blast lands by about 9 s. Mass viewers currently leave in the 3.8 s silent stretch.",
+     "Cut the cognitive load: one name per thing and at most two text items per beat. The second AI is 'coach' when spoken but 'THE WITNESS' on screen; pick one. Beats 18-19 show five chips and then four more text items in 5 s. Say '122\u00b0 vs 53\u00b0' in plain words on screen, such as 'less than half my best range', so non-tech viewers and the trainer feel the STOP.",
+     "Bridge the gym build to the Salesforce ending, and be honest about the gap. Seed it early with small text on beat 2 or 7 ('why I'm building this: at the end'). At beat 21, add a link such as 'Why build this on weekends?' before the layoffs line. Add on-screen text that this project is an LLM app and post-training comes next, or builders will read the ending as bait.",
+     "Use one CTA per moment and give the tease a concrete promise. In beat 20 the spoken 'send this' collides with the on-screen 'Comment FORM'; put Comment FORM on the beat 18 save frame and keep beat 20 for the send. End with a specific next-reel promise on screen (for example 'Part 2: what post-training actually is') so 'Follow' has a reason. Trim beat 23's hold to finish near 55 s."
+    ]
+   },
+   {
+    "personas": [
+     {
+      "id": 1,
+      "score": 6.5,
+      "drop": "21",
+      "why": "The 'my AI system' hook and the 3-2-1 blast hold them, and the SEE/JUDGE/CHECK split is easy to follow. The hard cut from gym to Salesforce feels like a different reel, but the layoff line is personally scary enough that they may follow. They would not send it."
+     },
+     {
+      "id": 2,
+      "score": 4.5,
+      "drop": "9",
+      "why": "The STOP stamp and courtroom get them past 3 s. 'Seventeen joints, thirty times a second' is where it becomes a tech demo that is not for them, so they leave before the lunge twist."
+     },
+     {
+      "id": 3,
+      "score": 5,
+      "drop": "10",
+      "why": "The courtroom frame is fun and the wall of 23 sets is clear. The wave graph loses them, so they never reach the layoffs-versus-AI-hiring ending, which is the one part made for them."
+     },
+     {
+      "id": 4,
+      "score": 3.5,
+      "drop": "2",
+      "why": "'But how did I build it? I spent months of weekends building it' is about the creator before they have seen why they should care. Nothing so far is about them, so they swipe."
+     },
+     {
+      "id": 5,
+      "score": 3,
+      "drop": "2-4",
+      "why": "The hook is mildly curious, but there is no stake in the build story. They may wait through the countdown, then leave when the blast reveals a title card instead of the answer."
+     },
+     {
+      "id": 6,
+      "score": 7,
+      "drop": "none",
+      "why": "This is a project they wish they had built: pose tracking, an LLM judge and a second-model check. The 'LLM post-training' job title lands as a placement worry. They would comment FORM and follow."
+     },
+     {
+      "id": 7,
+      "score": 5.5,
+      "drop": "12",
+      "why": "They like the counts and the verdict logic, but by beat 12 they have had 26 s of set-up with the hook still unpaid. If they survive to beat 15, they finish."
+     },
+     {
+      "id": 8,
+      "score": 4.5,
+      "drop": "8",
+      "why": "They are time-poor and the countdown pays off with a wall of gym clips. 'I split it into three parts' signals a lecture. The Salesforce beat would hold them, but it sits at 52 s."
+     },
+     {
+      "id": 9,
+      "score": 6,
+      "drop": "none",
+      "why": "The three-part framework and the 'both must agree' rule are their kind of structure. The ending speaks to their career anxiety, so a follow is possible. A send is unlikely because the gym payoff is too brief to be funny."
+     },
+     {
+      "id": 10,
+      "score": 5,
+      "drop": "9",
+      "why": "They appreciate the clean frame but have seen many 'I built an AI' reels. They would stay for the wrongful conviction if it came sooner. The ending is a tease with no insight in it."
+     },
+     {
+      "id": 11,
+      "score": 6,
+      "drop": "none",
+      "why": "They watch it as craft: the re-hooks, the silence on the twist and the loop are well made. They notice two competing asks at beat 20 (spoken 'send', on-screen 'Comment FORM') followed by a third, 'Follow'. They might save it as a reference."
+     },
+     {
+      "id": 12,
+      "score": 4.5,
+      "drop": "8",
+      "why": "The courtroom idea is strong, but Gym Jarvis, the court and SEE/JUDGE/CHECK are three brand ideas at once. The text load is heavy at 10 pm. They leave when the diagram appears."
+     },
+     {
+      "id": 13,
+      "score": 7,
+      "drop": "none",
+      "why": "'It refuses to judge' and the false positive fixed by a second video-only model are honest engineering, which is rare in reels. They want the prompt and diagram, so they comment FORM."
+     },
+     {
+      "id": 14,
+      "score": 6.5,
+      "drop": "21",
+      "why": "They respect that it shows a failure case and abstains, though they are sceptical of one LLM checking another with no accuracy number. They also notice the project is not post-training, so the job-posting tie-in feels loose."
+     },
+     {
+      "id": 15,
+      "score": 5.5,
+      "drop": "9",
+      "why": "They want to see the bad reverse crunch, not joints and waves. 'My best rep, not a textbook' makes them argue (what if your best rep is bad?), which could become a comment if they stay. The 2.8 s payoff is too short to judge the form, and '122\u00b0 vs 53\u00b0' means little to them."
+     },
+     {
+      "id": 16,
+      "score": 4.5,
+      "drop": "9",
+      "why": "The beat, the countdown and the courtroom text are fun. The joint-tracking section feels like class. They might have sent the 'gym buddy who swings' line to a friend, but they do not reach it."
+     }
+    ],
+    "groups": {
+     "mass": 4.4,
+     "fin_consult_mktg": 5.3,
+     "builders": 6.8
+    },
+    "overall": 5.3,
+    "top_fixes": [
+     "Beats 2-6: keep the payoff alive through the build and countdown. Cut beat 2 to 'But how did I build it? Months of weekends.' Hold a small red STOP thumbnail in a corner through beats 2-5. Make the blast reveal the wall of 23 with one tile already glowing red, so the 3-2-1 pays off with a question (which one?) rather than a title card.",
+     "Beats 8-12: this is where the mass group and half of fin-consult leave. Show the creator's own gym footage with the skeleton and wave drawn over it, not diagram slides, and keep one text element per beat. Drop 'joints \u2192 angles \u2192 reps' and '17 joints \u00b7 30 times a second', since the voice already says them. Add a small persistent '1 of 23 = STOP?' tag so the open question stays visible until beat 19.",
+     "Beat 19: the hook's promise gets 2.8 s and the most text in the reel. Give it about 4.5 s by taking time from beat 23's push-in and beat 16. Play the worst rep under the best-rep ghost long enough to see the swing. Label the numbers in plain words ('how far my legs lowered: best 122\u00b0, worst 53\u00b0') and change 'COACH: BAD' to 'COACH: AGREES'.",
+     "Beats 20-21: use one ask at a time and add a bridge. Beat 20 should carry only the send line, spoken and on screen; move 'Comment FORM' to the caption or pinned comment, or swap it for 'Follow' on beat 24. Open beat 21 with a link so Salesforce does not feel like a new reel, for example 'Why build this? Salesforce is reportedly letting people go.' with a small 'WHY I BUILT THIS' tag.",
+     "Use one frame and one name per role. The second AI is 'coach' in voice and 'THE WITNESS' on screen, then 'JUDGE + COACH' in beat 17; pick 'witness' everywhere to keep the courtroom intact, and shrink Gym Jarvis to a small logo. Run MAIN as the primary cut: TRIAL's 'It was wrong' hook gives away the beat 15 twist and clashes with the 'one real STOP' payoff, so test it only as a builder-audience variant."
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "1.6 × 78 = 124.8 g protein per day\n40% of that = 49.92 g\nChicken needed = 49.92 / 0.31 ≈ 161.03 g, which rounds to **161 g**\n\nANSWER: 161 g",
+ "seconds": 3.0,
+ "served": [
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1183.25,
+ "out_tok": 84,
+ "usd_list": 0.00641,
+ "cli_cost": 0.009248,
+ "item": "m5"
+}

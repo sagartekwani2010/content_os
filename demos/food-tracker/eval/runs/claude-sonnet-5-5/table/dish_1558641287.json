@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Grape tomatoes",
+   "grams_low": 90,
+   "grams_best": 120,
+   "grams_high": 150,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, whole",
+   "confidence": 0.6,
+   "kcal": 21.6,
+   "kcal_range": [
+    16,
+    27
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.8,
+    1.3
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 120.0,
+  "kcal": 21.6,
+  "protein_g": 1.1,
+  "grams_range": [
+   90.0,
+   150.0
+  ],
+  "kcal_range": [
+   16,
+   27
+  ],
+  "protein_range": [
+   0.8,
+   1.3
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 120.0,
+   "kcal": 21.6,
+   "protein_g": 1.1,
+   "grams_range": [
+    90.0,
+    150.0
+   ],
+   "kcal_range": [
+    16,
+    27
+   ],
+   "protein_range": [
+    0.8,
+    1.3
+   ]
+  },
+  "rows": [
+   "Tomatoes, red, ripe, raw, year round average"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "6f28d3aa26d340c8805af42930c149385deb975b5d078dc44e2da87be7f822fe",
+ "scale_cues": "Square white plate about 22-25 cm wide. There are 8 oval grape tomatoes, each about 3 cm long, which is roughly 12-18 g each.",
+ "assumptions": [
+  "There are 8 whole grape tomatoes, averaging about 15 g each.",
+  "There is no visible dressing, oil or other food.",
+  "The small yellow speck at the plate's lower right edge is a crumb or stain, too small to count (under 5 g).",
+  "The plate is not included in the mass."
+ ],
+ "latency_s": 7.42,
+ "calls": [
+  {
+   "wall_s": 4.93,
+   "duration_ms": 3873,
+   "num_turns": 2,
+   "cost_usd_cli": 0.023865200000000003,
+   "cost_basis": "list",
+   "input_tokens": 8988,
+   "output_tokens": 343
+  },
+  {
+   "wall_s": 2.48,
+   "duration_ms": 1467,
+   "num_turns": 1,
+   "cost_usd_cli": 0.006586,
+   "cost_basis": "list",
+   "input_tokens": 1505,
+   "output_tokens": 57
+  }
+ ],
+ "cost_usd_cli": 0.03045,
+ "log_id": "16adb4d804a3"
+}

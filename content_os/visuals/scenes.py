@@ -55,10 +55,20 @@ def _walk(obj, path=""):
 
 
 def number_errors(beat: dict) -> list[str]:
-    """Numbers must be "@fact" refs (numeric keys) or {fact} placeholders / spoken digits (text)."""
+    """Numbers must be "@fact" refs (numeric keys) or {fact} placeholders / spoken digits (text).
+    Checks the beat's params and every extra scene's params."""
     errs = []
     line = beat.get("line", "")
-    for path, v in _walk(beat.get("params", {})):
+    blocks = [("", beat.get("params", {}))] + [(f"scenes[{i}].", sc.get("params", {}))
+                                                for i, sc in enumerate(beat.get("scenes", []))]
+    for prefix, params in blocks:
+        errs += [prefix + e for e in _number_errors(params, line)]
+    return errs
+
+
+def _number_errors(params: dict, line: str) -> list[str]:
+    errs = []
+    for path, v in _walk(params):
         key = path.split(".")[-1].split("[")[0]
         if key in NUMERIC_KEYS:
             if isinstance(v, str) and v.startswith("@"):
@@ -84,14 +94,21 @@ def validate_spec(sheet: dict, ctx: dict) -> list[str]:
             errs.append(f"{tag}: unknown template {b.get('template')!r}")
             continue
         errs += [f"{tag}: {e}" for e in number_errors(b)]
-        try:
-            els = build(b, ctx)
-            resolved, _ = resolve_beat(b["line"], b.get("cues", []), [], 6.0)
-        except (ValueError, KeyError, TypeError) as e:
-            errs.append(f"{tag}: {e}")
-            continue
-        ids = {e.id for e in els}
-        for r in resolved:
-            if r.target not in ids:
-                errs.append(f"{tag}: cue target {r.target!r} not in template {b['template']} (has {sorted(ids)})")
+        for k, sc in enumerate([b] + list(b.get("scenes", []))):
+            stag = tag if not k else f"{tag} scene {k}"
+            if sc.get("template") not in T.TEMPLATES:
+                errs.append(f"{stag}: unknown template {sc.get('template')!r}")
+                continue
+            try:
+                els = build(sc, ctx)
+                resolved, _ = resolve_beat(b["line"], sc.get("cues", []), [], 6.0)
+                if k:
+                    resolve_beat(b["line"], [{"on_word": sc["on_word"], "action": "fade", "target": "_"}], [], 6.0)
+            except (ValueError, KeyError, TypeError) as e:
+                errs.append(f"{stag}: {e}")
+                continue
+            ids = {e.id for e in els}
+            for r in resolved:
+                if r.target not in ids:
+                    errs.append(f"{stag}: cue target {r.target!r} not in template {sc['template']} (has {sorted(ids)})")
     return errs

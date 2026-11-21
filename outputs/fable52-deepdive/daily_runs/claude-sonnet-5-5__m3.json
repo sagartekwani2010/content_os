@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "A 10% rise followed by a 10% fall gives:\n\n1.10 × 0.90 = 0.99\n\nThat is 99% of the original salary, so the net change is a **1% decrease**. The fall is applied to the larger, already-raised amount, so it takes off more than the rise added.\n\nANSWER: -1%",
+ "seconds": 829.0,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1143.25,
+ "out_tok": 102,
+ "usd_list": 0.00331,
+ "cli_cost": 0.004808,
+ "item": "m3"
+}

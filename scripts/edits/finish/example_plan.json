@@ -1,0 +1,210 @@
+{
+ "music": {
+  "title": "Forever In Motion",
+  "start_offset_s": 0,
+  "volume_db": -22,
+  "why": "At 117 s it covers the full 84.6 s without a loop (Memory Claim at 64 s is too short). Chosen on title and length only, since I cannot hear the tracks; if it turns out to have a vocal or a busy lead, swap to Signals at the same level. -22 dB keeps it under a -14 LUFS voice while staying audible under the dark HUD beats. Split the music clip at 65.70 and 72.03 and mute the middle piece: 0.15 s fade-out ending at 65.70, full silence through the twist, hard re-entry at 72.03 on the 'the fix' chapter card, and a 1.5 s fade-out from 83.1 to the end."
+ },
+ "transitions": [
+  {
+   "between_beats": [
+    0,
+    1
+   ],
+   "id": "transition_zoom_in",
+   "duration_s": 0.3,
+   "why": "Cold open into the story: pushes from the 499\u219294 slam into the dark Gym Jarvis HUD."
+  },
+  {
+   "between_beats": [
+    2,
+    3
+   ],
+   "id": "transition_quick_pan",
+   "duration_s": 0.3,
+   "why": "Chapter card 'the research'. The same whip-pan is used for every chapter change so it reads as one consistent language."
+  },
+  {
+   "between_beats": [
+    5,
+    6
+   ],
+   "id": "transition_quick_pan",
+   "duration_s": 0.3,
+   "why": "Chapter card 'the build'."
+  },
+  {
+   "between_beats": [
+    10,
+    11
+   ],
+   "id": "transition_quick_pan",
+   "duration_s": 0.3,
+   "why": "Chapter card 'the skill'."
+  },
+  {
+   "between_beats": [
+    12,
+    13
+   ],
+   "id": "transition_quick_pan",
+   "duration_s": 0.3,
+   "why": "Chapter card 'the test'."
+  },
+  {
+   "between_beats": [
+    14,
+    15
+   ],
+   "id": "transition_fade_flicker",
+   "duration_s": 0.25,
+   "why": "The twist: a short flicker as the music cuts reads as the system glitching. It is the only different transition before the fix, so it stands out."
+  },
+  {
+   "between_beats": [
+    16,
+    17
+   ],
+   "id": "transition_light_wipe",
+   "duration_s": 0.4,
+   "why": "Out of the silence into 'the fix': a brighter, slightly longer wipe timed with the music re-entry."
+  },
+  {
+   "between_beats": [
+    18,
+    19
+   ],
+   "id": "transition_zoom_in",
+   "duration_s": 0.35,
+   "why": "Into the real Workout Analyser footage; it mirrors the 0\u21921 zoom so the reel opens and closes with the same move."
+  }
+ ],
+ "sfx": [
+  {
+   "at_s": 2.463,
+   "title": "Boom impact 1",
+   "volume_db": 0,
+   "lands_on": "cold open '94'"
+  },
+  {
+   "at_s": 2.72,
+   "title": "Whoosh (short) 4",
+   "volume_db": -4,
+   "lands_on": "section card, beat 1"
+  },
+  {
+   "at_s": 2.92,
+   "title": "Impact (bassy)",
+   "volume_db": -2,
+   "lands_on": "card lands, beat 1"
+  },
+  {
+   "at_s": 9.52,
+   "title": "Whoosh (short) 4",
+   "volume_db": -4,
+   "lands_on": "section card, beat 3"
+  },
+  {
+   "at_s": 9.72,
+   "title": "Impact (bassy)",
+   "volume_db": -2,
+   "lands_on": "card lands, beat 3"
+  },
+  {
+   "at_s": 25.92,
+   "title": "Whoosh (short) 4",
+   "volume_db": -4,
+   "lands_on": "section card, beat 6"
+  },
+  {
+   "at_s": 26.12,
+   "title": "Impact (bassy)",
+   "volume_db": -2,
+   "lands_on": "card lands, beat 6"
+  },
+  {
+   "at_s": 36.738,
+   "title": "Arrow impact 3",
+   "volume_db": -4,
+   "lands_on": "'calories' crossed out"
+  },
+  {
+   "at_s": 44.862,
+   "title": "Button press (light)",
+   "volume_db": -4,
+   "lands_on": "13,224 highlighted"
+  },
+  {
+   "at_s": 47.987,
+   "title": "Whoosh (short) 4",
+   "volume_db": -4,
+   "lands_on": "section card, beat 11"
+  },
+  {
+   "at_s": 48.187,
+   "title": "Impact (bassy)",
+   "volume_db": -2,
+   "lands_on": "card lands, beat 11"
+  },
+  {
+   "at_s": 53.517,
+   "title": "Notification (pop-up) 4",
+   "volume_db": -4,
+   "lands_on": "'flag'"
+  },
+  {
+   "at_s": 54.52,
+   "title": "Whoosh (short) 4",
+   "volume_db": -4,
+   "lands_on": "section card, beat 13"
+  },
+  {
+   "at_s": 54.72,
+   "title": "Impact (bassy)",
+   "volume_db": -2,
+   "lands_on": "card lands, beat 13"
+  },
+  {
+   "at_s": 62.65,
+   "title": "Vinyl scratch hit",
+   "volume_db": 0,
+   "lands_on": "music stops: the twist"
+  },
+  {
+   "at_s": 68.797,
+   "title": "Boom impact 1",
+   "volume_db": 0,
+   "lands_on": "'94' callback"
+  },
+  {
+   "at_s": 69.053,
+   "title": "Whoosh (short) 4",
+   "volume_db": -4,
+   "lands_on": "section card, beat 17"
+  },
+  {
+   "at_s": 69.253,
+   "title": "Impact (bassy)",
+   "volume_db": -2,
+   "lands_on": "card lands, beat 17"
+  },
+  {
+   "at_s": 76.853,
+   "title": "Whoosh (short) 4",
+   "volume_db": -4,
+   "lands_on": "section card, beat 19"
+  },
+  {
+   "at_s": 77.053,
+   "title": "Impact (bassy)",
+   "volume_db": -2,
+   "lands_on": "card lands, beat 19"
+  }
+ ],
+ "notes": "at_s is the start of the SFX clip. I only had beat boundaries, not word timings, so the six in-beat times (2.35, 38.7, 46.3, 55.6, 71.4, 82.0) are estimates: slide each to the waveform or animation frame it names, keeping it off the word's first consonant. The five whoosh and scratch times are tied to the beat boundaries and assume a short breath gap before each one; if the voice runs right up to a boundary, lower that whoosh to -20 dB or drop it. There is no transition between beats 15 and 16 (hard cut kept), and no SFX on 0\u21921 or 16\u219217: the '94' boom tail covers the first and the music re-entry at 72.03 covers the second. Totals: 8 transitions (max 9), 12 SFX (max 12), 1 music track. Nothing here has been listened to: music choice and all dB values are starting points, so the creator needs to listen to the full export, especially 65.4-72.1 (scratch, silence, boom, music return), before the reel is called done.",
+ "drop": [
+  62.9,
+  69.233
+ ],
+ "total": 81.2667
+}

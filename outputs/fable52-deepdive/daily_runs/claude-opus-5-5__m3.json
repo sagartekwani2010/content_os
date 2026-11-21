@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "1.10 × 0.90 = 0.99, so the salary ends at 99% of its starting value. The net change is a 1% decrease.\n\nANSWER: -1%",
+ "seconds": 3.1,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1138.25,
+ "out_tok": 56,
+ "usd_list": 0.00567,
+ "cli_cost": 0.008532,
+ "item": "m3"
+}

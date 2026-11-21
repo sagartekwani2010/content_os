@@ -1,0 +1,271 @@
+{
+ "items": [
+  {
+   "name": "Mixed green salad leaves",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.55,
+   "kcal": 18.9,
+   "kcal_range": [
+    13,
+    25
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.8,
+    1.6
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Brown rice",
+   "grams_low": 110,
+   "grams_best": 150,
+   "grams_high": 190,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked, steamed",
+   "confidence": 0.65,
+   "kcal": 184.5,
+   "kcal_range": [
+    135,
+    234
+   ],
+   "protein_g": 4.1,
+   "protein_range": [
+    3.0,
+    5.2
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted potato or Brussels sprout pieces",
+   "grams_low": 20,
+   "grams_best": 40,
+   "grams_high": 60,
+   "fdc_query": "Brussels sprouts, cooked, boiled, drained, with salt",
+   "preparation": "roasted, with some oil",
+   "confidence": 0.35,
+   "kcal": 14.4,
+   "kcal_range": [
+    7,
+    22
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.5,
+    1.5
+   ],
+   "fdc": {
+    "fdc_id": "168513",
+    "description": "Brussels sprouts, cooked, boiled, drained, with salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 36.0,
+    "protein_100g": 2.55
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Crumbled cheese (feta or goat)",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "fdc_query": "Cheese, feta",
+   "preparation": "crumbled",
+   "confidence": 0.4,
+   "kcal": 26.5,
+   "kcal_range": [
+    13,
+    48
+   ],
+   "protein_g": 1.4,
+   "protein_range": [
+    0.7,
+    2.6
+   ],
+   "fdc": {
+    "fdc_id": "173420",
+    "description": "Cheese, feta",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 265.0,
+    "protein_100g": 14.21
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Carrot shreds",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Carrots, raw",
+   "preparation": "shredded, raw",
+   "confidence": 0.4,
+   "kcal": 2.5,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Onion or pear slice",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Onions, raw",
+   "preparation": "raw slice",
+   "confidence": 0.25,
+   "kcal": 5.7,
+   "kcal_range": [
+    3,
+    10
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "2709795",
+    "description": "Onions, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 38.0,
+    "protein_100g": 0.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Salad dressing/oil",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 18,
+   "fdc_query": "Salad dressing, vinaigrette, oil and vinegar",
+   "preparation": "light coating, implied",
+   "confidence": 0.3,
+   "kcal": 44.9,
+   "kcal_range": [
+    22,
+    81
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "171417",
+    "description": "Salad dressing, home recipe, vinegar and oil",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 449.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 321.0,
+  "kcal": 297.4,
+  "protein_g": 7.9,
+  "grams_range": [
+   211.0,
+   441.0
+  ],
+  "kcal_range": [
+   194,
+   424
+  ],
+  "protein_range": [
+   5.1,
+   11.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 321.0,
+   "kcal": 323.6,
+   "protein_g": 8.2,
+   "grams_range": [
+    211.0,
+    441.0
+   ],
+   "kcal_range": [
+    209,
+    465
+   ],
+   "protein_range": [
+    5.2,
+    11.7
+   ]
+  },
+  "rows": [
+   "Lettuce, green leaf, raw",
+   "Rice, white, long-grain, regular, enriched, cooked",
+   "Brussels sprouts, cooked, boiled, drained, with salt",
+   "Cheese, feta",
+   "Carrot, dehydrated",
+   "Pear, raw",
+   "Salad dressing, home recipe, vinegar and oil"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "c1de8032d97cd371dbd18b0f0f46690e53dbd5b2eb6616f957967d013d629e90",
+ "scale_cues": "The square plate is about 25 cm across and fills most of the frame. I used it to size the rice mound (roughly 9 x 12 cm) and the salad pile.",
+ "assumptions": [
+  "The plate is a standard 25 cm dinner plate.",
+  "The salad is lightly dressed and the sprout-like pieces were cooked in oil.",
+  "Any seeds or almonds on the salad are too small to count (under 5 g).",
+  "The pale cubes could be potato or Brussels sprouts. I picked sprouts."
+ ],
+ "latency_s": 11.83,
+ "calls": [
+  {
+   "wall_s": 7.5,
+   "duration_ms": 6766,
+   "num_turns": 2,
+   "cost_usd_cli": 0.015336199999999998,
+   "cost_basis": "list",
+   "input_tokens": 5613,
+   "output_tokens": 840
+  },
+  {
+   "wall_s": 4.31,
+   "duration_ms": 3302,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0210052,
+   "cost_basis": "list",
+   "input_tokens": 4310,
+   "output_tokens": 331
+  }
+ ],
+ "cost_usd_cli": 0.03634,
+ "log_id": "3adc2517b30b"
+}

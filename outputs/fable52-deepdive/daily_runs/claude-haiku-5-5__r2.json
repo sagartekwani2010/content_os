@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "Two kilograms of iron is heavier. Mass is measured in kilograms, so 2 kg is twice the mass of 1 kg, regardless of the material. The feathers' lightness per unit volume doesn't matter here, because the question compares masses, not volumes.\n\nANSWER: Two kilograms of iron are heavier.",
+ "seconds": 3.2,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2377.25,
+ "out_tok": 208,
+ "usd_list": 0.00034,
+ "cli_cost": 0.0004114,
+ "item": "r2"
+}

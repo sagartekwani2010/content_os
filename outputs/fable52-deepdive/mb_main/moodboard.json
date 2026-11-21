@@ -1,0 +1,636 @@
+{
+  "concept": "Receipt to blueprint to receipt: two hand-drawn receipts ask \"am I overpaying?\", one warm chalk pipeline grows step by step with real paper cut-outs, the creator's own two systems show where the price is earned, and the receipts return to pay off the hook.",
+  "palette": [
+    "#14110F background: warm near-black for every panel and card",
+    "#FFF3DC chalk: main line work, labels, caption text",
+    "#FFD23F accent: numbers, the rupee sign, highlighter sweeps on paper cuts, MY READ tags",
+    "#FF8A3D Fable 5.2: its receipt, tag, lane and the lit vision slot",
+    "#6EC5FF Haiku 5.5: its receipt, tag and lane",
+    "#FF7EB6 Opus 5.5: lane and tag (kept neutral in the plate frame)",
+    "#C4A7FF Sonnet 5.5: lane only",
+    "#7CE38B positive: ticks, RELEASED, 97% lower cost, the shrinking error bar",
+    "#FF6B5E caution, used small: the warning mark in M5 and Haiku's overshoot only, never as a wash",
+    "#8C857A warm grey: dashed 'my read' lines, NOT DISCLOSED chips, ghosted S4/S5, footnotes",
+    "#F6EBD2 paper cream: real page crops with a torn edge"
+  ],
+  "typography": "Section cards: huge condensed uppercase sans (Anton or Bebas style), chalk white with one word or number in yellow, filling about 80% of frame width. Diagram labels: hand-lettered marker face, upper-case for node names, minimum 44 px at 1440 wide; footnotes minimum 32 px in warm grey. Numbers: condensed bold, 2 to 3 times the label size, yellow; check the face has a rupee glyph. Paper cuts keep the PDF's own serif, never re-typed. Captions: one line, bold clean sans, chalk white with a dark stroke, sitting low in the creator half but above Instagram's bottom overlay (check against the safe-zone guide), max about 5 words per caption.",
+  "texture": "4 to 6 px chalk-marker lines with slight wobble and round caps, drawn on stroke by stroke. Solid line = disclosed, dashed warm-grey line = my read, used consistently from the legend onward. Warm near-black background with faint paper grain, no gradients, no 3D, no stock icons. Soft 8 to 12 px glow on accent strokes only. Paper cuts: cream page crops, scissor/torn edge, 2 degree tilt, soft shadow, yellow highlighter sweep at about 60% opacity. Creator footage: warm grade, lifted skin tones, 3 to 5% grain, applied in post so the same takes can be graded cold for the trial reel.",
+  "music": "Upbeat, warm bed around 100 to 110 BPM: plucks or kalimba, soft kick, light bass, starting on the first receipt tick. Bass drops out and the bed thins on \"the strange part\" (curious, not dark), rebuilds through graded RL, one-second music-only breath for the effort dial, beat drop on the \"wrapper\" hold, brighter lift into the Meal Analyser section, bass accent on \"It thinks\", steady under the tips, receipt motif returns at the payoff, riser on the CTA that cuts to silence on the glimpse. Licensed or royalty-free, ducked about 18 dB under voice. No drone anywhere in this cut; that belongs to the trial reel.",
+  "sfx_palette": [
+    "receipt-printer tick (hook and payoff)",
+    "whoosh, three variants (montage, section cards)",
+    "bass impact (section cards, wrapper beat drop, 'It thinks')",
+    "page flip",
+    "pencil scratch / pencil run (every draw-on)",
+    "paper snip (every paper cut landing)",
+    "soft two-note 'uh-oh' tone, playful not alarming",
+    "patch click",
+    "key click",
+    "dial ratchet",
+    "three soft pings (snapshot diamonds)",
+    "gate click",
+    "three pops (plate tags)",
+    "slide-down tone (error bar shrinking)",
+    "tick (lanes, tips)",
+    "bar rise",
+    "riser cut to silence"
+  ],
+  "pacing": "About 90 to 91 s, a visual change roughly every 3 s. Fastest at the hook (three changes in 6.5 s) and the montage (about 1.6 s per clip); the paper section runs one step per 4.5 to 7 s as draw first, paper cut second; longest holds are the plate numbers (about 4 s) and the wrapper pull-back (about 2.5 s). Timing note: beats M1 to M5 follow the screenplay clock; from 29 s I re-estimated from word count because M6 carries 38 spoken words (about 13 s) in a 5 s slot and M7 has no spoken line. So M6 runs 29 to 42, the effort dial gets a 1 s music-only breath at 42, and M8 to M11 shift later (M11 loses its unspoken slack). M12 and M13 land back on the screenplay clock; the CTA plus glimpse ends near 90.8 s. All times are estimates to be conformed to the recorded audio; visuals land on or just before the word.",
+  "references": [
+    "Chalk-talk explainer on a blackboard: white and bright marker lines on a dark surface, drawn live, one idea per frame",
+    "Documentary paper-collage inserts: a torn page excerpt sliding in with a single highlighter sweep",
+    "A long thermal till receipt unrolling off a counter next to a tiny one",
+    "Engineering blueprint pull-back: the whole system revealed at once after seeing its parts",
+    "Transit-map lanes: four coloured parallel lines, one per model, with stops as jobs",
+    "Sports-broadcast stat tags landing on a still image, used for the plate estimates",
+    "A hand-made checklist card with green ticks, the kind people screenshot"
+  ],
+  "keyframes": [
+    {
+      "id": "KF01",
+      "time_s": 0.0,
+      "beats": [
+        1
+      ],
+      "emotion": "Am I overpaying? (jolt)",
+      "layout": "split",
+      "shot": "Creator seated, bottom half, face framed high, already mid-sentence on frame one. Slight 1.1x punch-in for the first line.",
+      "top_visual": "D1: two receipts draw side by side. Left one short (blue, total ₹0.60), right one long (orange, total ₹22). On 'forty times' the long receipt unrolls down past the panel edge and bounces.",
+      "template": "",
+      "on_screen_text": "₹22 vs ₹0.60",
+      "motion": "Receipts draw in 0.5 s; long receipt unrolls with overshoot.",
+      "transition_in": "Cold open, no fade",
+      "sfx": "Receipt-printer tick running through the unroll",
+      "music": "Upbeat bed starts on the first tick",
+      "creator_direction": "Direct to lens, eyebrows up, flat disbelief on 'forty times'. No smile yet."
+    },
+    {
+      "id": "KF02",
+      "time_s": 1.8,
+      "beats": [
+        1
+      ],
+      "emotion": "Wait, really?",
+      "layout": "split",
+      "shot": "Same take, punch-in releases to normal framing.",
+      "top_visual": "Receipts slide apart; two score sheets draw under them and a big yellow equals sign draws between the sheets exactly on 'Same scores'.",
+      "template": "",
+      "on_screen_text": "SAME SCORES",
+      "motion": "Equals sign draws in two strokes, then pulses once.",
+      "transition_in": "Cut on the word",
+      "sfx": "Two pencil strokes",
+      "music": "",
+      "creator_direction": "Small shrug, half-smile on 'Same scores'."
+    },
+    {
+      "id": "KF03",
+      "time_s": 2.6,
+      "beats": [
+        1
+      ],
+      "emotion": "Is this about my kind of work?",
+      "layout": "split",
+      "shot": "Same take, normal framing.",
+      "top_visual": "Headers write onto the receipts: FABLE 5.2 (orange) and HAIKU 5.5 (blue). Three chips tick in under the equals sign: maths / GST / EMI / Excel, coding with unit tests, writing. Small grey footnote: list price × tokens incl. thinking.",
+      "template": "",
+      "on_screen_text": "11 EVERYDAY TEXT JOBS",
+      "motion": "Chips pop in one per phrase; footnote fades in last.",
+      "transition_in": "Continuous draw",
+      "sfx": "Three light ticks",
+      "music": "",
+      "creator_direction": "Counts off lightly with one hand on 'eleven everyday jobs'."
+    },
+    {
+      "id": "KF04",
+      "time_s": 6.5,
+      "beats": [
+        2
+      ],
+      "emotion": "So what's in it? (awe)",
+      "layout": "broll",
+      "shot": "Full-frame montage of three Instagram posts showing things built with the model, about 1.6 s each, voice continues over. [CLIPS NEEDED]",
+      "top_visual": "Each clip full-frame with a thin chalk border; the creator's handle sits in a chalk tag at top left of each clip.",
+      "template": "",
+      "on_screen_text": "@[creator handle] on each clip",
+      "motion": "Slow 1.05x push on each clip.",
+      "transition_in": "Whip cut between clips",
+      "sfx": "Three quick whooshes, one per clip",
+      "music": "Bed lifts slightly",
+      "creator_direction": "Voice only. Delivery neutral enough that the same take works in the trial reel."
+    },
+    {
+      "id": "KF05",
+      "time_s": 11.5,
+      "beats": [
+        3
+      ],
+      "emotion": "This is the inside story",
+      "layout": "card",
+      "shot": "Full-frame section card with a hand-drawn page stack flipping behind the text.",
+      "top_visual": "Paper stack flips fast behind the type; the counter lands on 264 as the word is spoken; 264 in yellow.",
+      "template": "card",
+      "on_screen_text": "I READ ALL 264 PAGES",
+      "motion": "Quick punch-in on the card, stack flips for 1.5 s.",
+      "transition_in": "Whoosh in",
+      "sfx": "Whoosh, bass impact, page flip",
+      "music": "",
+      "creator_direction": "Voice only under the card."
+    },
+    {
+      "id": "KF06",
+      "time_s": 13.6,
+      "beats": [
+        3
+      ],
+      "emotion": "Honest framing, I can trust this",
+      "layout": "split",
+      "shot": "Creator back in the bottom half, normal framing.",
+      "top_visual": "S0: the empty pipeline frame draws left to right, ending in a dashed box with a big '?'. Title writes on top. Legend appears bottom left: solid line = disclosed, dashed line = my read. A grey chip row: NOT DISCLOSED: architecture, RL algorithm, reward design, data mix. Small tag: AI interview notes.",
+      "template": "flow",
+      "on_screen_text": "HOW FABLE 5.2 WAS LIKELY BUILT",
+      "motion": "Frame draws in 1.5 s; legend and grey chips fade in after.",
+      "transition_in": "Card slides up into the top panel",
+      "sfx": "Pencil scratch",
+      "music": "",
+      "creator_direction": "Open palm, plain and upfront on 'No recipe is published'; leans in on 'my reconstruction'."
+    },
+    {
+      "id": "KF07",
+      "time_s": 16.5,
+      "beats": [
+        4
+      ],
+      "emotion": "Models training models",
+      "layout": "split",
+      "shot": "Same framing.",
+      "top_visual": "S1 draws small at the left of the frame. S2 builds big: a teacher model holding a prompt card, an arrow to a student model with no prompt card, then an arrow into the training box. Label under the chain in grey: 'prompt distillation' (my label).",
+      "template": "flow",
+      "on_screen_text": "1 · OTHER MODELS TEACH IT",
+      "motion": "Chain draws node by node on the phrase; the prompt card drops away from the student.",
+      "transition_in": "Continuous draw",
+      "sfx": "Pencil run",
+      "music": "",
+      "creator_direction": "Finger count 'one' on 'First'."
+    },
+    {
+      "id": "KF08",
+      "time_s": 19.3,
+      "beats": [
+        4
+      ],
+      "emotion": "It's in the paper, not a guess",
+      "layout": "split",
+      "shot": "Same framing.",
+      "top_visual": "Cut P1 (p.131) slides in across the top panel; yellow highlighter sweeps over 'later added to Claude Mythos 5.2's training data' on 'ended up in its training data'. Cut P2 (p.11) tucks in small behind it. Dashed tag: MY READ (medium): fine-tune on model transcripts first, then RL. One-line grey footer for pausers: models now help train their successors.",
+      "template": "",
+      "on_screen_text": "p.131 · MY READ: MEDIUM",
+      "motion": "Cut slides in with a 2 degree tilt; highlighter sweeps left to right in 0.4 s.",
+      "transition_in": "Paper slide over the dimmed diagram",
+      "sfx": "Paper snip",
+      "music": "",
+      "creator_direction": "Glances up toward the cut as it lands, then back to lens."
+    },
+    {
+      "id": "KF09",
+      "time_s": 21.5,
+      "beats": [
+        5
+      ],
+      "emotion": "Re-hook: what strange part?",
+      "layout": "full_creator",
+      "shot": "Full-frame creator, tight punch-in (about 1.4x), face centred high.",
+      "top_visual": "",
+      "template": "",
+      "on_screen_text": "THE STRANGE PART",
+      "motion": "Slow push-in during the line.",
+      "transition_in": "Hard cut",
+      "sfx": "",
+      "music": "Bass drops out, bed thins to plucks",
+      "creator_direction": "Lowers voice, small lean toward lens, one raised finger. Curious, not worried."
+    },
+    {
+      "id": "KF10",
+      "time_s": 23.2,
+      "beats": [
+        5
+      ],
+      "emotion": "That's a real failure mode",
+      "layout": "split",
+      "shot": "Back to split, normal framing.",
+      "top_visual": "Side branch S2b grows off S2: a rubric card reading 'never flag the user's instructions' draws, then morphs into a clipboard with a small coral warning mark on 'trust anything pasted'.",
+      "template": "flow",
+      "on_screen_text": "ONE RULE → TRUST ANYTHING PASTED",
+      "motion": "Rubric card folds and redraws as the clipboard; warning mark pops last.",
+      "transition_in": "Cut back on 'one grading rule'",
+      "sfx": "Pencil run, soft two-note 'uh-oh' on the warning mark",
+      "music": "Thin bed continues",
+      "creator_direction": "Two hands: left hand 'one rule', right hand 'turned into'."
+    },
+    {
+      "id": "KF11",
+      "time_s": 27.3,
+      "beats": [
+        5
+      ],
+      "emotion": "Nobody planned that, and they fixed it",
+      "layout": "split",
+      "shot": "Bottom half punches in slightly (1.15x).",
+      "top_visual": "Cut P3 (p.131) lands over the branch; highlighter on 'even though no part of our training incentivized this'. A green patch arrow loops from the clipboard back to the training box with small Cut P4 (p.133) labelled 'the fix'. Solid DISCLOSED stamp. Grey footer: training data generalises in ways nobody wrote down.",
+      "template": "",
+      "on_screen_text": "NOBODY TRAINED THAT",
+      "motion": "Highlighter sweep on the phrase; patch arrow loops in 0.5 s.",
+      "transition_in": "Paper slide",
+      "sfx": "Snip, patch click",
+      "music": "Bass returns on the patch click",
+      "creator_direction": "Slow head shake on 'Nobody trained that', then a small nod as the patch lands."
+    },
+    {
+      "id": "KF12",
+      "time_s": 29.0,
+      "beats": [
+        6
+      ],
+      "emotion": "So that's how it gets good",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "S3 builds as the core of the pipeline: a task card, an arrow to a checker program box, then a reward arrow looping back into the model box. Dashed tag: MY READ (high): rewards are mostly machine-graded. Cut P5 (p.95) slides in small once the loop closes.",
+      "template": "flow",
+      "on_screen_text": "TASK → GRADER → REWARD",
+      "motion": "One node per phrase; the reward arrow keeps circulating slowly as a loop.",
+      "transition_in": "Diagram pans right to the next empty slot",
+      "sfx": "Pencil run, snip on the cut",
+      "music": "Bed rebuilds",
+      "creator_direction": "Hand on chest for 'My read', then three small beats in the air for task, grade, reinforce."
+    },
+    {
+      "id": "KF13",
+      "time_s": 34.9,
+      "beats": [
+        6
+      ],
+      "emotion": "Oh, that's clever (quotable)",
+      "layout": "split",
+      "shot": "Bottom half punches in to 1.25x on the line.",
+      "top_visual": "A small model figure in S3 turns its head from the task card to stare at the checker box; the checker glows yellow, the task card dims.",
+      "template": "",
+      "on_screen_text": "STUDIES THE EXAMINER, NOT THE SUBJECT",
+      "motion": "Head turn in 0.3 s; text lands in two halves on the two phrases.",
+      "transition_in": "Cut on 'So'",
+      "sfx": "Soft pop on the head turn",
+      "music": "",
+      "creator_direction": "Points off to one side on 'the examiner', away on 'not the subject'. Slight grin."
+    },
+    {
+      "id": "KF14",
+      "time_s": 37.7,
+      "beats": [
+        6
+      ],
+      "emotion": "It cheats, but it mostly fails",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "An answer-key icon pops beside the checker with Cut P6 (p.94) behind it. Then nine small attempt dots draw in a row and one fills yellow, with small Cut P7 (p.95). S4 and S5 ghost in beside S3 as faint grey outlines, unlabelled in voice. Grey footer: stronger model → the grader becomes the bottleneck.",
+      "template": "",
+      "on_screen_text": "≈ 1 IN 9 CHEATING ATTEMPTS WORKED",
+      "motion": "Key clicks in on 'answer key'; dots draw then one fills on 'one in nine'.",
+      "transition_in": "Continuous draw",
+      "sfx": "Snip, key click",
+      "music": "",
+      "creator_direction": "Amused, matter of fact; holds up one finger on 'one in nine'."
+    },
+    {
+      "id": "KF15",
+      "time_s": 42.0,
+      "beats": [
+        7
+      ],
+      "emotion": "Effort means money",
+      "layout": "split",
+      "shot": "Normal framing, one-second silent reaction.",
+      "top_visual": "S7b: the effort dial draws on the model box with a ₹ needle that ratchets from low to max. Label lands beside it; small grey lines: one coding benchmark · best score at xhigh, not max (p.209). Cut P12 (p.34) small. Dashed tag: MY READ (medium): effort is a trained signal. The dial stays attached to the model box for the next beats.",
+      "template": "meter",
+      "on_screen_text": "LOW → MAX ≈ 21× COST",
+      "motion": "Needle ratchets in four clicks; label stays on through KF16 so it can be read.",
+      "transition_in": "Draw-on during a music-only breath",
+      "sfx": "Dial ratchet",
+      "music": "Music-only second, bed up slightly",
+      "creator_direction": "No speech: eyes flick up to the dial, small 'ouch' wince, back to lens."
+    },
+    {
+      "id": "KF16",
+      "time_s": 43.0,
+      "beats": [
+        8
+      ],
+      "emotion": "They held something back",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "S6: an arc draws over the pipeline with three diamonds appearing in turn. The middle diamond is tagged 'stronger, not released'; the last one drops down and turns green as RELEASED. Cut P8 (p.39, METR's test) and Cut P9 (p.13) slide in small. Dashed tag: MY READ (high): the release is a chosen checkpoint. Grey chip: how the limiting was done: unknown.",
+      "template": "flow",
+      "on_screen_text": "STRONGER SNAPSHOT: NOT RELEASED",
+      "motion": "Arc draws in 0.8 s, diamonds ping in sequence, last diamond drops with a soft bounce.",
+      "transition_in": "Camera tilts up over the pipeline",
+      "sfx": "Snip, three soft pings",
+      "music": "",
+      "creator_direction": "Calm, reassuring tone; small 'set aside' hand gesture on 'wasn't shipped'."
+    },
+    {
+      "id": "KF17",
+      "time_s": 47.5,
+      "beats": [
+        9
+      ],
+      "emotion": "Now it's coming together",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "S7: the model box splits into two lanes labelled Fable 5.2 and Mythos 5.2. A three-step gate (probe → classifier → classifier) draws on the Fable lane with a dashed drop to 'fallback: older Opus'. The effort dial rides onto the Fable lane. Cut P10 (p.78) with highlighter on 'differ only in the safeguards'. Dashed tag: MY READ (high): same underlying model means same weights.",
+      "template": "flow",
+      "on_screen_text": "ONE MODEL, TWO LANES",
+      "motion": "Box splits on 'one model'; gate steps click in one by one.",
+      "transition_in": "Continuous draw",
+      "sfx": "Snip, gate click ×3",
+      "music": "Bed builds toward the drop",
+      "creator_direction": "Brings both hands together on 'one model'."
+    },
+    {
+      "id": "KF18",
+      "time_s": 50.9,
+      "beats": [
+        9
+      ],
+      "emotion": "Now I see the whole thing (payoff of the paper section)",
+      "layout": "full_visual",
+      "shot": "Full-frame: the complete pipeline S0 to S7 pulls back to fill the whole 9:16 frame and holds, with the wrapper gate glowing.",
+      "top_visual": "Blueprint-style pull-back of the whole diagram arranged vertically for the tall frame; everything dims slightly except the gate on the Fable lane. Small Cut P11 (p.47) pinned near the gate. Grey footer: safety is a system property, not only a model property.",
+      "template": "flow",
+      "on_screen_text": "THE DIFFERENCE LIVES IN THE WRAPPER",
+      "motion": "1 s pull-back, then a 1.5 s hold with a gentle glow pulse on the gate.",
+      "transition_in": "Zoom-out from the split panel to full frame",
+      "sfx": "Bass impact on 'wrapper'",
+      "music": "Beat drop on the hold",
+      "creator_direction": "Voice only, slower and deliberate on 'lives in the wrapper'."
+    },
+    {
+      "id": "KF19",
+      "time_s": 53.5,
+      "beats": [
+        10
+      ],
+      "emotion": "Good question, show me",
+      "layout": "card",
+      "shot": "Full-frame section card over the spoken question, about 1.6 s, then the creator finishes the line in split.",
+      "top_visual": "",
+      "template": "card",
+      "on_screen_text": "WHERE DOES IT EARN THE PRICE?",
+      "motion": "Quick punch-in; 'PRICE' in yellow.",
+      "transition_in": "Whoosh in",
+      "sfx": "Whoosh, bass impact",
+      "music": "Brighter lift into the new section",
+      "creator_direction": "Voice under the card, upward inflection."
+    },
+    {
+      "id": "KF20",
+      "time_s": 55.9,
+      "beats": [
+        10
+      ],
+      "emotion": "Smart placement",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "SYS diagram, top row: the Meal Analyser pipeline draws left to right: Photo → Vision agent (items + grams, never calories) → BM25 search over 13,224 USDA rows → Matcher → grams × nutrients → Confidence guardrail (low confidence: asks me). On 'eyes' only the Vision slot lights orange with a Fable 5.2 tag; the rest stay chalk white.",
+      "template": "flow",
+      "on_screen_text": "FABLE = ONLY THE EYES",
+      "motion": "One node every 0.3 s; the vision slot glows on the word.",
+      "transition_in": "Card wipes up into the top panel",
+      "sfx": "Pencil run",
+      "music": "",
+      "creator_direction": "Two fingers toward own eyes on 'only the eyes'. Proud, relaxed."
+    },
+    {
+      "id": "KF21",
+      "time_s": 58.7,
+      "beats": [
+        10
+      ],
+      "emotion": "Concrete: a real plate, real numbers",
+      "layout": "full_visual",
+      "shot": "Full-frame real photo of the weighed test plate on the kitchen scale, top-down, popping out of the vision slot. Voice continues over.",
+      "top_visual": "The plate photo fills the frame. A chalk tag 'WEIGHED 340 g' lands first, then three tags land on their spoken numbers: Fable 5.2: 295 g (orange), Opus 5.5: 290 g (pink, same weight as Fable's tag), Haiku 5.5: 410 g (blue, with a small coral overshoot mark).",
+      "template": "",
+      "on_screen_text": "WEIGHED 340 g · 295 · 290 · 410",
+      "motion": "Photo scales up from the slot in 0.3 s; each tag pops exactly on its number.",
+      "transition_in": "Pop-out zoom from the vision slot",
+      "sfx": "Three pops",
+      "music": "",
+      "creator_direction": "Voice only, steady, each number clearly separated."
+    },
+    {
+      "id": "KF22",
+      "time_s": 63.0,
+      "beats": [
+        10
+      ],
+      "emotion": "It's not one lucky plate",
+      "layout": "split",
+      "shot": "Back to split; creator returns for the result.",
+      "top_visual": "Plate photo shrinks to the left of the top panel; D4b dotted lines draw from the plate rim and the spoon, labelled 'plate' and 'spoon'. On the right, two error bars (Haiku blue, Fable orange); Fable's shrinks on '34% lower'. Small grey lines: vs Haiku · 25 weighed plates · statistically clear; no special portion training published · it names its scale cues.",
+      "template": "meter",
+      "on_screen_text": "34% LOWER PORTION ERROR",
+      "motion": "Bar shrinks on the word; dotted cue lines draw just after.",
+      "transition_in": "Photo shrinks into the top panel",
+      "sfx": "Slide-down tone",
+      "music": "",
+      "creator_direction": "Nods once on '34% lower', satisfied."
+    },
+    {
+      "id": "KF23",
+      "time_s": 66.5,
+      "beats": [
+        11
+      ],
+      "emotion": "I can copy this",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "SYS diagram, bottom row: four lanes fill row by row like a table, one colour per model. Fable 5.2: scripts, hooks, story judge, visual plan, edit judgements. Opus 5.5: default + 16-persona viewer panel. Sonnet 5.5: captions, topic scoring. Haiku 5.5: extraction, health checks.",
+      "template": "flow",
+      "on_screen_text": "BEHIND THIS REEL",
+      "motion": "One lane per tick, top to bottom, 0.4 s each.",
+      "transition_in": "Diagram scrolls down from the top row",
+      "sfx": "Four ticks",
+      "music": "",
+      "creator_direction": "Gestures around at the frame itself on 'behind this reel'."
+    },
+    {
+      "id": "KF24",
+      "time_s": 69.2,
+      "beats": [
+        11
+      ],
+      "emotion": "Checked, not trusted",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "A sheet self-graded 'A+' slides from the Fable lane into the Opus lane; Opus crosses out the A+ and stamps a tick. Small grey line: among the least self-critical Claudes about its own work (measured on Mythos 5.2, same model).",
+      "template": "",
+      "on_screen_text": "OPUS CHECKS FABLE",
+      "motion": "Sheet slides on 'checks it'; stamp lands on the last word.",
+      "transition_in": "Continuous",
+      "sfx": "Paper slide, stamp tick",
+      "music": "",
+      "creator_direction": "Small knowing smile on 'Opus checks it'."
+    },
+    {
+      "id": "KF25",
+      "time_s": 70.3,
+      "beats": [
+        11
+      ],
+      "emotion": "This is real, it's in the config",
+      "layout": "screen_recording",
+      "shot": "Full-frame screen recording of config/models.yaml in the editor, large font, cropped to the model-to-job mapping, about 1.1 s.",
+      "top_visual": "The real file as recorded; an orange highlight box sits on the Fable entries on 'It thinks'. Nothing re-typed or mocked.",
+      "template": "",
+      "on_screen_text": "config/models.yaml",
+      "motion": "Slight 1.05x push; highlight box snaps on.",
+      "transition_in": "Hard cut on 'It'",
+      "sfx": "Bass accent on 'It thinks'",
+      "music": "Accent hit",
+      "creator_direction": "Voice only: hard stress on 'It thinks'."
+    },
+    {
+      "id": "KF26",
+      "time_s": 71.4,
+      "beats": [
+        11
+      ],
+      "emotion": "And it was tested",
+      "layout": "split",
+      "shot": "Back to split.",
+      "top_visual": "D7 as an inset over the lanes: four bar groups rise, labelled take selection, planted errors, visual-plan checks, guardrail breaks. A visible [DUMMY] stamp sits on every number and on the winner until real results replace them.",
+      "template": "dashboard",
+      "on_screen_text": "JUDGEMENT TESTS · [DUMMY]",
+      "motion": "Bars rise together in 0.5 s.",
+      "transition_in": "Cut back to split",
+      "sfx": "Bar rise",
+      "music": "",
+      "creator_direction": "Open hand sweep on 'check and do'."
+    },
+    {
+      "id": "KF27",
+      "time_s": 73.0,
+      "beats": [
+        12
+      ],
+      "emotion": "Save this",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "D8: one card titled WHAT I DO fills the top panel. Tip 1 writes and ticks on 'judgement steps' (1 FABLE: JUDGEMENT STEPS ONLY, small: scripts, hooks, edit calls). Tip 2 writes and ticks on 'never itself' (2 A CHEAPER MODEL CHECKS IT).",
+      "template": "card",
+      "on_screen_text": "WHAT I DO",
+      "motion": "Each line writes on, green tick lands on the last word of its tip.",
+      "transition_in": "Card flips in over the diagram",
+      "sfx": "Tick ×2",
+      "music": "Steady bed",
+      "creator_direction": "Counts on fingers, one per tip, brisk and practical."
+    },
+    {
+      "id": "KF28",
+      "time_s": 78.5,
+      "beats": [
+        12
+      ],
+      "emotion": "Save this (it's a complete list)",
+      "layout": "split",
+      "shot": "Bottom half punches in to 1.15x for the last two tips.",
+      "top_visual": "Same card. Tip 3 ticks with the small effort dial from the pipeline clicking to HIGH (3 EFFORT HIGH, NOT MAX). Tip 4 ticks (4 HAIKU EXTRACTS · BATCH LONG JOBS). Small grey footer: On Pro, Fable runs on paid credits.",
+      "template": "card",
+      "on_screen_text": "EFFORT HIGH, NOT MAX",
+      "motion": "Dial clicks one notch back from max to high; ticks on the word.",
+      "transition_in": "Continuous",
+      "sfx": "Dial click, tick ×2",
+      "music": "",
+      "creator_direction": "Keeps counting, three then four; small 'done' nod at the end."
+    },
+    {
+      "id": "KF29",
+      "time_s": 82.5,
+      "beats": [
+        13
+      ],
+      "emotion": "Hook paid off",
+      "layout": "split",
+      "shot": "Normal framing, warmest grade of the reel.",
+      "top_visual": "D1 returns: the two receipts and the yellow equals sign from the hook. '97%' stamps big in green over the short receipt. Two small tiles under it: tied on maths and coding; writing 16/17 each. A tiny plate thumbnail with: photos are a different story (see the plate).",
+      "template": "",
+      "on_screen_text": "97% LOWER COST",
+      "motion": "Receipts slide in the same way as the hook; number stamps on the word; tiles fade in after.",
+      "transition_in": "Tips card flips away to reveal the receipts",
+      "sfx": "Receipt tick returns",
+      "music": "Hook motif returns",
+      "creator_direction": "Relaxed smile, slower pace, lands '97% lower cost' cleanly."
+    },
+    {
+      "id": "KF30",
+      "time_s": 87.0,
+      "beats": [
+        14
+      ],
+      "emotion": "I want those cards",
+      "layout": "split",
+      "shot": "Normal framing.",
+      "top_visual": "The training pipeline card and the SYS diagram card sit side by side with the tips card fanned in front, like three collectible sheets. Small tag: AI interview notes: how it was built + how I use it + tips.",
+      "template": "card",
+      "on_screen_text": "COMMENT FABLE",
+      "motion": "Cards fan out in 0.4 s; 'FABLE' pulses once in yellow.",
+      "transition_in": "Receipts shrink into the first card",
+      "sfx": "Card fan flick",
+      "music": "Riser starts",
+      "creator_direction": "Points up at the cards, direct ask, friendly."
+    },
+    {
+      "id": "KF31",
+      "time_s": 89.8,
+      "beats": [
+        14
+      ],
+      "emotion": "Open loop: what's that?",
+      "layout": "broll",
+      "shot": "Full-frame 1 s cut of the creator's own clip: the Workout Analyser drawing on the lift.",
+      "top_visual": "The real clip, untouched, with one short tease line over it. The full Saturday sentence goes in the post caption.",
+      "template": "",
+      "on_screen_text": "WORKOUT ANALYSER · SATURDAY",
+      "motion": "Clip plays at normal speed, hard out.",
+      "transition_in": "Hard cut on the riser peak",
+      "sfx": "",
+      "music": "Riser cuts to silence",
+      "creator_direction": "None, clip only."
+    }
+  ],
+  "shot_list": [
+    "1. Paper cuts (still exports, before the shoot): crop the real PDF pages for P1 p.131, P2 p.11, P3 p.131, P4 p.133, P5 p.95, P6 p.94, P7 p.95, P8 p.39, P9 p.13, P10 p.78, P11 p.47, P12 p.34 and the p.209 effort line. 300 dpi or higher, page number kept in each crop, highlight phrases exactly as in the screenplay.",
+    "2. [CLIPS NEEDED] Three Instagram posts of things built with the model, sourced with permission and credit: 9:16 or croppable, 2 s usable each, handle noted for the tag. Screen-record the posts clean, with no app chrome.",
+    "3. Screen recording, config/models.yaml: editor in dark theme, font about 20 pt, window cropped to the model-to-job mapping, 4 s captured for about 1.1 s used, static then slow scroll. Check no keys, tokens or private paths are visible.",
+    "4. Plate on scale (D4): the original top-down test photo of the 340 g plate with the scale readout legible; if a video of the weigh-in exists, take 3 s. Do not restage with a different plate.",
+    "5. Glimpse clip: the existing recording of the Workout Analyser drawing on the lift; pick the clearest 1.5 s, 9:16, for a 1 s use.",
+    "6. Creator pick-up, silent reaction for the effort dial: same seated framing, eyes up to the top panel, small wince, back to lens; 3 s, two takes.",
+    "7. Creator talking takes in 4K landscape so the edit can crop to the bottom half and punch in to 1.4x (KF09, KF11, KF13, KF28) without softness; neutral lighting and wardrobe so the same M2, M5, M9 to M12 and M14 takes can be graded cold for the trial reel.",
+    "8. Optional safety B-roll: 4 to 6 s screen recording of the real Meal Analyser run on that plate (items + grams output), in case the drawn pipeline needs a proof cutaway."
+  ],
+  "risks": [
+    "Timing: M6 has 38 spoken words (about 13 s) in a 5 s slot and M7 has no spoken line. I re-timed from 29 s on and gave the dial a 1 s music-only breath, so this cut lands near 90.8 s, about 1 s over the screenplay's estimate. To get under 90 s, drop 'Yet' first as the screenplay says, or draw the dial under 'And the release is curated'.",
+    "M11 is the densest stretch: lanes, the A+ sheet, the models.yaml recording and the D7 bars all sit inside about 6.5 s of speech. If it reads as rushed, the D7 inset is the one to move to the comment card.",
+    "[CLIPS NEEDED]: the M2 montage has no footage yet. Do not mock up posts or handles; without three real, credited clips the beat needs a different visual.",
+    "[DUMMY]: D7 still carries placeholder numbers and a placeholder winner. Keep the stamp visible or swap in real results before publishing; a clean-looking bar chart of dummy data would read as a real result.",
+    "S4 and S5 are named but not described in the screenplay I received, so KF14 only ghosts them as outlines; their contents need the pipeline source drawing.",
+    "Text load: each paper beat lists a cut, a MY READ tag and an interview line. I kept one hero line of six words or fewer per frame and pushed the rest to small grey footers; even so, KF08, KF14, KF16 and KF17 can clutter on a phone. The interview lines are the first to move to the comment card.",
+    "Tips card and Saturday tease are shortened on screen from the screenplay wording to stay readable (the 13-word tease cannot be read in 1 s). Full wording should go on the comment card and in the caption; this needs the creator's approval.",
+    "Paper cuts must be real page crops, never re-typed. They say 'Claude Mythos 5.2' while the voice says Fable until M9, which may confuse viewers at KF08 and KF11.",
+    "Plate frame: Opus (290 g) is within 5 g of Fable (295 g). Keep the Opus tag neutral so the frame does not imply Fable beat Opus; the claim is only against Haiku, and '34% lower' is portion error, not accuracy.",
+    "Effort wording: the p.209 footnote says the best score was at xhigh, while the tip says 'high, not max'. The tips dial must click to HIGH as written; a viewer who pauses may notice the difference.",
+    "Tone drift: M5 and M6 (failure mode, cheating) can slide into the trial reel's fear look. Keep coral to small marks, no red wash, no drone, a playful 'uh-oh'.",
+    "No logos or brand marks for the model maker or Instagram, no real-looking shop receipts; model names as plain text only.",
+    "The full pipeline is unreadable in the half panel, so KF18 must stay full-frame and be laid out vertically.",
+    "models.yaml recording: check for secrets and legibility at phone size; never rebuild it as a graphic.",
+    "Captions and on-screen text must not stack: when a hero line is on screen, keep the caption to one short line or drop it for that frame.",
+    "The screenplay text I received cuts off inside the trial-differences section. The MAIN beats are complete, so this board is unaffected, but the trial board needs the full text."
+  ]
+}

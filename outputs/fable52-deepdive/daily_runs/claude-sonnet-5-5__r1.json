@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "The boat carries the farmer and all three items at once, so everything fits in a single trip. The farmer loads the wolf, goat and cabbage and rows across. That is one one-way crossing.\n\nANSWER: 1",
+ "seconds": 2.9,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1170.75,
+ "out_tok": 71,
+ "usd_list": 0.00305,
+ "cli_cost": 0.0045874999999999996,
+ "item": "r1"
+}

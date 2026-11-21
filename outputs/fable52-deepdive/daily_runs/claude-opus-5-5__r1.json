@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "Since the boat holds the farmer plus all three items, he simply loads the wolf, goat and cabbage together and rows across once. Nothing is ever left alone unsupervised, so the usual constraints never come into play.\n\nANSWER: 1",
+ "seconds": 2.8,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1168.25,
+ "out_tok": 80,
+ "usd_list": 0.00627,
+ "cli_cost": 0.0092055,
+ "item": "r1"
+}

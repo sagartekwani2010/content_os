@@ -1,0 +1,66 @@
+[
+ {
+  "round": 1,
+  "winner": "C",
+  "overall": 5.4,
+  "groups": {
+   "mass": 4.4,
+   "fin_consult_mktg": 5.3,
+   "builders": 7.2
+  },
+  "all": {
+   "C": 5.4,
+   "A": 5.2,
+   "B": 5.1
+  },
+  "check_clean": false
+ },
+ {
+  "round": 2,
+  "winner": "A",
+  "overall": 5.35,
+  "groups": {
+   "mass": 4.15,
+   "fin_consult_mktg": 5.15,
+   "builders": 7.05
+  },
+  "all": {
+   "A": 5.35,
+   "B": 5.35,
+   "C": 5.25
+  },
+  "check_clean": false
+ },
+ {
+  "round": 3,
+  "winner": "B",
+  "overall": 5.4,
+  "groups": {
+   "mass": 4.4,
+   "fin_consult_mktg": 5.35,
+   "builders": 7.2
+  },
+  "all": {
+   "B": 5.4,
+   "C": 5.3,
+   "A": 5.2
+  },
+  "check_clean": false
+ },
+ {
+  "round": 4,
+  "winner": "B",
+  "overall": 5.6,
+  "groups": {
+   "mass": 4.55,
+   "fin_consult_mktg": 5.45,
+   "builders": 7.4
+  },
+  "all": {
+   "B": 5.6,
+   "A": 5.3,
+   "C": 5.1
+  },
+  "check_clean": false
+ }
+]

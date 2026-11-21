@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Mixed salad greens (arugula-type leaves)",
+   "grams_low": 50,
+   "grams_best": 70,
+   "grams_high": 90,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, uncooked leaves, loosely tossed in a bowl with no visible dressing",
+   "confidence": 0.5,
+   "kcal": 17.5,
+   "kcal_range": [
+    12,
+    22
+   ],
+   "protein_g": 1.8,
+   "protein_range": [
+    1.3,
+    2.3
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 5,
+   "grams_best": 8,
+   "grams_high": 12,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, julienned or shredded into thin strips and scattered through the greens",
+   "confidence": 0.6,
+   "kcal": 3.3,
+   "kcal_range": [
+    2,
+    5
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 78.0,
+  "kcal": 20.8,
+  "protein_g": 1.9,
+  "grams_range": [
+   55.0,
+   102.0
+  ],
+  "kcal_range": [
+   14,
+   27
+  ],
+  "protein_range": [
+   1.3,
+   2.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 78.0,
+   "kcal": 42.0,
+   "protein_g": 1.5,
+   "grams_range": [
+    55.0,
+    102.0
+   ],
+   "kcal_range": [
+    27,
+    60
+   ],
+   "protein_range": [
+    1.1,
+    2.2
+   ]
+  },
+  "rows": [
+   "Mixed salad greens, raw",
+   "Carrot, dehydrated"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "cf5213c16c794f02cd31a4c466d9f1971d75b51600007c3d06e28fd7a062c01c",
+ "scale_cues": "White square bowl about 22-25 cm across used as the reference. The greens fill roughly the central third of the bowl, about 10-12 cm across. Carrot strips are about 3-5 cm long and 2-3 mm thick, consistent with a small garnish.",
+ "assumptions": [
+  "Leaves are arugula-type based on lobed, peppery-looking shape; the exact green could be a mesclun mix.",
+  "No dressing, oil or cheese is clearly visible, so none is listed; a light dressing sheen could add a few grams.",
+  "Leaf mass estimated from the apparent volume and typical leaf density of loose raw greens.",
+  "Carrot is above the 5 g merge threshold in the best estimate, so it is kept separate."
+ ],
+ "latency_s": 588.93,
+ "calls": [
+  {
+   "wall_s": 304.41,
+   "duration_ms": 17581,
+   "num_turns": 2,
+   "cost_usd_cli": 0.00144848,
+   "cost_basis": "list",
+   "input_tokens": 10262,
+   "output_tokens": 942
+  },
+  {
+   "wall_s": 284.51,
+   "duration_ms": 4312,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0008589,
+   "cost_basis": "list",
+   "input_tokens": 3976,
+   "output_tokens": 541
+  }
+ ],
+ "cost_usd_cli": 0.00231,
+ "log_id": "df29f9526a4b"
+}

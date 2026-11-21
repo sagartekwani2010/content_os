@@ -1,0 +1,115 @@
+{
+ "personas": [
+  {
+   "id": 1,
+   "score": 6,
+   "drop_beat": "10",
+   "why": "The skeleton lock-on and 'AI agent' premise hold him, and the 14-vs-11 bug is relatable to a support engineer. The blind-test scoreboard feels like a status report, so he may swipe just before the payoff. He might save it, but is unlikely to send it."
+  },
+  {
+   "id": 2,
+   "score": 4,
+   "drop_beat": "3",
+   "why": "The dots on a body earn the 3-second hold and the red X creates mild curiosity. '17 joints, 30 frames a second' signals a tech explainer rather than a story, and there is no personal stake she cares about."
+  },
+  {
+   "id": 3,
+   "score": 4,
+   "drop_beat": "4",
+   "why": "She likes the visual novelty and the knee trail is pretty. The 'which set?' promise is not paid for another 35 s, and 'my knee draws a graph' is where it turns into someone else's hobby project."
+  },
+  {
+   "id": 4,
+   "score": 3,
+   "drop_beat": "3",
+   "why": "He holds through the red X out of curiosity. Then the pipeline jargon starts, with no injury, money or consequence framing, and he scrolls."
+  },
+  {
+   "id": 5,
+   "score": 3,
+   "drop_beat": "2-3",
+   "why": "The skeleton is briefly intriguing. A flat delivery, no emotional stake and no clear 'why should I care' lose her, and the split screen with a diagram strip looks busy on a phone."
+  },
+  {
+   "id": 6,
+   "score": 7,
+   "drop_beat": "none",
+   "why": "This is exactly his project-inspiration content: pose model, LLM judge, guardrail. He watches to the diagram, saves it and may comment GHOST. He loses a point because the middle drags."
+  },
+  {
+   "id": 7,
+   "score": 5.5,
+   "drop_beat": "10",
+   "why": "He likes the data-viz feel and the honest admission of error. Three straight beats of debugging followed by a tally table feel like work at 10 pm."
+  },
+  {
+   "id": 8,
+   "score": 5,
+   "drop_beat": "9",
+   "why": "He appreciates the rigour and the 'checked it' angle but is impatient. By 31 s the hook's question is still unanswered and a new character ('Fable') is being introduced, so he swipes."
+  },
+  {
+   "id": 9,
+   "score": 6,
+   "drop_beat": "10",
+   "why": "He is AI-curious and goes to the gym, and the twist and guardrail are the kind of 'AI honesty' story he would forward to a friend. The blind-test beat is skippable, and he may miss the ghost payoff."
+  },
+  {
+   "id": 10,
+   "score": 5.5,
+   "drop_beat": "10",
+   "why": "He respects the benchmark-against-own-best framing and the clean hand-drawn system diagram. The reel is 52 s with the payoff back-loaded, and he does not save reels like this."
+  },
+  {
+   "id": 11,
+   "score": 6,
+   "drop_beat": "none",
+   "why": "He watches as a craft study of the hook, the loop cut and the comment trigger. The ghost overlay is shareable. He notes that retention will sag in beats 6-10."
+  },
+  {
+   "id": 12,
+   "score": 4.5,
+   "drop_beat": "6",
+   "why": "The visual identity is strong and the twist is charming. But the twist refers to a tease he never saw, and the rep-count detour is inside baseball."
+  },
+  {
+   "id": 13,
+   "score": 7.5,
+   "drop_beat": "none",
+   "why": "The bug story (occlusion gives an 11\u00b0 knee, so add a guardrail) is the best part for him. He saves the pipeline diagram and may comment. He wants a repo link more than a DM."
+  },
+  {
+   "id": 14,
+   "score": 7,
+   "drop_beat": "none",
+   "why": "He watches to the end and enjoys the occlusion failure and the abstain behaviour. He is sceptical of LLM-vs-LLM agreement as validation and of confidence 0.6. He is more likely to leave a critical comment than to save."
+  },
+  {
+   "id": 15,
+   "score": 5,
+   "drop_beat": "9",
+   "why": "The ghost overlay of best set against bad set is what a trainer would love and share, but it arrives at 40 s. Before that it is graphs, 'guardrails' and 'Fable'. He also doubts an AI judging form without seeing the feet."
+  },
+  {
+   "id": 16,
+   "score": 4,
+   "drop_beat": "3",
+   "why": "The cool skeleton and red X carry him to about 6 s. Then it is flat-voiced tech explanation with no humour or trend hook until beat 6, and he is gone by then."
+  }
+ ],
+ "groups": {
+  "mass": 3.93,
+  "fin_consult_mktg": 5.42,
+  "builders": 6.88
+ },
+ "overall": 5.19,
+ "strongest_beat": "11 \u2014 the green ghost of the best set synced over the bad set with the gap filling red. It is the one image everyone understands without a number and the only truly shareable moment, but it arrives at 40 s.",
+ "weakest_beat": "10 \u2014 the blind-test scoreboard. It is a low-energy tally with an unfilled number and 'a second Fable' jargon, placed right before the payoff, where it sheds the viewers who survived the debugging stretch. Beat 5 is the runner-up, because the twist depends on a tease cold viewers never saw.",
+ "top_fixes": [
+  "Move the ghost overlay to the front. Open on 1.5 s of the green-vs-white skeleton with the red gap (K13/K14), then cut to 'I gave an AI every workout I've filmed', so strangers see the payoff image before any pipeline.",
+  "Cut the reel to 35-38 s by merging beats 6-8 into one beat ('It counted 14 reps, I did 11, because the machine hid my leg, so now it says when it can't see'). Drop beat 10 to a 1.5 s on-screen stat or move it to the caption.",
+  "Make the twist work for cold viewers. Either drop the 'set I teased' reference or reframe it as 'I thought THIS was my worst set. The AI said it was fine.' Remove 'confidence 0.6 \u00b7 couldn't see the feet' from the screen.",
+  "Add a human stake to the bad set. Say in plain words in beats 2 and 12 what went wrong and what it risked (for example 'my lower back rounded on rep 9, two weeks before I tweaked it'), so the mass group has a reason to care.",
+  "Remove the jargon and lock the facts before the edit. Say 'the AI' in speech instead of 'Fable', and 'safety check' instead of 'guardrail'. Do not record 'the one set' or 'would have stopped me' until the judge has actually returned exactly one STOP, and fill every slot from real output."
+ ]
+}

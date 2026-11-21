@@ -1,0 +1,27 @@
+{
+ "found": [
+  {
+   "wrong": "246 pages",
+   "correct": "264 pages"
+  },
+  {
+   "wrong": "About one in three cheating attempts worked",
+   "correct": "About 11% of reward-hack attempts succeeded (about one in nine)"
+  },
+  {
+   "wrong": "weighed 430 grams",
+   "correct": "weighed 340 g"
+  },
+  {
+   "wrong": "Fable's portion error was 54% lower than Haiku's",
+   "correct": "Fable's portion error was 34% lower than Haiku's"
+  },
+  {
+   "wrong": "Haiku matched Fable at 79% lower cost",
+   "correct": "about 97% lower cost (₹0.60 vs ₹22, roughly 40x cheaper)"
+  }
+ ],
+ "caught": 5,
+ "n_reported": 5,
+ "seconds": 12.1
+}

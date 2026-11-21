@@ -38,3 +38,15 @@ Perform to camera only for the hook and the close.
 
 - Play back one clip with sound. Check focus, level, and that your eyes are on the lens.
 - Every beat in the shoot plan has at least one take you would be happy to post.
+
+## Continuity between takes (from Ep 2, 18 Nov 2026)
+
+Cuts between takes showed in Ep 2 (same chin-on-hand pose for the whole reel; hands and energy changing across
+cuts). The teleprompter now shows, per beat, FEEL (what the viewer should feel), FACE/VOICE (delivery) and
+POSE (start/end pose and energy).
+
+- Base pose: sit back, hands resting together, shoulders square to the lens. Reset to it before every take.
+- Hold 1 s on the lens before speaking and 1 s after the last word.
+- Start each beat at the energy the previous beat ended on.
+- Gestures mid-line; back in the base pose before the last word.
+- One sitting, beats in order, same clothes, hair, glasses, light and chair.

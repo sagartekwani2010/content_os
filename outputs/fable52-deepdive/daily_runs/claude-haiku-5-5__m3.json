@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "Multiplying the factors: 1.10 × 0.90 = 0.99. A salary of 100 rises to 110, then falls 10% of 110 (11) to 99. The 10% fall applies to a larger base, so the net result is a 1% decrease.\n\nANSWER: -1%",
+ "seconds": 3.6,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2392.0,
+ "out_tok": 182,
+ "usd_list": 0.00033,
+ "cli_cost": 0.0004001,
+ "item": "m3"
+}

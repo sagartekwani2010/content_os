@@ -1,0 +1,131 @@
+# AI Job Audit: screenplay (concept stage)
+
+## 1. Logline and promise
+
+An AI engineer runs his own job through a task-by-task AI audit on camera, shows the result that stings, and hands viewers the same free tool.
+
+**Promise:** you will swap a vague fear ("AI will take my job") for a specific list of what to hand over, what to grow, and what to try for two weeks.
+
+## 2. Emotional arc
+
+| Scene | Emotion | Why it turns |
+|---|---|---|
+| 1 Hook | Surprise | The AI guy is exposed too |
+| 2 Reframe | Recognition | Names the fear, then shrinks it from "job" to "tasks" |
+| 3 Tool | Curiosity | A method, not an opinion |
+| 4 His audit | Vulnerability | He takes the hit first, so it is safe to look |
+| 5 Gym | Relief | Familiar logic: find the weak lift, train it |
+| 6 Friend | "That's me" | A non-tech job gets the same treatment |
+| 7 Output | Control | Fear becomes a 2-week plan |
+| 8 CTA | Agency | Their turn |
+
+## 3. Screenplay (about 56 s)
+
+**S1, 0:00–0:02. Hook**
+- VISUAL: Full-frame real screen recording of his result, zooming on the number.
+- SPOKEN: "I build AI for a living. AI can already do [MY_RESULT_%] of my week."
+- TEXT: "AI engineer. [MY_RESULT_%] of my week = AI can do it."
+- EMOTION: Surprise.
+- DELIVERY: Flat and matter-of-fact, with half a smile.
+
+**S2, 0:02–0:09. Reframe**
+- VISUAL: Top: hand-drawn headline "AI will take your job" gets scratched out, and a job box cracks into small tiles.
+- SPOKEN: "Everyone says AI will take your job. Nobody tells you which part. Jobs don't go in one shot. Tasks do."
+- TEXT: "Not jobs. Tasks."
+- EMOTION: Recognition.
+- DELIVERY: Leaning in, slower on "tasks do".
+
+**S3, 0:09–0:16. Tool**
+- VISUAL: Top: a week drawn as a strip splitting into tiles, with role labels flickering (see section 5).
+- SPOKEN: "So I built a free tool. You describe your normal work week. It splits it into tasks, the way researchers study this."
+- TEXT: "AI Job Audit, free." Small: "Method: GPTs are GPTs (2023), Anthropic Economic Index."
+- EMOTION: Curiosity.
+- DELIVERY: Brisk builder energy.
+
+**S4, 0:16–0:28. His audit**
+- VISUAL: Full-frame real screen recording of three rows lighting up red, amber and green, each with its one-line reason.
+- SPOKEN: "[MY_TASK_1]: AI does it well today. That one hurt. [MY_TASK_2]: AI helps, I still drive. [MY_TASK_3]: still needs a human."
+- TEXT: The three labels as tags.
+- EMOTION: Vulnerability.
+- DELIVERY: Genuine wince on "that one hurt", with a one-beat pause.
+
+**S5, 0:28–0:35. Gym floor**
+- VISUAL: Full-frame, between sets, phone in hand.
+- SPOKEN: "It's like training. You don't say 'my body is weak.' You find the weak lift and fix that."
+- TEXT: "Find the weak lift."
+- EMOTION: Relief.
+- DELIVERY: Relaxed, slightly out of breath, smiling.
+
+**S6, 0:35–0:44. Friend**
+- VISUAL: Full-frame real recording of the second audit, with a role tag on top.
+- SPOKEN: "Then I ran it for my friend, a [FRIEND_ROLE]. [FRIEND_RESULT_LINE, written only after the real run]."
+- TEXT: "[FRIEND_ROLE]: [FRIEND_RESULT_%]"
+- EMOTION: "That's me."
+- DELIVERY: Warm, like telling a friend's story with permission.
+
+**S7, 0:44–0:51. Output**
+- VISUAL: Top: three hand-drawn boxes ticking in: "Hand to AI now", "Skill to grow", "2-week experiment".
+- SPOKEN: "It tells you what to hand over now, what skill to grow with that time, and one two-week experiment. It won't predict layoffs. Nobody honestly can."
+- TEXT: "No layoff prediction. Just your tasks."
+- EMOTION: Control.
+- DELIVERY: Firm and steady on the last line.
+
+**S8, 0:51–0:56. CTA**
+- VISUAL: Full-frame result card mock-up, then his face.
+- SPOKEN: "Comment AUDIT, I'll DM it, free. Send me your result. I'll audit the most common jobs next."
+- TEXT: "Comment AUDIT."
+- EMOTION: Agency.
+- DELIVERY: Direct to lens, short.
+
+## 4. Hooks, ranked
+
+1. **Surprise (use this).** Frame: his real result number. Text: "I build AI. AI can do [MY_RESULT_%] of my job." Authority and vulnerability land in one frame.
+2. **Curiosity.** Frame: a blurred result card with one red row visible. Text: "Which part of your job goes first?"
+3. **Defiance.** Frame: him at the gym, arms crossed. Text: "AI won't take your job. It'll take [MY_TASK_1]."
+4. **Humour.** Frame: deadpan to lens. Text: "I asked AI if AI can replace me. It was rude."
+5. **Fear (last).** Frame: a real headline, properly sourced. Text: "Everyone's scared. Nobody's checked." This is the saturated doom lane.
+
+If [MY_RESULT_%] turns out low, hook 1 flips to "only [MY_RESULT_%], and I build this stuff", which leans toward defiance.
+
+## 5. Relatability
+
+- **0:09–0:14 flicker:** six hand-drawn tiles, each a role with one real task, not just a title. The tool must be able to rate every task shown.
+  - IT services: "weekly status report"
+  - CA: "GST reconciliation"
+  - HR: "screening resumes"
+  - Sales: "follow-up messages"
+  - Teacher: "making question papers"
+  - Bank staff: "KYC checks"
+- **S6:** [FRIEND_ROLE] should be non-tech (CA, HR or bank), so the proof is not only an engineer's.
+- **Language:** "your normal work week", never "workflow" or "LLM".
+- **Caption:** opens with "Works for any desk job. No tech knowledge needed."
+
+## 6. Participation engine
+
+- **Why they comment:** the reel shows his result and withholds theirs. One word gets it, it is free, and the creator went first.
+- **Why they run it:** the input is easy, just "describe your week like you'd tell a friend." The DM carries one starter line to paste.
+- **Result card:** the tool ends with a square, screenshot-ready card.
+  - Role, three coloured bars (AI does it / AI helps / needs human) and the top task to hand over.
+  - The 2-week experiment and a footer: "Do yours: comment AUDIT @handle".
+  - No employer name, so it is safe for family and office WhatsApp groups.
+- **Send trigger:** the card ends with "Compare with a friend in a different job", so the comparison drives sends.
+- **Loop:**
+  - Reel 2: "I audited the 5 most-commented jobs", from real submissions, anonymised and with permission.
+  - Reel 3: his own 2-week experiment result, reported honestly even if it fails.
+  - The pinned comment asks "Which job should I audit next?", so comments double as research.
+
+## 7. Risks and how the script avoids them
+
+- **Fear-mongering:**
+  - No layoff numbers are spoken.
+  - The 66% Business Today figure covers AI/ML workers, not the general viewer, so it stays out of the script. It goes in the caption at most, with the source.
+  - Fear lasts under 9 seconds, and every red row is paired with an action.
+- **Sales funnel:**
+  - "Free" is said twice, with no email gate, course or waitlist.
+  - The DM contains the link and one line, nothing else.
+- **Fake:**
+  - All screens are real recordings of real runs, and placeholders stay until then.
+  - The friend's audit is run for real with consent, or S6 is cut and S4 is extended.
+  - The limits are stated on screen: "No layoff prediction."
+  - The research is named as the method, not as proof of his numbers.
+- **Over-claiming:** the ratings say "AI does this task well today", never "you will be replaced".

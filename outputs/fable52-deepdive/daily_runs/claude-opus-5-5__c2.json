@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "```python\nimport re\n\n_DURATION_RE = re.compile(r\"^\\s*(?:(\\d+)\\s*h)?\\s*(?:(\\d+)\\s*m)?\\s*$\", re.IGNORECASE)\n\n\ndef parse_duration(s: str) -> int:\n    \"\"\"Parse a duration string like '1h 30m', '45m', '2h', '1h5m' into total minutes.\n\n    Raises ValueError for invalid input.\n    \"\"\"\n    if not isinstance(s, str):\n        raise ValueError(f\"Invalid duration: {s!r}\")\n\n    match = _DURATION_RE.match(s)\n    if not match:\n        raise ValueError(f\"Invalid duration: {s!r}\")\n\n    hours, minutes = match.groups()\n    if hours is None and minutes is None:\n        raise ValueError(f\"Invalid duration: {s!r}\")\n\n    return int(hours or 0) * 60 + int(minutes or 0)\n```",
+ "seconds": 607.3,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1278.4,
+ "out_tok": 310,
+ "usd_list": 0.01131,
+ "cli_cost": 0.0140904,
+ "item": "c2"
+}

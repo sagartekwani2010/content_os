@@ -1,0 +1,12 @@
+{
+  "schema": "content_os.orchestrator/state@1",
+  "reel_id": "ai-career-failure-hired",
+  "idea": "AI careers reel: the failure that gets you hired (eval + caught failure + fix beats certificates), using the Meal Analyser evidence",
+  "created_at": "2026-11-18T05:49:29+00:00",
+  "media_dir": "~/Movies/ContentOS/ai-career-failure-hired",
+  "stages": {},
+  "approvals": {},
+  "waiting": null,
+  "last_error": null,
+  "feedback_count": 0
+}

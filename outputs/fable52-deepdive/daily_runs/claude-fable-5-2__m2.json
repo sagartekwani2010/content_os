@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "**EMI calculation (reducing balance)**\n\n- Principal P = ₹5,00,000\n- Monthly rate r = 9% / 12 = 0.75% = 0.0075\n- Number of instalments n = 5 × 12 = 60\n\nFormula: EMI = P · r · (1 + r)ⁿ / [(1 + r)ⁿ − 1]\n\n- (1.0075)⁶⁰ ≈ 1.565681\n- EMI = 5,00,000 × 0.0075 × 1.565681 / 0.565681 ≈ 3,750 × 2.767781 ≈ ₹10,379.18\n\nThe EMI is about **₹10,379** per month.\n\nANSWER: ₹10,379",
+ "seconds": 10.2,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1135.75,
+ "out_tok": 820,
+ "usd_list": 0.04189,
+ "cli_cost": 0.04763169999999999,
+ "item": "m2"
+}

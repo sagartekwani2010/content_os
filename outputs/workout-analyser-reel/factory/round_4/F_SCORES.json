@@ -1,0 +1,193 @@
+{
+ "check": {
+  "must_fix": [
+   "Beat 1 / keyframe A: the reel opens on 1.5 s of raw IMG_2661 with 'no overlay'. BRIEF v3 item 1 says the payoff image comes first: the green ghost over the worst rep, the gap filling red, and the STOP stamp. Open on the ghost_stop.mp4 composite from frame one (the raw swing can follow in beat 2). If a round-4 note asked for the raw opening, cite it under Calls taken. Keyframe A also contradicts itself: it says 'no overlay' but carries the REVERSE CRUNCH: WATCH THE SWING label. The loop target (frame A) must match whichever opening is chosen.",
+   "The '\u2248 $0.15 / SET' chip on the final schematic reads as the cost of the whole system. FACTS give about USD 0.15 per set for the judge agent only, and the coach is a second Fable 5.2 call. Either put it on the judge box as 'JUDGE \u2248 $0.15 / SET', or make the chip [SLOT: total cost per set] until the total is measured.",
+   "The can't-see outcome was dropped without being logged as a call. BRIEF v3 item 6, the approved outline, makes it part of the fix: 'Can't see a joint -> CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET.' The draft keeps only a CAN'T-SEE CHECK box and a legend count, and lists cant_see.mp4 as 'not in the cut' without explaining why. Restore it on screen only, with no new spoken words: for example 0.8-1 s of cant_see.mp4 or the [CAN'T-SEE STRING] with '4 OF 23 SETS' as a branch on arch_4/arch_5 after CHECK FOOTAGE in beat 10. MAIN has 2.8 s of headroom. Otherwise surface it as a creator decision."
+  ],
+  "should_fix": [
+   "Caption: '1 false alarm' is a count FACTS do not state. FACTS establish the lunge as the one judge STOP that was overruled (final CHECK FOOTAGE 1), and judge and coach disagreed on 7 of the 16 sets both could judge. Write 'a false alarm (my AI misread a lunge...)'.",
+   "Baseline wording: FACTS define the baseline as the best rep in that same set (largest range), not a personal best overall. Label the box 'MY BEST REP (THIS SET)', or show 'SAME SET, SAME CAMERA' on the ghost, so that 'my own best, not a textbook' isn't read as an all-time best.",
+   "Save asset: 'SAMPLE RESULT: ... REPS 4, 5, 9 CUT SHORT' uses the coach's 12-rep numbering. The pose tool split IMG_2661 into 20 reps, and FACTS say no rep count is shown for this set. Drop the rep numbers ('BAD \u00b7 REPS CUT SHORT \u00b7 SWUNG, NOT CONTROLLED') so no viewer can cross-check them against the ghost's best and worst reps. It stays a paraphrase, not a quote.",
+   "Spoiler: the set name 'LUNGE: WATCH ME TURN' sits on the lock-on at 15.4 s in MAIN (and in T3), which gives the twist away 6 s before beat 7. In MAIN, label it 'LUNGE' until beat 8a, then switch to WATCH ME TURN.",
+   "Beat 1 carries too much text for a 3.9 s cold open: set name, STOP, the reason, and two angles. Keep STOP and HIP RANGE 122\u00b0 / 53\u00b0 on the hook; move LEGS NOT LOWERING FULLY to beats 2 and 12, where it is held.",
+   "Song: REEL_DEFAULTS notes that the Edits music slot does not export, and the house rule is one MP4 with the music mixed in. State how the Instagram library song (locked) reaches the posted file: added at post time, or a pre-mix if the licence allows. The chant must still land on 3-2-1 either way. The draft also runs the song with vocals under the spoken beats 1-4, beyond the brief's countdown use. Claude cannot hear it, so the creator has to check by ear that the vocals do not mask the speech, or the song starts at the countdown.",
+   "Beat 5 delivery says 'look up at the panel for 2 s', but the countdown is 1.8 s. Match the cue to 1.8 s in both the beat sheet and the teleprompter.",
+   "CTA promise: the writer did not open outputs/workout-analyser-reel/share/. Before FORM locks, confirm the bundle has the form-coach skill, that architecture.png matches the HUD schematic promised as 'this diagram', and that it holds no footage, frames or personal data (the repo is public).",
+   "Log the E2 entry in production/EXPERIMENTS.md before recording, keeping the stated confound (TRIAL also reorders sections and is about 2 s shorter; the 3 s hold is the clean metric).",
+   "Still open before gate 2, as the draft itself states: Fable judge score of at least 7.5 and the 16-persona panel, seam-band scan and frame check of every clip, cover.png, the Chrome teleprompter, and the [SLOT] timestamps (worst rep, turned rep, and a side-on rep in IMG_2650; if none exists, use the stated fallback)."
+  ],
+  "facts_ok": false
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7.5,
+    "drop_beat": "none",
+    "why": "I stay to see how the system handles a bad call. The switch from STOP to CHECK FOOTAGE is the part that makes the diagram worth saving."
+   },
+   {
+    "id": 2,
+    "score": 5.5,
+    "drop_beat": "MAIN 6 \u00b7 My best",
+    "why": "One STOP in 23 gets my attention. I want to know what made that set cross the line; the boxes tell me where the data went, not where the line was."
+   },
+   {
+    "id": 3,
+    "score": 5,
+    "drop_beat": "MAIN 5 \u00b7 Online",
+    "why": "The swing is recognisable enough that a friend comes to mind. Then the countdown feels like the start of a different reel, and I scroll instead of sending."
+   },
+   {
+    "id": 4,
+    "score": 4.5,
+    "drop_beat": "MAIN 4 \u00b7 Gym buddy",
+    "why": "I can see the short rep once the green outline appears. By the gym-buddy replay I've seen the mistake three times and don't have a new question."
+   },
+   {
+    "id": 5,
+    "score": 4,
+    "drop_beat": "MAIN 3 \u00b7 Count",
+    "why": "I follow the footage and the plain explanation about swinging. When the tiles land, I'm trying to distinguish HOLD from CHECK FOOTAGE for sets I haven't seen."
+   },
+   {
+    "id": 6,
+    "score": 8.5,
+    "drop_beat": "none",
+    "why": "The skeleton lock-on gets me past the countdown. Seeing it fail when the lifter turns makes this more interesting than a pose-tracking demo; I'd send it to a project teammate."
+   },
+   {
+    "id": 7,
+    "score": 6.5,
+    "drop_beat": "MAIN 11 \u00b7 Agreed",
+    "why": "Comparing against a personal best is a clear idea, and the lunge shows how that comparison can mislead. Once the second check resolves it, I know what the crunch verdict will be."
+   },
+   {
+    "id": 8,
+    "score": 6,
+    "drop_beat": "MAIN 12 \u00b7 Verdict",
+    "why": "The false positive earns my attention. Two models agreeing explains why the system issued STOP, but not why the set should never have been done. The last stamp doesn't settle that."
+   },
+   {
+    "id": 9,
+    "score": 7.5,
+    "drop_beat": "none",
+    "why": "The lunge gives me a concrete example for the diagram: the numbers flag it, the video doesn't, so it goes to review. I'd save that frame to explain the idea to a colleague."
+   },
+   {
+    "id": 10,
+    "score": 6.5,
+    "drop_beat": "MAIN 11 \u00b7 Agreed",
+    "why": "Who gets to overrule the first call is a better question than how many joints it tracks. I stay for that answer; returning to the crunch feels like hearing the conclusion twice."
+   },
+   {
+    "id": 11,
+    "score": 6,
+    "drop_beat": "MAIN 5 \u00b7 Online",
+    "why": "The ghost makes the hook work even without sound. At the countdown I still have no hint that the AI made a mistake, so there's little reason to wait through a title reveal."
+   },
+   {
+    "id": 12,
+    "score": 5.5,
+    "drop_beat": "MAIN 6 \u00b7 My best",
+    "why": "The red tile expanding into the offending rep is an image I'd remember. I can repeat 'my own best, not a textbook' without following the rest of the flowchart, so I move on."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "CHECK FOOTAGE is more interesting to me than STOP: there's an actual fallback when the inputs disagree. I'd comment FORM to inspect the coach instructions rather than infer them from the animation."
+   },
+   {
+    "id": 14,
+    "score": 7.5,
+    "drop_beat": "none",
+    "why": "The camera turn is the best evidence in the reel: the apparent knee depth changes with viewpoint. I'd save the diagram to compare the two judges' inputs, not take their agreement as ground truth."
+   },
+   {
+    "id": 15,
+    "score": 6.5,
+    "drop_beat": "MAIN 10 \u00b7 Two AIs",
+    "why": "I'd show someone the ghost and the turned lunge because both are visible on the rep. When the footage gives way to judge and coach boxes, I'd rather see one controlled crunch beside the swung one."
+   },
+   {
+    "id": 16,
+    "score": 5.5,
+    "drop_beat": "MAIN 6 \u00b7 My best",
+    "why": "The chant into the skeleton reveal is fun enough to keep me there. The next screen asks me to read a pipeline when what I want to watch is the skeleton follow the lifter."
+   }
+  ],
+  "groups": {
+   "mass": 5.21,
+   "fin_consult_mktg": 6.33,
+   "builders": 7.88
+  },
+  "overall": 6.28,
+  "top_fixes": [
+   "Test TRIAL's false-alarm opening against MAIN's crunch opening. The lunge gives a cold viewer a question the swing alone doesn't: what fooled the AI? Treat 3-second hold as a comparison of two opening packages, not just two lines; the footage and stamps differ too.",
+   "In MAIN, cut the gym-buddy replay. Go straight from the one red tile to 'On this lunge, it nearly flagged the wrong set.' Keep the locked countdown, but let it introduce the investigation after viewers know why they should wait.",
+   "Give the lunge decision more screen time than the pipeline. Keep the turned rep visible next to two short labels: 'Numbers: shallow' and 'Video: same depth.' Hold CHECK FOOTAGE long enough to read; take the time from the repeated final crunch verdict.",
+   "Match the claims to the footage. '23 sets. My AI flagged this one' is supported; 'should never have done' promises evidence of danger. Likewise, 'For this lunge, I'd film side-on' is a takeaway the viewer just saw demonstrated, without making it a rule for every lift.",
+   "Use the final hold for one legible sample result: 'Reps 4, 5, 9 cut short.' Then say exactly what FORM delivers: 'Want the coach instructions and diagram? Comment FORM.' Let the DM carry the full schematic rather than asking a phone viewer to read it under the CTA."
+  ]
+ },
+ "critic": {
+  "predicted_score": 7.2,
+  "would_approve": false,
+  "change_list": [
+   "Where is the Fable score? Don't send me a script to lock without the judge and panel number. Run it, and only come back if it's 7.5+.",
+   "Too much status on top. Rounds, panel cut-offs, what you didn't open: not my problem. Give me the script, the calls you took, and what you need from me. That's it.",
+   "Cover is not rendered, teleprompter is not in Chrome, and there are 8-9 [SLOT]s in the visual board (timestamps, text renders, countdown re-time, side-on rep not even confirmed). I post tomorrow. Keep everything ready before I record.",
+   "The countdown and blast come at 13.6 s. That's too late, it's my moment with the chant. Get it in by 9-10 s: put '23 sets, 1 STOP' on screen under the fault line or merge beats 2-4. Don't make me say three stake lines.",
+   "You dropped the wave line. The outline said my movement becomes a wave and each rep is compared with my own best. Six boxes in 4 seconds is the architecture flying past, and that's my core strength. Bring back one short wave line and give the diagram room to be read.",
+   "Hero visuals are getting too little time. Skeleton lock-on is under 2 s behind a question and the wave is hidden under the lunge line. These are the awe shots, let them actually breathe.",
+   "CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET. was in the outline's fix beat and it's rendered. Show it for a second at least, not just a box on the diagram.",
+   "CTA: say what they get out of it. 'Comment FORM to access my form-coach skill and check your own sets.' The diagram can stay on screen.",
+   "Give the two AIs one comparison everyone gets, like two examiners checking the same paper. Keep it short.",
+   "Caption is too long and reads like a summary of the reel. Make it short and sassy: the 'wrong set' twist, one honest line, FORM, the gym-buddy line, not training advice.",
+   "Ep 4 tease: I'll give you the topic. Keep the last second over my own footage with the red mark and a hit, then loop.",
+   "Possible smaller asks: ghost from frame one instead of 1.5 s of raw clip; cost chip in rupees, not $0.15 (needs a conversion rate that is not in FACTS)."
+  ],
+  "taste_violations": [
+   "Non-negotiable, checklist 22 (Fable judge score of at least 7.5 before lock): the draft says the Fable judge and 16-persona score were not run. Runtime passes at 45.2 s.",
+   "Non-negotiable (finished options, not rounds of iteration): the status block exposes 'round 4', nine notes, checker must-fixes and a cut-off panel.",
+   "Non-negotiable, checklist 25 (caption, first comment and cover in the package): caption and first comment are present, but cover.png is only described.",
+   "Strong preference (assets ready before footage): the keyframe table still has open [SLOT]s for label renders, timestamps, the countdown re-time and an unconfirmed side-on rep.",
+   "Architecture-is-signature tension: the diagram is kept and is the save asset, but stages 1-3 run in about 4.3 s and the outline's wave line is cut from the voice, so spoken technical content is two short lines.",
+   "Deviation from the approved outline: the countdown lands at 13.6 s instead of about 8-10 s; the CAN'T SEE string is absent from the fix beat; the 'So always' rule moved from the payoff to after the lunge (explained in the draft, likely accepted).",
+   "Checklist 5 (each finding gets an everyday comparison and a 'So always' action): the STOP has the gym-buddy line and the lunge has the side-filming rule, but the two-AI fix has neither. Page cuts do not apply to a build reel.",
+   "Checklist 23 (main and trial differ in one variable, hypothesis logged): TRIAL changes the hook, the section order, four lines and about 2 s of runtime, and the E2 entry is not yet in EXPERIMENTS.md. The draft discloses the confound and the reorder is the creator's own note, so expect a shrug.",
+   "Checklist 21 (next-reel tease over own footage with a red mark and hit): only a 1 s conditional slot with no topic; the default ending is the loop.",
+   "Checklist 12 and voice: cost is shown as about $0.15 a set, not round rupees; the CTA says 'to get my form-coach skill and this diagram' instead of naming the benefit.",
+   "REEL_DEFAULTS packaging: the caption is seven short paragraphs that recap the reel, not 'short and sassy, not a summary'.",
+   "Passes: 1 (one file with teleprompter), 2 (English only; the song is the creator's lock), 3 (no spoken hedge), 4 (three ideas, one tip), 6 (opens on the swing), 7 (strongest claim and payoff image in beat 1), 8 (not a cost hook), 11 (blast as heading card, real routing diagram), 14 (tip is their own), 15 (every number traces to FACTS; the 127 words and 45.2 s add up), 16, 17, 18 (alternates, one stated pair), 19 (beats record alone), 20 (no aphorism close), 24 (a sound on every visual event). Not applicable: 9, 10, 13."
+  ],
+  "what_they_will_love": [
+   "The countdown, blast and Desi Boyz chant are kept at 1.8 s even though the panel wanted them cut; the lock was respected.",
+   "The payoff image is in the first 3 s: green ghost of the best rep over the worst, red gap, STOP stamp, with measured 122\u00b0 vs 53\u00b0.",
+   "The architecture builds progressively as a HUD schematic, completes on the payoff and is held clean as the save asset with Fable 5.2 on the judge box.",
+   "The false alarm is told straight: 'It was wrong', then 'I had just turned towards the camera', resolved to CHECK FOOTAGE.",
+   "'So always film your set from the side' is one short declarative action in their own voice, the kind they say verbatim.",
+   "'We all know one gym buddy who does this' is the forwardable line, and the caption repeats it.",
+   "Comment FORM delivers something runnable (the form-coach skill plus the diagram), with a real coach output as the on-screen sample.",
+   "Sound is designed on every visual event: dhol hits, stamp hits, and one deliberate silence on the twist.",
+   "Seven routine calls were taken without asking, and the full script, visuals, hooks, caption and teleprompter sit in one file.",
+   "Main and trial are both written with a stated hypothesis, a third alternate hook and an honest note on the confound.",
+   "Runtime is 45.2 s with short one-sentence beats, no closing aphorism, no spoken hedges, and 'would have stopped me' wording throughout.",
+   "The caption owns the tease honestly: 'The set I teased wasn't the one.'"
+  ]
+ },
+ "score": 5.84,
+ "summary": {
+  "panel": 6.28,
+  "critic": 7.2,
+  "must_fix": 3,
+  "approve": false,
+  "groups": {
+   "mass": 5.21,
+   "fin_consult_mktg": 6.33,
+   "builders": 7.88
+  }
+ }
+}

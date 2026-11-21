@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "The two coins are a ₹10 coin and a ₹5 coin.\n\n\"One of them is not a ₹10 coin\" only says that one coin isn't a ₹10. The other one can still be a ₹10. Since ₹15 − ₹10 = ₹5, the coin that isn't a ₹10 is the ₹5 coin.\n\nANSWER: ₹10 and ₹5",
+ "seconds": 3.1,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1137.0,
+ "out_tok": 204,
+ "usd_list": 0.00431,
+ "cli_cost": 0.0058656,
+ "item": "r7"
+}

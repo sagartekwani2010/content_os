@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "The ball costs ₹10, since ₹110 total minus the bat's ₹100 leaves ₹10.\n\nANSWER: ₹10",
+ "seconds": 940.6,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2401.0,
+ "out_tok": 363,
+ "usd_list": 0.00042,
+ "cli_cost": 0.0004918,
+ "item": "r3"
+}

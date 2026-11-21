@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Chicken pieces, diced",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "preparation": "cooked, diced into bite-size cubes, lightly browned",
+   "confidence": 0.5,
+   "kcal": 165.0,
+   "kcal_range": [
+    116,
+    231
+   ],
+   "protein_g": 31.0,
+   "protein_range": [
+    21.7,
+    43.4
+   ],
+   "fdc": {
+    "fdc_id": "171477",
+    "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 165.0,
+    "protein_100g": 31.02
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Kalamata olives",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 60,
+   "fdc_query": "Olives, ripe, canned (small-extra large)",
+   "preparation": "whole, pitted or unpitted, brined",
+   "confidence": 0.45,
+   "kcal": 52.2,
+   "kcal_range": [
+    35,
+    70
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.3,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "169094",
+    "description": "Olives, ripe, canned (small-extra large)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 116.0,
+    "protein_100g": 0.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 145.0,
+  "kcal": 217.2,
+  "protein_g": 31.4,
+  "grams_range": [
+   100.0,
+   200.0
+  ],
+  "kcal_range": [
+   151,
+   301
+  ],
+  "protein_range": [
+   22.0,
+   43.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 145.0,
+   "kcal": 217.2,
+   "protein_g": 31.4,
+   "grams_range": [
+    100.0,
+    200.0
+   ],
+   "kcal_range": [
+    151,
+    301
+   ],
+   "protein_range": [
+    22.0,
+    43.9
+   ]
+  },
+  "rows": [
+   "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "Olives, ripe, canned (small-extra large)"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "1a353b0de279f264bbbf48e613948b83291d99e50d9d19910732d1d7ef02baeb",
+ "scale_cues": "Large stainless steel mixing bowl, roughly 30 cm across the rim. The food sits in a small cluster at the center of the base. Each olive is about 3 cm long, and the chicken cubes are about 2 cm.",
+ "assumptions": [
+  "The white cubes are cooked chicken breast. They could also be another lean poultry or a firm tofu-like item.",
+  "The dark ovals are kalamata olives. I counted about 10 and assumed they have pits, at about 4-5 g each.",
+  "No visible sauce. Any cooking oil is minimal, so I did not list it as a separate item.",
+  "The bowl is empty apart from the food, and the shine on the chicken may mean a small amount of oil."
+ ],
+ "latency_s": 9.76,
+ "calls": [
+  {
+   "wall_s": 6.69,
+   "duration_ms": 5947,
+   "num_turns": 2,
+   "cost_usd_cli": 0.025736199999999997,
+   "cost_basis": "list",
+   "input_tokens": 8988,
+   "output_tokens": 530
+  },
+  {
+   "wall_s": 3.06,
+   "duration_ms": 1994,
+   "num_turns": 1,
+   "cost_usd_cli": 0.009624700000000002,
+   "cost_basis": "list",
+   "input_tokens": 2054,
+   "output_tokens": 118
+  }
+ ],
+ "cost_usd_cli": 0.03536,
+ "log_id": "621f94bc85ce"
+}

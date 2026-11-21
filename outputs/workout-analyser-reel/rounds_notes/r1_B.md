@@ -1,0 +1,41 @@
+## MAIN
+| Beat | E/H | Time | Spoken | Top-half visual | On-screen text | Music / SFX |
+|---|---|---|---|---|---|---|
+| 1 | H | 0.0-3.9 | "My AI system found the one set I should never have done." | `ghost_stop.mp4` (green ghost of my best rep over the worst rep, red gap visible from frame 1) | Big red STOP · small: GYM JARVIS = my AI gym system · "footage: 15 Aug 2026" | Desi Boyz beat in from frame 1; 1.0x; HUD lock-on tick on "one set" |
+| 2 | E | 3.9-7.6 | "But how did I build it? Months of weekends. Come, let's see." | `build_montage.mp4` (HUD, code, earlier episodes; red STOP thumbnail pinned in a corner) | SEPT 2026 → NOV 2026 · MONTHS OF WEEKENDS | Desi Boyz builds; soft click per cut |
+| 3 | H | 7.6-13.2 | "I had Claude dig through the research first. One warning stood out: the camera angle can fool it." | `build_montage.mp4` (research segment: paper title pages, then a phone-and-angle icon) | CLAUDE READ THE RESEARCH · small: arXiv 2608.24384 · big, held 1.5 s: THE CAMERA ANGLE CAN FOOL IT | Desi Boyz riser; warning ping -5 dB on "fool it" |
+| 4 | E | 13.2-14.8 | (no line) | `wait_over_wall.mp4` → `countdown_wall.mp4` → `wall_from_count.mp4` (fast 3-2-1, blast into the wall of sets, one tile red) | THE WAIT IS OVER · 3 · 2 · 1 · 23 SETS ON TRIAL | Desi Boyz drop on the blast; bass impact 0 dB; Desi Boyz ends here |
+| 5 | H | 14.8-19.8 | "I split it into three parts. SEE: each exercise is split and tracked across seventeen joints." | `arch3_overview.mp4` → `arch3_see.mp4` (opens on the skeleton drawn over my own body) | SEE → JUDGE → CHECK · then: PART 1 · SEE · 17 joints · 30 times a second | Rhythmic bed in on the drop's pulse; whoosh -5 dB; scan sweep -6 dB |
+| 6 | E | 19.8-23.2 | "Every rep becomes a wave, laid over my best rep's wave." | `dual_wave.mp4` (green wave = my best rep; each rep's wave drops on top of it; the shallow ones show a gap) | EVERY REP = ONE WAVE · green: MY BEST REP · shallower wave = shorter rep | Tick on each wave landing |
+| 7 | H | 23.2-27.2 | "Twenty-three sets on trial. Joint hidden, no wave: it refused to judge four." | `verdict_chips.mp4` (0.8 s) → `cant_see.mp4` (the wave breaks off where the joint disappears) | 23 SETS ON TRIAL · "CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET." · REFUSED TO JUDGE: 4 of 23 | Low denied tone -5 dB; bed dips for 0.5 s |
+| 8 | E | 27.2-30.6 | "Clear waves go to JUDGE: my best rep, not a textbook." | `arch3_judge.mp4` (clear waves flow into the JUDGE node; three chips light in turn) | PART 2 · JUDGE · MY BEST REP, NOT A TEXTBOOK · CONTINUE · HOLD · STOP · small: Claude Fable 5.2 | Whoosh -5 dB; three chip pops -5 dB |
+| 9 | H | 30.6-33.4 | "CHECK exists because of my lunges. JUDGE said STOP." | `arch3_check.mp4` (0.6 s, CHECK node lit) → `false_alarm.mp4` | PART 3 · CHECK · then: JUDGE: STOP · "Most reps cut short" · reverse lunge | Flicker in; bed cuts to silence on "STOP" |
+| 10 | E | 33.4-36.8 | "I'd only turned to the camera. That research warning came true." | `false_alarm.mp4` (punch-in on the reps where I turn; the beat-3 warning card slides back in) | FALSE ALARM · THE CAMERA ANGLE FOOLED IT · small: depth looked the same by eye | Silence; the beat-3 warning ping again, -5 dB |
+| 11 | H | 36.8-40.8 | "Now a second AI watches only the video. For STOP, both must agree." | `arch3_check.mp4` (coach node lit, the two-lock rule, the lunge chip flips to amber) | COACH: video only, never sees the numbers · JUDGE + COACH agree → STOP · LUNGE: CHECK FOOTAGE | Light wipe; bed returns; two-lock click -4 dB; chip flip pop -5 dB |
+| 12 | E | 40.8-46.9 | "The one STOP: my reverse crunch. Best rep lowered my legs 122 degrees. Worst, 53." | `lockon_red.mp4` (0.8 s) → `ghost_stop.mp4` (green ghost reaches full depth; the worst rep stops short; the gap fills red) | STOP · green: BEST REP 122° · red: WORST REP 53° (hold 2 s) · small: JUDGE: STOP · COACH: BAD | 1.0x; red lock-on hit 0 dB; bed low; ghost whoosh -6 dB |
+| 13 | H | 46.9-51.9 | "Legs stopped short, momentum did the rest. Send this to the friend who swings every rep." | `raw_swing.mp4` (the raw set, no overlay) → `sample_result.mp4` | LEGS STOPPED SHORT · MOMENTUM DID THE REST · then: SEND TO THE FRIEND WHO SWINGS EVERY REP · corner tag: comment FORM → my AI coach prompt + the diagram | Bed swells; pop -5 dB on "send" |
+| 14 | E | 51.9-56.2 | "Salesforce is reportedly letting people go, while hiring AI engineers with LLM post-training experience." | `tease_jd.mp4` (source tag first, then the title block) | "People Matters, DNA · 19-20 Nov 2026 · not confirmed by Salesforce" · then: LMTS - Lead AI/ML Engineer (LLM Post-Training) · Bangalore / Hyderabad · Posted 6 Days Ago (hold 1.5 s) | Bed drops to a low pulse; whoosh -5 dB; highlight tick -5 dB |
+| 15 | H | 56.2-60.5 | "Many companies are doing the same. How do you get ready? Come, let's find out." | `tease_jd.mp4` (title block, punch-in) → `ghost_stop.mp4` (last 0.4 s, matches frame 1 for the loop) | MANY COMPANIES: CUTTING JOBS, HIRING FOR AI · FOLLOW · next: how to get ready | Pulse builds; bass impact on "out"; 1.5 s fade, cut on the STOP frame |
+
+## TRIAL
+| Beat | E/H | Time | Spoken | Top-half visual | On-screen text | Music / SFX |
+|---|---|---|---|---|---|---|
+| 1 | H | 0.0-4.3 | "My AI flagged one of my sets as STOP. It was wrong." | `false_alarm.mp4` | Big "STOP" struck through → FALSE ALARM · small: GYM JARVIS = my AI gym system · "footage: 15 Aug 2026" | Desi Boyz beat in from frame 1; 1.0x; glitch tick on "wrong" |
+| 2-4 | E/H/E | 4.3-15.2 | Same as MAIN beats 2-4 | Same as MAIN; the pinned thumbnail is the struck-through STOP | Same as MAIN | Same as MAIN; Desi Boyz ends on the blast |
+| 5-8 | H/E alternating | 15.2-31.0 | Same as MAIN beats 5-8 | Same as MAIN | Same as MAIN | Same as MAIN |
+| 9 | H | 31.0-33.8 | Same as MAIN beat 9 | `arch3_check.mp4` (0.6 s) → `false_alarm.mp4` | PART 3 · CHECK · then: JUDGE: STOP · "Most reps cut short" · tag: THE WRONG ONE | Flicker in; bed cuts to silence on "STOP" |
+| 10-14 | E/H alternating | 33.8-56.6 | Same as MAIN beats 10-14 | Same as MAIN | Same as MAIN | Same as MAIN |
+| 15 | H | 56.6-60.9 | Same as MAIN beat 15 | `tease_jd.mp4` → `false_alarm.mp4` (last 0.4 s, matches frame 1 for the loop) | Same as MAIN | Bass impact on "out"; 1.5 s fade, cut on the struck-through STOP frame |
+
+## WHAT CHANGED
+1. **SEE wording:** beat 5 now uses your line, "each exercise is split and tracked across seventeen joints", joined to "I split it into three parts"; "30 times a second" moved to the screen.
+2. **Waves:** beat 6 says how the comparison works, "Every rep becomes a wave, laid over my best rep's wave", and `dual_wave.mp4` shows each rep's wave dropping onto the green best-rep wave.
+3. **Continuity around the refusal:** the wave now carries three beats in a row: every rep is a wave (6), joint hidden means no wave so it refused four (7), clear waves go to JUDGE (8).
+4. **Lunge:** beat 9 gives CHECK its reason ("CHECK exists because of my lunges. JUDGE said STOP."), and beat 10 pays off beat 3 ("That research warning came true") with the same warning card and ping returning. Beat 11 is the fix, with the lunge flipping to CHECK FOOTAGE on screen.
+5. **The one real STOP:** beat 12 is one picture and one number pair at 1.0x, "Best rep lowered my legs 122 degrees. Worst, 53", over the green ghost and red gap held for 2 s. "I counted that set" is gone, and beat 13 opens on the raw set with "Legs stopped short, momentum did the rest".
+6. **Forward line:** "Send this to the friend who swings every rep" now follows straight from the momentum picture, replacing the half-rep buddy line; FORM stays as a corner tag.
+7. **Beat count and length:** MAIN is 15 beats including the silent countdown (down from 24), and TRIAL is the same 15 with only the hook, pinned thumbnail, beat-9 tag and loop frame changed. It is about 186 spoken words, estimated at 60.5 s (MAIN) and 60.9 s (TRIAL) after 1.15x. Also:
+   - All courtroom words are gone except your "on trial".
+   - "Here's why" is cut, so Salesforce reads as a bridge to what's next.
+   - "Continue, hold, or stop" is on-screen chips only.
+   - Beats 3, 5, 12 and 13 run over 14 words: 3 is your locked research line, and 5, 12 and 13 each carry two merged ideas to stay within 15 beats.

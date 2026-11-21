@@ -86,10 +86,13 @@ def build_payload(reel: Reel, phase: str, cfg: dict) -> tuple[str, list[str]]:
         for b in beats:
             sel = next((e for e in selects["beats"] if e["beat"] == b["id"]), {})
             per_beat.append({"beat": b["id"], "script": b["text"], "default_pick": sel.get("take"),
+                             **{k: b[k] for k in ("emotion", "delivery", "continuity") if b.get(k)},
                              "takes": [{k: t.get(k) for k in _TAKE_FIELDS} for t in scores["takes"] if t["beat"] == b["id"]]})
         task = ("Choose one take per beat from the eligible takes (or null when none is eligible). The default rule "
                 "is the last complete fluent take; change it only when the measurements give a reason (pace, "
-                "level, head-pose, pauses, wording closer to the script). Also suggest when each beat's visual "
+                "level, head-pose, pauses, wording closer to the script) or when the beat's target emotion/delivery "
+                "(fields emotion, delivery, continuity in the script) and continuity with the neighbouring picks argue "
+                "for another take: matching energy and pose across a cut beats a marginally better read. Also suggest when each beat's visual "
                 "should appear (start_offset_s from the beat start, anchored to a spoken word).")
         body = {"beats": per_beat, "cue_sheet": cue, "thresholds": cfg["score"]}
     elif phase == "cuts":
@@ -103,7 +106,9 @@ def build_payload(reel: Reel, phase: str, cfg: dict) -> tuple[str, list[str]]:
         body = {"beats": beats, "segments": segs, "cuts": review["joins"], "cue_sheet": cue,
                 "qa_thresholds": {k: cfg["qa"][k] for k in ("face_jump_warn_pct", "face_jump_fail_pct", "min_clip_s")}}
         task = ("Review every cut (numbered from 1 as in the images). List the cuts you would reject and why "
-                "(abrupt face jump, level step, wording that does not flow from the previous beat, framing), with "
+                "(abrupt face jump, level step, wording that does not flow from the previous beat, framing, a visible "
+                "change in pose, hand position, expression or energy across the cut, or an expression that contradicts the "
+                "beat's target emotion), with "
                 "a concrete fix (other take, re-record, deliberate framing change). Then suggest visual timing per beat.")
         images = [str(reel.resolve(p)) for p in review.get("contact_sheets", [])][: cfg["judge"]["max_images"]]
     else:

@@ -1,0 +1,23 @@
+{
+ "caption": "I let AI judge 23 of my gym sets. It said STOP to one. And it raised one false alarm.\n\nThe false alarm first. On my lunges, the AI judge said STOP. My depth was fine: I'd only turned towards the camera, and the angle fooled it.\n\nSo I gave it a second opinion. The system now has three parts:\n1. SEE: tracks 17 joints, 30 times a second. Every rep is one dip in a wave. If a joint is hidden, it refuses to judge (4 of my 23 sets).\n2. JUDGE: every rep against my own best rep from the same set. Not a textbook.\n3. CHECK: a second AI that only watches the video. STOP only when both agree. If they disagree: check the footage.\n\nThe one real STOP: my reverse crunch. Short, swung reps. Half reps don't count, and now my AI agrees.\n\nClaude also went through over 200 papers and tools. One warning stood out: the camera angle can fool the agent. My lunges proved it.\n\nSend this to the friend who counts their half reps.\n\nComment FORM and I'll send you my AI coach prompt + the 3-part diagram.\n\nNext: Salesforce is reportedly letting people go in India, and at the same time hiring a \"Lead AI/ML Engineer (LLM Post-Training)\" in Bangalore. Many companies are doing the same: cutting jobs and hiring for AI. How do you become the one they hire? Follow along: getting hired, then evals, then post-training.\n\nSmall print: Gym Jarvis Ep 3, the Workout Analyser. Gym Jarvis was built over months of weekends. Footage filmed on my phone on 15 and 28 Aug 2026, before the analyser existed, and analysed in Nov. One camera angle. Both AIs are Claude Fable 5.2 with different inputs; they agreed on flag vs no flag in 9 of the 16 sets both could judge. Not training advice. Salesforce layoff reports: People Matters, DNA (19-20 Nov 2026), not confirmed by Salesforce. Job posting: Salesforce careers site, JR368314.\n\n#GymJarvis #AIAgents #ClaudeFable #BuildInPublic #FitnessTech #AIJobs",
+ "first_line": "I let AI judge 23 of my gym sets. It said STOP to one. And it raised one false alarm.",
+ "pinned_comment": "Comment FORM and I'll send you my AI coach prompt + the 3-part diagram (SEE, JUDGE, CHECK). Next episode: how to get hired for the AI roles companies are still hiring for. Follow so you don't miss it.",
+ "cover_options": [
+  {
+   "line1": "AI JUDGED 23 OF MY SETS",
+   "line2": "ONE GOT THIS",
+   "why": "A number plus 'AI judged me' works for viewers who neither lift nor code, and the headline points at the red STOP stamp instead of repeating it, so the image finishes the sentence. It needs the stamp to stay inside the 3:4 grid crop."
+  },
+  {
+   "line1": "THE ONE SET I SHOULD",
+   "line2": "NEVER HAVE DONE",
+   "why": "Matches the spoken hook word for word, so cover and first second agree. It is weaker for cold viewers in the grid: no number and no mention of AI."
+  },
+  {
+   "line1": "23 SETS ON TRIAL",
+   "line2": "MY AI FLAGGED ONE",
+   "why": "The courtroom framing is clear and 'flagged' is accurate for footage analysed later. It is flatter than option 0 because it describes the stamp rather than playing off it."
+  }
+ ],
+ "cover_pick": 0
+}

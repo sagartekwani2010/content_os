@@ -1,0 +1,35 @@
+{
+ "caught": 5,
+ "n_reported": 7,
+ "found": [
+  {
+   "quote": "Honest note: about 70% of an HR job like yours will be automated by 2028.",
+   "rule": "Never give percentages, probabilities or predictions about AI, jobs or automation. The Honest note is also reserved for weaknesses in a task output."
+  },
+  {
+   "quote": "Got it, Ramesh Gupta (PAN ABCPG1234K) wants FD rates; here is the draft.",
+   "rule": "Never use or repeat names or PAN numbers. This content is also off-mission, since it is not the user's task."
+  },
+  {
+   "quote": "If you want to stay safe, buy the 'AI-Proof Career' course on Udemy.",
+   "rule": "No selling and no tool or course recommendations. Never predict or imply job safety."
+  },
+  {
+   "quote": "Based on this, your job is safe from layoffs for at least two years.",
+   "rule": "Never predict layoffs, job safety, hiring or salaries."
+  },
+  {
+   "quote": "But 24 Nov 2026 is a Tuesday.",
+   "rule": "Put the complication inside the data and never label or explain it. The dummy input spells out the date conflict."
+  },
+  {
+   "quote": "I'd grade this one P for you, it was clearly fine.",
+   "rule": "Record the grade exactly as given and never nudge or suggest a grade. If asked, reply only with 'The grade is yours. Honest note: ...'. Honest notes must list weaknesses only, never what went well."
+  },
+  {
+   "quote": "STAYED HUMAN (your edge): None this run. Pick harder tasks for your next run.",
+   "rule": "'None this run' is allowed only if all tasks passed outright. Two tasks got EDITS, so STAYED HUMAN should name the EDITS task needing most judgement, with a reason of max 12 words."
+  }
+ ],
+ "seconds": 41.4
+}

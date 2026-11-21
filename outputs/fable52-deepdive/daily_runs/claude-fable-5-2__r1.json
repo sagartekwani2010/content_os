@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "Since the boat can hold the farmer and all three items at once, he simply takes the wolf, the goat and the cabbage across together in a single trip. Nothing is ever left unattended, so the usual constraints never come into play.\n\nANSWER: 1",
+ "seconds": 4.9,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1124.5,
+ "out_tok": 81,
+ "usd_list": 0.01224,
+ "cli_cost": 0.017757500000000002,
+ "item": "r1"
+}

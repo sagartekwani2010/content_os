@@ -1,0 +1,192 @@
+{
+ "check": {
+  "must_fix": [
+   "The diagram gate misstates the agreement rule. Keyframe P ('BOTH AGREE? \u2192 CONTINUE / HOLD / STOP, else CHECK FOOTAGE') and beat 7's on-screen 'TWO AIs MUST AGREE' imply that every verdict needs agreement. FACTS: STOP only if the judge says STOP AND the coach says bad; a disagreement gives CHECK FOOTAGE. The judge and coach agreed on flag vs no flag in only 9 of 16 sets, yet only 1 set ended as CHECK FOOTAGE, so HOLD and CONTINUE do not need agreement. Redraw the gate as 'STOP NEEDS BOTH \u00b7 JUDGE STOP + COACH GOOD \u2192 CHECK FOOTAGE' and scope beat 7's on-screen line to STOP (e.g. 'TO CALL STOP, TWO AIs MUST AGREE'). Keep the spoken line as locked; beat 11 is already accurate.",
+   "The CTA giveaway is unsupported. Neither BRIEF nor FACTS contains the keyword FORM or the 'form-check skill + this diagram' offer, but the draft says 'as the creator confirmed'. Mark it [SLOT: CTA keyword + giveaway] until the creator confirms it. Also confirm that `.claude/skills/form-labeller/` exists, works and can be shared (public repo, no footage).",
+   "Beat 4 (keyframe G) has the brackets 'step across the peaks' of the IMG_2661 hip wave. The pose tool split this set into 20 reps where the coach counts 12, and FACTS says no rep count is shown for it. Twenty bracketed peaks is a countable rep count that contradicts the coach. Mark only the best peak (122\u00b0, green) and the worst (53\u00b0, red), with no per-peak brackets or ticks."
+  ],
+  "should_fix": [
+   "Beat 6 shows 'COACH: GOOD \u00b7 DEPTH CONSISTENT' before the coach is introduced in beat 7. Move the coach chip to beat 7, where the gate resolves, and keep beat 6 to the two frames.",
+   "Beat 6's two lunge frames are not specified. Add [SLOT: timestamps of the side-on and turned reps] and check them by eye. Print no knee-angle numbers for them, since none are in FACTS.",
+   "The 2/3 re-hook is weak. Beat 4 already says 'compared with my own best rep', so beat 8's 'And the standard? My own best' answers a question the viewer already has the answer to. Consider holding 'my own best' back for beat 8, e.g. beat 4: 'Every rep is compared with one rep.'",
+   "Beat 8 is overloaded: a card, the back-day CONTINUE stamp, the diagram completing (can't-see check, outputs, tally, count chip) and a 1.0 s save-asset hold, all in 3.8 s. A schematic of about 9 nodes plus a tally and a chip cannot be read in 1.0 s. Hold it about 2 s, or move the tally and count chip to the beat 12 return.",
+   "The outline puts the can't-see check in the FIX section (6), but the draft only shows it when the diagram completes in beat 8, inserted mid-chain between REP WAVE and MY BEST REP. Dock the can't-see box with its exact string during beat 7, or reserve its slot in the strip from beat 4 so the progressive build never inserts a box backwards.",
+   "The school analogy does not match the mechanism. The AI flags reps that fall short of your best; 'beat your own best marks' implies exceeding it. Suggest 'Like in school: you're marked against your own best, not the topper's.'",
+   "The outline puts the gym-buddy forward line in STAKE (section 2). Spoken beat 2 has none; the send line only appears in beat 9 and in the caption. Either add it or record the deviation for the creator.",
+   "In TRIAL, beat 5 repeats the hook almost verbatim ('my AI said STOP. It was wrong.'), so its 1/3 re-hook is a repeat. Note in the E2 entry that retention at about 17 s is not comparable between the variants.",
+   "Beat 10 is the payoff/punchline. REEL_DEFAULTS keeps punchline beats at 1.0x; doing so adds about 0.6 s, which still lands near 47.5 s.",
+   "The caption line 'They agreed on 9 of the 16 sets both could judge' drops the qualifier. Write 'agreed on flag or no flag in 9 of the 16 sets both could judge'.",
+   "The music bed is set at \u221217 LUFS before ducking, while REEL_DEFAULTS says about \u221218. Align it, or note why (the creator asked for the bed raised slightly).",
+   "Before gate 2, these are still not done: the Fable judge and frozen 16-persona panel score (\u22657.5), the E2 entry in production/EXPERIMENTS.md (log it before recording), cover.png, the HUD renders and the Chrome teleprompter HTML. List them as open, not done."
+  ],
+  "facts_ok": false
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I stay to see what happens when the two checks disagree. CHECK FOOTAGE makes the diagram worth saving; the school analogy is where my attention dips."
+   },
+   {
+    "id": 2,
+    "score": 5,
+    "drop_beat": "8 \u00b7 My best",
+    "why": "One STOP out of 23 gets me curious, and the camera-angle mistake earns the watch. When the seated row appears, I think we're starting a third example."
+   },
+   {
+    "id": 3,
+    "score": 5,
+    "drop_beat": "4 \u00b7 Wave",
+    "why": "I recognise swinging instead of lifting. Once I'm following a hip-angle graph rather than watching the two reps, I've got my takeaway and scroll."
+   },
+   {
+    "id": 4,
+    "score": 4,
+    "drop_beat": "3 \u00b7 Bridge",
+    "why": "I stop to find out what he did wrong. He tells me it was leg swing; HOW MY AI READS A SET feels like the start of a different reel."
+   },
+   {
+    "id": 5,
+    "score": 5,
+    "drop_beat": "7 \u00b7 Two AIs",
+    "why": "Seeing the same lunge read differently when he turns is a lovely demonstration. I'd send that comparison, but the judge and coach labels pull me away from it."
+   },
+   {
+    "id": 6,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "The hip dot turning into a wave makes this feel like a project I could try. I'd comment FORM for the diagram, especially after seeing a case where the tracker gets fooled."
+   },
+   {
+    "id": 7,
+    "score": 6,
+    "drop_beat": "8 \u00b7 My best",
+    "why": "122\u00b0 versus 53\u00b0 gives me a baseline I can read at a glance. I stay for the false positive, but beat 8 sells me the baseline a second time."
+   },
+   {
+    "id": 8,
+    "score": 5,
+    "drop_beat": "11 \u00b7 Rule",
+    "why": "I watch for the return to the crunch to see what each judge actually found. Two outputs agreeing on one clip doesn't earn the word 'always'; I wouldn't forward that rule."
+   },
+   {
+    "id": 9,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "The lunge going from STOP to CHECK FOOTAGE is a concrete example I'd send a colleague. It's more useful than the generic advice to use two AIs."
+   },
+   {
+    "id": 10,
+    "score": 6,
+    "drop_beat": "9 \u00b7 School",
+    "why": "By the split verdict I understand the decision: disagreement means someone reviews the clip. The topper analogy costs another beat without changing that decision."
+   },
+   {
+    "id": 11,
+    "score": 6,
+    "drop_beat": "10 \u00b7 Verdict",
+    "why": "The green ghost stops my thumb, and the crossed-out STOP wins me back. On returning to the opening image I already know the verdict, so I don't wait for the offer."
+   },
+   {
+    "id": 12,
+    "score": 5,
+    "drop_beat": "4 \u00b7 Wave",
+    "why": "The ghost and red gap communicate the problem without narration. The wave asks me to decode the same difference again before anything new happens."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "I'm interested in the disagreement path, not just the pose overlay. I'd save the diagram to inspect what each pass sees and when the system declines to judge."
+   },
+   {
+    "id": 14,
+    "score": 7,
+    "drop_beat": "11 \u00b7 Rule",
+    "why": "The camera turn is a convincing failure case, and I want to see both verdicts on the crunch. Two passes of Fable on related evidence can still agree and be wrong."
+   },
+   {
+    "id": 15,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "I'd send the side-on versus turned lunge to a client who films sets. I'd add that the camera changed the reading, not the depth; that's more useful than the STOP stamp."
+   },
+   {
+    "id": 16,
+    "score": 5,
+    "drop_beat": "3 \u00b7 Bridge",
+    "why": "The red stamp makes me pause, and I get 'swinging, not lifting.' At 10 pm the 17-joint readout looks like a lesson; I leave before the AI makes its mistake."
+   }
+  ],
+  "groups": {
+   "mass": 5.29,
+   "fin_consult_mktg": 5.83,
+   "builders": 7.5
+  },
+  "overall": 6.06,
+  "top_fixes": [
+   "Keep MAIN's ghost on frame one, but match the claim to the evidence: '23 sets. My AI flagged this swing.' Play the best and swung reps together once so a viewer can see the fault without reading an angle.",
+   "Bring the turned-lunge comparison forward. MAIN can cut from the swing straight to 'But it flagged this lunge too. Watch what happens when I turn.' TRIAL especially needs that payoff early: it opens on the lunge, leaves it for the crunch, then repeats the hook before explaining it.",
+   "Cut the HOW card, seated-row detour and topper analogy. Keep one hip-dot-to-wave animation for builders, then get back to the two verdicts. Put model names, tallies and the full schematic in the promised diagram rather than asking viewers to read them in a one-second hold.",
+   "End on the decision the footage supports, not 'always make two AIs agree': 'On the crunch, both flagged a problem. On the lunge, they disagreed, so I checked the clip.' Then make the offer concrete: 'Comment FORM for the video coach and diagram.'"
+  ]
+ },
+ "critic": {
+  "predicted_score": 7.3,
+  "would_approve": false,
+  "change_list": [
+   "[certain] 'What is the impact for a normal gym person? We missed that. The rule is only for people building AI.' | Fix: keep beat 11 and give the gym viewer one action from the measured lunge failure, e.g. 'So always film your set from the side.'",
+   "[certain] 'Cover is not there. Give me cover and caption in advance, and the teleprompter in Chrome. I am posting tomorrow.' | Fix: render cover.png from keyframe A and build teleprompter.html before sending this back.",
+   "[certain] 'Too many questions. 2 and 4 are not decisions, take the call.' | Fix: keep only the creator-only calls ([RISK] words, Ep 4 topic, 7b yes/no). Close the school-line wording, the TRIAL tag and the three file-name/clip SLOTS yourself.",
+   "[likely] 'End it like last time: next up, over my footage, red mark, hit sound. Loop alone is flat.' | Fix: the creator names the Ep 4 topic; add the 1 s tease before the loop cut and do not state an unmeasured outcome.",
+   "[likely] 'In the trial I say it was wrong twice. Beat 5 is the same line as the hook.' | Fix: one extra TRIAL-only take for beat 5 that pays the hook off, e.g. 'That wrong STOP was on my lunges.' Speech then differs in two beats, so log that in E2.",
+   "[likely] 'What is the score? Keep iterating till it breaches 7.5, then show me.' | Fix: run the Fable judge and the 16-persona panel and attach the number; paste the E2 entry into production/EXPERIMENTS.md.",
+   "[likely] 'The diagram is my save asset and it is on screen for 1 second with too much on it. Make it simpler and hold it.' | Fix: drop the hack-squat COUNT CHECK chip, move the seated-row CONTINUE and sway text out of the diagram-completion moment, and hold the clean schematic about 1.5 s. The same reading-load problem applies to beat 10 (two quotes and two numbers on a 0.4 s hold).",
+   "[likely] 'One sentence per beat. 2, 4, 7 and 10 are two sentences each.' | Fix: split them into 2a/2b, 4a/4b, 7a/7b, 10a/10b on the teleprompter so each can be recorded and cut alone. Beat 2 is 18 words.",
+   "[likely] 'And the standard? sounds written, I will not say it like that.' | Fix: write in their voice. Beat 8: 'And my AI actually compares me with my own best, not a textbook.' Beat 9: 'Like how we all did in school: beat your own best marks, not the topper's.' Beat 7: join the clauses with 'and', no semicolon.",
+   "[possible] 'Caption is long and reads like a summary. Make it short and sassy.' | Fix: keep the 'wrong set' opener, the FORM line, the gym-buddy send and the disclaimer; cut the middle paragraph to one line; remove the markdown asterisks, which Instagram shows literally.",
+   "[possible] 'Stake is weak. Emotion was the lowest score last time.' | Fix: the creator supplies the three [RISK] words now, or 2b is deleted. Do not carry a blank line into the shoot.",
+   "[possible] 'Put what it costs per set on the judge box.' | Fix: FACTS has about USD 0.15 per set. A rupee figure needs a stated conversion; otherwise show $0.15 / SET."
+  ],
+  "taste_violations": [
+   "Checklist 5 (partial fail): only the third idea has an everyday comparison (school). No idea ends in an action a non-builder can take. The paper page cut does not apply to this reel.",
+   "Checklist 21 (fail): no next-reel tease over their own footage with a red mark and hit. The draft waits for an Ep 4 topic. Last time they overrode the loop-only default and closed with 'Next up, we'll see...'.",
+   "Checklist 25 (partial): caption and first comment are present; cover.png is a spec only. 'Give me cover and caption in advance' is a non-negotiable.",
+   "Checklist 22 (partial): runtime of 47 s is fine, but there is no Fable judge or panel score yet. Their bar is at least 7.5 before lock.",
+   "Checklist 23 (partial): MAIN and TRIAL are both written with one spoken variable and a stated hypothesis, but E2 is not logged. TRIAL beat 5 repeats the hook nearly word for word, so the 1/3 re-hook is dead in that variant.",
+   "Checklist 19 (partial): beats 6, 8 and 10 lean on their neighbours ('I had just turned...', 'And the standard?', 'Here, ...'). Beats 2, 4, 7 and 10 break the one-short-sentence rule they call a design principle.",
+   "Short answers / no permission-asking: five decisions are listed, two of them already decided by the draft. Three model-checkable SLOTS (data file names, which CAN'T SEE clip, HUD renders) are left open.",
+   "Awe without complexity: keyframe P carries eight nodes, the exact can't-see string, the 23-set tally and a hack-squat chip in a 1.0 s hold. Frame one has three text labels plus stamp, ghost and brackets, and '23 SETS WATCHED \u00b7 1 STOP' repeats in beats 1 and 2 (they remove repeated small labels).",
+   "Accuracy line they hold: beat 4 steps brackets across every peak of the IMG_2661 wave. That displays the 20-rep split that FACTS says not to show (the coach counts 12). Mark only the best and worst peaks.",
+   "Brief outline section 6: the can't-see behaviour is on the diagram only, visible for about 1 s. It is the most relatable trust moment in the system, and 7b is left as an option that pushes the reel to 51 s, over the 42-48 s target.",
+   "Sends (scored 6 last time): the brief asked for a gym-buddy line in the stake beat. The draft puts the gym-buddy send in the caption only and relies on the school line.",
+   "Checklist items not applicable or not triggered: 9 (people-building clips), 10 (paper page count), 13 (no bar chart; the best peak is the tallest). 12 is partial: the whole reel is the own test, with no percentage against another model and the per-set cost unused."
+  ],
+  "what_they_will_love": [
+   "The payoff is on frame one: green ghost of the best rep over the worst rep, red gap, STOP stamp. Their own hook line is kept verbatim.",
+   "Every number traces to FACTS (23 sets, 1 STOP, 17 joints, 30 a second, 122 vs 53 degrees, 17 reps, sway 3-7 degrees, 4 of 23, the tally, 14 to 11). The only open slot is [RISK]. Wording stays 'found' and 'would have stopped me'.",
+   "Architecture stays as the signature and is built progressively across beats 3, 4, 7 and 8 instead of one long middle. It gets a heading card (HOW MY AI READS A SET), Fable 5.2 only on the boxes, and no jargon in speech.",
+   "'My AI said STOP. It was wrong.' The self-caught failure and fix is the entertaining piece and a test only they can run.",
+   "'So always make two AIs agree before you trust a STOP' is the short declarative with one action that they said verbatim last time.",
+   "The school line (own best marks, not the topper's) is the relatable comparison they keep asking for.",
+   "There is a sound effect on every visual event, the bed is slightly raised, and the silence is saved for the twist.",
+   "Comment FORM sends something viewers can run (the form-check skill plus the diagram), described honestly, with the CTA in their 'Comment X to access...' shape.",
+   "The caption opens with the honest twist ('the set I teased wasn't the one'). The HOLD hack squat appears only as an amber tile, never as the STOP set.",
+   "Checklist passes: 1 (whole script in one place with visuals and text side by side), 2 (English only), 3 (no spoken hedges; limits are on screen and in the caption), 4 (three ideas, one rule), 6, 7, 8, 11, 14, 15, 16, 17, 18 (E/H alternation with one stated break), 20 (no closing aphorism; beats 9 and 11 are droppable), 24."
+  ]
+ },
+ "score": 5.779999999999999,
+ "summary": {
+  "panel": 6.06,
+  "critic": 7.3,
+  "must_fix": 3,
+  "approve": false,
+  "groups": {
+   "mass": 5.29,
+   "fin_consult_mktg": 5.83,
+   "builders": 7.5
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "Hello, I hope you're well. My salary is being credited late this month, so I'd like to request a 5-day delay on this month's rent of ₹18,500. I will pay the full amount by 10 December. I'm sorry for the inconvenience, and I'm happy to pay any late fee that applies. Thank you for understanding.",
+ "seconds": 7.7,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1135.75,
+ "out_tok": 582,
+ "usd_list": 0.03237,
+ "cli_cost": 0.0380343,
+ "item": "w1"
+}

@@ -1,0 +1,118 @@
+{
+ "MAIN": {
+  "1": {
+   "feel": "Hooked: which set, and why?",
+   "delivery": "Dead-still, eyes locked on lens; low voice, punch 'never', hold the stare."
+  },
+  "2": {
+   "feel": "Invited behind the scenes of real work",
+   "delivery": "Lean in, eyebrows up on 'how'; warm proud grin, quick nod on 'Come'."
+  },
+  "4": {
+   "feel": "Respect: this problem is harder than expected",
+   "delivery": "Brisk and matter-of-fact; shrug on 'easy', slow on 'hard', wry look on 'fool'."
+  },
+  "5": {
+   "feel": "Impressed by the scale of testing",
+   "delivery": "Chin up, courtroom-announcer tone; stress 'twenty-three', small head sweep on 'body parts'."
+  },
+  "6": {
+   "feel": "Relief: this will be simple to follow",
+   "delivery": "Calm teacher voice, relaxed face; clean beat before 'three parts'."
+  },
+  "7": {
+   "feel": "Fascinated by how the machine sees",
+   "delivery": "Bright curious eyes; crisp on 'seventeen joints', gentle head dip on 'one dip'."
+  },
+  "8": {
+   "feel": "Trust: it admits what it can't see",
+   "delivery": "Raised brow on the question, pause, then flat firm 'refuses', small headshake."
+  },
+  "9": {
+   "feel": "Surprised: judged against himself, not ideals",
+   "delivery": "Proud half-smile; hit 'my best rep', dismissive headshake on 'Not a textbook'."
+  },
+  "10": {
+   "feel": "Amused: even the AI got it wrong",
+   "delivery": "Sheepish grin, eye-roll at yourself; deadpan 'only turned to the camera', near-laugh."
+  },
+  "11": {
+   "feel": "Reassured by a clever, careful fix",
+   "delivery": "Smile drops to focused; steady builder tone, slow weight on each 'STOP'."
+  },
+  "12": {
+   "feel": "Laughing at his honest half-rep confession",
+   "delivery": "Smug nod on 'Continue', mock-wince on 'STOP', guilty grin admitting 'half reps'."
+  },
+  "13": {
+   "feel": "Grinning, already thinking of that friend",
+   "delivery": "Cheeky smirk, eyebrows up; teasing sing-song, knowing look into lens on 'half reps'."
+  },
+  "14": {
+   "feel": "Jolt: this is my job market too",
+   "delivery": "Drop the energy, serious; lean on 'reportedly' lightly, lift on 'but hiring'."
+  },
+  "15": {
+   "feel": "Hope + curiosity: I want in",
+   "delivery": "Look straight in; pause after 'that one?', then bright and quick: 'Follow along to know.'"
+  }
+ },
+ "TRIAL": {
+  "T1": {
+   "feel": "Hooked: his own AI got it wrong?",
+   "delivery": "Serious on 'STOP', beat, then flat deadpan 'It was wrong', slight smirk."
+  },
+  "T2": {
+   "feel": "Amused by the silly, human cause",
+   "delivery": "Sheepish shrug with the eyes, half-laugh; light, throwaway tone straight to lens."
+  },
+  "T3": {
+   "feel": "Invited behind the scenes of real work",
+   "delivery": "Lean in, eyebrows up on 'how'; warm proud grin, quick nod on 'Come'."
+  },
+  "T5": {
+   "feel": "Respect: this problem is harder than expected",
+   "delivery": "Brisk and matter-of-fact; shrug on 'easy', slow on 'hard', wry look on 'fool'."
+  },
+  "T6": {
+   "feel": "Impressed by the scale of testing",
+   "delivery": "Chin up, courtroom-announcer tone; stress 'twenty-three', small head sweep on 'body parts'."
+  },
+  "T7": {
+   "feel": "Relief: this will be simple to follow",
+   "delivery": "Calm teacher voice, relaxed face; clean beat before 'three parts'."
+  },
+  "T8": {
+   "feel": "Fascinated by how the machine sees",
+   "delivery": "Bright curious eyes; crisp on 'seventeen joints', gentle head dip on 'one dip'."
+  },
+  "T9": {
+   "feel": "Trust: it admits what it can't see",
+   "delivery": "Raised brow on the question, pause, then flat firm 'refuses', small headshake."
+  },
+  "T10": {
+   "feel": "Surprised: judged against himself, not ideals",
+   "delivery": "Proud half-smile; hit 'my best rep', dismissive headshake on 'Not a textbook'."
+  },
+  "T11": {
+   "feel": "Satisfied: the hook's mistake gets fixed",
+   "delivery": "Focused, steady builder tone; nod on 'second judge', slow weight on each 'STOP'."
+  },
+  "T12": {
+   "feel": "Laughing at his honest half-rep confession",
+   "delivery": "Smug nod on 'Continue', mock-wince on 'STOP', guilty grin admitting 'half reps'."
+  },
+  "T13": {
+   "feel": "Grinning, already thinking of that friend",
+   "delivery": "Cheeky smirk, eyebrows up; teasing sing-song, knowing look into lens on 'half reps'."
+  },
+  "T14": {
+   "feel": "Jolt: this is my job market too",
+   "delivery": "Drop the energy, serious; lean on 'reportedly' lightly, lift on 'but hiring'."
+  },
+  "T15": {
+   "feel": "Hope + curiosity: I want in",
+   "delivery": "Look straight in; pause after 'that one?', then bright and quick: 'Follow along to know.'"
+  }
+ }
+}

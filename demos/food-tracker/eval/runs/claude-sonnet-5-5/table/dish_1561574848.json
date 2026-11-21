@@ -1,0 +1,355 @@
+{
+ "items": [
+  {
+   "name": "Arugula and mixed greens",
+   "grams_low": 50,
+   "grams_best": 75,
+   "grams_high": 100,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, lightly dressed",
+   "confidence": 0.5,
+   "kcal": 15.8,
+   "kcal_range": [
+    10,
+    21
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.7,
+    1.3
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Spring mix / red leaf lettuce",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 30,
+   "fdc_query": "Lettuce, red leaf, raw",
+   "preparation": "raw",
+   "confidence": 0.4,
+   "kcal": 2.6,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.1,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "168431",
+    "description": "Lettuce, red leaf, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 13.0,
+    "protein_100g": 1.33
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sliced cooked fish or chicken (pale, seared slices)",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Fish, tuna, fresh, yellowfin, cooked, dry heat",
+   "preparation": "seared/grilled, sliced, sesame-crusted",
+   "confidence": 0.35,
+   "kcal": 117.0,
+   "kcal_range": [
+    78,
+    156
+   ],
+   "protein_g": 26.2,
+   "protein_range": [
+    17.5,
+    35.0
+   ],
+   "fdc": {
+    "fdc_id": "172006",
+    "description": "Fish, tuna, yellowfin, fresh, cooked, dry heat",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 130.0,
+    "protein_100g": 29.15
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cherry tomatoes",
+   "grams_low": 15,
+   "grams_best": 30,
+   "grams_high": 45,
+   "fdc_query": "Tomatoes, red, ripe, raw, year round average",
+   "preparation": "raw, halved or whole",
+   "confidence": 0.6,
+   "kcal": 5.4,
+   "kcal_range": [
+    3,
+    8
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.1,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "170457",
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 18.0,
+    "protein_100g": 0.88
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cucumber chunks",
+   "grams_low": 15,
+   "grams_best": 25,
+   "grams_high": 40,
+   "fdc_query": "Cucumber, with peel, raw",
+   "preparation": "raw, diced",
+   "confidence": 0.5,
+   "kcal": 3.8,
+   "kcal_range": [
+    2,
+    6
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "168409",
+    "description": "Cucumber, with peel, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 15.0,
+    "protein_100g": 0.65
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red onion slices",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 20,
+   "fdc_query": "Onions, raw",
+   "preparation": "raw, thinly sliced",
+   "confidence": 0.5,
+   "kcal": 4.0,
+   "kcal_range": [
+    2,
+    8
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170000",
+    "description": "Onions, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 40.0,
+    "protein_100g": 1.1
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Olives (dark, kalamata-style)",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 25,
+   "fdc_query": "Olives, ripe, canned (small-extra large)",
+   "preparation": "whole or halved",
+   "confidence": 0.35,
+   "kcal": 17.4,
+   "kcal_range": [
+    9,
+    29
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "169094",
+    "description": "Olives, ripe, canned (small-extra large)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 116.0,
+    "protein_100g": 0.84
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sliced pickled/grilled green vegetable (pepper or pear slice at left)",
+   "grams_low": 10,
+   "grams_best": 20,
+   "grams_high": 35,
+   "fdc_query": "Peppers, sweet, green, raw",
+   "preparation": "sliced",
+   "confidence": 0.25,
+   "kcal": 4.0,
+   "kcal_range": [
+    2,
+    7
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "170427",
+    "description": "Peppers, sweet, green, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 20.0,
+    "protein_100g": 0.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Creamy/oil-based dressing",
+   "grams_low": 8,
+   "grams_best": 15,
+   "grams_high": 30,
+   "fdc_query": "Salad dressing, vinaigrette, regular",
+   "preparation": "drizzled over salad",
+   "confidence": 0.3,
+   "kcal": 40.2,
+   "kcal_range": [
+    21,
+    80
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "2710209",
+    "description": "Creamy Italian dressing",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 268.0,
+    "protein_100g": 0.55
+   },
+   "nutrient_source": "USDA FoodData Central lookup",
+   "match_flag": "weak match"
+  },
+  {
+   "name": "Sesame seeds",
+   "grams_low": 1,
+   "grams_best": 3,
+   "grams_high": 6,
+   "fdc_query": "Seeds, sesame seeds, whole, dried",
+   "preparation": "sprinkled / crust",
+   "confidence": 0.4,
+   "kcal": 17.2,
+   "kcal_range": [
+    6,
+    34
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.2,
+    1.1
+   ],
+   "fdc": {
+    "fdc_id": "170150",
+    "description": "Seeds, sesame seeds, whole, dried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 573.0,
+    "protein_100g": 17.73
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 303.0,
+  "kcal": 227.4,
+  "protein_g": 29.0,
+  "grams_range": [
+   182.0,
+   451.0
+  ],
+  "kcal_range": [
+   134,
+   353
+  ],
+  "protein_range": [
+   19.0,
+   39.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 303.0,
+   "kcal": 269.6,
+   "protein_g": 31.5,
+   "grams_range": [
+    182.0,
+    451.0
+   ],
+   "kcal_range": [
+    156,
+    435
+   ],
+   "protein_range": [
+    20.5,
+    44.1
+   ]
+  },
+  "rows": [
+   "Arugula, raw",
+   "Lettuce, red leaf, raw",
+   "Fish, tuna, yellowfin, fresh, cooked, dry heat",
+   "Tomatoes, red, ripe, raw, year round average",
+   "Cucumber, with peel, raw",
+   "Luncheon slices, meatless",
+   "Olives, ripe, canned (small-extra large)",
+   "Peppers, sweet, pickled",
+   "Salad dressing, poppyseed, creamy",
+   "Seeds, sesame seeds, whole, dried"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "d2f0f25d1a3b3f25324692331dbea961db86e7165c3d022090a03d01c61d7cf7",
+ "scale_cues": "Large square white plate (about 26\u201328 cm across) seen from above. Salad occupies roughly the central third of the plate. Tomato halves are about 2\u20133 cm.",
+ "assumptions": [
+  "The protein is pale seared slices, most likely tuna or chicken. I assumed tuna with a sesame crust.",
+  "Dressing is implied by the glossy leaves but not clearly visible, so its amount is a guess.",
+  "The green slice at the left edge is uncertain. It could be a pepper or a pear."
+ ],
+ "latency_s": 15.01,
+ "calls": [
+  {
+   "wall_s": 10.16,
+   "duration_ms": 9440,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0318132,
+   "cost_basis": "list",
+   "input_tokens": 8988,
+   "output_tokens": 1138
+  },
+  {
+   "wall_s": 4.82,
+   "duration_ms": 3788,
+   "num_turns": 1,
+   "cost_usd_cli": 0.028381899999999995,
+   "cost_basis": "list",
+   "input_tokens": 5730,
+   "output_tokens": 475
+  }
+ ],
+ "cost_usd_cli": 0.0602,
+ "log_id": "6d434716ed19"
+}

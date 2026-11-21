@@ -1,0 +1,302 @@
+{
+ "items": [
+  {
+   "name": "Mixed green salad leaves",
+   "grams_low": 60,
+   "grams_best": 85,
+   "grams_high": 110,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "raw mixed baby greens, torn leaves, lightly dressed",
+   "confidence": 0.6,
+   "kcal": 17.9,
+   "kcal_range": [
+    13,
+    23
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.8,
+    1.4
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Chickpeas",
+   "grams_low": 15,
+   "grams_best": 22,
+   "grams_high": 30,
+   "fdc_query": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+   "preparation": "cooked, drained, scattered over salad",
+   "confidence": 0.5,
+   "kcal": 36.1,
+   "kcal_range": [
+    25,
+    49
+   ],
+   "protein_g": 1.9,
+   "protein_range": [
+    1.3,
+    2.7
+   ],
+   "fdc": {
+    "fdc_id": "173757",
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 164.0,
+    "protein_100g": 8.86
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Crumbled white cheese",
+   "grams_low": 5,
+   "grams_best": 8,
+   "grams_high": 12,
+   "fdc_query": "Cheese, feta",
+   "preparation": "crumbled, raw or fresh, sprinkled on top of salad",
+   "confidence": 0.5,
+   "kcal": 21.2,
+   "kcal_range": [
+    13,
+    32
+   ],
+   "protein_g": 1.1,
+   "protein_range": [
+    0.7,
+    1.7
+   ],
+   "fdc": {
+    "fdc_id": "173420",
+    "description": "Cheese, feta",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 265.0,
+    "protein_100g": 14.21
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 3,
+   "grams_best": 5,
+   "grams_high": 8,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, julienned or shredded, mixed into salad",
+   "confidence": 0.5,
+   "kcal": 2.0,
+   "kcal_range": [
+    1,
+    3
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sliced white onion or similar pale vegetable",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Onions, raw",
+   "preparation": "raw, thin slices in salad; identity uncertain (could be fennel or jicama)",
+   "confidence": 0.3,
+   "kcal": 4.0,
+   "kcal_range": [
+    2,
+    6
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.1,
+    0.2
+   ],
+   "fdc": {
+    "fdc_id": "170000",
+    "description": "Onions, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 40.0,
+    "protein_100g": 1.1
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Vinaigrette dressing",
+   "grams_low": 5,
+   "grams_best": 10,
+   "grams_high": 15,
+   "fdc_query": "Salad dressing, vinaigrette, regular",
+   "preparation": "oil and vinegar based, light coating on greens, not pooled",
+   "confidence": 0.3,
+   "kcal": 24.0,
+   "kcal_range": [
+    12,
+    36
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "171019",
+    "description": "Salad dressing, italian dressing, commercial, regular",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 240.0,
+    "protein_100g": 0.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Brown rice pilaf",
+   "grams_low": 120,
+   "grams_best": 150,
+   "grams_high": 180,
+   "fdc_query": "Rice, brown, long-grain, cooked",
+   "preparation": "cooked brown rice, possibly with small bits of vegetable, plain or lightly seasoned",
+   "confidence": 0.6,
+   "kcal": 184.5,
+   "kcal_range": [
+    148,
+    221
+   ],
+   "protein_g": 4.1,
+   "protein_range": [
+    3.3,
+    4.9
+   ],
+   "fdc": {
+    "fdc_id": "169704",
+    "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 123.0,
+    "protein_100g": 2.74
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Roasted chicken with skin",
+   "grams_low": 120,
+   "grams_best": 160,
+   "grams_high": 200,
+   "fdc_query": "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+   "preparation": "two pieces, oven-roasted or grilled bone-in pieces with browned skin; edible meat and skin estimated, bone excluded",
+   "confidence": 0.5,
+   "kcal": 382.4,
+   "kcal_range": [
+    287,
+    478
+   ],
+   "protein_g": 43.7,
+   "protein_range": [
+    32.8,
+    54.6
+   ],
+   "fdc": {
+    "fdc_id": "171450",
+    "description": "Chicken, broilers or fryers, meat and skin, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 239.0,
+    "protein_100g": 27.3
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 450.0,
+  "kcal": 672.1,
+  "protein_g": 52.0,
+  "grams_range": [
+   333.0,
+   570.0
+  ],
+  "kcal_range": [
+   501,
+   848
+  ],
+  "protein_range": [
+   39.0,
+   65.7
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 450.0,
+   "kcal": 722.1,
+   "protein_g": 47.0,
+   "grams_range": [
+    333.0,
+    570.0
+   ],
+   "kcal_range": [
+    528,
+    922
+   ],
+   "protein_range": [
+    35.0,
+    59.4
+   ]
+  },
+  "rows": [
+   "Lettuce, green leaf, raw",
+   "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+   "Cheese, feta",
+   "Carrot, dehydrated",
+   "Onions, raw",
+   "Salad dressing, caesar dressing, regular",
+   "Rice pilaf",
+   "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "813774047d5673dbd032d33e5cafd68e64fe792d70a2d684b659520188378e54",
+ "scale_cues": "Plate is a standard square dinner plate, roughly 25-27 cm across, used as the main scale. Salad occupies about one third of plate width and the rice mound about one third. Chicken pieces are estimated relative to the plate and the rice mound. Bone weight is excluded from the estimates.",
+ "assumptions": [
+  "Plate diameter or width of about 26 cm, typical dinner plate size.",
+  "Chicken is bone-in, so bone mass is excluded from edible grams.",
+  "Salad greens are mostly lettuce-type leaves, so leafy greens are treated as raw lettuce.",
+  "Dressing is light, so it is a small amount and not pooled.",
+  "The pale sliced item in the salad is uncertain and could be onion, fennel, or jicama.",
+  "Tiny white specks (possibly sesame seeds or crumbled cheese bits) are under 5 g in total and are folded into the salad and cheese estimates.",
+  "The pale slice near the rice may be a mushroom or onion and is not separately counted."
+ ],
+ "latency_s": 326.6,
+ "calls": [
+  {
+   "wall_s": 13.32,
+   "duration_ms": 12580,
+   "num_turns": 2,
+   "cost_usd_cli": 0.00239114,
+   "cost_basis": "list",
+   "input_tokens": 10268,
+   "output_tokens": 2451
+  },
+  {
+   "wall_s": 313.25,
+   "duration_ms": 7905,
+   "num_turns": 1,
+   "cost_usd_cli": 0.00135272,
+   "cost_basis": "list",
+   "input_tokens": 10583,
+   "output_tokens": 1527
+  }
+ ],
+ "cost_usd_cli": 0.00374,
+ "log_id": "bb34827df69f"
+}

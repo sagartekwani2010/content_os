@@ -1,0 +1,34 @@
+[
+ {
+  "round": 1,
+  "winner": "C",
+  "overall": 5.1,
+  "groups": {
+   "mass": 4.1,
+   "fin_consult_mktg": 5.0,
+   "builders": 6.85
+  },
+  "all": {
+   "C": 5.1,
+   "A": 5.05,
+   "B": 4.95
+  },
+  "check_clean": false
+ },
+ {
+  "round": 2,
+  "winner": "A",
+  "overall": 5.4,
+  "groups": {
+   "mass": 4.4,
+   "fin_consult_mktg": 5.4,
+   "builders": 7.0
+  },
+  "all": {
+   "A": 5.4,
+   "B": 5.4,
+   "C": 5.3
+  },
+  "check_clean": false
+ }
+]

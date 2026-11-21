@@ -13,7 +13,7 @@ def layout(**params):
 
 
 def test_split_50_50_geometry_and_safe_areas():
-    lay, cfg = layout()
+    lay, cfg = layout(caption_position="top_safe")
     v, s = lay.panels["visual"], lay.panels["speaker"]
     assert (v.h, s.h, s.y) == (960, 960, 960)
     box = lay.caption_box
@@ -75,3 +75,10 @@ def test_visual_plan_supports_15_beats():
     assert plan[1]["start"] == 7.5
     draft = plan_visuals(cuts, cue, draft=True)
     assert all(p["visual"]["type"] == "placeholder" for p in draft)
+
+
+def test_bottom_safe_captions_sit_low_below_the_face():
+    lay, cfg = layout(caption_position="bottom_safe")
+    box, spk = lay.caption_box, lay.panels["speaker"]
+    assert box.bottom == 1920 - cfg["captions"]["bottom_px"]
+    assert box.y > spk.y + spk.h * 0.6  # lower part of the speaker panel, under chest and hands

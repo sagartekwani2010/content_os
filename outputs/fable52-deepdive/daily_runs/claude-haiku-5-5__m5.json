@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "Daily protein target: 1.6 g/kg × 78 kg = 124.8 g\n\n40% of that: 0.40 × 124.8 g = 49.92 g\n\nChicken needed: 49.92 g ÷ 0.31 g protein per g of chicken ≈ 161.03 g, which rounds to 161 g.\n\nANSWER: 161 g of chicken breast",
+ "seconds": 4.2,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2494.0,
+ "out_tok": 401,
+ "usd_list": 0.00045,
+ "cli_cost": 0.0005234,
+ "item": "m5"
+}

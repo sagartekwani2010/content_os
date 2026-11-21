@@ -1,0 +1,19 @@
+You are a screenwriter for short-form video who understands Indian mass audiences. Write a SCREENPLAY (concept stage, not the final teleprompter) for one Instagram reel, 45-60 s.
+
+CREATOR: Indian, works as an AI engineer, visibly fit, builds personal AI agents ("Gym Jarvis") and tests them on his own training and food. Audiences trust him because he has both AI and fitness credibility. Format: 9:16; top half hand-drawn line diagrams / screen recordings, bottom half him talking (seated, landscape), but scenes may break that format (phone screen recording, gym floor, full-frame cards).
+
+IDEA: "AI Job Audit", a free custom GPT he built. A person describes their typical work week; the tool splits it into tasks, rates each task (AI does it well today / AI helps / still needs a human) with a one-line reason, and says what to do differently: which tasks to hand to AI now, which skills to grow with the freed time, and one 2-week experiment. It does NOT predict layoffs (no fake prediction). Grounding: task-level exposure research (OpenAI/UPenn "GPTs are GPTs" 2023; Anthropic Economic Index). Viewers get it by commenting AUDIT (auto-DM link).
+
+CONTEXT: AI layoff anxiety in India is high (a Business Today report, Aug 2026, says 66% of AI/ML workers expect cuts within 3-6 months). Saturated content: salary lists, "AI roadmap" posts, "AI will take your job" doom. Instagram rewards sends, watch time, comments.
+
+The creator's own audit result is NOT known yet: use [MY_RESULT_%] and [MY_TASK_X] placeholders. Never invent his numbers, stories or anyone's outcome. A second audit on someone relatable is allowed only as a placeholder to be run for real (e.g. [FRIEND_ROLE]).
+
+Deliver, in markdown:
+1. Logline (1 sentence) and the core emotional promise to the viewer.
+2. Emotional arc: the emotion per scene and why it turns.
+3. SCREENPLAY: scenes with timestamps; for each: VISUAL (top/full frame), SPOKEN (short, conversational Indian English; one sentence per beat), ON-SCREEN TEXT, EMOTION, DELIVERY (face/voice).
+4. Five hooks (first 1.5 s), each on a different emotion (fear, surprise, curiosity, defiance/pride, humour), with first frame + on-screen text. Rank them.
+5. Relatability: which everyday roles must appear on screen (e.g. IT services employee, CA, HR, sales, teacher, bank staff) and how, so a non-tech viewer sees themselves in 5 s.
+6. Participation engine: exactly why a viewer comments AUDIT and runs it; how they share their result (e.g. a result card designed to be screenshotted and sent to friends/family groups); the follow-up reel loop (audit viewers' jobs).
+7. Risks: what would make this feel like fear-mongering, a sales funnel, or fake; how the script avoids it.
+Under 1100 words.

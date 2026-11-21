@@ -8,7 +8,8 @@ import numpy as np
 import pytest
 
 from content_os.visuals import facts, rough
-from content_os.visuals.script import load_lines
+from content_os.visuals.cues import DEFAULT_OFFSET
+from content_os.visuals.script import beat_line, load_lines
 
 ROOT = Path(__file__).resolve().parents[2]
 fonts_missing = any(not (rough.FONT_DIR / f[0]).exists() for f in rough.FONTS.values())
@@ -20,12 +21,16 @@ def sheet(monkeypatch):
     stand_ins = {"lunch_kcal": 600, "lunch_lo": 400, "lunch_hi": 900, "lunch_least_conf": 0.35}
     for i in range(8):
         stand_ins.update({f"lunch_i{i}_g": 100 + i, f"lunch_i{i}_kcal": 50 + i, f"lunch_i{i}_protein": 1.5})
+    for k, m in enumerate(["breakfast", "lunch", "curd", "whey", "dinner"]):
+        stand_ins.update({f"meal_{m}_kcal": 100 * (k + 1), f"meal_{m}_lo": 80 * (k + 1), f"meal_{m}_hi": 130 * (k + 1),
+                          f"meal_{m}_protein": 10 + k, f"meal_{m}_conf": 0.5, f"meal_{m}_flag": k % 2 == 0})
+    stand_ins.update({"day_meals": 5, "day_kcal": 1500, "day_protein": 60, "day_flagged": 3})
     for k, v in stand_ins.items():
         monkeypatch.setitem(facts.FACTS, k, facts.Fact(v, str(v), "test stand-in", "-", "-"))
     s = json.loads((ROOT / "outputs/food-tracker-reel/visual_cues.json").read_text())
     lines = load_lines(ROOT / "outputs/food-tracker-reel/TELEPROMPTER.md")
     for b in s["beats"]:
-        b["line"] = lines[b["beat"]]
+        b["line"] = beat_line(b, lines)
     return s
 
 
@@ -46,7 +51,7 @@ def test_spec_validates(sheet):
     assert validate_spec(sheet, CTX) == []
 
 
-@pytest.mark.parametrize("beat", range(1, 15))
+@pytest.mark.parametrize("beat", range(0, 20))
 def test_every_beat_builds_and_animates(sheet, beat):
     r = renderer(sheet, beat)
     first, key = r.frame(0.0), r.frame(r.key_time())
@@ -65,7 +70,7 @@ def test_animation_follows_word_times(sheet):
     r = renderer(sheet, 19, words, words[-1]["end"] + 1.5)
     cue = next(c for c in r.resolved if c.target == "workout")
     wi = line.split().index("Workout")
-    assert cue.method == "exact" and cue.t == pytest.approx(words[wi]["start"] - 0.1)
+    assert cue.method == "exact" and cue.t == pytest.approx(words[wi]["start"] + DEFAULT_OFFSET)
     x, y, w, h = next(e for e in r.elements if e.id == "workout").bounds()
     box = (int(x), int(y), int(x + w), int(y + h))
 
@@ -107,14 +112,54 @@ def test_every_countup_lands_and_holds_before_the_cut(sheet, tight):
         if tight:
             dur = words[-1]["end"] + 0.08
         r = renderer(sheet, b["beat"], words, dur)
-        by_id = {e.id: e for e in r.elements}
         last_hold = dur - COUNTUP_HOLD
         for cue in r.resolved:
             if cue.action != "countup":
                 continue
             assert cue.t + cue.dur <= last_hold + 1e-6, (b["beat"], cue.target, cue.t, cue.dur, dur)
-            el = by_id[cue.target]
+            el = {e.id: e for e in r.scenes[getattr(cue, "scene", 0)].elements}[cue.target]
             if isinstance(el, Number):
                 c = next(x for x in el.cues if x.action == "countup")
                 for t in (last_hold, dur - 1 / 30):
                     assert el.text_at(ease_out(c.progress(t))) == el.text_at(1.0), (b["beat"], cue.target, t)
+
+
+@pytest.mark.parametrize("kind", ["slide", "whip", "zoom", "punch", "wipe", "chapter"])
+def test_entrance_moves_the_first_frames_then_hands_over_to_the_plain_scene(sheet, kind):
+    """The entrance changes frame 0 and is gone by its last frame, so cues keep their times and the
+    clip ends on the settled diagram."""
+    import copy
+
+    b = copy.deepcopy(next(b for b in sheet["beats"] if b["beat"] == 10))
+    b["params"]["enter"] = {"kind": kind, "color": "blue", "label": "the build"}
+    plain = copy.deepcopy(b)
+    plain["params"].pop("enter")
+    from content_os.visuals.render import BeatRenderer
+
+    r, q = BeatRenderer(b, CTX, [], 3.0), BeatRenderer(plain, CTX, [], 3.0)
+    assert np.abs(r.frame(0.0).astype(int) - q.frame(0.0).astype(int)).sum() > 0
+    t = r.enter.dur + 1 / 30
+    assert np.array_equal(r.frame(t), q.frame(t))
+
+
+def test_cold_open_reuses_beat_16_line_and_every_section_change_is_a_chapter(sheet):
+    b0 = next(b for b in sheet["beats"] if b["beat"] == 0)
+    b16 = next(b for b in sheet["beats"] if b["beat"] == 16)
+    assert b0["line"] == b16["line"]
+    kinds = {b["beat"]: b["params"].get("enter", {}).get("kind") for b in sheet["beats"]}
+    assert all(kinds[n] == "chapter" for n in (3, 6, 11, 13, 17, 19))
+    assert kinds[0] in ("zoom", "chapter")
+
+
+def test_scenes_switch_on_their_word_with_a_transition(sheet):
+    """Beat 7: the big VISION AGENT card first, then on "lists" the photo + table scene slides in."""
+    b = next(b for b in sheet["beats"] if b["beat"] == 7)
+    words = [{"text": w, "start": 0.2 + 0.35 * i, "end": 0.5 + 0.35 * i} for i, w in enumerate(b["line"].split())]
+    r = renderer(sheet, 7, words, words[-1]["end"] + 0.6)
+    assert len(r.scenes) == 2
+    wi = b["line"].split().index("lists")
+    start = r.scenes[1].start
+    assert start == pytest.approx(words[wi]["start"] + DEFAULT_OFFSET)
+    assert r.scene_at(start - 0.01) == 0 and r.scene_at(start + 0.01) == 1
+    mid = r.frame(start + r.scenes[1].transition.dur / 2)
+    assert not np.array_equal(mid, r.frame(start + r.scenes[1].transition.dur + 0.05))

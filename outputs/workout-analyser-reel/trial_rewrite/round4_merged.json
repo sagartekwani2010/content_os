@@ -1,0 +1,117 @@
+{
+ "beats": [
+  {
+   "n": 1,
+   "line": "My Gym Jarvis checked twenty-three sets, and called stop on a good one.",
+   "visual": "Wall of 23 sets fills the frame, then one tile flashes a red STOP stamp."
+  },
+  {
+   "n": 2,
+   "line": "So let's open my Workout Analyser.",
+   "visual": "Gym Jarvis zoom diagram: push in from the whole Gym Jarvis system to the Workout Analyser block."
+  },
+  {
+   "n": 3,
+   "line": "First, I had Claude go through over 200 papers and tools.",
+   "visual": "Research blocks stack up with a counter running to 200+."
+  },
+  {
+   "n": 4,
+   "line": "And I realized, counting reps is easy, but judging a rep is hard.",
+   "visual": "Research blocks sort into two piles: EASY (counting reps) and HARD (judging a rep)."
+  },
+  {
+   "n": 5,
+   "line": "So I built one tool and two agents.",
+   "visual": "SEE -> JUDGE -> CHECK block diagram draws in, all three blocks visible."
+  },
+  {
+   "n": 6,
+   "line": "The pose tool tracks my joints, and rep maths turns each rep into a wave.",
+   "visual": "SEE block lights up; skeleton overlay on the footage, with one joint angle drawing out the rep wave."
+  },
+  {
+   "n": 7,
+   "line": "One wave is one rep, and its height is how far I moved.",
+   "visual": "Rep wave with one wave highlighted and a height arrow labelled 'how far I moved'."
+  },
+  {
+   "n": 8,
+   "line": "So tired reps look shorter.",
+   "visual": "Rep wave continues and the later waves visibly shrink."
+  },
+  {
+   "n": 9,
+   "line": "And against my best, rep four is clearly shorter.",
+   "visual": "Best-rep ghost line appears over the lat pulldown wave; rep 4 is called out as 62 vs 86."
+  },
+  {
+   "n": 10,
+   "line": "The first agent, the judge, reads my numbers.",
+   "visual": "JUDGE block lights up in the block diagram, with the rep numbers flowing into it."
+  },
+  {
+   "n": 11,
+   "line": "The second, the coach, isn't allowed the numbers.",
+   "visual": "CHECK block lights up as the coach; the numbers feed is crossed out and only video goes in."
+  },
+  {
+   "n": 12,
+   "line": "And if a joint is hidden, it refuses to judge.",
+   "visual": "Can't-see card."
+  },
+  {
+   "n": 13,
+   "line": "Then I ran every set: six got continue, eleven got hold, and two got stop.",
+   "visual": "23-bar results dashboard (taller = better): 6 continue, 11 hold, 2 stop, 4 can't see."
+  },
+  {
+   "n": 14,
+   "line": "Except this one, where the judge said stop and the coach said good.",
+   "visual": "Lunge set: judge STOP vs coach GOOD, side by side."
+  },
+  {
+   "n": 15,
+   "line": "I'd only turned towards the camera.",
+   "visual": "Lunge footage with skeleton overlay as I turn towards the camera; the research block with the camera-angle warning pops back in."
+  },
+  {
+   "n": 16,
+   "line": "So now, stop needs both agents, or I check the footage.",
+   "visual": "Both-agree gate: two keys make STOP, one key routes to CHECK FOOTAGE."
+  },
+  {
+   "n": 17,
+   "line": "And only one stop survived, my reverse crunch, which was fair.",
+   "visual": "Reverse crunch ghost line, 53 vs 122, then the dashboard settles on the final 1 stop, 1 check footage."
+  },
+  {
+   "n": 18,
+   "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience.",
+   "visual": "Salesforce news."
+  },
+  {
+   "n": 19,
+   "line": "How can you be that one? Follow along to know.",
+   "visual": "End screen."
+  }
+ ],
+ "changes": [
+  "Totals: 19 beats, 199 words (counting 'twenty-three' as one word). The last two lines are word for word.",
+  "Not checked: I did not open ../facts.md. Every number comes from the facts summary in your brief.",
+  "Deviation from the judge's fix: beat 13 says 'eleven got hold', not 'most got hold'. 11 of 23 is under half, so 'most' would be wrong.",
+  "B was already 200 words and the grafts add 23, so I cut 24 words from B's own non-stake lines. Each cut is listed below.",
+  "Graft applied: B3 is split into C3 and C4, word for word (beats 3 and 4).",
+  "Graft applied: B5 is replaced by C6, so 'The pose tool' is named (beat 6). This also fixes the unclear 'It'.",
+  "Graft applied: D5 is inserted before B6 (beat 7), and B6 is shortened to 'So tired reps look shorter.' (beat 8).",
+  "Graft applied, with a merge: A9's 'rep four is clearly shorter' is in beat 9, merged with B7's compare-with-my-best line. Keeping them separate would have made 20 beats. This cuts 'like a trainer' and 'it compares each wave'.",
+  "Graft applied: B10 is replaced by C10, 'And if a joint is hidden, it refuses to judge.' (beat 12).",
+  "Graft and weakest-line fix applied: B11 now gives the counts, including the two stops, so beat 17's 'only one stop survived' pays off.",
+  "The four can't-see sets are not spoken. They appear on the can't-see card (beat 12) and the dashboard (beat 13).",
+  "B's stake lines are kept word for word: beat 1 (stop on a good one), beat 14 (judge stop, coach good) and beat 17 (one stop survived, which was fair).",
+  "Cut for length, beat 5: 'one pose tool' became 'one tool', because beat 6 names the pose tool straight after.",
+  "Cut for length, beats 10 and 11: 'is the judge, which reads' became 'the judge, reads'. The coach line lost 'agent' and 'a second opinion that'.",
+  "Cut for length, beat 15: 'like the research warned' is no longer spoken and 'I had' became 'I'd'. The warning moves to the visual, which only holds if facts.md has that research finding.",
+  "Cut for length, beat 16: 'to agree' is dropped. The both-agree gate visual carries it."
+ ]
+}

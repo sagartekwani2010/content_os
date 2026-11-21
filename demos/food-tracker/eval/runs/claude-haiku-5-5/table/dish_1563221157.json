@@ -1,0 +1,188 @@
+{
+ "items": [
+  {
+   "name": "Broccoli florets, cooked",
+   "grams_low": 80,
+   "grams_best": 110,
+   "grams_high": 140,
+   "fdc_query": "Broccoli, cooked, boiled, drained, without salt",
+   "preparation": "Cooked florets, steamed or blanched, served warm on the upper right of the plate",
+   "confidence": 0.7,
+   "kcal": 38.5,
+   "kcal_range": [
+    28,
+    49
+   ],
+   "protein_g": 2.6,
+   "protein_range": [
+    1.9,
+    3.3
+   ],
+   "fdc": {
+    "fdc_id": "169967",
+    "description": "Broccoli, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 35.0,
+    "protein_100g": 2.38
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Mixed salad greens (lettuce, spinach, shredded cabbage, carrot)",
+   "grams_low": 60,
+   "grams_best": 90,
+   "grams_high": 120,
+   "fdc_query": "Lettuce, green leaf, raw",
+   "preparation": "Raw leafy greens with spinach leaves, shredded cabbage or lettuce, and thin carrot shreds, uncooked, dressing not clearly visible",
+   "confidence": 0.5,
+   "kcal": 18.9,
+   "kcal_range": [
+    13,
+    25
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.8,
+    1.6
+   ],
+   "fdc": {
+    "fdc_id": "2709792",
+    "description": "Mixed salad greens, raw",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 21.0,
+    "protein_100g": 1.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Grilled chicken breast, sliced and pieces",
+   "grams_low": 110,
+   "grams_best": 150,
+   "grams_high": 190,
+   "fdc_query": "Chicken, broilers or fryers, breast, meat only, cooked, grilled",
+   "preparation": "Pan- or grill-seared chicken breast, sliced into strips on the right and one larger golden piece at bottom left, lightly browned",
+   "confidence": 0.55,
+   "kcal": 226.5,
+   "kcal_range": [
+    166,
+    287
+   ],
+   "protein_g": 45.8,
+   "protein_range": [
+    33.6,
+    58.0
+   ],
+   "fdc": {
+    "fdc_id": "171534",
+    "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, grilled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 151.0,
+    "protein_100g": 30.54
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Sweet corn kernels",
+   "grams_low": 3,
+   "grams_best": 5,
+   "grams_high": 8,
+   "fdc_query": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "preparation": "Small cooked yellow kernels scattered near the chicken on the right edge",
+   "confidence": 0.4,
+   "kcal": 4.8,
+   "kcal_range": [
+    3,
+    8
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.1,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "169999",
+    "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 96.0,
+    "protein_100g": 3.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 355.0,
+  "kcal": 288.7,
+  "protein_g": 49.8,
+  "grams_range": [
+   253.0,
+   458.0
+  ],
+  "kcal_range": [
+   210,
+   369
+  ],
+  "protein_range": [
+   36.4,
+   63.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 355.0,
+   "kcal": 337.3,
+   "protein_g": 54.2,
+   "grams_range": [
+    253.0,
+    458.0
+   ],
+   "kcal_range": [
+    246,
+    430
+   ],
+   "protein_range": [
+    39.6,
+    68.7
+   ]
+  },
+  "rows": [
+   "Broccoli, cooked, boiled, drained, with salt",
+   "Lettuce, green leaf, raw",
+   "Chicken, broilers or fryers, breast, meat only, cooked, fried",
+   "Corn, sweet, yellow, cooked, boiled, drained, with salt"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "4b8ca73536b643b7cb0f6a080a83cc6d800eacbe2893e206701c833c6c786ca0",
+ "scale_cues": "Used the white square plate (roughly 26-27 cm across) as the main scale reference. Food covers roughly 60-70% of the plate surface, with the chicken pieces about the size of a palm-width each. No utensils or hands visible.",
+ "assumptions": [
+  "Protein is assumed to be chicken breast; it could be pork tenderloin, which would change the FDC entry.",
+  "No dressing is clearly visible; any light oil or vinaigrette was not counted as a separate item.",
+  "Small dried cranberry bits (under 5 g) were ignored.",
+  "The pale pieces among the salad greens on the left are assumed to be shredded cabbage or cooked vegetable and are included in the salad estimate.",
+  "Weights are edible cooked or raw mass estimated from visual area and typical thickness, not measured."
+ ],
+ "latency_s": 879.15,
+ "calls": [
+  {
+   "wall_s": 874.27,
+   "duration_ms": 15374,
+   "num_turns": 2,
+   "cost_usd_cli": 0.00146044,
+   "cost_basis": "list",
+   "input_tokens": 6883,
+   "output_tokens": 2316
+  },
+  {
+   "wall_s": 4.86,
+   "duration_ms": 3820,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0012906000000000003,
+   "cost_basis": "list",
+   "input_tokens": 6908,
+   "output_tokens": 525
+  }
+ ],
+ "cost_usd_cli": 0.00275,
+ "log_id": "518d56893d4a"
+}

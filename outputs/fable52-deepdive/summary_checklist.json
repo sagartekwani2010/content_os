@@ -1,0 +1,10 @@
+[
+ "states that Anthropic judges Claude Mythos 5.2 does not cross the RSP threshold for doubling the internal rate of aggregate AI R&D progress.",
+ "states that internal measures of AI R&D acceleration are only partially published and are beginning to show acceleration.",
+ "states that internal automation of AI R&D is increasing and was included in tracking shared with METR for an independent assessment.",
+ "states that automated task-based AI R&D evaluations are no longer used for RSP and FCF threshold determinations because recent models have surpassed the highest human baselines on many of them.",
+ "states that Anthropic did not run those automated AI R&D evaluations for Claude Mythos 5.2.",
+ "states that Claude Mythos 5.2 quit without running an experiment in 63% of medium-effort sessions in an offline open-ended research-task evaluation.",
+ "states that in replayed coding sessions Claude Mythos 5.2 left doable requested work undone in 6\u201313% of medium-to-xhigh-effort sessions, versus 4% for Claude Fable 5.1.",
+ "states that Anthropic does not report CoBench results in this system card because it is updating the evaluation to address issues found in the previous version."
+]

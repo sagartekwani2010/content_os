@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "The item's pre-tax price is ₹1,180 ÷ 1.18 = ₹1,000. The GST is the difference: ₹1,180 − ₹1,000 = ₹180 (equivalently, 18% of ₹1,000).\n\nANSWER: ₹180",
+ "seconds": 5.0,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2378.75,
+ "out_tok": 177,
+ "usd_list": 0.00033,
+ "cli_cost": 0.0003959,
+ "item": "m1"
+}

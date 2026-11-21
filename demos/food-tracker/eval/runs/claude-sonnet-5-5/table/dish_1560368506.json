@@ -1,0 +1,215 @@
+{
+ "items": [
+  {
+   "name": "Sliced roasted pork/chicken loin",
+   "grams_low": 90,
+   "grams_best": 125,
+   "grams_high": 160,
+   "fdc_query": "Pork, fresh, loin, whole, separable lean and fat, cooked, roasted",
+   "preparation": "roasted, sliced",
+   "confidence": 0.4,
+   "kcal": 310.0,
+   "kcal_range": [
+    223,
+    397
+   ],
+   "protein_g": 33.9,
+   "protein_range": [
+    24.4,
+    43.3
+   ],
+   "fdc": {
+    "fdc_id": "167821",
+    "description": "Pork, fresh, loin, whole, separable lean and fat, cooked, roasted",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 248.0,
+    "protein_100g": 27.09
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Breaded/seasoned fried fish or chicken fillets",
+   "grams_low": 70,
+   "grams_best": 100,
+   "grams_high": 140,
+   "fdc_query": "Fish, tilapia, cooked, dry heat, breaded or battered, fried",
+   "preparation": "pan-fried with crumb or spice coating",
+   "confidence": 0.3,
+   "kcal": 237.0,
+   "kcal_range": [
+    166,
+    332
+   ],
+   "protein_g": 17.2,
+   "protein_range": [
+    12.0,
+    24.1
+   ],
+   "fdc": {
+    "fdc_id": "2706322",
+    "description": "Fish, tilapia, fried",
+    "source": "FNDDS 2021-2023",
+    "kcal_100g": 237.0,
+    "protein_100g": 17.18
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cucumber and honeydew-type melon chunks",
+   "grams_low": 100,
+   "grams_best": 150,
+   "grams_high": 200,
+   "fdc_query": "Cucumber, with peel, raw",
+   "preparation": "raw, cut into chunks",
+   "confidence": 0.4,
+   "kcal": 22.5,
+   "kcal_range": [
+    15,
+    30
+   ],
+   "protein_g": 1.0,
+   "protein_range": [
+    0.7,
+    1.3
+   ],
+   "fdc": {
+    "fdc_id": "168409",
+    "description": "Cucumber, with peel, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 15.0,
+    "protein_100g": 0.65
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooked onion",
+   "grams_low": 10,
+   "grams_best": 25,
+   "grams_high": 40,
+   "fdc_query": "Onions, cooked, boiled, drained, without salt",
+   "preparation": "roasted/sauteed slices",
+   "confidence": 0.4,
+   "kcal": 11.0,
+   "kcal_range": [
+    4,
+    18
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.1,
+    0.5
+   ],
+   "fdc": {
+    "fdc_id": "170001",
+    "description": "Onions, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 44.0,
+    "protein_100g": 1.36
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil/seasoning residue",
+   "grams_low": 3,
+   "grams_best": 6,
+   "grams_high": 10,
+   "fdc_query": "Oil, vegetable, soybean, refined",
+   "preparation": "implied by roasting/frying",
+   "confidence": 0.2,
+   "kcal": 53.0,
+   "kcal_range": [
+    27,
+    88
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "172370",
+    "description": "Oil, vegetable, soybean, refined",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 406.0,
+  "kcal": 633.5,
+  "protein_g": 52.4,
+  "grams_range": [
+   273.0,
+   550.0
+  ],
+  "kcal_range": [
+   435,
+   865
+  ],
+  "protein_range": [
+   37.2,
+   69.2
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 406.0,
+   "kcal": 556.0,
+   "protein_g": 61.1,
+   "grams_range": [
+    273.0,
+    550.0
+   ],
+   "kcal_range": [
+    380,
+    754
+   ],
+   "protein_range": [
+    43.3,
+    81.5
+   ]
+  },
+  "rows": [
+   "Pork, fresh, loin, whole, separable lean and fat, cooked, roasted",
+   "Fish, tilapia, cooked, dry heat",
+   "Honeydew melon, raw",
+   "Onions, cooked, boiled, drained, without salt",
+   "Oil, vegetable, soybean, refined"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "449300a607bd6f51ec5c07cca34712b1b8ebe819ab8ba5f51467e612599d0571",
+ "scale_cues": "Square white dinner plate about 26 cm across, with the food covering roughly half of it.",
+ "assumptions": [
+  "The green chunks are mostly cucumber, with some paler pieces that may be honeydew melon.",
+  "The sliced meat is pork or chicken loin; I could not tell which.",
+  "The coated item is a fried fillet, either fish or chicken.",
+  "Oil is implied by the browned, glossy surfaces."
+ ],
+ "latency_s": 12.06,
+ "calls": [
+  {
+   "wall_s": 7.85,
+   "duration_ms": 7062,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0276352,
+   "cost_basis": "list",
+   "input_tokens": 8988,
+   "output_tokens": 720
+  },
+  {
+   "wall_s": 4.18,
+   "duration_ms": 3148,
+   "num_turns": 1,
+   "cost_usd_cli": 0.017232,
+   "cost_basis": "list",
+   "input_tokens": 3644,
+   "output_tokens": 266
+  }
+ ],
+ "cost_usd_cli": 0.04487,
+ "log_id": "aad2dccc1298"
+}

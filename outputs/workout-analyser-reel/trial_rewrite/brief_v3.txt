@@ -1,0 +1,13 @@
+You are Claude Fable 5.2. Read SCRIPT_TRIAL_v2.md (your script, panel 6.6, under the 7 bar) and ../facts.md. This is rewrite round 2 of 2 (the last allowed before the creator sees it).
+
+Verified since v2: verdicts.json shows the judge said STOP on exactly two sets (IMG_2650 lunge, IMG_2661 crunch), so the two red bars are true. Judge/coach agree 9 of 16.
+
+KEEP: the Ep 2 skeleton order, the wave mechanism (beats 6-9), both agents named by role, the guardrail, the 23-set dashboard, "Except this one" lunge, the fix, beats 18-19 word for word.
+
+FIX:
+1. Mass drop at beats 10-12 (three component beats, no person or stake). Make each component beat carry a human stake in its own line, Ep 2 style ("It's not allowed to say calories" worked because it is a rule a person gets). E.g. judge vs coach as two people with different jobs, the guardrail as "it refuses to guess". You may merge or reorder within the skeleton; keep every component named.
+2. "Second element": in Ep 2 the creator said "The first agent is... The second agent is...". Use that exact first/second framing for the judge and coach agents so the second element is explicitly called out. Keep "Gym Jarvis" anchoring beat 1-2.
+3. Runtime: target <= 185 words so it fits ~65 s.
+4. Hook payoff: give the viewer a reason by ~8 s (e.g. "and one of its stops was wrong" in the first two beats), without spending the lunge reveal.
+
+Score with the same 16-persona panel, strict, showing v2 vs v3 per persona and groups. Re-run the 8 principle checks. Write SCRIPT_TRIAL_v3.md (same sections as v2, plus a "v2 -> v3 changes" list). Do not claim to have written anything except that file. Reply with a 5-line summary.

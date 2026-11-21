@@ -219,6 +219,30 @@ def cmd_av(a: argparse.Namespace) -> int:
     return 0 if not str(res.get("status")).startswith("error") else 1
 
 
+def cmd_check(a: argparse.Namespace) -> int:
+    """Run the independent emotion + hook checker on a reel's current script or visual plan."""
+    import json as _json
+
+    from . import stages, story_check
+    reel = Reel.load(a.reel)
+    if a.phase == "visuals":
+        check = stages.run_visuals_check(reel)
+        print(f"{reel.dir / 'VISUALS_CHECK.md'}: {check['verdict']}")
+        return 0
+    s = stages.parse_script_md((reel.dir / "SCRIPT.md").read_text(encoding="utf-8"))
+    bj = reel.dir / "beats.json"
+    if bj.exists():  # keep emotion/delivery/continuity from beats.json
+        extra = {b["id"]: b for b in _json.loads(bj.read_text(encoding="utf-8"))["beats"]}
+        for b in s["beats"]:
+            b.update({k: v for k, v in extra.get(b["id"], {}).items() if k in stages.BEAT_EXTRA})
+    brief = reel.dir / "brief.json"
+    check, prov = story_check.check_script(s, brief.read_text(encoding="utf-8") if brief.exists() else "")
+    story_check.write_report(reel.dir, "SCRIPT_CHECK", f"{s.get('title') or reel.id}: emotion + hook check", check,
+                             None, prov.get("model", ""))
+    print(f"{reel.dir / 'SCRIPT_CHECK.md'}: {check['verdict']} (hook {check['scores']['hook']}/10)")
+    return 0
+
+
 def cmd_heartbeat(a: argparse.Namespace) -> int:
     if a.bg:
         print(f"queued job {jobs.enqueue('heartbeat', requested_by=getpass.getuser(), reason='heartbeat')}")
@@ -259,6 +283,7 @@ def build() -> argparse.ArgumentParser:
                                                  choices=["list", "candidates", "approve", "reject", "show"])
     p.add_argument("arg", nargs="?")
     p = sub.add_parser("av-review"); p.add_argument("reel", nargs="?"); p.add_argument("--file"); p.add_argument("--out")
+    p = sub.add_parser("check"); p.add_argument("reel"); p.add_argument("--phase", choices=["script", "visuals"], default="script")
     p = sub.add_parser("heartbeat"); p.add_argument("--bg", action="store_true")
     sub.add_parser("status-page")
     sub.add_parser("install-runner"); sub.add_parser("uninstall-runner"); sub.add_parser("runner-status")
@@ -272,7 +297,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         handlers = {"status": cmd_status, "next": cmd_next, "new": cmd_new, "adopt": cmd_adopt, "run": cmd_run,
                     "approve": cmd_approve, "feedback": cmd_feedback, "perf": cmd_perf, "log": cmd_log,
-                    "queue": cmd_queue, "memory": cmd_memory, "av-review": cmd_av, "heartbeat": cmd_heartbeat}
+                    "queue": cmd_queue, "memory": cmd_memory, "av-review": cmd_av, "check": cmd_check, "heartbeat": cmd_heartbeat}
         if a.cmd in handlers:
             return handlers[a.cmd](a)
         if a.cmd == "status-page":

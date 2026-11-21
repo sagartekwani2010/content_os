@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "- Claude Mythos 5.2 does not cross Anthropic's RSP threshold: it does not double the internal rate of AI R&D progress versus an unassisted counterfactual.\n- Internal AI R&D automation is increasing, and several acceleration measures are starting to show acceleration.\n- Estimates of acceleration and AI attribution are uncertain. METR recently completed an independent assessment.\n- Mythos 5.2 quit without running an experiment in 63% of medium-effort offline research sessions, and left doable coding work undone in 6–13% of sessions (4% for Fable 5.1).\n- Other reported weaknesses include overcaution, early stopping, and research judgment. Anthropic treats these as limits on fully autonomous research, not a capability ceiling.\n- Some early snapshots outscored Claude Opus 5.5 at choosing next steps in a research session.",
+ "seconds": 14.3,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 5903.25,
+ "out_tok": 3572,
+ "usd_list": 0.00238,
+ "cli_cost": 0.0025633,
+ "item": "s1"
+}

@@ -49,10 +49,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", help="output dir (default <reel_dir>/work/visuals, or work/visuals_preview with --preview)")
     p = sub.add_parser("preview", help="synthetic-voice split-screen preview with sync check")
     p.add_argument("reel_dir")
-    p.add_argument("--out", default="~/Movies/ContentOS/food-tracker/preview")
+    p.add_argument("--out", help="output dir (default <reel_dir>/preview)")
     p.add_argument("--voice", default="Samantha")
     p.add_argument("--rate", type=int, default=175)
     p.add_argument("--beats", help="comma-separated beat numbers (quick partial preview)")
+    p.add_argument("--name", help="output file stem (default: <reel_dir name>_preview)")
     p = sub.add_parser("draft-spec", help="draft visual_cues.json from TELEPROMPTER.md with claude-fable-5-2")
     p.add_argument("reel_dir")
     p.add_argument("--model", default="claude-fable-5-2")
@@ -89,8 +90,8 @@ def main(argv: list[str] | None = None) -> int:
         from .preview import build_preview
 
         only = [int(x) for x in args.beats.split(",")] if args.beats else None
-        name = "food_tracker_preview" + (f"_beats_{'-'.join(map(str, only))}" if only else "")
-        m = build_preview(sheet, reel_dir, Path(args.out).expanduser(), voice=args.voice, rate=args.rate,
+        name = (args.name or f"{reel_dir.name.replace('-', '_')}_preview") + (f"_beats_{'-'.join(map(str, only))}" if only else "")
+        m = build_preview(sheet, reel_dir, Path(args.out).expanduser() if args.out else reel_dir / "preview", voice=args.voice, rate=args.rate,
                           beats_only=only, name=name)
         print(f"preview: {m['preview']} ({m['preview_duration']} s)\ncontact sheet: {m.get('contact_sheet')}")
         return 0

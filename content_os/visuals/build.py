@@ -17,8 +17,8 @@ from . import SCHEMA
 from .cues import default_duration
 from .render import FPS, BeatRenderer, encode, still
 from .doodles import load_image
-from .facts import load_lunch
-from .script import load_lines
+from .facts import load_lunch, load_meals
+from .script import beat_line, load_lines
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = "visuals.json"
@@ -34,12 +34,17 @@ def load_sheet(path: Path) -> dict:
     script = path.parent / sheet.get("script", "TELEPROMPTER.md")
     lines = load_lines(script)
     sheet["_script"] = str(script)
+    from . import rough
+    rough.set_theme(sheet.get("theme"))  # "paper" (default) | "dark" | "cold" | {"#old": "#new"}
     sheet["_unspecced_beats"] = sorted(set(lines) - {int(b["beat"]) for b in sheet["beats"]})
     for b in sheet["beats"]:
-        b["line"] = lines.get(int(b["beat"]), "")
+        b["line"] = beat_line(b, lines)
     lunch = sheet.get("params", {}).get("lunch", {})
     if lunch.get("log") and lunch.get("log_id"):
         load_lunch(lunch["log"], lunch["log_id"])
+    meals = sheet.get("params", {}).get("meals", {})
+    if meals.get("log") and meals.get("ids"):
+        load_meals(meals["log"], meals["ids"])
     return sheet
 
 
@@ -97,6 +102,8 @@ def render_all(sheet: dict, reel_dir: Path, out_dir: Path, timings: dict[int, di
                beats: list[int] | None = None, cuts_sha256: str | None = None, contact: bool = True,
                log=print) -> dict:
     params = sheet.get("params", {})
+    from . import rough
+    rough.set_theme(sheet.get("theme"))
     ctx, asset_info = resolve_assets(params, reel_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     manifest = {"schema": "content_os.visuals/manifest@1", "cues_sha256": canonical_hash(sheet), "script": sheet.get("_script"),

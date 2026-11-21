@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "```python\nimport re\n\n_DURATION_RE = re.compile(r\"(?:([0-9]+)h)?(?:\\s*([0-9]+)m)?\")\n\n\ndef parse_duration(s: str) -> int:\n    text = s.strip()\n    match = _DURATION_RE.fullmatch(text)\n    if not text or match is None or (match.group(1) is None and match.group(2) is None):\n        raise ValueError(f\"Invalid duration: {s!r}\")\n    hours = int(match.group(1) or 0)\n    minutes = int(match.group(2) or 0)\n    return hours * 60 + minutes\n```",
+ "seconds": 6.0,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2475.5,
+ "out_tok": 945,
+ "usd_list": 0.00072,
+ "cli_cost": 0.0007928000000000001,
+ "item": "c2"
+}

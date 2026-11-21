@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Sweet corn, yellow, cooked (kernels from cob rounds)",
+   "grams_low": 60,
+   "grams_best": 95,
+   "grams_high": 130,
+   "fdc_query": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "preparation": "Boiled or steamed cross-cut corn cob rounds; kernels only, cob core excluded; no added butter or salt visible",
+   "confidence": 0.45,
+   "kcal": 91.2,
+   "kcal_range": [
+    58,
+    125
+   ],
+   "protein_g": 3.2,
+   "protein_range": [
+    2.0,
+    4.4
+   ],
+   "fdc": {
+    "fdc_id": "169999",
+    "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 96.0,
+    "protein_100g": 3.41
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 95.0,
+  "kcal": 91.2,
+  "protein_g": 3.2,
+  "grams_range": [
+   60.0,
+   130.0
+  ],
+  "kcal_range": [
+   58,
+   125
+  ],
+  "protein_range": [
+   2.0,
+   4.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 95.0,
+   "kcal": 89.3,
+   "protein_g": 3.0,
+   "grams_range": [
+    60.0,
+    130.0
+   ],
+   "kcal_range": [
+    56,
+    122
+   ],
+   "protein_range": [
+    1.9,
+    4.0
+   ]
+  },
+  "rows": [
+   "Corn, sweet, yellow, frozen, kernels on cob, cooked, boiled, drained, without salt"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "fe75dd82c3e18a92baec81c78652e9cc6ebb0eb729ee0edbada22fc43432de9b",
+ "scale_cues": "White square plate about 25-27 cm across used as scale. Each corn round is roughly 5-6 cm in diameter, about a fifth of the plate width. Estimate assumes two rounds of about 2.5 cm thickness.",
+ "assumptions": [
+  "Two corn cob rounds, each about 45-50 g of edible kernels; the white central cob core is inedible and excluded from the mass.",
+  "Thickness is not visible from overhead, so mass is inferred from diameter and typical cob-round dimensions.",
+  "No butter, salt, or other sauce is visible, so none is logged.",
+  "Kernels are assumed cooked, not raw, based on the yellow color and soft appearance."
+ ],
+ "latency_s": 1814.8,
+ "calls": [
+  {
+   "wall_s": 1811.14,
+   "duration_ms": 15799,
+   "num_turns": 2,
+   "cost_usd_cli": 0.00179278,
+   "cost_basis": "list",
+   "input_tokens": 18025,
+   "output_tokens": 1257
+  },
+  {
+   "wall_s": 3.65,
+   "duration_ms": 2606,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0006535,
+   "cost_basis": "list",
+   "input_tokens": 3531,
+   "output_tokens": 264
+  }
+ ],
+ "cost_usd_cli": 0.00245,
+ "log_id": "8724187961cd"
+}

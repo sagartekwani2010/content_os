@@ -1,0 +1,88 @@
+{
+ "beats": [
+  {
+   "n": 1,
+   "line": "My Gym Jarvis checked twenty-three sets, and called stop on a good one."
+  },
+  {
+   "n": 2,
+   "line": "I spent months of weekends on Gym Jarvis, so let's open my Workout Analyser."
+  },
+  {
+   "n": 3,
+   "line": "After over 200 papers and tools, I realized counting reps is easy, but judging one is hard."
+  },
+  {
+   "n": 4,
+   "line": "So I built one pose tool and two agents."
+  },
+  {
+   "n": 5,
+   "line": "It tracks my joints, and rep maths turns each rep into a wave."
+  },
+  {
+   "n": 6,
+   "line": "A taller wave means I moved further, so cut-short reps look shorter."
+  },
+  {
+   "n": 7,
+   "line": "And like a trainer, it compares each wave with my own best."
+  },
+  {
+   "n": 8,
+   "line": "The first agent is the judge, which reads my numbers."
+  },
+  {
+   "n": 9,
+   "line": "The second agent is the coach, a second opinion that isn't allowed the numbers."
+  },
+  {
+   "n": 10,
+   "line": "And one guardrail before any AI: if the code can't see the joint, it won't judge."
+  },
+  {
+   "n": 11,
+   "line": "Then I ran every set, and almost none got a stop."
+  },
+  {
+   "n": 12,
+   "line": "Except this one, where the judge said stop and the coach said good."
+  },
+  {
+   "n": 13,
+   "line": "I had only turned towards the camera, like the research warned."
+  },
+  {
+   "n": 14,
+   "line": "So now, stop needs both agents to agree, or I check the footage."
+  },
+  {
+   "n": 15,
+   "line": "And only one stop survived, my reverse crunch."
+  },
+  {
+   "n": 16,
+   "line": "And it was right: my worst rep was under half my best."
+  },
+  {
+   "n": 17,
+   "line": "Send this to a friend who swears every rep is full."
+  },
+  {
+   "n": 18,
+   "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience."
+  },
+  {
+   "n": 19,
+   "line": "How can you be that one? Follow along to know."
+  }
+ ],
+ "changes": [
+  "WORD LIMIT NOT MET: the script is 232 words against the 215 cap. The input was already 206 words, and the two mandated changes (beat 15 split, share line) add 20 on their own, so 215 is unreachable while keeping everything else word for word. I did not cut any other line. Reaching 215 needs about 17 words removed, which is a creator decision.",
+  "Beat 2: was 'So let's open my Workout Analyser.' Now 'I spent months of weekends on Gym Jarvis, so let's open my Workout Analyser.' The months-of-weekends claim attaches to Gym Jarvis only, as facts.md allows, and the 'so' links the effort to opening the analyser. One spoken sentence.",
+  "Beat 11: was 'Then I ran every set, and most were continue or hold.' Now 'Then I ran every set, and almost none got a stop.' It no longer uses 'continue' or 'hold' before they are introduced, and it sets up 'Except this one' in beat 12. It matches facts.md: 1 final STOP and 1 CHECK FOOTAGE out of 23, with the dashboard carrying the exact counts.",
+  "Beat 15 split into beats 15 and 16 exactly as given. 'Under half my best' matches facts.md: worst rep 53 degrees against best rep 122 degrees, and half of 122 is 61.",
+  "Beat 17 inserted before the Salesforce beat exactly as given: 'Send this to a friend who swears every rep is full.'",
+  "Beats 1, 3-10 and 12-14 are word for word. The last two lines (now beats 18 and 19) are word for word. No semicolons. The script is now 19 beats."
+ ]
+}

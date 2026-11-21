@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "```python\nfrom decimal import Decimal, ROUND_HALF_UP\n\n\ndef split_bill(total: float, people: int, tip_pct: float) -> list[float]:\n    \"\"\"Add the tip, then split the bill so the shares sum exactly to the\n    tipped total (rounded to the paisa). Extra paise go on the first shares.\n\n    >>> split_bill(100, 3, 0)\n    [33.34, 33.33, 33.33]\n    \"\"\"\n    if people <= 0:\n        raise ValueError(\"people must be a positive integer\")\n    if total < 0 or tip_pct < 0:\n        raise ValueError(\"total and tip_pct must be non-negative\")\n\n    # Work in exact decimal arithmetic, then in whole paise, to avoid float error.\n    total_d = Decimal(str(total))\n    tip_d = Decimal(str(tip_pct))\n    grand_total = total_d * (Decimal(1) + tip_d / Decimal(100))\n\n    total_paise = int(\n        (grand_total * 100).quantize(Decimal(\"1\"), rounding=ROUND_HALF_UP)\n    )\n\n    base, extra = divmod(total_paise, people)\n\n    # First `extra` people pay one additional paisa each.\n    return [\n        (base + (1 if i < extra else 0)) / 100\n        for i in range(people)\n    ]\n```",
+ "seconds": 8.6,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1182.0,
+ "out_tok": 548,
+ "usd_list": 0.03138,
+ "cli_cost": 0.0373123,
+ "item": "c3"
+}

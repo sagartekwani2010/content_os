@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "Two kilograms of iron is heavier. It has twice the mass of the one kilogram of feathers. The trick in the classic riddle only works when both amounts are equal, e.g. 1 kg each, and then they weigh the same.\n\nANSWER: Two kilograms of iron",
+ "seconds": 3.3,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1127.0,
+ "out_tok": 92,
+ "usd_list": 0.00635,
+ "cli_cost": 0.0091789,
+ "item": "r2"
+}

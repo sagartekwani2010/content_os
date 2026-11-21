@@ -1,0 +1,107 @@
+{
+ "beats": [
+  {
+   "n": 1,
+   "line": "My Gym Jarvis checked twenty-three sets, and called stop on a good one.",
+   "visual": "`false_alarm.mp4`: lunge clip, JUDGE: STOP stamp lands, then wobbles. Text: GYM JARVIS \u00b7 23 SETS \u00b7 STOP?"
+  },
+  {
+   "n": 2,
+   "line": "It took me months of weekends, so let's open its Workout Analyser.",
+   "visual": "`gj_zoom.mp4`: Gym Jarvis five-part line diagram, SET SCAN turns red, zoom into WORKOUT ANALYSER. Text: MONTHS OF WEEKENDS \u00b7 GYM JARVIS \u2192 WORKOUT ANALYSER"
+  },
+  {
+   "n": 3,
+   "line": "After over 200 papers and tools, I realized counting reps is easy, judging one is hard.",
+   "visual": "`research_blocks.mp4`: REPS \u2192 COUNT THEM \u2192 EASY \u00b7 REPS \u2192 JUDGE THEM \u2192 HARD. The CAMERA ANGLE block stays dim and unlabelled so the false alarm is not spoiled. Text: OVER 200 PAPERS + TOOLS"
+  },
+  {
+   "n": 4,
+   "line": "So I built one pose tool and two agents.",
+   "visual": "`system_card.mp4` redrawn as three boxes left to right: POSE TOOL \u2192 JUDGE \u2192 COACH. Text: 1 POSE TOOL \u00b7 2 AGENTS"
+  },
+  {
+   "n": 5,
+   "line": "It tracks my joints, and rep maths turns each rep into a wave.",
+   "visual": "`lockon_red.mp4` then `dual_wave.mp4`: 17 joints lock on, the moving joint traces a wave. Text: 17 JOINTS \u00b7 1 DIP = 1 REP"
+  },
+  {
+   "n": 6,
+   "line": "A taller wave means I moved further, and like a trainer, it compares each with my best.",
+   "visual": "`dual_wave.mp4` into `judge_hold.mp4`: tallest wave ringed green as MY BEST REP, a short wave drops in beside it in amber. Text: TALLER = MOVED FURTHER \u00b7 CUT-SHORT REPS LOOK SHORTER \u00b7 MY BEST REP, SAME SET"
+  },
+  {
+   "n": 7,
+   "line": "The first agent, the judge, reads my numbers.",
+   "visual": "Line diagram: rep table slides into a box marked JUDGE, out come CONTINUE / HOLD / STOP. Text: AGENT 1 \u00b7 JUDGE \u00b7 READS THE NUMBERS"
+  },
+  {
+   "n": 8,
+   "line": "The second agent, the coach, isn't allowed the numbers.",
+   "visual": "Line diagram: the rep table bounces off a box marked COACH, only video frames go in. Text: AGENT 2 \u00b7 COACH \u00b7 A SECOND OPINION \u00b7 VIDEO ONLY"
+  },
+  {
+   "n": 9,
+   "line": "One guardrail: if the code can't see the joint, it won't judge.",
+   "visual": "`hidden_diagram.mp4` then `cant_see.mp4`, refusal big and centred. Text: BEFORE ANY AI \u00b7 CAN'T SEE YOUR KNEE. NOT JUDGING THIS SET. \u00b7 4 OF 23 SETS"
+  },
+  {
+   "n": 10,
+   "line": "Most sets got continue or hold.",
+   "visual": "`wall_of_sets.mp4` full vertical: all 23 tiles stamp in. Text: CONTINUE 6 \u00b7 HOLD 11"
+  },
+  {
+   "n": 11,
+   "line": "Except this one: judge said stop, coach said good.",
+   "visual": "`false_alarm.mp4`: one tile turns red and zooms out of the wall, split verdict. Text: JUDGE: STOP \u00b7 COACH: GOOD"
+  },
+  {
+   "n": 12,
+   "line": "I'd only turned towards the camera, like the research warned.",
+   "visual": "`false_alarm.mp4` held: STOP struck through, then the CAMERA ANGLE block from beat 3 lights up. Text: FALSE ALARM \u00b7 I HAD ONLY TURNED TO THE CAMERA"
+  },
+  {
+   "n": 13,
+   "line": "Now stop needs both agents to agree, or I check the footage.",
+   "visual": "`check_gate.mp4`: two locks click. Text: BOTH SAY STOP \u2192 STOP \u00b7 ELSE \u2192 CHECK FOOTAGE"
+  },
+  {
+   "n": 14,
+   "line": "Only one stop survived, my reverse crunch.",
+   "visual": "`wall_of_sets.mp4` back for a beat: one tile stays red, then `ghost_stop.mp4`. Text: 1 STOP \u00b7 REVERSE CRUNCH \u00b7 JUDGE: STOP \u00b7 COACH: BAD"
+  },
+  {
+   "n": 15,
+   "line": "It was right. My worst rep was under half my best.",
+   "visual": "`ghost_stop.mp4` as a best versus worst overlay, same set, same angle, two bars with the best rep taller. No rep count shown. Text: BEST REP 122\u00b0 \u00b7 WORST REP 53\u00b0 \u00b7 LEGS NOT LOWERING FULLY"
+  },
+  {
+   "n": 16,
+   "line": "Send this to a friend who swears every rep is full.",
+   "visual": "`raw_swing.mp4`: the raw swung crunch reps. Text: SEND THIS TO A FRIEND WHO SWEARS EVERY REP IS FULL \u00b7 COMMENT FORM"
+  },
+  {
+   "n": 17,
+   "line": "Next up: Salesforce is reportedly letting people go, but hiring people with AI experience.",
+   "visual": "`news_jobs.mp4`, hold 6.0 s: real headline on top, real posting below with the title ringed. Text: REPORTEDLY \u00b7 NOT CONFIRMED BY SALESFORCE \u00b7 LMTS - LEAD AI/ML ENGINEER (LLM POST-TRAINING)"
+  },
+  {
+   "n": 18,
+   "line": "How can you be that one? Follow along to know.",
+   "visual": "`ending_screen.mp4`. Text: HOW CAN YOU BE THAT ONE? FOLLOW ALONG TO KNOW"
+  }
+ ],
+ "changes": [
+  "Size: 18 beats, 199 words by my count (200 as a numeral, hyphenated words as one). Last two lines are word for word. No semicolons.",
+  "1. Warmth: beat 2 is now 'It took me months of weekends, so let's open its Workout Analyser.' 'It' is Gym Jarvis from line 1, which matches the claim facts.md allows (months of weekends on Gym Jarvis, not on the analyser).",
+  "2. Forwardable line: new beat 16, 'Send this to a friend who swears every rep is full', sits just before the tease. It is worded differently from the main's and follows straight from the half-rep payoff.",
+  "3. Payoff: 'which was fair' became beat 15, 'It was right. My worst rep was under half my best.' On screen it shows 122\u00b0 against 53\u00b0, which is 43%, so 'under half' is true. No rep count is shown, per facts.md.",
+  "4. Mechanism: pose tool to 'like a trainer' is now 3 beats (4 to 6), down from 4. The taller-wave and trainer lines are merged into beat 6.",
+  "The pasted trial was already about 206 words, so adding three things under a 200 cap forced trims to some fact-checked lines. Nothing was reworded into a new claim, only shortened.",
+  "Three phrases moved from voice to on-screen text: 'cut-short reps look shorter' (beat 6), 'a second opinion' (beat 8) and 'before any AI' (beat 9). Restoring them to voice costs about 10 words, so the cap would need to go to about 210.",
+  "Other trims: 'but' dropped in beat 3, 'own' dropped in beat 6, the agent lines tightened to 'The first agent, the judge, reads my numbers' and 'The second agent, the coach, isn't allowed the numbers', 'Then I ran every set' dropped from beat 10, and 'So' dropped in beat 13.",
+  "Kept from the trial: Gym Jarvis in line 1, 'one pose tool and two agents', the first and second agent lines, 'isn't allowed', the guardrail shape, 'Except this one', 'like the research warned' and the both-agents rule.",
+  "Visual for beat 3 keeps the camera-angle block dim until beat 12, so the false alarm is not spoiled early and the research callback pays off there.",
+  "Not checked: nothing here has been read aloud or timed, the redrawn `system_card.mp4` and the judge and coach diagrams for beats 4, 7 and 8 do not exist yet, and the script has not been re-scored by the blind judge."
+ ]
+}

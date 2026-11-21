@@ -1,0 +1,131 @@
+{
+ "items": [
+  {
+   "name": "Arugula (rocket) salad greens",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 65,
+   "fdc_query": "Arugula, raw",
+   "preparation": "raw, loose leaves, appears lightly dressed or undressed",
+   "confidence": 0.6,
+   "kcal": 11.2,
+   "kcal_range": [
+    8,
+    16
+   ],
+   "protein_g": 1.2,
+   "protein_range": [
+    0.8,
+    1.7
+   ],
+   "fdc": {
+    "fdc_id": "169387",
+    "description": "Arugula, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 25.0,
+    "protein_100g": 2.58
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Carrot shreds",
+   "grams_low": 2,
+   "grams_best": 5,
+   "grams_high": 9,
+   "fdc_query": "Carrots, raw",
+   "preparation": "raw, finely shredded",
+   "confidence": 0.45,
+   "kcal": 2.0,
+   "kcal_range": [
+    1,
+    4
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 50.0,
+  "kcal": 13.2,
+  "protein_g": 1.2,
+  "grams_range": [
+   32.0,
+   74.0
+  ],
+  "kcal_range": [
+   9,
+   20
+  ],
+  "protein_range": [
+   0.8,
+   1.8
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 50.0,
+   "kcal": 28.3,
+   "protein_g": 1.6,
+   "grams_range": [
+    32.0,
+    74.0
+   ],
+   "kcal_range": [
+    15,
+    47
+   ],
+   "protein_range": [
+    1.0,
+    2.4
+   ]
+  },
+  "rows": [
+   "Arugula, raw",
+   "Carrot, dehydrated"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "cf5213c16c794f02cd31a4c466d9f1971d75b51600007c3d06e28fd7a062c01c",
+ "scale_cues": "Square white plate roughly 26-28 cm across. The greens cover about a quarter of the plate in a loose, shallow pile. I estimated mass from that footprint and an assumed pile height of 3-4 cm.",
+ "assumptions": [
+  "The greens are arugula, based on the lobed leaves and thin stems. They could be a baby arugula or mizuna mix.",
+  "No visible dressing or oil sheen, so none is counted. A light dressing is possible but too small to estimate.",
+  "Carrot is the only other visible ingredient, and it is sparse.",
+  "Leaves are loosely piled, so the mass is low for the volume."
+ ],
+ "latency_s": 10.5,
+ "calls": [
+  {
+   "wall_s": 7.19,
+   "duration_ms": 6441,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0251773,
+   "cost_basis": "list",
+   "input_tokens": 8990,
+   "output_tokens": 474
+  },
+  {
+   "wall_s": 3.31,
+   "duration_ms": 2179,
+   "num_turns": 1,
+   "cost_usd_cli": 0.008598,
+   "cost_basis": "list",
+   "input_tokens": 1843,
+   "output_tokens": 123
+  }
+ ],
+ "cost_usd_cli": 0.03378,
+ "log_id": "78dc4bc7b210"
+}

@@ -30,3 +30,9 @@ def parse_teleprompter(text: str) -> dict[int, str]:
 
 def load_lines(path: Path) -> dict[int, str]:
     return parse_teleprompter(Path(path).read_text())
+
+
+def beat_line(beat: dict, lines: dict[int, str]) -> str:
+    """A beat's spoken line. ``"line_from": N`` reuses beat N's line (a cold open that replays beat N's
+    audio is beat 0 in cuts.json but has no teleprompter entry of its own)."""
+    return lines.get(int(beat.get("line_from", beat["beat"])), "")

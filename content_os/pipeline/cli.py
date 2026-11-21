@@ -24,6 +24,15 @@ MODELS = {
     "models/face_detection_yunet_2023mar.onnx": (
         "https://github.com/opencv/opencv_zoo/raw/main/models/face_detection_yunet/face_detection_yunet_2023mar.onnx",
         "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"),
+    # section cards: Barlow Condensed, SIL Open Font License 1.1 (licence file kept next to the fonts)
+    "fonts/BarlowCondensed-ExtraBold.ttf": (
+        "https://github.com/google/fonts/raw/main/ofl/barlowcondensed/BarlowCondensed-ExtraBold.ttf",
+        "724c9c25952d5f4a2d87185d9767aa006144c5f0d944dc05bf7d5d603551c260"),
+    "fonts/BarlowCondensed-SemiBold.ttf": (
+        "https://github.com/google/fonts/raw/main/ofl/barlowcondensed/BarlowCondensed-SemiBold.ttf",
+        "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9"),
+    "fonts/OFL-BarlowCondensed.txt": ("https://github.com/google/fonts/raw/main/ofl/barlowcondensed/OFL.txt",
+                                      "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"),
 }
 
 
@@ -122,7 +131,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="python -m content_os.pipeline", description="Reel video-editing pipeline")
     ap.add_argument("--set", action="append", metavar="KEY=VALUE", help="config override, e.g. judge.enabled=false")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    sub.add_parser("setup", help="download whisper + VAD + face models into ~/.cache/content_os")
+    sub.add_parser("setup", help="download whisper + VAD + face models and card fonts into ~/.cache/content_os")
     p = sub.add_parser("synth", help="generate a synthetic test reel")
     p.add_argument("reel_dir")
     p.add_argument("--hdr", action="store_true")
@@ -139,6 +148,11 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("--no-auditions", action="store_true")
         if name in ("render", "qa"):
             p.add_argument("--draft", action="store_true")
+    p = sub.add_parser("sfx", help="(re)generate the synthesised SFX set (deterministic)")
+    p.add_argument("--out", default=None, help="output dir (default ~/Movies/ContentOS/sfx)")
+    p = sub.add_parser("sfx-cues", help="write deliver/SFX_CUES.md (SFX at exact output times, for Edits)")
+    p.add_argument("reel_dir")
+    p.add_argument("--out", default=None)
     p = sub.add_parser("judge", help="Claude judgement step (takes after score, cuts after cut_review)")
     p.add_argument("reel_dir")
     p.add_argument("--phase", choices=["takes", "cuts"], required=True)
@@ -171,8 +185,20 @@ def main(argv: list[str] | None = None) -> int:
             res = make_reel(Path(args.reel_dir), hdr=args.hdr, files=args.files, size=(w, h))
             print(f"synthetic reel in {args.reel_dir}: {res['files']}")
             return 0
+        if args.cmd == "sfx":
+            from .sfx import DEFAULT_DIR, generate
+
+            res = generate(args.out or DEFAULT_DIR)
+            for name, f in res["files"].items():
+                print(f"{name:7s} {f['duration']:.3f} s  peak {f['peak_dbfs']} dBFS  TP {f['true_peak_db']} dBTP  {f['path']}")
+            return 0
         reel = Reel.at(args.reel_dir)
         cfg = load_config(reel.root, _overrides(args.set))
+        if args.cmd == "sfx-cues":
+            from .sfx import cue_list
+
+            print(f"sfx-cues: {cue_list(reel, cfg, Path(args.out) if args.out else None)}")
+            return 0
         if args.cmd == "select":
             from .score import override
 

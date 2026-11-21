@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "Two kilograms of iron is heavier. Two kilograms is twice the mass of one kilogram, so the material doesn't matter. The feathers take up much more space, but they weigh less.\n\nANSWER: Two kilograms of iron",
+ "seconds": 2.8,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1125.75,
+ "out_tok": 78,
+ "usd_list": 0.00303,
+ "cli_cost": 0.0045109,
+ "item": "r2"
+}

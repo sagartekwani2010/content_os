@@ -76,9 +76,14 @@ def split_vertical(width: int, height: int, safe: dict, captions: dict, speaker_
             y = seam - captions["margin_above_seam"] - box_h
         else:
             y = min(height - safe["bottom"], visual.bottom) - captions["margin_above_seam"] - box_h
+    elif caption_position == "bottom_safe":
+        # lower part of the frame, just above the platform's bottom UI (on the speaker's chest when the
+        # speaker is at the bottom; pair with a higher eye_line so the face sits clear above it)
+        y = height - captions.get("bottom_px", safe["bottom"]) - box_h
     else:
-        raise ValueError("caption_position must be top_safe or seam")
-    y = min(y, height - safe["bottom"] - box_h)
+        raise ValueError("caption_position must be top_safe, seam or bottom_safe")
+    if caption_position != "bottom_safe":
+        y = min(y, height - safe["bottom"] - box_h)
     box = Rect(x0, max(safe["top"], y), x1 - x0, box_h)
 
     def compose(inputs: dict[str, str]) -> str:

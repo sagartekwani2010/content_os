@@ -1,0 +1,138 @@
+{
+ "scripts": {
+  "A": {
+   "personas": [
+    6,
+    4,
+    4,
+    4,
+    3,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    4,
+    7,
+    7,
+    6,
+    4
+   ],
+   "mass": 4.14,
+   "fcm": 4.83,
+   "builders": 6.5,
+   "overall": 5.0,
+   "voice_match": 4,
+   "mechanism": 7.5,
+   "weakest": [
+    "Line 13 'Chest, back, legs, core: six continue, eleven hold, four refused.' is seven list items in one breath, and nobody holds three counts by ear. Fix: 'Then I tested it on all twenty-three sets, and only six got a clear continue.' Leave the split to the dashboard.",
+    "Line 6 'A pose tool tracks my joints; rep maths turns one angle into a wave.' is two clipped clauses joined by a semicolon, which reads like a slide rather than the Ep 2 speaker. Fix: 'The pose tool tracks my joints, and rep maths turns each rep into a wave.' The same telegraphic style hurts lines 5, 12 and 16."
+   ]
+  },
+  "B": {
+   "personas": [
+    7,
+    6,
+    6,
+    5,
+    5,
+    7,
+    6,
+    6,
+    7,
+    6,
+    6,
+    6,
+    7,
+    7,
+    8,
+    6
+   ],
+   "mass": 6.0,
+   "fcm": 6.17,
+   "builders": 7.0,
+   "overall": 6.31,
+   "voice_match": 7,
+   "mechanism": 8,
+   "weakest": [
+    "Line 11 'Then I ran every set, and most were continue or hold.' is vague, and it never says there were two stops, so 'only one stop survived' in line 15 has nothing to pay off. Fix: 'Then I ran every set: six got continue, most got hold, and two got stop.'",
+    "Line 5 'It tracks my joints, and rep maths turns each rep into a wave.' has an unclear 'It', coming straight after 'one pose tool and two agents'. Fix: 'The pose tool tracks my joints, and rep maths turns each rep into a wave.' Line 3 is also overlong for one breath."
+   ]
+  },
+  "C": {
+   "personas": [
+    6,
+    5,
+    5,
+    5,
+    4,
+    6,
+    6,
+    5,
+    6,
+    6,
+    5,
+    5,
+    6,
+    6,
+    6,
+    5
+   ],
+   "mass": 5.0,
+   "fcm": 5.5,
+   "builders": 6.0,
+   "overall": 5.44,
+   "voice_match": 8.5,
+   "mechanism": 6.5,
+   "weakest": [
+    "Line 7 'Its height is how far I moved, compared with my own best wave.' squeezes two ideas into one line, and a trainer never hears that a bad rep is a shorter wave. Fix: split it into 'A taller wave means I moved further, so tired reps look shorter.' and 'Then each wave is compared with my own best.'",
+    "Lines 11-12 'only six got a continue. Except this one...' do not connect, because 'except' has nothing to contradict and the stops are never mentioned. Fix line 11: 'Then I tested it on 23 sets, and it called stop on only two.' Line 1 also spends the first second on a recap, so a cold viewer gets no hook."
+   ]
+  },
+  "D": {
+   "personas": [
+    7,
+    5,
+    5,
+    5,
+    4,
+    7,
+    6,
+    6,
+    6,
+    6,
+    6,
+    5,
+    7,
+    7,
+    7,
+    5
+   ],
+   "mass": 5.14,
+   "fcm": 5.83,
+   "builders": 7.0,
+   "overall": 5.88,
+   "voice_match": 8,
+   "mechanism": 7.5,
+   "weakest": [
+    "Line 11 'Then on twenty-three sets, it gave six continues, eleven holds and two stops.' is four numbers in one spoken line, and 'two stops' was already said in line 2. Fix: 'Then I tested it on twenty-three sets, and most got continue or hold.' Leave the counts to the dashboard.",
+    "Line 3 'From the research, I realized counting reps is easy, but judging them is hard.' is weak because 'the research' is unanchored and drops the Claude and 200-papers credibility beat. Fix: 'I had Claude go through over 200 papers and tools, and I realized counting reps is easy, but judging one is hard.' Line 7 'Then I built two agents' also arrives after four beats of mechanism, so the architecture feels late."
+   ]
+  }
+ },
+ "winner": "B",
+ "graft": [
+  "Replace B5 with C6 so the subject is named: 'The pose tool tracks my joints, and rep maths turns each rep into a wave.'",
+  "Split B3 into two beats in the Ep 2 cadence, using C3 and C4: 'First, I had Claude go through over 200 papers and tools.' then 'And I realized, counting reps is easy, but judging a rep is hard.'",
+  "Insert D5 before B6 so the wave is defined before it is interpreted: 'One wave is one rep, and its height is how far I moved.' Then shorten B6 to 'So tired reps look shorter.'",
+  "Add A9 after B7 as a concrete on-screen example: 'Rep four is clearly shorter.' It is the one line that lets a trainer see the detection happen.",
+  "Replace B11 with the stop count from D11 and D2 so B15 pays off: 'Then I ran every set: six got continue, most got hold, and two got stop.' Also tighten B10 with the stronger verb from C10: 'And if a joint is hidden, it refuses to judge.'"
+ ],
+ "labels": {
+  "v3": "A",
+  "stake": "B",
+  "voice": "C",
+  "anchor": "D"
+ }
+}

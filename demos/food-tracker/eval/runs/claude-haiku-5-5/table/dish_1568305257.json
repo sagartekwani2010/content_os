@@ -1,0 +1,217 @@
+{
+ "items": [
+  {
+   "name": "Scrambled eggs",
+   "grams_low": 90,
+   "grams_best": 120,
+   "grams_high": 160,
+   "fdc_query": "Egg, whole, cooked, scrambled",
+   "preparation": "Soft-scrambled, pale yellow curds, likely cooked with a little fat or milk",
+   "confidence": 0.7,
+   "kcal": 178.8,
+   "kcal_range": [
+    134,
+    238
+   ],
+   "protein_g": 12.0,
+   "protein_range": [
+    9.0,
+    16.0
+   ],
+   "fdc": {
+    "fdc_id": "172187",
+    "description": "Egg, whole, cooked, scrambled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 149.0,
+    "protein_100g": 9.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Pan-seared ham or Canadian bacon slices",
+   "grams_low": 70,
+   "grams_best": 95,
+   "grams_high": 120,
+   "fdc_query": "Pork, cured, ham, cooked, pan-fried",
+   "preparation": "Thick sliced cured pork, seared with browned edges, about 4 to 5 slices",
+   "confidence": 0.45,
+   "kcal": 138.7,
+   "kcal_range": [
+    102,
+    175
+   ],
+   "protein_g": 26.9,
+   "protein_range": [
+    19.8,
+    34.0
+   ],
+   "fdc": {
+    "fdc_id": "168383",
+    "description": "Canadian bacon, cooked, pan-fried",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 146.0,
+    "protein_100g": 28.31
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Saut\u00e9ed spinach",
+   "grams_low": 60,
+   "grams_best": 80,
+   "grams_high": 110,
+   "fdc_query": "Spinach, cooked, boiled, drained, without salt",
+   "preparation": "Dark leafy greens wilted in a pan, stems included",
+   "confidence": 0.6,
+   "kcal": 18.4,
+   "kcal_range": [
+    14,
+    25
+   ],
+   "protein_g": 2.4,
+   "protein_range": [
+    1.8,
+    3.3
+   ],
+   "fdc": {
+    "fdc_id": "168463",
+    "description": "Spinach, cooked, boiled, drained, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 23.0,
+    "protein_100g": 2.97
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Shredded carrot",
+   "grams_low": 4,
+   "grams_best": 7,
+   "grams_high": 10,
+   "fdc_query": "Carrots, raw",
+   "preparation": "Thin raw julienned strips scattered over the spinach and eggs",
+   "confidence": 0.5,
+   "kcal": 2.9,
+   "kcal_range": [
+    2,
+    4
+   ],
+   "protein_g": 0.1,
+   "protein_range": [
+    0.0,
+    0.1
+   ],
+   "fdc": {
+    "fdc_id": "170393",
+    "description": "Carrots, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 41.0,
+    "protein_100g": 0.93
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Cooking oil or butter (implied)",
+   "grams_low": 3,
+   "grams_best": 5,
+   "grams_high": 8,
+   "fdc_query": "Oil, vegetable, canola",
+   "preparation": "Fat used to cook the eggs, meat and spinach; not directly visible",
+   "confidence": 0.3,
+   "kcal": 44.2,
+   "kcal_range": [
+    27,
+    71
+   ],
+   "protein_g": 0.0,
+   "protein_range": [
+    0.0,
+    0.0
+   ],
+   "fdc": {
+    "fdc_id": "172336",
+    "description": "Oil, canola",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 884.0,
+    "protein_100g": 0.0
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 307.0,
+  "kcal": 383.0,
+  "protein_g": 41.4,
+  "grams_range": [
+   227.0,
+   408.0
+  ],
+  "kcal_range": [
+   279,
+   513
+  ],
+  "protein_range": [
+   30.6,
+   53.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 307.0,
+   "kcal": 404.0,
+   "protein_g": 41.9,
+   "grams_range": [
+    227.0,
+    408.0
+   ],
+   "kcal_range": [
+    291,
+    543
+   ],
+   "protein_range": [
+    30.9,
+    54.1
+   ]
+  },
+  "rows": [
+   "Egg, whole, cooked, scrambled",
+   "Canadian bacon, cooked, pan-fried",
+   "Spinach, cooked, boiled, drained, without salt",
+   "Carrot, dehydrated",
+   "Oil, canola"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "a1c504bf2592630875fcdc05197b87bd9cae1710d5c792b3fe302d3db0324b53",
+ "scale_cues": "Used the white square dinner plate (roughly 26 cm across) as the scale reference. Eggs cover about a third of the plate, the meat strips run along the bottom edge, and the spinach fills a band on the right side. No utensils or hands visible for further scaling.",
+ "assumptions": [
+  "Plate is a standard dinner plate of about 26 cm width.",
+  "Meat is ham or Canadian-style pork slices, not beef or bacon, based on thickness and color.",
+  "Eggs are whole eggs (about 2 to 2.5 large eggs), with any milk or butter included in the estimate.",
+  "Spinach weight is cooked, after wilting.",
+  "Carrot is under 10 g and kept separate because it is a distinct visible food.",
+  "Cooking fat is implied by the saut\u00e9ed and scrambled preparation and is only roughly estimated."
+ ],
+ "latency_s": 16.47,
+ "calls": [
+  {
+   "wall_s": 10.16,
+   "duration_ms": 9359,
+   "num_turns": 2,
+   "cost_usd_cli": 0.00222861,
+   "cost_basis": "list",
+   "input_tokens": 10266,
+   "output_tokens": 1548
+  },
+  {
+   "wall_s": 6.22,
+   "duration_ms": 5497,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0016717000000000004,
+   "cost_basis": "list",
+   "input_tokens": 7280,
+   "output_tokens": 1175
+  }
+ ],
+ "cost_usd_cli": 0.0039,
+ "log_id": "e6b763565684"
+}

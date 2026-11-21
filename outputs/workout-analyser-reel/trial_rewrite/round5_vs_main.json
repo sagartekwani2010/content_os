@@ -1,0 +1,44 @@
+{
+ "P": {
+  "overall": 6,
+  "mass": 6,
+  "fcm": 6,
+  "builders": 5.5,
+  "voice_match": 6,
+  "mechanism": 6,
+  "jarvis_connection": 3,
+  "weakest": [
+   "Judged the MAIN spoken lines of v6.3, not TRIAL.",
+   "'Gym Jarvis' is never spoken; the hook says 'My AI system' and the link to Ep 2 lives only in on-screen text.",
+   "The hook promises 'the one set I should never have done' but the payoff is only 'half reps, that set didn't count', a mild overclaim.",
+   "Beat 4 packs four ideas into one breath, and the camera-angle line gives away the beat 10 twist early.",
+   "'Part one, SEE:' and 'Part two, JUDGE:' read like slide labels, stiffer than the Ep 2 voice.",
+   "Beat 7 ('seventeen joints', 'one dip in a wave') never says what the wave means for a bad rep.",
+   "In beat 11, 'a pair of eyes that only watches the video' doesn't say why that fixes the false alarm."
+  ]
+ },
+ "Q": {
+  "overall": 5.5,
+  "mass": 4.5,
+  "fcm": 6,
+  "builders": 7,
+  "voice_match": 8,
+  "mechanism": 7,
+  "jarvis_connection": 8,
+  "weakest": [
+   "Lines 4-10 are seven straight mechanism lines with no emotional beat; the mass group swipes around line 5 or 6.",
+   "'One pose tool' and 'rep maths' are jargon and awkward to say aloud.",
+   "'Continue or hold' in line 11 uses verdict labels that were never explained in speech.",
+   "Line 9 never says the coach watches the video, so 'isn't allowed the numbers' sounds arbitrary.",
+   "The payoff 'only one stop survived, my reverse crunch, which was fair' is flat: no half reps, no consequence, no feeling.",
+   "There is no share or comment line, and nothing about the creator's effort or stakes.",
+   "The hook is honest and specific but low-stakes: 'called stop on a good one' is a bug report, not a personal sting."
+  ]
+ },
+ "better": "P",
+ "why": "P wins narrowly on engagement. Its hook has personal stakes, 'months of effort, on weekends' adds warmth, the chest fly versus reverse crunch payoff is concrete, and 'send this to a friend who counts his half reps' is the only shareable line in either script. That carries the mass group (7 of 16), where Q loses people in its seven-line mechanism stretch and ends flat. Q is the better Ep 2 clone: it names Gym Jarvis in line 1, reuses the 'Except this one', 'not allowed' and guardrail shapes, and explains the wave better ('taller wave means I moved further', 'like a trainer'). Builders prefer Q, and the finance and consulting group is a tie. Neither is above an ordinary good reel. The best version is P with 'My Gym Jarvis' spoken in the hook, Q's taller-wave line in beat 7, Q's 'Except this one' turn into the false alarm, and the camera-angle spoiler cut from beat 4.",
+ "labels": {
+  "main": "P",
+  "trial": "Q"
+ }
+}

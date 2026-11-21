@@ -16,7 +16,26 @@ from typing import Any, Iterator
 from . import settings
 from .state import now
 
-KINDS = ("advance", "status_refresh", "heartbeat", "av_review")
+KINDS = ("advance", "status_refresh", "heartbeat", "av_review", "pipeline_steps")
+# pipeline_steps: args {"steps": [[module, subcommand, *args], ...]}; module must be one of
+# STEP_MODULES and the subcommand must not record approvals (creator gates stay with the creator).
+STEP_MODULES = ("content_os.pipeline", "content_os.visuals")
+FORBIDDEN_SUBCOMMANDS = ("approve",)
+
+
+def validate_steps(steps: list) -> list[list[str]]:
+    if not steps or not isinstance(steps, list):
+        raise ValueError("pipeline_steps needs a non-empty steps list")
+    out = []
+    for st in steps:
+        if not isinstance(st, list) or len(st) < 2 or not all(isinstance(x, str) for x in st):
+            raise ValueError(f"bad step {st!r}")
+        if st[0] not in STEP_MODULES:
+            raise ValueError(f"step module {st[0]} not allowed; allowed: {STEP_MODULES}")
+        if st[1] in FORBIDDEN_SUBCOMMANDS:
+            raise ValueError(f"step {st[1]!r} records a creator gate and cannot be queued")
+        out.append(st)
+    return out
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS jobs (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -48,8 +67,10 @@ def enqueue(kind: str, reel: str | None = None, args: dict[str, Any] | None = No
             requested_by: str | None = None, reason: str = "") -> int:
     if kind not in KINDS:
         raise ValueError(f"unknown job kind {kind}; known: {', '.join(KINDS)}")
+    if kind == "pipeline_steps":
+        validate_steps((args or {}).get("steps"))
     with connect() as con:
-        row = con.execute("SELECT id FROM jobs WHERE kind=? AND IFNULL(reel,'')=IFNULL(?, '') AND status='queued'",
+        row = None if kind == "pipeline_steps" else con.execute("SELECT id FROM jobs WHERE kind=? AND IFNULL(reel,'')=IFNULL(?, '') AND status='queued'",
                           (kind, reel)).fetchone()
         if row:
             return int(row["id"])

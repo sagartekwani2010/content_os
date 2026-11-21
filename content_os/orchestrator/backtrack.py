@@ -28,6 +28,7 @@ KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
     ("score", ("take", "better version", "other take")),
     ("record", ("re-record", "rerecord", "energy", "tired", "eye", "framing", "lighting", "delivery",
                 "mumble", "look at the lens")),
+    ("moodboard", ("mood board", "moodboard", "keyframe", "look and feel", "colour", "color", "palette")),
     ("shoot_plan", ("teleprompter", "shot list", "shoot plan")),
     ("script", ("hook", "script", "line", "wording", "claim", "story", "cta", "payoff", "beat order",
                 "boring", "too long", "explain")),
@@ -62,7 +63,7 @@ def _beat(text: str) -> int | None:
 
 
 def _category(stage: str) -> str:
-    return {"brief": "content", "script": "content", "shoot_plan": "process", "record": "process",
+    return {"brief": "content", "script": "content", "moodboard": "visual", "shoot_plan": "process", "record": "process",
             "score": "edit", "cutpoints": "edit", "visuals": "visual", "render": "audio",
             "post_package": "content"}.get(stage, "process")
 

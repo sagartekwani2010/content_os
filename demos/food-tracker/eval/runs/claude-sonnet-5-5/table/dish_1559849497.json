@@ -1,0 +1,160 @@
+{
+ "items": [
+  {
+   "name": "Almonds",
+   "grams_low": 30,
+   "grams_best": 40,
+   "grams_high": 50,
+   "fdc_query": "Nuts, almonds",
+   "preparation": "raw, whole, unsalted (appears skin-on)",
+   "confidence": 0.6,
+   "kcal": 231.6,
+   "kcal_range": [
+    174,
+    290
+   ],
+   "protein_g": 8.5,
+   "protein_range": [
+    6.3,
+    10.6
+   ],
+   "fdc": {
+    "fdc_id": "170567",
+    "description": "Nuts, almonds",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 579.0,
+    "protein_100g": 21.15
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Red grapes",
+   "grams_low": 45,
+   "grams_best": 60,
+   "grams_high": 80,
+   "fdc_query": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "preparation": "raw, whole",
+   "confidence": 0.6,
+   "kcal": 41.4,
+   "kcal_range": [
+    31,
+    55
+   ],
+   "protein_g": 0.4,
+   "protein_range": [
+    0.3,
+    0.6
+   ],
+   "fdc": {
+    "fdc_id": "174683",
+    "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 69.0,
+    "protein_100g": 0.72
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Pear",
+   "grams_low": 120,
+   "grams_best": 150,
+   "grams_high": 190,
+   "fdc_query": "Pears, raw",
+   "preparation": "raw, whole, with skin",
+   "confidence": 0.55,
+   "kcal": 85.5,
+   "kcal_range": [
+    68,
+    108
+   ],
+   "protein_g": 0.5,
+   "protein_range": [
+    0.4,
+    0.7
+   ],
+   "fdc": {
+    "fdc_id": "169118",
+    "description": "Pears, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 57.0,
+    "protein_100g": 0.36
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 250.0,
+  "kcal": 358.5,
+  "protein_g": 9.4,
+  "grams_range": [
+   195.0,
+   320.0
+  ],
+  "kcal_range": [
+   273,
+   453
+  ],
+  "protein_range": [
+   7.0,
+   11.9
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 250.0,
+   "kcal": 358.5,
+   "protein_g": 9.4,
+   "grams_range": [
+    195.0,
+    320.0
+   ],
+   "kcal_range": [
+    273,
+    453
+   ],
+   "protein_range": [
+    7.0,
+    11.9
+   ]
+  },
+  "rows": [
+   "Nuts, almonds",
+   "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "Pears, raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "570f8fa6675b70a1455a06ae2c6474465e4625a5aebf595b2c7a474c4abd032d",
+ "scale_cues": "The square white plate is about 22-24 cm across. The almonds are about 2 cm long, and the pear is about 7 cm across. I used these to judge the portion sizes.",
+ "assumptions": [
+  "About 28 almonds are visible, at roughly 1.4 g each, which gives about 40 g.",
+  "About 13 grapes, at roughly 4.5 g each, give about 60 g.",
+  "The pear is whole and small. The edible mass is estimated after allowing for the core.",
+  "The almonds are raw, with no added oil or salt.",
+  "No sauces or drinks are visible."
+ ],
+ "latency_s": 9.19,
+ "calls": [
+  {
+   "wall_s": 6.35,
+   "duration_ms": 5600,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0256768,
+   "cost_basis": "list",
+   "input_tokens": 8980,
+   "output_tokens": 526
+  },
+  {
+   "wall_s": 2.84,
+   "duration_ms": 1820,
+   "num_turns": 1,
+   "cost_usd_cli": 0.011022,
+   "cost_basis": "list",
+   "input_tokens": 2364,
+   "output_tokens": 157
+  }
+ ],
+ "cost_usd_cli": 0.0367,
+ "log_id": "ce80b02a4d89"
+}

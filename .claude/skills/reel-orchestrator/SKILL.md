@@ -1,6 +1,6 @@
 ---
 name: reel-orchestrator
-description: Run the creator's reel production through the Content OS orchestrator (python -m content_os.orchestrator) - start a reel from an idea, show what is waiting, present creator gates (brief, script, recorded, cut_review, final_listen, posting) for approval, route feedback back to the right stage, queue work for the unattended runner, and check the runner. Use when the creator asks to make a new reel/script/video, asks what is pending, approves something, gives feedback on a reel, or asks whether background jobs are running.
+description: Run the creator's reel production through the Content OS orchestrator (python -m content_os.orchestrator) - start a reel from an idea, show what is waiting, present creator gates (brief, script, moodboard, recorded, cut_review, final_listen, posting) for approval, route feedback back to the right stage, queue work for the unattended runner, and check the runner. Use when the creator asks to make a new reel/script/video, asks what is pending, approves something, gives feedback on a reel, or asks whether background jobs are running.
 ---
 
 # Reel orchestrator
@@ -22,7 +22,8 @@ brief gate. An existing hand-written reel (outputs/<id>/SCRIPT.md) is brought in
 ## Presenting a gate
 
 Show the artifact, not a summary of it:
-- brief -> `outputs/<id>/brief.md`; script -> `outputs/<id>/SCRIPT.md` (point out open questions/placeholders);
+- brief -> `outputs/<id>/brief.md`; script -> `outputs/<id>/SCRIPT.md` with `SCRIPT_CHECK.md` (point out open questions/placeholders);
+  moodboard -> open `outputs/<id>/MOODBOARD.html` in Chrome (keyframes, palette, sound, shot list);
 - recorded -> the creator puts footage in `~/Movies/ContentOS/<id>/raw/`;
 - cut_review -> `~/Movies/ContentOS/<id>/work/cut_review.html` (they must listen to every cut);
 - final_listen -> the final MP4 and `outputs/<id>/av_review.md` (advisory; Claude cannot hear);

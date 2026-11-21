@@ -39,6 +39,16 @@ class BeatOut(BaseModel):
     text: str
     section: str
     visual: str
+    emotion: str = Field(default="", description="what the viewer should feel at this beat")
+    delivery: str = Field(default="", description="face/voice cue for the creator that produces the emotion")
+    continuity: str = Field(default="", description="start/end pose and energy; how the cut into this beat is hidden")
+
+
+class HookVariant(BaseModel):
+    text: str
+    emotion: str
+    on_screen_text: str
+    first_frame: str
 
 
 class ScriptOut(BaseModel):
@@ -47,8 +57,73 @@ class ScriptOut(BaseModel):
     hook: str
     target_duration_s: int
     beats: list[BeatOut]
+    emotional_arc: str = ""
+    hook_variants: list[HookVariant] = Field(default_factory=list)
+    save_asset: str = ""
+    comment_trigger: str = ""
     caption_notes: list[str] = Field(default_factory=list)
     open_questions: list[str] = Field(default_factory=list)
+
+
+class Keyframe(BaseModel):
+    id: str = Field(description="KF01, KF02, ...")
+    time_s: float
+    beats: list[int] = Field(default_factory=list, description="script beat ids this frame belongs to")
+    emotion: str
+    layout: str = Field(description="split (visual top, creator bottom) | full_visual | full_creator | screen_recording | broll | card")
+    shot: str = Field(description="what the camera or screen recording shows; framing, angle, punch-in")
+    top_visual: str = Field(default="", description="hand-drawn diagram / demo screen: what is drawn and how it moves")
+    template: str = Field(default="", description="content_os.visuals template to use, when one fits")
+    on_screen_text: str = ""
+    motion: str = ""
+    transition_in: str = ""
+    sfx: str = ""
+    music: str = ""
+    creator_direction: str = Field(default="", description="expression, gesture, pose for the creator in this frame")
+
+
+class MoodboardOut(BaseModel):
+    concept: str = Field(description="one-line visual concept of the reel")
+    palette: list[str] = Field(description="hex colours with roles, e.g. '#FFD23F accent: numbers'")
+    typography: str
+    texture: str = Field(description="line style, paper, glow, grain")
+    music: str
+    sfx_palette: list[str]
+    pacing: str
+    references: list[str] = Field(default_factory=list, description="described visual references (no copyrighted assets)")
+    keyframes: list[Keyframe]
+    shot_list: list[str] = Field(description="everything to film or screen-record besides the talking beats, in shooting order")
+    risks: list[str] = Field(default_factory=list)
+
+
+class BeatCheck(BaseModel):
+    beat: int
+    intended: str
+    likely_felt: str
+    issue: str = ""
+    fix: str = ""
+    blocking: bool = False
+
+
+class CheckScores(BaseModel):
+    hook: int
+    emotional_arc: int
+    clarity: int
+    retention: int
+    sends: int
+    saves: int
+    comments: int
+    continuity: int
+
+
+class StoryCheckOut(BaseModel):
+    phase: str = Field(description="script | visuals")
+    verdict: str = Field(description="pass | revise")
+    scores: CheckScores
+    beats: list[BeatCheck]
+    hook_ranking: list[str] = Field(default_factory=list, description="hook variants best first, each with why")
+    likely_drop_offs: list[str] = Field(default_factory=list)
+    top_fixes: list[str] = Field(default_factory=list)
 
 
 class PostOut(BaseModel):

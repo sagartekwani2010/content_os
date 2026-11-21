@@ -9,6 +9,47 @@ from .layouts import Layout
 _PUNCT_END = re.compile(r"[.,?!;:]$")
 
 
+def _norm(token: str) -> str:
+    return re.sub(r"[^a-z0-9.]", "", token.lower()).strip(".")
+
+
+def correct_words(words: list[dict], truth: str) -> list[dict]:
+    """Respell ASR words with the confirmed spoken line, keeping ASR timings.
+
+    The creator's confirmed line (beats.json text, written from the recording) is ground truth for
+    spelling; whisper's timings are kept. Matching runs of words are kept as is; a run whisper heard
+    differently ("guard drill" vs "guardrail") takes the truth tokens, spread over the heard words'
+    time span. Words with no truth counterpart are dropped from captions; truth words with no heard
+    counterpart are attached to the neighbouring word.
+    """
+    import difflib
+
+    truth_tokens = truth.split()
+    if not words or not truth_tokens:
+        return words
+    a = [_norm(w["text"]) for w in words]
+    b = [_norm(t) for t in truth_tokens]
+    out: list[dict] = []
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        if op == "equal":
+            out += [{**words[i], "text": truth_tokens[j]} for i, j in zip(range(i1, i2), range(j1, j2))]
+        elif op == "replace":
+            t0, t1 = words[i1]["start"], words[i2 - 1]["end"]
+            n = j2 - j1
+            for k, j in enumerate(range(j1, j2)):
+                out.append({"text": truth_tokens[j], "start": round(t0 + (t1 - t0) * k / n, 3),
+                            "end": round(t0 + (t1 - t0) * (k + 1) / n, 3)})
+        elif op == "insert":
+            extra = " ".join(truth_tokens[j1:j2])
+            if out:
+                out[-1] = {**out[-1], "text": f"{out[-1]['text']} {extra}"}
+            elif i1 < len(words):
+                words[i1] = {**words[i1], "text": f"{extra} {words[i1]['text']}"}
+                a[i1] = _norm(words[i1]["text"])
+        # "delete": heard words not in the confirmed line (fillers, stray syllables) are not captioned
+    return out
+
+
 def chunk_words(segments: list[dict], ccfg: dict) -> list[dict]:
     chunks: list[dict] = []
     for seg in segments:

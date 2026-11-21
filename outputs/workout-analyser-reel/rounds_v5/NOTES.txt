@@ -1,0 +1,92 @@
+PANEL NOTES ON THE CURRENT BEST (fix what loses people; keep what works):
+{
+ "top_fixes": [
+  "Cut frame 1 to one idea. It currently carries a headline, a STOP, two degree tags, a brand definition and two dates. Keep the ghost overlay, 'WORST REP: UNDER HALF MY BEST' and the red STOP; move 122\u00b0/53\u00b0 to beat 18 where they are already held, and shrink the dates to a corner footnote.",
+  "Make the pinned job tag mean something to non-engineers from beat 7. 'AT THE END: WHAT THIS MEANS FOR YOUR JOB' is vague; something like 'AT THE END: WHO IS GETTING HIRED WHILE OTHERS ARE LET GO' gives personas 2, 3, 7 and 12 a reason to sit through the architecture.",
+  "Keep real gym footage full-frame through beats 8-13 and shrink the nodes to a small corner label. Each part should be shown happening on his body (skeleton, the refused set, best rep against current rep), so the mass group sees a workout being judged rather than a diagram.",
+  "Tease the real STOP set before the middle. Showing one second of the swung reverse crunch at beat 7, with the exercise name hidden, gives the gym trainer and other gym-goers a specific thing to wait for until beat 17.",
+  "Put a plain-English gloss on screen at beats 22-23. 'LLM post-training' is opaque to 12 of 16 personas; a small line such as 'post-training = teaching an AI model after it is built' keeps the spoken line intact, and beat 24's text could widen to 'next: how to get ready' to match the spoken question.",
+  "Pay the hook earlier without changing the order: in beats 2-7 make the pinned red STOP thumbnail a readable mini-clip of the swung reverse crunch with a plain-word label ('half reps'), so non-tech viewers know what the STOP is about before the 40 s mark.",
+  "Cut on-screen text per beat to one big line plus at most one small tag. Beats 1, 7 and 16 carry four to six elements in 2-4 s; drop the arXiv/PMC IDs to a tiny corner credit, and move the FORM prompt off beat 16, where it competes with the both-agree rule and the chip flip.",
+  "Make SEE, JUDGE and CHECK look different from each other and show real footage first: skeleton on his body, then best-vs-current rep side by side, then the coach's actual one-line verdict on the clip. Three node animations in a row is where the mass and finance groups leave (16-32 s).",
+  "Tighten the bridge into the Salesforce ending. Beat 20's 'where Gym Jarvis is heading' does not connect a gym tool to layoffs; put the link in the visual and text (for example 'I only call a model. Companies now hire people who train them') so beat 23's best line arrives at beat 20 and the pivot feels earned, not stitched on.",
+  "Add a human reaction in the result beats: his face or a laugh on beat 15 (false alarm) and beat 19 (called out by my own AI), with the send prompt held for the full beat. That is the only emotional payoff in the reel, and currently the 'NOW: YOUR JOB' slide-in overwrites it in the last second."
+ ],
+ "drops": [
+  {
+   "id": 2,
+   "score": 4,
+   "drop": "beat 8",
+   "why": "Hook is clear enough and the 3-2-1 blast carries him to 14.5 s, but 'I split it into three parts' with node diagrams signals a tech explainer not for him. The job ending is irrelevant to a CA. If he stays, the false-alarm lunge is the only part he enjoys."
+  },
+  {
+   "id": 3,
+   "score": 5.5,
+   "drop": "beat 9",
+   "why": "Gym-goer curiosity gets her past the blast, and the pinned 'what this means for your job' tag is a real reason to stay for an HR person. Joints/wave jargon tests her patience. The Salesforce beat is her payoff and might earn a share to a colleague, but 'LLM post-training' means nothing to her."
+  },
+  {
+   "id": 4,
+   "score": 3,
+   "drop": "beat 2",
+   "why": "The 3.9 s hook lands as a statement, but frame 1 carries six pieces of text and he cannot parse 122\u00b0/53\u00b0 in time. 'How did I build it' tells him this is a coder's reel. Nothing in it speaks to his life."
+  },
+  {
+   "id": 5,
+   "score": 3,
+   "drop": "beat 4",
+   "why": "Mild interest in the gym footage, but 'Claude', arXiv IDs and PMC numbers on screen are alienating. She leaves before the blast. The job ending does not apply to her."
+  },
+  {
+   "id": 7,
+   "score": 5,
+   "drop": "beat 11",
+   "why": "Likes the '23 sets on trial, one STOP' data framing and the verdict chips. The architecture stretch from 16 to 32 s is long for a non-builder, and he may skip before the lunge payoff. The layoff news would interest him if he reaches it."
+  },
+  {
+   "id": 8,
+   "score": 4,
+   "drop": "beat 8",
+   "why": "Time-poor and sceptical. The hook is decent but the 10 s of build montage and research before any result feels like throat-clearing. 'Reportedly' with a 'not confirmed' label is honest but weak as a headline for someone who reads filings."
+  },
+  {
+   "id": 10,
+   "score": 5,
+   "drop": "beat 20",
+   "why": "Appreciates the structure and the both-must-agree rule as a clean idea. Once the gym story resolves at beat 19 he has his payoff, and the pivot to an engineering job posting is not for him. No send or follow."
+  },
+  {
+   "id": 11,
+   "score": 5.5,
+   "drop": "beat 13",
+   "why": "Notices the craft: music drop, loop, pinned tag, comment prompt. Stays through the blast and the verdict chips out of professional interest. The third architecture part is where the pattern gets repetitive. Might save it as a format reference rather than for the content."
+  },
+  {
+   "id": 12,
+   "score": 4,
+   "drop": "beat 8",
+   "why": "The Desi Boyz beat and the red STOP visual carry him to the blast, and the wall of 23 tiles is satisfying. Then it turns into a system diagram. He has no stake in the hiring angle."
+  },
+  {
+   "id": 15,
+   "score": 5.5,
+   "drop": "beat 9",
+   "why": "The hook is squarely his world: half reps on reverse crunches, best rep ghosted over worst. He wants to see the STOP set, but it is held back until 39 s behind diagrams. If he lasts, 'send this to your half-rep buddy' is a real send for him. The Salesforce ending loses him completely."
+  },
+  {
+   "id": 16,
+   "score": 4,
+   "drop": "beat 8",
+   "why": "Music and the countdown hold him to the blast. He has no context for joints, judges or LLM roles, and the reel never tells him why he should care. A scroll at the first diagram."
+  }
+ ]
+}
+
+CHECKER MUST-FIX:
+**MUST-FIX**
+
+1. **Beat 18, "I counted that set. It didn't count."** This is a personal claim that isn't in FACTS. Nothing records the creator logging or counting IMG_2661 as a completed set. Either the creator confirms it, or swap in a line built only on measured facts, e.g. "Short, swung reps. 53 degrees, not 122." The script already notes that this line needs approval, so keep it out until the creator signs off.
+
+2. **Beat 20, "Months of weekends on Gym Jarvis. Here's why." and the on-screen "WHY I'M BUILDING THIS".** This says Gym Jarvis was built *because of* the layoff and hiring trend. FACTS records no such motive: the tease is a series bridge, and Gym Jarvis was planned in Sept 2026, before the Salesforce India reports of 19-20 Nov. Reword it as a bridge, not a cause, e.g. "Months of weekends on Gym Jarvis. Here's where it's heading." with the on-screen "WHERE THIS IS GOING". Otherwise the creator must confirm the motive.
+
+Everything else passes. All clips are on the allowed list. There are 3 architecture parts and no "film from the side" line. "Reportedly" is present on beat 21, and the script says "AI engineers", not "AI scientists". No line implies the analysis was live or mid-set. All numbers match FACTS.

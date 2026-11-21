@@ -54,7 +54,8 @@ def next_action(reel: Reel) -> str:
     rid = reel.id
     if n.kind == "gate":
         what = {"brief": f"read outputs/{rid}/brief.md",
-                "script": f"read outputs/{rid}/SCRIPT.md",
+                "script": f"read outputs/{rid}/SCRIPT.md (with SCRIPT_CHECK.md)",
+                "moodboard": f"open outputs/{rid}/MOODBOARD.html (keyframes, palette, sound, shot list)",
                 "cut_review": f"open {tilde(reel.media)}/work/cut_review.html and listen to every cut",
                 "final_listen": f"listen to {tilde(stages.final_mp4(reel))} (and outputs/{rid}/av_review.md)",
                 "posting": f"post by hand using outputs/{rid}/POST.md"}[n.gate]

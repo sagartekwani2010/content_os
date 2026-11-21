@@ -1,0 +1,103 @@
+{
+ "items": [
+  {
+   "name": "Orange (whole, unpeeled; possibly a mandarin or tangerine)",
+   "grams_low": 110,
+   "grams_best": 150,
+   "grams_high": 210,
+   "fdc_query": "Oranges, raw, all commercial varieties",
+   "preparation": "Raw, whole, with the peel on. The edible mass is estimated from the whole fruit's size, and the peel is not counted.",
+   "confidence": 0.6,
+   "kcal": 70.5,
+   "kcal_range": [
+    52,
+    99
+   ],
+   "protein_g": 1.4,
+   "protein_range": [
+    1.0,
+    2.0
+   ],
+   "fdc": {
+    "fdc_id": "169097",
+    "description": "Oranges, raw, all commercial varieties",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 47.0,
+    "protein_100g": 0.94
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 150.0,
+  "kcal": 70.5,
+  "protein_g": 1.4,
+  "grams_range": [
+   110.0,
+   210.0
+  ],
+  "kcal_range": [
+   52,
+   99
+  ],
+  "protein_range": [
+   1.0,
+   2.0
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 150.0,
+   "kcal": 70.5,
+   "protein_g": 1.4,
+   "grams_range": [
+    110.0,
+    210.0
+   ],
+   "kcal_range": [
+    52,
+    99
+   ],
+   "protein_range": [
+    1.0,
+    2.0
+   ]
+  },
+  "rows": [
+   "Oranges, raw, all commercial varieties"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-sonnet-5-5",
+ "image_sha256": "ee7f44cc7bd070de1d1a61703a3bcda968c8cb5a060b309e447414b7841a1bec",
+ "scale_cues": "The fruit is about 120 px across on a square plate roughly 350 px wide. Assuming a plate of about 25 cm, that puts the fruit at roughly 8 cm in diameter. This is the size of a medium orange or a large mandarin.",
+ "assumptions": [
+  "The fruit is a single whole orange or large mandarin. It could be a clementine or tangerine, which would be smaller and lighter.",
+  "The edible mass is about 150 g after excluding the peel, which is about 25% of a whole fruit's weight.",
+  "The plate has faint pink or orange smears, which are treated as residue and not as food.",
+  "There is no visible oil, sauce, or drink."
+ ],
+ "latency_s": 8.59,
+ "calls": [
+  {
+   "wall_s": 6.03,
+   "duration_ms": 4987,
+   "num_turns": 2,
+   "cost_usd_cli": 0.0250789,
+   "cost_basis": "list",
+   "input_tokens": 8992,
+   "output_tokens": 453
+  },
+  {
+   "wall_s": 2.56,
+   "duration_ms": 1489,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0072007,
+   "cost_basis": "list",
+   "input_tokens": 1529,
+   "output_tokens": 91
+  }
+ ],
+ "cost_usd_cli": 0.03228,
+ "log_id": "27d76a6d6d2f"
+}

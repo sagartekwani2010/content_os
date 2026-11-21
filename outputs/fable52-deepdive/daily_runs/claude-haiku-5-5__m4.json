@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "In Excel, `SUMPRODUCT({2,3,4},{5,6,7})` multiplies the arrays element by element and sums the products: 2×5 + 3×6 + 4×7 = 10 + 18 + 28 = 56. Dividing by 3 gives 18.666…, and `ROUND(…, 1)` rounds that to one decimal place, giving 18.7.\n\nANSWER: 18.7",
+ "seconds": 3.7,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2411.75,
+ "out_tok": 457,
+ "usd_list": 0.00047,
+ "cli_cost": 0.0005404,
+ "item": "m4"
+}

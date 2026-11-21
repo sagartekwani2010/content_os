@@ -16,13 +16,22 @@ paths:
 agents:
   brief: orchestrator_brief
   script: orchestrator_script
+  story_check: orchestrator_story_check
+  moodboard: orchestrator_moodboard
   post_package: orchestrator_post_package
   feedback_classifier: orchestrator_feedback_classifier
   heartbeat: orchestrator_heartbeat
 
 # Gates that need the creator. Nothing downstream of a gate runs until the gate is
 # approved for the exact version (content hash) of the artifact it approves.
-creator_gates: [brief, script, cut_review, final_listen, posting]
+creator_gates: [brief, script, moodboard, cut_review, final_listen, posting]
+
+# Emotion + hook checker (Opus) after the Fable script and on the visual plan.
+story_check:
+  # Fable rewrites the script from the checker's notes at most this many times.
+  max_revisions: 1
+  # Visuals check is advisory: the report is written next to the reel, render continues.
+  visuals_blocking: false
 
 memory:
   # Compact, curated lesson memory read by script/edit stages.

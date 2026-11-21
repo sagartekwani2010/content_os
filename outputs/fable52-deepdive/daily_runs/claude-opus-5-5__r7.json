@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "Classic riddle: a ₹10 coin and a ₹5 coin. The statement says only that *one* of them isn't a ₹10 coin, and that one is the ₹5 coin. The other one is the ₹10 coin.\n\n(Both coins are real Indian coins: ₹5 and ₹10 coins are in circulation. ₹15 can't be made from two coins any other way, since there is no ₹15 or ₹13/₹14 coin.)\n\nANSWER: A ₹10 coin and a ₹5 coin",
+ "seconds": 4.0,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1144.5,
+ "out_tok": 173,
+ "usd_list": 0.00804,
+ "cli_cost": 0.011005599999999999,
+ "item": "r7"
+}

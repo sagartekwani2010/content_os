@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "```python\nfrom decimal import Decimal, ROUND_HALF_UP\n\n\ndef split_bill(total: float, people: int, tip_pct: float) -> list[float]:\n    \"\"\"\n    Add a tip to the bill and split it among people in rupees (2 decimals).\n\n    tip_pct is a percentage, e.g. 10 means 10%.\n    The grand total (bill + tip) is rounded to the nearest paisa, and the\n    shares always sum exactly to it. Leftover paise go to the first shares.\n\n    >>> split_bill(100, 3, 0)\n    [33.34, 33.33, 33.33]\n    \"\"\"\n    if not isinstance(people, int) or isinstance(people, bool) or people <= 0:\n        raise ValueError(\"people must be a positive integer\")\n    if total < 0:\n        raise ValueError(\"total must be non-negative\")\n    if tip_pct < 0:\n        raise ValueError(\"tip_pct must be non-negative\")\n\n    # Use Decimal (via str) to avoid binary floating-point errors.\n    bill = Decimal(str(total))\n    tip_rate = Decimal(str(tip_pct)) / Decimal(100)\n    grand_total = bill * (Decimal(1) + tip_rate)\n\n    # Work in whole paise.\n    total_paise = int(\n        (grand_total * 100).quantize(Decimal(\"1\"), rounding=ROUND_HALF_UP)\n    )\n\n    base, extra = divmod(total_paise, people)\n    shares_paise = [base + 1 if i < extra else base for i in range(people)]\n\n    return [float(Decimal(p) / 100) for p in shares_paise]\n```",
+ "seconds": 607.6,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1225.75,
+ "out_tok": 726,
+ "usd_list": 0.01942,
+ "cli_cost": 0.0226378,
+ "item": "c3"
+}

@@ -1,0 +1,202 @@
+{
+ "check": {
+  "must_fix": [
+   "MAIN implies the wrong set is a good one. Beats 1-2 show the [BAD_SET] clip, then beats 3-6 switch to IMG_2649 with no label. The labeller rated IMG_2649 a GOOD set, so a cold MAIN viewer will read the 14-rep failure and 'hiding my leg' as happening on the flagged set. Fix it one of two ways: (a) label IMG_2649 on screen from K3b to K6b ('test clip: hack squat, 15 Aug, old clip'), or (b) run beats 3-6 on the [BAD_SET] clip once its pose data exists.",
+   "Beat 6 / K6b shows the bubble 'can't see your knee' as the analyser's output, and the draft says beats 3-6 can be rendered today. FACTS lists that message as part of the fix design, but the measured output (reps_clean.json) records only dropped frames and the 11-rep count. Before rendering, confirm the HUD or the pipeline actually emits that string on IMG_2649. If it does not, draw it as an illustration ('it now flags hidden joints'), not a quoted output. House rule: no invented messages.",
+   "Beat 6 credits the 14 -> 11 correction to 'says can't see'. The measured fix was three things: dropping frames under 0.4 confidence, dropping knee angles under 30 degrees, and a 0.8 s minimum rep. Either add the minimum-rep rule to the K6b footnote, or make sure the dips greyed out are exactly the ones reps_clean.json drops. The draft already says this for the greying; extend it to the on-screen claim."
+  ],
+  "should_fix": [
+   "Runtime: the table times and the headline estimate use 1.15x, but the house default and the brief target are 1.1x. Rebuild the timeline at 1.1x, with beats 1 and 5 at 1.0x. My count is 124 words, about 43-44 s including holds and the loop, which still fits 42-48 s.",
+   "Beat 6 'The machine was hiding my leg': in a reel about 'my AI', viewers will hear 'machine' as the AI. Say 'The squat machine was hiding my leg', or match the brief's 'the machine hid my leg' with on-screen 'hack squat machine'.",
+   "Beat 1 MAIN says 'the one set'. That is true only if exactly one of all the filmed sets gets STOP. Add this as a slot condition next to 'if no set gets a STOP': if more than one gets STOP, reword to 'the set I should never have done' and count the sets checked. Fill [AGREE: x of n] or a sets-checked number for the caption.",
+   "TRIAL continuity: after 'My AI said it was fine' over IMG_2649, beat 2 'The set it flagged' arrives with no bridge, and beat 10 'On this set' is ambiguous. Keep the body shared and add the bridge inside the TRIAL hook beat only, for example a second line 'The one it did flag was worse.' This keeps E2 at one variable.",
+   "TRIAL hook: 'I thought this was my worst set' is not in FACTS. The earlier reel's tease called it a 'wrong set'. The line is brief-approved, but on screen say 'my STOP pick' rather than implying a ranking. Note that the GOOD verdict carries confidence 0.6 and could not check heels or knee cave; the footnote covers the second part.",
+   "K9 full diagram drops the 'CAN'T SEE?' check that the rail added in K6b. The save asset should show the complete pipeline as built: CLIP -> 17 JOINTS -> KNEE WAVE -> CAN'T SEE? -> MY BEST SET -> JUDGE (Fable 5.2) -> CONTINUE / HOLD / STOP.",
+   "CTA 'my form-check skill' points to form-labeller, which is the frame-sheet coach, not the pose-based analyser the reel explains. Viewers will expect the thing they just watched. Either name it accurately ('the coach-check skill I used to verify it'), or offer the diagram only, or use the 'which lift next?' fallback.",
+   "Beat 2 risk line ('That is how you [risk]'): when it fills, keep it in plain trainer wording with no injury or medical claim. Put 'Not training advice' on screen in beat 2 or 10, not only in the caption.",
+   "On-screen text holds: the K6b footnote '58 of 877 frames thrown out: 34 hidden, 24 impossible' and the beat 10 reason card get about 0.4-0.6 s. Either give each an explicit hold of at least 1.2 s, or move the frame counts to the caption.",
+   "K5 data source: the raw 14-rep run file is not in FACTS. Locate that output and render the counter from it before beat 5 is drawn, so the 14 comes from real data and not from typing it in.",
+   "Caption is long and summarises the video, against REEL_DEFAULTS' 'short and sassy, not a summary'. Its first line opens with a recap of the last reel. Lead with a stranger-proof line, keep the IMG_2649 twist and the series callback lower down, and cut the 14/11 and textbook recaps.",
+   "Taste checklist: there is no single viewer action. Add one short line or on-screen card for the everyday lifter (e.g. 'So film your best set first; that's your baseline'), and keep it consistent with 'not training advice'."
+  ],
+  "facts_ok": true
+ },
+ "panel": {
+  "personas": [
+   {
+    "id": 1,
+    "score": 7.5,
+    "drop_beat": "none",
+    "why": "The flickering knee dot lets me see the bug before the fix is explained. I'd save the diagram for the part where the system decides not to guess."
+   },
+   {
+    "id": 2,
+    "score": 5.5,
+    "drop_beat": "7 \u2014 NOT A TEXTBOOK",
+    "why": "Fourteen versus eleven gives me a discrepancy I can check for myself. Once the count reconciles, the textbook card feels like the start of another reel."
+   },
+   {
+    "id": 3,
+    "score": 4,
+    "drop_beat": "3 \u2014 BRIDGE",
+    "why": "I stay to see what went wrong with the lift. Once I've seen the circled joint, I'm not curious enough about how the dots were made."
+   },
+   {
+    "id": 4,
+    "score": 4.5,
+    "drop_beat": "4 \u2014 HOW",
+    "why": "The moving skeleton buys a few more seconds. When the graph starts counting reps, I still want to know what I should actually notice in a workout."
+   },
+   {
+    "id": 5,
+    "score": 5,
+    "drop_beat": "7 \u2014 NOT A TEXTBOOK",
+    "why": "The knee bend turning into a wave is lovely: I understand the graph without having to read it. The corrected count feels like a natural ending."
+   },
+   {
+    "id": 6,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "Watching a bad prediction turn into a fix I can understand makes this feel like a project I could try. I'd send it to my project partner."
+   },
+   {
+    "id": 7,
+    "score": 6.5,
+    "drop_beat": "10 \u2014 PAYOFF",
+    "why": "I stay to see whether using a personal baseline changes the call. The final freeze gives me essentially the same rep and fault I saw at the start."
+   },
+   {
+    "id": 8,
+    "score": 5.5,
+    "drop_beat": "8 \u2014 MY BEST",
+    "why": "Throwing out frames the camera couldn't read earns my attention. But what qualified the green set as 'best'? The verdict depends on that more than on the neat overlay."
+   },
+   {
+    "id": 9,
+    "score": 7,
+    "drop_beat": "11 \u2014 CTA",
+    "why": "I like seeing one messy clip turn into a three-way decision. I'd pause on the process diagram, but 'form-check skill' isn't clear enough to make me comment."
+   },
+   {
+    "id": 10,
+    "score": 5.5,
+    "drop_beat": "9 \u2014 ONE CALL",
+    "why": "Comparing me with my own best is the interesting choice. I'd rather see a rep where that changes the decision than read a pipeline ending in three coloured labels."
+   },
+   {
+    "id": 11,
+    "score": 6,
+    "drop_beat": "10 \u2014 PAYOFF",
+    "why": "The 14-to-11 strike-through stops my thumb a second time. The last STOP stamp doesn't: I already got that reveal in the opening."
+   },
+   {
+    "id": 12,
+    "score": 5,
+    "drop_beat": "7 \u2014 NOT A TEXTBOOK",
+    "why": "The red correction is a visual I'll remember. By the second title card, though, I've lost track of whether the miscounted set is also the dangerous one."
+   },
+   {
+    "id": 13,
+    "score": 8,
+    "drop_beat": "none",
+    "why": "Showing exactly what blocked the tracker is better than a polished happy-path demo. I'd comment FORM to see how the visibility check feeds the final call."
+   },
+   {
+    "id": 14,
+    "score": 7,
+    "drop_beat": "none",
+    "why": "I'd watch through to see whether 'can't see' survives into the verdict. Matching eleven reps on this clip is a good debugging result, not yet evidence that STOP is reliable."
+   },
+   {
+    "id": 15,
+    "score": 6.5,
+    "drop_beat": "10 \u2014 PAYOFF",
+    "why": "I watch the actual rep twice. I might send that freeze to another trainer for a second opinion, but a difference from someone's best rep isn't by itself an injury warning."
+   },
+   {
+    "id": 16,
+    "score": 4.5,
+    "drop_beat": "4 \u2014 HOW",
+    "why": "The red gap over the lifter catches my eye. By the time I'm following a knee graph as well as the face and captions, I've forgotten which set I'm watching."
+   }
+  ],
+  "groups": {
+   "mass": 5,
+   "fin_consult_mktg": 5.92,
+   "builders": 7.63
+  },
+  "overall": 6,
+  "top_fixes": [
+   "Test the spare hook first: 'My AI counted 14 reps. I did 11.' Show the blocked knee immediately and let viewers spot the false dip before correcting it. That gives a stranger a puzzle they can solve without knowing the lift.",
+   "If keeping MAIN, give beat 10 something beat 2 hasn't shown. Circle the suspect rep early; save the best-rep overlay and the plain-language difference for the verdict. Cut the second title card to get there sooner.",
+   "Keep a large clip label when switching footage: 'FLAGGED SET' versus '11-REP TEST SET'. TRIAL isn't a standalone fallback if beats 2 and 10 still require a measured STOP; without one, finish on what the 11-rep clip actually proves.",
+   "Replace 'That is how you [injury]' with the visible change on that rep. Say why the comparison set was chosen, and put 'old clip, reviewed later' beside the verdict rather than in a footnote.",
+   "Match the save or comment offer to the viewer. For lifters, offer the annotated rep comparison; for builders, show a readable diagram and say what the downloadable skill takes in and returns. Offer only what is ready to send."
+  ]
+ },
+ "critic": {
+  "predicted_score": 6.5,
+  "would_approve": false,
+  "change_list": [
+   "First do, then show. The bad set, the best set and the judge verdict are still brackets, and beats 1 (MAIN), 2, 8, 9 and 10 plus the cover line all hang on them. Measure, fill the slots and send it again; I can't judge the stake when it is a bracket.",
+   "Posting is tomorrow (Sat 21 Nov). Give me one complete version with zero slots that I can record today, on IMG_2649 only: trial hook, 17 joints, wave, 14 vs 11, can't see, 11 matches, good set. If no clip gets a STOP, that is the reel.",
+   "What is the impact for an everyday user? We missed that again. Add one 'So always...' line after 'my own best set'. There is about 5 s of room before 48 s.",
+   "Make 'my best, not a textbook' relatable, like how we all did in school: your own best paper, not the topper's. One comparison only.",
+   "The architecture diagram is my core strength and it is full size for 3 seconds with a 0.8 s hold. Nobody can save that. Hold it 1.5-2 s. Also the CAN'T SEE check is added on the rail in beat 6 and then is missing from the final diagram in beat 9; keep it in.",
+   "Beat 2 is three sentences and beat 6 is two sentences with 14 words. One short sentence per beat; split them.",
+   "Beat 2 'That is how you [risk]' sounds like training advice. Make it my stake: 'that's how I could have actually hurt my [X]'.",
+   "I will say 'my AI', not 'it'. Write 'my AI' in beats 3, 5, 8 and 10, use 'doesn't' and 'actually', and lead the hook with the strong words: 'The one set I should have never done. My AI actually found it.'",
+   "Beat 10 'On this set': which set? We have been on the hack squat clip since beat 3, and that one is the good set. Name the lift in the line.",
+   "Trial: the hook says the set was fine, then the body never comes back to it and the payoff closes the other set's loop. Close it by name. Also main is 'no smile, head shake' with a riser and trial is a smile; that is two variables. Keep both positive.",
+   "Beat 6 has too much to read in 4 s: bubble, 11 tick, coach line, 58 of 877, 11 degrees, 0.2 s. Not very complex pls. Keep the bubble, the 11 tick and one footnote. And 'coach count' reads like a human coach; say it is my AI coach.",
+   "The time column is at 1.15x; the brief says 1.1x. Redo it at 1.1x (about 43 s).",
+   "Where is the score? Don't send it to me until the Fable judge and the panel are at 7.5 or above. Show the script with its check.",
+   "Ending: add the next-reel tease in the caption or the last second, over my footage with a red mark and a hit. The caption has none.",
+   "CTA: 'Comment FORM to access the full diagram and my form-check skill.' Make the caption shorter and sassy; right now it summarises the video. Caption position 440: don't ask, just do it."
+  ],
+  "taste_violations": [
+   "Non-negotiable (own measured test; 'first do then show') and checklist 15: every spoken and on-screen number traces to FACTS, but the central result is unmeasured. [BAD_SET], [BEST_SET] and the judge verdict are slots, so the MAIN hook, stake, ghost, three-call beat, payoff and cover line cannot be recorded. The script skill says not to draft lines whose meaning depends on a result that does not exist.",
+   "Non-negotiable (creator sees finished options): with posting on 21 Nov, the draft offers no complete slot-free version, only a fallback hook; beats 2, 8, 9 and 10 have no fallback.",
+   "Checklist 5 and strong preference (impact for everyday users): no finding ends in a 'So always...' action, and there is no everyday comparison (school, exams, WhatsApp).",
+   "Checklist 22: runtime passes (about 43 s at 1.1x), but no Fable judge or panel score is attached; the bar is 7.5/10 before lock.",
+   "Checklist 23 (partial): main and trial are both written with a stated hypothesis and a spare hook, but delivery tone also differs (serious vs smiling), so more than one variable changes. The brief locks positive tone in both. The experiment is not yet logged in production/EXPERIMENTS.md.",
+   "Checklist 19 (partial) and reel-short-beats: beat 2 is three sentences (about 15 words) and beat 6 is two (14 words). Beat 7 dangles if beat 8 is skipped. Beat 10 'On this set' depends on beat 2 and is ambiguous after 10+ s of IMG_2649.",
+   "Checklist 11 and architecture-is-signature (partial): the diagram is present and progressive, but the save frame holds only 0.8 s, there is no heading card for it, and the guardrail node on the rail (beat 6) is missing from the final diagram (beat 9).",
+   "Checklist 7 and Voice (partial): the hook has a face and a payoff image, but it does not lead with the strongest words. The draft uses 'it' and 'does not' where the creator repeats the name and uses intensifiers; expect rewording on camera.",
+   "Checklist 21 (partial): the ending loops to the STOP-stamp frame (red mark, hit sound), but there is no next-reel tease in the caption or the final second.",
+   "Checklist 4 (borderline): no tips and no findings list, but five mechanism ideas are spoken (joints, wave, can't see, my best, three calls) against the skill's 'two ideas spoken, rest on the diagram'. The outline is creator-approved, so this is low risk.",
+   "Checklist 12 (partial): the own test is not one beat with one headline number. 14 vs 11 spans beats 5-6, and the one-line result (agreement with the coach check, [AGREE: x of n]) is still a slot and unused.",
+   "Checklist 14 (partial): there are no generic or attributed tips and the keepable asset exists, but the comment trigger depends on the creator actually sending the diagram and the form-labeller skill (the draft flags this).",
+   "Accuracy: 'matches the coach count' and 'coach check' read as a human coach; FACTS says the coach is Fable 5.2 acting as a labeller. 'That is how you [risk]' is a second-person training claim in a 'not training advice' reel.",
+   "'Awe without complexity': beat 6 puts six text items on screen in about 4.4 s with a 0.4 s hold.",
+   "Internal consistency: beat 10 puts footage in the bottom half but gives a face delivery cue ('punch-in on the reason'). The time column is computed at 1.15x while the brief and house default are 1.1x.",
+   "Short answers, no permission-asking: 'bottom_px about 440 (pending your OK)' asks about a routine setting.",
+   "Packaging default: the caption summarises the video (textbook, 14 vs 11) rather than being short and sassy.",
+   "Checklist passes: 1 (one file, spoken/visual/on-screen side by side), 2 (English only), 3 (no spoken hedges; caveats on screen), 8 (not a cost hook), 16 (no training boilerplate), 17 (no lab showpieces), 18 (E/H alternate on all 11 beats), 20 (no closing aphorism), 24 (sound on every visual event), 25 (caption, first comment and cover present). Partial pass: 6 (the entertaining 14-vs-11 failure arrives at 15.7 s, after two mechanism beats). Not applicable to a build reel: 9 (people-building clips), 10 (paper section), 13 (no bar chart)."
+  ],
+  "what_they_will_love": [
+   "The payoff image is on screen from frame 1 (ghost, red gap, STOP stamp) and the stake comes by 3.9 s, with no recap of earlier episodes.",
+   "'First try, it counted 14 reps. I did 11.' with the music cut, strike-through and half-second silence is an honest failure from their own test, kept at 1.0x.",
+   "'Now it says can't see instead of guessing' is plain words, no jargon, and forwardable.",
+   "'My best, not a textbook' with the green ghost of their own best set is a test only they can run.",
+   "The architecture stays as the signature: a rail that builds beat by beat into the full diagram, with Fable 5.2 on the judge box and only 'my AI' in speech.",
+   "Every visual has a data-source column and every number is measured (17, 14, 11, 58 of 877, 34/24); unmeasured values stay as slots, with a clear do-not-record list.",
+   "There is a sound effect on every visual event, and the music goes silent through the twist.",
+   "Main and trial share one body with a stated hypothesis, plus a spare third hook on a different emotion.",
+   "Caption, first comment and cover are in the package up front, with the deep-dive twist kept in the caption for returning viewers.",
+   "The whole thing is in one place (script table, visual board, hooks, caption, teleprompter) at about 43 s, with no spoken hedges and no closing aphorism."
+  ]
+ },
+ "score": 5.35,
+ "summary": {
+  "panel": 6.0,
+  "critic": 6.5,
+  "must_fix": 3,
+  "approve": false,
+  "groups": {
+   "mass": 5,
+   "fin_consult_mktg": 5.92,
+   "builders": 7.63
+  }
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "page_title": "Workout Analyser Moodboard",
+ "title": "Gym Jarvis \u00b7 Ep 3",
+ "subtitle": "Workout Analyser \u00b7 FINAL script v6.3 board",
+ "cover": "visuals/cover.png",
+ "lede": [
+  "Complete Iron Man / JARVIS HUD look. Every skeleton, wave, ghost and verdict is drawn from real pose data on my own footage (15 and 28 Aug)."
+ ],
+ "pills": [
+  {
+   "text": "23 SETS WATCHED",
+   "color": "#35e0ff"
+  },
+  {
+   "text": "1 STOP",
+   "color": "#ff3b30"
+  },
+  {
+   "text": "1 FALSE ALARM CAUGHT",
+   "color": "#ffb23e"
+  },
+  {
+   "text": "4 CAN'T SEE",
+   "color": "#7fa3b3"
+  }
+ ],
+ "flow": "v6 (creator's 15 notes): hook \u2192 months of effort, on weekends (Ep 1's 5 parts, SET SCAN circled) \u2192 Claude went through [N] papers and tools: counting reps is easy, judging them is hard, the camera angle can fool the agent \u2192 WAIT FOR IT \u00b7 3-2-1 \u00b7 blast \u2192 23 sets on trial across chest, back, legs, core \u2192 the system in 3 parts (line diagram) \u2192 PART 1 SEE (+ what if a joint is hidden?) \u2192 PART 2 JUDGE (best rep, same set) \u2192 false alarm on the lunge \u2192 PART 3 CHECK (STOP only when both say STOP) \u2192 chest flies: continue \u00b7 reverse crunch: STOP, half reps \u2192 send this to the friend who says half reps count \u2192 Salesforce: news on top, the real posting below \u2192 how do you get ready? let's find out next time.",
+ "animatic": null,
+ "music_note": "LOCKED (20 Nov): Desi Boyz 0-10 s at max energy (Edits), then Drum and Bass Vibes (Mixkit, 117 BPM, the most energetic candidate; different from last reel).",
+ "music": [
+  {
+   "src": "music_preview/preview_uplifting_bass.mp4",
+   "title": "Uplifting Bass",
+   "meta": "89 BPM \u00b7 drop on the blast \u00b7 energy lift +9.6 dB \u00b7 recommended bed under the voice",
+   "license": "Mixkit \u00b7 Mixkit Stock Music Free License",
+   "recommended": true
+  },
+  {
+   "src": "music_preview/preview_drum_and_bass_vibes.mp4",
+   "title": "Drum and Bass Vibes",
+   "meta": "117 BPM \u00b7 drop on the blast \u00b7 +8.1 dB",
+   "license": "Mixkit \u00b7 Mixkit Stock Music Free License"
+  },
+  {
+   "src": "music_preview/preview_trap_electro_vibes.mp4",
+   "title": "Trap Electro Vibes",
+   "meta": "92 BPM \u00b7 +4.0 dB",
+   "license": "Mixkit \u00b7 Mixkit Stock Music Free License"
+  },
+  {
+   "src": "music_preview/preview_scifi_score.mp4",
+   "title": "Sci-Fi Score",
+   "meta": "117 BPM \u00b7 +3.8 dB",
+   "license": "Mixkit \u00b7 Mixkit Stock Music Free License"
+  },
+  {
+   "src": "music_preview/preview_epical_drums_01.mp4",
+   "title": "Epical Drums 01",
+   "meta": "144 BPM \u00b7 +3.3 dB",
+   "license": "Mixkit \u00b7 Mixkit Stock Music Free License"
+  },
+  {
+   "src": "music_preview/preview_cyberpunk_city.mp4",
+   "title": "Cyberpunk City",
+   "meta": "99 BPM \u00b7 +2.4 dB",
+   "license": "Mixkit \u00b7 Mixkit Stock Music Free License"
+  },
+  {
+   "src": "music_preview/preview_techno_fest_vibes.mp4",
+   "title": "Techno Fest Vibes (last 3 reels)",
+   "meta": "123 BPM \u00b7 +1.2 dB",
+   "license": "Mixkit \u00b7 Mixkit Stock Music Free License"
+  }
+ ],
+ "visuals": [
+  {
+   "src": "visuals/ghost_stop.mp4",
+   "beat": "1 \u00b7 Hook",
+   "desc": "Green ghost of my best reverse-crunch rep over my worst; red gap; STOP.",
+   "source": "IMG_2661"
+  },
+  {
+   "src": "visuals/gj_zoom.mp4",
+   "beat": "2 \u00b7 Gym Jarvis \u2192 Workout Analyser \u00b7 3.4 s",
+   "desc": "Line diagram of the 5 parts; SET SCAN turns red (TODAY); zoom into WORKOUT ANALYSER.",
+   "source": "Ep 1's 5 parts"
+  },
+  {
+   "src": "visuals/research_blocks.mp4",
+   "beat": "4 \u00b7 Research as block diagrams \u00b7 4.4 s",
+   "desc": "REPS \u2192 COUNT THEM \u2192 EASY \u00b7 REPS \u2192 JUDGE THEM \u2192 HARD \u00b7 CAMERA ANGLE \u2192 WRONG VIEW \u2192 FOOLS THE AGENT.",
+   "source": "RESEARCH_SWEEP.md (225 sources)"
+  },
+  {
+   "src": "visuals/countdown_blast.mp4",
+   "beat": "3 \u00b7 3-2-1 + loading \u00b7 2.1 s",
+   "desc": "3 \u00b7 2 \u00b7 1 \u00b7 INITIALISING WORKOUT ANALYSER \u00b7 blast \u00b7 ONLINE (at 6.9 s).",
+   "source": "Desi Boyz drop"
+  },
+  {
+   "src": "visuals/wall_of_sets.mp4",
+   "beat": "5 \u00b7 23 sets on one screen \u00b7 4.2 s",
+   "desc": "All 23 sets tiled with verdicts; 1 STOP.",
+   "source": "verdicts.json"
+  },
+  {
+   "src": "visuals/system_card.mp4",
+   "beat": "7 \u00b7 The system \u00b7 2.6 s",
+   "desc": "Hand-drawn line diagram: THE SYSTEM \u2192 1 SEE \u2192 2 JUDGE \u2192 3 CHECK.",
+   "source": "line diagram"
+  },
+  {
+   "src": "visuals/lockon_red.mp4",
+   "beat": "8 \u00b7 PART 1 \u00b7 SEE",
+   "desc": "Lat pulldown: 17 joints lock on (banner on top).",
+   "source": "IMG_2783"
+  },
+  {
+   "src": "visuals/dual_wave.mp4",
+   "beat": "8 \u00b7 PART 1 \u00b7 SEE \u00b7 waves",
+   "desc": "Hack squat knee + lat pulldown elbow, live.",
+   "source": "IMG_2649 + IMG_2783"
+  },
+  {
+   "src": "visuals/hidden_diagram.mp4",
+   "beat": "8 \u00b7 Joint hidden \u2192 no verdict \u00b7 2 s",
+   "desc": "Line diagram: stick figure, knee hidden (?), no wave \u2192 NO VERDICT \u00b7 4 OF 23 SETS.",
+   "source": "verdicts.json"
+  },
+  {
+   "src": "visuals/cant_see.mp4",
+   "beat": "9 \u00b7 Leg extension \u00b7 2.6 s",
+   "desc": "Leg extension: CAN'T SEE YOUR KNEE. / NOT JUDGING THIS SET. big and centred.",
+   "source": "IMG_2655"
+  },
+  {
+   "src": "visuals/judge_hold.mp4",
+   "beat": "10 \u00b7 PART 2 \u00b7 JUDGE",
+   "desc": "Lat pulldown: best rep's ghost over rep 4; 62\u00b0 vs 86\u00b0; HOLD.",
+   "source": "IMG_2783"
+  },
+  {
+   "src": "visuals/false_alarm.mp4",
+   "beat": "11 \u00b7 False alarm \u00b7 5.5 s",
+   "desc": "Lunge: judge STOP struck through \u2192 big FALSE ALARM \u00b7 I HAD ONLY TURNED TO THE CAMERA.",
+   "source": "IMG_2650"
+  },
+  {
+   "src": "visuals/check_gate.mp4",
+   "beat": "11 \u00b7 PART 3 \u00b7 CHECK \u00b7 a second pair of eyes",
+   "desc": "Line diagram: JUDGE STOP + COACH STOP \u2192 STOP (crunch) \u00b7 JUDGE STOP + COACH OK \u2192 CHECK FOOTAGE (lunge).",
+   "source": "rule in judge/combine.py"
+  },
+  {
+   "src": "visuals/chest_continue.mp4",
+   "beat": "13 \u00b7 Chest flies: continue \u00b7 2.5 s",
+   "desc": "Cable fly footage \u2192 CONTINUE \u00b7 FLY RANGE STAYS CONSISTENT.",
+   "source": "IMG_2780"
+  },
+  {
+   "src": "visuals/raw_swing.mp4",
+   "beat": "14 \u00b7 Send this to the friend",
+   "desc": "The swing, raw.",
+   "source": "IMG_2661"
+  },
+  {
+   "src": "visuals/news_jobs.mp4",
+   "beat": "14 \u00b7 Salesforce \u00b7 held 6 s",
+   "desc": "Top: the real People Matters headline (cropped: masthead + headline only). Bottom: the real posting, title ringed.",
+   "source": "screenshots 20 Nov 2026"
+  },
+  {
+   "src": "visuals/ending_screen.mp4",
+   "beat": "15 \u00b7 Next time \u00b7 2.6 s",
+   "desc": "HOW CAN YOU BE THAT ONE? FOLLOW ALONG TO KNOW \u00b7 big pulsing FOLLOW.",
+   "source": "screen"
+  },
+  {
+   "src": "visuals/FULL_hook_ghost.mp4",
+   "beat": "FULL-VERTICAL \u00b7 hook",
+   "desc": "9:16 full screen STOP ghost (face hidden).",
+   "source": "IMG_2661"
+  },
+  {
+   "src": "visuals/FULL_countdown.mp4",
+   "beat": "FULL-VERTICAL \u00b7 3-2-1 blast",
+   "desc": "9:16 full screen countdown + ONLINE.",
+   "source": "graphic"
+  },
+  {
+   "src": "visuals/FULL_wall_of_sets.mp4",
+   "beat": "FULL-VERTICAL \u00b7 23 sets",
+   "desc": "9:16 full screen wall of 23.",
+   "source": "verdicts.json"
+  }
+ ],
+ "palette": [
+  {
+   "name": "Holo cyan",
+   "hex": "#35E0FF",
+   "use": "lines, panels, brackets"
+  },
+  {
+   "name": "Alert amber",
+   "hex": "#FFB23E",
+   "use": "HOLD, CHECK FOOTAGE, rings"
+  },
+  {
+   "name": "Stop red",
+   "hex": "#FF3B30",
+   "use": "STOP, the gap"
+  },
+  {
+   "name": "Ghost green",
+   "hex": "#3DFFA8",
+   "use": "my best rep, CONTINUE"
+  },
+  {
+   "name": "Deep navy",
+   "hex": "#03121C",
+   "use": "backgrounds, grade"
+  },
+  {
+   "name": "White",
+   "hex": "#EBFAFF",
+   "use": "readouts"
+  }
+ ],
+ "type_note": "Type: Barlow Condensed ExtraBold / SemiBold, all caps for telemetry. Footage graded cool (teal-blue), scanlines, glow on every overlay. Bottom 100 px of each panel kept clear for seam captions.",
+ "sfx": [
+  [
+   "Hook: ghost locks, gap fills red",
+   "soft data chirps, then a hard stamp hit on STOP",
+   "stamp loud"
+  ],
+  [
+   "Wall of sets",
+   "scan sweep + light ticks as tiles get verdicts; low thud on 1 STOP",
+   "medium"
+  ],
+  [
+   "The wait is over",
+   "dhol roll into a white-flash hit; the Desi Boyz chant rises",
+   "loud"
+  ],
+  [
+   "3 \u00b7 2 \u00b7 1",
+   "tick per number + rising riser",
+   "ticks crisp"
+  ],
+  [
+   "Blast",
+   "bass boom + white flash; music drop lands here",
+   "loudest moment"
+  ],
+  [
+   "Architecture nodes",
+   "UI blip per node, whoosh between stages",
+   "about every 2-3 s"
+  ],
+  [
+   "Joint lock-on",
+   "rapid ticks (17), target-lock tone",
+   "medium"
+  ],
+  [
+   "False alarm",
+   "error buzz on STOP, scratch on the strike-through, warm tone on CHECK FOOTAGE",
+   "medium"
+  ],
+  [
+   "Can't see",
+   "static flicker",
+   "low"
+  ],
+  [
+   "Section changes",
+   "whoosh in + bassy impact (house default)",
+   "per pipeline"
+  ],
+  [
+   "Final STOP + loop",
+   "dhol roll on the stamp, then the hook frame",
+   "loud"
+  ]
+ ],
+ "audio_note": "Bed about -16 LUFS from second 0, about 9-10 dB under the voice, swelling in pauses; voice mastered to -14 LUFS, true peak at or below -1 dBTP; 1.15x speed.",
+ "previews_note": "The real Desi Boyz (0:28.5-0:38.4) is under 0-9.9 s in the Edits project; these previews use the dhol stand-in there.",
+ "previews": [
+  {
+   "src": "previews/PREVIEW_MAIN_drum_and_bass.mp4",
+   "title": "MAIN v6.2 \u00b7 dummy voice",
+   "note": "64.8 s (your takes will set the pace, ~80 s) \u00b7 dhol stand-in 0-9.4 s \u2192 Drum and Bass Vibes",
+   "recommended": true
+  },
+  {
+   "src": "previews/PREVIEW_TRIAL_drum_and_bass.mp4",
+   "title": "TRIAL v6.2",
+   "note": "62.6 s"
+  }
+ ]
+}

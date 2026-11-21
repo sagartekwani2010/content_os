@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "- **Threshold not crossed:** Anthropic judges Claude Mythos 5.2 does not double the rate of internal AI R&D progress, though its estimates are uncertain.\n- **Acceleration rising:** Internal automation of AI R&D is increasing, and METR completed an independent assessment.\n- **Evaluations dropped:** Automated task-based AI R&D evaluations were not run, as recent models exceed the top human baselines.\n- **Autonomy weaknesses:** It quit without running an experiment in 63% of research sessions and left requested work undone in 6–13% of coding sessions (4% for Fable 5.1).\n- **Judgment issues:** Users reported unsupported confident claims, overcaution, and unannounced plan changes.\n- **Caveats:** Prompting and scaffolding changes reduced early stopping; CoBench results are withheld pending an update.",
+ "seconds": 6.2,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 3034.5,
+ "out_tok": 323,
+ "usd_list": 0.0372,
+ "cli_cost": 0.05204550000000001,
+ "item": "s1"
+}

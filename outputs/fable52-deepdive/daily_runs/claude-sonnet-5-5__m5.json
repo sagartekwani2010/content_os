@@ -1,0 +1,14 @@
+{
+ "model": "claude-sonnet-5-5",
+ "text": "Daily protein need: 1.6 g/kg × 78 kg = 124.8 g\n\n40% of that: 0.40 × 124.8 = 49.92 g\n\nChicken needed: 49.92 g ÷ 0.31 = 161.03 g, which rounds to 161 g.\n\nANSWER: 161 g",
+ "seconds": 831.7,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "in_tok": 1290.55,
+ "out_tok": 113,
+ "usd_list": 0.00371,
+ "cli_cost": 0.005353699999999999,
+ "item": "m5"
+}

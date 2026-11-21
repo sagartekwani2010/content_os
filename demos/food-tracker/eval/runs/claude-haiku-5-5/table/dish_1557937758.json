@@ -1,0 +1,216 @@
+{
+ "items": [
+  {
+   "name": "Sweet potato, roasted",
+   "grams_low": 50,
+   "grams_best": 70,
+   "grams_high": 95,
+   "fdc_query": "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "preparation": "Roasted or baked cubes, about 6 pieces, each roughly 2 to 2.5 cm, with browned edges",
+   "confidence": 0.7,
+   "kcal": 63.0,
+   "kcal_range": [
+    45,
+    86
+   ],
+   "protein_g": 1.4,
+   "protein_range": [
+    1.0,
+    1.9
+   ],
+   "fdc": {
+    "fdc_id": "168483",
+    "description": "Sweet potato, cooked, baked in skin, flesh, without salt",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 90.0,
+    "protein_100g": 2.01
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Scrambled eggs",
+   "grams_low": 30,
+   "grams_best": 45,
+   "grams_high": 60,
+   "fdc_query": "Egg, whole, cooked, scrambled",
+   "preparation": "Soft scrambled, pale yellow curds in a small pile; any butter or oil is not separately visible",
+   "confidence": 0.6,
+   "kcal": 67.0,
+   "kcal_range": [
+    45,
+    89
+   ],
+   "protein_g": 4.5,
+   "protein_range": [
+    3.0,
+    6.0
+   ],
+   "fdc": {
+    "fdc_id": "172187",
+    "description": "Egg, whole, cooked, scrambled",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 149.0,
+    "protein_100g": 9.99
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Raspberries, fresh",
+   "grams_low": 40,
+   "grams_best": 50,
+   "grams_high": 65,
+   "fdc_query": "Raspberries, raw",
+   "preparation": "Fresh, whole, about 12 berries, uncooked",
+   "confidence": 0.7,
+   "kcal": 26.0,
+   "kcal_range": [
+    21,
+    34
+   ],
+   "protein_g": 0.6,
+   "protein_range": [
+    0.5,
+    0.8
+   ],
+   "fdc": {
+    "fdc_id": "167755",
+    "description": "Raspberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 52.0,
+    "protein_100g": 1.2
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Strawberries, fresh",
+   "grams_low": 25,
+   "grams_best": 35,
+   "grams_high": 45,
+   "fdc_query": "Strawberries, raw",
+   "preparation": "Fresh, hulled, two pieces: one larger wedge and one smaller wedge, uncooked",
+   "confidence": 0.75,
+   "kcal": 11.2,
+   "kcal_range": [
+    8,
+    14
+   ],
+   "protein_g": 0.2,
+   "protein_range": [
+    0.2,
+    0.3
+   ],
+   "fdc": {
+    "fdc_id": "167762",
+    "description": "Strawberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 32.0,
+    "protein_100g": 0.67
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  },
+  {
+   "name": "Blackberries, fresh",
+   "grams_low": 15,
+   "grams_best": 20,
+   "grams_high": 28,
+   "fdc_query": "Blackberries, raw",
+   "preparation": "Fresh, whole, cluster of about 3 berries, uncooked",
+   "confidence": 0.75,
+   "kcal": 8.6,
+   "kcal_range": [
+    6,
+    12
+   ],
+   "protein_g": 0.3,
+   "protein_range": [
+    0.2,
+    0.4
+   ],
+   "fdc": {
+    "fdc_id": "173946",
+    "description": "Blackberries, raw",
+    "source": "SR Legacy 2018-04",
+    "kcal_100g": 43.0,
+    "protein_100g": 1.39
+   },
+   "nutrient_source": "USDA FoodData Central lookup"
+  }
+ ],
+ "totals": {
+  "grams": 220.0,
+  "kcal": 175.8,
+  "protein_g": 7.0,
+  "grams_range": [
+   160.0,
+   293.0
+  ],
+  "kcal_range": [
+   125,
+   235
+  ],
+  "protein_range": [
+   4.9,
+   9.4
+  ]
+ },
+ "ablation_table_bm25_top1": {
+  "totals": {
+   "grams": 220.0,
+   "kcal": 175.8,
+   "protein_g": 7.0,
+   "grams_range": [
+    160.0,
+    293.0
+   ],
+   "kcal_range": [
+    125,
+    235
+   ],
+   "protein_range": [
+    4.9,
+    9.4
+   ]
+  },
+  "rows": [
+   "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "Egg, whole, cooked, scrambled",
+   "Raspberries, raw",
+   "Strawberries, raw",
+   "Blackberries, raw"
+  ]
+ },
+ "mode": "table",
+ "model": "claude-haiku-5-5",
+ "image_sha256": "ca8532a191382aec476a864ee3efedb5df752085d9170492f0d0058e43bcf16e",
+ "scale_cues": "Used the white square plate (about 26 to 28 cm across) as the main reference. Raspberries measure about 1.5 to 2 cm across, and sweet potato cubes about 2 to 2.5 cm. Estimates assume a standard overhead view with a fairly high camera angle.",
+ "assumptions": [
+  "No sauce, dressing, or drink is visible on the plate.",
+  "Any cooking fat used for the eggs or sweet potato is not separately visible, so no added oil or butter item was included.",
+  "Small yellow specks near the eggs are treated as part of the scrambled eggs.",
+  "Pink and red smears on the plate are juice residue, not a separate food item.",
+  "Weights are edible mass only and assume raw-equivalent fruit and cooked vegetable and egg masses."
+ ],
+ "latency_s": 7312.87,
+ "calls": [
+  {
+   "wall_s": 7308.53,
+   "duration_ms": 58157,
+   "num_turns": 4,
+   "cost_usd_cli": 0.004195910000000001,
+   "cost_basis": "list",
+   "input_tokens": 56529,
+   "output_tokens": 2013
+  },
+  {
+   "wall_s": 4.32,
+   "duration_ms": 3228,
+   "num_turns": 1,
+   "cost_usd_cli": 0.0013337000000000002,
+   "cost_basis": "list",
+   "input_tokens": 7136,
+   "output_tokens": 543
+  }
+ ],
+ "cost_usd_cli": 0.00553,
+ "log_id": "bedd3f4ef76a"
+}

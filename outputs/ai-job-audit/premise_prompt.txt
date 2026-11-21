@@ -1,0 +1,23 @@
+You are a blunt Instagram strategist and story editor. Evaluate whether this creator's premise will STICK (stop the scroll, get run, get sent, and keep people coming back as a series). Do not flatter. English only.
+
+CREATOR: Indian AI engineer, visibly fit. Brand so far ("Gym Jarvis"): he builds personal AI agents for his own training and food, shows real evals and failures, and runs them as loops (measure -> act -> re-measure). Brand rule: first DO, then SHOW, then make a SERIES; use AI with feedback loops to get drastic outcomes. Audience trusts him for AI + fitness credibility.
+
+HIS PREMISE (his words, paraphrased):
+1. Open: layoffs are around every corner. Instead of being sitting ducks, do something.
+2. "I've been building a tool that assesses which parts of my job today can be done by AI." Demo it with its factors.
+3. AI evolves every month, so I re-run the tool every month. Whatever AI can newly do, I offload, and I move my time to higher-order tasks or invest more there.
+4. Explain how viewers can use the tool.
+5. Series: the tool suggests corrective actions and helps you move toward tasks AI can't touch.
+
+WHAT WE ALREADY LEARNED (simulated 12-persona Indian viewer panel over 6 drafts of an earlier screenplay "My job on trial": race cold open "AI wrote my status report while I'm still on 'Hi team'", role roll call, his audit sting, rerun same count, hand one task over with before/after, friend's 'needs a human' row, comment AUDIT; scored ~6.5/10): bare fear openers ("AI will take your job") are the most saturated line on Indian Instagram and lose people in 2-3 s; concrete task hooks win; "I'm an AI engineer" can read as distance not vulnerability; non-IT roles must hear their task by ~6 s; percentages invite rerun-mismatch screenshots, counts with a fixed rubric are safer; never insult a profession; English only.
+Research: Instagram ranks on watch time, sends per reach, likes; originality rewarded; "AI will take your job" doom and salary/roadmap lists are saturated in India; layoff anxiety is real and high.
+
+EVALUATE:
+1. Does the premise stick? Score 0-10 for: hook potential, emotional pull, credibility/authenticity, brand fit (do-show-series, loops), series potential (will people come back monthly), participation (will they run it), sends. One line of reasoning each. Compare with "My job on trial" v6: what is better, what is worse.
+2. The strongest version of THIS premise: what is the real emotional core (fear? agency? the monthly loop?), what single idea should the first reel own, and what should be saved for episodes 2-5.
+3. The opener: "layoffs are around every corner" is saturated. Give 5 openers that keep his layoff/sitting-duck sentiment but stop the scroll, ranked.
+4. The monthly loop: how to make "AI evolves, I re-run monthly" concrete and visible in reel 1 when month 2 hasn't happened (e.g. show what changed with a newer model, or a dated baseline card with a public promise). Make it geeky but simple. Should the tool literally test tasks with the current model each month rather than rely on a fixed table? Pros, cons, honesty risks.
+5. Series map: 5 episode titles with one-line hooks that compound (each gives a reason to return).
+6. Risks: fear-mongering, overclaiming ("assesses my job"), tool not ready, comparison with existing AI-exposure tools, layoff-victim sensitivity. How to handle each.
+7. Verdict: go / go with changes / don't. If go with changes, list the 5 changes.
+Under 1100 words.

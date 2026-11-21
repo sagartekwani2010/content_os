@@ -14,12 +14,23 @@ python -m content_os.pipeline run <reel_dir> --from render --until qa
 
 Single stages: `ingest | transcribe | segment | score | cutpoints | cut_review | render [--draft] | qa [--draft]`,
 plus `judge --phase takes|cuts`, `select --beat N --take bN_tK` (override; eligible takes only),
-`approve`, `synth <dir> [--hdr] [--files 2]` (synthetic test reel). Any setting can be overridden
+`approve`, `synth <dir> [--hdr] [--files 2]` (synthetic test reel), `sfx [--out DIR]` (regenerate the
+synthesised SFX set) and `sfx-cues <reel_dir>` (write `deliver/SFX_CUES.md`). Any setting can be overridden
 per call with `--set key.sub=value` or per reel in `<reel_dir>/pipeline.yaml` (defaults: `config.py`).
 
 Extra Python dependencies: `content_os/pipeline/requirements.txt` (numpy, opencv-python-headless).
 External tools: ffmpeg/ffprobe (>= 8: libx264, libass, ebur128, swscale transfer conversion),
 whisper-cli (whisper.cpp), `say` (synthetic tests only), `claude` (judge step only).
+
+## Sound effects
+
+`python -m content_os.pipeline sfx` synthesises a small licence-free set with ffmpeg into
+`~/Movies/ContentOS/sfx` (outside the repo): `whoosh` (0.35 s pink-noise band-pass sweep, swell peak at
+0.12 s), `pop` (0.08 s), `hit` (0.5 s low thump), `tick` (0.05 s); band-limited, faded at both ends,
+sample peak -6 dBFS; fixed seeds, so the same ffmpeg build gives identical files (`sfx.json` lists
+sha256, true peak and max momentary loudness). `sfx-cues <reel_dir>` writes `deliver/SFX_CUES.md`
+from cuts.json + cue sheet: each effect's output time (mm:ss.hundredths and frame), type, what it lands
+on, suggested level and the words under it, plus the music drops.
 
 ## Recording protocol it is built for
 
@@ -75,6 +86,40 @@ file unless named `out_*` (output timeline).
 `start_offset` = seconds after the beat starts when its visual appears; `visual.start` = in-point
 inside a video file; `music.gain_db` is relative to the voice target (the bed is loudness-normalised
 first, then ducked under the voice with a sidechain compressor). Tested with 15 beats.
+
+Timing keys (all optional; without them nothing changes):
+```json
+{"speed": 1.05,                                   // playback speed of every beat (pitch preserved)
+ "cold_open": {"beat": 16, "id": 0},              // repeat beat 16's take first, as beat 0
+ "beats": [{"beat": 15, "speed": 1.0},            // per-beat speed override
+           {"beat": 1, "sfx": [{"path": "~/Movies/ContentOS/sfx/whoosh.wav", "type": "whoosh",
+                                "at": -0.12, "level_db": -24}]},           // before the beat starts
+           {"beat": 16, "sfx": [{"path": ".../hit.wav", "word": "94", "level_db": -18}]},
+           {"beat": 8, "sfx": [{"path": ".../pop.wav", "level_db": -22, "offset": -0.05,
+                                "visual_cue": {"target": "calories", "action": "cross", "edge": "end"},
+                                "word": "calories", "word_offset": 0.55}]}],  // fallback if clips are stale
+ "music_drops": [{"from_beat": 15, "to_beat": 16, "level_db": -60, "fade_out": 0.25, "fade_in": 0.6},
+                 {"before_beat": 1, "duration": 0.3, "level_db": -60, "fade_out": 0.03, "fade_in": 0.02}]}
+```
+Speed: picture `setpts`, voice `atempo` (WSOLA, pitch preserved), range `speed.min..max` (0.5-2).
+Cold open: same take and out-point as the source beat, speed from `cold_open.speed` (1.0), in-point
+moved to the measured speech onset (lead <= `cutpoints.cold_open_max_lead_s`, 40 ms); it inherits
+the source beat's `speaker_zoom` / `voice_ramp_db` unless the cold-open id has its own entry, and gets
+its own visual (`beat_00` clip). SFX anchors: `at` (s from the beat start, may be negative), `word`
+(+ `occurrence`, `offset`), or `visual_cue` from the clips' `visuals.json` (used only when it records
+the current cuts hash). `level_db` is relative to the voice target, measured on the effect's max
+momentary loudness; legacy `gain_db` is a plain gain. Music drops: `from_beat`/`to_beat` fade out from
+from_beat's start and back in after to_beat's end; `before_beat` + `duration` holds the music down for
+that long before the beat starts; or explicit `start`/`end` seconds.
+
+Section cards (optional): `"section_cards": [{"beat": 3, "title": "THE RESEARCH", "sub": "optional",
+"dur": 0.7, "accent": "cyan|yellow|#RRGGBB", "kicker": "optional", "lead": 0.05}]`: a full-frame
+1080x1920 card over both panels from `lead` s before the beat's first frame, for `dur` s (Gym Jarvis
+look: navy grid, cyan corner brackets and glow rules, Barlow Condensed ExtraBold uppercase). Content
+punches in 1.12 -> 1.0 over 5 frames, holds, fades out over 4 frames; voice and timing are unchanged.
+A leading "THE" or text before ":" becomes the small kicker; a two-word title goes on two lines (the
+last in the accent). Font: `setup` downloads Barlow Condensed (SIL OFL 1.1, licence alongside) into
+`~/.cache/content_os/fonts`. Cards are drawn in draft and final renders; `render.json` lists them.
 
 `"visual_clips": "work/visuals"` (optional) uses the word-anchored, hand-drawn beat clips rendered by
 `python -m content_os.visuals render <reel_dir>` (from `visual_cues.json` and `work/cuts.json`) for every
@@ -161,13 +206,17 @@ never edited). Set `judge.enabled: false` to skip.
                "frames": 78, "duration": 2.6, "out_start": 0.0, "lead_s": 0.033, "tail_s": 0.097,
                "lufs": -16.2, "gain_db": -1.1, "face": {...}, "crop": {"x": 234, "y": 0, "w": 810, "h": 720},
                "crop_realigned": false, "src_size": [1280, 720], "words": [{"text": "Most", "start": 0.03}],
-               "text": "...", "notes": []}],
+               "text": "...", "notes": [], "speed": 1.05, "src_frames": 82}],
  "joins": [{"index": 0, "time": 2.6, "left": 0, "right": 1, "crossfade_ms": 30}]}
 ```
 in/out = first word - 40 ms / last word + 80 ms, moved to the quietest 10 ms frame within 20 ms,
 bounded by neighbouring speech, then floored/ceiled to the frame grid. Crop: fixed per reel, centred
 on the median face of the selected takes; a take whose face is > 2% of the source width away gets
 its own crop (`crop_realigned`). Gain: each segment to the median segment loudness (clamped +-12 dB).
+`in`/`out`/`src_frames` are source values; `frames`, `duration`, `out_start` and word times are on the
+output timeline at the segment's `speed` (`frames = round(src_frames / speed)`, frame-exact). A
+cold-open segment also has `"cold_open": true`, `"source_beat": 16` and `"onset"` (source s); its `beat`
+is the cold-open id. Consumers should read the script beat as `source_beat` if present, else `beat`.
 
 ### 6. cut_review -> `cut_review.html`, `review/`
 Self-contained page: per cut, the last/first frame inside the speaker crop, face jump (% of output
@@ -178,7 +227,10 @@ width and of source width), loudness of the last/first 1.5 s after gain, words e
 invalidates it.
 
 ### 7. render -> `render/<draft|final>/<name>.mp4`, `render.json`
-`--draft` needs no approval: placeholder cards per beat, no music/SFX, a DRAFT label. The final
+`--draft` needs no approval: placeholder cards per beat, no music/SFX, a DRAFT label. The final render
+also writes `<name>_clean.mp4` (same picture, mastered voice only: no music, no SFX) for finishing in
+another editor (`render.clean_stem: false` turns it off); `render.json` records `clean_output`, the
+resolved `sfx_plan` (time, anchor, applied gain, words under each effect) and `music_drops`. The final
 render refuses unless the approval hash matches. Pipeline: per-segment speaker clips (SDR conversion,
 crop, Lanczos scale, exact frame count) -> concat; per-interval visual clips -> concat; voice from
 the 48 kHz wavs with per-take gain and 30 ms triangular crossfades (audio extended 15 ms each side, so

@@ -1,63 +1,61 @@
-# Teleprompter: food tracker reel (v7, short beats, 16 November 2026)
+# Teleprompter: food tracker reel (as recorded, IMG_3507.MOV, 16 November 2026)
 
-Principle: one short sentence per beat. The voice carries the story; the diagram on top carries the
-detail (numbers, steps, names). Don't say what the diagram already shows.
-
-Say "beat N", read the line, look at the lens, say it. Pause 2 s. Say it again. Third time if needed.
+Ground truth = the creator's chosen takes (see TAKES_ANALYSIS.md). The pre-shoot version is
+TELEPROMPTER.as_planned.md.
 
 **beat 1**
-In my last video you met Gym Jarvis.
+In last video, you met my Gym Jarvis.
 
 **beat 2**
-Today: how it reads my plate for protein and calories.
+Today, let's see how it scans my plate for protein and calories.
 
 **beat 3**
-I had Claude dig through the research papers.
+For building a system like this, I had Claude dig through a lot of research papers online.
 
 **beat 4**
-Naming the food is easy. Estimating how much is the hard part.
+And I realized, naming items in your plate is super easy. But identifying the quantity of items is the hard part.
 
 **beat 5**
-So I split it into three steps: find, size, look up.
+So, I split the problem into three parts: find, size, and look up.
 
 **beat 6**
 Then I built two agents.
 
 **beat 7**
-A vision agent on Fable 5.2 lists every item and its grams.
+The first agent is the vision agent on Fable 5.2, which lists the items and its grams.
 
 **beat 8**
-It's not allowed to say calories.
+It's not allowed to say calories or proteins in those items.
 
 **beat 9**
-A matcher agent finds each item in a USDA database.
+The second agent is the matcher agent, which finds all the items identified by the vision agent in our database.
 
 **beat 10**
 So every number traces back to a real source.
 
 **beat 11**
-I packaged it as a Claude skill, with one guardrail.
+I packaged all of it as a Claude skill with a single guardrail.
 
 **beat 12**
-If it's unsure, it flags the meal for me.
+Which was: if unsure, flag the meal for my review.
 
 **beat 13**
-Then I tested it on many meals I had, across days.
+Then I tested it on many meals that I had across days.
 
 **beat 14**
-It performed with reasonable accuracy across all kinds of food.
+And it performed with reasonable accuracy across all kinds of food.
 
 **beat 15**
-Except this one. Chicken, hidden under carrots.
+Except this one. Chicken hidden under carrots.
 
 **beat 16**
-Five hundred calories became ninety-four.
+And 500 calories just became 94.
 
 **beat 17**
-But its confidence was 0.3. It knew.
+To explicitly handle cases like this, I added a confidence score.
 
 **beat 18**
-Now every meal is logged, and the unsure ones come to me.
+Now every meal is logged, and the less confident ones come to me for review.
 
 **beat 19**
-Next: how my Workout Analyser tracks every set.
+Next up, we'll see how my Workout Analyser tracks every set.

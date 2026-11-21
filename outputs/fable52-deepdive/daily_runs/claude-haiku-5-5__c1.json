@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "```python\ndef format_inr(amount: float) -> str:\n    # Format the magnitude to 2 decimals first so the sign check uses the rounded value.\n    text = f\"{abs(amount):.2f}\"\n    int_part, frac_part = text.split(\".\")\n\n    # Indian grouping: last 3 digits, then groups of 2.\n    if len(int_part) > 3:\n        head, tail = int_part[:-3], int_part[-3:]\n        groups = []\n        while len(head) > 2:\n            groups.insert(0, head[-2:])\n            head = head[:-2]\n        if head:\n            groups.insert(0, head)\n        int_part = \",\".join(groups + [tail])\n\n    # Avoid \"-₹0.00\" for amounts that round to zero.\n    sign = \"-\" if amount < 0 and text != \"0.00\" else \"\"\n    return f\"{sign}₹{int_part}.{frac_part}\"\n```",
+ "seconds": 7.0,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2525.0,
+ "out_tok": 1191,
+ "usd_list": 0.00085,
+ "cli_cost": 0.0009224000000000001,
+ "item": "c1"
+}

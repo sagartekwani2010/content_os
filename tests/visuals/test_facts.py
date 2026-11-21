@@ -41,10 +41,10 @@ def test_spec_number_guard():
 
 
 def test_food_tracker_spec_has_no_raw_numbers():
-    from content_os.visuals.script import load_lines
+    from content_os.visuals.script import beat_line, load_lines
 
     sheet = json.loads((ROOT / "outputs/food-tracker-reel/visual_cues.json").read_text())
     lines = load_lines(ROOT / "outputs/food-tracker-reel/TELEPROMPTER.md")
     for b in sheet["beats"]:
-        errs = [e for e in number_errors({**b, "line": lines[b["beat"]]}) if "unknown fact @lunch" not in e]
+        errs = [e for e in number_errors({**b, "line": beat_line(b, lines)}) if "unknown fact @lunch" not in e]
         assert errs == [], (b["beat"], errs)

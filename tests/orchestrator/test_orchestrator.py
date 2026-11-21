@@ -11,7 +11,7 @@ from pathlib import Path
 import pytest
 
 from content_os.config import load_models_config, load_prompt
-from content_os.orchestrator import (av_review, backtrack, engine, graph, jobs, memory, modelcall, runner,
+from content_os.orchestrator import (av_review, moodboard, backtrack, engine, graph, jobs, memory, modelcall, runner,
                                      settings, stages, status_page)
 from content_os.orchestrator.state import Reel, ReelError
 
@@ -39,6 +39,17 @@ def sandbox(tmp_path, monkeypatch):
             out = {"title": "T", "promise": "pr", "hook": f"Hook v{n}", "target_duration_s": 30,
                    "beats": [{"id": 1, "text": f"Hook line version {n}.", "section": "hook", "visual": "card"},
                              {"id": 2, "text": "Payoff line.", "section": "payoff", "visual": "card"}]}
+        elif role == "moodboard":
+            out = {"concept": "c", "palette": ["#FFD23F accent: numbers"], "typography": "Barlow", "texture": "line",
+                   "music": "m", "sfx_palette": ["whoosh"], "pacing": "fast",
+                   "keyframes": [{"id": "KF01", "time_s": 0, "beats": [1], "emotion": "surprise", "layout": "split",
+                                  "shot": "creator punch-in", "on_screen_text": "HOOK"}],
+                   "shot_list": ["screen-record the tool, 10 s"]}
+        elif role == "story_check":
+            out = {"phase": "script", "verdict": "pass",
+                   "scores": {k: 8 for k in ("hook", "emotional_arc", "clarity", "retention", "sends", "saves",
+                                             "comments", "continuity")},
+                   "beats": [{"beat": 1, "intended": "surprise", "likely_felt": "surprise"}]}
         elif role == "feedback_classifier":
             out = {"stage": "script", "reason": "hook wording", "confidence": "high", "generalizable": True,
                    "lesson": {"category": "content", "rule": "Open with the concrete result before the method.",
@@ -51,6 +62,7 @@ def sandbox(tmp_path, monkeypatch):
         return out, {"backend": "fake", "served_model": "fake"}
 
     monkeypatch.setattr(modelcall, "CALLER", fake)
+    monkeypatch.setattr(moodboard, "CHROME", str(tmp_path / "no-chrome"))
     return calls
 
 
@@ -108,7 +120,13 @@ def test_gate_approval_is_bound_to_version_and_needs_footage():
     engine.advance(reel.id)
     engine.approve(reel.id, "script", by="t")
     res = engine.advance(reel.id)
+    assert res["ran"] == ["moodboard"] and res["node"] == "gate:moodboard"
+    r = Reel.load(reel.id)
+    assert "KF01" in (r.dir / "MOODBOARD.html").read_text()
+    engine.approve(reel.id, "moodboard", by="t")
+    res = engine.advance(reel.id)
     assert res["ran"] == ["shoot_plan"] and res["node"] == "record"
+    assert "screen-record the tool" in (r.dir / "SHOOT_PLAN.md").read_text()
     with pytest.raises(ReelError):
         engine.approve(reel.id, "recorded", by="t")       # no footage yet
     with pytest.raises(ReelError):
@@ -127,7 +145,8 @@ def test_adopt_food_tracker_keeps_hand_written_plan_and_invents_no_approval():
     assert res["node"] == "gate:script"
     engine.approve(reel.id, "script", by="t")
     res = engine.advance(reel.id)
-    assert res["ran"] == ["shoot_plan"]
+    assert res["ran"] == ["moodboard", "shoot_plan"]          # adopted reel: no mood board, gate skipped
+    assert Reel.load(reel.id).stage("moodboard")["status"] == "skipped"
     assert (reel.dir / "SHOOT_PLAN.md").read_text() == original_plan
 
 
@@ -135,6 +154,9 @@ def test_adopt_food_tracker_keeps_hand_written_plan_and_invents_no_approval():
 def _to_recorded(reel_id: str) -> None:
     engine.approve(reel_id, "script", by="t")
     engine.advance(reel_id)
+    if engine.advance(reel_id).get("node") == "gate:moodboard":
+        engine.approve(reel_id, "moodboard", by="t")
+        engine.advance(reel_id)
     r = Reel.load(reel_id)
     _add_raw(r)
     engine.approve(reel_id, "recorded", by="t")

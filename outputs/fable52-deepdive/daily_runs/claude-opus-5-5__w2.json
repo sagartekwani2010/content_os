@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "I just finished my first half marathon in Bengaluru! 🏃\n\n21.1 km. 2:05:30.\n\nMy biggest lesson from getting here: **consistency beat motivation.**\n\nMotivation came and went. What carried me to the finish line was showing up anyway, run after run, whether I felt like it or not. Small, steady efforts added up to something I'm really proud of.\n\nA huge thank you to my running group, **Sunday Striders**. Your company and encouragement made this journey so much better.\n\nFirst half marathon: done. ✅\n\n#HalfMarathon #Running #Bengaluru",
+ "seconds": 8.0,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1172.0,
+ "out_tok": 566,
+ "usd_list": 0.01601,
+ "cli_cost": 0.0189521,
+ "item": "w2"
+}

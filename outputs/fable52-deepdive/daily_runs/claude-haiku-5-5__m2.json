@@ -1,0 +1,13 @@
+{
+ "model": "claude-haiku-5-5",
+ "text": "**Setup**\n\n- Principal: P = ₹5,00,000\n- Monthly rate: r = 9% / 12 = 0.0075\n- Number of months: n = 5 × 12 = 60\n\n**Formula**\n\nEMI = P × r × (1 + r)ⁿ / [(1 + r)ⁿ − 1]\n\n**Calculation**\n\n- (1.0075)⁶⁰ ≈ 1.565681\n- Numerator: 500000 × 0.0075 × 1.565681 ≈ 5,872.55\n- Denominator: 1.565681 − 1 = 0.565681\n- EMI ≈ 5,872.55 / 0.565681 ≈ 10,379.18\n\nRounded to the nearest rupee, the EMI is ₹10,379.\n\nANSWER: ₹10,379",
+ "seconds": 7.6,
+ "served": [
+  "claude-haiku-5-5"
+ ],
+ "in_tok": 2462.75,
+ "out_tok": 1269,
+ "usd_list": 0.00088,
+ "cli_cost": 0.0009530000000000001,
+ "item": "m2"
+}

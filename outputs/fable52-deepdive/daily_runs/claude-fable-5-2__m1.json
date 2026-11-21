@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "Since the ₹1,180 price already includes 18% GST, the base price is 1,180 ÷ 1.18 = ₹1,000.\n\nGST amount = 1,180 − 1,000 = ₹180\n\nANSWER: ₹180",
+ "seconds": 4.2,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1082.0,
+ "out_tok": 81,
+ "usd_list": 0.0119,
+ "cli_cost": 0.017212799999999997,
+ "item": "m1"
+}

@@ -157,6 +157,18 @@ def loudness(path: Path | str, start: float | None = None, duration: float | Non
     return {"integrated_lufs": f(i), "lra": f(lra), "true_peak_db": f(pk)}
 
 
+_EBU_M = re.compile(r"\bM:\s*(-?[\d.]+|-inf)")
+
+
+def momentary_max(path: Path | str) -> float | None:
+    """Max momentary loudness (LUFS, 400 ms window) of a short sound, padded with silence so the
+    window slides over the whole sound. Used to set short SFX relative to the voice target."""
+    err = ffmpeg("-v", "info", "-i", str(path), "-vn", "-af", "adelay=400:all=1,apad=pad_dur=0.6,ebur128",
+                 "-f", "null", "-").stderr
+    vals = [float(m) for m in _EBU_M.findall(err) if m != "-inf"]
+    return max(vals) if vals else None
+
+
 def finite(x: float | None, default: float = -70.0) -> float:
     if x is None or x != x or x in (float("inf"), float("-inf")):
         return default

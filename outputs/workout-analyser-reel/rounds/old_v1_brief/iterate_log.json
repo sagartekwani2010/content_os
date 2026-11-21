@@ -1,0 +1,24 @@
+[
+ {
+  "round": 1,
+  "overall": 5.19,
+  "groups": {
+   "mass": 3.93,
+   "fin_consult_mktg": 5.42,
+   "builders": 6.88
+  },
+  "min_persona": 3,
+  "cost_usd": 1.2
+ },
+ {
+  "round": 2,
+  "overall": 4.97,
+  "groups": {
+   "mass": 3.71,
+   "fin_consult_mktg": 4.92,
+   "builders": 7.0
+  },
+  "min_persona": 2.5,
+  "cost_usd": 1.34
+ }
+]

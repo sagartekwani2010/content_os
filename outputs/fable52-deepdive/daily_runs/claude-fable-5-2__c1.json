@@ -1,0 +1,14 @@
+{
+ "model": "claude-fable-5-2",
+ "text": "```python\ndef format_inr(amount: float) -> str:\n    \"\"\"Format a number as Indian rupees, e.g. 1234567.5 -> '₹12,34,567.50'.\"\"\"\n    digits = f\"{abs(amount):.2f}\"\n    integer, fraction = digits.split(\".\")\n\n    # Indian grouping: last three digits, then groups of two.\n    if len(integer) > 3:\n        head, tail = integer[:-3], integer[-3:]\n        groups = []\n        while len(head) > 2:\n            groups.insert(0, head[-2:])\n            head = head[:-2]\n        if head:\n            groups.insert(0, head)\n        integer = \",\".join(groups + [tail])\n\n    # Avoid \"-₹0.00\" for tiny negatives that round to zero.\n    sign = \"-\" if amount < 0 and float(digits) != 0 else \"\"\n    return f\"{sign}₹{integer}.{fraction}\"\n```",
+ "seconds": 8.6,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-fable-5-2"
+ ],
+ "in_tok": 1163.25,
+ "out_tok": 652,
+ "usd_list": 0.03539,
+ "cli_cost": 0.0410978,
+ "item": "c1"
+}

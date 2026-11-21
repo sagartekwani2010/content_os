@@ -1,0 +1,14 @@
+{
+ "model": "claude-opus-5-5",
+ "text": "The bat costs ₹100, so the ball costs ₹110 − ₹100 = ₹10.\n\n(This isn't the classic trick version, where the bat costs ₹100 *more than* the ball. Here the bat's price is given directly.)\n\nANSWER: ₹10",
+ "seconds": 2.9,
+ "served": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "in_tok": 1143.25,
+ "out_tok": 91,
+ "usd_list": 0.00639,
+ "cli_cost": 0.009336899999999999,
+ "item": "r3"
+}
