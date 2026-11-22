@@ -1,4 +1,4 @@
-# Evals for every job · Ep 1 · SCRIPT v14: the creator's narrative (22 Nov 2026)
+call# Evals for every job · Ep 1 · SCRIPT v14: the creator's narrative (22 Nov 2026)
 
 The creator's story, in the creator's order. Edits are light vetting only:
 - "Imagine… like Swiggy" on the case, because the numbers are not Swiggy's real data.
@@ -44,7 +44,7 @@ The viewer works it out a half-second before you say it, which is what makes it 
 | 1 | Salesforce: support ~9,000 → ~5,000 (Benioff, 2025) · Google: cuts reported, 2026 → title blocks: Salesforce "Lead AI/ML Engineer (LLM Post-Training)" · Bangalore; Google "Staff Software Engineer, Search Evals" · Bengaluru | Low hit |
 | 2 | OpenAI Applied AI Engineer · Delhi; Anthropic Applied AI Architect · Bangalore | Pop ×2 |
 | 3 | The four job cards collapse into one word: EVALS. Small: "Help customers develop evaluation frameworks…" (Anthropic posting, verbatim) | Bass impact |
-| 4 | Face · chip: LEAD AI RESEARCHER · EVALS | Whoosh |
+| 4 | Face · name lower-third, two lines: **Sagar Tekwani** / *AI Researcher* (lands on "I'm a lead AI researcher", holds for the whole line) · chip: EVALS | Whoosh |
 | 5 | Card: WHAT IS AN EVAL? · a consulting example | Whoosh |
 | 6 | Big "M2C −30%" · menu → cart arrow thinning · small: illustrative example | Low hit |
 | 7 | Slack line from the business head: "It's the new delivery fee." · fee card "live today" | Pop |

@@ -74,6 +74,9 @@ and visuals code carry these as defaults where they can.
 - Playback speed 1.1x, pitch preserved; the cold open and the twist/punchline beats stay at 1.0x.
 - Cold open with the most surprising moment; section changes marked by a full-frame title card (dark
   background, huge condensed uppercase, quick punch-in) with a whoosh in and a bass impact on landing.
+- Name lower-third (creator, 22 Nov 2026): whenever the creator introduces himself on camera ("I'm a lead AI
+  researcher…"), show a two-line lower-third: **Sagar Tekwani** on top and **AI Researcher** below it in smaller
+  type. It lands on the intro line and holds for the whole line, placed above Instagram's bottom UI zone.
 - Visuals land on or ~0.25 s before the word; a concept appears big first, then its detailed diagram; two or
   more scenes per beat when a line carries two ideas; results shown as dashboards; no visual gap over ~2 s.
 - End on the payoff or a loop back to the opening. A next-episode tease goes in the caption or a
@@ -129,6 +132,11 @@ and visuals code carry these as defaults where they can.
 
 The creator reviews one end-to-end export. Before it is shown: frame check of every beat, sync, length,
 loudness and true peak, transcript of the render against the spoken lines, and the OpenAI A/V review.
+
+## Visual tools
+
+Which tool for which beat (Manim, Anidoodle, Lemo Opuscar, real-page screenshots, HTML stills) and how to install a new one:
+`production/TOOL_DISCOVERY.md`. Update it whenever a tool is tried.
 
 ## Skills that carry these defaults
 
