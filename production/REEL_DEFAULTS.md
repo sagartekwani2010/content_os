@@ -74,9 +74,9 @@ and visuals code carry these as defaults where they can.
 - Playback speed 1.1x, pitch preserved; the cold open and the twist/punchline beats stay at 1.0x.
 - Cold open with the most surprising moment; section changes marked by a full-frame title card (dark
   background, huge condensed uppercase, quick punch-in) with a whoosh in and a bass impact on landing.
-- Name lower-third (creator, 22 Nov 2026): whenever the creator introduces himself on camera ("I'm a lead AI
-  researcher…"), show a two-line lower-third: **Sagar Tekwani** on top and **AI Researcher** below it in smaller
-  type. It lands on the intro line and holds for the whole line, placed above Instagram's bottom UI zone.
+- Name lower-third (**not a default**; creator, 22 Nov 2026): a two-line lower-third, **Sagar Tekwani** on top and
+  **AI Researcher** below in smaller type, on the creator's self-intro line. Used in the Salesforce/evals reel.
+  For any other reel, **ask the creator before adding it**.
 - Visuals land on or ~0.25 s before the word; a concept appears big first, then its detailed diagram; two or
   more scenes per beat when a line carries two ideas; results shown as dashboards; no visual gap over ~2 s.
 - End on the payoff or a loop back to the opening. A next-episode tease goes in the caption or a
