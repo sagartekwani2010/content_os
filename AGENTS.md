@@ -93,6 +93,6 @@ do not regenerate a posted video merely to test a connection.
   imports `content_os.carousel`. A test enforces that.
 - Flow: Codex builds → writes or updates SUBMISSION.json (bumping `version`) → **Codex runs
   `.venv/bin/python -m content_os.carousel_eval eval <id>`**, which calls Claude (Fable 5.2 judge + Opus 5.5 review)
-  through `ANTHROPIC_API_KEY` from the environment, or the local `claude` login if that is unset → Codex reads
+  through the local `claude` login (or `ANTHROPIC_API_KEY` from the environment, if set) → Codex reads
   `outputs/<id>/eval/<version>/EVAL.md`, fixes the items and resubmits. Only a PASS goes to the creator. Codex may
   run the evaluator but must never edit it or its outputs. Claude reviews Codex's work every 2 days (launchd job).

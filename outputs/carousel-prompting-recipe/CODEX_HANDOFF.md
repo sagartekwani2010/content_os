@@ -2,7 +2,8 @@
 
 You are taking over an Instagram carousel for the creator's Content OS. Read `AGENTS.md` (repo rules) and
 `.agents/skills/carousel-production/SKILL.md` (the carousel template) first. Claude built v1 and v2; the creator
-rejected both. Your job is to build v3 with **OpenAI models**. Claude evaluates it (see "Evals").
+rejected both. Your job is to build v3 yourself as an agent (signed in with ChatGPT). **Make no OpenAI API calls**:
+reuse the existing real runs in `runs/` and write the slides yourself. Claude evaluates it (see "Evals").
 
 ## Goal
 A save- and share-worthy carousel that teaches **real prompting techniques by their actual names**, each explained
@@ -19,12 +20,12 @@ Mon 23 Nov 13:00 IST; check with the creator whether that slot still holds.
    failed by becoming text cards. Aim for ≤ 25 words of body per slide and one gym doodle per technique.
 4. **Creator photo on slide 1** (a gym photo). Use `~/Movies/ContentOS/_photos/` if the creator has added photos;
    otherwise use the current `photo/cover_gym.jpg`. Blur bystanders' faces.
-5. **Lean model use** (the usage limit matters): about 10 OpenAI calls for production. The official evaluation is Claude's
-   (see below). Log every call with its cost in `ledger.jsonl`.
+5. **No API calls for production.** Reuse `runs/` (real Fable 5.2 outputs). If a technique truly needs a new run, ask
+   the creator first. The official evaluation is Claude's (see below).
 6. Real runs only: quote outputs verbatim (trimmed with "…"), never invent. Label test personas and scripted replies.
    Label nutrition and price numbers as the AI's estimates.
-7. English only. Public repo: media, photos and secrets never go into Git. **Never write the OpenAI key into a
-   file**; read it from the environment (`OPENAI_API_KEY`). Do not post, commit or push without the creator's yes.
+7. English only. Public repo: media, photos and secrets never go into Git. No keys are needed. Never write any key
+   into a file. Do not post, commit or push without the creator's yes.
 
 ## Techniques: proposed scope for v3 ("Prompting basics")
 Recommended: **6-8 of these, by name**. The rest become later carousels (reasoning techniques; workflows).
@@ -42,15 +43,13 @@ Recommended: **6-8 of these, by name**. The rest become later carousels (reasoni
 | Role / persona prompting (optional) | "You are a beginner strength coach": changes tone more than accuracy | needs a new run |
 
 The existing runs were made on Claude Fable 5.2 (see `runs/tasks.json`). You may reuse them, naming that model on the
-slide, or rerun them on an OpenAI model and name that model instead. Do not mix models on one slide.
+slide. Do not rerun them on another model unless the creator asks.
 
 ## Evals: Claude evaluates, Codex builds
 Codex **runs** the official evaluation, but Claude's code does the judging: Fable 5.2 is the blind engagement judge
-and Opus 5.5 does the visual and honesty review, through `ANTHROPIC_API_KEY` from the environment. Codex must not touch
+and Opus 5.5 does the visual and honesty review, through the creator's local `claude` login (no key needed). Codex must not touch
 that code (`content_os/carousel_eval/`; see "Carousel ownership" in
-`AGENTS.md`). OpenAI models are for Codex's production work: brainstorm, drafts, real runs and any self-checks
-before submitting. Keep those lean (about 10 calls) and log each one with its cost in `outputs/<id>/ledger.jsonl`
-(`{"at": "YYYY-MM-DDTHH:MM:SS", "role", "model", "cost_usd"}`). Claude's monitor reads that ledger.
+`AGENTS.md`). Production needs no model calls: you write the slides and reuse the runs.
 
 **When a version is ready, write `outputs/<id>/SUBMISSION.json`.** The schema is in
 `content_os/carousel_eval/contract.py` (contract `carousel_submission@1`). It must include:
@@ -79,8 +78,7 @@ EVAL.md lists, bump `version` and resubmit. Never edit `eval/`.
   `~/Movies/ContentOS/carousel-prompting-recipe/`, and builds POST/, PREVIEW.html, contact_sheet.jpg and qa.json.
   Layouts include `before_after`. The visual style comes from `content_os/visuals/` (palette, Kalam and Patrick Hand
   fonts, doodles).
-- `content_os/carousel/llm.py` calls Claude via `claude -p`. Add an OpenAI path (`content_os/factory/llm.py` already
-  has `_openai`). Keep the ledger logging.
+- `content_os/carousel/llm.py` calls Claude via `claude -p`. Don't use it for v3 (no production model calls needed).
 - `content_os/carousel/runs.py`: the before/after runner, which supports chained prompts.
 - Tests: `tests/carousel/` (10) and `tests/visuals/`. Keep them passing.
 

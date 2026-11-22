@@ -6,7 +6,7 @@ where everything is.
 ## 1. How it works
 
 ```
-Creator ──theme + points──▶ Codex (OpenAI models) builds the carousel
+Creator ──theme + points──▶ Codex (signed in with ChatGPT) builds the carousel
                               │  writes outputs/<id>/SUBMISSION.json
                               ▼
                Codex runs:  python -m content_os.carousel_eval eval <id>
@@ -25,21 +25,22 @@ Every 2 days: launchd job → Claude monitor report + Opus review → ~/Movies/C
 | Role | Builds carousels: brainstorm, real runs, slides, render, package | Evaluates and monitors; owns the template |
 | Code | `content_os/carousel/`, `tests/carousel/` | `content_os/carousel_eval/`, `tests/carousel_eval/` |
 | Files | `outputs/carousel-*/` (except `eval/`), `~/Movies/ContentOS/carousel-*/` | `outputs/carousel-*/eval/`, `.agents/skills/carousel-production/SKILL.md` |
-| Models | OpenAI (`OPENAI_API_KEY`) | Fable 5.2 + Opus 5.5 (`ANTHROPIC_API_KEY`, or the local `claude` login) |
+| Models | Codex's own ChatGPT-plan login; no OpenAI API calls by default | Fable 5.2 + Opus 5.5 through the local `claude` login (the creator's Claude Code plan) |
 
 **Isolation.** The evaluator never imports Codex's code. It reads only `SUBMISSION.json` (contract
 `carousel_submission@1`, in `content_os/carousel_eval/contract.py`) and the files that file lists. A test fails if
 this ever changes. Codex may run the evaluator but must not edit it. The monitor flags any edit to Claude-owned files
 (by hash, against `seal`).
 
-## 3. One-time setup on the creator's Mac (keys never go into files)
+## 3. One-time setup (no API keys, no credits needed)
 
-Add the keys to `~/.zshrc`, **not** to any repo file. The repo is public.
-```
-export OPENAI_API_KEY=...        # Codex production calls
-export ANTHROPIC_API_KEY=...     # evaluation calls (billed to the API account, not your Claude Code limit)
-```
-Then `source ~/.zshrc`. Without `ANTHROPIC_API_KEY`, the evaluation falls back to the local `claude` login.
+- **Codex:** sign in with **ChatGPT** (not an API key), so it runs on the ChatGPT plan. By default, Codex makes **no
+  OpenAI API calls**: it writes and judges its own drafts as an agent, and reuses existing real runs.
+- **Evaluation:** leave `ANTHROPIC_API_KEY` **unset**. `carousel_eval eval` then calls Claude through the local `claude`
+  login (the creator's Claude Code plan): 2 calls per evaluation, counted against that plan's usage limit.
+- **Optional later:** API keys need prepaid credits in each console (they are separate from ChatGPT and Claude
+  subscriptions). If the Claude Code limit becomes a problem, add Anthropic credits and `export ANTHROPIC_API_KEY=...`
+  in `~/.zshrc`; the evaluator switches to the SDK automatically. Keys never go into repo files.
 
 The every-2-days monitor is **already installed** (`scripts/install_carousel_monitor.sh`, launchd label
 `com.contentos.carousel-monitor`). It uses the local `claude` login, so no key is stored in the plist.
@@ -90,7 +91,7 @@ The every-2-days monitor is **already installed** (`scripts/install_carousel_mon
 ## 7. Not done or not verified
 
 - Codex has not yet run against this setup. The first `eval` on a real submission is the end-to-end test.
-- The API backend (`ANTHROPIC_API_KEY`) is written from the SDK docs but **not yet run with a real key**. The `claude`
+- The optional API backend (`ANTHROPIC_API_KEY`) is written from the SDK docs but **not yet run with a real key**. The `claude`
   CLI backend is what has been used so far.
 - Instagram Graph API token (posting, readouts, DMs): not set up. Posting stays manual.
 - Legibility on a real phone and playback inside Instagram: never checked on a device.
