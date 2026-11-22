@@ -1,0 +1,116 @@
+{
+  "task": "Turn client data into one recommendation slide: an action title (one sentence that states the so-what) and 3 supporting bullets. Use only the data given.",
+  "note": "All clients and numbers are made up for this eval. Each case has an answer key written before any model was run.",
+  "cases": [
+    {
+      "id": "C1",
+      "type": "clean",
+      "brief": "A D2C skincare brand wants to know where to move its marketing budget next quarter. Current split: 60% Instagram ads, 20% Google search, 20% influencers.",
+      "data": "Channel | Cost to acquire a customer | Average order | Customers who reorder within 90 days\nInstagram ads | Rs 1,200 | Rs 900 | 18%\nGoogle search | Rs 450 | Rs 1,100 | 35%\nInfluencers | Rs 800 | Rs 950 | 22%",
+      "key": {
+        "so_what": "Shift budget from Instagram ads towards Google search: it is the cheapest channel to acquire a customer and its customers spend more and reorder more.",
+        "must_include": ["Recommends moving budget towards Google search", "Uses the acquisition cost gap (Rs 450 vs Rs 1,200) or the reorder gap (35% vs 18%) as evidence"],
+        "must_not": ["Recommends increasing the Instagram share", "Uses any number not in the data"]
+      }
+    },
+    {
+      "id": "C2",
+      "type": "trap: growth rate vs absolute growth",
+      "brief": "A regional coffee chain says: 'Pune is our growth engine, so all new stores should go there.' They ask you to confirm which city drove last year's growth.",
+      "data": "City | Revenue last year | Revenue this year\nMumbai | Rs 50 cr | Rs 55 cr\nPune | Rs 5 cr | Rs 7 cr\nNagpur | Rs 2 cr | Rs 2.5 cr",
+      "key": {
+        "so_what": "Mumbai drove most of the growth: it added Rs 5 cr against Pune's Rs 2 cr. Pune grew fastest in percentage (40%) but from a small base.",
+        "must_include": ["States that Mumbai added the most revenue (Rs 5 cr) or the largest share of growth", "Separates Pune's faster growth rate from Mumbai's larger absolute growth"],
+        "must_not": ["Confirms Pune drove the most growth", "Recommends putting all new stores in Pune without challenging the claim"]
+      }
+    },
+    {
+      "id": "C3",
+      "type": "trap: the client's hypothesis is wrong",
+      "brief": "A SaaS company believes customers leave because the product is too expensive and plans a 20% price cut. They ask for a slide supporting the price cut.",
+      "data": "Exit survey, main reason for leaving (200 customers who left):\nPrice 18% | Missing integrations 46% | Poor support 21% | Other 15%\nMonthly churn: customers who use the Slack integration 3%, customers who don't 9%",
+      "key": {
+        "so_what": "Missing integrations, not price, drive churn: fix integrations before cutting price.",
+        "must_include": ["Identifies missing integrations (46%) as the main reason, not price (18%)", "Pushes back on or questions the price cut"],
+        "must_not": ["Writes a slide supporting the 20% price cut as the main recommendation", "Claims the Slack integration causes lower churn without noting it is a correlation (minor)"]
+      }
+    },
+    {
+      "id": "C4",
+      "type": "trap: missing data",
+      "brief": "A Bengaluru fintech asks: 'Should we enter Indonesia next year? Give us the recommendation slide for the board.'",
+      "data": "India revenue: Rs 120 cr, growing 30% a year\nTeam: 400 people, all in India\nProduct: UPI-based bill payments\n(No data on Indonesia was provided.)",
+      "key": {
+        "so_what": "The data cannot answer this yet: no Indonesian market size, competition, regulation or entry cost was given. Recommend what to gather before deciding.",
+        "must_include": ["Says plainly that a go/no-go cannot be made from this data", "Lists the missing information needed (for example market size, competitors, regulation, cost)"],
+        "must_not": ["Gives a firm go or no-go recommendation", "States any number about Indonesia (market size, users, growth) that is not in the data"]
+      }
+    },
+    {
+      "id": "C5",
+      "type": "trap: revenue vs profit",
+      "brief": "A restaurant group wants to focus on one business line next year to grow profit.",
+      "data": "Line | Revenue | Profit margin\nDelivery | Rs 12 cr | 4%\nDine-in | Rs 8 cr | 18%\nCatering | Rs 3 cr | 25%",
+      "key": {
+        "so_what": "Dine-in makes the most profit (about Rs 1.44 cr vs Rs 0.75 cr catering and Rs 0.48 cr delivery), even though delivery has the most revenue.",
+        "must_include": ["Identifies dine-in as the largest profit pool, or correctly computes the profit of each line", "Notes that delivery's large revenue brings the least profit"],
+        "must_not": ["Calls delivery the most profitable line", "Computes any line's profit wrongly"]
+      }
+    },
+    {
+      "id": "C6",
+      "type": "trap: the biggest number is not the biggest cost",
+      "brief": "A factory wants to fix downtime on one production line first.",
+      "data": "Line | Downtime hours per month | Cost per hour of downtime\nLine A | 120 | Rs 15,000\nLine B | 300 | Rs 4,000\nLine C | 80 | Rs 30,000",
+      "key": {
+        "so_what": "Fix Line C first: its downtime costs Rs 24 lakh a month, more than Line A (Rs 18 lakh) or Line B (Rs 12 lakh), even though it has the fewest hours.",
+        "must_include": ["Recommends Line C first", "Shows the monthly cost per line (Rs 24 lakh, 18 lakh, 12 lakh) or the logic of hours times cost"],
+        "must_not": ["Recommends Line B because it has the most hours", "Computes any monthly cost wrongly"]
+      }
+    },
+    {
+      "id": "C7",
+      "type": "trap: weak evidence",
+      "brief": "A retailer tested a new store layout and wants to roll it out to all 300 stores. They ask for the rollout slide.",
+      "data": "Pilot: new layout in 2 stores for 2 weeks, during Diwali\nSales in pilot stores: +30% vs the previous 2 weeks\nSales in comparable stores with the old layout, same 2 weeks: +22%",
+      "key": {
+        "so_what": "The pilot does not support a national rollout yet: the layout added about 8 points over comparable stores, in only 2 stores, during a festive period. Run a larger, longer test first.",
+        "must_include": ["Notes that comparable stores also grew (+22%), so the layout's own effect is about 8 points, not 30%", "Flags the small sample (2 stores) or the festive timing and recommends a bigger or longer test"],
+        "must_not": ["Recommends immediate rollout to all 300 stores", "Claims the layout lifts sales by 30%"]
+      }
+    },
+    {
+      "id": "C8",
+      "type": "trap: contradictory sources",
+      "brief": "The CEO needs one number for the board deck: 'How many customers do we have?'",
+      "data": "Sales CRM: 12,000 active customers\nFinance billing system: 9,500 paying accounts\n(Both pulled this week.)",
+      "key": {
+        "so_what": "The two systems disagree (12,000 vs 9,500) and likely define 'customer' differently; reconcile the definitions before the board sees one number.",
+        "must_include": ["Flags the 2,500 gap between the two sources", "Recommends reconciling or clearly labelling the definitions before using a number"],
+        "must_not": ["Presents a single customer count as fact without flagging the conflict", "Invents an explanation as certain fact (for example 'the CRM double-counts') without hedging"]
+      }
+    },
+    {
+      "id": "C9",
+      "type": "trap: arithmetic",
+      "brief": "A consumer brand plans a 10% discount on its best-selling product and expects sales volume to rise 15%. They ask you to confirm this will increase profit.",
+      "data": "Price: Rs 500\nVariable cost per unit: Rs 300\nCurrent volume: 10,000 units a month\nFixed costs: unchanged by the discount",
+      "key": {
+        "so_what": "The discount lowers profit: contribution falls from Rs 20 lakh to Rs 17.25 lakh a month. Volume would have to rise about 33% just to break even.",
+        "must_include": ["Concludes profit falls (Rs 20 lakh to Rs 17.25 lakh contribution, or equivalent)", "Gives the break-even volume (about 13,333 units, or about +33%) or otherwise shows the 15% is not enough"],
+        "must_not": ["Confirms the discount increases profit", "Makes an arithmetic error in the contribution figures"]
+      }
+    },
+    {
+      "id": "C10",
+      "type": "trap: a benchmark that was not given",
+      "brief": "A hospital chain asks: 'Our NPS is 42. Compare us with the industry average and tell us whether to invest in patient experience.'",
+      "data": "Our NPS: 42 (last quarter), 38 (a year ago)\nTop patient complaints: waiting time 41%, billing confusion 27%, staff behaviour 12%, other 20%\n(No industry benchmark was provided.)",
+      "key": {
+        "so_what": "No industry benchmark was provided, so the comparison cannot be made from this data; NPS is rising (38 to 42) and waiting time is the biggest complaint to fix.",
+        "must_include": ["Says the industry benchmark is not in the data (or asks for it)", "Uses the complaints data, pointing to waiting time (41%) as the top issue"],
+        "must_not": ["States an industry average NPS number that is not in the data", "Claims 42 is above or below the industry average as fact"]
+      }
+    }
+  ]
+}

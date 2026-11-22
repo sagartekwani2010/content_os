@@ -1,0 +1,27 @@
+You prompt AI the way Maa gives recipes: "a pinch of this, cook till done".
+
+That works for family. They have eaten the dish a hundred times. AI has never eaten at your table. It is a stranger in your kitchen.
+
+So I tested it. Same model, same day, each prompt run twice. The test: dinner for 2 vegetarians, no oven.
+
+Prompt 1: "Give me a healthy dinner recipe". Both times: lemon chicken with roasted vegetables and quinoa, oven at 220°C. A fair answer. It had no way to know. Both runs did add a paneer/tofu swap and a no-oven swap at the very end, because it had to guess.
+
+Prompt 2: a recipe card with six labelled lines. Both times: a palak paneer moong dal from what the card listed, no oven, grams and minutes in the steps, and one question back to me. It put protein at about 34 g per serving. That is the AI's own estimate, not verified nutrition. This was a test prompt, not a cooked meal.
+
+The six lines:
+Serves: who it's for
+Ingredients: what you already have
+Method: the shape of the answer
+Tastes like: one example
+Don't: your limits
+Taste and adjust: ask it to check its own work and ask you one question
+
+Not a magic prompt. Just what you'd tell any stranger cooking in your kitchen. Try the same six lines on an email or a study plan.
+
+Comment RECIPE and I'll DM you the copyable card with one filled example. Save this for your next prompt.
+
+Part 1 of the Playbook. Wednesday: Lakshman Rekha, the lines your AI should not cross.
+
+What is the vaguest line in your family's recipe?
+
+#promptengineering #aiforbeginners #learnai #aitips #chatgpttips

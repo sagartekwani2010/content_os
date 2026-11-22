@@ -1,0 +1,271 @@
+{
+ "angle": "Day 1 with a new trainer. The hook is provable: a lazy trainer gives everyone 3 sets of 10, and my lazy AI ask returned the same gym split twice. Every technique slide puts the lazy ask next to the sharp ask from the same run, with run labels and disclaimers in small card tags so the body carries the payoff. Strongest, most visual changes come first, Examples sits late, and the honest self-check closes the set. Casting is fixed: you brief, the new trainer delivers.",
+ "cover_hooks": [
+  "Your AI trainer met you 10 seconds ago.",
+  "AI gave me the same gym split twice.",
+  "Stop asking AI to 'make me fit'."
+ ],
+ "keyword": "TRAINER",
+ "slides": [
+  {
+   "n": 1,
+   "kind": "cover",
+   "headline": "Your AI trainer met you 10 seconds ago.",
+   "body": "A lazy trainer gives everyone 3 sets of 10. I asked AI for a plan twice: same gym split. 8 tested fixes inside.",
+   "technique": null,
+   "gym": null,
+   "copy": null,
+   "before": null,
+   "after": null,
+   "visual": "Creator's real gym photo as a tilted polaroid. Hand-lettered headline beside it with 'AI' in the brightest colour. Small doodle: three different stick figures holding the same whiteboard reading '3 x 10', labelled 'the lazy trainer'. Under it, two identical hand-drawn week strips 'Push / Pull / Legs' labelled 'my lazy AI ask · run 1' and 'run 2'. Kicker: 'The Playbook, Part 1'. The '3 sets of 10' line is about the trainer only. The AI claim on this slide is the real finding shown on slide 6."
+  },
+  {
+   "n": 2,
+   "kind": "still",
+   "headline": "He only knows what you tell him.",
+   "body": "AI is a brilliant new trainer. He knows every exercise. He knows nothing about you. Lazy ask: his generic plan. Sharp ask: your plan.",
+   "technique": null,
+   "gym": null,
+   "copy": null,
+   "before": null,
+   "after": null,
+   "visual": "Hand-drawn two-panel sketch. Left: you say 'make me fit' and walk off, and the trainer holds a blank clipboard. Right: you talk, and the clipboard fills up. Below, a legend that teaches the layout of every later slide: a grey card marked 'lazy ask', a bright card marked 'sharp ask', a chip marked '+ one line', and a small tag under a card marked 'run 1 or run 2'. Footnote strip: 'Tested 22 Nov 2026 on Claude Fable 5.2. Each ask ran twice. People in the asks are test personas, not me. All numbers are the AI's estimates.'"
+  },
+  {
+   "n": 3,
+   "kind": "video",
+   "headline": "Tell him who you are.",
+   "body": "One added line. Lazy ask: a diet for anyone. Sharp ask: he plans around the canteen lunch and the 9:30 dinner.",
+   "technique": "Context",
+   "gym": "On day one you'd tell him your age, your desk job, what you eat and when.",
+   "copy": "This is for me: [age], [job], [what I eat], [my timings].",
+   "before": {
+    "prompt": "Suggest a diet to lose weight. Under 100 words.",
+    "output": "Calorie deficit: eat roughly 300–500 kcal below maintenance. | Protein first: 1.6–2 g per kg of body weight (eggs, chicken, fish, paneer…",
+    "run": "run 1",
+    "tag": "lazy ask · run 1"
+   },
+   "after": {
+    "added": "This is for me: 34, bank job, sitting 9 hours, vegetarian, lunch from the office canteen, dinner at 9:30 pm with family.",
+    "output": "Canteen lunch: Half plate sabzi/salad, one bowl dal or curd… | 5 pm snack: Roasted chana, fruit, or nuts (a handful), so you aren't starving at 9:30. | Dinner: Smallest meal.",
+    "run": "run 1",
+    "tag": "sharp ask · run 1 · test persona, not me"
+   },
+   "visual": "Video. Frame 0: grey LAZY ASK card with the before output, 'chicken, fish' underlined. The added line types in under the prompt inside a '+ one line' chip, then the bright SHARP ASK card writes on. Hand-drawn circles land on 'Canteen lunch' and '9:30'. Run tags sit under both cards."
+  },
+  {
+   "n": 4,
+   "kind": "video",
+   "headline": "Tell him how you want it.",
+   "body": "Lazy ask: over 300 words to read between sets. Sharp ask: 5 bullets, in the order you lift.",
+   "technique": "Format",
+   "gym": "You'd say: don't lecture me, give me 5 cues I can remember at the bar.",
+   "copy": "Answer in 5 bullets, in the order I do them, max 8 words each.",
+   "before": {
+    "prompt": "How do I deadlift with correct form?",
+    "output": "Here is the conventional barbell deadlift, step by step. | Setup… The lift… Lowering… | Common mistakes… Getting started…",
+    "run": "run 1",
+    "tag": "lazy ask · run 1 · over 300 words"
+   },
+   "after": {
+    "added": "Answer in 5 bullets, in the order I do them, max 8 words each.",
+    "output": "Stand mid-foot under bar, feet hip-width apart. | … Push floor away, keeping bar against legs. | Lock hips out, then lower with control.",
+    "run": "run 1",
+    "tag": "sharp ask · run 1 · 3 of his 5 bullets shown"
+   },
+   "visual": "Video. Frame 0: the full before answer as a tiny wall of text running off the bottom of the grey card, stamped 'over 300 words'. The wall shrinks to a thin strip. On the bright card, five numbered dots appear down the edge. The three quoted cues write on at 1, 4 and 5, with '…' at 2 and 3. A stick figure lifts beside them, one pose per cue. Run tags sit under both cards."
+  },
+  {
+   "n": 5,
+   "kind": "still",
+   "headline": "Tell him your limits.",
+   "body": "Lazy ask: a chicken and paneer bowl. Sharp ask: one-pot soya khichdi, one burner, no eggs, no powder.",
+   "technique": "Limits",
+   "gym": "On day one you'd say: no supplements, small budget, one burner at home. Work inside that.",
+   "copy": "Must: [your limits]. Must not: [what is off the table].",
+   "before": {
+    "prompt": "Suggest a high-protein dinner. Under 80 words.",
+    "output": "Chicken and paneer bowl (~60 g protein) | 150 g grilled chicken breast… | 100 g paneer, pan-seared",
+    "run": "run 1",
+    "tag": "lazy ask · run 1 · AI's estimate"
+   },
+   "after": {
+    "added": "Must: vegetarian, no eggs, under Rs 100, cooked on one gas burner. Must not: protein powder.",
+    "output": "Soya chunk and moong dal khichdi (one pot, ~Rs 60-70) | 50 g soya chunks (~26 g protein)… | Roughly 40 g protein.",
+    "run": "run 1",
+    "tag": "sharp ask · run 1 · test limits, not my diet · price and protein: AI's estimate"
+   },
+   "visual": "Still. Two cards side by side. Left, grey: doodle of a chicken bowl. Right, bright: one pressure cooker on one burner. Five small limit chips sit above the right card (vegetarian, no eggs, under Rs 100, one burner, no powder), each with a hand-drawn tick. Run tags sit under both cards."
+  },
+  {
+   "n": 6,
+   "kind": "video",
+   "headline": "Let him ask you first.",
+   "body": "Lazy ask: a full-gym plan with squats and lunges. Sharp ask: he asks 3 questions, then plans around a sore knee.",
+   "technique": "Questions first",
+   "gym": "A good trainer asks about your goal, your days and your injuries before he writes anything.",
+   "copy": "Before you start, ask me up to 3 questions.",
+   "before": {
+    "prompt": "Make me a weekly workout plan. Under 100 words.",
+    "output": "Mon – Push: bench press, overhead press… (3×8–12) | Tue – Pull: deadlifts, pull-ups, barbell rows… | Thu – Legs: squats, Romanian deadlifts, lunges…",
+    "run": "run 1",
+    "tag": "lazy ask · run 1 · run 2 gave the same push, pull, legs split"
+   },
+   "after": {
+    "added": "Before you start, ask me up to 3 questions.",
+    "output": "AI asks: \"…are there any injuries or exercises to avoid?\" | Scripted test reply: \"…two 10 kg dumbbells, and my left knee hurts on deep squats.\" | AI: \"Box squat to a chair (pain-free depth only)… Knee: skip deep squats and lunges.\"",
+    "run": "run 1",
+    "tag": "sharp ask · run 1 · scripted test reply, not my data"
+   },
+   "visual": "Video. Frame 0: grey card with the before plan. This is the ask from the cover, so 'Push', 'Pull' and 'Legs' are underlined and a small note reads 'same split in run 2'. Then three chat bubbles write on: the trainer's question, the reply bubble stamped 'scripted test reply', and the new plan line. Doodle: a chair behind a squatting stick figure. Run tags sit under both cards."
+  },
+  {
+   "n": 7,
+   "kind": "video",
+   "headline": "Tell him not to guess.",
+   "body": "Lazy ask: he assumed how active you are and gave a number. Sharp ask: he gave the protein and asked for the rest.",
+   "technique": "No guessing",
+   "gym": "You'd say: if you don't know my height or age, ask. Don't make it up.",
+   "copy": "Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming.",
+   "before": {
+    "prompt": "I'm 78 kg and want to lose fat. Tell me my daily calories and protein.",
+    "output": "Start at about 2,000 kcal and 140 to 155 g of protein a day. | This is an estimate from your weight alone, assuming you are moderately active…",
+    "run": "run 2",
+    "tag": "lazy ask · run 2 · test persona · AI's estimate"
+   },
+   "after": {
+    "added": "Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming.",
+    "output": "Protein: about 125 to 170 g per day. | Calories: [ASK ME]. I can't give a number from weight alone. | Maintenance: [ASK ME]…",
+    "run": "run 2",
+    "tag": "sharp ask · run 2 · test persona · AI's estimate"
+   },
+   "visual": "Video. Frame 0: grey card with 'assuming you are moderately active' under a wavy hand-drawn line. The bright card writes on and each [ASK ME] pops in as a bright hand-drawn stamp. Doodle: the trainer holding a tape measure and a question mark. Run tags sit under both cards."
+  },
+  {
+   "n": 8,
+   "kind": "still",
+   "headline": "Show him what you like.",
+   "body": "The smallest change of the 8. The lazy ask already had good names. The sharp ask copied the examples' tone and time stamp.",
+   "technique": "Examples",
+   "gym": "You'd show him a video and say: I want my squat to look like this.",
+   "copy": "I like ones like \"[example 1]\" and \"[example 2]\".",
+   "before": {
+    "prompt": "Suggest 5 names for our 6 am gym WhatsApp group.",
+    "output": "Dawn Patrol… | Snooze Is Not a Rep… | Rise and Grind Crew…",
+    "run": "run 1",
+    "tag": "lazy ask · run 1 · 3 of 5 names shown"
+   },
+   "after": {
+    "added": "We like names like \"Sore But Showing Up\" and \"Alarm Beaters 5:30\".",
+    "output": "Snooze Is Not a Rep… | Tired But Present 6:00… | Half Asleep, Full Sets…",
+    "run": "run 1",
+    "tag": "sharp ask · run 1 · 3 of 5 names shown · test group, made up for the test"
+   },
+   "visual": "Still. Two hand-drawn group name lists, no real names or photos. Arrow from the example 'Alarm Beaters 5:30' to 'Tired But Present 6:00' marked 'same time stamp'. Arrow from 'Sore But Showing Up' to 'Half Asleep, Full Sets' marked 'same tone'. 'Snooze Is Not a Rep' appears in both lists and stays unhighlighted. Corner tag: 'honest: a moderate difference'. Run tags sit under both cards."
+  },
+  {
+   "n": 9,
+   "kind": "video",
+   "headline": "Plan two weeks. Then check in.",
+   "body": "Lazy ask: all 12 weeks, fixed on day one. A 12-week table can't hear about a sore shin. The check-in changed week 3.",
+   "technique": "Step by step",
+   "gym": "You'd say: plan two weeks, see how my body takes it, then plan the next two.",
+   "copy": "Give me the first part only. Then stop and ask me how it went.",
+   "before": {
+    "prompt": "Make me a 12-week plan to go from no running to a 5 km run. Under 150 words.",
+    "output": "| 1 | Run 1 min, walk 2 min × 8 |… | 3 | Run 3 min, walk 2 min × 5 |… | 12 | Two 20-min runs, then your 5 km |",
+    "run": "run 1",
+    "tag": "lazy ask · run 1"
+   },
+   "after": {
+    "added": "Swapped \"Under 150 words.\" for: \"Give me weeks 1 and 2 only, under 80 words. Then stop and ask me how it went.\"",
+    "output": "AI: \"How did it go? Tell me how the jogs felt and whether you had any aches…\" | Scripted test reply: \"…week 1 was fine, but my left shin hurt after the second run of week 2.\" | AI: \"Before week 3: rest until the shin is pain-free… Week 3: repeat week 1…\"",
+    "run": "run 1",
+    "tag": "sharp ask · run 1 · scripted test reply, not my data · word limit also changed"
+   },
+   "visual": "Video. Frame 0: the 12-row table on the grey card with week 3 highlighted, 'Run 3 min'. In the prompt line, 'Under 150 words.' gets a hand-drawn strike and the new text types in exactly as written, so the viewer sees both changes. The table fades to two rows, the check-in bubbles write on, and the new week 3 line, 'repeat week 1', lands with a hand-drawn circle. Reply bubble stamped 'scripted test reply'. Run tags sit under both cards."
+  },
+  {
+   "n": 10,
+   "kind": "still",
+   "headline": "Make him show the maths.",
+   "body": "Lazy ask: header says 105 g protein. Add his meals yourself: 109 g. Sharp ask: he adds every item, and the total matches.",
+   "technique": "Show the maths",
+   "gym": "You'd want the gym bill item by item: membership, trainer, locker. Not just one total.",
+   "copy": "Show the number next to each item, add them up, and tell me honestly if the total misses my target.",
+   "before": {
+    "prompt": "Give me one day of vegetarian eating: 1,800 calories and 100 g protein. Under 120 words.",
+    "output": "One day, about 1,800 kcal and 105 g protein (egg-free) | Breakfast: … (about 540 kcal, 36 g protein)… Lunch: … (about 510 kcal, 31 g). | Snack: … (about 150 kcal, 8 g)… Dinner: … (about 575 kcal, 34 g).",
+    "run": "run 2",
+    "tag": "lazy ask · run 2 · test targets, not my diet · AI's estimate"
+   },
+   "after": {
+    "added": "Show calories and protein next to each item, add them up, and tell me honestly if the total misses my targets.",
+    "output": "Paneer, 100 g: 265 kcal, 18 g… | Total: 1,803 kcal, 114 g protein | …calories are 3 over, and protein is 14 g above the 100 g target.",
+    "run": "run 2",
+    "tag": "sharp ask · run 2 · test targets, not my diet · AI's estimate"
+   },
+   "visual": "Still. Left grey card with a hand-drawn tally in the margin, labelled 'you had to add it up yourself': '36 + 31 + 8 + 34 = 109 g. Header said 105 g.' A smaller line under it: '540 + 510 + 150 + 575 = 1,775 kcal. Header said about 1,800.' The calorie line carries no cross, because 1,775 is close to 1,800. Right bright card with a tick: 'He added it up: 1,803 kcal, 114 g. We checked his items. It matches.' Footer: 'Easier to check. Not more correct.' Run tags sit under both cards."
+  },
+  {
+   "n": 11,
+   "kind": "still",
+   "headline": "Day 1 brief: 8 lines to paste.",
+   "body": "Save this. Paste the lines you need under your next ask.",
+   "technique": null,
+   "gym": null,
+   "copy": "1. Who you are: This is for me: [age], [job], [what I eat], [my timings].\n2. How you want it: Answer in 5 bullets, in the order I do them, max 8 words each.\n3. Your limits: Must: [your limits]. Must not: [what is off the table].\n4. Questions first: Before you start, ask me up to 3 questions.\n5. No guessing: Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming.\n6. What you like: I like ones like \"[example 1]\" and \"[example 2]\".\n7. Step by step: Give me the first part only. Then stop and ask me how it went.\n8. Show the maths: Show the number next to each item, add them up, and tell me honestly if the total misses my target.",
+   "before": null,
+   "after": null,
+   "visual": "Hand-drawn clipboard titled 'Brief your trainer'. Eight numbered rows exactly as written in this slide's copy field: the short label on the left in colour, the paste-ready line on the right in plain handwriting. A bright tick sits beside each row. Save icon doodle in the top corner. Small footer: 'Tested 22 Nov 2026, each ask twice.'"
+  },
+  {
+   "n": 12,
+   "kind": "cta",
+   "headline": "Comment TRAINER.",
+   "body": "I'll DM the full sheet plus one combined template. Send this to the friend who asks AI for diet plans. Follow: Wednesday, guardrails.",
+   "technique": null,
+   "gym": null,
+   "copy": null,
+   "before": null,
+   "after": null,
+   "visual": "Stick-figure trainer holding the clipboard out to the viewer. Large hand-lettered 'TRAINER' in a comment bubble. A paper-plane doodle beside the send line. Small roadmap strip: 'The Playbook: briefing (today) → guardrails (Wed 25 Nov) → evals, how to test your AI (next)'."
+  }
+ ],
+ "cheat_sheet": [
+  {
+   "technique": "Context: tell him who you are",
+   "copy": "This is for me: [age], [job], [what I eat], [my timings]."
+  },
+  {
+   "technique": "Format: tell him how you want it",
+   "copy": "Answer in 5 bullets, in the order I do them, max 8 words each."
+  },
+  {
+   "technique": "Limits: tell him your limits",
+   "copy": "Must: [your limits]. Must not: [what is off the table]."
+  },
+  {
+   "technique": "Questions first: let him ask you",
+   "copy": "Before you start, ask me up to 3 questions."
+  },
+  {
+   "technique": "No guessing: tell him not to guess",
+   "copy": "Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming."
+  },
+  {
+   "technique": "Examples: show him what you like",
+   "copy": "I like ones like \"[example 1]\" and \"[example 2]\"."
+  },
+  {
+   "technique": "Step by step: plan a part, then check in",
+   "copy": "Give me the first part only. Then stop and ask me how it went."
+  },
+  {
+   "technique": "Show the maths: make it checkable",
+   "copy": "Show the number next to each item, add them up, and tell me honestly if the total misses my target."
+  }
+ ],
+ "caption": "A lazy trainer gives everyone 3 sets of 10. I asked AI for a workout plan twice and got the same gym split both times.\n\nThe AI is not the problem. Think of it as a brilliant new trainer who met you 10 seconds ago. He knows every exercise. He knows nothing about you. He only knows what you tell him.\n\nSo I tested 8 lines you can add to any ask. Each lazy ask and each sharp ask ran twice on Claude Fable 5.2 (22 Nov 2026). Here is what each line changed:\n\n1. Tell him who you are: the diet planned around the canteen lunch and the 9:30 dinner.\n2. Tell him how you want it: over 300 words became 5 bullets.\n3. Tell him your limits: a chicken and paneer bowl became a one-pot soya khichdi.\n4. Let him ask you first: he asked 3 questions, then planned around a sore knee.\n5. Tell him not to guess: he stopped assuming and wrote [ASK ME] where he needed more.\n6. Show him what you like: the names copied the tone and the time stamp. The smallest change of the 8.\n7. Plan two weeks, then check in: a sore shin changed week 3.\n8. Make him show the maths: every item has a number, and the total matches.\n\nHonest notes:\n- The people and limits in the asks are test personas, not me. The replies inside the two-step tests were scripted for the test.\n- Every calorie, protein and price figure is the AI's estimate, not verified.\n- In 7 of the 8 tests the only change was the added line. In the running test the word limit changed too: \"Under 150 words\" became \"weeks 1 and 2 only, under 80 words\".\n- \"Show the maths\" makes an answer easy to check. It does not make the food values more correct.\n\nComment TRAINER and I'll DM the full cheat sheet plus one combined template.\n\nSend this to the friend who asks AI for a diet plan.\n\nThis is part 1 of the Playbook. Wednesday 25 Nov: guardrails, the lines your AI must not cross. After that: evals, how to test if it is any good.\n\nSave this for your next ask.\n\n#promptengineering #aitips #gymlife #fitnessindia #claude",
+ "pinned_comment": "Comment TRAINER and I'll DM you the 8 lines plus one combined template you can paste. Which line are you adding to your next ask?"
+}

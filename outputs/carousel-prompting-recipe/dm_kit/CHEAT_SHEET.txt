@@ -1,0 +1,20 @@
+DAY 1 BRIEF FOR YOUR AI TRAINER: 8 LINES (paste the ones you need under your ask)
+
+1. Who you are:    This is for me: [age], [job], [what I eat], [my timings].
+2. How you want it: Answer in 5 bullets, in the order I do them, max 8 words each.
+3. Your limits:    Must: [your limits]. Must not: [what is off the table].
+4. Ask first:      Before you start, ask me up to 3 questions.
+5. No guessing:    Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming.
+6. Examples:       I like ones like "[example 1]" and "[example 2]".
+7. Check-in:       Give me the first part only. Then stop and ask me how it went.
+8. Show the maths: Show the number next to each item, add them up, and tell me honestly if the total misses my target.
+
+What each line changed in my test (Claude Fable 5.2, 22 Nov 2026, each ask run twice, test personas, not me):
+1. A generic diet became one built around a canteen lunch and a 9:30 pm dinner.
+2. A deadlift answer of over 300 words became 5 short cues.
+3. A chicken and paneer bowl became a one-pot soya and moong dal khichdi (price/protein: the AI's estimates).
+4. A full-gym plan became 3 questions first, then a dumbbell plan around a sore knee (scripted test reply).
+5. "Start at about 2,000 kcal" (a guess) became "[ASK ME]" for height, age and activity.
+6. Group names copied the tone of the examples (the smallest change of the 8).
+7. A fixed 12-week table became 2 weeks, a check-in, and a changed week 3 after a sore shin (scripted test reply).
+8. Per-item numbers whose totals add up; the lazy answer's stated total did not match its own meals.

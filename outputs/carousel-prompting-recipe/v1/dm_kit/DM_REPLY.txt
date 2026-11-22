@@ -1,0 +1,25 @@
+Hey! Thanks for commenting RECIPE. Here's the recipe card I promised 👇
+
+Serves: who it is for
+Ingredients: what you already have
+Method: the shape of the answer you want back
+Tastes like: one example to aim at
+Don't: your limits
+Taste and adjust: ask it to check its own work, then ask you one question
+
+How to use it:
+1. Copy the six lines into any AI chat.
+2. Fill each one in a few words (the filled example is below).
+3. If the answer is still generic, see which line you left thin.
+
+Filled example (my exact test prompt):
+Serves: 2 people, vegetarian, about 30 g protein each.
+Ingredients (what is in my kitchen): 200 g paneer, moong dal, onion, tomato, spinach, curd, basic Indian spices, oil. No oven.
+Method (what I want back): numbered steps with grams for every ingredient and minutes for every step, then the protein per serving.
+Tastes like: dal tadka, but lighter.
+Don't: no deep frying, no cream, nothing that takes more than 30 minutes.
+Taste and adjust: check your protein maths against the 30 g goal and say if it falls short. End with one question I could answer to make it better.
+
+One honest note: any protein or calorie number the AI gives you is its estimate, not checked nutrition.
+
+Part 2 drops Wednesday: guardrails, through the Lakshman Rekha. Follow so you don't miss it 🙌

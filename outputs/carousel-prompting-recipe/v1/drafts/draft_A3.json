@@ -1,0 +1,77 @@
+{
+ "angle": "A3 = A2 + round-2 blind-judge fixes applied by the orchestrating agent (swap setup before 'stranger', plain slide-2 headline, 'Run 2 even offered', full test card on slide 4, Don't evidence on slide 8, filled example on the recap, cover payoff)",
+ "slides": [
+  {
+   "n": 1,
+   "kind": "cover",
+   "headline": "You prompt AI like Maa writes recipes",
+   "body": "“A pinch of this, cook till done.” Works for family. AI isn't family. Swipe for the 6-line fix →",
+   "visual": "Creator photo in a taped hand-drawn polaroid. Beside it an old recipe-diary page: “a pinch of this, cook till done”, yellow highlighter on “a pinch of this”. Arrow from the page to a chat box with a chicken-leg and a question mark."
+  },
+  {
+   "n": 2,
+   "kind": "video",
+   "headline": "The vague prompt got chicken and an oven",
+   "body": "My test: dinner for 2 vegetarians, no oven. The prompt never said so. Both runs: chicken, quinoa, oven at 220°C.",
+   "visual": "Frame 0: headline + sticky note “Give me a healthy dinner recipe”. 6 s calm draw-on: arrow to a typewriter output card (“Lemon-Garlic Chicken with Roasted Vegetables and Quinoa” / “Heat the oven to 220°C (425°F).”, tag “real run 1, trimmed”), then chicken and oven doodles with red circles."
+  },
+  {
+   "n": 3,
+   "kind": "still",
+   "headline": "AI is a stranger in your kitchen",
+   "body": "Family already knows the dish. AI has to guess. Run 2 even offered:",
+   "visual": "A doorway with a small robot holding an empty plate and a question mark. Speech-bubble quote card: “If you tell me … what's in your fridge, I can tailor it.” tag “real run 2, trimmed”."
+  },
+  {
+   "n": 4,
+   "kind": "video",
+   "headline": "So I wrote it a recipe card",
+   "body": "Same model, same test. Six labelled lines. Each prompt run twice.",
+   "visual": "Frame 0: headline + empty ruled index card. 7 s: six rows write on, label then trimmed test-prompt line (Serves / Ingredients / Method / Tastes like / Don't / Taste and adjust). Tag “test prompt, trimmed”."
+  },
+  {
+   "n": 5,
+   "kind": "still",
+   "headline": "Same AI. A dinner that fits the brief.",
+   "body": "No oven. Grams and minutes in the steps. One question back. The protein number is the AI's estimate.",
+   "visual": "Typewriter output card: “Palak paneer moong dal (serves 2, about 25 minutes)” / “Paneer: 200 g, in 1.5 cm cubes” / “That is about 34 g per serving”, tag “real run 1, trimmed”; sticky “AI's estimate, not verified”; bowl of dal with paneer cubes; margin note “run 2: paneer-palak moong dal tadka, about 27 minutes”."
+  },
+  {
+   "n": 6,
+   "kind": "still",
+   "headline": "Tell the stranger who's eating",
+   "body": "Serves = who it's for. Ingredients = what you already have. Without them, it guessed chicken and an oven.",
+   "visual": "Two sticky notes: “Serves” with two stick figures at a table and the line “2 people, vegetarian, about 30 g protein each”; “Ingredients” with a shelf (paneer, dal jar, spinach) and a crossed-out oven, line “… No oven.”"
+  },
+  {
+   "n": 7,
+   "kind": "video",
+   "headline": "Show it what “done” looks like",
+   "body": "Method = the shape of the answer. Tastes like = one example to aim at.",
+   "visual": "Frame 0: headline. 6 s: numbered list 1-2-3 with “g” and “min” tags draws on (Method), a bowl with a tadka ladle labelled “dal tadka, but lighter” (Tastes like), then a quote card “Start the dal (18 minutes). Rinse the 100 g moong dal …” tag “real run 1, trimmed”."
+  },
+  {
+   "n": 8,
+   "kind": "still",
+   "headline": "Maa tastes before serving. So should AI.",
+   "body": "Don't = your limits. Taste and adjust = check your own work, then ask me one question.",
+   "visual": "Left: “Don't” sticky with crossed-out kadhai (deep frying), cream and a clock past 30, plus “asked: under 30 min → got: about 25 minutes”. Right: tasting spoon over a pot; speech bubble “Will you eat this on its own, or with rice or roti?” tag “real run 1”."
+  },
+  {
+   "n": 9,
+   "kind": "still",
+   "headline": "Save this: the six-line recipe card",
+   "body": "Serves: who it's for. Ingredients: what you have. Method: answer shape. Tastes like: one example. Don't: limits. Taste and adjust: self-check, one question.",
+   "visual": "One big ruled recipe card with a punched hole; six rows, label highlighted, meaning beside it, tiny icon; one filled example under Serves in grey: “e.g. 2 people, vegetarian, ~30 g protein each”. Bookmark doodle “save for your next prompt”."
+  },
+  {
+   "n": 10,
+   "kind": "cta",
+   "headline": "Comment RECIPE for the template",
+   "body": "I'll DM you the copyable card with one filled example. Follow the Playbook: Wednesday, Lakshman Rekha = AI guardrails.",
+   "visual": "Comment bubble “RECIPE” highlighted, arrow to an envelope with a card peeking out. Path of three sticky notes: Prompting (today, ticked) → Guardrails (Wed: Lakshman Rekha) → Evals. 5 s video: the arrow and the path draw on."
+  }
+ ],
+ "caption": "You prompt AI the way Maa writes recipes: “a pinch of this, cook till done”.\n\nThat works for family, because they have eaten the dish a hundred times. AI has never eaten at your table. It is a stranger in your kitchen.\n\nSo I tested it. Same model, same day, each prompt run twice. The test scenario: dinner for 2 vegetarians, no oven. Prompt 1 was “Give me a healthy dinner recipe”. Both times it gave lemon chicken with roasted vegetables and quinoa, oven at 220°C. That is a fair answer. It had no way to know the dinner was vegetarian, or that the test kitchen had no oven. One run even ended: “If you tell me your calorie or protein target, or what's in your fridge, I can tailor it.”\n\nPrompt 2 was a recipe card with six labelled lines. Both times it gave a palak paneer moong dal built from what the card listed, with grams and minutes in the steps, in about 25 to 27 minutes. It put the protein at about 34 g per serving. That number is the AI's own estimate, not verified nutrition. Each run ended with one question to make the dish better. This was a test prompt, not a cooked meal.\n\nThe six lines:\nServes: who it is for\nIngredients: what you have\nMethod: the shape of the answer you want\nTastes like: one example\nDon't: your limits\nTaste and adjust: ask it to check its own work and ask you one question\n\nThis is not a magic prompt. It is what you would tell any stranger cooking in your kitchen. Try the same six lines on an email or a study plan.\n\nComment RECIPE and I will DM you the copyable card with one filled example. Save this for your next prompt. This is part 1 of the Playbook. Follow for Wednesday: Lakshman Rekha, the lines your AI should not cross.\n\nWhat is the vaguest line in your family's recipe?\n\n#promptengineering #promptingtips #aiforbeginners #learnai #aitips",
+ "pinned_comment": "Comment RECIPE and I'll DM you the six-line recipe card with one filled example. And tell me: what is the vaguest instruction in your family's recipe?"
+}

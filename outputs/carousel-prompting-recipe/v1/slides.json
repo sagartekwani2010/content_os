@@ -1,0 +1,761 @@
+{
+ "spec": "content_os.carousel/spec@1",
+ "id": "carousel-prompting-recipe",
+ "title": "Prompt like a family recipe",
+ "post_at": "Mon 23 Nov 2026, 13:00 IST",
+ "fps": 30,
+ "slides": [
+  {
+   "n": 1,
+   "name": "cover",
+   "kind": "still",
+   "headline": "You prompt AI like Maa gives recipes",
+   "headline_size": 88,
+   "text_top": 140,
+   "hl": [
+    "Maa gives recipes"
+   ],
+   "body": "I tested it on AI. Swipe for the 6-line fix →",
+   "body_size": 50,
+   "items": [
+    {
+     "type": "photo",
+     "path": "cover_photo.jpg",
+     "rect": [
+      70,
+      470,
+      500,
+      620
+     ],
+     "tilt": -3
+    },
+    {
+     "type": "sticky",
+     "id": "diary",
+     "x": 650,
+     "y": 500,
+     "w": 370,
+     "title": "Maa's recipe",
+     "lines": [
+      "“A pinch of this, cook till done.”"
+     ],
+     "tilt": 2.5,
+     "size": 46
+    },
+    {
+     "type": "arrow",
+     "from": [
+      835,
+      800
+     ],
+     "to": [
+      835,
+      875
+     ],
+     "color": "ink"
+    },
+    {
+     "type": "text",
+     "x": 650,
+     "y": 940,
+     "w": 370,
+     "text": "Same vibe in a prompt?",
+     "size": 44,
+     "color": "grey"
+    },
+    {
+     "type": "icon",
+     "name": "chat",
+     "cx": 740,
+     "cy": 1070,
+     "s": 0.8
+    },
+    {
+     "type": "icon",
+     "name": "chicken",
+     "cx": 900,
+     "cy": 1060,
+     "s": 0.75
+    },
+    {
+     "type": "text",
+     "x": 950,
+     "y": 1030,
+     "w": 60,
+     "text": "?",
+     "size": 80,
+     "color": "red",
+     "weight": "bold"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "name": "vague_prompt",
+   "kind": "video",
+   "duration": 7,
+   "headline": "The vague prompt got chicken and an oven",
+   "hl": [
+    "chicken",
+    "oven"
+   ],
+   "body": "My test: dinner for 2 vegetarians, no oven. The prompt never said so.",
+   "items": [
+    {
+     "type": "sticky",
+     "id": "p",
+     "x": 70,
+     "y": 480,
+     "w": 380,
+     "title": "Prompt",
+     "lines": [
+      "“Give me a healthy dinner recipe”"
+     ],
+     "tilt": -2,
+     "size": 46
+    },
+    {
+     "type": "arrow",
+     "from": [
+      460,
+      580
+     ],
+     "to": [
+      530,
+      610
+     ],
+     "at": 0.5,
+     "dur": 0.6
+    },
+    {
+     "type": "quote",
+     "id": "out",
+     "x": 540,
+     "y": 480,
+     "w": 480,
+     "lines": [
+      "“Lemon-Garlic Chicken with Roasted Vegetables and Quinoa”",
+      "“Heat the oven to 220°C (425°F).”"
+     ],
+     "tag": "real run 1, trimmed",
+     "hl": [
+      "Chicken",
+      "oven"
+     ],
+     "size": 44,
+     "at": 1.0,
+     "dur": 1.8
+    },
+    {
+     "type": "icon",
+     "id": "chk",
+     "name": "chicken",
+     "cx": 200,
+     "cy": 960,
+     "s": 1.1,
+     "at": 3.0,
+     "dur": 0.8
+    },
+    {
+     "type": "icon",
+     "id": "ovn",
+     "name": "oven",
+     "cx": 440,
+     "cy": 960,
+     "s": 0.95,
+     "at": 3.4,
+     "dur": 0.8
+    },
+    {
+     "type": "text",
+     "x": 590,
+     "y": 920,
+     "w": 430,
+     "text": "Both runs: chicken, quinoa, oven at 220°C. Swaps only at the end.",
+     "size": 44,
+     "at": 4.2,
+     "dur": 1.2
+    }
+   ],
+   "rings": [
+    {
+     "target": "chk",
+     "at": 4.0
+    },
+    {
+     "target": "ovn",
+     "at": 4.4
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "name": "stranger",
+   "kind": "still",
+   "headline": "AI is a stranger in your kitchen",
+   "hl": [
+    "stranger"
+   ],
+   "body": "Family already knows the dish. AI has to guess. Run 2 even offered:",
+   "items": [
+    {
+     "type": "icon",
+     "name": "door",
+     "cx": 230,
+     "cy": 760,
+     "s": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "robot",
+     "cx": 230,
+     "cy": 790,
+     "s": 0.95
+    },
+    {
+     "type": "text",
+     "x": 340,
+     "y": 590,
+     "w": 80,
+     "text": "?",
+     "size": 100,
+     "color": "red",
+     "weight": "bold"
+    },
+    {
+     "type": "quote",
+     "x": 440,
+     "y": 500,
+     "w": 580,
+     "lines": [
+      "“If you tell me … what's in your fridge, I can tailor it.”"
+     ],
+     "tag": "real run 2, trimmed",
+     "hl": [
+      "what's in your fridge"
+     ],
+     "size": 50
+    },
+    {
+     "type": "arrow",
+     "from": [
+      430,
+      640
+     ],
+     "to": [
+      350,
+      700
+     ],
+     "color": "grey"
+    },
+    {
+     "type": "sticky",
+     "x": 90,
+     "y": 1010,
+     "w": 900,
+     "lines": [
+      "So tell it everything, like a recipe card. →"
+     ],
+     "tilt": 1,
+     "size": 48
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "name": "recipe_card_prompt",
+   "kind": "video",
+   "duration": 8,
+   "headline": "So I wrote it a recipe card",
+   "hl": [
+    "recipe card"
+   ],
+   "body": "Same model, same test. Six labelled lines (trimmed here). Each prompt run twice.",
+   "items": [
+    {
+     "type": "card",
+     "x": 70,
+     "y": 405,
+     "w": 940,
+     "size": 41,
+     "static_frame": true,
+     "at": 0.3,
+     "dur": 5.5,
+     "rows": [
+      {
+       "label": "Serves",
+       "text": "2 people, vegetarian, about 30 g protein each."
+      },
+      {
+       "label": "Ingredients",
+       "text": "200 g paneer, moong dal, onion, tomato, spinach, curd … No oven."
+      },
+      {
+       "label": "Method",
+       "text": "numbered steps with grams … and minutes for every step …"
+      },
+      {
+       "label": "Tastes like",
+       "text": "dal tadka, but lighter."
+      },
+      {
+       "label": "Don't",
+       "text": "no deep frying, no cream, nothing that takes more than 30 minutes."
+      },
+      {
+       "label": "Taste and adjust",
+       "text": "check your protein maths … End with one question …"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "name": "result",
+   "kind": "still",
+   "headline": "Same AI. A dinner that fits the brief.",
+   "hl": [
+    "fits the brief"
+   ],
+   "body": "No oven. Grams and minutes in the steps. One question back.",
+   "items": [
+    {
+     "type": "quote",
+     "id": "res",
+     "x": 70,
+     "y": 470,
+     "w": 620,
+     "lines": [
+      "“Palak paneer moong dal (serves 2, about 25 minutes)”",
+      "“Paneer: 200 g, in 1.5 cm cubes”",
+      "“That is about 34 g per serving”"
+     ],
+     "tag": "real run 1, trimmed",
+     "hl": [
+      "Palak paneer moong dal",
+      "34 g"
+     ],
+     "size": 46
+    },
+    {
+     "type": "icon",
+     "name": "bowl",
+     "cx": 870,
+     "cy": 620,
+     "s": 1.0
+    },
+    {
+     "type": "sticky",
+     "x": 720,
+     "y": 780,
+     "w": 300,
+     "lines": [
+      "34 g is the AI's estimate, not checked"
+     ],
+     "tilt": 2.5,
+     "size": 42
+    },
+    {
+     "type": "text",
+     "x": 70,
+     "y": 1050,
+     "w": 940,
+     "text": "Run 2: “Paneer-palak moong dal tadka”, about 27 minutes. A test prompt: nothing was cooked.",
+     "size": 42,
+     "color": "grey"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "name": "serves_ingredients",
+   "kind": "still",
+   "headline": "Tell the stranger who's eating",
+   "hl": [
+    "who's eating"
+   ],
+   "body": "Serves = who it's for. Ingredients = what you already have. Without them, it defaulted to chicken and an oven.",
+   "items": [
+    {
+     "type": "sticky",
+     "x": 70,
+     "y": 560,
+     "w": 440,
+     "title": "Serves",
+     "lines": [
+      "“2 people, vegetarian, about 30 g protein each.”"
+     ],
+     "tilt": -2,
+     "size": 44
+    },
+    {
+     "type": "sticky",
+     "x": 570,
+     "y": 560,
+     "w": 440,
+     "title": "Ingredients",
+     "lines": [
+      "“200 g paneer, moong dal … No oven.”"
+     ],
+     "tilt": 1.8,
+     "size": 44
+    },
+    {
+     "type": "icon",
+     "name": "people",
+     "cx": 290,
+     "cy": 1020,
+     "s": 1.25,
+     "color": "blue"
+    },
+    {
+     "type": "icon",
+     "name": "shelf",
+     "cx": 790,
+     "cy": 1010,
+     "s": 1.3
+    },
+    {
+     "type": "icon",
+     "name": "cross",
+     "cx": 960,
+     "cy": 1110,
+     "s": 0.7
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "name": "method_tastes_like",
+   "kind": "video",
+   "duration": 7,
+   "headline": "Show it what “done” looks like",
+   "hl": [
+    "“done”"
+   ],
+   "body": "Method = the shape of the answer. Tastes like = one example to aim at.",
+   "items": [
+    {
+     "type": "icon",
+     "name": "list",
+     "cx": 270,
+     "cy": 590,
+     "s": 1.1
+    },
+    {
+     "type": "text",
+     "x": 270,
+     "y": 545,
+     "w": 220,
+     "text": "grams",
+     "size": 42,
+     "color": "blue",
+     "at": 0.6,
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "x": 270,
+     "y": 700,
+     "w": 220,
+     "text": "minutes",
+     "size": 42,
+     "color": "blue",
+     "at": 1.0,
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "x": 90,
+     "y": 780,
+     "w": 400,
+     "text": "Method",
+     "size": 52,
+     "weight": "bold"
+    },
+    {
+     "type": "icon",
+     "name": "bowl",
+     "cx": 800,
+     "cy": 620,
+     "s": 1.0,
+     "at": 1.6,
+     "dur": 1.0
+    },
+    {
+     "type": "text",
+     "x": 590,
+     "y": 760,
+     "w": 430,
+     "text": "Tastes like: “dal tadka, but lighter.”",
+     "size": 44,
+     "at": 2.4,
+     "dur": 0.8
+    },
+    {
+     "type": "quote",
+     "x": 70,
+     "y": 900,
+     "w": 940,
+     "lines": [
+      "“Start the dal (18 minutes). Rinse the 100 g moong dal …”"
+     ],
+     "tag": "real run 1, trimmed",
+     "hl": [
+      "18 minutes",
+      "100 g"
+     ],
+     "size": 48,
+     "at": 3.4,
+     "dur": 1.6
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "name": "dont_taste_adjust",
+   "kind": "still",
+   "headline": "Maa tastes before serving. So should AI.",
+   "hl": [
+    "tastes before serving"
+   ],
+   "body": "Don't = your limits. Taste and adjust = check your own work, then ask me one question.",
+   "items": [
+    {
+     "type": "icon",
+     "name": "kadhai",
+     "cx": 150,
+     "cy": 650,
+     "s": 0.8
+    },
+    {
+     "type": "icon",
+     "name": "cream",
+     "cx": 310,
+     "cy": 640,
+     "s": 0.85
+    },
+    {
+     "type": "icon",
+     "name": "clock",
+     "cx": 460,
+     "cy": 640,
+     "s": 0.85
+    },
+    {
+     "type": "icon",
+     "name": "cross",
+     "cx": 150,
+     "cy": 640,
+     "s": 0.9
+    },
+    {
+     "type": "icon",
+     "name": "cross",
+     "cx": 310,
+     "cy": 640,
+     "s": 0.9
+    },
+    {
+     "type": "icon",
+     "name": "cross",
+     "cx": 460,
+     "cy": 640,
+     "s": 0.9
+    },
+    {
+     "type": "text",
+     "x": 70,
+     "y": 780,
+     "w": 480,
+     "text": "Asked: “nothing that takes more than 30 minutes”. Its plan: “about 25 minutes”.",
+     "size": 42
+    },
+    {
+     "type": "icon",
+     "name": "pot",
+     "cx": 800,
+     "cy": 700,
+     "s": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "spoon",
+     "cx": 860,
+     "cy": 560,
+     "s": 0.95
+    },
+    {
+     "type": "quote",
+     "x": 70,
+     "y": 1010,
+     "w": 940,
+     "lines": [
+      "“Will you eat this on its own, or with rice or roti?”"
+     ],
+     "tag": "real run 1: its one question",
+     "hl": [
+      "one question"
+     ],
+     "size": 48
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "name": "recap_save",
+   "kind": "still",
+   "headline": "Save this: the six-line recipe card",
+   "hl": [
+    "Save this"
+   ],
+   "headline_size": 70,
+   "items": [
+    {
+     "type": "card",
+     "x": 70,
+     "y": 290,
+     "w": 940,
+     "size": 42,
+     "rows": [
+      {
+       "label": "Serves",
+       "text": "who it's for",
+       "eg": "work: who will read it"
+      },
+      {
+       "label": "Ingredients",
+       "text": "what you already have",
+       "eg": "work: your notes, facts, files"
+      },
+      {
+       "label": "Method",
+       "text": "the shape of the answer",
+       "eg": "work: 5 bullets, a table, 100 words"
+      },
+      {
+       "label": "Tastes like",
+       "text": "one example to aim at",
+       "eg": "work: one sample you like"
+      },
+      {
+       "label": "Don't",
+       "text": "your limits",
+       "eg": "work: no jargon, no made-up facts"
+      },
+      {
+       "label": "Taste and adjust",
+       "text": "check itself, ask one question",
+       "eg": "work: check it against my notes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "name": "cta",
+   "kind": "video",
+   "duration": 6,
+   "headline": "Comment RECIPE for the template",
+   "hl": [
+    "RECIPE"
+   ],
+   "body": "I'll DM you the copyable card with one filled example.",
+   "items": [
+    {
+     "type": "icon",
+     "name": "comment",
+     "cx": 330,
+     "cy": 600,
+     "s": 1.0
+    },
+    {
+     "type": "text",
+     "x": 180,
+     "y": 620,
+     "w": 300,
+     "text": "RECIPE",
+     "size": 68,
+     "weight": "bold",
+     "hl": [
+      "RECIPE"
+     ]
+    },
+    {
+     "type": "arrow",
+     "from": [
+      540,
+      600
+     ],
+     "to": [
+      690,
+      600
+     ],
+     "at": 0.6,
+     "dur": 0.7
+    },
+    {
+     "type": "icon",
+     "name": "envelope",
+     "cx": 830,
+     "cy": 600,
+     "s": 0.95,
+     "at": 1.2,
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "x": 70,
+     "y": 850,
+     "w": 940,
+     "text": "Follow the Playbook:",
+     "size": 50,
+     "weight": "bold",
+     "at": 2.2,
+     "dur": 0.5
+    },
+    {
+     "type": "sticky",
+     "x": 70,
+     "y": 900,
+     "w": 280,
+     "lines": [
+      "Prompting: today ✓"
+     ],
+     "tilt": -2,
+     "size": 42,
+     "at": 2.6,
+     "dur": 0.5
+    },
+    {
+     "type": "sticky",
+     "x": 390,
+     "y": 900,
+     "w": 320,
+     "lines": [
+      "Guardrails: Wed, Lakshman Rekha"
+     ],
+     "tilt": 1.5,
+     "size": 42,
+     "at": 3.0,
+     "dur": 0.5
+    },
+    {
+     "type": "sticky",
+     "x": 750,
+     "y": 900,
+     "w": 260,
+     "lines": [
+      "Evals: next"
+     ],
+     "tilt": -1,
+     "size": 42,
+     "at": 3.4,
+     "dur": 0.5
+    }
+   ]
+  }
+ ]
+}

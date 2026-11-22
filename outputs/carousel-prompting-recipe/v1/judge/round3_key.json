@@ -1,0 +1,65 @@
+{
+ "key": {
+  "P": "draft_A3"
+ },
+ "results": {
+  "draft_A3": {
+   "label": "P",
+   "weighted": 7.2,
+   "scores": {
+    "hook": 7,
+    "swipe": 6,
+    "clarity": 8,
+    "save": 7,
+    "share": 6,
+    "merge": 8,
+    "proof": 8,
+    "accuracy": 8
+   },
+   "stop": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    9,
+    11,
+    12,
+    16
+   ],
+   "swipe_to_end": [
+    1,
+    3,
+    5,
+    6,
+    11,
+    16
+   ],
+   "save": [
+    3,
+    5,
+    6,
+    11,
+    16
+   ],
+   "strengths": [
+    "Slide 1 is a culturally specific accusation ('You prompt AI like Maa writes recipes') with a quoted line everyone recognises and a clear payoff ('the 6-line fix').",
+    "Every quote I checked matches the run files: both dish titles, 'Heat the oven to 220°C (425°F).', 'Paneer: 200 g, in 1.5 cm cubes', 'That is about 34 g per serving', 'Start the dal (18 minutes). Rinse the 100 g moong dal', the rice/roti question, and the trimmed run 2 'I can tailor it' line with its ellipsis.",
+    "The scenario is framed as a test ('My test: dinner for 2 vegetarians, no oven'), with no 'I'm vegetarian' or 'I have no oven' claim. The caption adds 'the test kitchen' and 'This was a test prompt, not a cooked meal'.",
+    "The protein number is labelled as the AI's estimate on slide 5 and again in the caption. The caption also calls the chicken answer 'a fair answer', so the vague output is not strawmanned there.",
+    "The merge holds up structurally: 'stranger in your kitchen' explains why context is needed, and 'Taste and adjust' maps cleanly to self-check plus one question back.",
+    "Slide 9 works as a standalone save card, and the caption and pinned comment end on a question that invites comments ('vaguest line in your family's recipe')."
+   ],
+   "fixes": [
+    "Slide 2 or 3: admit that both vague runs offered a paneer/tofu swap and a no-oven swap. Circling chicken and the oven in red while leaving that out is selective. A margin note such as 'it hedged with swaps, because it had to guess' is honest and strengthens the stranger point. Add the same clause to the caption.",
+    "Slides 4 and 6-9: the six lines appear three times (written out on 4, explained on 6-8, recapped on 9), so swiping after the slide 5 reveal is optional. Show only the six labels on slide 4. On each of 6-8, pair one prompt line with the exact output line it produced, as slide 8 already does with 'under 30 min → about 25 minutes'.",
+    "Slide 3: cut it or fold it into slide 2. It restates the metaphor and delays the reveal. The run 2 'tell me what's in your fridge' quote can sit under the slide 2 output card, which brings the palak paneer reveal to slide 4.",
+    "Slide 9: add a second, non-cooking translation per row (for example 'Serves: who will read it', 'Ingredients: facts and files you have', 'Tastes like: one sample you like'). At present the card only transfers to work prompts through one caption sentence, which costs saves from personas 7-12.",
+    "Slide 1: shorten the body to one line and tease the proof, for example 'I tested it. Vague prompt: chicken. Recipe card: palak paneer dal. Swipe.' Consider 'gives recipes' instead of 'writes recipes', since most Maas say it and don't write it. This is what would get builders (13, 14) and seniors (8, 10) to stop.",
+    "Slide 5: make it a side-by-side screenshot-style frame (vague: chicken + oven 220°C; card: palak paneer moong dal, about 34 g per serving as the AI's estimate) so it works as one shareable image. Add a small 'test prompt, not cooked' tag, because that caveat is currently only in the caption.",
+    "Slide 8: label 'got: about 25 minutes' as the AI's stated time, since nothing was cooked or timed. Add that run 2 said about 27 minutes and ended with a pressure-cooker question, so both runs are visible.",
+    "Slide 10: only promise the DM 'copyable card with one filled example' and the Wednesday 'Lakshman Rekha' post if both exist and are scheduled; neither is in FACTS. Drop the three-note roadmap to one line so the RECIPE call to action is not diluted."
+   ]
+  }
+ }
+}

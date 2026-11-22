@@ -1,0 +1,19 @@
+Hey! Thanks for commenting TRAINER. Here's your day-1 brief for AI:
+
+1. This is for me: [age], [job], [what I eat], [my timings].
+2. Answer in 5 bullets, in the order I do them, max 8 words each.
+3. Must: [your limits]. Must not: [what is off the table].
+4. Before you start, ask me up to 3 questions.
+5. Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming.
+6. I like ones like "[example 1]" and "[example 2]".
+7. Give me the first part only. Then stop and ask me how it went.
+8. Show the number next to each item, add them up, and tell me honestly if the total misses my target.
+
+How to use it:
+1. Write your ask as usual.
+2. Paste the 2-3 lines that fit (all 8 is fine for big asks).
+3. If the answer still feels generic, add line 1 or line 4.
+
+Honest note: any calorie, protein or price number an AI gives you is its estimate. Check it before you rely on it.
+
+The combined template is in the next message. Part 2 drops Wednesday: guardrails. Follow so you don't miss it.

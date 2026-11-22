@@ -1,0 +1,30 @@
+THE RECIPE-CARD PROMPT (copy, fill the blanks, paste into any AI chat)
+
+Serves: [who it is for: the people, their goal, any must-haves]
+Ingredients: [what you already have: facts, notes, files, what's in the kitchen]
+Method: [the shape of the answer you want back: steps, bullets, a table, length, units]
+Tastes like: [one example to aim at: "like X, but Y"]
+Don't: [your limits: what to avoid, time, budget, tone]
+Taste and adjust: [ask it to check its own work against your goal, and end with one question you could answer to make it better]
+
+
+FILLED EXAMPLE (the exact prompt from my test, 22 Nov 2026)
+
+Serves: 2 people, vegetarian, about 30 g protein each.
+Ingredients (what is in my kitchen): 200 g paneer, moong dal, onion, tomato, spinach, curd, basic Indian spices, oil. No oven.
+Method (what I want back): numbered steps with grams for every ingredient and minutes for every step, then the protein per serving.
+Tastes like: dal tadka, but lighter.
+Don't: no deep frying, no cream, nothing that takes more than 30 minutes.
+Taste and adjust: check your protein maths against the 30 g goal and say if it falls short. End with one question I could answer to make it better.
+
+What came back (both runs): a palak paneer moong dal in about 25-27 minutes, grams and minutes in the steps, no oven, and one question at the end. The AI put protein at about 34 g per serving. That is the AI's estimate, not verified nutrition: check labels or a nutrition database before you rely on it.
+
+
+A WORK EXAMPLE (same six lines; a template, not a tested result)
+
+Serves: my manager, who has 2 minutes and needs a yes/no decision.
+Ingredients: [paste your notes / numbers here]
+Method: 5 bullets, under 100 words, the decision first.
+Tastes like: [paste one update you liked]
+Don't: no jargon, no numbers that are not in my notes.
+Taste and adjust: check every number against my notes and flag any you could not find. Then ask me one question.

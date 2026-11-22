@@ -1,0 +1,12 @@
+ONE COMBINED PROMPT (fill the brackets, delete lines you don't need)
+Note: each line was tested on its own; this combined version is a template, not a tested result.
+
+[Your ask, e.g. "Make me a weekly workout plan."]
+This is for me: [age], [job], [what I eat], [my timings].
+Must: [your limits]. Must not: [what is off the table].
+I like ones like "[example 1]" and "[example 2]".
+Answer in [the shape you want: 5 bullets / a table with columns ... / under 100 words].
+Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming.
+Before you start, ask me up to 3 questions.
+Give me the first part only. Then stop and ask me how it went.
+Show the number next to each item, add them up, and tell me honestly if the total misses my target.

@@ -1,0 +1,123 @@
+{
+ "key": {
+  "P": "v2_B",
+  "Q": "v2_A"
+ },
+ "results": {
+  "v2_B": {
+   "label": "P",
+   "weighted": 6.7,
+   "scores": {
+    "hook": 6,
+    "swipe": 6,
+    "clarity": 7,
+    "save": 7,
+    "share": 5,
+    "merge": 8,
+    "proof": 8,
+    "accuracy": 7
+   },
+   "stop": [
+    1,
+    3,
+    6,
+    7,
+    9,
+    11,
+    13,
+    15
+   ],
+   "swipe_to_end": [
+    1,
+    6,
+    9,
+    13,
+    15
+   ],
+   "save": [
+    1,
+    6,
+    7,
+    9,
+    13,
+    15
+   ],
+   "strengths": [
+    "The cover has tension: 'Everyone gets the same 3 sets of 10' is a gym pain point that persona 15 and the gym-going office personas recognise at once.",
+    "The casting holds throughout: the bodies keep 'he' and 'lazy ask / sharp ask' on every technique slide, so the trainer never turns back into 'the AI'.",
+    "The bodies are short and lead with the contrast, such as 'Lazy ask: all 12 weeks, fixed on day one' on slide 9.",
+    "Every quote I checked against the run files is verbatim, including the two-step chats on slides 5 and 9.",
+    "Slide 8 hedges its numbers ('300+', 'about 40'), which is safe: by my hand count the logged 41 and 38 include the 5 bullet dashes (36 and 33 words without them).",
+    "Slide 9's visual sets the old week 3 ('Run 3 min') against the new week 3 ('repeat week 1'), which is the clearest proof moment in either draft.",
+    "Slide 7 says outright that the examples change is the smallest, and slide 10's footer says 'Easier to check. Not more correct.'"
+   ],
+   "fixes": [
+    "Slide 1 and caption line 1: 'AI gives everyone the same 3 sets of 10' is stated as fact, but no run output says it (the nearest is '3×8–12'). Make it about the trainer ('A lazy trainer gives everyone 3 sets of 10. So does your AI, until you brief it.') or use the real finding (both lazy runs returned the same push/pull/legs gym split).",
+    "Slide 1: get 'AI' into the headline itself, because personas 2, 4, 5 and 16 cannot tell from the headline alone that this is about AI.",
+    "Slide 10: it pairs before run 2 with after run 1 and presents 'about 1,800' against 1,775 as a miss, which it is not. Use the same run on both sides or label the runs on the cards, and lead with the protein gap from the same run (header says 105 g, meals add to 109 g) framed as 'you had to add it up yourself'.",
+    "Caption: 'The only change was the added line' is not true for the running test, where 'Under 150 words' also became 'weeks 1 and 2 only, under 80 words'. Say so in the honest notes and show the swapped text on slide 9.",
+    "Slides 3, 4, 5, 6, 9 and 10: move 'test persona', 'scripted test' and 'AI's estimates' out of the bodies into small on-card tags. Six bodies in a row end on a disclaimer, which flattens the swipe; the body should carry the payoff line.",
+    "Add small run labels under every card, as Draft Q does, so the cross-run pairings on slide 10 are visible to the viewer.",
+    "Slide 8: change 'about 40 words' to 'under 40 words' or just '5 cues', and remove the word-count production note from the visual field.",
+    "Order: move Format (the wall of text shrinking to 5 bullets, the most visual change) up to slide 4 and keep Examples, the weakest result, late, so the early slides give the strongest reasons to continue.",
+    "Slide 11: write the 8 copy lines into the script itself. The draft only points to 'cheat_sheet', so the save slide cannot be judged or checked here.",
+    "Slide 12: add a send trigger for shares, such as 'Send this to the friend who asks AI for a diet plan', and fix the maths analogy on slide 10 ('count for every set' is strained; 'show me the bill, item by item' is clearer)."
+   ]
+  },
+  "v2_A": {
+   "label": "Q",
+   "weighted": 6.5,
+   "scores": {
+    "hook": 5,
+    "swipe": 6,
+    "clarity": 6,
+    "save": 7,
+    "share": 5,
+    "merge": 7,
+    "proof": 8,
+    "accuracy": 8
+   },
+   "stop": [
+    1,
+    3,
+    6,
+    9,
+    13,
+    15
+   ],
+   "swipe_to_end": [
+    1,
+    6,
+    9,
+    15
+   ],
+   "save": [
+    1,
+    6,
+    9,
+    15
+   ],
+   "strengths": [
+    "It has the most transparent proof: run labels under every card, the test date and model on slide 2, and 'scripted test reply, not my data' stamped on the reply bubbles.",
+    "Slide 10 is the more honest version: before and after come from the same run, and it claims only 'checkable, not more accurate'.",
+    "The slide 9 production note catches that the after prompt also changed the word limit, and tells production to show the added text exactly.",
+    "Slide 2 has a layout legend (grey lazy ask, bright sharp ask, '+ one line') that teaches the reader how to read every later slide.",
+    "Slide 9's body line, 'The 12-week table can't hear about a sore shin', is the best single line in either draft.",
+    "The caption lists what changed for each of the 8 techniques, so it works as a standalone summary and gives a reason to save.",
+    "The 'test limits, not my diet' and 'test group, made up for the test' tags keep the vegetarian persona from reading as a claim about the creator."
+   ],
+   "fixes": [
+    "Slide 1: 'Your AI is a great trainer' is a compliment with no tension and reads like a generic tips post. Lead with the problem (the same generic plan for everyone) and keep 'It just doesn't know you' as the second line.",
+    "Slide 5: the after block quotes all three questions, the full reply and three plan lines, which is too much for one slide. Cut to the injuries question, the knee part of the reply and 'Box squat to a chair (pain-free depth only)'.",
+    "Slide 8 and caption item 6: '362 words (measured)' matches FACTS, but by my hand count that figure includes 18 list markers and the text is 344 words. Print '340+ words' or '300+', or recount before publishing.",
+    "Slides 3, 6, 8 and 10: the bodies drift to 'the AI', 'the answer' and 'Before / After'. Keep 'he' and 'lazy ask / sharp ask', as slide 2's legend promises, so the casting stays fixed.",
+    "Slide 10: the payoff is weak because the before looks fine. Promote the 'says 110 g; its meals add to 111 g' note from optional to the main visual, and replace the literal gym line with a real trainer or bill analogy.",
+    "Slide 7: 'here are two workouts I loved' is a vague analogy. Use something visual, like showing the trainer a video of the squat you want.",
+    "Caption: 'the same ask with one extra line' needs a note that the running test also swapped the word limit, and that techniques 3 and 7 are two-step tests.",
+    "Slides 3, 4, 5, 6 and 10: move the estimate and test-persona disclaimers from the bodies to tags (the visuals already carry them) to free up the body for the result.",
+    "Slide 5 body: 'needed a barbell and a pull-up bar' is an inference. Quote the actual exercises ('bench press, pull-ups, barbell rows') instead.",
+    "Slide 12: add a send trigger, and write the 8 cheat-sheet lines into slide 11 in the script so they can be checked."
+   ]
+  }
+ }
+}

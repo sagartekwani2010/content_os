@@ -1,0 +1,30 @@
+A lazy trainer gives everyone 3 sets of 10. I asked AI for a workout plan twice and got a near-identical gym split both times.
+
+The AI is not the problem. Think of it as a brilliant new trainer who met you 10 seconds ago. He knows every exercise. He knows nothing about you. He only knows what you tell him.
+
+So I tested 8 lines you can add to any ask. Each lazy ask and each sharp ask ran twice on Claude Fable 5.2 (22 Nov 2026). Here is what each line changed:
+
+1. Tell him who you are: the diet planned around the canteen lunch and the 9:30 dinner.
+2. Tell him how you want it: over 300 words became 5 bullets.
+3. Tell him your limits: a chicken and paneer bowl became a one-pot soya khichdi.
+4. Let him ask you first: he asked 3 questions, then planned around a sore knee.
+5. Tell him not to guess: he stopped assuming and wrote [ASK ME] where he needed more.
+6. Show him what you like: the names copied the tone and the time stamp. The smallest change of the 8.
+7. Plan two weeks, then check in: a sore shin changed week 3.
+8. Make him show the maths: every item has a number, and the total matches.
+
+Honest notes:
+- The people and limits in the asks are test personas, not me. The replies inside the two-step tests were scripted for the test.
+- Every calorie, protein and price figure is the AI's estimate, not verified.
+- In each test the ask stayed the same and one line was added. In the running test the word limit changed too: "Under 150 words" became "weeks 1 and 2 only, under 80 words". The questions and check-in tests had a second step with a scripted reply.
+- "Show the maths" makes an answer easy to check. It does not make the food values more correct.
+
+Comment TRAINER and I'll DM the full cheat sheet plus one combined template.
+
+Send this to the friend who asks AI for a diet plan.
+
+This is part 1 of the Playbook. Wednesday 25 Nov: guardrails, the lines your AI must not cross. After that: evals, how to test if it is any good.
+
+Save this for your next ask.
+
+#promptengineering #aitips #gymlife #fitnessindia #claude

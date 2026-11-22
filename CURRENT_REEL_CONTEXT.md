@@ -11,8 +11,10 @@ creator projects. Read `AGENTS.md`, `HANDOFF.md`, `config/brand.yaml`, and
 | Gym Jarvis Ep 1 (launch) | Posted 12 Nov | this file, below |
 | Gym Jarvis Ep 2 (calories / food tracker) | Posted 16 Nov. Its as-spoken narration is the reference voice and skeleton for every build reel | `outputs/food-tracker-reel/TELEPROMPTER.md` |
 | Fable 5.2 deep-dive | Posted 19 Nov | `outputs/fable52-deepdive/` |
-| Gym Jarvis Ep 3 (Workout Analyser) | Main final, awaiting posting; trial shelved (not different enough to record) | `outputs/workout-analyser-reel/STATUS.md` |
-| Salesforce hiring / post-training reel (paid off from the Ep 3 tease) | NEXT, starting in a new chat | `outputs/hiring-posttraining-reel/STATUS.md` |
+| Gym Jarvis Ep 3 (Workout Analyser) | Posted (confirmed 22 Nov); trial shelved (not different enough to record). Its ending teases the Salesforce reel | `outputs/workout-analyser-reel/STATUS.md` |
+| Salesforce reel → "Evals for every job" series (pays off the Ep 3 tease) | Gate 1 + spines + script v1, awaiting spine pick (22 Nov) | `outputs/hiring-posttraining-reel/STATUS.md` |
+
+**Calendar 22-29 Nov + standing week:** `planning/content-calendar-2026-11-22.md` (one chat per item; kickoff lines inside).
 
 Process rules added 21 Nov (Ep 3 retro): `.agents/skills/reel-script-writing/SKILL.md` — hard gates, default
 skeleton for system/build reels, blind scoring loop (only blind-judge scores count for gates).

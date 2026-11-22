@@ -81,3 +81,18 @@ do not regenerate a posted video merely to test a connection.
   ends its message with the Claude attribution trailer, for example
   `Co-Authored-By: Claude <noreply@anthropic.com>` (use the exact line your
   Claude Code session specifies, which names the model).
+
+## Carousel ownership (Codex builds, Claude evaluates)
+
+- **Codex owns** `content_os/carousel/`, `tests/carousel/`, and the carousel outputs it writes
+  (`outputs/carousel-*/` except `eval/`, and `~/Movies/ContentOS/carousel-*/`).
+- **Claude owns** `content_os/carousel_eval/`, `tests/carousel_eval/`, `outputs/carousel-*/eval/` and
+  `.agents/skills/carousel-production/SKILL.md`. Codex must not edit these. Claude watches them for changes.
+- The interface is one file: `outputs/<id>/SUBMISSION.json` (contract `carousel_submission@1`, documented in
+  `content_os/carousel_eval/contract.py`). The evaluator reads only that file and the files it lists, and never
+  imports `content_os.carousel`. A test enforces that.
+- Flow: Codex builds → writes or updates SUBMISSION.json (bumping `version`) → **Codex runs
+  `.venv/bin/python -m content_os.carousel_eval eval <id>`**, which calls Claude (Fable 5.2 judge + Opus 5.5 review)
+  through `ANTHROPIC_API_KEY` from the environment, or the local `claude` login if that is unset → Codex reads
+  `outputs/<id>/eval/<version>/EVAL.md`, fixes the items and resubmits. Only a PASS goes to the creator. Codex may
+  run the evaluator but must never edit it or its outputs. Claude reviews Codex's work every 2 days (launchd job).

@@ -1,0 +1,111 @@
+{
+ "scripts": {
+  "A": {
+   "personas": [
+    7,
+    6,
+    6,
+    6,
+    5,
+    7,
+    8,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    4,
+    6
+   ],
+   "mass": 5.7,
+   "fcm": 7.5,
+   "builders": 7.0,
+   "overall": 6.6,
+   "eval_necessity": 8,
+   "voice_match": 7,
+   "fact_safety": 8,
+   "weakest": [
+    "Beat 12 'The pilot was tiny, it ran during Diwali, and my AI actually knew.' puts three reveals in one breath, so the catch and the twist blur together. Fix: split into 'The test was tiny, and it ran during Diwali.' then 'And my AI actually knew, it wrote that below the slide.' (merge beat 11 into the second line to hold 20 beats).",
+    "Beat 13 'Then I said use only the data, and three runs failed again.' leaves the smart-looking 'in waves' answer to a crowded screen (rule, three headlines and a verdict in one beat), so the AI's struggle is not heard. Fix: 'So I told it: use only the data. Three runs failed again.' then a spoken waves beat, with the checker verdict moved to that beat."
+   ]
+  },
+  "B": {
+   "personas": [
+    7,
+    6,
+    6,
+    6,
+    5,
+    6,
+    7,
+    7,
+    8,
+    8,
+    6,
+    7,
+    7,
+    7,
+    4,
+    5
+   ],
+   "mass": 5.6,
+   "fcm": 7.2,
+   "builders": 6.8,
+   "overall": 6.4,
+   "eval_necessity": 8,
+   "voice_match": 7,
+   "fact_safety": 7.5,
+   "weakest": [
+    "Beat 8 'But I write the right answer first, and a second AI checks.' is pure process straight after the approval high, with no reason given for running it three times. Fix: 'But one good-looking answer means nothing in my job.' then 'So I wrote the right answer first, and a second AI checked three runs.'",
+    "Beats 15-16 go from 'that's what you asked for' straight to the rule, so the insight (not dumb, pleasing the boss) is never spoken. Beat 13 also shows one headline with three crosses, implying all three runs wrote it. Fix: add 'So the AI was not dumb, it was pleasing the boss.' before beat 16 (fold beat 2 into beat 1's screen to pay for it), and show three distinct real headlines in beat 13."
+   ]
+  },
+  "C": {
+   "personas": [
+    6,
+    5,
+    5,
+    6,
+    5,
+    6,
+    7,
+    7,
+    7,
+    8,
+    6,
+    6,
+    7,
+    7,
+    4,
+    5
+   ],
+   "mass": 5.1,
+   "fcm": 6.8,
+   "builders": 6.5,
+   "overall": 6.1,
+   "eval_necessity": 7,
+   "voice_match": 6.5,
+   "fact_safety": 7.5,
+   "weakest": [
+    "Beat 8 'Then my eval checked it, and it failed all three runs.' fails 'three runs' that were never set up, and beat 9's 'Because I wrote the right answer before the AI ever replied.' explains method when the viewer wants the reason. Fix: swap the order: 'But before any run, I wrote the right answer.' then 'Then a second AI checked three runs, and all three failed.'",
+    "Beat 13 'Then one run literally told me why.' is a filler beat, and the case only starts at beat 5 after four set-up beats. Fix: cut beat 4, merge 13 into 14 as 'Then one run literally told me: that is what you asked for.', and spend the freed beat voicing the waves answer. Also drop the 'strict count 19/30' footnote (creator-only caveat, confusing on screen) and show the fix-one rule in full, not truncated."
+   ]
+  }
+ },
+ "winner": "A",
+ "graft": [
+  "From B beat 14, add a spoken beat after A13: 'One answer even looked smart: all 300 stores, but in waves.' with 'all 300 stores' circled in red and the checker verdict moved here. Pay for it by merging A3 into A4 ('So, a retail chain tested a new store layout, and sales jumped 30%.').",
+  "From B beats 7 and 9 (screen only): let the APPROVED stamp land on A7 with the music lift, then crack on the three crosses in A10, instead of hovering.",
+  "From B beat 17 / C beat 17, replace A17 'Three runs in a row passed, and the doubt was now the headline.' with 'Three runs in a row, and all three told the boss: not yet.'",
+  "From C beats 10-11, split A12 into 'The test was tiny, and it ran during Diwali.' and 'And my AI actually knew, it wrote that below the slide.', dropping A11 as a separate line.",
+  "From C beat 14 / B beat 15 (screen): show the 'I kept it as a full rollout because that is what you asked for.' quote alone on a dark card, typed word by word, silence then a hit, under A14.",
+  "From B beat 16, simplify A16 to 'So the failures gave me one rule: if the data disagrees, say it in the title.' This keeps A's 'checker pointed at the fix' idea in the creator's plainer phrasing. Before lock, confirm verdict-to-run mapping and the third headlines in consulting_eval/results_ladder.json; I did not open it, so fact_safety is scored against the brief only."
+ ],
+ "labels": {
+  "reliability": "A",
+  "struggle": "B",
+  "suspense": "C"
+ }
+}

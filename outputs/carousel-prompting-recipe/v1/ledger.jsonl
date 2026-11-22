@@ -1,0 +1,13 @@
+{"at": "2026-11-22T14:10:39", "role": "real_run_vague_2", "model": "claude-fable-5-2", "seconds": 8.8, "chars_in": 31, "chars_out": 1527, "cost_usd": 0.08, "ok": true}
+{"at": "2026-11-22T14:10:41", "role": "real_run_vague_1", "model": "claude-fable-5-2", "seconds": 10.1, "chars_in": 31, "chars_out": 1638, "cost_usd": 0.083, "ok": true}
+{"at": "2026-11-22T14:10:51", "role": "real_run_recipe_card_1", "model": "claude-fable-5-2", "seconds": 20.2, "chars_in": 572, "chars_out": 2085, "cost_usd": 0.1329, "ok": true}
+{"at": "2026-11-22T14:10:53", "role": "real_run_recipe_card_2", "model": "claude-fable-5-2", "seconds": 23.0, "chars_in": 572, "chars_out": 2231, "cost_usd": 0.1356, "ok": true}
+{"at": "2026-11-22T14:12:51", "role": "writer_draft_A", "model": "claude-fable-5-2", "seconds": 74.3, "chars_in": 13459, "chars_out": 8123, "cost_usd": 0.4607, "ok": true}
+{"at": "2026-11-22T14:13:10", "role": "writer_draft_B", "model": "claude-fable-5-2", "seconds": 93.2, "chars_in": 13461, "chars_out": 8534, "cost_usd": 0.5427, "ok": true}
+{"at": "2026-11-22T14:13:21", "role": "writer_draft_C", "model": "claude-fable-5-2", "seconds": 104.1, "chars_in": 13420, "chars_out": 8968, "cost_usd": 0.6029, "ok": true}
+{"at": "2026-11-22T14:15:04", "role": "blind_judge_r1", "model": "claude-fable-5-2", "seconds": 70.2, "chars_in": 28290, "chars_out": 8313, "cost_usd": 0.5415, "ok": true}
+{"at": "2026-11-22T14:17:19", "role": "reviser_r2_draft_A", "model": "claude-fable-5-2", "seconds": 117.2, "chars_in": 23783, "chars_out": 9463, "cost_usd": 0.7539, "ok": true}
+{"at": "2026-11-22T14:18:10", "role": "reviser_r2_draft_B", "model": "claude-fable-5-2", "seconds": 168.9, "chars_in": 23859, "chars_out": 10258, "cost_usd": 0.9975, "ok": true}
+{"at": "2026-11-22T14:19:56", "role": "blind_judge_r2", "model": "claude-fable-5-2", "seconds": 101.2, "chars_in": 31794, "chars_out": 5509, "cost_usd": 0.6834, "ok": true}
+{"at": "2026-11-22T14:24:33", "role": "fact_check_opus", "model": "claude-opus-5-5", "seconds": 38.4, "chars_in": 18390, "chars_out": 1789, "cost_usd": 0.174, "ok": true}
+{"at": "2026-11-22T14:24:52", "role": "blind_judge_r3", "model": "claude-fable-5-2", "seconds": 58.2, "chars_in": 19354, "chars_out": 4249, "cost_usd": 0.4137, "ok": true}

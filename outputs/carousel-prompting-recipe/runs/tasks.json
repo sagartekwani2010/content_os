@@ -1,0 +1,88 @@
+{
+ "model": "claude-fable-5-2",
+ "repeats": 2,
+ "tasks": [
+  {
+   "id": "g1_context",
+   "technique": "Context",
+   "before": [
+    "Suggest a diet to lose weight. Under 100 words."
+   ],
+   "after": [
+    "Suggest a diet to lose weight. Under 100 words. This is for me: 34, bank job, sitting 9 hours, vegetarian, lunch from the office canteen, dinner at 9:30 pm with family."
+   ]
+  },
+  {
+   "id": "g2_constraints",
+   "technique": "Constraints",
+   "before": [
+    "Suggest a high-protein dinner. Under 80 words."
+   ],
+   "after": [
+    "Suggest a high-protein dinner. Under 80 words. Must: vegetarian, no eggs, under Rs 100, cooked on one gas burner. Must not: protein powder."
+   ]
+  },
+  {
+   "id": "g3_examples",
+   "technique": "Examples",
+   "before": [
+    "Suggest 5 names for our 6 am gym WhatsApp group."
+   ],
+   "after": [
+    "Suggest 5 names for our 6 am gym WhatsApp group. We like names like \"Sore But Showing Up\" and \"Alarm Beaters 5:30\"."
+   ]
+  },
+  {
+   "id": "g4_format",
+   "technique": "Output format",
+   "before": [
+    "How do I deadlift with correct form?"
+   ],
+   "after": [
+    "How do I deadlift with correct form? Answer in 5 bullets, in the order I do them, max 8 words each."
+   ]
+  },
+  {
+   "id": "g5_chain",
+   "technique": "Prompt chaining",
+   "before": [
+    "Make me a 12-week plan to go from no running to a 5 km run. Under 150 words."
+   ],
+   "after": [
+    "Make me a 12-week plan to go from no running to a 5 km run. Give me weeks 1 and 2 only, under 80 words. Then stop and ask me how it went.",
+    "Here is the plan you gave me:\n{prev}\n\nHow it went: week 1 was fine, but my left shin hurt after the second run of week 2. Now write weeks 3 and 4, under 80 words."
+   ]
+  },
+  {
+   "id": "g6_questions",
+   "technique": "Clarifying questions",
+   "before": [
+    "Make me a weekly workout plan. Under 100 words."
+   ],
+   "after": [
+    "Make me a weekly workout plan. Under 100 words. Before you start, ask me up to 3 questions.",
+    "You asked me:\n{prev}\n\nMy answers: build muscle; 4 days a week, 45 minutes; at home with two 10 kg dumbbells, and my left knee hurts on deep squats. Now write the plan, under 100 words."
+   ]
+  },
+  {
+   "id": "g7_dontguess",
+   "technique": "Don't guess",
+   "before": [
+    "I'm 78 kg and want to lose fat. Tell me my daily calories and protein."
+   ],
+   "after": [
+    "I'm 78 kg and want to lose fat. Tell me my daily calories and protein. Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming."
+   ]
+  },
+  {
+   "id": "g8_checkable",
+   "technique": "Show working + self-check",
+   "before": [
+    "Give me one day of vegetarian eating: 1,800 calories and 100 g protein. Under 120 words."
+   ],
+   "after": [
+    "Give me one day of vegetarian eating: 1,800 calories and 100 g protein. Under 120 words. Show calories and protein next to each item, add them up, and tell me honestly if the total misses my targets."
+   ]
+  }
+ ]
+}

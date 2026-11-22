@@ -1,0 +1,70 @@
+{
+ "scripts": {
+  "A": {
+   "personas": [
+    7,
+    7,
+    6,
+    6,
+    6,
+    7,
+    8,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    5,
+    6
+   ],
+   "mass": 6.1,
+   "fcm": 7.5,
+   "builders": 7.0,
+   "overall": 6.8,
+   "eval_necessity": 7.5,
+   "voice_match": 7,
+   "fact_safety": 7,
+   "weakest": [
+    "Beat 13 packs fix one and the 'in waves' answer into one line: 'three runs failed again' is no longer spoken, so the consistency climb is seen (corner tally) but not heard, and 'Still all 300 stores, in waves' can be misheard as every run saying waves when only one did.",
+    "Beat 11 speaks 'two stores, two festival weeks', which is outside the brief's spoken-number list. Beats 16 and 19 say nearly the same rule twice. The deliverable has no 'why this version' lines, and its header says the results file was not re-opened for this pass."
+   ]
+  },
+  "B": {
+   "personas": [
+    6,
+    6,
+    5,
+    6,
+    5,
+    7,
+    7,
+    7,
+    7,
+    7,
+    6,
+    6,
+    7,
+    8,
+    4,
+    5
+   ],
+   "mass": 5.3,
+   "fcm": 6.7,
+   "builders": 7.0,
+   "overall": 6.2,
+   "eval_necessity": 6.5,
+   "voice_match": 7,
+   "fact_safety": 8,
+   "weakest": [
+    "Beat 10 'The test was tiny, and it ran during Diwali' is the creator stating the catch in his own voice. The checker gets no spoken credit, so the eval looks less like the thing that found it, and 'eval' is never defined for the mass viewer.",
+    "Beat 19's save rule ('write the check first, and trust three runs, not one') is a process tip most non-builders cannot use tomorrow, and the copyable prompt rule is spent on beat 16, which runs 16 words. Beats 12 and 13 put three headlines and then a quote plus verdict on screen, too dense to read at reel pace."
+   ]
+  }
+ },
+ "labels": {
+  "v10": "A",
+  "v9": "B"
+ }
+}

@@ -1,0 +1,118 @@
+"""Build slides.json for v2 from the judged + revised script (drafts/v2_B2.json) with the fact-check edits applied
+by hand (judge/POST_JUDGE_EDITS.md). Quotes are verbatim from runs/g*.md, trimmed with "…"."""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parents[1]
+M = "claude-fable-5-2"
+
+def ba(n, video, headline, hl, body, copy, b_prompt, b_out, b_tag, a_added, a_out, a_tag):
+    return {"n": n, "name": f"t{n - 2}", "kind": "video" if video else "still", "duration": 7, "layout": "before_after",
+            "headline": headline, "hl": hl, "headline_size": 66, "body": body, "body_size": 44, "body_gap": 50,
+            "copy": "Add: " + copy,
+            "before": {"title": f"LAZY ASK · {b_tag}", "lines": [b_prompt, *b_out]},
+            "after": {"title": f"SHARP ASK · {a_tag}", "lines": [a_added, *a_out]},
+            "after_at": 0.7, "after_dur": 3.2}
+
+def extra(slide, items):
+    slide["items"] = items
+    return slide
+
+S = [
+ {"n": 1, "name": "cover", "kind": "still", "headline": "Your AI trainer met you 10 seconds ago.", "headline_size": 84,
+  "hl": ["10 seconds ago."], "body": "8 lines that make it plan for you. Each one tested on a real AI →", "body_size": 46,
+  "items": [
+   {"type": "photo", "rect": [70, 470, 540, 675], "tilt": -2.5},
+   {"type": "sticky", "x": 660, "y": 520, "w": 360, "title": "Lazy ask:", "lines": ["“Make me fit.”"], "tilt": 2, "size": 46},
+   {"type": "arrow", "from": [840, 760], "to": [840, 840]},
+   {"type": "sticky", "x": 660, "y": 870, "w": 360, "title": "Sharp ask:", "lines": ["+ 1 line about you"], "tilt": -1.5, "size": 46, "color": "#B8F0C8"}
+  ]},
+ {"n": 2, "name": "casting", "kind": "still", "headline": "He only knows what you tell him.", "hl": ["what you tell him"],
+  "body": "Think of AI as a brilliant new trainer. He knows every exercise. He knows nothing about you.",
+  "items": [
+   {"type": "icon", "name": "robot", "cx": 220, "cy": 640, "s": 1.15},
+   {"type": "text", "x": 120, "y": 850, "w": 260, "text": "new trainer", "size": 44, "color": "blue", "weight": "bold"},
+   {"type": "sticky", "x": 430, "y": 470, "w": 590, "title": "Lazy ask", "lines": ["his generic plan, the same for everyone"], "tilt": -1.5, "size": 44},
+   {"type": "sticky", "x": 430, "y": 700, "w": 590, "title": "Sharp ask", "lines": ["one added line, a plan for you"], "tilt": 1.2, "size": 44, "color": "#B8F0C8"},
+   {"type": "text", "x": 70, "y": 1010, "w": 940, "text": "Next 8 slides: same AI, same question, one line added. Real runs on Claude Fable 5.2, 22 Nov 2026.", "size": 42, "color": "grey"}
+  ]},
+ ba(3, True, "Tell him who you are.", ["who you are"],
+    "Day 1, you'd tell a trainer your job, what you eat and when.",
+    "This is for me: [age], [job], [what I eat], [my timings].",
+    "“Suggest a diet to lose weight.”", ["→ “…Protein first: 1.6–2 g per kg of body weight (eggs, chicken, fish, paneer…”"], "run 1",
+    "+ “This is for me: 34, bank job… vegetarian, lunch from the office canteen, dinner at 9:30 pm…”",
+    ["→ “Canteen lunch: Half plate sabzi/salad… 5 pm snack… so you aren't starving at 9:30.”"], "run 1 · test persona"),
+ ba(4, True, "Tell him how you want it.", ["how you want it"],
+    "Under the bar you remember 5 short cues, not a lecture.",
+    "Answer in 5 bullets, in the order I do them, max 8 words each.",
+    "“How do I deadlift with correct form?”", ["→ over 300 words: “Setup… The lift… Lowering… Common mistakes… Getting started…”"], "run 1",
+    "+ the line above",
+    ["→ “Stand mid-foot under bar, feet hip-width apart.", "… Push floor away, keeping bar against legs.", "Lock hips out, then lower with control.”"], "run 1 · 5 bullets"),
+ ba(5, False, "Tell him your limits.", ["your limits"],
+    "You'd say: no eggs, small budget, one burner at home. Work inside that.",
+    "Must: [your limits]. Must not: [what is off the table].",
+    "“Suggest a high-protein dinner.”", ["→ “Chicken and paneer bowl (~60 g protein)… 150 g grilled chicken breast…”"], "run 1",
+    "+ “Must: vegetarian, no eggs, under Rs 100, cooked on one gas burner. Must not: protein powder.”",
+    ["→ “Soya chunk and moong dal khichdi (one pot, ~Rs 60-70)… Roughly 40 g protein.”"], "run 1 · AI's estimates"),
+ ba(6, True, "Let him ask you first.", ["ask you first"],
+    "A good trainer asks your goal, days and injuries first.",
+    "Before you start, ask me up to 3 questions.",
+    "“Make me a weekly workout plan.”", ["→ “Mon – Push: bench press… Tue – Pull: deadlifts, pull-ups… Thu – Legs: squats… lunges…”"], "run 1",
+    "+ the line above. He asked: “…any injuries or exercises to avoid?”",
+    ["Test reply: “…two 10 kg dumbbells, and my left knee hurts on deep squats.”", "→ “Box squat to a chair (pain-free depth only)”"], "run 1 · scripted reply"),
+ ba(7, False, "Tell him not to guess.", ["not to guess"],
+    "A good trainer measures you. He doesn't guess.",
+    "Use only what I told you. Where you need something I didn't give, write [ASK ME] instead of assuming.",
+    "“I'm 78 kg and want to lose fat. Tell me my daily calories and protein.”",
+    ["→ “Start at about 2,000 kcal… assuming you are moderately active…”"], "run 2",
+    "+ the line above",
+    ["→ “Calories: [ASK ME]. I can't give a number from weight alone.”"], "run 2 · test persona"),
+ extra(ba(8, False, "Show him what you like.", ["what you like"],
+    "Show a trainer a video: squat like this. (The smallest change of the 8.)",
+    "I like ones like “[example 1]” and “[example 2]”.",
+    "“Suggest 5 names for our 6 am gym WhatsApp group.”", ["→ “Dawn Patrol… Rise and Grind Crew…”"], "run 1",
+    "+ “We like names like “Sore But Showing Up” and “Alarm Beaters 5:30”.”",
+    ["→ “Tired But Present 6:00… Half Asleep, Full Sets…”"], "run 1"),
+    [{"type": "text", "x": 80, "y": 1060, "w": 920, "size": 42, "color": "grey",
+      "text": "Run 2, lazy: “Snooze Is for the Weak”. Sharp: “Still Dark, Still Lifting”."}]),
+ ba(9, True, "Plan 2 weeks. Then check in.", ["check in"],
+    "A trainer plans 2 weeks, sees how your body takes it, then plans the next 2.",
+    "Give me the first part only. Then stop and ask me how it went.",
+    "“Make me a 12-week plan to go from no running to a 5 km run.”", ["→ all 12 weeks in one table, fixed on day 1"], "run 1",
+    "+ “Give me weeks 1 and 2 only… Then stop and ask me how it went.”",
+    ["Test reply: “…my left shin hurt…”", "→ “Before week 3: rest until the shin is pain-free…”"], "run 1 · scripted reply"),
+ ba(10, False, "Make him show the maths.", ["show the maths"],
+    "Like a gym bill: item by item. Checkable, not more correct.",
+    "Show the number next to each item, add them up, and tell me honestly if the total misses my target.",
+    "“Give me one day of vegetarian eating: 1,800 calories and 100 g protein.”",
+    ["→ “about 1,800 kcal and 105 g protein” · its meals add to 1,775 kcal, 109 g"], "run 2",
+    "+ the line above",
+    ["→ “Paneer, 100 g: 265 kcal, 18 g…” “Total: 1,803 kcal, 114 g protein” (adds up)"], "run 2 · AI's estimates"),
+ {"n": 11, "name": "cheat_sheet", "kind": "still", "headline": "Save this: your 8 lines.", "hl": ["Save this"], "headline_size": 66,
+  "items": [{"type": "card", "x": 70, "y": 168, "w": 940, "size": 40, "rows": [
+    {"label": "Who", "text": "This is for me: [age], [job], [what I eat], [my timings]."},
+    {"label": "Format", "text": "Answer in 5 bullets, in the order I do them, max 8 words each."},
+    {"label": "Limits", "text": "Must: [your limits]. Must not: [what is off the table]."},
+    {"label": "Ask first", "text": "Before you start, ask me up to 3 questions."},
+    {"label": "No guessing", "text": "Use only what I told you. Write [ASK ME] instead of assuming."},
+    {"label": "Examples", "text": "I like ones like “[example 1]” and “[example 2]”."},
+    {"label": "Check-in", "text": "Give me the first part only. Then stop and ask me how it went."},
+    {"label": "Show maths", "text": "Show the number next to each item and add them up."}
+  ]}]},
+ {"n": 12, "name": "cta", "kind": "video", "duration": 6, "headline": "Comment TRAINER", "hl": ["TRAINER"], "headline_size": 84,
+  "body": "I'll DM you the full sheet plus one combined prompt you can paste. Send this to the friend who asks AI for diet plans.",
+  "items": [
+   {"type": "icon", "name": "comment", "cx": 320, "cy": 560, "s": 1.0},
+   {"type": "text", "x": 175, "y": 580, "w": 320, "text": "TRAINER", "size": 64, "weight": "bold", "hl": ["TRAINER"]},
+   {"type": "arrow", "from": [540, 560], "to": [690, 560], "at": 0.5, "dur": 0.7},
+   {"type": "icon", "name": "envelope", "cx": 830, "cy": 560, "s": 0.95, "at": 1.1, "dur": 0.9},
+   {"type": "text", "x": 70, "y": 800, "w": 940, "text": "Follow the Playbook:", "size": 50, "weight": "bold", "at": 2.0, "dur": 0.5},
+   {"type": "sticky", "x": 70, "y": 850, "w": 290, "lines": ["Prompting: today ✓"], "tilt": -2, "size": 44, "at": 2.4, "dur": 0.5},
+   {"type": "sticky", "x": 390, "y": 850, "w": 330, "lines": ["Guardrails: Wed 25 Nov"], "tilt": 1.5, "size": 44, "at": 2.8, "dur": 0.5},
+   {"type": "sticky", "x": 750, "y": 850, "w": 270, "lines": ["Evals: next"], "tilt": -1, "size": 44, "at": 3.2, "dur": 0.5}
+  ]},
+]
+spec = {"spec": "content_os.carousel/spec@1", "id": "carousel-prompting-recipe", "title": "AI trainer: 8 prompt lines",
+        "post_at": "Mon 23 Nov 2026, 13:00 IST", "fps": 30, "cover_photo": "cover_gym.jpg", "slides": S}
+(HERE / "slides.json").write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+print("slides", len(S))

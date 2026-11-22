@@ -1,0 +1,72 @@
+{
+ "scripts": {
+  "A": {
+   "personas": [
+    6,
+    6,
+    5,
+    5,
+    4,
+    6,
+    7,
+    7,
+    7,
+    7,
+    6,
+    6,
+    6,
+    7,
+    4,
+    5
+   ],
+   "mass": 5.0,
+   "fcm": 6.7,
+   "builders": 6.3,
+   "overall": 5.9,
+   "eval_necessity": 7,
+   "voice_match": 7,
+   "mass_dropoff_beat": "Beat 9 ('So before any run, I wrote the right answer and one check'): the story turns into method before any failure has paid off, and beat 3 already spent a line on set-up. Second dip at beat 13, where the 'in waves' answer and a checker verdict are on screen only while the voice says just 'three runs failed again'.",
+   "top_fixes": [
+    "Speak the 'in waves' answer instead of the meta beat 3 (e.g. 'One answer even looked smart: all 300 stores, but in waves'), so the second failure round is a story a manager recognises and not a repeat of beat 10.",
+    "Let the APPROVED stamp land on beat 7 and crack on the three crosses at beat 10; the hovering stamp tells the viewer a twist is coming and weakens the nod-along.",
+    "Fix beats 12-13 against results_ladder.json before lock: the beat 13 verdict wording is not in the file and its nearest match is a casual-run verdict, not fix one; the 'most of that 30% is Diwali' line is a cover note, not a note below the slide; add the third real headlines. Then make beat 19 usable by non-builders: 'So always tell your AI: if the data disagrees, say it in the title.'"
+   ]
+  },
+  "B": {
+   "personas": [
+    7,
+    7,
+    6,
+    6,
+    5,
+    6,
+    8,
+    7,
+    8,
+    8,
+    7,
+    7,
+    6,
+    7,
+    4,
+    5
+   ],
+   "mass": 5.7,
+   "fcm": 7.5,
+   "builders": 6.5,
+   "overall": 6.5,
+   "eval_necessity": 8,
+   "voice_match": 7,
+   "mass_dropoff_beat": "Beat 12 ('So I told it: use only the data. Three runs failed again.'): the second failure round with three long headlines on screen, right after the reveal has already paid off at beats 10-11. Mass viewers who got the Diwali twist feel the story is over; beat 13 wins back the work audience but not personas 5, 15 and 16.",
+   "top_fixes": [
+    "Merge beats 12 and 13 into one spoken beat ('So I told it: use only the data. It still said all 300 stores, just in waves') and show only the waves line with 'all 300 stores' circled; three near-identical headlines are unreadable at 1.1x. Use the freed beat to say in plain words what an eval is, since 'eval' is never explained after beat 2 (e.g. 'An eval is just a test you write before the AI answers').",
+    "Make beat 10 the eval's catch, not the creator's: 'The checker said: two stores, two festival weeks, too thin', which matches the verdict already on screen. As written the creator announces Diwali himself, which is the flaw the creator rejected in v8.",
+    "Turn the save asset into something a CA, HR exec or bank RM can use tomorrow: speak the rule as an instruction ('So always tell your AI: if the data disagrees, say it in the title') with the verbatim Rule 2 on the card to copy, and keep 'three runs, not one' as the second line. Also drop the double 'So' at beats 15-16 and cut beat 16 to 14 words or fewer."
+   ]
+  }
+ },
+ "labels": {
+  "prior_winner": "A",
+  "merged": "B"
+ }
+}

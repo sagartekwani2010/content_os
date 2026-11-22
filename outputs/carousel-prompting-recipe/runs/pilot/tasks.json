@@ -1,0 +1,88 @@
+{
+ "model": "claude-fable-5-2",
+ "repeats": 2,
+ "tasks": [
+  {
+   "id": "t1_context",
+   "technique": "Context",
+   "before": [
+    "Explain what an API is in under 60 words."
+   ],
+   "after": [
+    "Explain what an API is in under 60 words. This is for a small grocery shop owner who has never coded. He cares about whether it could help his billing."
+   ]
+  },
+  {
+   "id": "t2_constraints",
+   "technique": "Constraints",
+   "before": [
+    "Give me a dinner recipe for 2 people. Under 80 words."
+   ],
+   "after": [
+    "Give me a dinner recipe for 2 people. Under 80 words. Must: vegetarian, no onion or garlic, ready in 30 minutes. Must not: use an oven."
+   ]
+  },
+  {
+   "id": "t3_fewshot",
+   "technique": "Few-shot examples",
+   "before": [
+    "Rewrite this resume line so it stands out: \"Responsible for handling customer complaints.\" Give one line."
+   ],
+   "after": [
+    "Rewrite this resume line so it stands out: \"Responsible for handling customer complaints.\" Give one line. Here are 2 examples of what I want:\n- Cut invoice errors by 30% by building a weekly Excel check.\n- Trained 6 new hires in 2 weeks with a checklist I wrote."
+   ]
+  },
+  {
+   "id": "t4_stepbystep",
+   "technique": "Step-by-step",
+   "before": [
+    "I earn Rs 60,000 a month. Rent is 35% of it, my EMI is Rs 12,500, and I want to save a quarter of whatever is left after rent and EMI. How much can I spend each month?"
+   ],
+   "after": [
+    "I earn Rs 60,000 a month. Rent is 35% of it, my EMI is Rs 12,500, and I want to save a quarter of whatever is left after rent and EMI. How much can I spend each month? Work through it step by step before answering."
+   ]
+  },
+  {
+   "id": "t5_format",
+   "technique": "Output format",
+   "before": [
+    "Plan a 2-day budget trip to Jaipur. Under 120 words."
+   ],
+   "after": [
+    "Plan a 2-day budget trip to Jaipur. Under 120 words. Answer as a table with columns: Day | Time | Place | Cost (Rs)."
+   ]
+  },
+  {
+   "id": "t6_chain",
+   "technique": "Prompt chaining",
+   "before": [
+    "Turn these notes into an email to my team.\nNotes: call w/ vendor tue: price up 8% from jan. they want an answer by 30 nov. asha to check budget. me to ask 2 other vendors for quotes by 27 nov. ravi said quality issues in last batch, need a fix plan from vendor."
+   ],
+   "after": [
+    "From these notes, list every action as: who | what | by when. Write \"?\" where the notes don't say.\nNotes: call w/ vendor tue: price up 8% from jan. they want an answer by 30 nov. asha to check budget. me to ask 2 other vendors for quotes by 27 nov. ravi said quality issues in last batch, need a fix plan from vendor.",
+    "Write a short email to my team from this action list. Put the actions first, as bullets with owner and date.\nAction list:\n{prev}",
+    "Cut this email to under 80 words. Keep every owner and date.\nEmail:\n{prev}"
+   ]
+  },
+  {
+   "id": "t7_questions",
+   "technique": "Clarifying questions",
+   "before": [
+    "Make me a weekly workout plan. Under 100 words."
+   ],
+   "after": [
+    "Make me a weekly workout plan. Under 100 words. Ask me up to 3 questions before you start."
+   ]
+  },
+  {
+   "id": "t8_selfcheck",
+   "technique": "Self-check",
+   "before": [
+    "Write a description of homemade mango pickle for an Instagram post in exactly 40 words."
+   ],
+   "after": [
+    "Write a description of homemade mango pickle for an Instagram post in exactly 40 words. Then check your answer against my brief, and fix it if it doesn't match. Show the check and the final version."
+   ]
+  }
+ ]
+}

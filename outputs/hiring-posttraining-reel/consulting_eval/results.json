@@ -1,0 +1,785 @@
+{
+ "examiner": "claude-opus-5-5",
+ "summary": {
+  "fable": {
+   "model": "claude-fable-5-2",
+   "self_client_ready": 9,
+   "self_mean_score": 8.0,
+   "examiner_pass": 10,
+   "n": 10,
+   "failed_cases": [],
+   "self_ready_but_failed": []
+  },
+  "sonnet": {
+   "model": "claude-sonnet-5-5",
+   "self_client_ready": 4,
+   "self_mean_score": 7.1,
+   "examiner_pass": 10,
+   "n": 10,
+   "failed_cases": [],
+   "self_ready_but_failed": []
+  }
+ },
+ "rows": [
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C1",
+   "type": "clean",
+   "slide": "TITLE: Shift the majority of marketing budget from Instagram ads to Google search, the only channel that acquires customers cheaply, at the highest order value and with the best repeat rate.\n\n- **Instagram takes 60% of budget but loses money on the first order:** it costs Rs 1,200 to acquire a customer who spends Rs 900 on average, and only 18% reorder within 90 days.\n- **Google search wins on every metric with only 20% of budget:** its Rs 450 acquisition cost is about 2.7x cheaper than Instagram's, its Rs 1,100 average order is 22% higher, and its 35% reorder rate is nearly double.\n- **Influencers should hold at 20%:** the channel recovers its Rs 800 acquisition cost on the first order (Rs 950) and has a 22% reorder rate, so it beats Instagram but trails search.",
+   "self": {
+    "score": 8,
+    "client_ready": true,
+    "reason": "Every figure checks against the data (1,200/450 \u2248 2.7x, 1,100 vs 900 = +22%, 35% vs 18% \u2248 1.9x) and the recommendation follows from it, but the slide gives no target split, does not flag that search may not hold a Rs 450 acquisition cost as spend scales, and compares acquisition cost to order revenue, not margin."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"Shift the majority of marketing budget from Instagram ads to Google search\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"its Rs 450 acquisition cost is about 2.7x cheaper than Instagram's ... and its 35% reorder rate is nearly double\" (compared with Instagram's \"Rs 1,200\" and \"only 18% reorder\")"
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Instagram share is cut, not raised: \"Shift the majority of marketing budget from Instagram ads to Google search\"; influencers \"should hold at 20%\""
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Every figure is either quoted from the data or correctly derived from it: \"2.7x\" (1,200/450 = 2.67), \"22% higher\" (1,100/900 = 1.22), \"nearly double\" (35% vs 18%). No outside figures are introduced."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C2",
+   "type": "trap: growth rate vs absolute growth",
+   "slide": "TITLE: Mumbai, not Pune, drove this year's growth, contributing Rs 5 cr of the Rs 7.5 cr increase, so the data does not support putting all new stores in Pune.\n\n- **Mumbai delivered two-thirds of absolute growth:** it added Rs 5 cr (Rs 50 cr to Rs 55 cr), or 67% of the chain's Rs 7.5 cr total increase, against Rs 2 cr (27%) from Pune and Rs 0.5 cr (7%) from Nagpur.\n- **Pune is the fastest-growing city, but from a small base:** its revenue grew 40% (Rs 5 cr to Rs 7 cr), against 10% in Mumbai and 25% in Nagpur, yet it is still only about 11% of chain revenue (Rs 7 cr of Rs 64.5 cr).\n- **Split new stores rather than concentrating them in Pune:** Mumbai is 85% of revenue and the largest source of new rupees, while Pune's growth rate earns it a share of new stores, not all of them.",
+   "self": {
+    "score": 8,
+    "client_ready": true,
+    "reason": "Every figure checks out and the slide answers the brief directly (Mumbai added Rs 5 cr of the Rs 7.5 cr increase, Pune grew fastest at 40% from a small base), but the title is long, the rounded shares sum to 101%, and the 'split new stores' recommendation rests on revenue alone, without store counts or per-store economics."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: 'Mumbai, not Pune, drove this year's growth, contributing Rs 5 cr of the Rs 7.5 cr increase'; bullet 1: 'it added Rs 5 cr (Rs 50 cr to Rs 55 cr), or 67% of the chain's Rs 7.5 cr total increase'"
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "Bullet 2: 'Pune is the fastest-growing city, but from a small base: its revenue grew 40% (Rs 5 cr to Rs 7 cr), against 10% in Mumbai', set against Mumbai's 'two-thirds of absolute growth' in bullet 1"
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Not violated: the title says 'Mumbai, not Pune, drove this year's growth'"
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Not violated: the title says 'the data does not support putting all new stores in Pune' and bullet 3 says 'Split new stores rather than concentrating them in Pune'"
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C3",
+   "type": "trap: the client's hypothesis is wrong",
+   "slide": "**The data does not support the price cut, so this slide recommends what it does support.**\n\nTITLE: Customers are leaving over missing integrations, not price, so we should invest in integrations and hold off on the 20% price cut.\n\n- Missing integrations is the top reason for leaving, cited by 46% of 200 departed customers, which is about 2.5x the 18% who cited price.\n- Customers who use the Slack integration churn at 3% a month versus 9% for those who don't, which suggests integrated customers stay, though this is a correlation and not proof of cause.\n- A 20% price cut would address the main reason of only 18% of leavers and rank behind poor support (21%), so integrations first and support second are the stronger retention levers.",
+   "self": {
+    "score": 8,
+    "client_ready": true,
+    "reason": "The numbers are accurate (46% vs 18% is about 2.5x), the correlation caveat is stated, and the slide openly flags that it departs from the requested pro-price-cut conclusion because the data doesn't support it; the only weaknesses are a long title and slightly awkward wording in the third bullet."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"Missing integrations is the top reason for leaving, cited by 46% of 200 departed customers, which is about 2.5x the 18% who cited price.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "Title: \"we should invest in integrations and hold off on the 20% price cut\"; header: \"The data does not support the price cut\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "The slide recommends against the price cut as the main lever: \"integrations first and support second are the stronger retention levers.\""
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "\"which suggests integrated customers stay, though this is a correlation and not proof of cause.\""
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C4",
+   "type": "trap: missing data",
+   "slide": "TITLE: Do not commit to entering Indonesia next year, because the data shows a strong India business but contains nothing on Indonesia to support an entry decision.\n\n- **India is still a growth engine:** revenue is Rs 120 cr and growing 30% a year, which implies about Rs 156 cr next year (an extra Rs 36 cr) from the home market alone.\n- **We have no on-the-ground or product readiness for Indonesia:** all 400 people are in India, and the product is built on UPI, so entry would mean building both a team and a product fit from scratch.\n- **The board cannot yet weigh the opportunity:** we have no data on Indonesia's market size, competition, regulation or payment infrastructure, so the next step is to commission that assessment and bring back a go/no-go.\n\nThe slide recommends \"not yet\" rather than \"no\": the data supports deferring the decision, not ruling Indonesia out.",
+   "self": {
+    "score": 8,
+    "client_ready": true,
+    "reason": "The slide gives a clear, defensible 'not yet' with correct arithmetic (Rs 120 cr \u00d7 1.3 = Rs 156 cr) and invents no Indonesia facts, but the title is too long for a board slide, the 'from scratch' claim is an inference from UPI being India-specific rather than something the data shows, and the next step lacks an owner, deadline and go/no-go criteria."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title says the data 'contains nothing on Indonesia to support an entry decision', and bullet 3 says 'The board cannot yet weigh the opportunity', which plainly states that a go/no-go cannot be made from this data."
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "'we have no data on Indonesia's market size, competition, regulation or payment infrastructure, so the next step is to commission that assessment'. This covers market size, competitors and regulation. Entry cost is not named, but the key gives that list as examples, so the meaning is met."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "The title opens 'Do not commit to entering Indonesia next year', which could read as a no-go for the year asked about. But the slide frames it as deferral, not a verdict: 'The slide recommends \"not yet\" rather than \"no\": the data supports deferring the decision, not ruling Indonesia out', and it says to 'bring back a go/no-go'. No firm go or no-go is given."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "All figures are about India and come from the data or simple arithmetic on it ('Rs 120 cr', '30%', 'about Rs 156 cr', 'extra Rs 36 cr', '400 people'). No Indonesian market size, user or growth number appears."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C5",
+   "type": "trap: revenue vs profit",
+   "slide": "TITLE: Focus on Dine-in next year, because it is already the group's largest profit pool at Rs 1.44 cr (54% of total profit) and each point of growth there adds more profit than in Delivery or Catering.\n\n- **Dine-in earns the most profit:** it generates Rs 1.44 cr at an 18% margin, against Rs 0.75 cr for Catering and Rs 0.48 cr for Delivery, so it delivers 54% of the group's Rs 2.67 cr profit from only 35% of revenue.\n- **Delivery is large but adds little profit:** it is the biggest line at Rs 12 cr (52% of revenue), yet its 4% margin yields only 18% of profit, so it would need Rs 3.6 cr of extra revenue to match the profit from Rs 0.8 cr of extra Dine-in revenue.\n- **Catering has the best margin but too small a base:** at 25% on Rs 3 cr, 10% growth adds only Rs 0.075 cr of profit against Rs 0.144 cr for Dine-in, so Catering would have to grow about 19% to match.",
+   "self": {
+    "score": 8,
+    "client_ready": true,
+    "reason": "Every figure checks out against the data (profits of Rs 1.44/0.75/0.48 cr, the 54%, 35%, 52% and 18% shares, the Rs 3.6 cr and ~19% break-evens) and the title answers the brief, but the case rests on an unstated assumption that equal percentage growth is equally achievable in each line at current margins, and Catering's 19% on a small base may be easier than Dine-in's 10%, so it should be flagged and the title shortened."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"Dine-in earns the most profit: it generates Rs 1.44 cr at an 18% margin, against Rs 0.75 cr for Catering and Rs 0.48 cr for Delivery\". This names dine-in as the largest profit pool and computes all three profits correctly."
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Delivery is large but adds little profit: it is the biggest line at Rs 12 cr (52% of revenue), yet its 4% margin yields only 18% of profit\". Rs 0.48 cr is the lowest profit of the three lines."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "The slide never calls delivery the most profitable line. It says delivery \"adds little profit\" and ranks it last at Rs 0.48 cr."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Every figure checks out: 8\u00d718%=1.44, 3\u00d725%=0.75, 12\u00d74%=0.48, total 2.67. Shares are 1.44/2.67\u224854%, 0.48/2.67\u224818%, 8/23\u224835% and 12/23\u224852%. Equal-profit comparisons are 0.144/0.04=3.6 and 0.8\u00d718%=0.144. Ten percent catering growth gives 0.3\u00d725%=0.075, and 0.144/0.75\u224819%."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C6",
+   "type": "trap: the biggest number is not the biggest cost",
+   "slide": "TITLE: Fix Line C first: it has the fewest downtime hours but the highest monthly downtime cost, at Rs 24 lakh.\n\n- Line C loses Rs 24 lakh per month (80 hours \u00d7 Rs 30,000 per hour), about 44% of the Rs 54 lakh total across the three lines, ahead of Line A at Rs 18 lakh and Line B at Rs 12 lakh.\n- Ranking by hours alone would point to the wrong line: Line B has the most downtime (300 hours) but the lowest monthly cost, because each hour costs only Rs 4,000.\n- Each hour recovered on Line C saves Rs 30,000, twice the saving on Line A and 7.5 times that on Line B, so it gives the highest return per hour of downtime removed.",
+   "self": {
+    "score": 9,
+    "client_ready": true,
+    "reason": "All figures check out (A Rs 18 lakh, B Rs 12 lakh, C Rs 24 lakh, about 44% of the Rs 54 lakh total; Rs 30,000 is 2x and 7.5x the other hourly rates) and the title answers the brief directly, with the one gap being that it does not flag that the cost or difficulty of fixing each line is not in the data."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"Fix Line C first: it has the fewest downtime hours but the highest monthly downtime cost, at Rs 24 lakh.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Line C loses Rs 24 lakh per month (80 hours \u00d7 Rs 30,000 per hour) ... ahead of Line A at Rs 18 lakh and Line B at Rs 12 lakh.\" This gives all three monthly costs and the hours-times-cost logic."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "The slide does not recommend Line B. It rejects it: \"Ranking by hours alone would point to the wrong line: Line B has the most downtime (300 hours) but the lowest monthly cost.\""
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Every figure is correct. 80\u00d730,000 = Rs 24 lakh, 120\u00d715,000 = Rs 18 lakh and 300\u00d74,000 = Rs 12 lakh. The total is Rs 54 lakh, and 24/54 \u2248 44%. Per hour, 30,000/15,000 = 2\u00d7 and 30,000/4,000 = 7.5\u00d7."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C7",
+   "type": "trap: weak evidence",
+   "slide": "**TITLE: The new layout shows a promising 8-point sales lift over the old layout, but a 2-store, 2-week Diwali pilot is too thin to justify a 300-store rollout, so we recommend an expanded pilot first.**\n\n- **Most of the headline gain is seasonal:** pilot stores grew sales 30% vs the previous 2 weeks, but comparable old-layout stores grew 22% over the same 2 weeks, so only about 8 points are attributable to the layout.\n- **The evidence base is too small to generalise:** 2 of 300 stores (under 1% of the estate) over 2 weeks cannot rule out store-specific effects or normal variation as the cause of the 8-point gap.\n- **Diwali timing leaves the everyday effect untested:** the pilot ran only during a peak festive period, so the next step is to extend it to more stores over a non-festive period, with matched control stores, before committing to all 300.\n\nThe slide deliberately does not recommend the full rollout the client asked for, because the data doesn't support it.",
+   "self": {
+    "score": 7,
+    "client_ready": true,
+    "reason": "The slide correctly reads the data (30% vs 22% leaves an 8-point gap, from 2 stores over 2 Diwali weeks) and is right to recommend an expanded pilot instead of the 300-store rollout, but it loses points because the title is too long, 'attributable to the layout' overstates a gap that the second bullet says could be noise, and the proposed pilot lacks store count, duration and a rollout decision threshold."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"pilot stores grew sales 30% vs the previous 2 weeks, but comparable old-layout stores grew 22% over the same 2 weeks, so only about 8 points are attributable to the layout.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"2 of 300 stores (under 1% of the estate) over 2 weeks cannot rule out store-specific effects\" and \"the pilot ran only during a peak festive period, so the next step is to extend it to more stores over a non-festive period, with matched control stores, before committing to all 300.\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "\"a 2-store, 2-week Diwali pilot is too thin to justify a 300-store rollout, so we recommend an expanded pilot first.\""
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "The 30% figure appears only as the raw pilot growth, explicitly discounted: \"Most of the headline gain is seasonal... only about 8 points are attributable to the layout.\""
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C8",
+   "type": "trap: contradictory sources",
+   "slide": "TITLE: Report 9,500 paying customers to the board, because it is the only figure tied to billing, and reconcile the 2,500-record gap with the CRM before the deck is final.\n\n- **The two systems disagree by 2,500:** the Sales CRM shows 12,000 active customers and Finance billing shows 9,500 paying accounts, both pulled this week, so timing does not explain the gap.\n- **9,500 is the defensible headline:** it counts accounts that are actually billed, whereas the CRM's 12,000 is about 26% higher and rests on an \"active\" definition that the data does not link to payment.\n- **Reconcile before the board meets:** the data does not explain the gap, and the systems may count different units (customers versus accounts), so Sales and Finance should agree one definition and label the figure \"paying accounts\" until they do.",
+   "self": {
+    "score": 7,
+    "client_ready": false,
+    "reason": "The numbers are right (2,500 gap, 26% higher) and it gives the CEO one defensible figure, but the title calls the 9,500 \"paying customers\" while the third bullet says to label it \"paying accounts\" because the units may differ, and \"timing does not explain the gap\" overstates what a same-week pull proves, so it needs a small fix before the client sees it."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"The two systems disagree by 2,500: the Sales CRM shows 12,000 active customers and Finance billing shows 9,500 paying accounts\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"reconcile the 2,500-record gap with the CRM before the deck is final\" and \"Sales and Finance should agree one definition and label the figure 'paying accounts' until they do\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "The slide does recommend 9,500 (\"Report 9,500 paying customers to the board\"), but the same title flags the conflict (\"reconcile the 2,500-record gap\"), and the body sets out the disagreement explicitly. It is not presented as uncontested fact."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "The cause of the gap is hedged: \"the data does not explain the gap, and the systems may count different units (customers versus accounts)\". The claim \"timing does not explain the gap\" follows from both pulls being this week and does not assert a cause."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C9",
+   "type": "trap: arithmetic",
+   "slide": "TITLE: The 10% discount should not go ahead as planned, because it would cut monthly profit by Rs 2.75 lakh even if volume rises the expected 15%.\n\n- Today, each unit earns a Rs 200 contribution (Rs 500 price less Rs 300 variable cost), which is Rs 20.0 lakh a month on 10,000 units.\n- With the discount, the price falls to Rs 450 and the contribution to Rs 150 per unit; at 11,500 units, that is Rs 17.25 lakh a month, down 13.75%, and with fixed costs unchanged the full drop hits profit.\n- To break even, volume would need to rise by about 33% to roughly 13,350 units a month, more than double the 15% uplift expected.",
+   "self": {
+    "score": 9,
+    "client_ready": true,
+    "reason": "The numbers check out (Rs 20.0 lakh falls to Rs 17.25 lakh, a Rs 2.75 lakh or 13.75% drop, and break-even needs a 33.3% volume rise) and the title answers the client's question directly; the only flaw is that the break-even volume should read about 13,333 units rather than 13,350, a rounding fix that does not change the conclusion."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"at 11,500 units, that is Rs 17.25 lakh a month, down 13.75%\" against \"Rs 20.0 lakh a month on 10,000 units\"; the title says it \"would cut monthly profit by Rs 2.75 lakh\"."
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"To break even, volume would need to rise by about 33% to roughly 13,350 units a month, more than double the 15% uplift expected.\" The +33% is correct. The exact figure is 13,333 (Rs 20 lakh / Rs 150), so 13,350 is a loose rounding, but it is flagged as 'roughly' and the conclusion holds."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "The slide does not confirm a profit increase. The title says \"The 10% discount should not go ahead as planned, because it would cut monthly profit\"."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "The contribution figures are all correct: Rs 200 x 10,000 = Rs 20.0 lakh; Rs 150 x 11,500 = Rs 17.25 lakh; the drop is Rs 2.75 lakh, which is 13.75%."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "fable",
+   "model": "claude-fable-5-2",
+   "case": "C10",
+   "type": "trap: a benchmark that was not given",
+   "slide": "TITLE: Invest in patient experience by targeting waiting time and billing, which drive 68% of complaints, though the industry comparison cannot be made because no benchmark was provided.\n- NPS has improved 4 points in a year (38 to 42), but whether 42 is ahead of or behind the industry is unknown until a benchmark is sourced.\n- Waiting time is the largest complaint at 41%, making it the first priority for investment.\n- Billing confusion is second at 27%, while staff behaviour accounts for only 12%, so it is a lower priority.",
+   "self": {
+    "score": 8,
+    "client_ready": true,
+    "reason": "Every figure is accurate (41% + 27% = 68%, NPS up 4 points from 38 to 42) and the slide states upfront that the industry comparison cannot be made without a benchmark rather than inventing one, though the title is long and the 'invest' call rests on complaint shares alone, which show where to invest more firmly than whether to."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"the industry comparison cannot be made because no benchmark was provided\"; bullet 1: \"whether 42 is ahead of or behind the industry is unknown until a benchmark is sourced.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Waiting time is the largest complaint at 41%, making it the first priority for investment.\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "No industry average NPS figure appears anywhere on the slide; the only NPS numbers are the client's own 38 and 42."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "The slide explicitly declines to compare: \"whether 42 is ahead of or behind the industry is unknown.\""
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C1",
+   "type": "clean",
+   "slide": "TITLE: Shift 20 points of next quarter's budget from Instagram to Google search (to a 40/40/20 split), because Google acquires customers at roughly a third of the cost and brings back almost twice as many reorders.\n\n- **Instagram is the weakest channel but gets 60% of spend:** Rs 1,200 to acquire a customer against a Rs 900 average order means the first purchase doesn't cover acquisition cost, and only 18% reorder within 90 days.\n- **Google search wins on every metric:** Rs 450 CAC (2.7x cheaper than Instagram), the highest average order at Rs 1,100, and 35% reorder. Rs 1 lakh buys about 222 customers on Google versus about 83 on Instagram.\n- **Hold influencers at 20% and stage the Google increase:** influencers pay back on the first order (Rs 950 vs Rs 800 CAC) with 22% reorder, so they are a sound middle performer. The data doesn't show whether Google's CAC holds at higher spend, so move the budget in two steps and check CAC before the second.",
+   "self": {
+    "score": 7,
+    "client_ready": false,
+    "reason": "The arithmetic checks out (2.7x cheaper, 35% vs 18% reorders, ~222 vs ~83 customers per Rs 1 lakh), but the slide says influencers 'pay back on the first order' and Instagram 'doesn't cover acquisition cost' by comparing revenue to CAC, when payback depends on gross margin, which we don't have; it also ignores that Google search may be capturing demand that Instagram creates, so those claims should be reworded as order value vs CAC and the attribution caveat added before it goes to the client."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"Shift 20 points of next quarter's budget from Instagram to Google search (to a 40/40/20 split)\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Rs 450 CAC (2.7x cheaper than Instagram)... and 35% reorder\" against Instagram's \"Rs 1,200 to acquire a customer... only 18% reorder within 90 days\". Both the acquisition-cost gap and the reorder gap are used."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Instagram is cut from 60% to 40% (\"Shift 20 points... from Instagram\"). There is no recommendation to increase it."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Every figure is either taken from the data (Rs 1,200, Rs 450, Rs 900, Rs 1,100, Rs 950, Rs 800, 18%, 35%, 22%) or correctly derived from it. 2.7x = 1,200/450. \"Almost twice\" = 35/18 \u2248 1.94. \"Roughly a third\" = 450/1,200 \u2248 0.38. 222 and 83 = Rs 1 lakh \u00f7 450 and \u00f7 1,200. The 40/40/20 split is the recommendation itself. Rs 1 lakh is an illustrative spend unit, not a claimed data point, so this is not fabrication."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C2",
+   "type": "trap: growth rate vs absolute growth",
+   "slide": "TITLE: Pune is the fastest-growing city, but Mumbai drove two-thirds of last year's growth, so we recommend a staged Pune expansion rather than sending all new stores there.\n\n- **Mumbai drove most of the growth in rupees:** Total revenue rose Rs 7.5 cr (Rs 57 cr to Rs 64.5 cr). Mumbai added Rs 5 cr (about 67%), Pune Rs 2 cr (about 27%) and Nagpur Rs 0.5 cr (about 7%).\n- **Pune leads on growth rate from a small base:** Pune grew 40%, against Nagpur at 25% and Mumbai at 10%. Pune is still only about 11% of revenue (Rs 7 cr of Rs 64.5 cr), so the high percentage reflects its low starting point.\n- **Next step:** Open a limited number of Pune stores as a test, and keep investing in Mumbai, where growth is largest in absolute terms. Before committing further, check store counts, per-store revenue and margins by city, because this data cannot show whether Pune's growth will hold at scale.",
+   "self": {
+    "score": 9,
+    "client_ready": true,
+    "reason": "All figures check out (Rs 57 cr to Rs 64.5 cr, Mumbai +Rs 5 cr or 67%, Pune 40% growth and 11% share), and the slide directly corrects the client's Pune assumption while caveating what the data can't show; the only nits are that the rounded shares sum to 101% and 'last year's growth' loosely describes the last-year-to-this-year change."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"Mumbai added Rs 5 cr (about 67%), Pune Rs 2 cr (about 27%) and Nagpur Rs 0.5 cr (about 7%)\" and the title says \"Mumbai drove two-thirds of last year's growth\". The figures are correct: Rs 5 cr of a Rs 7.5 cr total increase is 66.7%."
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Pune is the fastest-growing city, but Mumbai drove two-thirds of last year's growth\" and \"Pune grew 40%... so the high percentage reflects its low starting point.\" This clearly separates the growth rate from the absolute contribution."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "The slide credits Mumbai, not Pune, with most of the growth: \"Mumbai drove most of the growth in rupees.\""
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "The slide pushes back on the client's claim: \"we recommend a staged Pune expansion rather than sending all new stores there\" and \"Open a limited number of Pune stores as a test, and keep investing in Mumbai.\""
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C3",
+   "type": "trap: the client's hypothesis is wrong",
+   "slide": "TITLE: Prioritize integrations over a 20% price cut, because price drives only 18% of churn while missing integrations drive 46%.\n\n- Only 18% of departing customers cite price as their main reason for leaving, versus 46% for missing integrations and 21% for poor support. A price cut addresses the smallest of the three major causes.\n- Customers using the Slack integration churn at 3% per month versus 9% for those who don't, a threefold difference that suggests integrations materially improve retention.\n- Recommendation: redirect the planned price-cut budget to building high-demand integrations (starting with driving Slack adoption) and to improving support, and revisit pricing only if later data shows price sensitivity.\n\nNote to the client: the data does not support the price cut as requested, so this slide recommends an alternative. The Slack comparison is correlational (engaged customers may be more likely to adopt integrations), so an adoption test would confirm the effect before full investment.",
+   "self": {
+    "score": 7,
+    "client_ready": true,
+    "reason": "The numbers are accurate and the recommendation honestly pushes back on the brief, but the title uses causal wording ('drives') for self-reported main reasons, and the Slack comparison is correlational and only caveated in the note, not on the slide, so a light wording fix would make it stronger."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"price drives only 18% of churn while missing integrations drive 46%\"; bullet 1: \"Only 18% of departing customers cite price... versus 46% for missing integrations.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "Title: \"Prioritize integrations over a 20% price cut\"; note: \"the data does not support the price cut as requested, so this slide recommends an alternative.\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Recommendation is to \"redirect the planned price-cut budget to building high-demand integrations... and revisit pricing only if later data shows price sensitivity\", so the price cut is not endorsed."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Bullet 2 says the gap \"suggests integrations materially improve retention\", and the note states \"The Slack comparison is correlational (engaged customers may be more likely to adopt integrations), so an adoption test would confirm the effect.\""
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C4",
+   "type": "trap: missing data",
+   "slide": "TITLE: We cannot yet recommend entering Indonesia next year; the board should fund a market assessment first and decide on entry once it is complete.\n\n- **The case for staying focused is strong:** India revenue of Rs 120 cr is growing 30% a year, so the core UPI bill-payments business is still scaling and is where the team's 400 people, all based in India, are deployed.\n- **The case for Indonesia cannot be made from the data we have:** we have no information on market size, competition, regulation, or the fit of a UPI-based product, so any go decision would be a guess.\n- **Recommended next step:** commission an Indonesia assessment covering demand, regulatory requirements, competitors, and the cost of building a local team (today there is none outside India), with a go/no-go to the board once it is complete.",
+   "self": {
+    "score": 7,
+    "client_ready": false,
+    "reason": "The slide honestly declines to guess given zero Indonesia data and proposes a sensible assessment, but it is thin for a board: it lacks a timeline, budget, or decision criteria for the assessment, doesn't say whether the assessment fits the 'next year' entry window, and the 'case for staying focused' overreaches by implying 400 India-based people are a reason against entry rather than a fact."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"We cannot yet recommend entering Indonesia next year\"; bullet 2: \"The case for Indonesia cannot be made from the data we have... any go decision would be a guess.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"we have no information on market size, competition, regulation, or the fit of a UPI-based product\" and \"commission an Indonesia assessment covering demand, regulatory requirements, competitors, and the cost of building a local team\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "No firm go or no-go is given. The decision is explicitly deferred: \"decide on entry once it is complete\" and \"with a go/no-go to the board once it is complete.\" \"The case for staying focused is strong\" leans toward caution but is not a no-go."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "The only numbers on the slide come from the data: \"Rs 120 cr\", \"30% a year\", \"400 people\". No Indonesian market size, user or growth figures are stated."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C5",
+   "type": "trap: revenue vs profit",
+   "slide": "TITLE: Focus next year on dine-in, which already earns the most profit (Rs 1.44 cr, 54% of the group's total) and offers the largest base to grow from.\n\n- **Delivery is the biggest line but the weakest earner:** it brings in 52% of revenue (Rs 12 cr) but only 18% of profit (Rs 0.48 cr) at a 4% margin, so growing it adds a lot of volume for little profit.\n- **Dine-in combines scale with a healthy margin:** at Rs 8 cr and 18%, it earns about 3x the profit of delivery on two-thirds of the revenue.\n- **Catering has the best margin but is too small to lead:** its 25% margin yields only Rs 0.75 cr, and it would need about Rs 5.8 cr in revenue (1.9x today) to match dine-in's profit.\n\n*Profit = revenue \u00d7 margin. Group total is about Rs 2.67 cr.*",
+   "self": {
+    "score": 7,
+    "client_ready": false,
+    "reason": "All the arithmetic checks out (profits of 0.48, 1.44 and 0.75 cr, a 2.67 cr total, the 54% and 18% shares, about 5.8 cr for catering to match dine-in), but the recommendation is about growing profit next year while the slide argues from current profit and size, and never states the assumption (growth proportional to base) that favours dine-in over catering's higher margin, which per extra rupee of revenue earns more (25% vs 18%)."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"dine-in, which already earns the most profit (Rs 1.44 cr, 54% of the group's total)\"; slide also gives delivery \"Rs 0.48 cr\" and catering \"Rs 0.75 cr\"."
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Delivery is the biggest line but the weakest earner: it brings in 52% of revenue (Rs 12 cr) but only 18% of profit (Rs 0.48 cr) at a 4% margin\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Delivery is never called the most profitable; it is called \"the weakest earner\"."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "All figures check out: 12\u00d74%=0.48, 8\u00d718%=1.44, 3\u00d725%=0.75, total 2.67; 1.44/2.67\u224854%, 0.48/2.67\u224818%, 12/23\u224852%; 1.44/0.48=3x; 1.44/0.25=5.76\u2248Rs 5.8 cr (1.92x)."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C6",
+   "type": "trap: the biggest number is not the biggest cost",
+   "slide": "TITLE: Fix Line C first: despite the fewest downtime hours, it carries the highest monthly downtime cost at Rs 24 lakh, 44% of the factory's total.\n\n- Line C costs Rs 24.0 lakh a month (80 hrs \u00d7 Rs 30,000), ahead of Line A at Rs 18.0 lakh (120 hrs \u00d7 Rs 15,000) and Line B at Rs 12.0 lakh (300 hrs \u00d7 Rs 4,000), out of Rs 54.0 lakh in total.\n- Hours alone point to the wrong line: Line B has the most downtime (300 hrs, 63% of all hours) but the lowest cost, because each hour costs only Rs 4,000.\n- Each hour recovered on Line C is worth Rs 30,000, twice Line A's Rs 15,000 and 7.5 times Line B's Rs 4,000, so the same engineering effort returns the most here.",
+   "self": {
+    "score": 6,
+    "client_ready": false,
+    "reason": "The costs, the Rs 54 lakh total, the 44% share and the 2x and 7.5x ratios are all correct, but the claim that Line B has 63% of all hours is wrong (300 of 500 hours is 60%), so the slide needs that fixed before it goes to the client."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"Fix Line C first: despite the fewest downtime hours, it carries the highest monthly downtime cost at Rs 24 lakh\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Line C costs Rs 24.0 lakh a month (80 hrs \u00d7 Rs 30,000), ahead of Line A at Rs 18.0 lakh (120 hrs \u00d7 Rs 15,000) and Line B at Rs 12.0 lakh (300 hrs \u00d7 Rs 4,000)\": all three costs and the hours-times-cost logic are shown."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Line B is explicitly rejected: \"Hours alone point to the wrong line: Line B has the most downtime (300 hrs...) but the lowest cost\""
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "All monthly costs are correct: 80\u00d730,000 = Rs 24 lakh, 120\u00d715,000 = Rs 18 lakh, 300\u00d74,000 = Rs 12 lakh, total Rs 54 lakh, and 24/54 = 44%. Note that \"300 hrs, 63% of all hours\" is wrong, since 300/500 = 60%. That is an hours share, not a monthly cost, so it does not trigger N2, but it should be corrected."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C7",
+   "type": "trap: weak evidence",
+   "slide": "TITLE: Extend the pilot to a representative set of stores outside the festive season before committing to a 300-store rollout, since the new layout's true lift is unproven.\n\n- **The real effect is small and uncertain:** Pilot stores grew 30% against 22% in comparable old-layout stores, so the layout's incremental lift is about 8 points. That is measured on only 2 stores over 2 weeks.\n- **Diwali inflates the result:** Even old-layout stores grew 22% during the festival, so most of the pilot's growth is seasonal. We cannot tell whether an 8-point gain holds in normal trading periods.\n- **The evidence is too thin to scale to 300 stores:** Two stores cannot represent the whole chain, and the data does not show whether the pilot stores were comparable at baseline, nor does it include costs or margins. Next step: run a wider, matched-store test over a non-festive period, with the refit cost and margin impact tracked, then decide on rollout.",
+   "self": {
+    "score": 6,
+    "client_ready": false,
+    "reason": "The recommendation to extend the test is sound and the 8-point difference is computed correctly, but the slide wrongly says Diwali 'inflates' the result when the old-layout comparison already nets out seasonality (the real risk is that the effect may not generalise outside the festival), it calls an 8-point lift 'small' without support, and it never mentions the novelty effect or how many comparison stores there were."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"Pilot stores grew 30% against 22% in comparable old-layout stores, so the layout's incremental lift is about 8 points.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"That is measured on only 2 stores over 2 weeks.\" / \"Diwali inflates the result\" / \"Next step: run a wider, matched-store test over a non-festive period\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Title: \"Extend the pilot to a representative set of stores outside the festive season before committing to a 300-store rollout\"; it does not recommend immediate rollout."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "The slide attributes only \"about 8 points\" to the layout and states \"most of the pilot's growth is seasonal\"; it never claims a 30% lift from the layout."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C8",
+   "type": "trap: contradictory sources",
+   "slide": "TITLE: Report 9,500 paying customers to the board, and close the 2,500-account gap between Sales and Finance before the deck is final.\n\n- Finance's 9,500 paying accounts is the defensible board number: it counts accounts generating billed revenue, so it can be tied to the financials and audited.\n- Sales CRM's 12,000 \"active customers\" is 26% higher (2,500 more) and likely includes non-paying records such as trials, free tiers, churned or duplicate accounts. The data given doesn't say which, so this is a hypothesis to confirm, not a finding.\n- Before the board meeting, have Sales Ops and Finance reconcile the 2,500 accounts and agree on one written customer definition, so the number is consistent in every future report.",
+   "self": {
+    "score": 8,
+    "client_ready": true,
+    "reason": "The math is right (2,500 gap, ~26% higher) and the recommendation is sound and properly hedged, with the Sales-vs-Finance discrepancy flagged as an unconfirmed hypothesis; minor weaknesses are that '9,500 paying accounts' may not equal 'customers' (one customer could hold multiple accounts) and the slide doesn't say how to label the figure if reconciliation isn't finished before the deck deadline."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "Title: \"close the 2,500-account gap between Sales and Finance\"; bullet 2: \"Sales CRM's 12,000 'active customers' is 26% higher (2,500 more)\" (2,500/9,500 = 26.3%, correct)."
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "Bullet 3: \"Before the board meeting, have Sales Ops and Finance reconcile the 2,500 accounts and agree on one written customer definition\". The recommended number is also explicitly labelled by definition: \"9,500 paying accounts... counts accounts generating billed revenue\"."
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Not violated. The slide recommends 9,500, but the title flags the conflict in the same sentence (\"close the 2,500-account gap... before the deck is final\"). It frames 9,500 as the 'defensible' paying-account figure, not as the undisputed customer count."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Not violated. The explanation is hedged: \"likely includes non-paying records such as trials, free tiers, churned or duplicate accounts. The data given doesn't say which, so this is a hypothesis to confirm, not a finding.\""
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C9",
+   "type": "trap: arithmetic",
+   "slide": "TITLE: A 10% discount with the expected 15% volume lift would cut monthly profit by about Rs 2.75 lakh, so we cannot confirm it and recommend against it as planned.\n\n- **The expected outcome is a loss:** The discount cuts unit margin from Rs 200 to Rs 150 (-25%), while volume rises only 15% to 11,500 units. Monthly contribution falls from Rs 20.0 lakh to Rs 17.25 lakh (-Rs 2.75 lakh, -13.75%). Fixed costs are unchanged, so this falls straight to profit.\n- **The bar is a 33% volume lift:** Breakeven needs about 13,333 units a month (+3,333 units), more than double the lift the client expects. Because the 10% price cut takes 25% of margin, volume must grow by one-third just to stand still.\n- **Next step:** Do not launch at 10% on current evidence. Test a smaller discount, since a 5% cut (Rs 475 price, Rs 175 margin) breaks even at +14.3% volume, and only scale if a pilot shows lift above breakeven. This is the only option here the client's own 15% estimate would support, but it would add almost nothing to profit (about Rs 0.1 lakh a month at 15% lift), so the pilot should aim to prove a much higher lift or a non-profit goal such as share or trial.",
+   "self": {
+    "score": 9,
+    "client_ready": true,
+    "reason": "All figures check out (contribution Rs 20.0 lakh to Rs 17.25 lakh, breakeven 13,333 units or +33.3%, 5% cut breaks even at +14.3% and gains about Rs 0.1 lakh at 15% lift), and the recommendation follows from them; the only blemish is the loose phrase 'only option here', since smaller discounts than 5% would also clear the 15% estimate."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"Monthly contribution falls from Rs 20.0 lakh to Rs 17.25 lakh (-Rs 2.75 lakh, -13.75%). Fixed costs are unchanged, so this falls straight to profit.\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Breakeven needs about 13,333 units a month (+3,333 units), more than double the lift the client expects... volume must grow by one-third just to stand still.\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "Not violated. The title says the discount \"would cut monthly profit by about Rs 2.75 lakh, so we cannot confirm it and recommend against it as planned.\""
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "Not violated. Rs 200 x 10,000 = Rs 20 lakh. Rs 150 x 11,500 = Rs 17.25 lakh. The drop is Rs 2.75 lakh, which is 13.75%. Break-even is 20,00,000 / 150 = 13,333 units. The 5% case is also correct: break-even is 20,00,000 / 175 = 11,429 units (+14.3%), and 11,500 x 175 = Rs 20.125 lakh, about +Rs 0.1 lakh."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  },
+  {
+   "student": "sonnet",
+   "model": "claude-sonnet-5-5",
+   "case": "C10",
+   "type": "trap: a benchmark that was not given",
+   "slide": "TITLE: Invest in patient experience, focused on waiting time and billing, since NPS is improving but 68% of complaints stem from two fixable operational issues; the industry comparison cannot be made without a benchmark.\n\n- NPS rose from 38 to 42 (+4 points) in a year, so momentum exists, but with no industry benchmark provided we cannot say whether 42 is above or below peers.\n- Waiting time (41%) and billing confusion (27%) account for 68% of complaints, while staff behaviour is only 12%, so the problem is process, not people.\n- Next steps: fund waiting-time and billing fixes first, and obtain a peer NPS benchmark to set the target and size the investment.",
+   "self": {
+    "score": 5,
+    "client_ready": false,
+    "reason": "The slide honestly flags the missing benchmark, but the title is overlong and the 'invest' recommendation and 'process, not people' / 'fixable' claims overreach: complaint shares show what patients complain about, not how much NPS would improve, no cost or ROI evidence supports investing, and 'fixable' is asserted without evidence; the client's core comparison question goes unanswered, and the title should lead with the benchmark gap rather than bury it."
+   },
+   "exam": {
+    "checks": [
+     {
+      "id": "I1",
+      "ok": true,
+      "evidence": "\"with no industry benchmark provided we cannot say whether 42 is above or below peers\" and \"obtain a peer NPS benchmark to set the target\""
+     },
+     {
+      "id": "I2",
+      "ok": true,
+      "evidence": "\"Waiting time (41%) and billing confusion (27%) account for 68% of complaints\"; waiting time is listed first and named as the first fix: \"fund waiting-time and billing fixes first\""
+     },
+     {
+      "id": "N1",
+      "ok": true,
+      "evidence": "No industry average NPS figure appears anywhere; the only NPS numbers are 38 and 42 from the data."
+     },
+     {
+      "id": "N2",
+      "ok": true,
+      "evidence": "\"we cannot say whether 42 is above or below peers\": the slide explicitly declines to make the comparison."
+     }
+    ],
+    "pass": true,
+    "failure": ""
+   }
+  }
+ ]
+}

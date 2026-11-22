@@ -1,14 +1,14 @@
-# Gym Jarvis Ep 3: Workout Analyser · STATUS (updated 21 Nov 2026)
+# Gym Jarvis Ep 3: Workout Analyser · STATUS (updated 22 Nov 2026)
 
 Read this first in any new chat about this reel. Media lives outside the repo (never commit it).
 
-## Main arm: DONE, awaiting posting by the creator
+## Main arm: POSTED (creator confirmed 22 Nov 2026; exact post date not recorded)
 - Final: `~/Movies/ContentOS/workout-analyser-deliver/POST_MAIN/GymJarvis_Ep3_WorkoutAnalyser_MAIN.mp4`
   (88.1 s, -14.4 LUFS, Trap Electro Vibes bed, countdown at 9.8 s). Creator: "I think we have the winner".
 - Caption, pinned comment, cover and dm_kit.zip are in `POST_MAIN/`. Comment keyword FORM -> `dm_kit/`.
 - The creator schedules it in the Instagram app (Graph API token not set up yet).
-- After posting: move the raw recordings (IMG_3518 + the 23 gym clips, NOT IMG_3511) into
-  `~/Movies/ContentOS/workout-analyser-deliver/raw_footage/` with an index.
+- Raw recordings moved 22 Nov to `~/Movies/ContentOS/workout-analyser-deliver/raw_footage/` (INDEX.md there);
+  `demos/workout-hud/data/clips.txt` repointed. IMG_3511 left in ~/Downloads (another reel).
 
 ## Trial arm: SHELVED 21 Nov (not recorded)
 Creator: "this is better than the earlier script, although not drastically different for us to experiment and do recording." The main posts without a trial. `trial_rewrite/SCRIPT_TRIAL_FINAL.md` stays as the reference for how an Ep 2-skeleton build script should read. History:

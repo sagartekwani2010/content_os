@@ -1,0 +1,189 @@
+{
+ "key": {
+  "P": "draft_C",
+  "Q": "draft_B",
+  "R": "draft_A"
+ },
+ "results": {
+  "draft_C": {
+   "label": "P",
+   "weighted": 6.35,
+   "scores": {
+    "hook": 5,
+    "swipe": 6,
+    "clarity": 6,
+    "save": 7,
+    "share": 5,
+    "merge": 7,
+    "proof": 8,
+    "accuracy": 7
+   },
+   "stop": [
+    1,
+    6,
+    9,
+    13,
+    14
+   ],
+   "swipe_to_end": [
+    1,
+    6,
+    13,
+    14
+   ],
+   "save": [
+    1,
+    6,
+    9,
+    14
+   ],
+   "strengths": [
+    "Most honest use of the run: 'real run 1, trimmed' and 'real run 2, trimmed' labels, and the 'AI's estimate, not verified nutrition' note sits on the slide itself, not only in the caption.",
+    "Slide 4 uses the model's own line ('If you tell me … what's in your fridge, I can tailor it.'), which matches run 2 and is the strongest proof that the AI guessed.",
+    "No 'I'm vegetarian' or 'I have no oven' claim anywhere; the caption says 'dinner was vegetarian', which reads as the scenario.",
+    "Slides 5 to 7 build one card line by line, so the slide 9 save card feels earned.",
+    "The caption reports both runs correctly (25 to 27 minutes, chicken and oven both times)."
+   ],
+   "fixes": [
+    "Slide 1: the headline is a negation with no stakes and no 'you', and the body is three sentences. Lead with the result or the reader, e.g. 'Same AI. One prompt got oven chicken. One got paneer dal.', and keep 'Six lines were missing' as the only body line.",
+    "Slide 2: 'a paneer dal from my kitchen' implies the creator's real kitchen, which was not used. Change to 'a paneer dal from the kitchen I described'.",
+    "Slide 6: the body crams two definitions and two quote fragments ('1/2 cup dry quinoa …' against 'Paneer: 200 g …'). Keep the two definitions in the body and move the cups-versus-grams contrast into the visual as one side-by-side.",
+    "Slides 5 to 7: the headlines 'Missing lines 1 and 2' read like a manual. Give each a benefit headline, e.g. 'Tell it who's eating', 'Show it what done looks like', 'Make it taste before serving'.",
+    "Slide 5 or the caption: state once that this was a test scenario (dinner for 2 vegetarians, paneer and moong dal, no oven), so 'my kitchen' in the prompt text is not read as the creator's diet.",
+    "Slides 3, 6 and 8: 'Heat the oven to 220°C (425°F)', '1/2 cup dry quinoa', 'Make the tadka (7 minutes', 'Sear the paneer (3 minutes' and the verbatim prompt lines are not in the FACTS given to me. Check each against runs/output_*.md and runs/prompt_recipe_card.txt before publishing.",
+    "Slide 9: the sticky note 'Works for any ask, not just dinner' was not tested. Soften to 'Try it on any ask'.",
+    "Slide 10: 'guardrails' and 'evals' mean nothing to the mass group. Add a plain-words hook for Wednesday, as Q and R do with Lakshman Rekha."
+   ]
+  },
+  "draft_B": {
+   "label": "Q",
+   "weighted": 6.2,
+   "scores": {
+    "hook": 8,
+    "swipe": 7,
+    "clarity": 7,
+    "save": 7,
+    "share": 6,
+    "merge": 6,
+    "proof": 7,
+    "accuracy": 2
+   },
+   "stop": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    11,
+    12,
+    15,
+    16
+   ],
+   "swipe_to_end": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    9,
+    11,
+    16
+   ],
+   "save": [
+    1,
+    3,
+    6,
+    7,
+    9,
+    11,
+    16
+   ],
+   "strengths": [
+    "The cover has the highest stop power of the three: a first-person conflict that vegetarian viewers feel at once.",
+    "Good order: vague result on slide 3, the reason on slide 4, the payoff on slide 5, then the six lines with an output snippet on each.",
+    "Slide 3's sticky note covers both runs, and slide 5 carries '(AI's estimate)' on the slide.",
+    "The Lakshman Rekha tease on slide 10 is a clear, culturally familiar reason to follow."
+   ],
+   "fixes": [
+    "Slide 1 and caption line 1: 'I'm vegetarian' and 'I have no oven either' are false as personal facts. The creator's food-tracker reel logged chicken and the oven is not established. Rewrite as the scenario, e.g. 'Dinner for 2 vegetarians. No oven. AI gave me oven-roasted chicken.', with body 'I never told it. The AI wasn't the problem. My prompt was.'",
+    "Slide 3: remove the oven label 'I don't have one', or change it to 'the prompt never said no oven'.",
+    "Pinned comment: 'Mine was \"Don't\"' is an unsupported personal claim. Drop it or replace it with the question alone.",
+    "Slide 4: the sticky-note quote '…or 300 g paneer or firm tofu for a vegetarian version' is not in the FACTS. Check the wording and the 300 g against runs/output_*.md, or swap in the run 2 line ('If you tell me … what's in your fridge, I can tailor it.').",
+    "Slide 8: the body has no proof; the quotes sit only in the visual. '…so it clears the 30 g goal.' is also not in the FACTS, so check it before use, and put the roti question in the body.",
+    "Slide 3: 'cups and tbsp' on the both-runs sticky note is unverified for run 2. Check it or cut it.",
+    "Slides 1 to 4: the cooking metaphor only arrives on slide 4 and the fence on slide 8 leaves the kitchen. Seed the family-recipe line on slide 2 and replace the fence with a kitchen image.",
+    "Slide 9: soften 'Works for any ask, not just dinner'; it was not tested."
+   ]
+  },
+  "draft_A": {
+   "label": "R",
+   "weighted": 6.95,
+   "scores": {
+    "hook": 7,
+    "swipe": 7,
+    "clarity": 7,
+    "save": 7,
+    "share": 7,
+    "merge": 9,
+    "proof": 6,
+    "accuracy": 6
+   },
+   "stop": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    11,
+    12,
+    16
+   ],
+   "swipe_to_end": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    9,
+    11,
+    12,
+    16
+   ],
+   "save": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    9,
+    11,
+    16
+   ],
+   "strengths": [
+    "Best merge: 'Maa writes recipes', 'AI is a stranger in your kitchen' and 'Maa tastes before serving. So should AI.' make the cooking idea carry every prompting point.",
+    "The cover speaks to 'you' with a familiar home image, so it reaches the mass group (2 to 5, 12, 16) without a false personal claim.",
+    "The robot goes from the doorway on slide 2 to the table on slide 10, which gives the carousel a small story arc.",
+    "Slide 8's headline is the most quotable line in any draft, and the caption's closing question invites easy comments.",
+    "The caption states the both-runs result and the 'AI's own estimate, not verified nutrition' note correctly."
+   ],
+   "fixes": [
+    "Slide 3: 'Nobody told it: vegetarian, no oven' implies the creator's own diet and kitchen. Set up the scenario first, e.g. 'The test: dinner for 2 vegetarians, no oven. The prompt never said so.'",
+    "Slide 5: the headline 'Now it's my kitchen' overclaims because the real kitchen was not used. Change to 'Same AI. Now it cooks for the kitchen I described.'",
+    "Caption: change 'or that there is no oven' to 'or that the test kitchen had no oven', and add one line saying this was a test prompt, not a cooked meal.",
+    "Slide 3: the margin note 'same result both times I ran it' is loose, because run 2 was 'Lemon-herb chicken'. Change to 'both runs: chicken, quinoa, oven at 220°C'.",
+    "Slide 5: change the note 'second run: same dish' to 'second run: paneer-palak moong dal tadka, about 27 minutes'.",
+    "Slide 2: it carries no proof. Add the run 2 line ('If you tell me … what's in your fridge, I can tailor it.') here or on slide 3, to show the AI knew it was guessing.",
+    "Slide 7: add one real output snippet showing grams and minutes, checked against runs/output_*.md, so Method has visible proof like slides 6 and 8.",
+    "Slides 3 and 5: add a small 'real run, trimmed' label to the output cards, as P does.",
+    "Slide 4: six trimmed prompt lines in one 8-second video is too dense to read. Write on only the six labels with three or four words each, and leave the full lines for slides 6 to 8.",
+    "Pinned comment: 'Ours is \"cook till done\"' is a personal family claim. Keep it only if it is true; otherwise ask the question alone.",
+    "Caption: 'It works the same for an email, a study plan or a piece of code' was not tested. Change to 'Try the same six lines on an email or a study plan'. Add hashtags, which this caption lacks."
+   ]
+  }
+ }
+}
